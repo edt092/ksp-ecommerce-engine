@@ -26,12 +26,14 @@ export default function DigitalAdvisorChat() {
   // Reproducir sonido de notificación
   const playNotificationSound = () => {
     try {
-      // Usar la API de audio del navegador con un tono simple
-      if (audioRef.current) {
-        audioRef.current.play().catch(e => console.log('Audio play prevented:', e));
+      // Solo reproducir si el usuario ya ha interactuado con la página
+      if (audioRef.current && hasInteracted) {
+        audioRef.current.play().catch(e => {
+          // Silenciosamente ignorar si el navegador bloquea el audio
+        });
       }
     } catch (error) {
-      console.log('Error playing notification:', error);
+      // Silenciosamente ignorar errores de audio
     }
   };
 
