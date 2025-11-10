@@ -1,6 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://kspromocionales.com',
+  siteUrl: process.env.SITE_URL || 'https://www.kronosolopromocionales.com',
+
   generateRobotsTxt: true,
   outDir: './out',
   // Configuración para sitios estáticos con output: 'export'
