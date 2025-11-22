@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Calendar, Clock, Tag, ArrowLeft, Share2 } from 'lucide-react';
 import postsData from '@/data/blog/posts.json';
 import { blogContent } from '@/data/blog/content';
+import TableOfContents from '@/components/TableOfContents';
 
 export async function generateStaticParams() {
   return postsData.map((post) => ({
@@ -112,12 +113,16 @@ export default function BlogPostPage({ params }) {
             {/* Meta Info */}
             <div className="flex flex-wrap items-center gap-6 text-gray-600 mb-8">
               <div className="flex items-center gap-2">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center text-white font-bold text-lg">
-                  H
-                </div>
+                <Image
+                  src={post.authorImage}
+                  alt={post.author}
+                  width={48}
+                  height={48}
+                  className="rounded-full object-cover"
+                />
                 <div>
                   <p className="font-medium text-gray-900">{post.author}</p>
-                  <p className="text-sm text-gray-500">Asesora Comercial</p>
+                  <p className="text-sm text-gray-500">{post.authorRole}</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -150,8 +155,14 @@ export default function BlogPostPage({ params }) {
               />
             </div>
 
+            {/* Table of Contents */}
+            <div className="mb-8">
+              <TableOfContents content={content} />
+            </div>
+
             {/* Article Content */}
             <div
+              id="blog-content"
               className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-6 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900 prose-ul:my-6 prose-li:text-gray-700"
               dangerouslySetInnerHTML={{ __html: content }}
             />

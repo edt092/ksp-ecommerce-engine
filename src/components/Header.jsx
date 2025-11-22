@@ -40,6 +40,7 @@ export default function Header() {
   const navigation = [
     { name: 'Inicio', href: '/' },
     { name: 'Categorías', href: '/#categorias' },
+    { name: 'Catálogos Digitales', href: '/catalogos-digitales' },
     { name: 'Blog', href: '/blog' },
     { name: 'Nosotros', href: '/nosotros' },
   ];

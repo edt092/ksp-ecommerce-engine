@@ -1,18 +1,22 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function DigitalAdvisorChat() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState('');
   const [hasInteracted, setHasInteracted] = useState(false);
   const [showBadge, setShowBadge] = useState(false);
   const [followUpSent, setFollowUpSent] = useState(false);
+  const [catalogMessageSent, setCatalogMessageSent] = useState(false);
   const messagesEndRef = useRef(null);
   const audioRef = useRef(null);
   const timeoutRef = useRef(null);
+  const catalogTimeoutRef = useRef(null);
 
   // Configuración del asesor
   const advisor = {
@@ -21,10 +25,11 @@ export default function DigitalAdvisorChat() {
     avatar: '/images/hanna-placeholder.jfif',
     initialMessage: '¡Hola! 😊 Soy Hanna, ¿en qué puedo ayudarte hoy?',
     followUpMessage: '¿Deseas conocer nuestro catálogo más reciente de productos personalizados? 🚀 Puedo enviártelo por correo, solo dime tu email y te lo envío enseguida.',
+    catalogMessage: 'Veo que estás explorando nuestros catálogos. ¿Te gustaría que te conecte con un asesor por WhatsApp para resolver tus dudas y ayudarte con tu cotización?',
   };
 
   // Reproducir sonido de notificación
-  const playNotificationSound = () => {
+  const playNotificationSound = useCallback(() => {
     try {
       // Solo reproducir si el usuario ya ha interactuado con la página
       if (audioRef.current && hasInteracted) {
@@ -35,10 +40,10 @@ export default function DigitalAdvisorChat() {
     } catch (error) {
       // Silenciosamente ignorar errores de audio
     }
-  };
+  }, [hasInteracted]);
 
   // Agregar mensaje del asesor
-  const addAdvisorMessage = (text) => {
+  const addAdvisorMessage = useCallback((text) => {
     const newMessage = {
       id: Date.now(),
       text,
@@ -48,7 +53,7 @@ export default function DigitalAdvisorChat() {
     setMessages(prev => [...prev, newMessage]);
     playNotificationSound();
     setShowBadge(true);
-  };
+  }, [playNotificationSound]);
 
   // Agregar mensaje del usuario
   const addUserMessage = (text) => {
@@ -130,6 +135,57 @@ export default function DigitalAdvisorChat() {
     playNotificationSound();
   };
 
+  // Agregar mensaje con botones de Sí/No
+  const addQuestionWithButtons = useCallback((text) => {
+    const questionMessage = {
+      id: Date.now(),
+      text,
+      sender: 'advisor',
+      timestamp: new Date(),
+    };
+    setMessages(prev => [...prev, questionMessage]);
+    playNotificationSound();
+    setShowBadge(true);
+
+    // Agregar botones después de un pequeño delay
+    setTimeout(() => {
+      const buttonsMessage = {
+        id: Date.now() + 1,
+        text: '',
+        sender: 'yes-no-buttons',
+        timestamp: new Date(),
+      };
+      setMessages(prev => [...prev, buttonsMessage]);
+    }, 500);
+  }, [playNotificationSound]);
+
+  // Manejar respuesta de botones Sí/No
+  const handleYesNoResponse = (response) => {
+    // Remover los botones
+    setMessages(prev => prev.filter(msg => msg.sender !== 'yes-no-buttons'));
+
+    // Agregar respuesta del usuario
+    addUserMessage(response);
+
+    // Cancelar el timeout del mensaje automático
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+
+    // Responder según la elección
+    setTimeout(() => {
+      if (response.toLowerCase() === 'sí' || response.toLowerCase() === 'si') {
+        addAdvisorMessage('¡Perfecto! Te conectaré con un asesor ahora mismo para que te ayude con toda la información que necesitas. 💬');
+        setTimeout(() => {
+          addWhatsAppMessage();
+        }, 1000);
+      } else {
+        addAdvisorMessage('¡Está bien! ¿Algo en lo que pueda ayudar?');
+      }
+    }, 1000);
+  };
+
   // Enviar mensaje
   const handleSendMessage = (e) => {
     e.preventDefault();
@@ -156,7 +212,7 @@ export default function DigitalAdvisorChat() {
     }, 3000);
 
     return () => clearTimeout(openTimeout);
-  }, []);
+  }, [addAdvisorMessage, advisor.initialMessage]);
 
   // Enviar mensaje de follow-up después de 60 segundos sin interacción (solo una vez)
   useEffect(() => {
@@ -172,7 +228,25 @@ export default function DigitalAdvisorChat() {
         clearTimeout(timeoutRef.current);
       }
     };
-  }, [messages.length, hasInteracted, isOpen, followUpSent]);
+  }, [messages.length, hasInteracted, isOpen, followUpSent, addAdvisorMessage, advisor.followUpMessage]);
+
+  // Detectar página de catálogos y mostrar mensaje proactivo
+  useEffect(() => {
+    const isCatalogPage = pathname === '/catalogos-digitales';
+
+    if (isCatalogPage && isOpen && !catalogMessageSent && !hasInteracted) {
+      catalogTimeoutRef.current = setTimeout(() => {
+        addQuestionWithButtons(advisor.catalogMessage);
+        setCatalogMessageSent(true);
+      }, 8000); // 8 segundos después de abrir el chat
+    }
+
+    return () => {
+      if (catalogTimeoutRef.current) {
+        clearTimeout(catalogTimeoutRef.current);
+      }
+    };
+  }, [pathname, isOpen, catalogMessageSent, hasInteracted, addQuestionWithButtons, advisor.catalogMessage]);
 
   // Cerrar badge cuando se abre el chat
   useEffect(() => {
@@ -349,6 +423,37 @@ export default function DigitalAdvisorChat() {
                       </div>
                     )}
 
+                    {/* Botones de Sí/No */}
+                    {message.sender === 'yes-no-buttons' && (
+                      <>
+                        <div className="w-6 h-6 md:w-8 md:h-8 rounded-full overflow-hidden flex-shrink-0 bg-white border-2 border-gray-200">
+                          <img
+                            src={advisor.avatar}
+                            alt={advisor.name}
+                            className="w-full h-full object-cover"
+                            onError={(e) => {
+                              e.target.style.display = 'none';
+                              e.target.parentElement.innerHTML = '<div class="w-full h-full bg-gradient-to-br from-pink-400 to-purple-500 flex items-center justify-center text-white text-xs font-bold">H</div>';
+                            }}
+                          />
+                        </div>
+                        <div className="flex gap-2 md:gap-3">
+                          <button
+                            onClick={() => handleYesNoResponse('Sí')}
+                            className="bg-gradient-to-r from-primary to-primary-dark hover:from-primary-dark hover:to-primary text-white px-6 py-3 md:px-8 md:py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 font-bold text-sm md:text-base"
+                          >
+                            Sí
+                          </button>
+                          <button
+                            onClick={() => handleYesNoResponse('No')}
+                            className="bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-3 md:px-8 md:py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 font-bold text-sm md:text-base"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </>
+                    )}
+
                     {/* Botón de WhatsApp */}
                     {message.sender === 'whatsapp-button' && (
                       <>
@@ -385,7 +490,7 @@ export default function DigitalAdvisorChat() {
                     )}
 
                     {/* Burbuja de mensaje normal */}
-                    {message.sender !== 'whatsapp-button' && (
+                    {message.sender !== 'whatsapp-button' && message.sender !== 'yes-no-buttons' && (
                       <div
                         className={`max-w-[85%] md:max-w-[75%] px-3 py-2 md:px-4 md:py-3 rounded-2xl shadow-sm ${
                           message.sender === 'user'

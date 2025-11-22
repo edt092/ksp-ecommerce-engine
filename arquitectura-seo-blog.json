@@ -1,0 +1,1082 @@
+{
+  "arquitectura_seo_blog_regalos_corporativos": {
+    "descripcion": "Arquitectura SEO tipo silo para blog de regalos corporativos y personalizados",
+    "fecha_creacion": "2025-11-21",
+
+    "categorias_principales": [
+      {
+        "id": "regalos-corporativos",
+        "nombre": "Regalos Corporativos",
+        "slug": "regalos-corporativos",
+        "url": "/blog/regalos-corporativos",
+        "descripcion": "Guía completa de regalos corporativos para empresas",
+        "keywords_principales": ["regalos corporativos", "regalos empresariales", "obsequios corporativos"],
+        "subcategorias": [
+          {
+            "id": "regalos-corporativos-elegantes",
+            "nombre": "Regalos Corporativos Elegantes",
+            "slug": "elegantes",
+            "url": "/blog/regalos-corporativos/elegantes",
+            "descripcion": "Selección de regalos corporativos elegantes y sofisticados",
+            "keywords": ["regalos corporativos elegantes", "obsequios elegantes empresariales", "detalles corporativos sofisticados"]
+          },
+          {
+            "id": "regalos-corporativos-premium",
+            "nombre": "Regalos Corporativos Premium",
+            "slug": "premium",
+            "url": "/blog/regalos-corporativos/premium",
+            "descripcion": "Regalos corporativos de alta gama y exclusivos",
+            "keywords": ["regalos corporativos premium", "regalos ejecutivos exclusivos", "obsequios corporativos de lujo"]
+          },
+          {
+            "id": "regalos-corporativos-originales",
+            "nombre": "Regalos Corporativos Originales",
+            "slug": "originales",
+            "url": "/blog/regalos-corporativos/originales",
+            "descripcion": "Ideas creativas y originales para regalos corporativos",
+            "keywords": ["regalos corporativos originales", "obsequios empresariales creativos", "detalles corporativos únicos"]
+          },
+          {
+            "id": "regalos-corporativos-quito",
+            "nombre": "Regalos Corporativos Quito",
+            "slug": "quito",
+            "url": "/blog/regalos-corporativos/quito",
+            "descripcion": "Regalos corporativos en Quito, Ecuador",
+            "keywords": ["regalos corporativos Quito", "regalos empresariales Quito Ecuador", "obsequios corporativos en Quito"]
+          },
+          {
+            "id": "regalos-navidad-empresas",
+            "nombre": "Regalos de Navidad para Empresas",
+            "slug": "navidad",
+            "url": "/blog/regalos-corporativos/navidad",
+            "descripcion": "Regalos corporativos especiales para la temporada navideña",
+            "keywords": ["regalos navidad empresas", "obsequios navideños corporativos", "detalles navidad empleados"]
+          },
+          {
+            "id": "regalos-fin-ano",
+            "nombre": "Regalos de Fin de Año Corporativos",
+            "slug": "fin-de-ano",
+            "url": "/blog/regalos-corporativos/fin-de-ano",
+            "descripcion": "Regalos corporativos para celebrar el fin de año",
+            "keywords": ["regalos fin de año corporativos", "obsequios año nuevo empresas", "detalles fin de año empleados"]
+          }
+        ]
+      },
+      {
+        "id": "regalos-personalizados",
+        "nombre": "Regalos Personalizados",
+        "slug": "regalos-personalizados",
+        "url": "/blog/regalos-personalizados",
+        "descripcion": "Regalos personalizados para empresas y empleados",
+        "keywords_principales": ["regalos personalizados", "obsequios personalizados", "regalos con logo"],
+        "subcategorias": [
+          {
+            "id": "regalos-personalizados-empleados",
+            "nombre": "Regalos Personalizados para Empleados",
+            "slug": "empleados",
+            "url": "/blog/regalos-personalizados/empleados",
+            "descripcion": "Regalos personalizados especiales para colaboradores",
+            "keywords": ["regalos personalizados empleados", "obsequios personalizados colaboradores", "detalles personalizados staff"]
+          },
+          {
+            "id": "regalos-personalizados-clientes",
+            "nombre": "Regalos Personalizados para Clientes",
+            "slug": "clientes",
+            "url": "/blog/regalos-personalizados/clientes",
+            "descripcion": "Obsequios personalizados para fidelizar clientes",
+            "keywords": ["regalos personalizados clientes", "obsequios corporativos personalizados", "detalles personalizados clientes VIP"]
+          },
+          {
+            "id": "regalos-logo-empresa",
+            "nombre": "Regalos con Logo de Empresa",
+            "slug": "con-logo",
+            "url": "/blog/regalos-personalizados/con-logo",
+            "descripcion": "Regalos corporativos con logo y branding empresarial",
+            "keywords": ["regalos con logo empresa", "obsequios personalizados con logo", "merchandising corporativo"]
+          }
+        ]
+      },
+      {
+        "id": "regalos-por-ocasion",
+        "nombre": "Regalos por Ocasión",
+        "slug": "regalos-por-ocasion",
+        "url": "/blog/regalos-por-ocasion",
+        "descripcion": "Regalos corporativos para cada ocasión especial",
+        "keywords_principales": ["regalos corporativos ocasiones", "obsequios empresariales eventos", "regalos empresariales fechas especiales"],
+        "subcategorias": [
+          {
+            "id": "regalos-dia-madre",
+            "nombre": "Regalos Corporativos Día de la Madre",
+            "slug": "dia-madre",
+            "url": "/blog/regalos-por-ocasion/dia-madre",
+            "descripcion": "Regalos corporativos especiales para el Día de la Madre",
+            "keywords": ["regalos día madre empresas", "obsequios corporativos día madre", "detalles día madre empleadas"]
+          },
+          {
+            "id": "regalos-dia-padre",
+            "nombre": "Regalos Corporativos Día del Padre",
+            "slug": "dia-padre",
+            "url": "/blog/regalos-por-ocasion/dia-padre",
+            "descripcion": "Regalos corporativos especiales para el Día del Padre",
+            "keywords": ["regalos día padre empresas", "obsequios corporativos día padre", "detalles día padre empleados"]
+          },
+          {
+            "id": "regalos-aniversario-empresa",
+            "nombre": "Regalos Aniversario Empresarial",
+            "slug": "aniversario",
+            "url": "/blog/regalos-por-ocasion/aniversario",
+            "descripcion": "Regalos para celebrar aniversarios empresariales",
+            "keywords": ["regalos aniversario empresa", "obsequios aniversario corporativo", "detalles aniversario laboral"]
+          },
+          {
+            "id": "regalos-inauguracion",
+            "nombre": "Regalos de Inauguración",
+            "slug": "inauguracion",
+            "url": "/blog/regalos-por-ocasion/inauguracion",
+            "descripcion": "Regalos corporativos para inauguraciones y eventos",
+            "keywords": ["regalos inauguración empresas", "obsequios apertura negocio", "detalles inauguración oficina"]
+          },
+          {
+            "id": "regalos-cumpleanos-empleados",
+            "nombre": "Regalos de Cumpleaños Empleados",
+            "slug": "cumpleanos",
+            "url": "/blog/regalos-por-ocasion/cumpleanos",
+            "descripcion": "Regalos corporativos para cumpleaños de colaboradores",
+            "keywords": ["regalos cumpleaños empleados", "obsequios corporativos cumpleaños", "detalles cumpleaños staff"]
+          }
+        ]
+      },
+      {
+        "id": "regalos-por-industria",
+        "nombre": "Regalos por Industria",
+        "slug": "regalos-por-industria",
+        "url": "/blog/regalos-por-industria",
+        "descripcion": "Regalos corporativos especializados por sector empresarial",
+        "keywords_principales": ["regalos corporativos por industria", "obsequios empresariales sector", "regalos corporativos especializados"],
+        "subcategorias": [
+          {
+            "id": "regalos-sector-tecnologia",
+            "nombre": "Regalos Corporativos Sector Tecnología",
+            "slug": "tecnologia",
+            "url": "/blog/regalos-por-industria/tecnologia",
+            "descripcion": "Regalos corporativos para empresas de tecnología",
+            "keywords": ["regalos corporativos tecnología", "obsequios empresas tech", "regalos startups tecnológicas"]
+          },
+          {
+            "id": "regalos-sector-salud",
+            "nombre": "Regalos Corporativos Sector Salud",
+            "slug": "salud",
+            "url": "/blog/regalos-por-industria/salud",
+            "descripcion": "Regalos corporativos para el sector salud y hospitales",
+            "keywords": ["regalos corporativos sector salud", "obsequios hospitales clínicas", "regalos personal médico"]
+          },
+          {
+            "id": "regalos-sector-financiero",
+            "nombre": "Regalos Corporativos Sector Financiero",
+            "slug": "financiero",
+            "url": "/blog/regalos-por-industria/financiero",
+            "descripcion": "Regalos corporativos para bancos y entidades financieras",
+            "keywords": ["regalos corporativos bancos", "obsequios sector financiero", "regalos entidades bancarias"]
+          },
+          {
+            "id": "regalos-sector-educacion",
+            "nombre": "Regalos Corporativos Sector Educación",
+            "slug": "educacion",
+            "url": "/blog/regalos-por-industria/educacion",
+            "descripcion": "Regalos corporativos para instituciones educativas",
+            "keywords": ["regalos corporativos educación", "obsequios colegios universidades", "regalos instituciones educativas"]
+          },
+          {
+            "id": "regalos-sector-inmobiliario",
+            "nombre": "Regalos Corporativos Sector Inmobiliario",
+            "slug": "inmobiliario",
+            "url": "/blog/regalos-por-industria/inmobiliario",
+            "descripcion": "Regalos corporativos para el sector inmobiliario",
+            "keywords": ["regalos corporativos inmobiliarias", "obsequios sector inmobiliario", "regalos agencias bienes raíces"]
+          }
+        ]
+      },
+      {
+        "id": "tipos-productos",
+        "nombre": "Tipos de Productos",
+        "slug": "tipos-productos",
+        "url": "/blog/tipos-productos",
+        "descripcion": "Catálogo de productos promocionales y corporativos",
+        "keywords_principales": ["productos promocionales", "artículos corporativos", "merchandising empresarial"],
+        "subcategorias": [
+          {
+            "id": "tecnologia-gadgets",
+            "nombre": "Tecnología y Gadgets",
+            "slug": "tecnologia-gadgets",
+            "url": "/blog/tipos-productos/tecnologia-gadgets",
+            "descripcion": "Gadgets tecnológicos y accesorios corporativos",
+            "keywords": ["gadgets corporativos", "tecnología promocional", "accesorios tech empresariales"]
+          },
+          {
+            "id": "oficina-escritorio",
+            "nombre": "Oficina y Escritorio",
+            "slug": "oficina-escritorio",
+            "url": "/blog/tipos-productos/oficina-escritorio",
+            "descripcion": "Artículos de oficina y escritorio personalizados",
+            "keywords": ["artículos oficina personalizados", "productos escritorio corporativos", "papelería empresarial"]
+          },
+          {
+            "id": "textiles-vestuario",
+            "nombre": "Textiles y Vestuario",
+            "slug": "textiles-vestuario",
+            "url": "/blog/tipos-productos/textiles-vestuario",
+            "descripcion": "Ropa y textiles corporativos personalizados",
+            "keywords": ["textiles corporativos", "ropa empresarial personalizada", "vestuario corporativo"]
+          },
+          {
+            "id": "hogar-cocina",
+            "nombre": "Hogar y Cocina",
+            "slug": "hogar-cocina",
+            "url": "/blog/tipos-productos/hogar-cocina",
+            "descripcion": "Artículos para hogar y cocina corporativos",
+            "keywords": ["regalos hogar corporativos", "artículos cocina empresariales", "productos hogar personalizados"]
+          },
+          {
+            "id": "termos-botellas",
+            "nombre": "Termos y Botellas",
+            "slug": "termos-botellas",
+            "url": "/blog/tipos-productos/termos-botellas",
+            "descripcion": "Termos y botellas personalizadas corporativas",
+            "keywords": ["termos corporativos personalizados", "botellas empresariales", "termos con logo"]
+          },
+          {
+            "id": "bolsas-mochilas",
+            "nombre": "Bolsas y Mochilas",
+            "slug": "bolsas-mochilas",
+            "url": "/blog/tipos-productos/bolsas-mochilas",
+            "descripcion": "Bolsas y mochilas corporativas personalizadas",
+            "keywords": ["bolsas corporativas personalizadas", "mochilas empresariales", "bolsas ecológicas corporativas"]
+          },
+          {
+            "id": "libretas-cuadernos",
+            "nombre": "Libretas y Cuadernos",
+            "slug": "libretas-cuadernos",
+            "url": "/blog/tipos-productos/libretas-cuadernos",
+            "descripcion": "Libretas y cuadernos personalizados corporativos",
+            "keywords": ["libretas corporativas personalizadas", "cuadernos empresariales", "agendas corporativas"]
+          }
+        ]
+      },
+      {
+        "id": "guias-mejores-practicas",
+        "nombre": "Guías y Mejores Prácticas",
+        "slug": "guias",
+        "url": "/blog/guias",
+        "descripcion": "Guías completas sobre regalos corporativos",
+        "keywords_principales": ["guía regalos corporativos", "cómo elegir regalos empresariales", "mejores prácticas regalos corporativos"],
+        "subcategorias": [
+          {
+            "id": "como-elegir-regalos-corporativos",
+            "nombre": "Cómo Elegir Regalos Corporativos",
+            "slug": "como-elegir",
+            "url": "/blog/guias/como-elegir",
+            "descripcion": "Guía completa para elegir los mejores regalos corporativos",
+            "keywords": ["cómo elegir regalos corporativos", "seleccionar obsequios empresariales", "criterios regalos corporativos"]
+          },
+          {
+            "id": "presupuesto-regalos-corporativos",
+            "nombre": "Presupuesto para Regalos Corporativos",
+            "slug": "presupuesto",
+            "url": "/blog/guias/presupuesto",
+            "descripcion": "Cómo planificar el presupuesto de regalos corporativos",
+            "keywords": ["presupuesto regalos corporativos", "cuánto invertir regalos empresariales", "costo regalos corporativos"]
+          },
+          {
+            "id": "personalizacion-regalos",
+            "nombre": "Personalización de Regalos",
+            "slug": "personalizacion",
+            "url": "/blog/guias/personalizacion",
+            "descripcion": "Guía sobre técnicas de personalización de regalos",
+            "keywords": ["personalización regalos corporativos", "técnicas personalización obsequios", "cómo personalizar regalos empresariales"]
+          },
+          {
+            "id": "timing-entrega-regalos",
+            "nombre": "Timing y Entrega de Regalos",
+            "slug": "timing-entrega",
+            "url": "/blog/guias/timing-entrega",
+            "descripcion": "Cuándo y cómo entregar regalos corporativos",
+            "keywords": ["cuándo entregar regalos corporativos", "timing regalos empresariales", "mejores fechas regalos corporativos"]
+          },
+          {
+            "id": "protocolo-regalos-corporativos",
+            "nombre": "Protocolo de Regalos Corporativos",
+            "slug": "protocolo",
+            "url": "/blog/guias/protocolo",
+            "descripcion": "Protocolo y etiqueta para regalos corporativos",
+            "keywords": ["protocolo regalos corporativos", "etiqueta obsequios empresariales", "normas regalos corporativos"]
+          }
+        ]
+      }
+    ],
+
+    "keywords_long_tail": {
+      "tipo_producto_ocasion_ubicacion": [
+        "regalos corporativos navidad Quito",
+        "regalos corporativos fin de año Quito",
+        "regalos corporativos día madre Quito",
+        "regalos corporativos día padre Quito",
+        "regalos personalizados navidad Quito Ecuador",
+        "regalos empresariales fin año Quito Ecuador",
+        "obsequios corporativos navidad Quito",
+        "detalles navideños empresas Quito",
+        "regalos corporativos aniversario Quito",
+        "regalos inauguración empresas Quito",
+        "regalos corporativos cumpleaños Quito",
+        "termos personalizados navidad Quito",
+        "mochilas corporativas fin año Quito",
+        "libretas personalizadas eventos Quito",
+        "gadgets corporativos lanzamiento Quito",
+        "botellas personalizadas inauguración Quito"
+      ],
+      "tipo_producto_beneficiario_caracteristica": [
+        "regalos personalizados empleados elegantes",
+        "regalos personalizados empleados premium",
+        "regalos personalizados clientes VIP exclusivos",
+        "regalos personalizados colaboradores originales",
+        "obsequios personalizados empleados sofisticados",
+        "detalles personalizados clientes premium",
+        "regalos corporativos directivos ejecutivos",
+        "regalos corporativos gerentes elegantes",
+        "obsequios personalizados socios premium",
+        "regalos personalizados equipos trabajo innovadores",
+        "detalles personalizados vendedores motivacionales",
+        "regalos corporativos stakeholders exclusivos",
+        "obsequios personalizados proveedores elegantes",
+        "regalos corporativos inversionistas premium",
+        "detalles personalizados embajadores marca únicos"
+      ],
+      "tipo_producto_caracteristica_ocasion": [
+        "regalos corporativos premium navidad",
+        "regalos corporativos elegantes fin año",
+        "regalos corporativos originales día madre",
+        "regalos corporativos exclusivos día padre",
+        "obsequios corporativos sofisticados navidad",
+        "detalles corporativos premium aniversario",
+        "regalos empresariales elegantes inauguración",
+        "obsequios corporativos originales cumpleaños",
+        "regalos corporativos premium lanzamiento producto",
+        "detalles corporativos elegantes evento empresarial",
+        "regalos personalizados premium navidad",
+        "obsequios personalizados elegantes fin año",
+        "regalos personalizados originales día madre",
+        "termos premium corporativos navidad",
+        "mochilas elegantes empresariales fin año",
+        "libretas premium personalizadas eventos",
+        "gadgets originales corporativos lanzamiento",
+        "botellas exclusivas personalizadas inauguración"
+      ],
+      "tipo_producto_industria": [
+        "regalos corporativos sector tecnología",
+        "regalos corporativos sector salud",
+        "regalos corporativos sector financiero",
+        "regalos corporativos sector educación",
+        "regalos corporativos sector inmobiliario",
+        "obsequios corporativos bancos financieras",
+        "regalos empresariales hospitales clínicas",
+        "detalles corporativos empresas tecnológicas",
+        "regalos corporativos startups tech",
+        "obsequios corporativos colegios universidades",
+        "regalos corporativos agencias inmobiliarias",
+        "detalles empresariales sector construcción",
+        "regalos corporativos hoteles turismo",
+        "obsequios corporativos restaurantes gastronomía",
+        "regalos corporativos sector automotriz",
+        "gadgets corporativos empresas tecnología",
+        "termos personalizados sector salud",
+        "libretas corporativas sector educación",
+        "mochilas empresariales sector construcción",
+        "botellas corporativas gimnasios wellness"
+      ],
+      "intencion_busqueda_tipo_producto": [
+        "comprar regalos corporativos Quito",
+        "cotizar regalos corporativos Ecuador",
+        "solicitar catálogo regalos corporativos",
+        "precio regalos corporativos personalizados",
+        "proveedor regalos corporativos Quito",
+        "empresa regalos corporativos Ecuador",
+        "dónde comprar regalos corporativos Quito",
+        "mejores regalos corporativos Quito",
+        "regalos corporativos económicos Quito",
+        "regalos corporativos alta calidad Quito",
+        "regalos corporativos entrega rápida Quito",
+        "regalos corporativos por mayor Quito",
+        "regalos corporativos personalizados rápido",
+        "ideas regalos corporativos originales",
+        "ejemplos regalos corporativos exitosos",
+        "catálogo regalos corporativos navidad",
+        "lista regalos corporativos fin año",
+        "pack regalos corporativos empleados",
+        "combo regalos corporativos clientes",
+        "set regalos corporativos premium"
+      ],
+      "beneficios_problemas": [
+        "regalos corporativos para fidelizar clientes",
+        "regalos corporativos para motivar empleados",
+        "regalos corporativos para fortalecer marca",
+        "regalos corporativos para mejorar clima laboral",
+        "regalos corporativos para retener talento",
+        "regalos corporativos para agradecer clientes",
+        "regalos corporativos para eventos networking",
+        "regalos corporativos para inauguraciones exitosas",
+        "regalos corporativos para aniversarios empresariales",
+        "regalos corporativos para ferias comerciales",
+        "regalos corporativos que impactan",
+        "regalos corporativos memorables",
+        "regalos corporativos útiles empleados",
+        "regalos corporativos ecológicos sustentables",
+        "regalos corporativos tecnológicos modernos"
+      ],
+      "comparativas_vs": [
+        "regalos corporativos vs regalos personales",
+        "regalos corporativos premium vs económicos",
+        "regalos corporativos personalizados vs genéricos",
+        "termos corporativos vs botellas corporativas",
+        "mochilas corporativas vs bolsas corporativas",
+        "gadgets tech vs artículos oficina corporativos",
+        "regalos corporativos textiles vs tecnológicos",
+        "regalos corporativos elegantes vs originales"
+      ],
+      "long_tail_especificas_quito": [
+        "mejores proveedores regalos corporativos Quito",
+        "empresas regalos corporativos Quito Ecuador",
+        "tiendas regalos corporativos norte Quito",
+        "regalos corporativos entrega Quito sur",
+        "personalización regalos corporativos Quito",
+        "impresión logo regalos corporativos Quito",
+        "bordado regalos corporativos Quito",
+        "grabado láser regalos corporativos Quito",
+        "serigrafía regalos corporativos Quito",
+        "regalos corporativos delivery Quito",
+        "regalos corporativos 24 horas Quito",
+        "regalos corporativos urgente Quito",
+        "cotización regalos corporativos Quito",
+        "catálogo regalos corporativos Quito 2025"
+      ]
+    },
+
+    "estructura_urls": {
+      "patron_general": "/blog/{categoria}/{subcategoria}",
+      "patron_articulo": "/blog/{categoria}/{subcategoria}/{slug-articulo}",
+      "ejemplos": [
+        "/blog/regalos-corporativos/elegantes",
+        "/blog/regalos-corporativos/elegantes/top-10-regalos-corporativos-elegantes-2025",
+        "/blog/regalos-personalizados/empleados",
+        "/blog/regalos-personalizados/empleados/ideas-regalos-personalizados-empleados",
+        "/blog/regalos-por-ocasion/navidad",
+        "/blog/regalos-por-ocasion/navidad/guia-completa-regalos-navidad-empresas",
+        "/blog/tipos-productos/tecnologia-gadgets",
+        "/blog/tipos-productos/tecnologia-gadgets/mejores-gadgets-corporativos-2025",
+        "/blog/guias/como-elegir",
+        "/blog/guias/como-elegir/criterios-elegir-regalos-corporativos-perfectos"
+      ],
+      "parametros_url": {
+        "minuscula": true,
+        "usar_guiones": true,
+        "evitar_caracteres_especiales": true,
+        "maximo_longitud": 60,
+        "incluir_keyword_principal": true
+      }
+    },
+
+    "estructura_contenido": {
+      "articulo_tipo_pilar": {
+        "h1": "{Keyword Principal} - Guía Completa 2025",
+        "ejemplo_h1": "Regalos Corporativos Elegantes - Guía Completa 2025",
+        "estructura_h2_h3": [
+          {
+            "h2": "¿Qué son los {Keyword}?",
+            "h3": [
+              "Definición y características",
+              "Importancia en el mundo corporativo",
+              "Tendencias actuales"
+            ]
+          },
+          {
+            "h2": "Beneficios de los {Keyword}",
+            "h3": [
+              "Para la empresa",
+              "Para los empleados/clientes",
+              "Retorno de inversión (ROI)"
+            ]
+          },
+          {
+            "h2": "Tipos de {Keyword}",
+            "h3": [
+              "Categoría 1",
+              "Categoría 2",
+              "Categoría 3"
+            ]
+          },
+          {
+            "h2": "Cómo Elegir {Keyword}",
+            "h3": [
+              "Criterios de selección",
+              "Presupuesto recomendado",
+              "Errores comunes a evitar"
+            ]
+          },
+          {
+            "h2": "Top 10 {Keyword} para 2025",
+            "h3": [
+              "Opción 1: [Nombre producto]",
+              "Opción 2: [Nombre producto]",
+              "Comparativa de opciones"
+            ]
+          },
+          {
+            "h2": "{Keyword} por Industria",
+            "h3": [
+              "Sector tecnología",
+              "Sector salud",
+              "Sector financiero"
+            ]
+          },
+          {
+            "h2": "Personalización de {Keyword}",
+            "h3": [
+              "Técnicas de personalización",
+              "Diseño y branding",
+              "Tiempos de producción"
+            ]
+          },
+          {
+            "h2": "Casos de Éxito",
+            "h3": [
+              "Caso 1: Empresa X",
+              "Caso 2: Empresa Y",
+              "Lecciones aprendidas"
+            ]
+          },
+          {
+            "h2": "Preguntas Frecuentes (FAQ)",
+            "h3": [
+              "¿Cuánto cuestan?",
+              "¿Cuál es el tiempo de entrega?",
+              "¿Ofrecen personalización?"
+            ]
+          },
+          {
+            "h2": "Conclusión y Próximos Pasos"
+          }
+        ]
+      },
+      "articulo_tipo_lista": {
+        "h1": "Top {Número} {Keyword} para {Año/Ocasión}",
+        "ejemplo_h1": "Top 15 Regalos Corporativos Premium para Navidad 2025",
+        "estructura_h2_h3": [
+          {
+            "h2": "Introducción",
+            "h3": [
+              "Por qué estos regalos destacan",
+              "Criterios de selección"
+            ]
+          },
+          {
+            "h2": "1. {Nombre del Regalo}",
+            "h3": [
+              "Características principales",
+              "Ventajas",
+              "Para quién es ideal"
+            ]
+          },
+          {
+            "h2": "2-15. [Repetir estructura para cada regalo]"
+          },
+          {
+            "h2": "Comparativa de Opciones"
+          },
+          {
+            "h2": "Cómo Elegir entre estas Opciones"
+          },
+          {
+            "h2": "Precios y Presupuesto"
+          },
+          {
+            "h2": "Dónde Comprar en Quito"
+          },
+          {
+            "h2": "Conclusión"
+          }
+        ]
+      },
+      "articulo_tipo_guia": {
+        "h1": "Guía Completa: Cómo {Acción} {Keyword}",
+        "ejemplo_h1": "Guía Completa: Cómo Elegir Regalos Corporativos Perfectos",
+        "estructura_h2_h3": [
+          {
+            "h2": "Por qué es Importante {Acción}",
+            "h3": [
+              "Impacto en la empresa",
+              "Beneficios a largo plazo"
+            ]
+          },
+          {
+            "h2": "Paso 1: {Primer Paso}",
+            "h3": [
+              "Qué hacer",
+              "Herramientas necesarias",
+              "Tips y mejores prácticas"
+            ]
+          },
+          {
+            "h2": "Paso 2-5: [Repetir para cada paso]"
+          },
+          {
+            "h2": "Errores Comunes y Cómo Evitarlos"
+          },
+          {
+            "h2": "Checklist Completa"
+          },
+          {
+            "h2": "Recursos Adicionales"
+          },
+          {
+            "h2": "Conclusión"
+          }
+        ]
+      }
+    },
+
+    "faqs_generales": [
+      {
+        "categoria": "regalos-corporativos",
+        "preguntas": [
+          {
+            "pregunta": "¿Cuánto debería invertir en regalos corporativos?",
+            "respuesta_base": "El presupuesto depende del objetivo, relación con el destinatario y ocasión. Generalmente: empleados $15-50, clientes VIP $50-150, clientes regulares $20-60."
+          },
+          {
+            "pregunta": "¿Cuál es el tiempo de entrega de regalos corporativos personalizados?",
+            "respuesta_base": "En Quito, el tiempo estándar es 7-15 días hábiles. Para urgencias, ofrecemos servicio express de 3-5 días."
+          },
+          {
+            "pregunta": "¿Qué tipos de personalización ofrecen?",
+            "respuesta_base": "Ofrecemos serigrafía, grabado láser, bordado, impresión digital y sublimación según el producto."
+          },
+          {
+            "pregunta": "¿Tienen mínimos de pedido?",
+            "respuesta_base": "Los mínimos varían según el producto: generalmente 25-50 unidades para productos personalizados."
+          },
+          {
+            "pregunta": "¿Entregan en toda la ciudad de Quito?",
+            "respuesta_base": "Sí, entregamos en todo Quito y Valle de los Chillos sin costo adicional para pedidos mayores a $200."
+          },
+          {
+            "pregunta": "¿Puedo ver muestras antes de hacer un pedido grande?",
+            "respuesta_base": "Sí, ofrecemos muestras físicas para pedidos corporativos mayores a 100 unidades."
+          },
+          {
+            "pregunta": "¿Qué métodos de pago aceptan?",
+            "respuesta_base": "Aceptamos transferencias bancarias, tarjetas de crédito/débito y para empresas establecidas, crédito corporativo a 30 días."
+          },
+          {
+            "pregunta": "¿Los precios incluyen IVA?",
+            "respuesta_base": "Los precios mostrados no incluyen IVA. Se añade el 12% según la ley ecuatoriana."
+          },
+          {
+            "pregunta": "¿Ofrecen descuentos por volumen?",
+            "respuesta_base": "Sí, ofrecemos descuentos escalonados: 5% para 100+ unidades, 10% para 500+ unidades, 15% para 1000+ unidades."
+          },
+          {
+            "pregunta": "¿Qué pasa si el producto llega defectuoso?",
+            "respuesta_base": "Garantizamos calidad. Si hay defectos de fabricación, reemplazamos sin costo dentro de 30 días."
+          }
+        ]
+      }
+    ],
+
+    "recomendaciones_nextjs": {
+      "metadata_dinamica": {
+        "descripcion": "Usar generateMetadata() para crear metadata dinámica SEO-optimizada",
+        "codigo_ejemplo": "export async function generateMetadata({ params }) {\n  return {\n    title: `${params.subcategoria} | KS Promocionales`,\n    description: `Descubre ${params.subcategoria} en Quito. Catálogo completo con entrega rápida.`,\n    keywords: ['regalos corporativos', params.subcategoria, 'Quito'],\n    openGraph: {\n      title: `${params.subcategoria} - KS Promocionales`,\n      description: `Catálogo de ${params.subcategoria} en Quito`,\n      images: ['/og-image.jpg']\n    }\n  }\n}"
+      },
+      "generacion_estatica": {
+        "descripcion": "Usar generateStaticParams() para pre-renderizar todas las rutas del blog",
+        "codigo_ejemplo": "export async function generateStaticParams() {\n  const categorias = await getCategorias()\n  return categorias.flatMap(cat => \n    cat.subcategorias.map(sub => ({\n      categoria: cat.slug,\n      subcategoria: sub.slug\n    }))\n  )\n}",
+        "beneficios": [
+          "Mejor rendimiento",
+          "Mejor SEO (contenido inmediato)",
+          "Reducción de costos de servidor"
+        ]
+      },
+      "estructura_carpetas": {
+        "recomendacion": "Usar App Router con estructura de carpetas semántica",
+        "estructura": {
+          "app": {
+            "blog": {
+              "[categoria]": {
+                "page.tsx": "Página principal categoría",
+                "layout.tsx": "Layout con breadcrumbs",
+                "[subcategoria]": {
+                  "page.tsx": "Página subcategoría",
+                  "[slug]": {
+                    "page.tsx": "Artículo individual"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "schema_structured_data": {
+        "descripcion": "Implementar JSON-LD para rich snippets",
+        "tipos_schema": [
+          {
+            "tipo": "Article",
+            "uso": "Artículos de blog",
+            "campos": ["headline", "datePublished", "dateModified", "author", "image"]
+          },
+          {
+            "tipo": "BreadcrumbList",
+            "uso": "Navegación breadcrumbs",
+            "campos": ["itemListElement"]
+          },
+          {
+            "tipo": "FAQPage",
+            "uso": "Secciones FAQ",
+            "campos": ["mainEntity[Question, Answer]"]
+          },
+          {
+            "tipo": "Product",
+            "uso": "Páginas de productos específicos",
+            "campos": ["name", "description", "offers", "aggregateRating"]
+          },
+          {
+            "tipo": "Organization",
+            "uso": "Información de empresa",
+            "campos": ["name", "logo", "contactPoint", "address"]
+          }
+        ],
+        "codigo_ejemplo": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"Regalos Corporativos Elegantes - Guía 2025\",\n  \"datePublished\": \"2025-01-15\",\n  \"author\": {\n    \"@type\": \"Organization\",\n    \"name\": \"KS Promocionales\"\n  },\n  \"image\": \"https://kspromocionales.com/images/article.jpg\"\n}"
+      },
+      "sitemap_dinamico": {
+        "descripcion": "Generar sitemap.xml dinámico con todas las URLs del blog",
+        "archivo": "app/sitemap.ts",
+        "codigo_ejemplo": "export default async function sitemap() {\n  const baseUrl = 'https://kspromocionales.com'\n  const posts = await getAllBlogPosts()\n  \n  return posts.map(post => ({\n    url: `${baseUrl}${post.url}`,\n    lastModified: post.updatedAt,\n    changeFrequency: 'weekly',\n    priority: 0.8\n  }))\n}"
+      },
+      "breadcrumbs": {
+        "descripcion": "Implementar breadcrumbs en layout.tsx de cada nivel",
+        "beneficios": [
+          "Mejor UX navegación",
+          "Mejor SEO (comprensión estructura)",
+          "Rich snippets en Google"
+        ],
+        "codigo_ejemplo": "const Breadcrumbs = ({ items }) => (\n  <nav aria-label=\"breadcrumb\">\n    <ol className=\"flex space-x-2\">\n      {items.map((item, i) => (\n        <li key={i}>\n          {i < items.length - 1 ? (\n            <Link href={item.url}>{item.label}</Link>\n          ) : (\n            <span>{item.label}</span>\n          )}\n        </li>\n      ))}\n    </ol>\n  </nav>\n)"
+      },
+      "imagenes_optimizadas": {
+        "descripcion": "Usar next/image para todas las imágenes del blog",
+        "configuracion": {
+          "sizes": "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px",
+          "quality": 85,
+          "formato": "webp",
+          "lazy_loading": true,
+          "placeholder": "blur"
+        }
+      },
+      "robots_txt": {
+        "descripcion": "Configurar robots.txt para permitir crawling del blog",
+        "contenido": "User-agent: *\nAllow: /blog/\nAllow: /\nDisallow: /api/\nSitemap: https://kspromocionales.com/sitemap.xml"
+      }
+    },
+
+    "recomendaciones_onpage": {
+      "titulo_h1": {
+        "reglas": [
+          "Un solo H1 por página",
+          "Incluir keyword principal",
+          "Máximo 60 caracteres",
+          "Usar números cuando sea posible (Top 10, 15 Ideas, etc.)",
+          "Incluir año actual si es contenido evergreen"
+        ],
+        "ejemplos_buenos": [
+          "Regalos Corporativos Elegantes - Guía Completa 2025",
+          "Top 15 Regalos Personalizados para Empleados",
+          "Cómo Elegir Regalos Corporativos en Quito [Guía 2025]"
+        ]
+      },
+      "meta_description": {
+        "reglas": [
+          "Entre 150-160 caracteres",
+          "Incluir keyword principal",
+          "Incluir call to action",
+          "Incluir ubicación (Quito) cuando sea relevante",
+          "Mencionar beneficio principal"
+        ],
+        "ejemplos": [
+          "Descubre los mejores regalos corporativos elegantes en Quito. Guía completa 2025 con ideas, precios y proveedores. ¡Solicita tu cotización!",
+          "Top 15 regalos personalizados para empleados que aumentan la motivación. Catálogo con entrega en Quito. Ver opciones →"
+        ]
+      },
+      "estructura_contenido": {
+        "parrafo_introduccion": {
+          "longitud": "150-200 palabras",
+          "incluir": [
+            "Keyword principal en las primeras 100 palabras",
+            "Problema que resuelve el artículo",
+            "Beneficio de leer el artículo",
+            "Breve índice de lo que se cubrirá"
+          ]
+        },
+        "longitud_articulo": {
+          "articulo_pilar": "2500-4000 palabras",
+          "articulo_lista": "1500-2500 palabras",
+          "guia_practica": "2000-3000 palabras",
+          "noticia_tendencia": "800-1200 palabras"
+        },
+        "densidad_keywords": {
+          "keyword_principal": "1-2% del contenido total",
+          "keywords_secundarias": "0.5-1% cada una",
+          "lsi_keywords": "Usar naturalmente variaciones y sinónimos"
+        }
+      },
+      "enlaces_internos": {
+        "estrategia": "Modelo de silo con enlaces contextuales",
+        "reglas": [
+          "Mínimo 3-5 enlaces internos por artículo",
+          "Enlazar desde artículos de menor autoridad hacia pilares",
+          "Usar anchor text descriptivo con keywords",
+          "Enlazar artículos relacionados de la misma categoría",
+          "Incluir enlaces a páginas de productos/servicios"
+        ],
+        "ejemplos_anchor": [
+          "regalos corporativos premium",
+          "guía completa de regalos personalizados",
+          "ver catálogo de gadgets corporativos",
+          "cómo elegir regalos corporativos"
+        ]
+      },
+      "multimedia": {
+        "imagenes": {
+          "cantidad": "1 imagen cada 300-400 palabras",
+          "alt_text": "Incluir keyword + descripción específica",
+          "nombre_archivo": "keyword-descriptiva.webp",
+          "dimensiones": "Min 1200x630px para imágenes destacadas"
+        },
+        "videos": {
+          "ubicacion": "Después de introducción o en secciones clave",
+          "duracion": "2-5 minutos ideal",
+          "transcripcion": "Incluir transcripción completa para SEO"
+        }
+      },
+      "elementos_engagement": {
+        "listas": "Usar listas numeradas y bullet points",
+        "tablas": "Comparativas de productos en tablas",
+        "citas": "Destacar datos importantes en blockquotes",
+        "cta": "Incluir 2-3 CTAs a lo largo del artículo",
+        "tabla_contenidos": "TOC clickeable en artículos >1500 palabras"
+      },
+      "llamados_accion": {
+        "ubicaciones": [
+          "Después de introducción",
+          "En medio del contenido (después de sección importante)",
+          "Al final del artículo (antes de conclusión)",
+          "En sidebar si existe"
+        ],
+        "ejemplos": [
+          "Solicita tu cotización personalizada →",
+          "Ver catálogo completo",
+          "Descargar guía PDF gratuita",
+          "Hablar con un asesor",
+          "Ver casos de éxito"
+        ]
+      }
+    },
+
+    "plan_editorial": {
+      "descripcion": "Plan de contenidos para los primeros 3 meses",
+      "mes_1": {
+        "semana_1": [
+          {
+            "titulo": "Regalos Corporativos Elegantes - Guía Completa 2025",
+            "categoria": "regalos-corporativos",
+            "subcategoria": "elegantes",
+            "tipo": "articulo_pilar",
+            "keywords": ["regalos corporativos elegantes", "obsequios elegantes empresariales"],
+            "objetivo": "Posicionar keyword principal + generar backlinks"
+          },
+          {
+            "titulo": "Top 15 Regalos Corporativos Premium para Ejecutivos",
+            "categoria": "regalos-corporativos",
+            "subcategoria": "premium",
+            "tipo": "articulo_lista",
+            "keywords": ["regalos corporativos premium", "regalos ejecutivos exclusivos"],
+            "objetivo": "Generar tráfico + conversiones"
+          }
+        ],
+        "semana_2": [
+          {
+            "titulo": "Guía Completa: Cómo Elegir Regalos Corporativos Perfectos",
+            "categoria": "guias",
+            "subcategoria": "como-elegir",
+            "tipo": "guia_practica",
+            "keywords": ["cómo elegir regalos corporativos", "seleccionar obsequios empresariales"],
+            "objetivo": "Captar tráfico informacional"
+          },
+          {
+            "titulo": "Regalos de Navidad para Empresas: 20 Ideas Originales 2025",
+            "categoria": "regalos-corporativos",
+            "subcategoria": "navidad",
+            "tipo": "articulo_lista",
+            "keywords": ["regalos navidad empresas", "obsequios navideños corporativos"],
+            "objetivo": "Tráfico estacional + conversiones altas"
+          }
+        ],
+        "semana_3": [
+          {
+            "titulo": "Regalos Personalizados para Empleados: Guía 2025",
+            "categoria": "regalos-personalizados",
+            "subcategoria": "empleados",
+            "tipo": "articulo_pilar",
+            "keywords": ["regalos personalizados empleados", "obsequios personalizados colaboradores"],
+            "objetivo": "Posicionar keyword secundaria"
+          },
+          {
+            "titulo": "Regalos Corporativos en Quito: Dónde Comprar [Guía Local]",
+            "categoria": "regalos-corporativos",
+            "subcategoria": "quito",
+            "tipo": "guia_local",
+            "keywords": ["regalos corporativos Quito", "regalos empresariales Quito Ecuador"],
+            "objetivo": "SEO local + conversiones"
+          }
+        ],
+        "semana_4": [
+          {
+            "titulo": "Top 10 Gadgets Corporativos Tecnológicos 2025",
+            "categoria": "tipos-productos",
+            "subcategoria": "tecnologia-gadgets",
+            "tipo": "articulo_lista",
+            "keywords": ["gadgets corporativos", "tecnología promocional"],
+            "objetivo": "Tráfico + ventas productos específicos"
+          },
+          {
+            "titulo": "Presupuesto para Regalos Corporativos: Guía Completa",
+            "categoria": "guias",
+            "subcategoria": "presupuesto",
+            "tipo": "guia_practica",
+            "keywords": ["presupuesto regalos corporativos", "cuánto invertir regalos empresariales"],
+            "objetivo": "Educar + calificar leads"
+          }
+        ]
+      },
+      "mes_2": {
+        "focus": "Contenido por industria + tipos de productos",
+        "articulos_clave": [
+          "Regalos Corporativos para Sector Tecnología [Guía Especializada]",
+          "Termos Corporativos Personalizados: Top 12 Opciones",
+          "Mochilas Corporativas: Guía de Compra 2025",
+          "Regalos Corporativos Sector Salud: Ideas Especializadas",
+          "Libretas Corporativas Personalizadas: Catálogo Completo",
+          "Regalos Día de la Madre Empresas: 15 Ideas Especiales",
+          "Protocolo de Regalos Corporativos: Guía de Etiqueta",
+          "Regalos Corporativos Fin de Año: Planifica con Anticipación"
+        ]
+      },
+      "mes_3": {
+        "focus": "Contenido long-tail + casos de éxito",
+        "articulos_clave": [
+          "Regalos Corporativos Originales que Impactan [15 Ideas]",
+          "Personalización de Regalos Corporativos: Técnicas y Costos",
+          "Regalos Corporativos Sector Financiero: Guía Especializada",
+          "Casos de Éxito: Empresas que Acertaron con sus Regalos",
+          "Regalos Corporativos Ecológicos Sustentables",
+          "Timing Perfecto: Cuándo Entregar Regalos Corporativos",
+          "Botellas Corporativas Personalizadas: Guía Completa",
+          "Regalos Corporativos para Ferias y Eventos"
+        ]
+      },
+      "kpis_seguimiento": [
+        "Tráfico orgánico por artículo",
+        "Posiciones en Google (top 10 keywords)",
+        "CTR en SERPs",
+        "Tiempo en página",
+        "Tasa de rebote",
+        "Conversiones generadas",
+        "Backlinks generados",
+        "Shares en redes sociales"
+      ]
+    },
+
+    "guidelines_redaccion": {
+      "tono_voz": {
+        "estilo": "Profesional pero cercano",
+        "caracteristicas": [
+          "Experto en regalos corporativos",
+          "Útil y práctico",
+          "Orientado a soluciones",
+          "Usa 'tú' o 'usted' según contexto",
+          "Evita jerga excesiva"
+        ]
+      },
+      "estructura_parrafos": {
+        "longitud": "3-5 líneas máximo",
+        "una_idea": "Un párrafo = una idea principal",
+        "conectores": "Usar conectores entre párrafos"
+      },
+      "uso_datos": {
+        "estadisticas": "Incluir datos y estadísticas actualizadas",
+        "fuentes": "Citar fuentes confiables",
+        "contexto_local": "Adaptar datos a realidad ecuatoriana cuando sea posible"
+      },
+      "llamados_accion": {
+        "claridad": "CTAs claros y específicos",
+        "urgencia": "Crear sentido de urgencia sin ser agresivo",
+        "beneficio": "Destacar beneficio inmediato"
+      },
+      "seo_writing": {
+        "naturalidad": "Priorizar naturalidad sobre densidad keyword",
+        "variaciones": "Usar sinónimos y variaciones de keywords",
+        "contexto": "Usar LSI keywords naturalmente",
+        "evitar": "No keyword stuffing"
+      }
+    },
+
+    "herramientas_recomendadas": {
+      "research_keywords": [
+        "Google Keyword Planner",
+        "SEMrush",
+        "Ahrefs Keywords Explorer",
+        "AnswerThePublic",
+        "Google Trends"
+      ],
+      "analisis_competencia": [
+        "SEMrush",
+        "Ahrefs Site Explorer",
+        "SimilarWeb"
+      ],
+      "optimizacion_contenido": [
+        "Surfer SEO",
+        "Clearscope",
+        "Frase.io"
+      ],
+      "tracking_rendimiento": [
+        "Google Analytics 4",
+        "Google Search Console",
+        "SEMrush Position Tracking"
+      ]
+    },
+
+    "metricas_exito": {
+      "mes_1": {
+        "trafico_organico": "500-1000 sesiones",
+        "keywords_top_10": "5-10 keywords",
+        "articulos_publicados": "8-10 artículos"
+      },
+      "mes_3": {
+        "trafico_organico": "2000-3000 sesiones",
+        "keywords_top_10": "20-30 keywords",
+        "articulos_publicados": "24-30 artículos"
+      },
+      "mes_6": {
+        "trafico_organico": "5000-8000 sesiones",
+        "keywords_top_10": "50-70 keywords",
+        "articulos_publicados": "50-60 artículos",
+        "backlinks": "20-30 backlinks de calidad"
+      }
+    }
+  }
+}

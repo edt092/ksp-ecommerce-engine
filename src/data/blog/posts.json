@@ -1,15 +1,37 @@
 [
   {
     "id": 1,
+    "slug": "productos-promocionales-ecuador",
+    "title": "Guía Completa de Productos Promocionales en Ecuador",
+    "excerpt": "Descubre cómo elegir los productos promocionales perfectos para tu marca en Ecuador. Consejos, tendencias y casos de éxito.",
+    "category": "productos",
+    "categoryName": "Productos",
+    "author": "Equipo KS Promocionales",
+    "authorImage": "https://randomuser.me/api/portraits/men/42.jpg",
+    "authorRole": "Expertos en Merchandising",
+    "date": "2024-11-08",
+    "readTime": "5 min",
+    "image": "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=800&q=80",
+    "tags": ["productos promocionales", "marketing"],
+    "seo": {
+      "metaTitle": "Guía Completa de Productos Promocionales en Ecuador | KS Promocionales",
+      "metaDescription": "Descubre cómo elegir los productos promocionales perfectos para tu marca en Ecuador. Consejos expertos, tendencias y casos de éxito.",
+      "keywords": "productos promocionales Ecuador, merchandising Ecuador, regalos corporativos, artículos promocionales"
+    }
+  },
+  {
+    "id": 2,
     "slug": "mejores-productos-promocionales-2025",
     "title": "Los 10 Mejores Productos Promocionales para Empresas en 2025",
     "excerpt": "Descubre los productos promocionales más efectivos para impulsar tu marca en 2025. Desde tecnología hasta textiles, conoce qué funciona mejor.",
     "category": "productos",
     "categoryName": "Productos",
-    "author": "Hanna Villavicencio",
+    "author": "Carlos Mendoza",
+    "authorImage": "https://randomuser.me/api/portraits/men/32.jpg",
+    "authorRole": "Especialista en Marketing",
     "date": "2025-01-15",
     "readTime": "8 min",
-    "image": "/images/blog/productos-promocionales-2025.jpg",
+    "image": "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=800&q=80",
     "tags": ["productos promocionales", "merchandising", "branding", "2025"],
     "seo": {
       "metaTitle": "Los 10 Mejores Productos Promocionales para Empresas en 2025 | KS Promocionales",
@@ -18,16 +40,18 @@
     }
   },
   {
-    "id": 2,
+    "id": 3,
     "slug": "estrategias-marketing-merchandising-empresarial",
     "title": "Estrategias de Marketing con Merchandising: Cómo Aumentar tu ROI",
     "excerpt": "El merchandising corporativo bien ejecutado puede multiplicar tu retorno de inversión. Aprende las mejores estrategias probadas por expertos.",
     "category": "marketing",
     "categoryName": "Marketing",
-    "author": "Hanna Villavicencio",
+    "author": "María Fernanda Rivas",
+    "authorImage": "https://randomuser.me/api/portraits/women/44.jpg",
+    "authorRole": "Consultora de Branding",
     "date": "2025-01-12",
     "readTime": "7 min",
-    "image": "/images/blog/estrategias-marketing-merchandising.jpg",
+    "image": "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=80",
     "tags": ["marketing", "merchandising", "ROI", "estrategias"],
     "seo": {
       "metaTitle": "Estrategias de Marketing con Merchandising: Aumenta tu ROI 300% | KS",
@@ -36,16 +60,18 @@
     }
   },
   {
-    "id": 3,
+    "id": 4,
     "slug": "diseno-logos-productos-promocionales",
     "title": "Diseño de Logos para Productos Promocionales: Guía Completa 2025",
     "excerpt": "Aprende a adaptar tu logo para diferentes superficies y técnicas de impresión. Consejos profesionales de diseño para merchandising.",
     "category": "diseño",
     "categoryName": "Diseño",
-    "author": "Hanna Villavicencio",
+    "author": "Andrés Vega",
+    "authorImage": "https://randomuser.me/api/portraits/men/52.jpg",
+    "authorRole": "Director Creativo",
     "date": "2025-01-10",
     "readTime": "9 min",
-    "image": "/images/blog/diseno-logos-promocionales.jpg",
+    "image": "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&q=80",
     "tags": ["diseño", "logos", "branding", "personalización"],
     "seo": {
       "metaTitle": "Diseño de Logos para Productos Promocionales: Guía Profesional 2025 | KS",
@@ -54,16 +80,18 @@
     }
   },
   {
-    "id": 4,
+    "id": 5,
     "slug": "merchandising-eventos-corporativos-ecuador",
     "title": "Merchandising para Eventos Corporativos: Qué Funciona en Ecuador",
     "excerpt": "Los eventos corporativos requieren merchandising estratégico. Descubre qué productos generan mayor impacto en audiencias ecuatorianas.",
     "category": "merchandising",
     "categoryName": "Merchandising",
-    "author": "Hanna Villavicencio",
+    "author": "Sofía Morales",
+    "authorImage": "https://randomuser.me/api/portraits/women/65.jpg",
+    "authorRole": "Estratega de Eventos",
     "date": "2025-01-08",
     "readTime": "6 min",
-    "image": "/images/blog/merchandising-eventos-ecuador.jpg",
+    "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
     "tags": ["merchandising", "eventos", "Ecuador", "corporativo"],
     "seo": {
       "metaTitle": "Merchandising para Eventos Corporativos en Ecuador: Guía 2025 | KS",
@@ -72,16 +100,18 @@
     }
   },
   {
-    "id": 5,
+    "id": 6,
     "slug": "productos-tecnologicos-promocionales-tendencias",
     "title": "Productos Tecnológicos Promocionales: Tendencias que Dominan el Mercado",
     "excerpt": "La tecnología lidera el merchandising moderno. Conoce los gadgets promocionales más demandados y cómo integrarlos en tu estrategia.",
     "category": "productos",
     "categoryName": "Productos",
-    "author": "Hanna Villavicencio",
+    "author": "Diego Paredes",
+    "authorImage": "https://randomuser.me/api/portraits/men/22.jpg",
+    "authorRole": "Experto en Tecnología",
     "date": "2025-01-05",
     "readTime": "7 min",
-    "image": "/images/blog/productos-tecnologicos-tendencias.jpg",
+    "image": "https://images.unsplash.com/photo-1468495244123-6c6c332eeece?w=800&q=80",
     "tags": ["tecnología", "productos", "tendencias", "gadgets"],
     "seo": {
       "metaTitle": "Productos Tecnológicos Promocionales: Top Tendencias 2025 | KS Ecuador",
@@ -90,16 +120,18 @@
     }
   },
   {
-    "id": 6,
+    "id": 7,
     "slug": "branding-textiles-personalizados-empresas",
     "title": "Branding con Textiles Personalizados: Crea Uniformes que Venden",
     "excerpt": "Los textiles corporativos son tu mejor herramienta de branding. Aprende a diseñar uniformes y ropa que fortalezca tu identidad de marca.",
     "category": "marketing",
     "categoryName": "Marketing",
-    "author": "Hanna Villavicencio",
+    "author": "Valentina Torres",
+    "authorImage": "https://randomuser.me/api/portraits/women/28.jpg",
+    "authorRole": "Asesora de Imagen Corporativa",
     "date": "2025-01-03",
     "readTime": "8 min",
-    "image": "/images/blog/branding-textiles-personalizados.jpg",
+    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&q=80",
     "tags": ["branding", "textiles", "uniformes", "identidad"],
     "seo": {
       "metaTitle": "Branding con Textiles Personalizados: Uniformes que Venden | KS Ecuador",
@@ -108,16 +140,18 @@
     }
   },
   {
-    "id": 7,
+    "id": 8,
     "slug": "colores-psicologia-merchandising-corporativo",
     "title": "Psicología del Color en Merchandising: Elige Colores que Conviertan",
     "excerpt": "Los colores influyen directamente en las decisiones de compra. Descubre cómo aplicar la psicología del color en tus productos promocionales.",
     "category": "diseño",
     "categoryName": "Diseño",
-    "author": "Hanna Villavicencio",
+    "author": "Roberto Salazar",
+    "authorImage": "https://randomuser.me/api/portraits/men/45.jpg",
+    "authorRole": "Psicólogo del Consumidor",
     "date": "2025-01-01",
     "readTime": "6 min",
-    "image": "/images/blog/psicologia-color-merchandising.jpg",
+    "image": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=800&q=80",
     "tags": ["diseño", "colores", "psicología", "conversión"],
     "seo": {
       "metaTitle": "Psicología del Color en Merchandising: Guía para Aumentar Ventas | KS",
@@ -126,16 +160,18 @@
     }
   },
   {
-    "id": 8,
+    "id": 9,
     "slug": "regalos-corporativos-fin-ano-ecuador",
     "title": "Regalos Corporativos de Fin de Año: Las Mejores Ideas para Ecuador",
     "excerpt": "La temporada de regalos corporativos requiere planificación estratégica. Descubre las mejores opciones para sorprender a clientes y colaboradores.",
     "category": "merchandising",
     "categoryName": "Merchandising",
-    "author": "Hanna Villavicencio",
+    "author": "Camila Ortiz",
+    "authorImage": "https://randomuser.me/api/portraits/women/36.jpg",
+    "authorRole": "Gerente de Relaciones Corporativas",
     "date": "2024-12-28",
     "readTime": "7 min",
-    "image": "/images/blog/regalos-corporativos-fin-ano.jpg",
+    "image": "https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=800&q=80",
     "tags": ["regalos", "corporativo", "fin de año", "Ecuador"],
     "seo": {
       "metaTitle": "Regalos Corporativos de Fin de Año: Top Ideas Ecuador 2025 | KS",
@@ -144,16 +180,18 @@
     }
   },
   {
-    "id": 9,
+    "id": 10,
     "slug": "personalizacion-productos-tecnicas-impresion",
     "title": "Técnicas de Personalización: Serigrafía, Bordado, Grabado y Más",
     "excerpt": "Cada técnica de personalización tiene ventajas únicas. Aprende cuál elegir según el producto, presupuesto y cantidad para mejores resultados.",
     "category": "productos",
     "categoryName": "Productos",
-    "author": "Hanna Villavicencio",
+    "author": "Fernando López",
+    "authorImage": "https://randomuser.me/api/portraits/men/67.jpg",
+    "authorRole": "Especialista en Producción",
     "date": "2024-12-25",
     "readTime": "9 min",
-    "image": "/images/blog/tecnicas-personalizacion.jpg",
+    "image": "https://images.unsplash.com/photo-1611224885990-ab7363d1f2d2?w=800&q=80",
     "tags": ["personalización", "serigrafía", "bordado", "técnicas"],
     "seo": {
       "metaTitle": "Técnicas de Personalización de Productos: Guía Completa 2025 | KS Ecuador",
@@ -162,21 +200,43 @@
     }
   },
   {
-    "id": 10,
+    "id": 11,
     "slug": "marketing-sostenible-productos-ecologicos-promocionales",
     "title": "Marketing Sostenible: Productos Ecológicos que tu Audiencia Valorará",
     "excerpt": "La sostenibilidad ya no es opcional. Descubre cómo los productos ecológicos fortalecen tu marca y conectan con consumidores conscientes.",
     "category": "marketing",
     "categoryName": "Marketing",
-    "author": "Hanna Villavicencio",
+    "author": "Isabella Herrera",
+    "authorImage": "https://randomuser.me/api/portraits/women/58.jpg",
+    "authorRole": "Consultora de Sostenibilidad",
     "date": "2024-12-22",
     "readTime": "8 min",
-    "image": "/images/blog/marketing-sostenible-ecologico.jpg",
+    "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&q=80",
     "tags": ["sostenibilidad", "ecológico", "marketing verde", "tendencias"],
     "seo": {
       "metaTitle": "Marketing Sostenible: Productos Ecológicos Promocionales 2025 | KS Ecuador",
       "metaDescription": "Fortalece tu marca con productos ecológicos promocionales. Estrategias de marketing sostenible que generan impacto positivo y fidelizan clientes.",
       "keywords": "productos ecológicos promocionales Ecuador, marketing sostenible, merchandising verde, regalos corporativos sustentables"
+    }
+  },
+  {
+    "id": 12,
+    "slug": "regalos-corporativos-elegantes",
+    "title": "Regalos Corporativos Elegantes: Cómo Impresionar a Clientes VIP en Ecuador",
+    "excerpt": "Descubre los regalos corporativos elegantes que fortalecen relaciones con clientes VIP. Guía completa para seleccionar obsequios premium que generan impacto duradero.",
+    "category": "merchandising",
+    "categoryName": "Merchandising",
+    "author": "Miguel Ángel Paz",
+    "authorImage": "https://randomuser.me/api/portraits/men/75.jpg",
+    "authorRole": "Director de Cuentas Premium",
+    "date": "2025-01-20",
+    "readTime": "7 min",
+    "image": "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=800&q=80",
+    "tags": ["regalos corporativos", "clientes VIP", "elegantes", "premium"],
+    "seo": {
+      "metaTitle": "Regalos Corporativos Elegantes para Clientes VIP 2025 | KS Promocionales Ecuador",
+      "metaDescription": "Guía completa de regalos corporativos elegantes en Ecuador. Selecciona obsequios premium que impresionan clientes VIP y fortalecen relaciones comerciales estratégicas.",
+      "keywords": "regalos corporativos elegantes Ecuador, obsequios empresariales VIP, regalos premium clientes, regalos corporativos de alta gama, merchandising ejecutivo"
     }
   }
 ]
