@@ -14,6 +14,50 @@ export function generateStaticParams() {
   }));
 }
 
+// Generar metadata SEO para cada producto
+export async function generateMetadata({ params }) {
+  const product = productsData.find(p => p.slug === params.slug);
+
+  if (!product) {
+    return {
+      title: 'Producto no encontrado',
+      description: 'El producto que buscas no está disponible'
+    };
+  }
+
+  const category = categoriesData.find(c => c.id === product.categoryId);
+
+  return {
+    title: product.seoTitle || `${product.name} Personalizado | KS Promocionales`,
+    description: product.seoDescription || product.shortDescription,
+    keywords: product.keywords || `${product.name}, regalo corporativo, articulo promocional, ${category?.name || ''}`,
+    openGraph: {
+      title: product.seoTitle || product.name,
+      description: product.seoDescription || product.shortDescription,
+      images: product.images && product.images.length > 0 ? [
+        {
+          url: product.images[0],
+          width: 800,
+          height: 600,
+          alt: product.name
+        }
+      ] : [],
+      type: 'website',
+      locale: 'es_EC',
+      siteName: 'KS Promocionales Ecuador'
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: product.seoTitle || product.name,
+      description: product.seoDescription || product.shortDescription,
+      images: product.images && product.images.length > 0 ? [product.images[0]] : []
+    },
+    alternates: {
+      canonical: `https://kronossolopromocionales.com/productos/${params.slug}/`
+    }
+  };
+}
+
 export default function ProductPage({ params }) {
   const product = productsData.find(p => p.slug === params.slug);
 

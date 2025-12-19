@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
-import ProductCard from '@/components/ProductCard';
+import CategoryProductsGrid from '@/components/CategoryProductsGrid';
 
 import categoriesData from '@/data/categories.json';
 import productsData from '@/data/products.json';
@@ -74,10 +74,12 @@ export default function CategoryPage({ params }) {
         )}
 
         <div className="relative z-10 container mx-auto px-4 py-16 md:py-20 text-center">
-          <div className="text-6xl md:text-7xl lg:text-8xl mb-6 animate-scale-in opacity-70">{category.icon}</div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-slide-down px-4">
             {category.name}
           </h1>
+          <p className="text-sm md:text-base text-white/70 mb-4">
+            {category.productCount} productos disponibles
+          </p>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed animate-slide-up px-4">
             {category.story}
           </p>
@@ -113,20 +115,10 @@ export default function CategoryPage({ params }) {
           </div>
 
           {categoryProducts.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-              {categoryProducts.map((product, index) => (
-                <div
-                  key={product.id}
-                  className="animate-slide-up"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <ProductCard
-                    product={product}
-                    category={category}
-                  />
-                </div>
-              ))}
-            </div>
+            <CategoryProductsGrid
+              products={categoryProducts}
+              category={category}
+            />
           ) : (
             <div className="text-center py-12">
               <p className="text-gray-500 text-base md:text-lg">

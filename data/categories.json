@@ -1,182 +1,272 @@
 [
   {
-    "id": "articulos-escritura",
-    "name": "Artículos de Escritura",
-    "slug": "articulos-escritura",
-    "description": "Bolígrafos, marcadores, lápices y más artículos de escritura personalizados",
-    "image": "/images/products-categoria/articulos-escritura/boligrafo-calvin/boligrafo-calvin.jpg",
-    "color": "#FF6B35",
-    "seoTitle": "Artículos de Escritura Personalizados Ecuador | KS Promocionales",
-    "seoDescription": "Bolígrafos, marcadores y artículos de escritura personalizados con tu logo. Calidad premium para tu marca en Ecuador.",
-    "story": "Dale vida a cada palabra con artículos de escritura que representan tu marca",
+    "id": "variedades",
+    "name": "Variedades",
+    "slug": "variedades",
+    "description": "Descubre variedades personalizados con tu logo. Alta calidad y entrega rápida en Ecuador.",
+    "icon": "Package",
+    "story": "Ofrecemos variedades promocionales de calidad premium, diseñados para que tu marca destaque. Personalización profesional garantizada.",
+    "seoTitle": "Variedades Ecuador | KS",
+    "seoDescription": "Variedades personalizados con logo. Alta calidad. Envíos en Ecuador. ¡Cotiza por WhatsApp!",
     "benefits": [
-      "Impresión de alta calidad",
-      "Múltiples opciones de personalización",
-      "Escritura suave y duradera",
-      "Desde 50 unidades"
+      "Personalización con tu logo",
+      "Alta calidad garantizada",
+      "Envíos en Ecuador",
+      "Precios competitivos"
     ],
-    "subcategories": ["Bolígrafos", "Marcadores", "Lápices", "Portaminas", "Sets de Escritura"]
-  },
-  {
-    "id": "herramientas",
-    "name": "Herramientas",
-    "slug": "herramientas",
-    "description": "Herramientas y kits de herramientas personalizados para promociones corporativas",
-    "image": "/images/products-categoria/herramientas/set-destornillador-pistol/set-destornillador-pistol.jpg",
-    "color": "#4A90E2",
-    "seoTitle": "Herramientas Personalizadas Ecuador | KS Promocionales",
-    "seoDescription": "Herramientas y kits personalizados con tu logo. Regalo corporativo útil y duradero en Ecuador.",
-    "story": "Herramientas que construyen la relación con tus clientes",
-    "benefits": [
-      "Materiales resistentes",
-      "Múltiples técnicas de marcado",
-      "Uso profesional y doméstico",
-      "Estuches personalizables"
-    ],
-    "subcategories": ["Multiherramientas", "Linternas", "Kits de Herramientas", "Destornilladores", "Niveles"]
-  },
-  {
-    "id": "hogar",
-    "name": "Hogar",
-    "slug": "hogar",
-    "description": "Artículos para el hogar personalizados que llevan tu marca al día a día",
-    "image": "/images/products-categoria/hogar/set-sushi/set-sushi.jpg",
-    "color": "#27AE60",
-    "seoTitle": "Artículos para el Hogar Personalizados Ecuador | KS Promocionales",
-    "seoDescription": "Productos para el hogar personalizados con tu marca. Regalos corporativos útiles y memorables en Ecuador.",
-    "story": "Tu marca en el corazón del hogar de tus clientes",
-    "benefits": [
-      "Productos de uso diario",
-      "Calidad duradera",
-      "Diseños modernos",
-      "Alta recordación de marca"
-    ],
-    "subcategories": ["Decoración", "Cocina", "Almacenamiento", "Textiles del Hogar", "Organizadores"]
-  },
-  {
-    "id": "llaveros",
-    "name": "Llaveros",
-    "slug": "llaveros",
-    "description": "Llaveros personalizados en múltiples materiales y diseños",
-    "image": "/images/products-categoria/llaveros/llavero-destapador-house/llavero-destapador-house-2.jpg",
-    "color": "#F39C12",
-    "seoTitle": "Llaveros Personalizados Ecuador | KS Promocionales",
-    "seoDescription": "Llaveros personalizados en metal, cuero, PVC y más. Regalo promocional económico y efectivo en Ecuador.",
-    "story": "Pequeños detalles que abren grandes oportunidades",
-    "benefits": [
-      "Múltiples materiales disponibles",
-      "Diseños 2D y 3D",
-      "Precio accesible",
-      "Personalización ilimitada"
-    ],
-    "subcategories": ["Metálicos", "Cuero", "PVC", "Madera", "Acrílicos", "Multifuncionales"]
-  },
-  {
-    "id": "memorias-usb",
-    "name": "Memorias USB",
-    "slug": "memorias-usb",
-    "description": "Memorias USB personalizadas con tu logo, en diversos diseños y capacidades",
-    "image": "/images/products-categoria/memorias-usb/memoria-usb-credit-card/memoria-usb-credit-card.jpg",
-    "color": "#9B59B6",
-    "seoTitle": "Memorias USB Personalizadas Ecuador | USB Promocionales",
-    "seoDescription": "Memorias USB personalizadas desde 4GB hasta 128GB. Grabado láser y diseños creativos. Ecuador.",
-    "story": "Tu información y tu marca, siempre juntas",
-    "benefits": [
-      "Capacidades desde 4GB a 128GB",
-      "USB 2.0 y 3.0 disponibles",
-      "Diseños creativos únicos",
-      "Grabado o impresión UV"
-    ],
-    "subcategories": ["Clásicas", "Giratorias", "Tarjeta", "Metálicas", "Madera", "Personalizadas 3D"]
+    "image": "https://catalogospromocionales.com/images/productos/9781.jpg",
+    "productCount": 393
   },
   {
     "id": "mugs-vasos-termos",
-    "name": "Mugs/Botilitos/Vasos/Termos",
+    "name": "Mugs, Vasos y Termos",
     "slug": "mugs-vasos-termos",
-    "description": "Tazas, vasos, botellas y termos personalizados para tu marca",
-    "image": "/images/products-categoria/mugs-vasos-termos/termo-metalico-sublimacion-sport-500ml/termo-metalico-sublimacion-sport-500ml.jpg",
-    "color": "#E74C3C",
-    "seoTitle": "Mugs, Vasos y Termos Personalizados Ecuador | KS Promocionales",
-    "seoDescription": "Tazas, vasos, botellas y termos personalizados. Drinkware promocional de calidad premium en Ecuador.",
-    "story": "Cada sorbo, un momento con tu marca",
+    "description": "Descubre mugs, vasos y termos personalizados con tu logo. Alta calidad y entrega rápida en Ecuador.",
+    "icon": "Coffee",
+    "story": "Ofrecemos mugs, vasos y termos promocionales de calidad premium, diseñados para que tu marca destaque. Personalización profesional garantizada.",
+    "seoTitle": "Mugs, Vasos y Termos Ecuador | KS",
+    "seoDescription": "Mugs, Vasos y Termos personalizados con logo. Alta calidad. Envíos en Ecuador. ¡Cotiza por WhatsApp!",
     "benefits": [
-      "Sublimación de alta calidad",
-      "Libres de BPA",
-      "Conservación de temperatura",
-      "Resistentes al lavavajillas"
+      "Personalización con tu logo",
+      "Alta calidad garantizada",
+      "Envíos en Ecuador",
+      "Precios competitivos"
     ],
-    "subcategories": ["Tazas Cerámicas", "Mugs Térmicos", "Vasos", "Botellas", "Termos", "Botilitos Deportivos"]
+    "image": "https://catalogospromocionales.com/images/productos/6115.jpg",
+    "productCount": 128
   },
   {
-    "id": "oficina",
-    "name": "Oficina",
-    "slug": "oficina",
-    "description": "Artículos de oficina personalizados para el entorno corporativo",
-    "image": "/images/products-categoria/oficina/libreta-igor-jumbo/libreta-igor-jumbo.jpg",
-    "color": "#34495E",
-    "seoTitle": "Artículos de Oficina Personalizados Ecuador | KS Promocionales",
-    "seoDescription": "Cuadernos, agendas, carpetas y más artículos de oficina personalizados. Papelería corporativa en Ecuador.",
-    "story": "Organización y productividad con tu sello",
+    "id": "bolsos-mochilas",
+    "name": "Bolsos y Mochilas",
+    "slug": "bolsos-mochilas",
+    "description": "Descubre bolsos y mochilas personalizados con tu logo. Alta calidad y entrega rápida en Ecuador.",
+    "icon": "Backpack",
+    "story": "Ofrecemos bolsos y mochilas promocionales de calidad premium, diseñados para que tu marca destaque. Personalización profesional garantizada.",
+    "seoTitle": "Bolsos y Mochilas Ecuador | KS",
+    "seoDescription": "Bolsos y Mochilas personalizados con logo. Alta calidad. Envíos en Ecuador. ¡Cotiza por WhatsApp!",
     "benefits": [
-      "Variedad de formatos",
-      "Impresión full color",
-      "Papel de alta calidad",
-      "Diseños profesionales"
+      "Personalización con tu logo",
+      "Alta calidad garantizada",
+      "Envíos en Ecuador",
+      "Precios competitivos"
     ],
-    "subcategories": ["Cuadernos", "Agendas", "Carpetas", "Blocks de Notas", "Porta Documentos", "Sets de Escritorio"]
-  },
-  {
-    "id": "pharma-cuidado-personal",
-    "name": "Pharma y Cuidado Personal",
-    "slug": "pharma-cuidado-personal",
-    "description": "Artículos de cuidado personal y salud personalizados",
-    "image": "/images/products-categoria/pharma-cuidado-personal/liquido-antibacterial-holder-spray/liquido-antibacterial-holder-spray.jpg",
-    "color": "#1ABC9C",
-    "seoTitle": "Artículos Pharma y Cuidado Personal Personalizados Ecuador",
-    "seoDescription": "Kits de primeros auxilios, sanitizantes, mascarillas y artículos de cuidado personal con tu logo en Ecuador.",
-    "story": "Tu marca cuidando el bienestar de tus clientes",
-    "benefits": [
-      "Productos certificados",
-      "Opciones hipoalergénicas",
-      "Empaque personalizado",
-      "Ideal para pharma y hospitales"
-    ],
-    "subcategories": ["Kits de Primeros Auxilios", "Sanitizantes", "Pastilleros", "Sets de Cuidado", "Termómetros", "Mascarillas"]
+    "image": "https://catalogospromocionales.com/images/productos/9475.jpg",
+    "productCount": 120
   },
   {
     "id": "tecnologia",
     "name": "Tecnología",
     "slug": "tecnologia",
-    "description": "Gadgets tecnológicos y accesorios personalizados de última generación",
-    "image": "/images/products-categoria/tecnologia/speaker-bluetooth-beach-boompods/speaker-bluetooth-beach-boompods.jpg",
-    "color": "#3498DB",
-    "seoTitle": "Tecnología Promocional Ecuador | Gadgets Personalizados",
-    "seoDescription": "Gadgets tecnológicos, power banks, audífonos y accesorios personalizados. Tecnología promocional en Ecuador.",
-    "story": "Innovación que conecta tu marca con el futuro",
+    "description": "Descubre tecnología personalizados con tu logo. Alta calidad y entrega rápida en Ecuador.",
+    "icon": "Laptop",
+    "story": "Ofrecemos tecnología promocionales de calidad premium, diseñados para que tu marca destaque. Personalización profesional garantizada.",
+    "seoTitle": "Tecnología Ecuador | KS",
+    "seoDescription": "Tecnología personalizados con logo. Alta calidad. Envíos en Ecuador. ¡Cotiza por WhatsApp!",
     "benefits": [
-      "Última tecnología",
-      "Garantía de calidad",
-      "Personalización premium",
-      "Alto valor percibido"
+      "Personalización con tu logo",
+      "Alta calidad garantizada",
+      "Envíos en Ecuador",
+      "Precios competitivos"
     ],
-    "subcategories": ["Power Banks", "Audífonos", "Soportes de Celular", "Cables", "Mouse", "Teclados", "Parlantes"]
+    "image": "https://catalogospromocionales.com/images/productos/10589.jpg",
+    "productCount": 107
   },
   {
-    "id": "variedades",
-    "name": "Variedades",
-    "slug": "variedades",
-    "description": "Artículos diversos y creativos personalizados para toda ocasión",
-    "image": "/images/products-categoria/variedades/cubo-pop-it/cubo-pop-it.jpg",
-    "color": "#E67E22",
-    "seoTitle": "Variedades Promocionales Ecuador | Artículos Personalizados",
-    "seoDescription": "Amplia variedad de artículos promocionales personalizados. Encuentra el regalo perfecto para tu marca en Ecuador.",
-    "story": "Creatividad sin límites para tu marca",
+    "id": "hogar",
+    "name": "Hogar y Cocina",
+    "slug": "hogar",
+    "description": "Descubre hogar y cocina personalizados con tu logo. Alta calidad y entrega rápida en Ecuador.",
+    "icon": "Home",
+    "story": "Ofrecemos hogar y cocina promocionales de calidad premium, diseñados para que tu marca destaque. Personalización profesional garantizada.",
+    "seoTitle": "Hogar y Cocina Ecuador | KS",
+    "seoDescription": "Hogar y Cocina personalizados con logo. Alta calidad. Envíos en Ecuador. ¡Cotiza por WhatsApp!",
     "benefits": [
-      "Productos únicos",
-      "Diseños innovadores",
-      "Múltiples opciones",
-      "Sorprende a tus clientes"
+      "Personalización con tu logo",
+      "Alta calidad garantizada",
+      "Envíos en Ecuador",
+      "Precios competitivos"
     ],
-    "subcategories": ["Juguetes", "Peluches", "Paraguas", "Relojes", "Calculadoras", "Artículos Deportivos"]
+    "image": "https://catalogospromocionales.com/images/productos/7067.jpg",
+    "productCount": 105
+  },
+  {
+    "id": "escritura",
+    "name": "Artículos de Escritura",
+    "slug": "escritura",
+    "description": "Descubre artículos de escritura personalizados con tu logo. Alta calidad y entrega rápida en Ecuador.",
+    "icon": "PenTool",
+    "story": "Ofrecemos artículos de escritura promocionales de calidad premium, diseñados para que tu marca destaque. Personalización profesional garantizada.",
+    "seoTitle": "Artículos de Escritura Ecuador | KS",
+    "seoDescription": "Artículos de Escritura personalizados con logo. Alta calidad. Envíos en Ecuador. ¡Cotiza por WhatsApp!",
+    "benefits": [
+      "Personalización con tu logo",
+      "Alta calidad garantizada",
+      "Envíos en Ecuador",
+      "Precios competitivos"
+    ],
+    "image": "https://catalogospromocionales.com/images/productos/2551.jpg",
+    "productCount": 63
+  },
+  {
+    "id": "oficina",
+    "name": "Artículos de Oficina",
+    "slug": "oficina",
+    "description": "Descubre artículos de oficina personalizados con tu logo. Alta calidad y entrega rápida en Ecuador.",
+    "icon": "Briefcase",
+    "story": "Ofrecemos artículos de oficina promocionales de calidad premium, diseñados para que tu marca destaque. Personalización profesional garantizada.",
+    "seoTitle": "Artículos de Oficina Ecuador | KS",
+    "seoDescription": "Artículos de Oficina personalizados con logo. Alta calidad. Envíos en Ecuador. ¡Cotiza por WhatsApp!",
+    "benefits": [
+      "Personalización con tu logo",
+      "Alta calidad garantizada",
+      "Envíos en Ecuador",
+      "Precios competitivos"
+    ],
+    "image": "https://catalogospromocionales.com/images/productos/4214.jpg",
+    "productCount": 61
+  },
+  {
+    "id": "herramientas",
+    "name": "Herramientas",
+    "slug": "herramientas",
+    "description": "Descubre herramientas personalizados con tu logo. Alta calidad y entrega rápida en Ecuador.",
+    "icon": "Wrench",
+    "story": "Ofrecemos herramientas promocionales de calidad premium, diseñados para que tu marca destaque. Personalización profesional garantizada.",
+    "seoTitle": "Herramientas Ecuador | KS",
+    "seoDescription": "Herramientas personalizados con logo. Alta calidad. Envíos en Ecuador. ¡Cotiza por WhatsApp!",
+    "benefits": [
+      "Personalización con tu logo",
+      "Alta calidad garantizada",
+      "Envíos en Ecuador",
+      "Precios competitivos"
+    ],
+    "image": "https://catalogospromocionales.com/images/productos/6536.jpg",
+    "productCount": 58
+  },
+  {
+    "id": "pharma-cuidado-personal",
+    "name": "Cuidado Personal",
+    "slug": "pharma-cuidado-personal",
+    "description": "Descubre cuidado personal personalizados con tu logo. Alta calidad y entrega rápida en Ecuador.",
+    "icon": "Heart",
+    "story": "Ofrecemos cuidado personal promocionales de calidad premium, diseñados para que tu marca destaque. Personalización profesional garantizada.",
+    "seoTitle": "Cuidado Personal Ecuador | KS",
+    "seoDescription": "Cuidado Personal personalizados con logo. Alta calidad. Envíos en Ecuador. ¡Cotiza por WhatsApp!",
+    "benefits": [
+      "Personalización con tu logo",
+      "Alta calidad garantizada",
+      "Envíos en Ecuador",
+      "Precios competitivos"
+    ],
+    "image": "https://catalogospromocionales.com/images/productos/10689.jpg",
+    "productCount": 55
+  },
+  {
+    "id": "paraguas",
+    "name": "Paraguas",
+    "slug": "paraguas",
+    "description": "Descubre paraguas personalizados con tu logo. Alta calidad y entrega rápida en Ecuador.",
+    "icon": "Umbrella",
+    "story": "Ofrecemos paraguas promocionales de calidad premium, diseñados para que tu marca destaque. Personalización profesional garantizada.",
+    "seoTitle": "Paraguas Ecuador | KS",
+    "seoDescription": "Paraguas personalizados con logo. Alta calidad. Envíos en Ecuador. ¡Cotiza por WhatsApp!",
+    "benefits": [
+      "Personalización con tu logo",
+      "Alta calidad garantizada",
+      "Envíos en Ecuador",
+      "Precios competitivos"
+    ],
+    "image": "https://catalogospromocionales.com/images/productos/1889.jpg",
+    "productCount": 26
+  },
+  {
+    "id": "ecologicos",
+    "name": "Productos Ecológicos",
+    "slug": "ecologicos",
+    "description": "Descubre productos ecológicos personalizados con tu logo. Alta calidad y entrega rápida en Ecuador.",
+    "icon": "Leaf",
+    "story": "Ofrecemos productos ecológicos promocionales de calidad premium, diseñados para que tu marca destaque. Personalización profesional garantizada.",
+    "seoTitle": "Productos Ecológicos Ecuador | KS",
+    "seoDescription": "Productos Ecológicos personalizados con logo. Alta calidad. Envíos en Ecuador. ¡Cotiza por WhatsApp!",
+    "benefits": [
+      "Personalización con tu logo",
+      "Alta calidad garantizada",
+      "Envíos en Ecuador",
+      "Precios competitivos"
+    ],
+    "image": "https://catalogospromocionales.com/images/productos/10689.jpg",
+    "productCount": 24
+  },
+  {
+    "id": "textiles",
+    "name": "Textiles",
+    "slug": "textiles",
+    "description": "Descubre textiles personalizados con tu logo. Alta calidad y entrega rápida en Ecuador.",
+    "icon": "Shirt",
+    "story": "Ofrecemos textiles promocionales de calidad premium, diseñados para que tu marca destaque. Personalización profesional garantizada.",
+    "seoTitle": "Textiles Ecuador | KS",
+    "seoDescription": "Textiles personalizados con logo. Alta calidad. Envíos en Ecuador. ¡Cotiza por WhatsApp!",
+    "benefits": [
+      "Personalización con tu logo",
+      "Alta calidad garantizada",
+      "Envíos en Ecuador",
+      "Precios competitivos"
+    ],
+    "image": "https://catalogospromocionales.com/images/productos/8155.jpg",
+    "productCount": 24
+  },
+  {
+    "id": "accesorios-auto",
+    "name": "Accesorios para Auto",
+    "slug": "accesorios-auto",
+    "description": "Descubre accesorios para auto personalizados con tu logo. Alta calidad y entrega rápida en Ecuador.",
+    "icon": "Car",
+    "story": "Ofrecemos accesorios para auto promocionales de calidad premium, diseñados para que tu marca destaque. Personalización profesional garantizada.",
+    "seoTitle": "Accesorios para Auto Ecuador | KS",
+    "seoDescription": "Accesorios para Auto personalizados con logo. Alta calidad. Envíos en Ecuador. ¡Cotiza por WhatsApp!",
+    "benefits": [
+      "Personalización con tu logo",
+      "Alta calidad garantizada",
+      "Envíos en Ecuador",
+      "Precios competitivos"
+    ],
+    "image": "https://catalogospromocionales.com/images/productos/4813.jpg",
+    "productCount": 13
+  },
+  {
+    "id": "novedades",
+    "name": "Novedades",
+    "slug": "novedades",
+    "description": "Descubre novedades personalizados con tu logo. Alta calidad y entrega rápida en Ecuador.",
+    "icon": "Sparkles",
+    "story": "Ofrecemos novedades promocionales de calidad premium, diseñados para que tu marca destaque. Personalización profesional garantizada.",
+    "seoTitle": "Novedades Ecuador | KS",
+    "seoDescription": "Novedades personalizados con logo. Alta calidad. Envíos en Ecuador. ¡Cotiza por WhatsApp!",
+    "benefits": [
+      "Personalización con tu logo",
+      "Alta calidad garantizada",
+      "Envíos en Ecuador",
+      "Precios competitivos"
+    ],
+    "image": "https://catalogospromocionales.com/images/productos/13536.jpg",
+    "productCount": 12
+  },
+  {
+    "id": "llaveros",
+    "name": "Llaveros",
+    "slug": "llaveros",
+    "description": "Descubre llaveros personalizados con tu logo. Alta calidad y entrega rápida en Ecuador.",
+    "icon": "Key",
+    "story": "Ofrecemos llaveros promocionales de calidad premium, diseñados para que tu marca destaque. Personalización profesional garantizada.",
+    "seoTitle": "Llaveros Ecuador | KS",
+    "seoDescription": "Llaveros personalizados con logo. Alta calidad. Envíos en Ecuador. ¡Cotiza por WhatsApp!",
+    "benefits": [
+      "Personalización con tu logo",
+      "Alta calidad garantizada",
+      "Envíos en Ecuador",
+      "Precios competitivos"
+    ],
+    "image": "https://catalogospromocionales.com/images/productos/10514.jpg",
+    "productCount": 12
   }
 ]

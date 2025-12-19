@@ -28,6 +28,16 @@ const nextConfig = {
         hostname: 'randomuser.me',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'catalogospromocionales.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.catalogospromocionales.com',
+        pathname: '/**',
+      },
     ],
   },
   trailingSlash: true,
