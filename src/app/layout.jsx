@@ -6,15 +6,15 @@ import DigitalAdvisorChat from '@/components/DigitalAdvisorChat';
 
 export const metadata = {
   metadataBase: new URL('https://kspromocionales.com'),
-  title: 'Productos Promocionales Ecuador | Regalos KS',
-  description: 'Artículos promocionales en Ecuador. Personalizamos mugs, tecnología y más con tu logo. ¡Cotiza por WhatsApp! Envíos nacionales.',
+  title: 'Productos Promocionales Ecuador | Regalos Corporativos KS',
+  description: 'Artículos promocionales y regalos corporativos en Ecuador. Personalizamos mugs, tecnología y más con tu logo. ¡Cotiza por WhatsApp! Envíos nacionales.',
   openGraph: {
     type: 'website',
     locale: 'es_EC',
     url: 'https://kspromocionales.com',
     siteName: 'KS Promocionales',
-    title: 'Productos Promocionales Ecuador - Calidad Premium',
-    description: 'Artículos promocionales en Ecuador. Personalizamos con tu logo. ¡Cotiza por WhatsApp! Envíos a todo el país.',
+    title: 'Productos Promocionales Ecuador | Regalos Corporativos KS',
+    description: 'Artículos promocionales y regalos corporativos en Ecuador. Personalizamos mugs, tecnología y más con tu logo. ¡Cotiza por WhatsApp! Envíos nacionales.',
     images: [
       {
         url: '/images/og-image.jpg',
@@ -26,8 +26,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Productos Promocionales Ecuador | KS',
-    description: 'Artículos promocionales personalizados. Cotiza por WhatsApp. Envíos en Ecuador.',
+    title: 'Productos Promocionales Ecuador | Regalos Corporativos KS',
+    description: 'Artículos promocionales y regalos corporativos en Ecuador. Personalizamos mugs, tecnología y más con tu logo. ¡Cotiza por WhatsApp! Envíos nacionales.',
     images: ['/images/og-image.jpg'],
   },
   robots: {
