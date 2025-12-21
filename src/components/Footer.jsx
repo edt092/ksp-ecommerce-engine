@@ -13,10 +13,10 @@ export default function Footer() {
   ];
 
   const categories = [
-    { name: 'Textiles Corporativos', href: '/categorias/textiles-corporativos' },
-    { name: 'Tecnología Promocional', href: '/categorias/tecnologia-promocional' },
-    { name: 'Artículos de Oficina', href: '/categorias/articulos-oficina' },
-    { name: 'Vasos y Termos', href: '/categorias/vasos-termos' },
+    { name: 'Textiles', href: '/categorias/textiles' },
+    { name: 'Tecnología', href: '/categorias/tecnologia' },
+    { name: 'Artículos de Oficina', href: '/categorias/oficina' },
+    { name: 'Mugs, Vasos y Termos', href: '/categorias/mugs-vasos-termos' },
   ];
 
   const socialLinks = [
