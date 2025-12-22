@@ -35,3 +35,12 @@ yarn-error.log*
 *.swp
 *.swo
 *~
+
+# Claude Code
+.claude/
+
+# Scraper y datos de desarrollo
+promo-scraper/
+data/backups/
+data/*_scraped*.json
+data/products_merged.json
