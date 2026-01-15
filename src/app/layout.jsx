@@ -1,8 +1,29 @@
 import './globals.css';
 import Script from 'next/script';
+import { Inter, Poppins, Space_Grotesk } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
+
+// Google Fonts optimizadas
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+});
+
+const poppins = Poppins({
+  weight: ['400', '500', '600', '700', '800'],
+  subsets: ['latin'],
+  variable: '--font-poppins',
+  display: 'swap',
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-space',
+  display: 'swap',
+});
 
 export const metadata = {
   metadataBase: new URL('https://www.kronosolopromocionales.com'),
@@ -48,11 +69,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es-EC">
+    <html lang="es-EC" className={`${inter.variable} ${poppins.variable} ${spaceGrotesk.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className="min-h-screen flex flex-col">
+      <body className="min-h-screen flex flex-col font-sans antialiased">
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-2SCDPRFSNF"

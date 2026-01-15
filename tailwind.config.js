@@ -25,7 +25,9 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        sans: ['var(--font-inter)', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        heading: ['var(--font-poppins)', 'system-ui', 'sans-serif'],
+        display: ['var(--font-space)', 'system-ui', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-in-out',
@@ -51,6 +53,14 @@ module.exports = {
           '0%': { transform: 'scale(0.9)', opacity: '0' },
           '100%': { transform: 'scale(1)', opacity: '1' },
         },
+      },
+      boxShadow: {
+        'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)',
+        'card': '0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1)',
+        'card-hover': '0 0 0 1px rgba(0, 0, 0, 0.05), 0 10px 40px -10px rgba(0, 0, 0, 0.2)',
+      },
+      borderRadius: {
+        '4xl': '2rem',
       },
     },
   },
