@@ -183,7 +183,7 @@ export default function AboutPage() {
             Conversemos sobre tu marca y cómo podemos ayudarte a crear productos que conecten con tu audiencia.
           </p>
           <a
-            href="https://wa.me/593999999999?text=Hola,%20quiero%20conocer%20más%20sobre%20sus%20productos%20promocionales"
+            href="https://wa.me/593999814838?text=Hola,%20quiero%20conocer%20más%20sobre%20sus%20productos%20promocionales"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-primary text-white px-6 md:px-8 py-3 font-semibold hover:bg-primary-dark transition-colors"

@@ -76,7 +76,7 @@ export default function StorytellingHero() {
               </svg>
             </Link>
             <a
-              href="https://wa.me/593999999999?text=Hola, quiero cotizar productos promocionales"
+              href="https://wa.me/593999814838?text=Hola, quiero cotizar productos promocionales"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-green-500 text-white font-semibold hover:bg-green-600 transition-all text-base shadow-xl hover:shadow-2xl w-full sm:w-auto"

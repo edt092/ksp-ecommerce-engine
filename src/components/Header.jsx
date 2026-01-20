@@ -40,7 +40,7 @@ export default function Header() {
           <div className="hidden md:flex items-center gap-4">
             <span>Ecuador</span>
             <span>|</span>
-            <a href="https://wa.me/593999999999" className="hover:text-primary transition-colors">
+            <a href="https://wa.me/593999814838" className="hover:text-primary transition-colors">
               Cotizar ahora
             </a>
           </div>
@@ -87,7 +87,7 @@ export default function Header() {
 
               {/* WhatsApp / Cart Style Button */}
               <a
-                href="https://wa.me/593999999999"
+                href="https://wa.me/593999814838"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hidden md:flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-4 py-2 text-sm font-semibold transition-colors"
@@ -162,7 +162,7 @@ export default function Header() {
           {/* Mobile WhatsApp */}
           <div className="p-4">
             <a
-              href="https://wa.me/593999999999"
+              href="https://wa.me/593999814838"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 w-full bg-primary hover:bg-primary-dark text-white py-3 font-semibold transition-colors"

@@ -49,7 +49,7 @@ export default function ProductCard({ product, category, onQuickView }) {
 
         {/* WhatsApp */}
         <a
-          href={`https://wa.me/593999999999?text=Hola, me interesa el producto: ${product.name}`}
+          href={`https://wa.me/593999814838?text=Hola, me interesa el producto: ${product.name}`}
           target="_blank"
           rel="noopener noreferrer"
           className="w-9 h-9 bg-white border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-green-500 hover:text-white hover:border-green-500 transition-colors"

@@ -63,7 +63,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://wa.me/593999999999"
+                href="https://wa.me/593999814838"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 border border-gray-600 hover:border-green-500 hover:bg-green-500 text-gray-400 hover:text-white flex items-center justify-center transition-all"
@@ -131,7 +131,7 @@ export default function Footer() {
                 <span className="break-all">claudiagonzalez@kronosolopromocionales.com</span>
               </a>
               <a
-                href="https://wa.me/593999999999"
+                href="https://wa.me/593999814838"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-primary text-white px-4 py-2 font-semibold text-sm hover:bg-primary-dark transition-colors mt-4"

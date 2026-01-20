@@ -38,7 +38,7 @@ export default function HeroBanner() {
                 </svg>
               </Link>
               <a
-                href="https://wa.me/593999999999"
+                href="https://wa.me/593999814838"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-white text-secondary px-6 py-3 font-semibold hover:bg-gray-100 transition-colors"

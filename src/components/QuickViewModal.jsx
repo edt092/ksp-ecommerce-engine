@@ -138,7 +138,7 @@ export default function QuickViewModal({ product, category, isOpen, onClose }) {
                 Ver Detalles Completos
               </Link>
               <a
-                href={`https://wa.me/593999999999?text=Hola, me interesa el producto: ${product.name}`}
+                href={`https://wa.me/593999814838?text=Hola, me interesa el producto: ${product.name}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 flex items-center justify-center gap-2 py-3 bg-green-500 text-white font-semibold hover:bg-green-600 transition-colors"

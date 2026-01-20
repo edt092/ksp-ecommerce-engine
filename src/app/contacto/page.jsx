@@ -147,7 +147,7 @@ export default function ContactoPage() {
                   Respuesta rápida para cotizaciones de productos promocionales
                 </p>
                 <a
-                  href="https://wa.me/593999999999?text=Hola,%20me%20interesa%20cotizar%20productos%20promocionales"
+                  href="https://wa.me/593999814838?text=Hola,%20me%20interesa%20cotizar%20productos%20promocionales"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 transition-colors"
@@ -226,7 +226,7 @@ export default function ContactoPage() {
               Cotiza sin compromiso y recibe asesoría personalizada para tu marca.
             </p>
             <a
-              href="https://wa.me/593999999999?text=Hola,%20quiero%20cotizar%20productos%20promocionales"
+              href="https://wa.me/593999814838?text=Hola,%20quiero%20cotizar%20productos%20promocionales"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-primary text-white px-6 md:px-8 py-3 font-semibold hover:bg-primary-dark transition-colors"

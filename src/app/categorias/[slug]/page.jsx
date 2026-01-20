@@ -109,7 +109,7 @@ export default function CategoryPage({ params }) {
 
                 {/* CTA Button */}
                 <a
-                  href="https://wa.me/593999999999?text=Hola, me interesa la categoría de ${category.name}"
+                  href="https://wa.me/593999814838?text=Hola, me interesa la categoría de ${category.name}"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-white text-primary px-6 py-3 font-semibold hover:bg-gray-100 transition-colors"
@@ -209,7 +209,7 @@ export default function CategoryPage({ params }) {
             Nuestro equipo está listo para asesorarte y encontrar los productos perfectos para tu marca.
           </p>
           <a
-            href="https://wa.me/593999999999?text=Hola, necesito asesoría sobre productos promocionales"
+            href="https://wa.me/593999814838?text=Hola, necesito asesoría sobre productos promocionales"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-primary text-white px-8 py-3 font-semibold hover:bg-primary-dark transition-colors"
