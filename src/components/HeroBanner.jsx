@@ -19,9 +19,9 @@ export default function HeroBanner() {
             <span className="inline-block px-4 py-1 bg-secondary text-white text-xs font-semibold uppercase tracking-wider mb-4">
               Promocionales Ecuador
             </span>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white mb-4 leading-tight">
-              Tu Marca,<br />
-              <span className="italic">Nuestra Pasión</span>
+            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-white mb-4 leading-tight">
+              Artículos Promocionales y Regalos Corporativos<br />
+              <span className="italic">en Ecuador y Colombia</span>
             </h1>
             <p className="text-white/80 text-lg mb-8 max-w-md">
               Artículos promocionales personalizados que cuentan la historia de tu empresa.

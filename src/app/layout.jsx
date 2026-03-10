@@ -1,9 +1,15 @@
 import './globals.css';
 import Script from 'next/script';
+import dynamic from 'next/dynamic';
 import { Inter, Poppins, Space_Grotesk, Playfair_Display } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
+
+// Botón flotante: no es crítico para LCP, se carga después del hydration
+const WhatsAppButton = dynamic(() => import('@/components/WhatsAppButton'), {
+  ssr: false,
+  loading: () => null,
+});
 
 // Google Fonts optimizadas
 const inter = Inter({
@@ -13,7 +19,7 @@ const inter = Inter({
 });
 
 const poppins = Poppins({
-  weight: ['400', '500', '600', '700', '800'],
+  weight: ['400', '600', '700'],
   subsets: ['latin'],
   variable: '--font-poppins',
   display: 'swap',
@@ -67,9 +73,6 @@ export const metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  verification: {
-    google: 'verification_token', // Replace with real token
   },
 };
 

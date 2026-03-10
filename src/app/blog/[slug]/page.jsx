@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Calendar, Clock, Tag, ArrowLeft, Share2 } from 'lucide-react';
+import { Calendar, Clock, Tag, ArrowLeft, Share2, Linkedin } from 'lucide-react';
 import postsData from '@/data/blog/posts.json';
 import { blogContent } from '@/data/blog/content';
 import TableOfContents from '@/components/TableOfContents';
@@ -45,6 +45,9 @@ export async function generateMetadata({ params }) {
       description: post.seo.metaDescription,
       images: [post.image],
     },
+    alternates: {
+      canonical: `https://www.kronosolopromocionales.com/blog/${params.slug}`,
+    },
   };
 }
 
@@ -69,6 +72,35 @@ export default function BlogPostPage({ params }) {
     .filter(p => p.category === post.category && p.id !== post.id)
     .slice(0, 3);
 
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.seo.metaDescription,
+    image: post.image,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      '@type': 'Person',
+      name: post.author,
+      jobTitle: post.authorRole,
+      image: `https://www.kronosolopromocionales.com${post.authorImage}`,
+      ...(post.authorLinkedIn && { sameAs: [post.authorLinkedIn] }),
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'KS Promocionales',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://www.kronosolopromocionales.com/images/logo.png',
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://www.kronosolopromocionales.com/blog/${post.slug}`,
+    },
+  };
+
   const getCategoryColor = (category) => {
     const colors = {
       'Productos': 'bg-blue-100 text-blue-700',
@@ -81,6 +113,10 @@ export default function BlogPostPage({ params }) {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       {/* Back Button */}
       <div className="bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 py-4">
@@ -121,7 +157,20 @@ export default function BlogPostPage({ params }) {
                   className="rounded-full object-cover"
                 />
                 <div>
-                  <p className="font-medium text-gray-900">{post.author}</p>
+                  <div className="flex items-center gap-2">
+                    <p className="font-medium text-gray-900">{post.author}</p>
+                    {post.authorLinkedIn && (
+                      <a
+                        href={post.authorLinkedIn}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`LinkedIn de ${post.author}`}
+                        className="text-[#0A66C2] hover:opacity-80 transition-opacity"
+                      >
+                        <Linkedin className="w-4 h-4" />
+                      </a>
+                    )}
+                  </div>
                   <p className="text-sm text-gray-500">{post.authorRole}</p>
                 </div>
               </div>

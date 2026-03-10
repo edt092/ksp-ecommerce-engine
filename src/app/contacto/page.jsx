@@ -33,7 +33,12 @@ export default function ContactoPage() {
     areaServed: [
       { '@type': 'City', name: 'Quito' },
       { '@type': 'City', name: 'Guayaquil' },
-      { '@type': 'Country', name: 'Ecuador' }
+      { '@type': 'City', name: 'Cuenca' },
+      { '@type': 'Country', name: 'Ecuador' },
+      { '@type': 'City', name: 'Bogotá' },
+      { '@type': 'City', name: 'Medellín' },
+      { '@type': 'City', name: 'Cali' },
+      { '@type': 'Country', name: 'Colombia' }
     ]
   };
 

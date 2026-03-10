@@ -53,7 +53,7 @@ export async function generateMetadata({ params }) {
       images: product.images && product.images.length > 0 ? [product.images[0]] : []
     },
     alternates: {
-      canonical: `https://kronossolopromocionales.com/productos/${params.slug}/`
+      canonical: `https://www.kronosolopromocionales.com/productos/${params.slug}`
     }
   };
 }
@@ -72,8 +72,36 @@ export default function ProductPage({ params }) {
     .filter(p => p.categoryId === product.categoryId && p.id !== product.id)
     .slice(0, 3);
 
+  const productJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: product.name,
+    description: product.seoDescription || product.shortDescription,
+    image: product.images && product.images.length > 0 ? product.images : undefined,
+    sku: String(product.id),
+    brand: {
+      '@type': 'Brand',
+      name: 'KS Promocionales',
+    },
+    offers: {
+      '@type': 'Offer',
+      availability: 'https://schema.org/InStoreOnly',
+      priceCurrency: 'USD',
+      seller: {
+        '@type': 'Organization',
+        name: 'KS Promocionales',
+        url: 'https://www.kronosolopromocionales.com',
+      },
+    },
+    url: `https://www.kronosolopromocionales.com/productos/${product.slug}`,
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+      />
       {/* Hero / Product Header */}
       <section className="pt-32 pb-12 bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto px-4">

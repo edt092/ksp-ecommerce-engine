@@ -3,6 +3,9 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Nosotros - KSPromocionales Ecuador',
   description: 'Conoce la historia de KSPromocionales, tu aliado en productos promocionales personalizados en Ecuador. Calidad, creatividad y resultados.',
+  alternates: {
+    canonical: 'https://www.kronosolopromocionales.com/nosotros',
+  },
 };
 
 export default function AboutPage() {

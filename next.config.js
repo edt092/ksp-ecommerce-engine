@@ -2,10 +2,13 @@
 const nextConfig = {
   output: 'export',
   images: {
-    unoptimized: true, // Necesario para 'export' estático
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    // Netlify Image CDN: convierte a WebP/AVIF automáticamente en producción.
+    // En local (next dev) usará el optimizador de Next.js si hay servidor,
+    // o caerá al comportamiento sin optimización.
+    loader: 'custom',
+    loaderFile: './netlify-image-loader.js',
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256],
     // Dominios externos permitidos para imágenes
     remotePatterns: [
       {

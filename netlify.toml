@@ -1,0 +1,51 @@
+[build]
+  command   = "npm run build"
+  publish   = "out"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# ─── 301 Redirects: limpieza de URLs con señal de México ───────────────────────
+
+[[redirects]]
+  from   = "/blog/plumas-ecologicas-baltimore-impulsa-tu-marca-con-conciencia-ambiental-en-mexico"
+  to     = "/blog/plumas-ecologicas-baltimore-impulsa-tu-marca-con-conciencia-ambiental-en-ecuador-y-colombia"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/plumas-ecologicas-baltimore-impulsa-tu-marca-con-conciencia-ambiental-en-mexico/"
+  to     = "/blog/plumas-ecologicas-baltimore-impulsa-tu-marca-con-conciencia-ambiental-en-ecuador-y-colombia/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/mug-metalico-vinga-eco-mu-442-impulsa-tu-marca-con-conciencia-ambiental-en-mexico"
+  to     = "/blog/mug-metalico-vinga-eco-mu-442-impulsa-tu-marca-con-conciencia-ambiental-en-ecuador-y-colombia"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/mug-metalico-vinga-eco-mu-442-impulsa-tu-marca-con-conciencia-ambiental-en-mexico/"
+  to     = "/blog/mug-metalico-vinga-eco-mu-442-impulsa-tu-marca-con-conciencia-ambiental-en-ecuador-y-colombia/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-mexico"
+  to     = "/blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-ecuador-y-colombia"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-mexico/"
+  to     = "/blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-ecuador-y-colombia/"
+  status = 301
+  force  = true
+
+# ─── 404 fallback para rutas no encontradas ────────────────────────────────────
+# Next.js static export genera out/404.html desde not-found.jsx
+[[redirects]]
+  from   = "/*"
+  to     = "/404.html"
+  status = 404

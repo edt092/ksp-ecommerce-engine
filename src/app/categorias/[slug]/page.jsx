@@ -31,6 +31,9 @@ export async function generateMetadata({ params }) {
       description: category.seoDescription,
       type: 'website',
     },
+    alternates: {
+      canonical: `https://www.kronosolopromocionales.com/categorias/${params.slug}`,
+    },
   };
 }
 

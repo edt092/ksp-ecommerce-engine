@@ -11,6 +11,9 @@ export const metadata = {
     description: 'Consejos expertos sobre productos promocionales, diseño y estrategias de marketing para empresas.',
     type: 'website',
   },
+  alternates: {
+    canonical: 'https://www.kronosolopromocionales.com/blog',
+  },
 };
 
 export default function BlogPage() {

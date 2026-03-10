@@ -1,0 +1,12 @@
+# 301 Redirects - Limpieza de URLs con señal de México
+# Formato Netlify: /ruta-antigua  /ruta-nueva  301
+# Para Apache usa .htaccess; para Nginx añade estas reglas en el bloque server{}
+
+/blog/plumas-ecologicas-baltimore-impulsa-tu-marca-con-conciencia-ambiental-en-mexico    /blog/plumas-ecologicas-baltimore-impulsa-tu-marca-con-conciencia-ambiental-en-ecuador-y-colombia    301
+/blog/plumas-ecologicas-baltimore-impulsa-tu-marca-con-conciencia-ambiental-en-mexico/   /blog/plumas-ecologicas-baltimore-impulsa-tu-marca-con-conciencia-ambiental-en-ecuador-y-colombia/   301
+
+/blog/mug-metalico-vinga-eco-mu-442-impulsa-tu-marca-con-conciencia-ambiental-en-mexico    /blog/mug-metalico-vinga-eco-mu-442-impulsa-tu-marca-con-conciencia-ambiental-en-ecuador-y-colombia    301
+/blog/mug-metalico-vinga-eco-mu-442-impulsa-tu-marca-con-conciencia-ambiental-en-mexico/   /blog/mug-metalico-vinga-eco-mu-442-impulsa-tu-marca-con-conciencia-ambiental-en-ecuador-y-colombia/   301
+
+/blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-mexico    /blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-ecuador-y-colombia    301
+/blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-mexico/   /blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-ecuador-y-colombia/   301
