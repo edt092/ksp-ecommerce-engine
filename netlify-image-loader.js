@@ -4,7 +4,12 @@
  * Docs: https://docs.netlify.com/image-cdn/overview/
  */
 export default function netlifyImageLoader({ src, width, quality }) {
-  // Construir URL absoluta para imágenes locales
+  // En desarrollo, devolver la URL original directamente
+  if (process.env.NODE_ENV !== 'production') {
+    return src;
+  }
+
+  // En producción (Netlify), usar el Image CDN para WebP/AVIF automático
   const imageUrl = src.startsWith('http')
     ? src
     : `https://www.kronosolopromocionales.com${src}`;

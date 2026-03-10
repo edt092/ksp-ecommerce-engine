@@ -5,6 +5,16 @@
 [build.environment]
   NODE_VERSION = "18"
 
+[images]
+  remote_images = [
+    "https://res\\.cloudinary\\.com/.*",
+    "https://.*\\.cloudinary\\.com/.*",
+    "https://images\\.unsplash\\.com/.*",
+    "https://catalogospromocionales\\.com/.*",
+    "https://.*\\.catalogospromocionales\\.com/.*",
+    "https://randomuser\\.me/.*",
+  ]
+
 # ─── 301 Redirects: limpieza de URLs con señal de México ───────────────────────
 
 [[redirects]]
