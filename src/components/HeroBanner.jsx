@@ -80,7 +80,7 @@ export default function HeroBanner() {
 
       {/* ── Main content ── */}
       <div className="relative z-10 flex-1 flex items-center container mx-auto px-4 pt-32 pb-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_460px] gap-12 lg:gap-8 items-center w-full">
 
           {/* LEFT — Copy */}
           <div>
@@ -158,27 +158,93 @@ export default function HeroBanner() {
             </div>
           </div>
 
-          {/* RIGHT — Product mosaic */}
-          <div className="hidden lg:block animate-slide-in-right animate-delay-200">
-            <div className="grid grid-cols-3 gap-3 max-w-lg mx-auto">
-              {PRODUCT_IMAGES.map((src, i) => (
-                <div
-                  key={i}
-                  className={`relative overflow-hidden bg-white/5 border border-white/10 hover:border-accent/40 transition-all duration-300 group ${
-                    i === 0 ? 'col-span-2 row-span-2 aspect-square' : 'aspect-square'
-                  }`}
-                  style={{ animationDelay: `${200 + i * 80}ms` }}
-                >
+          {/* RIGHT — Floating product cards */}
+          <div className="hidden lg:flex items-center justify-center animate-slide-in-right animate-delay-200">
+            <div className="relative w-[420px] h-[460px]">
+
+              {/* Glow behind cards */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full blur-3xl opacity-25 pointer-events-none"
+                style={{ background: 'radial-gradient(circle, #F59E0B, transparent)' }} />
+
+              {/* Card 1 — back left, tilted */}
+              <div className="absolute top-8 left-0 w-44 h-44 bg-white/8 border border-white/15 backdrop-blur-sm hover:border-accent/50 transition-all duration-500 group"
+                style={{ transform: 'rotate(-6deg)', boxShadow: '0 20px 60px rgba(0,0,0,0.4)' }}>
+                <div className="relative w-full h-full">
                   <Image
-                    src={src}
-                    alt={`Producto promocional ${i + 1}`}
+                    src={PRODUCT_IMAGES[1]}
+                    alt="Producto promocional"
                     fill
-                    sizes="(max-width: 1024px) 0px, 200px"
+                    sizes="176px"
                     className="object-contain p-4 transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
-              ))}
+                <div className="absolute -top-2 -right-2 w-5 h-5 bg-accent rounded-full opacity-80" />
+              </div>
+
+              {/* Card 2 — back right, tilted opposite */}
+              <div className="absolute top-4 right-0 w-40 h-40 bg-white/8 border border-white/15 backdrop-blur-sm hover:border-accent/50 transition-all duration-500 group"
+                style={{ transform: 'rotate(5deg)', boxShadow: '0 20px 60px rgba(0,0,0,0.4)' }}>
+                <div className="relative w-full h-full">
+                  <Image
+                    src={PRODUCT_IMAGES[2]}
+                    alt="Producto promocional"
+                    fill
+                    sizes="160px"
+                    className="object-contain p-4 transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
+              </div>
+
+              {/* Card 3 — center hero, straight */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[55%] w-52 h-52 bg-white/12 border border-accent/30 backdrop-blur-sm hover:border-accent/70 transition-all duration-500 group z-10"
+                style={{ boxShadow: '0 30px 80px rgba(0,0,0,0.5), 0 0 40px rgba(245,158,11,0.15)' }}>
+                <div className="relative w-full h-full">
+                  <Image
+                    src={PRODUCT_IMAGES[0]}
+                    alt="Producto promocional"
+                    fill
+                    sizes="208px"
+                    className="object-contain p-5 transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
+                {/* Gold corner accent */}
+                <div className="absolute top-0 left-0 w-8 h-1 bg-accent" />
+                <div className="absolute top-0 left-0 w-1 h-8 bg-accent" />
+              </div>
+
+              {/* Card 4 — bottom left */}
+              <div className="absolute bottom-4 left-4 w-36 h-36 bg-white/8 border border-white/15 backdrop-blur-sm hover:border-accent/50 transition-all duration-500 group"
+                style={{ transform: 'rotate(4deg)', boxShadow: '0 20px 60px rgba(0,0,0,0.4)' }}>
+                <div className="relative w-full h-full">
+                  <Image
+                    src={PRODUCT_IMAGES[4]}
+                    alt="Producto promocional"
+                    fill
+                    sizes="144px"
+                    className="object-contain p-3 transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
+              </div>
+
+              {/* Card 5 — bottom right */}
+              <div className="absolute bottom-0 right-4 w-40 h-40 bg-white/8 border border-white/15 backdrop-blur-sm hover:border-accent/50 transition-all duration-500 group"
+                style={{ transform: 'rotate(-3deg)', boxShadow: '0 20px 60px rgba(0,0,0,0.4)' }}>
+                <div className="relative w-full h-full">
+                  <Image
+                    src={PRODUCT_IMAGES[5]}
+                    alt="Producto promocional"
+                    fill
+                    sizes="160px"
+                    className="object-contain p-3 transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
+              </div>
+
+              {/* Floating label */}
+              <div className="absolute bottom-[-12px] left-1/2 -translate-x-1/2 bg-accent text-white text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 z-20 whitespace-nowrap"
+                style={{ boxShadow: '0 4px 20px rgba(245,158,11,0.4)' }}>
+                +1,200 productos
+              </div>
             </div>
           </div>
         </div>
@@ -186,7 +252,7 @@ export default function HeroBanner() {
 
       {/* ── Stats bar ── */}
       <div className="relative z-10 border-t border-white/10">
-        <div className="container mx-auto px-4 py-6">
+        <div className="container mx-auto px-4 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {STATS.map(({ value, suffix, label }) => (
               <div key={label} className="text-center group">
@@ -198,11 +264,12 @@ export default function HeroBanner() {
             ))}
           </div>
         </div>
+        {/* Diagonal transition to white — stays below the stats content */}
+        <div className="relative h-10 overflow-hidden">
+          <div className="absolute inset-x-0 bottom-0 h-20 bg-white"
+            style={{ clipPath: 'polygon(0 100%, 100% 100%, 100% 40%, 0 100%)' }} />
+        </div>
       </div>
-
-      {/* ── Bottom diagonal ── */}
-      <div className="absolute bottom-0 left-0 right-0 h-12 z-10 bg-white"
-        style={{ clipPath: 'polygon(0 100%, 100% 100%, 100% 0)' }} />
     </section>
   );
 }
