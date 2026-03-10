@@ -1,39 +1,41 @@
 import './globals.css';
 import Script from 'next/script';
 import dynamic from 'next/dynamic';
-import { Inter, Poppins, Space_Grotesk, Playfair_Display } from 'next/font/google';
+import { Syne, DM_Sans, DM_Serif_Display, Syne_Mono } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-// Botón flotante: no es crítico para LCP, se carga después del hydration
 const WhatsAppButton = dynamic(() => import('@/components/WhatsAppButton'), {
   ssr: false,
   loading: () => null,
 });
 
-// Google Fonts optimizadas
-const inter = Inter({
+const syne = Syne({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-syne',
+  weight: ['400', '500', '600', '700', '800'],
   display: 'swap',
 });
 
-const poppins = Poppins({
-  weight: ['400', '600', '700'],
+const dmSans = DM_Sans({
   subsets: ['latin'],
-  variable: '--font-poppins',
+  variable: '--font-dm-sans',
+  weight: ['300', '400', '500', '600'],
   display: 'swap',
 });
 
-const spaceGrotesk = Space_Grotesk({
+const dmSerif = DM_Serif_Display({
   subsets: ['latin'],
-  variable: '--font-space',
+  variable: '--font-dm-serif',
+  weight: ['400'],
+  style: ['normal', 'italic'],
   display: 'swap',
 });
 
-const playfair = Playfair_Display({
+const syneMono = Syne_Mono({
   subsets: ['latin'],
-  variable: '--font-playfair',
+  variable: '--font-syne-mono',
+  weight: ['400'],
   display: 'swap',
 });
 
@@ -74,11 +76,12 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
+  // Verificación GSC activa vía Google Analytics (G-2SCDPRFSNF)
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es-EC" className={`${inter.variable} ${poppins.variable} ${spaceGrotesk.variable} ${playfair.variable}`}>
+    <html lang="es-EC" className={`${syne.variable} ${dmSans.variable} ${dmSerif.variable} ${syneMono.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
