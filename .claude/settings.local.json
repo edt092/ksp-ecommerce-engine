@@ -13,7 +13,10 @@
       "Bash(git mv:*)",
       "Bash(npx next build)",
       "Bash(npx eslint:*)",
-      "Bash(node -e:*)"
+      "Bash(node -e:*)",
+      "Bash(git remote set-url:*)",
+      "WebFetch(domain:www.kronosolopromocionales.com)",
+      "WebFetch(domain:www.catalogospromocionales.com)"
     ],
     "deny": [],
     "ask": []
