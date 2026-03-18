@@ -79,11 +79,99 @@ export const metadata = {
   // Verificación GSC activa vía Google Analytics (G-2SCDPRFSNF)
 };
 
+const BASE_URL = 'https://www.kronosolopromocionales.com';
+
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': `${BASE_URL}/#localbusiness`,
+  name: 'KS Promocionales',
+  alternateName: 'KSPromocionales',
+  description: 'Productos promocionales y regalos corporativos personalizados en Ecuador y Colombia. Tecnología, mugs, oficina, textiles y más con tu logo.',
+  url: BASE_URL,
+  telephone: '+593999814838',
+  email: 'claudiagonzalez@kronosolopromocionales.com',
+  image: `${BASE_URL}/images/og-image.jpg`,
+  logo: {
+    '@type': 'ImageObject',
+    url: `${BASE_URL}/images/logo.png`,
+    width: 400,
+    height: 100,
+  },
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Quito',
+    addressRegion: 'Pichincha',
+    addressCountry: 'EC',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: -0.1807,
+    longitude: -78.4678,
+  },
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '09:00',
+      closes: '18:00',
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Saturday'],
+      opens: '09:00',
+      closes: '13:00',
+    },
+  ],
+  priceRange: '$$',
+  areaServed: [
+    { '@type': 'Country', name: 'Ecuador' },
+    { '@type': 'Country', name: 'Colombia' },
+  ],
+  sameAs: [
+    'https://www.facebook.com/kspromocionales',
+    'https://www.instagram.com/kspromocionales',
+    'https://www.linkedin.com/in/claudia-gonzalez-344a3b132/',
+  ],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+593999814838',
+    contactType: 'customer service',
+    availableLanguage: 'Spanish',
+  },
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${BASE_URL}/#website`,
+  url: BASE_URL,
+  name: 'KS Promocionales',
+  description: 'Productos promocionales personalizados en Ecuador y Colombia',
+  inLanguage: 'es-EC',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: `${BASE_URL}/?q={search_term_string}`,
+    },
+    'query-input': 'required name=search_term_string',
+  },
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="es-EC" className={`${syne.variable} ${dmSans.variable} ${dmSerif.variable} ${syneMono.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
       </head>
       <body className="min-h-screen flex flex-col font-sans antialiased">
         {/* Google Analytics */}

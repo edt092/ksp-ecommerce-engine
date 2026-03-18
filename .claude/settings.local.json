@@ -16,7 +16,9 @@
       "Bash(node -e:*)",
       "Bash(git remote set-url:*)",
       "WebFetch(domain:www.kronosolopromocionales.com)",
-      "WebFetch(domain:www.catalogospromocionales.com)"
+      "WebFetch(domain:www.catalogospromocionales.com)",
+      "Bash(which convert:*)",
+      "Bash(cd \"E:/coding/proyectos-personales/archivados/ksp-segunda-version/kspromocionales-tienda\" && \\\\\necho \"=== globals.css \\(línea 5-8\\) ===\" && sed -n '4,8p' src/app/globals.css && \\\\\necho \"\" && echo \"=== og-image.jpg ===\" && ls -lh public/images/og-image.jpg && \\\\\necho \"\" && echo \"=== logo.png ===\" && ls -lh public/images/logo.png && \\\\\necho \"\" && echo \"=== randomuser.me restantes en posts.json ===\" && grep -c \"randomuser.me\" data/blog/posts.json 2>/dev/null || echo \"0\" && \\\\\necho \"\" && echo \"=== Product schema price ===\" && grep -A2 \"price\" src/app/productos/[slug]/page.jsx | head -6 && \\\\\necho \"\" && echo \"=== Política de privacidad ===\" && ls src/app/politica-de-privacidad/page.jsx)"
     ],
     "deny": [],
     "ask": []

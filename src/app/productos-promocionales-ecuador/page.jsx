@@ -25,7 +25,12 @@ export const metadata = {
     siteName: 'KS Promocionales',
   },
   alternates: {
-    canonical: 'https://www.kronosolopromocionales.com/productos-promocionales-ecuador',
+    canonical: 'https://www.kronosolopromocionales.com/productos-promocionales-ecuador/',
+    languages: {
+      'es-EC': 'https://www.kronosolopromocionales.com/productos-promocionales-ecuador/',
+      'es-CO': 'https://www.kronosolopromocionales.com/productos-promocionales-colombia/',
+      'x-default': 'https://www.kronosolopromocionales.com/',
+    },
   },
 };
 
@@ -44,11 +49,11 @@ export default function EcuadorPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'KS Promocionales Ecuador',
-    description: ecuador.seoDescription,
-    url: 'https://www.kronosolopromocionales.com/productos-promocionales-ecuador',
-    areaServed: { '@type': 'Country', name: 'Ecuador' },
-    serviceArea: ecuador.ciudades.map(c => ({ '@type': 'City', name: c.nombre })),
+    '@id': 'https://www.kronosolopromocionales.com/#localbusiness',
+    areaServed: [
+      { '@type': 'Country', name: 'Ecuador' },
+      ...ecuador.ciudades.map(c => ({ '@type': 'City', name: c.nombre })),
+    ],
   };
 
   return (
