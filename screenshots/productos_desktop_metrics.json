@@ -1,0 +1,64 @@
+{
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  },
+  "hasHorizontalScroll": false,
+  "bodyScrollWidth": 1920,
+  "fontSizes": {
+    "h1": 96,
+    "h2": 24,
+    "p": 16,
+    "a": 12,
+    "button": 16
+  },
+  "h1": {
+    "text": "404",
+    "fontSize": 96,
+    "aboveFold": true
+  },
+  "ctas": [
+    {
+      "text": "COTIZAR GRATIS",
+      "rect": {
+        "top": 52,
+        "width": 179.75,
+        "height": 40
+      },
+      "aboveFold": true,
+      "tapOk": false
+    },
+    {
+      "text": "COTIZAR POR WHATSAPP — ES GRATIS",
+      "rect": {
+        "top": 1056,
+        "width": 375.796875,
+        "height": 52
+      },
+      "aboveFold": true,
+      "tapOk": true
+    },
+    {
+      "text": "Contacto",
+      "rect": {
+        "top": 1400,
+        "width": 217.609375,
+        "height": 20
+      },
+      "aboveFold": false,
+      "tapOk": false
+    },
+    {
+      "text": "",
+      "rect": {
+        "top": 992,
+        "width": 64,
+        "height": 64
+      },
+      "aboveFold": true,
+      "tapOk": true
+    }
+  ],
+  "title": "Página no encontrada | KS Promocionales",
+  "metaDesc": "Artículos promocionales y regalos corporativos en Ecuador. Personalizamos mugs, tecnología y más con tu logo. ¡Cotiza por WhatsApp! Envíos nacionales."
+}

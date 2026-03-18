@@ -10,7 +10,7 @@ const STATS = [
   { value: 1200, suffix: '+', label: 'Productos' },
   { value: 15, suffix: '+', label: 'Años de experiencia' },
   { value: 34, suffix: '', label: 'Categorías' },
-  { value: 24, suffix: 'h', label: 'Respuesta garantizada' },
+  { value: 48, suffix: 'h', label: 'Respuesta garantizada' },
 ];
 
 const PRODUCT_IMAGES = [
@@ -147,7 +147,7 @@ export default function HeroBanner() {
                 <svg className="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                Respuesta en 24h
+                Respuesta en 48h
               </div>
               <div className="flex items-center gap-2 text-white/50 text-xs">
                 <svg className="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
@@ -204,6 +204,7 @@ export default function HeroBanner() {
                     alt="Producto promocional"
                     fill
                     sizes="208px"
+                    priority
                     className="object-contain p-5 transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>

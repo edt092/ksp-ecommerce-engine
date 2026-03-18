@@ -17,37 +17,8 @@ export const metadata = {
 };
 
 export default function ContactoPage() {
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: 'KSPromocionales',
-    description: 'Productos promocionales Ecuador: artículos promocionales y regalos corporativos en Quito, Guayaquil y todo el país.',
-    url: 'https://www.kronosolopromocionales.com',
-    email: 'claudiagonzalez@kronosolopromocionales.com',
-    address: {
-      '@type': 'PostalAddress',
-      addressCountry: 'EC',
-      addressLocality: 'Quito',
-      addressRegion: 'Pichincha'
-    },
-    areaServed: [
-      { '@type': 'City', name: 'Quito' },
-      { '@type': 'City', name: 'Guayaquil' },
-      { '@type': 'City', name: 'Cuenca' },
-      { '@type': 'Country', name: 'Ecuador' },
-      { '@type': 'City', name: 'Bogotá' },
-      { '@type': 'City', name: 'Medellín' },
-      { '@type': 'City', name: 'Cali' },
-      { '@type': 'Country', name: 'Colombia' }
-    ]
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
 
       {/* Spacer for fixed header */}
       <div className="h-[88px] md:h-[96px]"></div>
@@ -207,9 +178,9 @@ export default function ContactoPage() {
 
               <div className="mt-8 p-4 bg-blue-50 border border-blue-200">
                 <p className="text-xs md:text-sm text-blue-800">
-                  <strong>Productos promocionales Ecuador:</strong> artículos promocionales,
-                  regalos corporativos, merchandising empresarial y más. Personalizamos con tu
-                  logo en Quito, Guayaquil y todo el país.
+                  <strong>Tiempo de respuesta garantizado:</strong> respondemos toda cotización
+                  en máximo 48 horas hábiles. Para pedidos urgentes, escríbenos directamente
+                  por WhatsApp y te atendemos de inmediato.
                 </p>
               </div>
             </div>

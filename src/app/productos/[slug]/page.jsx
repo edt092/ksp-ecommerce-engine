@@ -91,8 +91,6 @@ export default function ProductPage({ params }) {
       '@type': 'Offer',
       url: `${BASE_URL}/productos/${product.slug}/`,
       priceCurrency: 'USD',
-      price: '0',
-      priceValidUntil: '2027-12-31',
       availability: 'https://schema.org/InStock',
       seller: {
         '@type': 'Organization',

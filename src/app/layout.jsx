@@ -149,13 +149,8 @@ const websiteSchema = {
   name: 'KS Promocionales',
   description: 'Productos promocionales personalizados en Ecuador y Colombia',
   inLanguage: 'es-EC',
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: {
-      '@type': 'EntryPoint',
-      urlTemplate: `${BASE_URL}/?q={search_term_string}`,
-    },
-    'query-input': 'required name=search_term_string',
+  publisher: {
+    '@id': `${BASE_URL}/#localbusiness`,
   },
 };
 
@@ -164,6 +159,9 @@ export default function RootLayout({ children }) {
     <html lang="es-EC" className={`${syne.variable} ${dmSans.variable} ${dmSerif.variable} ${syneMono.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://catalogospromocionales.com" />
+        <link rel="dns-prefetch" href="https://catalogospromocionales.com" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
