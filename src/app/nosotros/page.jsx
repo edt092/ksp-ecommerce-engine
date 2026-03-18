@@ -59,9 +59,57 @@ const VALORES = [
   },
 ];
 
+const BASE_URL = 'https://www.kronosolopromocionales.com';
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': `${BASE_URL}/nosotros/#claudia-gonzalez`,
+  name: 'Claudia Inés González Ortiz',
+  givenName: 'Claudia',
+  familyName: 'González Ortiz',
+  jobTitle: 'Fundadora y Especialista en Productos Promocionales',
+  description: 'Especialista en productos promocionales con años de experiencia sirviendo a empresas de Ecuador y Colombia desde Quito.',
+  image: {
+    '@type': 'ImageObject',
+    url: `${BASE_URL}/images/team/claudia-gonzalez.jpg`,
+    width: 320,
+    height: 320,
+  },
+  worksFor: { '@id': `${BASE_URL}/#localbusiness` },
+  sameAs: ['https://www.linkedin.com/in/claudia-gonzalez-344a3b132/'],
+  knowsAbout: ['Productos Promocionales', 'Regalos Corporativos', 'Merchandising Empresarial', 'Marketing Corporativo'],
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Quito',
+    addressRegion: 'Pichincha',
+    addressCountry: 'EC',
+  },
+};
+
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': `${BASE_URL}/nosotros/#webpage`,
+  url: `${BASE_URL}/nosotros/`,
+  name: 'Nosotros | KS Promocionales Ecuador — Claudia González',
+  inLanguage: 'es-EC',
+  about: { '@id': `${BASE_URL}/nosotros/#claudia-gonzalez` },
+  isPartOf: { '@id': `${BASE_URL}/#website` },
+  breadcrumb: {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: `${BASE_URL}/` },
+      { '@type': 'ListItem', position: 2, name: 'Nosotros', item: `${BASE_URL}/nosotros/` },
+    ],
+  },
+};
+
 export default function AboutPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
       {/* Spacer for fixed header */}
       <div className="h-[88px] md:h-[96px]" />
 

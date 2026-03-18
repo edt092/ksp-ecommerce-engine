@@ -72,33 +72,63 @@ export default function BlogPostPage({ params }) {
     .filter(p => p.category === post.category && p.id !== post.id)
     .slice(0, 3);
 
+  const BASE_URL = 'https://www.kronosolopromocionales.com';
+
   const articleJsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'BlogPosting',
+    '@id': `${BASE_URL}/blog/${post.slug}/#article`,
     headline: post.title,
     description: post.seo.metaDescription,
-    image: post.image,
+    image: {
+      '@type': 'ImageObject',
+      url: post.image,
+      width: 1200,
+      height: 630,
+    },
+    inLanguage: 'es-EC',
+    keywords: post.seo.keywords,
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: post.dateModified || post.date,
     author: {
       '@type': 'Person',
+      '@id': `${BASE_URL}/nosotros/#claudia-gonzalez`,
       name: post.author,
       jobTitle: post.authorRole,
-      image: `https://www.kronosolopromocionales.com${post.authorImage}`,
+      image: {
+        '@type': 'ImageObject',
+        url: `${BASE_URL}${post.authorImage}`,
+      },
       ...(post.authorLinkedIn && { sameAs: [post.authorLinkedIn] }),
     },
     publisher: {
       '@type': 'Organization',
+      '@id': `${BASE_URL}/#localbusiness`,
       name: 'KS Promocionales',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://www.kronosolopromocionales.com/images/logo.png',
+        url: `${BASE_URL}/images/logo.png`,
+        width: 400,
+        height: 100,
       },
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://www.kronosolopromocionales.com/blog/${post.slug}`,
+      '@id': `${BASE_URL}/blog/${post.slug}`,
     },
+    isPartOf: {
+      '@id': `${BASE_URL}/#website`,
+    },
+  };
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: `${BASE_URL}/` },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${BASE_URL}/blog/` },
+      { '@type': 'ListItem', position: 3, name: post.title, item: `${BASE_URL}/blog/${post.slug}/` },
+    ],
   };
 
   const getCategoryColor = (category) => {
@@ -116,6 +146,10 @@ export default function BlogPostPage({ params }) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       {/* Back Button */}
       <div className="bg-white border-b border-gray-200">

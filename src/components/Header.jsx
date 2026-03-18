@@ -28,10 +28,17 @@ export default function Header() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 40);
+    let rafId;
+    const handleScroll = () => {
+      cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => setIsScrolled(window.scrollY > 40));
+    };
     handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      cancelAnimationFrame(rafId);
+    };
   }, []);
 
   useEffect(() => {
@@ -40,11 +47,7 @@ export default function Header() {
 
   return (
     <>
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'shadow-navy bg-white/95 backdrop-blur-md'
-          : 'bg-transparent'
-      }`}>
+      <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 shadow-navy bg-white/95 backdrop-blur-md">
 
         {/* Announcement bar */}
         <div className={`transition-all duration-300 overflow-hidden ${
@@ -63,7 +66,7 @@ export default function Header() {
                     <span>·</span>
                     <span>+1,200 productos personalizables</span>
                     <span>·</span>
-                    <span>Cotización en 24 horas</span>
+                    <span>Cotización en 48 horas</span>
                     <span>·</span>
                     <span>🇪🇨 Envíos a todo Ecuador</span>
                     <span>·</span>
@@ -71,7 +74,7 @@ export default function Header() {
                     <span>·</span>
                     <span>+1,200 productos personalizables</span>
                     <span>·</span>
-                    <span>Cotización en 24 horas</span>
+                    <span>Cotización en 48 horas</span>
                     <span>·</span>
                   </div>
                 </div>
@@ -90,9 +93,7 @@ export default function Header() {
         </div>
 
         {/* Main navbar */}
-        <div className={`transition-all duration-300 ${
-          isScrolled ? 'border-b border-gray-100' : 'border-b border-white/10'
-        }`}>
+        <div className="border-b border-gray-100">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between h-18 md:h-20">
 
@@ -103,9 +104,7 @@ export default function Header() {
                   alt="KS Promocionales"
                   width={180}
                   height={60}
-                  className={`h-14 md:h-16 w-auto object-contain transition-all duration-300 ${
-                    isScrolled ? '' : 'brightness-0 invert'
-                  }`}
+                  className="h-14 md:h-16 w-auto object-contain"
                   priority
                 />
               </Link>
@@ -118,10 +117,8 @@ export default function Header() {
                     href={item.href}
                     className={`relative px-4 py-2 text-sm font-semibold uppercase tracking-wider transition-colors duration-200 group ${
                       pathname === item.href
-                        ? isScrolled ? 'text-primary' : 'text-white'
-                        : isScrolled
-                          ? 'text-secondary/70 hover:text-secondary'
-                          : 'text-white/80 hover:text-white'
+                        ? 'text-primary'
+                        : 'text-secondary/70 hover:text-secondary'
                     }`}
                   >
                     {item.name}
@@ -148,15 +145,13 @@ export default function Header() {
                 {/* Hamburger */}
                 <button
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                  className={`lg:hidden p-2.5 transition-colors ${
-                    isScrolled ? 'text-secondary hover:bg-gray-100' : 'text-white hover:bg-white/10'
-                  }`}
+                  className="lg:hidden p-2.5 transition-colors text-secondary hover:bg-gray-100"
                   aria-label="Toggle menu"
                 >
                   <div className="w-5 flex flex-col gap-1.5">
-                    <span className={`block h-0.5 transition-all duration-300 ${isScrolled ? 'bg-secondary' : 'bg-white'} ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-                    <span className={`block h-0.5 transition-all duration-300 ${isScrolled ? 'bg-secondary' : 'bg-white'} ${isMobileMenuOpen ? 'opacity-0' : ''}`} />
-                    <span className={`block h-0.5 transition-all duration-300 ${isScrolled ? 'bg-secondary' : 'bg-white'} ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+                    <span className={`block h-0.5 transition-all duration-300 bg-secondary ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+                    <span className={`block h-0.5 transition-all duration-300 bg-secondary ${isMobileMenuOpen ? 'opacity-0' : ''}`} />
+                    <span className={`block h-0.5 transition-all duration-300 bg-secondary ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
                   </div>
                 </button>
               </div>

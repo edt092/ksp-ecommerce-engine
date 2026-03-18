@@ -35,37 +35,6 @@ export default function HomePageClient() {
 
   return (
     <>
-      {/* JSON-LD Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'LocalBusiness',
-            name: 'KSPromocionales',
-            image: 'https://www.kronosolopromocionales.com/images/og-image.jpg',
-            description: 'Productos promocionales Ecuador: artículos promocionales y regalos corporativos.',
-            url: 'https://www.kronosolopromocionales.com',
-            address: {
-              '@type': 'PostalAddress',
-              addressCountry: 'EC',
-              addressLocality: 'Quito'
-            },
-            areaServed: [
-              { '@type': 'City', name: 'Quito' },
-              { '@type': 'City', name: 'Guayaquil' },
-              { '@type': 'City', name: 'Cuenca' },
-              { '@type': 'Country', name: 'Ecuador' },
-              { '@type': 'City', name: 'Bogotá' },
-              { '@type': 'City', name: 'Medellín' },
-              { '@type': 'City', name: 'Cali' },
-              { '@type': 'Country', name: 'Colombia' }
-            ],
-            priceRange: '$$'
-          })
-        }}
-      />
-
       {/* Spacer for fixed header */}
       <div className="h-[88px] md:h-[96px]"></div>
 
@@ -188,10 +157,12 @@ export default function HomePageClient() {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="relative">
               <div className="aspect-[4/3] relative">
-                <img
+                <Image
                   src="/images/catalogos-ksp/catalogo-a.png"
-                  alt="Catálogo Digital"
-                  className="w-full h-full object-cover"
+                  alt="Catálogo Digital KS Promocionales"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
                 />
               </div>
             </div>

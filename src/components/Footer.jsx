@@ -68,7 +68,7 @@ export default function Footer() {
             </span>
           </h2>
           <p className="text-white/60 text-lg max-w-xl mx-auto mb-8">
-            Cotiza gratis en WhatsApp. Respuesta garantizada en menos de 24 horas.
+            Cotiza gratis en WhatsApp. Respuesta garantizada en máximo 48 horas.
           </p>
           <a
             href={`https://wa.me/${WA_NUMBER}?text=Hola%2C%20quiero%20cotizar%20productos%20promocionales%20para%20mi%20empresa`}

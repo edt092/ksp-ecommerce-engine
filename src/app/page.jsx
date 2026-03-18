@@ -4,7 +4,7 @@ export const dynamic = 'force-static';
 
 export const metadata = {
   alternates: {
-    canonical: 'https://www.kronosolopromocionales.com',
+    canonical: 'https://www.kronosolopromocionales.com/',
   },
 };
 

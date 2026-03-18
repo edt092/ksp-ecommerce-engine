@@ -1,0 +1,135 @@
+{
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  },
+  "hasHorizontalScroll": false,
+  "bodyScrollWidth": 1920,
+  "fontSizes": {
+    "h1": 64,
+    "h2": 36,
+    "h3": 14,
+    "p": 18,
+    "a": 12,
+    "button": 16
+  },
+  "h1": {
+    "text": "Artículos Promocionales\nque hacen recordar\ntu marca",
+    "fontSize": 64,
+    "aboveFold": true
+  },
+  "ctas": [
+    {
+      "text": "COTIZAR GRATIS",
+      "rect": {
+        "top": 52,
+        "width": 179.75,
+        "height": 40
+      },
+      "aboveFold": true,
+      "tapOk": false
+    },
+    {
+      "text": "Ver todas las categorías",
+      "rect": {
+        "top": 565,
+        "width": 254,
+        "height": 45
+      },
+      "aboveFold": true,
+      "tapOk": true
+    },
+    {
+      "text": "COTIZA GRATIS",
+      "rect": {
+        "top": 799.71875,
+        "width": 197.28125,
+        "height": 56
+      },
+      "aboveFold": true,
+      "tapOk": true
+    },
+    {
+      "text": "NUEVOS",
+      "rect": {
+        "top": 1457,
+        "width": 91.625,
+        "height": 36
+      },
+      "aboveFold": false,
+      "tapOk": false
+    },
+    {
+      "text": "MÁS VENDIDOS",
+      "rect": {
+        "top": 1457,
+        "width": 143.046875,
+        "height": 36
+      },
+      "aboveFold": false,
+      "tapOk": false
+    },
+    {
+      "text": "DESTACADOS",
+      "rect": {
+        "top": 1457,
+        "width": 128.859375,
+        "height": 36
+      },
+      "aboveFold": false,
+      "tapOk": false
+    },
+    {
+      "text": "",
+      "rect": {
+        "top": 992,
+        "width": 64,
+        "height": 64
+      },
+      "aboveFold": true,
+      "tapOk": true
+    },
+    {
+      "text": "COTIZAR",
+      "rect": {
+        "top": 2367,
+        "width": 260,
+        "height": 36
+      },
+      "aboveFold": false,
+      "tapOk": false
+    },
+    {
+      "text": "Cotiza Ahora por WhatsApp",
+      "rect": {
+        "top": 4795.25,
+        "width": 314.703125,
+        "height": 56
+      },
+      "aboveFold": false,
+      "tapOk": true
+    },
+    {
+      "text": "COTIZAR POR WHATSAPP — ES GRATIS",
+      "rect": {
+        "top": 5276.25,
+        "width": 375.796875,
+        "height": 52
+      },
+      "aboveFold": false,
+      "tapOk": true
+    },
+    {
+      "text": "Contacto",
+      "rect": {
+        "top": 5620.25,
+        "width": 217.609375,
+        "height": 20
+      },
+      "aboveFold": false,
+      "tapOk": false
+    }
+  ],
+  "title": "Productos Promocionales Ecuador | Regalos Corporativos KS",
+  "metaDesc": "Artículos promocionales y regalos corporativos en Ecuador. Personalizamos mugs, tecnología y más con tu logo. ¡Cotiza por WhatsApp! Envíos nacionales."
+}

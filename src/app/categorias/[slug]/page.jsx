@@ -47,8 +47,36 @@ export default function CategoryPage({ params }) {
   // Get all products for this category
   const categoryProducts = productsData.filter(p => p.categoryId === category.id);
 
+  const BASE_URL = 'https://www.kronosolopromocionales.com';
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: `${BASE_URL}/` },
+      { '@type': 'ListItem', position: 2, name: category.name, item: `${BASE_URL}/categorias/${category.slug}/` },
+    ],
+  };
+
+  const itemListJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: `${category.name} — KS Promocionales`,
+    description: category.seoDescription,
+    url: `${BASE_URL}/categorias/${category.slug}/`,
+    numberOfItems: categoryProducts.length,
+    itemListElement: categoryProducts.slice(0, 20).map((product, idx) => ({
+      '@type': 'ListItem',
+      position: idx + 1,
+      url: `${BASE_URL}/productos/${product.slug}/`,
+      name: product.name,
+    })),
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
       {/* Spacer for fixed header */}
       <div className="h-[88px] md:h-[96px]"></div>
 

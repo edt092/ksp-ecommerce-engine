@@ -108,7 +108,7 @@ export default function ColombiaPage() {
               <div className="text-gray-400">Ciudades Principales</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-primary mb-2">24h</div>
+              <div className="text-4xl font-bold text-primary mb-2">48h</div>
               <div className="text-gray-400">Respuesta Rápida</div>
             </div>
             <div>
