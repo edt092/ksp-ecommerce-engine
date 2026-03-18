@@ -50,10 +50,6 @@ export default function CategoryProductsGrid({ products, category }) {
     }, 300);
   };
 
-  const loadMoreManual = () => {
-    loadMoreProducts();
-  };
-
   return (
     <div className="space-y-8">
       {/* Grid de productos */}
@@ -82,25 +78,9 @@ export default function CategoryProductsGrid({ products, category }) {
         </div>
       )}
 
-      {/* Botón para cargar más (fallback si no hay scroll) */}
+      {/* Sentinel: más productos están siendo cargados */}
       {!loading && displayedProducts.length < products.length && (
-        <div className="flex justify-center py-8">
-          <button
-            onClick={loadMoreManual}
-            className="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-full font-semibold transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
-          >
-            Ver más productos ({products.length - displayedProducts.length} restantes)
-          </button>
-        </div>
-      )}
-
-      {/* Mensaje cuando se cargaron todos */}
-      {displayedProducts.length >= products.length && products.length > PRODUCTS_PER_PAGE && (
-        <div className="text-center py-8">
-          <p className="text-gray-500">
-            Has visto todos los {products.length} productos de esta categoría
-          </p>
-        </div>
+        <div className="h-4" />
       )}
     </div>
   );
