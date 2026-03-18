@@ -113,11 +113,6 @@ export default function CategoryPage({ params }) {
                   {category.name}
                 </h1>
 
-                {/* Product Count */}
-                <p className="text-white/70 text-base md:text-lg mb-6">
-                  <span className="font-semibold text-white">{category.productCount}</span> productos disponibles
-                </p>
-
                 {/* Description */}
                 <p className="text-white/90 text-base md:text-lg lg:text-xl leading-relaxed mb-8">
                   {category.story}
@@ -188,7 +183,7 @@ export default function CategoryPage({ params }) {
                 Productos en {category.name}
               </h2>
               <p className="text-gray-500">
-                {categoryProducts.length} productos encontrados
+                Productos personalizables con tu logo
               </p>
             </div>
 
