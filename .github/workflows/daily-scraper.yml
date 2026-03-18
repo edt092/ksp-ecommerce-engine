@@ -1,0 +1,41 @@
+name: Daily Product Scraper
+
+on:
+  schedule:
+    # Runs every day at 06:00 UTC (02:00 Ecuador time)
+    - cron: '0 6 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4 lxml
+
+      - name: Run scraper
+        run: python scripts/daily-scraper.py
+
+      - name: Commit and push if data changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/products.json data/categories.json
+          if git diff --cached --quiet; then
+            echo "No new products found — nothing to commit."
+          else
+            git commit -m "chore(data): daily scraper update [skip ci]"
+            git push
+          fi
