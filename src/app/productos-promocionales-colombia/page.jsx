@@ -25,7 +25,12 @@ export const metadata = {
     siteName: 'KS Promocionales',
   },
   alternates: {
-    canonical: 'https://www.kronosolopromocionales.com/productos-promocionales-colombia',
+    canonical: 'https://www.kronosolopromocionales.com/productos-promocionales-colombia/',
+    languages: {
+      'es-CO': 'https://www.kronosolopromocionales.com/productos-promocionales-colombia/',
+      'es-EC': 'https://www.kronosolopromocionales.com/productos-promocionales-ecuador/',
+      'x-default': 'https://www.kronosolopromocionales.com/',
+    },
   },
 };
 
@@ -44,11 +49,11 @@ export default function ColombiaPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'KS Promocionales Colombia',
-    description: colombia.seoDescription,
-    url: 'https://www.kronosolopromocionales.com/productos-promocionales-colombia',
-    areaServed: { '@type': 'Country', name: 'Colombia' },
-    serviceArea: colombia.ciudades.map(c => ({ '@type': 'City', name: c.nombre })),
+    '@id': 'https://www.kronosolopromocionales.com/#localbusiness',
+    areaServed: [
+      { '@type': 'Country', name: 'Colombia' },
+      ...colombia.ciudades.map(c => ({ '@type': 'City', name: c.nombre })),
+    ],
   };
 
   return (

@@ -72,12 +72,16 @@ export default function ProductPage({ params }) {
     .filter(p => p.categoryId === product.categoryId && p.id !== product.id)
     .slice(0, 3);
 
+  const BASE_URL = 'https://www.kronosolopromocionales.com';
+
   const productJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: product.name,
     description: product.seoDescription || product.shortDescription,
-    image: product.images && product.images.length > 0 ? product.images : undefined,
+    image: product.images && product.images.length > 0
+      ? product.images.map(img => img.startsWith('http') ? img : `${BASE_URL}${img}`)
+      : undefined,
     sku: String(product.id),
     brand: {
       '@type': 'Brand',
@@ -85,15 +89,28 @@ export default function ProductPage({ params }) {
     },
     offers: {
       '@type': 'Offer',
-      availability: 'https://schema.org/InStoreOnly',
+      url: `${BASE_URL}/productos/${product.slug}/`,
       priceCurrency: 'USD',
+      price: '0',
+      priceValidUntil: '2027-12-31',
+      availability: 'https://schema.org/InStock',
       seller: {
         '@type': 'Organization',
+        '@id': `${BASE_URL}/#localbusiness`,
         name: 'KS Promocionales',
-        url: 'https://www.kronosolopromocionales.com',
       },
     },
-    url: `https://www.kronosolopromocionales.com/productos/${product.slug}`,
+    url: `${BASE_URL}/productos/${product.slug}/`,
+  };
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: `${BASE_URL}/` },
+      { '@type': 'ListItem', position: 2, name: category?.name || 'Categorías', item: `${BASE_URL}/categorias/${category?.slug}/` },
+      { '@type': 'ListItem', position: 3, name: product.name, item: `${BASE_URL}/productos/${product.slug}/` },
+    ],
   };
 
   return (
@@ -101,6 +118,10 @@ export default function ProductPage({ params }) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       {/* Hero / Product Header */}
       <section className="pt-32 pb-12 bg-gradient-to-br from-gray-50 to-white">

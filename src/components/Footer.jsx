@@ -10,6 +10,7 @@ const quickLinks = [
   { name: 'Blog', href: '/blog' },
   { name: 'Nosotros', href: '/nosotros' },
   { name: 'Contacto', href: '/contacto' },
+  { name: 'Política de Privacidad', href: '/politica-de-privacidad' },
 ];
 
 const categories = [
@@ -198,9 +199,9 @@ export default function Footer() {
 
         {/* ── Bottom bar ── */}
         <div className="border-t border-white/8">
-          <div className="container mx-auto px-4 py-5 flex flex-col md:flex-row justify-between items-center gap-3">
+          <div className="container mx-auto px-4 py-5 flex flex-col md:flex-row justify-between items-center gap-3 text-center md:text-left">
             <p className="text-white/30 text-xs">
-              © {currentYear} KS Promocionales. Todos los derechos reservados.
+              © {currentYear} KS Promocionales · RUC: 1719403345001 · Quito, Ecuador
             </p>
             <p className="text-white/30 text-xs">
               Desarrollado por{' '}
