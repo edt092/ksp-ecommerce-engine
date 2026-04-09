@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 
 export default function WhatsAppButton({
@@ -19,21 +19,6 @@ export default function WhatsAppButton({
 
   // Determinar si debe ocultarse
   const shouldHide = hideOnBlog && position === 'fixed' && pathname?.startsWith('/blog');
-
-  useEffect(() => {
-    if (typeof window !== 'undefined' && !window.gtag) {
-      const script = document.createElement('script');
-      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
-      script.async = true;
-      document.head.appendChild(script);
-
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){window.dataLayer.push(arguments);}
-      window.gtag = gtag;
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
-    }
-  }, []);
 
   const handleWhatsAppClick = () => {
     const encodedMessage = encodeURIComponent(message);

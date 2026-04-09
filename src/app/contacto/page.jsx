@@ -1,15 +1,15 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Contacto | Productos Promocionales Ecuador - Quito y Guayaquil | KSPromocionales',
+  title: 'Contacto | KS Promocionales Ecuador',
   description: 'Contacta a KSPromocionales para productos promocionales en Ecuador. Atendemos Quito, Guayaquil y todo el país. Cotiza tus artículos promocionales por WhatsApp.',
   alternates: {
-    canonical: 'https://www.kronosolopromocionales.com/contacto',
+    canonical: 'https://www.kronosolopromocionales.com/contacto/',
   },
   openGraph: {
-    title: 'Contacto | Productos Promocionales Ecuador - Quito y Guayaquil | KSPromocionales',
+    title: 'Contacto | KS Promocionales Ecuador',
     description: 'Contacta a KSPromocionales para productos promocionales en Ecuador. Atendemos Quito, Guayaquil y todo el país.',
-    url: 'https://www.kronosolopromocionales.com/contacto',
+    url: 'https://www.kronosolopromocionales.com/contacto/',
     siteName: 'KSPromocionales',
     locale: 'es_EC',
     type: 'website',

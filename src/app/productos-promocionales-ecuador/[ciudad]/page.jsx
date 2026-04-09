@@ -31,11 +31,11 @@ export async function generateMetadata({ params }) {
       description: ciudad.seoDescription,
       type: 'website',
       locale: 'es_EC',
-      url: `https://www.kronosolopromocionales.com/productos-promocionales-ecuador/${ciudad.slug}`,
+      url: `https://www.kronosolopromocionales.com/productos-promocionales-ecuador/${ciudad.slug}/`,
       siteName: 'KS Promocionales',
     },
     alternates: {
-      canonical: `https://www.kronosolopromocionales.com/productos-promocionales-ecuador/${ciudad.slug}`,
+      canonical: `https://www.kronosolopromocionales.com/productos-promocionales-ecuador/${ciudad.slug}/`,
     },
   };
 }
@@ -65,7 +65,7 @@ export default function CiudadEcuadorPage({ params }) {
     '@type': 'LocalBusiness',
     name: `KS Promocionales ${ciudad.nombre}`,
     description: ciudad.seoDescription,
-    url: `https://www.kronosolopromocionales.com/productos-promocionales-ecuador/${ciudad.slug}`,
+    url: `https://www.kronosolopromocionales.com/productos-promocionales-ecuador/${ciudad.slug}/`,
     areaServed: {
       '@type': 'City',
       name: ciudad.nombre,

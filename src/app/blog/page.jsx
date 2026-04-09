@@ -3,7 +3,7 @@ import Image from 'next/image';
 import postsData from '@/data/blog/posts.json';
 
 export const metadata = {
-  title: 'Blog de Productos Promocionales y Marketing | KSPromocionales Ecuador',
+  title: 'Blog Promocionales y Marketing | KS Promocionales',
   description: 'Artículos sobre productos promocionales, merchandising, diseño y estrategias de marketing. Consejos expertos para potenciar tu marca en Ecuador.',
   keywords: 'blog productos promocionales, marketing merchandising, diseño branding, regalos corporativos Ecuador',
   openGraph: {
@@ -12,7 +12,7 @@ export const metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.kronosolopromocionales.com/blog',
+    canonical: 'https://www.kronosolopromocionales.com/blog/',
   },
 };
 
