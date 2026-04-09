@@ -20,7 +20,7 @@ from collections import Counter
 # ── Config ────────────────────────────────────────────────────────────────────
 BASE_URL   = "https://www.catalogospromocionales.com"
 DELAY      = 1.5   # seconds between requests
-MAX_PAGES  = 20    # max pagination pages per category (safety cap)
+MAX_PAGES  = 50    # max pagination pages per category (safety cap)
 
 ROOT = os.path.join(os.path.dirname(__file__), '..')
 PRODUCTS_FILE   = os.path.join(ROOT, 'data', 'products.json')
@@ -265,6 +265,29 @@ def get_all_categories():
     return cats
 
 
+def find_next_page_url(soup, current_page):
+    """
+    Extract the URL for the next page from pagination links.
+    catalogospromocionales.com uses /Catalogo/Default.aspx?id=XX&Page=N
+    """
+    next_page_num = str(current_page + 1)
+
+    # Find all links with Page= parameter
+    page_links = soup.find_all('a', href=re.compile(r'[Pp]age=\d+'))
+    for link in page_links:
+        href = link.get('href', '')
+        m = re.search(r'[Pp]age=(\d+)', href)
+        if m and m.group(1) == next_page_num:
+            return urljoin(BASE_URL, href)
+
+    # Fallback: text-based next link (›, », siguiente, next)
+    next_link = soup.find('a', string=re.compile(r'siguiente|next|[›»>]', re.I))
+    if next_link and next_link.get('href'):
+        return urljoin(BASE_URL, next_link['href'])
+
+    return None
+
+
 def scrape_category_products(cat_name, cat_url):
     """Scrape all products from a category, handling pagination."""
     category_id = map_category(cat_name)
@@ -274,62 +297,42 @@ def scrape_category_products(cat_name, cat_url):
 
     products = []
     seen_imgs = set()
+    current_url = cat_url
     page = 1
 
     while page <= MAX_PAGES:
-        url = cat_url if page == 1 else f"{cat_url}?page={page}"
-        html = get_page(url)
+        html = get_page(current_url)
         if not html:
             break
 
         soup = BeautifulSoup(html, 'lxml')
         found_on_page = 0
 
-        # Try multiple product container selectors
-        containers = (
-            soup.find_all('div', class_=re.compile(r'product[-_]?item|product[-_]?card|item[-_]?product', re.I))
-            or soup.find_all('div', class_=re.compile(r'\bitem\b', re.I))
-            or soup.find_all('li', class_=re.compile(r'product|item', re.I))
-        )
+        # Primary selector: wrapProdWhite (catalogospromocionales.com structure)
+        containers = soup.find_all('div', class_='wrapProdWhite')
 
-        # Fallback: find all images with product URL pattern
+        # Fallback: other generic patterns
         if not containers:
-            for img in soup.find_all('img', src=re.compile(r'/images/productos/\d+', re.I)):
-                img_url = urljoin(BASE_URL, img['src'])
-                if img_url in seen_imgs:
-                    continue
-                # Try to get name from alt or nearest heading
-                name = img.get('alt', '').strip()
-                if not name or len(name) < 3:
-                    parent = img.find_parent(['a', 'div', 'li'])
-                    if parent:
-                        heading = parent.find(['h2', 'h3', 'h4', 'strong'])
-                        if heading:
-                            name = heading.get_text(strip=True)
-                if name and len(name) >= 3:
-                    seen_imgs.add(img_url)
-                    p = build_product(name, img_url, cat_url, category_id)
-                    products.append(p)
-                    found_on_page += 1
-        else:
-            for container in containers:
-                img = container.find('img', src=re.compile(r'/images/productos/\d+', re.I))
-                if not img:
-                    img = container.find('img')
-                if not img:
-                    continue
+            containers = (
+                soup.find_all('div', class_=re.compile(r'product[-_]?item|product[-_]?card', re.I))
+                or soup.find_all('li', class_=re.compile(r'product|item', re.I))
+            )
 
+        if containers:
+            for container in containers:
+                img = container.find('img')
+                if not img:
+                    continue
                 img_src = img.get('src') or img.get('data-src') or img.get('data-original', '')
                 if not img_src:
                     continue
                 img_url = urljoin(BASE_URL, img_src)
-
                 if img_url in seen_imgs:
                     continue
 
                 # Extract product name
                 name = ''
-                for tag in ['h2', 'h3', 'h4', 'strong', 'p']:
+                for tag in ['h2', 'h3', 'h4', 'strong', 'p', 'span']:
                     el = container.find(tag)
                     if el:
                         candidate = el.get_text(strip=True)
@@ -342,16 +345,38 @@ def scrape_category_products(cat_name, cat_url):
                     continue
 
                 seen_imgs.add(img_url)
-                p = build_product(name, img_url, cat_url, category_id)
+                p = build_product(name, img_url, current_url, category_id)
                 products.append(p)
                 found_on_page += 1
+        else:
+            # Last-resort fallback: find all product images directly
+            for img in soup.find_all('img', src=re.compile(r'/images/productos/\d+', re.I)):
+                img_url = urljoin(BASE_URL, img['src'])
+                if img_url in seen_imgs:
+                    continue
+                name = img.get('alt', '').strip()
+                if not name or len(name) < 3:
+                    parent = img.find_parent(['a', 'div', 'li'])
+                    if parent:
+                        heading = parent.find(['h2', 'h3', 'h4', 'strong', 'span'])
+                        if heading:
+                            name = heading.get_text(strip=True)
+                if name and len(name) >= 3:
+                    seen_imgs.add(img_url)
+                    p = build_product(name, img_url, current_url, category_id)
+                    products.append(p)
+                    found_on_page += 1
 
         print(f"    page {page}: {found_on_page} products")
 
-        # Check for next page
-        next_link = soup.find('a', string=re.compile(r'siguiente|next|›|»', re.I))
-        if not next_link or found_on_page == 0:
+        if found_on_page == 0:
             break
+
+        next_url = find_next_page_url(soup, page)
+        if not next_url:
+            break
+
+        current_url = next_url
         page += 1
         time.sleep(DELAY)
 

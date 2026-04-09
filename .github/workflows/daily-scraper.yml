@@ -6,10 +6,15 @@ on:
     - cron: '0 6 * * *'
   workflow_dispatch: # Allow manual trigger
 
+permissions:
+  contents: write
+
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - name: Checkout repository
@@ -37,5 +42,5 @@ jobs:
             echo "No new products found — nothing to commit."
           else
             git commit -m "chore(data): daily scraper update [skip ci]"
-            git push
+            git push origin HEAD:${{ github.ref_name }}
           fi
