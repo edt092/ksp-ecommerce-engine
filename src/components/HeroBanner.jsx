@@ -172,7 +172,7 @@ export default function HeroBanner() {
                 <div className="relative w-full h-full">
                   <Image
                     src={PRODUCT_IMAGES[1]}
-                    alt="Producto promocional"
+                    alt="Bolígrafo antibacteriano Flom 4-1 personalizado con logo de empresa"
                     fill
                     sizes="176px"
                     className="object-contain p-4 transition-transform duration-500 group-hover:scale-110"
@@ -187,7 +187,7 @@ export default function HeroBanner() {
                 <div className="relative w-full h-full">
                   <Image
                     src={PRODUCT_IMAGES[2]}
-                    alt="Producto promocional"
+                    alt="Cuello multifuncional corporativo personalizado con logo"
                     fill
                     sizes="160px"
                     className="object-contain p-4 transition-transform duration-500 group-hover:scale-110"
@@ -201,7 +201,7 @@ export default function HeroBanner() {
                 <div className="relative w-full h-full">
                   <Image
                     src={PRODUCT_IMAGES[0]}
-                    alt="Producto promocional"
+                    alt="Termo metálico Calypso Chili 500ml con logo grabado para regalo corporativo"
                     fill
                     sizes="208px"
                     priority
@@ -219,7 +219,7 @@ export default function HeroBanner() {
                 <div className="relative w-full h-full">
                   <Image
                     src={PRODUCT_IMAGES[4]}
-                    alt="Producto promocional"
+                    alt="Organizador multiusos Link Nuevo con personalización de marca"
                     fill
                     sizes="144px"
                     className="object-contain p-3 transition-transform duration-500 group-hover:scale-110"
@@ -233,7 +233,7 @@ export default function HeroBanner() {
                 <div className="relative w-full h-full">
                   <Image
                     src={PRODUCT_IMAGES[5]}
-                    alt="Producto promocional"
+                    alt="Polo corporativo personalizado con logo bordado para uniformes de empresa"
                     fill
                     sizes="160px"
                     className="object-contain p-3 transition-transform duration-500 group-hover:scale-110"

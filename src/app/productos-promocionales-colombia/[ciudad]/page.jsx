@@ -31,11 +31,11 @@ export async function generateMetadata({ params }) {
       description: ciudad.seoDescription,
       type: 'website',
       locale: 'es_CO',
-      url: `https://www.kronosolopromocionales.com/productos-promocionales-colombia/${ciudad.slug}`,
+      url: `https://www.kronosolopromocionales.com/productos-promocionales-colombia/${ciudad.slug}/`,
       siteName: 'KS Promocionales',
     },
     alternates: {
-      canonical: `https://www.kronosolopromocionales.com/productos-promocionales-colombia/${ciudad.slug}`,
+      canonical: `https://www.kronosolopromocionales.com/productos-promocionales-colombia/${ciudad.slug}/`,
     },
   };
 }
@@ -65,7 +65,7 @@ export default function CiudadColombiaPage({ params }) {
     '@type': 'LocalBusiness',
     name: `KS Promocionales ${ciudad.nombre}`,
     description: ciudad.seoDescription,
-    url: `https://www.kronosolopromocionales.com/productos-promocionales-colombia/${ciudad.slug}`,
+    url: `https://www.kronosolopromocionales.com/productos-promocionales-colombia/${ciudad.slug}/`,
     areaServed: {
       '@type': 'City',
       name: ciudad.nombre,

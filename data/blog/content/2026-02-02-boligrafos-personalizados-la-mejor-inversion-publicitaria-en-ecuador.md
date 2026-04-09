@@ -106,13 +106,6 @@ La clave del éxito con los *bolígrafos personalizados para empresas* reside en
 
 > 🎯 **¿Sabías que?** El 85% de las personas recuerdan la marca de un regalo promocional que recibieron, ¡mucho más que con la publicidad online!
 
-## Testimonios y Casos de Éxito
-
-"Implementamos una campaña con bolígrafos personalizados en nuestra última feria comercial y ¡fue un éxito total! Atraímos a muchos clientes potenciales y reforzamos nuestra imagen de marca." - *Juan Pérez, Gerente de Marketing de XYZ Corp.*
-
-"Los bolígrafos ecológicos personalizados fueron un gran acierto. Nuestros clientes valoraron mucho el compromiso de nuestra empresa con el medio ambiente." - *María Rodríguez, Directora de Sostenibilidad de ABC S.A.*
-
-
 
 ![four different colored pens lined up in a row](https://images.unsplash.com/photo-1699027833664-5b66d8d3e762?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDc1MDh8MHwxfHNlYXJjaHwxfHxib2wlQzMlQURncmFmb3MlMjBwZXJzb25hbGl6YWRvcyUyMHBhcmElMjBlbXByZXNhcyUyMG5lZ29jaW98ZW58MXwwfHx8MTc3MDA2NDI4M3ww&ixlib=rb-4.1.0&q=80&w=1080)
 *Photo by [Marian Florinel Condruz](https://unsplash.com/@gottapics) on [Unsplash](https://unsplash.com)*

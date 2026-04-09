@@ -46,7 +46,7 @@ export async function generateMetadata({ params }) {
       images: [post.image],
     },
     alternates: {
-      canonical: `https://www.kronosolopromocionales.com/blog/${params.slug}`,
+      canonical: `https://www.kronosolopromocionales.com/blog/${params.slug}/`,
     },
   };
 }

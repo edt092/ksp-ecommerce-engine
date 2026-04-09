@@ -53,7 +53,7 @@ export async function generateMetadata({ params }) {
       images: product.images && product.images.length > 0 ? [product.images[0]] : []
     },
     alternates: {
-      canonical: `https://www.kronosolopromocionales.com/productos/${params.slug}`
+      canonical: `https://www.kronosolopromocionales.com/productos/${params.slug}/`
     }
   };
 }
@@ -90,8 +90,16 @@ export default function ProductPage({ params }) {
     offers: {
       '@type': 'Offer',
       url: `${BASE_URL}/productos/${product.slug}/`,
+      price: '0',
       priceCurrency: 'USD',
       availability: 'https://schema.org/InStock',
+      priceSpecification: {
+        '@type': 'PriceSpecification',
+        priceCurrency: 'USD',
+        minPrice: '0',
+        maxPrice: '0',
+        price: '0',
+      },
       seller: {
         '@type': 'Organization',
         '@id': `${BASE_URL}/#localbusiness`,

@@ -14,6 +14,7 @@ const navigation = [
   { name: 'Colombia', href: '/productos-promocionales-colombia' },
   { name: 'Blog', href: '/blog' },
   { name: 'Nosotros', href: '/nosotros' },
+  { name: 'Contacto', href: '/contacto' },
 ];
 
 const WAIcon = () => (

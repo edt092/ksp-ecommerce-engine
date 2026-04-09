@@ -65,6 +65,14 @@ export const metadata = {
     description: 'Artículos promocionales y regalos corporativos en Ecuador. Personalizamos mugs, tecnología y más con tu logo. ¡Cotiza por WhatsApp! Envíos nacionales.',
     images: ['/images/og-image.jpg'],
   },
+  alternates: {
+    canonical: 'https://www.kronosolopromocionales.com/',
+    languages: {
+      'es-EC': 'https://www.kronosolopromocionales.com/',
+      'es-CO': 'https://www.kronosolopromocionales.com/',
+      'x-default': 'https://www.kronosolopromocionales.com/',
+    },
+  },
   robots: {
     index: true,
     follow: true,
@@ -159,6 +167,12 @@ export default function RootLayout({ children }) {
     <html lang="es-EC" className={`${syne.variable} ${dmSans.variable} ${dmSerif.variable} ${syneMono.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="preload"
+          as="image"
+          href="https://catalogospromocionales.com/images/productos/9781.jpg"
+          fetchPriority="high"
+        />
         <link rel="preconnect" href="https://catalogospromocionales.com" />
         <link rel="dns-prefetch" href="https://catalogospromocionales.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
