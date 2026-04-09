@@ -53,7 +53,12 @@ export async function generateMetadata({ params }) {
       images: product.images && product.images.length > 0 ? [product.images[0]] : []
     },
     alternates: {
-      canonical: `https://www.kronosolopromocionales.com/productos/${params.slug}/`
+      canonical: `https://www.kronosolopromocionales.com/productos/${params.slug}/`,
+      languages: {
+        'es-EC': `https://www.kronosolopromocionales.com/productos/${params.slug}/`,
+        'es-CO': `https://www.kronosolopromocionales.com/productos/${params.slug}/`,
+        'x-default': `https://www.kronosolopromocionales.com/productos/${params.slug}/`,
+      },
     }
   };
 }
@@ -90,15 +95,43 @@ export default function ProductPage({ params }) {
     offers: {
       '@type': 'Offer',
       url: `${BASE_URL}/productos/${product.slug}/`,
-      price: '0',
-      priceCurrency: 'USD',
       availability: 'https://schema.org/InStock',
       priceSpecification: {
-        '@type': 'PriceSpecification',
+        '@type': 'UnitPriceSpecification',
         priceCurrency: 'USD',
-        minPrice: '0',
-        maxPrice: '0',
-        price: '0',
+        description: 'Precio a cotizar — consulte por WhatsApp',
+      },
+      hasMerchantReturnPolicy: {
+        '@type': 'MerchantReturnPolicy',
+        returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
+        name: 'Sin devoluciones en productos personalizados',
+      },
+      shippingDetails: {
+        '@type': 'OfferShippingDetails',
+        shippingRate: {
+          '@type': 'MonetaryAmount',
+          currency: 'USD',
+          description: 'Tarifa a cotizar según volumen y destino',
+        },
+        shippingDestination: {
+          '@type': 'DefinedRegion',
+          addressCountry: 'EC',
+        },
+        deliveryTime: {
+          '@type': 'ShippingDeliveryTime',
+          handlingTime: {
+            '@type': 'QuantitativeValue',
+            minValue: 1,
+            maxValue: 3,
+            unitCode: 'DAY',
+          },
+          transitTime: {
+            '@type': 'QuantitativeValue',
+            minValue: 1,
+            maxValue: 5,
+            unitCode: 'DAY',
+          },
+        },
       },
       seller: {
         '@type': 'Organization',

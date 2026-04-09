@@ -10,6 +10,11 @@ const WhatsAppButton = dynamic(() => import('@/components/WhatsAppButton'), {
   loading: () => null,
 });
 
+const CookieConsent = dynamic(() => import('@/components/CookieConsent'), {
+  ssr: false,
+  loading: () => null,
+});
+
 const syne = Syne({
   subsets: ['latin'],
   variable: '--font-syne',
@@ -186,6 +191,14 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="min-h-screen flex flex-col font-sans antialiased">
+        {/* Google Consent Mode v2 — defaults denied until user accepts */}
+        <Script id="google-consent-init" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('consent', 'default', { analytics_storage: 'denied' });
+          `}
+        </Script>
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-2SCDPRFSNF"
@@ -206,6 +219,7 @@ export default function RootLayout({ children }) {
         </main>
         <Footer />
         <WhatsAppButton />
+        <CookieConsent />
       </body>
     </html>
   );
