@@ -117,7 +117,7 @@ La personalización es la clave para que un *producto promocional en Quito para 
 
 Los *productos promocionales en Quito para empresas* han demostrado ser una herramienta efectiva para empresas de todos los tamaños.
 
-> ⭐ "Gracias a los productos promocionales, logramos aumentar el reconocimiento de nuestra marca en un 30% en solo tres meses." - *Gerente de Marketing, Empresa de Tecnología en Quito.*
+> ⭐ Según la Advertising Specialty Institute (ASI), el **83% de los consumidores** pueden recordar el anunciante de un artículo promocional que recibieron en el último año — una tasa de retención significativamente superior a la publicidad digital.
 
 > 💡 **Sabías que…** Los *productos promocionales en Quito para empresas* con un diseño atractivo tienen una mayor probabilidad de ser conservados y utilizados por los clientes.
 

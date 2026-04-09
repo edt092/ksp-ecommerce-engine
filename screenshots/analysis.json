@@ -1,0 +1,670 @@
+[
+  {
+    "label": "Homepage Desktop 1920x1080",
+    "url": "https://www.kronosolopromocionales.com",
+    "viewport": "1920x1080",
+    "file": "E:/coding/proyectos-personales/archivados/ksp-segunda-version/kspromocionales-tienda/screenshots/homepage_desktop_1920.png",
+    "meta": {
+      "h1_text": "Artículos Promocionales\nque hacen recordar\ntu marca",
+      "h1_bbox": {
+        "x": 632,
+        "y": 347.28125,
+        "width": 750.859375,
+        "height": 337.9375
+      },
+      "h1_in_viewport": true,
+      "nav_links": [
+        "+593 999 814 838",
+        "INICIO",
+        "CATÁLOGOS",
+        "ECUADOR",
+        "COLOMBIA",
+        "BLOG",
+        "NOSOTROS",
+        "CONTACTO",
+        "COTIZAR GRATIS",
+        "Inicio",
+        "Catálogos",
+        "Ecuador",
+        "Colombia",
+        "Blog",
+        "Nosotros",
+        "Contacto",
+        "Precio Bomba",
+        "Antiestrés",
+        "Antimicrobianos",
+        "Artículos de Escritura",
+        "Reflectivos",
+        "Automóvil",
+        "Bar y Vino",
+        "Bicicleta",
+        "Calculadoras",
+        "Confección"
+      ],
+      "ctas_sample": [
+        {
+          "text": "CATÁLOGOS",
+          "tag": "A"
+        },
+        {
+          "text": "",
+          "tag": "BUTTON"
+        },
+        {
+          "text": "",
+          "tag": "BUTTON"
+        },
+        {
+          "text": "Catálogos",
+          "tag": "A"
+        },
+        {
+          "text": "Ver todas las categorías",
+          "tag": "BUTTON"
+        },
+        {
+          "text": "NUEVOS",
+          "tag": "BUTTON"
+        }
+      ],
+      "whatsapp_visible": false,
+      "img_alts_sample": [
+        {
+          "alt": "KS Promocionales",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fwww.kro"
+        },
+        {
+          "alt": "Bolígrafo antibacteriano Flom 4-1 personalizado con logo de empresa",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Cuello multifuncional corporativo personalizado con logo",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Termo metálico Calypso Chili 500ml con logo grabado para regalo corporativo",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Organizador multiusos Link Nuevo con personalización de marca",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Polo corporativo personalizado con logo bordado para uniformes de empresa",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Organizador Multiusos Link Nuevo",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Candado de Clave Tsa Nuevo",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Banda Elástica Gym Nuevo",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Paraguas Kahlo 23'' Nuevo",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        }
+      ],
+      "body_font_size": "16px"
+    }
+  },
+  {
+    "label": "Homepage Laptop 1366x768",
+    "url": "https://www.kronosolopromocionales.com",
+    "viewport": "1366x768",
+    "file": "E:/coding/proyectos-personales/archivados/ksp-segunda-version/kspromocionales-tienda/screenshots/homepage_laptop_1366.png",
+    "meta": {
+      "h1_text": "Artículos Promocionales\nque hacen recordar\ntu marca",
+      "h1_bbox": {
+        "x": 355,
+        "y": 288,
+        "width": 750.859375,
+        "height": 337.9375
+      },
+      "h1_in_viewport": true,
+      "nav_links": [
+        "+593 999 814 838",
+        "INICIO",
+        "CATÁLOGOS",
+        "ECUADOR",
+        "COLOMBIA",
+        "BLOG",
+        "NOSOTROS",
+        "CONTACTO",
+        "COTIZAR GRATIS",
+        "Inicio",
+        "Catálogos",
+        "Ecuador",
+        "Colombia",
+        "Blog",
+        "Nosotros",
+        "Contacto",
+        "Precio Bomba",
+        "Antiestrés",
+        "Antimicrobianos",
+        "Artículos de Escritura",
+        "Reflectivos",
+        "Automóvil",
+        "Bar y Vino",
+        "Bicicleta",
+        "Calculadoras",
+        "Confección"
+      ],
+      "ctas_sample": [
+        {
+          "text": "CATÁLOGOS",
+          "tag": "A"
+        },
+        {
+          "text": "",
+          "tag": "BUTTON"
+        },
+        {
+          "text": "",
+          "tag": "BUTTON"
+        },
+        {
+          "text": "Catálogos",
+          "tag": "A"
+        },
+        {
+          "text": "Ver todas las categorías",
+          "tag": "BUTTON"
+        },
+        {
+          "text": "NUEVOS",
+          "tag": "BUTTON"
+        }
+      ],
+      "whatsapp_visible": false,
+      "img_alts_sample": [
+        {
+          "alt": "KS Promocionales",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fwww.kro"
+        },
+        {
+          "alt": "Bolígrafo antibacteriano Flom 4-1 personalizado con logo de empresa",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Cuello multifuncional corporativo personalizado con logo",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Termo metálico Calypso Chili 500ml con logo grabado para regalo corporativo",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Organizador multiusos Link Nuevo con personalización de marca",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Polo corporativo personalizado con logo bordado para uniformes de empresa",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Organizador Multiusos Link Nuevo",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Candado de Clave Tsa Nuevo",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Banda Elástica Gym Nuevo",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Paraguas Kahlo 23'' Nuevo",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        }
+      ],
+      "body_font_size": "16px"
+    }
+  },
+  {
+    "label": "Homepage Mobile 375x812",
+    "url": "https://www.kronosolopromocionales.com",
+    "viewport": "375x812",
+    "file": "E:/coding/proyectos-personales/archivados/ksp-segunda-version/kspromocionales-tienda/screenshots/homepage_mobile_375.png",
+    "meta": {
+      "h1_text": "Artículos Promocionales\nque hacen recordar\ntu marca",
+      "h1_bbox": {
+        "x": 32,
+        "y": 280,
+        "width": 311,
+        "height": 242.875
+      },
+      "h1_in_viewport": true,
+      "nav_links": [
+        "+593 999 814 838",
+        "Inicio",
+        "Catálogos",
+        "Ecuador",
+        "Colombia",
+        "Blog",
+        "Nosotros",
+        "Contacto",
+        "Cotizar Gratis",
+        "INICIO",
+        "CATÁLOGOS",
+        "ECUADOR",
+        "COLOMBIA",
+        "BLOG",
+        "NOSOTROS",
+        "CONTACTO",
+        "Precio Bomba",
+        "Antiestrés",
+        "Antimicrobianos",
+        "Artículos de Escritura",
+        "Reflectivos",
+        "Automóvil",
+        "Bar y Vino",
+        "Bicicleta",
+        "Calculadoras",
+        "Confección"
+      ],
+      "ctas_sample": [
+        {
+          "text": "Catálogos",
+          "tag": "A"
+        },
+        {
+          "text": "",
+          "tag": "BUTTON"
+        },
+        {
+          "text": "",
+          "tag": "BUTTON"
+        },
+        {
+          "text": "CATÁLOGOS",
+          "tag": "A"
+        },
+        {
+          "text": "Ver todas las categorías",
+          "tag": "BUTTON"
+        },
+        {
+          "text": "NUEVOS",
+          "tag": "BUTTON"
+        }
+      ],
+      "whatsapp_visible": false,
+      "img_alts_sample": [
+        {
+          "alt": "KS Promocionales",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fwww.kro"
+        },
+        {
+          "alt": "Bolígrafo antibacteriano Flom 4-1 personalizado con logo de empresa",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Cuello multifuncional corporativo personalizado con logo",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Termo metálico Calypso Chili 500ml con logo grabado para regalo corporativo",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Organizador multiusos Link Nuevo con personalización de marca",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Polo corporativo personalizado con logo bordado para uniformes de empresa",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Organizador Multiusos Link Nuevo",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Candado de Clave Tsa Nuevo",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Banda Elástica Gym Nuevo",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Paraguas Kahlo 23'' Nuevo",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        }
+      ],
+      "body_font_size": "16px"
+    }
+  },
+  {
+    "label": "Variedades Desktop",
+    "url": "https://www.kronosolopromocionales.com/categorias/variedades/",
+    "viewport": "1920x1080",
+    "file": "E:/coding/proyectos-personales/archivados/ksp-segunda-version/kspromocionales-tienda/screenshots/variedades_desktop.png",
+    "meta": {
+      "h1_text": "Variedades",
+      "h1_bbox": {
+        "x": 336,
+        "y": 301,
+        "width": 576,
+        "height": 60
+      },
+      "h1_in_viewport": true,
+      "nav_links": [
+        "+593 999 814 838",
+        "INICIO",
+        "CATÁLOGOS",
+        "ECUADOR",
+        "COLOMBIA",
+        "BLOG",
+        "NOSOTROS",
+        "CONTACTO",
+        "COTIZAR GRATIS",
+        "Inicio",
+        "Catálogos",
+        "Ecuador",
+        "Colombia",
+        "Blog",
+        "Nosotros",
+        "Contacto",
+        "Inicio",
+        "Categorías"
+      ],
+      "ctas_sample": [
+        {
+          "text": "CATÁLOGOS",
+          "tag": "A"
+        },
+        {
+          "text": "",
+          "tag": "BUTTON"
+        },
+        {
+          "text": "",
+          "tag": "BUTTON"
+        },
+        {
+          "text": "Catálogos",
+          "tag": "A"
+        },
+        {
+          "text": "Catálogos Digitales",
+          "tag": "A"
+        },
+        {
+          "text": "",
+          "tag": "BUTTON"
+        }
+      ],
+      "whatsapp_visible": false,
+      "img_alts_sample": [
+        {
+          "alt": "KS Promocionales",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fwww.kro"
+        },
+        {
+          "alt": "Variedades",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Skil Oferta",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Mop Bicolor",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Set de Viaje Swiss Peak Travel",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Funda Portalaptop Swiss Peak",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Portadocumentos Heritage Swiss Peak",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Portadocumentos de Viaje Swiss Peak",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Portapasaporte Vester Urban Travel",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Bajalenguas Plástico- Producción Nacional",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        }
+      ],
+      "body_font_size": "16px"
+    }
+  },
+  {
+    "label": "Variedades Mobile",
+    "url": "https://www.kronosolopromocionales.com/categorias/variedades/",
+    "viewport": "375x812",
+    "file": "E:/coding/proyectos-personales/archivados/ksp-segunda-version/kspromocionales-tienda/screenshots/variedades_mobile.png",
+    "meta": {
+      "h1_text": "Variedades",
+      "h1_bbox": {
+        "x": 16,
+        "y": 556,
+        "width": 343,
+        "height": 37.5
+      },
+      "h1_in_viewport": true,
+      "nav_links": [
+        "+593 999 814 838",
+        "Inicio",
+        "Catálogos",
+        "Ecuador",
+        "Colombia",
+        "Blog",
+        "Nosotros",
+        "Contacto",
+        "Cotizar Gratis",
+        "INICIO",
+        "CATÁLOGOS",
+        "ECUADOR",
+        "COLOMBIA",
+        "BLOG",
+        "NOSOTROS",
+        "CONTACTO",
+        "Inicio",
+        "Categorías"
+      ],
+      "ctas_sample": [
+        {
+          "text": "Catálogos",
+          "tag": "A"
+        },
+        {
+          "text": "",
+          "tag": "BUTTON"
+        },
+        {
+          "text": "",
+          "tag": "BUTTON"
+        },
+        {
+          "text": "CATÁLOGOS",
+          "tag": "A"
+        },
+        {
+          "text": "Catálogos Digitales",
+          "tag": "A"
+        },
+        {
+          "text": "",
+          "tag": "BUTTON"
+        }
+      ],
+      "whatsapp_visible": false,
+      "img_alts_sample": [
+        {
+          "alt": "KS Promocionales",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fwww.kro"
+        },
+        {
+          "alt": "Variedades",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Skil Oferta",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Mop Bicolor",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Set de Viaje Swiss Peak Travel",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Funda Portalaptop Swiss Peak",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Portadocumentos Heritage Swiss Peak",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Portadocumentos de Viaje Swiss Peak",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Portapasaporte Vester Urban Travel",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Bajalenguas Plástico- Producción Nacional",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        }
+      ],
+      "body_font_size": "16px"
+    }
+  },
+  {
+    "label": "Homepage Tablet 768x1024",
+    "url": "https://www.kronosolopromocionales.com",
+    "viewport": "768x1024",
+    "file": "E:/coding/proyectos-personales/archivados/ksp-segunda-version/kspromocionales-tienda/screenshots/homepage_tablet_768.png",
+    "meta": {
+      "h1_text": "Artículos Promocionales\nque hacen recordar\ntu marca",
+      "h1_bbox": {
+        "x": 32,
+        "y": 399.125,
+        "width": 704,
+        "height": 162.25
+      },
+      "h1_in_viewport": true,
+      "nav_links": [
+        "+593 999 814 838",
+        "Inicio",
+        "Catálogos",
+        "Ecuador",
+        "Colombia",
+        "Blog",
+        "Nosotros",
+        "Contacto",
+        "COTIZAR GRATIS",
+        "INICIO",
+        "CATÁLOGOS",
+        "ECUADOR",
+        "COLOMBIA",
+        "BLOG",
+        "NOSOTROS",
+        "CONTACTO",
+        "Precio Bomba",
+        "Antiestrés",
+        "Antimicrobianos",
+        "Artículos de Escritura",
+        "Reflectivos",
+        "Automóvil",
+        "Bar y Vino",
+        "Bicicleta",
+        "Calculadoras",
+        "Confección"
+      ],
+      "ctas_sample": [
+        {
+          "text": "Catálogos",
+          "tag": "A"
+        },
+        {
+          "text": "",
+          "tag": "BUTTON"
+        },
+        {
+          "text": "",
+          "tag": "BUTTON"
+        },
+        {
+          "text": "CATÁLOGOS",
+          "tag": "A"
+        },
+        {
+          "text": "Ver todas las categorías",
+          "tag": "BUTTON"
+        },
+        {
+          "text": "NUEVOS",
+          "tag": "BUTTON"
+        }
+      ],
+      "whatsapp_visible": false,
+      "img_alts_sample": [
+        {
+          "alt": "KS Promocionales",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fwww.kro"
+        },
+        {
+          "alt": "Bolígrafo antibacteriano Flom 4-1 personalizado con logo de empresa",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Cuello multifuncional corporativo personalizado con logo",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Termo metálico Calypso Chili 500ml con logo grabado para regalo corporativo",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Organizador multiusos Link Nuevo con personalización de marca",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Polo corporativo personalizado con logo bordado para uniformes de empresa",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Organizador Multiusos Link Nuevo",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Candado de Clave Tsa Nuevo",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Banda Elástica Gym Nuevo",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        },
+        {
+          "alt": "Paraguas Kahlo 23'' Nuevo",
+          "src": "https://www.kronosolopromocionales.com/.netlify/images?url=https%3A%2F%2Fcatalog"
+        }
+      ],
+      "body_font_size": "16px"
+    }
+  }
+]

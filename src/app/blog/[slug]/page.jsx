@@ -47,6 +47,11 @@ export async function generateMetadata({ params }) {
     },
     alternates: {
       canonical: `https://www.kronosolopromocionales.com/blog/${params.slug}/`,
+      languages: {
+        'es-EC': `https://www.kronosolopromocionales.com/blog/${params.slug}/`,
+        'es-CO': `https://www.kronosolopromocionales.com/blog/${params.slug}/`,
+        'x-default': `https://www.kronosolopromocionales.com/blog/${params.slug}/`,
+      },
     },
   };
 }
@@ -92,9 +97,10 @@ export default function BlogPostPage({ params }) {
     dateModified: post.dateModified || post.date,
     author: {
       '@type': 'Person',
-      '@id': `${BASE_URL}/nosotros/#claudia-gonzalez`,
+      '@id': `${BASE_URL}/nosotros/#${post.author.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`,
       name: post.author,
       jobTitle: post.authorRole,
+      url: `${BASE_URL}/nosotros/`,
       image: {
         '@type': 'ImageObject',
         url: `${BASE_URL}${post.authorImage}`,

@@ -13,6 +13,11 @@ export const metadata = {
   },
   alternates: {
     canonical: 'https://www.kronosolopromocionales.com/blog/',
+    languages: {
+      'es-EC': 'https://www.kronosolopromocionales.com/blog/',
+      'es-CO': 'https://www.kronosolopromocionales.com/blog/',
+      'x-default': 'https://www.kronosolopromocionales.com/blog/',
+    },
   },
 };
 

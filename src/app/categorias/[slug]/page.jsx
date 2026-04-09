@@ -33,6 +33,11 @@ export async function generateMetadata({ params }) {
     },
     alternates: {
       canonical: `https://www.kronosolopromocionales.com/categorias/${params.slug}/`,
+      languages: {
+        'es-EC': `https://www.kronosolopromocionales.com/categorias/${params.slug}/`,
+        'es-CO': `https://www.kronosolopromocionales.com/categorias/${params.slug}/`,
+        'x-default': `https://www.kronosolopromocionales.com/categorias/${params.slug}/`,
+      },
     },
   };
 }
@@ -68,8 +73,11 @@ export default function CategoryPage({ params }) {
     itemListElement: categoryProducts.slice(0, 20).map((product, idx) => ({
       '@type': 'ListItem',
       position: idx + 1,
-      url: `${BASE_URL}/productos/${product.slug}/`,
-      name: product.name,
+      item: {
+        '@type': 'Product',
+        name: product.name,
+        url: `${BASE_URL}/productos/${product.slug}/`,
+      },
     })),
   };
 
