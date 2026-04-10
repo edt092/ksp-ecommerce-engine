@@ -54,7 +54,7 @@ export default function ProductCard({ product, category, onQuickView }) {
 
       {/* ── Image ── */}
       <Link
-        href={`/productos/${product.slug}`}
+        href={`/productos/${product.slug}/`}
         className="relative block aspect-square bg-cream overflow-hidden"
       >
         {product.images && product.images.length > 0 && !imgError ? (
@@ -88,7 +88,7 @@ export default function ProductCard({ product, category, onQuickView }) {
         {/* Category */}
         {category && (
           <Link
-            href={`/categorias/${category.slug}`}
+            href={`/categorias/${category.slug}/`}
             className="text-[10px] font-bold uppercase tracking-wider text-primary/60 hover:text-primary transition-colors mb-1.5"
           >
             {category.name}
@@ -96,7 +96,7 @@ export default function ProductCard({ product, category, onQuickView }) {
         )}
 
         {/* Name */}
-        <Link href={`/productos/${product.slug}`} className="flex-1">
+        <Link href={`/productos/${product.slug}/`} className="flex-1">
           <h3 className="font-heading font-semibold text-secondary text-sm leading-snug group-hover:text-primary transition-colors line-clamp-2 uppercase tracking-wide">
             {product.name}
           </h3>

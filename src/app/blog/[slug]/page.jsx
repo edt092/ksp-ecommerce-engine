@@ -120,7 +120,7 @@ export default function BlogPostPage({ params }) {
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `${BASE_URL}/blog/${post.slug}`,
+      '@id': `${BASE_URL}/blog/${post.slug}/`,
     },
     isPartOf: {
       '@id': `${BASE_URL}/#website`,
@@ -331,7 +331,7 @@ export default function BlogPostPage({ params }) {
                 {relatedPosts.map((relatedPost) => (
                   <Link
                     key={relatedPost.id}
-                    href={`/blog/${relatedPost.slug}`}
+                    href={`/blog/${relatedPost.slug}/`}
                     className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 group"
                   >
                     <div className="relative h-48 overflow-hidden">

@@ -1,4 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
+const postsData = require('./data/blog/posts.json');
+
 module.exports = {
   siteUrl: process.env.SITE_URL || 'https://www.kronosolopromocionales.com',
 
@@ -56,11 +58,24 @@ module.exports = {
       changefreq = 'weekly';
     }
 
+    // Use per-post dateModified for blog posts so Google sees real update signals
+    let lastmod;
+    if (normalizedPath.startsWith('/blog/') && normalizedPath !== '/blog/') {
+      const slug = normalizedPath.replace(/^\/blog\//, '').replace(/\/$/, '');
+      const post = postsData.find(p => p.slug === slug);
+      if (post) {
+        lastmod = post.dateModified || post.date;
+      }
+    }
+    if (!lastmod) {
+      lastmod = config.autoLastmod ? new Date().toISOString() : undefined;
+    }
+
     return {
       loc: normalizedPath,
       changefreq,
       priority,
-      lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
+      lastmod,
     };
   },
   autoLastmod: true,

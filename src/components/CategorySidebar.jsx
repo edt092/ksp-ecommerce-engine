@@ -23,7 +23,7 @@ export default function CategorySidebar({ categories }) {
         {displayCategories.map((category) => (
           <Link
             key={category.id}
-            href={`/categorias/${category.slug}`}
+            href={`/categorias/${category.slug}/`}
             className="category-sidebar-item group"
           >
             <span className="group-hover:text-secondary transition-colors">

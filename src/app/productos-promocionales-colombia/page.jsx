@@ -212,7 +212,7 @@ export default function ColombiaPage() {
             {CATEGORIAS.map((cat) => (
               <Link
                 key={cat.slug}
-                href={`/categorias/${cat.slug}`}
+                href={`/categorias/${cat.slug}/`}
                 className="bg-gray-100 hover:bg-primary/10 text-gray-900 hover:text-primary px-6 py-4 rounded-xl text-center font-medium transition-colors"
               >
                 {cat.nombre}

@@ -97,7 +97,7 @@ export default function BlogPage() {
                 className="bg-white border border-gray-200 hover:border-primary overflow-hidden transition-all duration-300 group flex flex-col h-full"
               >
                 {/* Featured Image */}
-                <Link href={`/blog/${post.slug}`} className="block relative h-48 md:h-56 overflow-hidden">
+                <Link href={`/blog/${post.slug}/`} className="block relative h-48 md:h-56 overflow-hidden">
                   <Image
                     src={post.image}
                     alt={post.title}
@@ -135,7 +135,7 @@ export default function BlogPage() {
                   </div>
 
                   {/* Title */}
-                  <Link href={`/blog/${post.slug}`}>
+                  <Link href={`/blog/${post.slug}/`}>
                     <h2 className="text-lg md:text-xl font-semibold text-secondary mb-3 line-clamp-2 group-hover:text-primary transition-colors leading-snug">
                       {post.title}
                     </h2>
@@ -148,7 +148,7 @@ export default function BlogPage() {
 
                   {/* Read More Link */}
                   <Link
-                    href={`/blog/${post.slug}`}
+                    href={`/blog/${post.slug}/`}
                     className="inline-flex items-center text-primary font-semibold text-sm hover:gap-3 transition-all"
                   >
                     <span>Leer artículo</span>

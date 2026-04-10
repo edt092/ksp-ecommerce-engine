@@ -51,7 +51,7 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'es_EC',
-    url: 'https://www.kronosolopromocionales.com',
+    url: 'https://www.kronosolopromocionales.com/',
     siteName: 'KS Promocionales',
     title: 'Productos Promocionales Ecuador | Regalos Corporativos KS',
     description: 'Artículos promocionales y regalos corporativos en Ecuador. Personalizamos mugs, tecnología y más con tu logo. ¡Cotiza por WhatsApp! Envíos nacionales.',
@@ -115,6 +115,7 @@ const localBusinessSchema = {
     '@type': 'PostalAddress',
     addressLocality: 'Quito',
     addressRegion: 'Pichincha',
+    postalCode: '170101',
     addressCountry: 'EC',
   },
   geo: {
@@ -175,10 +176,9 @@ export default function RootLayout({ children }) {
         <link
           rel="preload"
           as="image"
-          href="https://catalogospromocionales.com/images/productos/9781.jpg"
+          href="/images/hero/9781.jpg"
           fetchPriority="high"
         />
-        <link rel="preconnect" href="https://catalogospromocionales.com" />
         <link rel="dns-prefetch" href="https://catalogospromocionales.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <script

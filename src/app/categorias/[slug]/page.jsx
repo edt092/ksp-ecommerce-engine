@@ -143,7 +143,7 @@ export default function CategoryPage({ params }) {
 
                 {/* CTA Button */}
                 <a
-                href={`https://wa.me/593999814838?text=Hola, me interesa la categoría de ${category.name}`}
+                href={`https://wa.me/593999814838?text=${encodeURIComponent(`Hola, me interesa la categoría de ${category.name}`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-white text-primary px-6 py-3 font-semibold hover:bg-gray-100 transition-colors"

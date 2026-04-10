@@ -162,7 +162,7 @@ export default function CiudadColombiaPage({ params }) {
             {CATEGORIAS.map((cat) => (
               <Link
                 key={cat.slug}
-                href={`/categorias/${cat.slug}`}
+                href={`/categorias/${cat.slug}/`}
                 className="group bg-gray-50 hover:bg-primary/10 border border-gray-200 hover:border-primary text-gray-900 hover:text-primary px-6 py-5 rounded-xl text-center font-medium transition-all"
               >
                 {cat.nombre}
