@@ -79,7 +79,7 @@ export default function QuickViewModal({ product, category, isOpen, onClose }) {
             {/* Category */}
             {category && (
               <Link
-                href={`/categorias/${category.slug}`}
+                href={`/categorias/${category.slug}/`}
                 className="text-xs text-gray-500 uppercase tracking-wider hover:text-secondary transition-colors"
               >
                 {category.name}
@@ -132,7 +132,7 @@ export default function QuickViewModal({ product, category, isOpen, onClose }) {
             {/* Actions */}
             <div className="flex flex-col sm:flex-row gap-3">
               <Link
-                href={`/productos/${product.slug}`}
+                href={`/productos/${product.slug}/`}
                 className="flex-1 text-center py-3 bg-primary text-white font-semibold hover:bg-primary-dark transition-colors"
               >
                 Ver Detalles Completos

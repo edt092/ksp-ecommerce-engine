@@ -58,33 +58,6 @@ export default function HomePageClient() {
       {/* Benefits Bar */}
       <BenefitsBar />
 
-      {/* Excellent Rating Section */}
-      <section className="py-8 bg-cream">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-4">
-              <span className="text-2xl font-serif font-bold text-secondary">EXCELENTE</span>
-              <div className="flex items-center gap-1">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <svg key={star} className="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
-              </div>
-              <span className="text-gray-500 text-sm">Clientes satisfechos en todo Ecuador</span>
-            </div>
-            <a
-              href="https://wa.me/593999814838"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-secondary font-semibold text-sm hover:text-primary transition-colors"
-            >
-              Déjanos tu opinión →
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* Products with Tabs */}
       <ProductTabs
         products={productsData}
@@ -106,7 +79,7 @@ export default function HomePageClient() {
             {categoriesData.slice(0, 8).map((category) => (
               <Link
                 key={category.id}
-                href={`/categorias/${category.slug}`}
+                href={`/categorias/${category.slug}/`}
                 className="group relative bg-white border border-gray-200 hover:border-primary overflow-hidden transition-all"
               >
                 <div className="aspect-square relative">
@@ -221,7 +194,7 @@ export default function HomePageClient() {
             </h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
               Tu aliado estratégico en productos promocionales en Ecuador.
-              Más de <span className="text-white font-semibold">500+ empresas</span> confían en nosotros.
+              Tu aliado estratégico en productos promocionales corporativos en Ecuador y Colombia.
             </p>
           </div>
 

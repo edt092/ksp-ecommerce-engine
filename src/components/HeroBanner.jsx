@@ -8,13 +8,13 @@ const WA_NUMBER = '593999814838';
 
 const STATS = [
   { value: 1200, suffix: '+', label: 'Productos' },
-  { value: 15, suffix: '+', label: 'Años de experiencia' },
+  { value: 2, suffix: '', label: 'Países' },
   { value: 34, suffix: '', label: 'Categorías' },
   { value: 48, suffix: 'h', label: 'Respuesta garantizada' },
 ];
 
 const PRODUCT_IMAGES = [
-  'https://catalogospromocionales.com/images/productos/9781.jpg',
+  '/images/hero/9781.jpg',
   'https://catalogospromocionales.com/images/productos/9531.jpg',
   'https://catalogospromocionales.com/images/productos/8689.jpg',
   'https://catalogospromocionales.com/images/productos/9694.jpg',

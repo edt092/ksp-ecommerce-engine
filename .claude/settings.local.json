@@ -26,7 +26,9 @@
       "Bash(python -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('name:', d.get\\('name'\\)\\); print\\('scripts:', list\\(d.get\\('scripts',{}\\).keys\\(\\)\\)\\)\")",
       "Bash(python -c ':*)",
       "Bash(mkdir -p \"E:/coding/proyectos-personales/archivados/promogimmicks/.github/workflows\")",
-      "Bash(mkdir -p \"E:/coding/proyectos-personales/archivados/promogimmicks/scripts\")"
+      "Bash(mkdir -p \"E:/coding/proyectos-personales/archivados/promogimmicks/scripts\")",
+      "Bash(grep:*)",
+      "Bash(curl -L -o \"E:/coding/proyectos-personales/archivados/ksp-segunda-version/kspromocionales-tienda/public/images/hero/9781.jpg\" \"https://catalogospromocionales.com/images/productos/9781.jpg\")"
     ],
     "deny": [],
     "ask": []

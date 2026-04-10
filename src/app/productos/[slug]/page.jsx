@@ -175,7 +175,7 @@ export default function ProductPage({ params }) {
               </li>
               <li>/</li>
               <li>
-                <Link href={`/categorias/${category?.slug}`} className="hover:text-primary transition-colors">
+                <Link href={`/categorias/${category?.slug}/`} className="hover:text-primary transition-colors">
                   {category?.name}
                 </Link>
               </li>
@@ -192,7 +192,7 @@ export default function ProductPage({ params }) {
             <div className="animate-slide-down">
               {/* Category Link */}
               <Link
-                href={`/categorias/${category?.slug}`}
+                href={`/categorias/${category?.slug}/`}
                 className="inline-block text-sm font-semibold text-primary hover:underline mb-3"
               >
                 {category?.name}

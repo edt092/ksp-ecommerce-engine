@@ -10,7 +10,7 @@
     X-Content-Type-Options     = "nosniff"
     Referrer-Policy            = "strict-origin-when-cross-origin"
     Permissions-Policy         = "camera=(), microphone=(), geolocation=()"
-    Content-Security-Policy    = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://catalogospromocionales.com https://*.catalogospromocionales.com https://images.unsplash.com https://randomuser.me https://res.cloudinary.com https://*.cloudinary.com https://www.google-analytics.com; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com https://www.googletagmanager.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"
+    Content-Security-Policy    = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://catalogospromocionales.com https://*.catalogospromocionales.com https://images.unsplash.com https://res.cloudinary.com https://*.cloudinary.com https://www.google-analytics.com; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com https://www.googletagmanager.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"
 
 [build.environment]
   NODE_VERSION = "18"
@@ -22,7 +22,6 @@
     "https://images\\.unsplash\\.com/.*",
     "https://catalogospromocionales\\.com/.*",
     "https://.*\\.catalogospromocionales\\.com/.*",
-    "https://randomuser\\.me/.*",
   ]
 
 # ─── 301 Redirects: limpieza de URLs con señal de México ───────────────────────
