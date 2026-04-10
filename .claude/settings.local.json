@@ -28,7 +28,12 @@
       "Bash(mkdir -p \"E:/coding/proyectos-personales/archivados/promogimmicks/.github/workflows\")",
       "Bash(mkdir -p \"E:/coding/proyectos-personales/archivados/promogimmicks/scripts\")",
       "Bash(grep:*)",
-      "Bash(curl -L -o \"E:/coding/proyectos-personales/archivados/ksp-segunda-version/kspromocionales-tienda/public/images/hero/9781.jpg\" \"https://catalogospromocionales.com/images/productos/9781.jpg\")"
+      "Bash(curl -L -o \"E:/coding/proyectos-personales/archivados/ksp-segunda-version/kspromocionales-tienda/public/images/hero/9781.jpg\" \"https://catalogospromocionales.com/images/productos/9781.jpg\")",
+      "Bash(magick --version)",
+      "Bash(convert --version)",
+      "Bash(node -e \"require\\('sharp'\\)\")",
+      "Bash(python -c \"from PIL import Image; print\\('pillow available'\\)\")",
+      "Bash(python:*)"
     ],
     "deny": [],
     "ask": []
