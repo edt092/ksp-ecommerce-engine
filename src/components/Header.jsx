@@ -101,7 +101,7 @@ export default function Header() {
               {/* Logo */}
               <Link href="/" className="flex-shrink-0 relative z-10">
                 <Image
-                  src="/ksp-1.jpg"
+                  src="/ksp-1.png"
                   alt="KS Promocionales"
                   width={180}
                   height={60}
