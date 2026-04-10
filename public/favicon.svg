@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="11" fill="#001A6E"/>
+  <text
+    x="32" y="41"
+    text-anchor="middle"
+    dominant-baseline="auto"
+    font-family="Inter, 'Arial Black', Arial, sans-serif"
+    font-weight="800"
+    font-size="34"
+    letter-spacing="-0.5"
+    fill="#FFFFFF"
+  >KS</text>
+  <rect x="8" y="53" width="48" height="5" rx="2.5" fill="#F59E0B"/>
+</svg>
