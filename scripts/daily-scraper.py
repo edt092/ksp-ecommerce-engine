@@ -31,6 +31,7 @@ CATEGORIES_FILE = os.path.join(ROOT, 'data', 'categories.json')
 # For precio-bomba: Catalogo URL (start page 1, scraper handles pagination)
 DIRECT_CATEGORY_URLS = {
     'precio-bomba':   f'{BASE_URL}/Catalogo/Default.aspx?id=434',
+    'antiestres':     f'{BASE_URL}/promocionales/antiestres.html',
     'antimicrobianos':f'{BASE_URL}/promocionales/antimicrobianos.html',
     'reflectivos':    f'{BASE_URL}/promocionales/reflectivos.html',
     'bar-y-vino':     f'{BASE_URL}/promocionales/bar-y-vino.html',
