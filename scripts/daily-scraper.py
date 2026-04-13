@@ -225,8 +225,11 @@ def build_product(name, img_url, product_url, category_id):
     )
 
     prod_id = extract_product_id_from_image(img_url)
-    slug = slugify(clean_name)
-    unique_id = f"{category_id}-{slug}"[:80] if not prod_id else f"{category_id}-{prod_id}"
+    name_slug = slugify(clean_name)
+    # Slug must be globally unique across all categories to avoid static-route collisions.
+    # Use the numeric product ID from the image URL when available (most reliable).
+    slug = f"{name_slug}-{prod_id}" if prod_id else f"{category_id}-{name_slug}"
+    unique_id = f"{category_id}-{prod_id}" if prod_id else f"{category_id}-{name_slug}"[:80]
 
     return {
         'id': unique_id,
@@ -331,41 +334,41 @@ def scrape_category_products(cat_name, cat_url, forced_category_id=None):
         soup = BeautifulSoup(html, 'lxml')
         found_on_page = 0
 
-        # Primary selector: wrapProdWhite (catalogospromocionales.com structure)
-        containers = soup.find_all('div', class_='wrapProdWhite')
+        def normalise_img(src):
+            url = urljoin(BASE_URL, src)
+            return ('https:' + url) if url.startswith('//') else url
 
-        # Fallback: other generic patterns
-        if not containers:
-            containers = (
-                soup.find_all('div', class_=re.compile(r'product[-_]?item|product[-_]?card', re.I))
-                or soup.find_all('li', class_=re.compile(r'product|item', re.I))
-            )
+        def clean_name(raw):
+            """Strip reference codes and '[Más]' suffix from product names."""
+            name = re.sub(r'\[.*?\]', '', raw)          # remove [Más], [+], etc.
+            name = re.sub(r'\s*-\s*PRECIO BOMBA\s*', '', name, flags=re.I)
+            name = re.sub(r'\s+', ' ', name).strip()
+            return name
 
-        if containers:
-            for container in containers:
-                img = container.find('img')
+        # ── Primary: #backTable → div.itemProducto- (works for both /promocionales/ and /Catalogo/) ──
+        back_table = soup.find(id='backTable')
+        items = back_table.find_all('div', class_='itemProducto-') if back_table else []
+
+        if items:
+            for item in items:
+                link = item.find('a', class_='img-producto')
+                if not link:
+                    continue
+                img = link.find('img')
                 if not img:
                     continue
-                img_src = img.get('src') or img.get('data-src') or img.get('data-original', '')
+                img_src = img.get('src') or img.get('data-src', '')
                 if not img_src:
                     continue
-                img_url = urljoin(BASE_URL, img_src)
-                if img_url.startswith('//'):
-                    img_url = 'https:' + img_url
+                img_url = normalise_img(img_src)
                 if img_url in seen_imgs:
                     continue
 
-                # Extract product name
-                name = ''
-                for tag in ['h2', 'h3', 'h4', 'strong', 'p', 'span']:
-                    el = container.find(tag)
-                    if el:
-                        candidate = el.get_text(strip=True)
-                        if len(candidate) >= 3:
-                            name = candidate
-                            break
-                if not name:
-                    name = img.get('alt', '').strip()
+                # Name: prefer alt (cleanest), fall back to h3
+                name = clean_name(img.get('alt', '').strip())
+                if not name or len(name) < 3:
+                    h3 = item.find('h3')
+                    name = clean_name(h3.get_text(strip=True)) if h3 else ''
                 if not name or len(name) < 3:
                     continue
 
@@ -373,31 +376,20 @@ def scrape_category_products(cat_name, cat_url, forced_category_id=None):
                 p = build_product(name, img_url, current_url, category_id)
                 products.append(p)
                 found_on_page += 1
+
         else:
-            # Last-resort fallback: find all product images directly.
-            # Handles Catalogo/Default.aspx format where products are plain <a><img></a> blocks.
-            for img in soup.find_all('img', src=re.compile(r'/images/productos[-s]*/\d+', re.I)):
-                img_url = urljoin(BASE_URL, img['src'])
-                # Normalise protocol-relative URLs
-                if img_url.startswith('//'):
-                    img_url = 'https:' + img_url
+            # Fallback: find all full-size product images directly (/productos/XXXX, not /productos-s/)
+            for img in soup.find_all('img', src=re.compile(r'/images/productos/\d+', re.I)):
+                img_url = normalise_img(img['src'])
                 if img_url in seen_imgs:
                     continue
-                # Try alt text first
-                name = img.get('alt', '').strip()
-                # Walk up to nearest <a> or container and look for text nodes
+                name = clean_name(img.get('alt', '').strip())
                 if not name or len(name) < 3:
                     parent = img.find_parent(['a', 'td', 'div', 'li'])
                     if parent:
-                        # Prefer explicit heading/span tags
-                        heading = parent.find(['h2', 'h3', 'h4', 'strong', 'span', 'b'])
-                        if heading:
-                            name = heading.get_text(strip=True)
-                        else:
-                            # Use direct text of the parent, stripping img alt noise
-                            name = parent.get_text(separator=' ', strip=True)
-                            # Remove reference codes like "MU-442" or numeric codes
-                            name = re.sub(r'\b[A-Z]{1,4}-?\d{2,6}\b', '', name).strip()
+                        h3 = parent.find(['h3', 'h4', 'h2', 'strong', 'b'])
+                        if h3:
+                            name = clean_name(h3.get_text(strip=True))
                 if name and len(name) >= 3:
                     seen_imgs.add(img_url)
                     p = build_product(name, img_url, current_url, category_id)
@@ -422,21 +414,43 @@ def scrape_category_products(cat_name, cat_url, forced_category_id=None):
 
 # ── Merge & Save ─────────────────────────────────────────────────────────────
 
-def merge_products(existing, new_products):
-    """Add new products that don't already exist (dedup by image URL)."""
-    existing_imgs = set()
-    for p in existing:
+def merge_products(existing, new_products, force_category=False):
+    """
+    Merge new_products into existing list, deduplicating by image URL.
+
+    When force_category=True (used for direct-URL scrapes where we know
+    the exact category), existing products whose image URL matches are
+    updated to the new categoryId rather than skipped.  This fixes the case
+    where a product was previously scraped under a wrong/generic category.
+    """
+    # Build a map: image_url → index in existing list
+    img_to_idx = {}
+    for idx, p in enumerate(existing):
         for img in p.get('images', []):
-            existing_imgs.add(img)
+            img_to_idx[img] = idx
 
     added = 0
+    reassigned = 0
     for p in new_products:
         imgs = p.get('images', [])
-        if imgs and imgs[0] not in existing_imgs:
+        if not imgs:
+            continue
+        img0 = imgs[0]
+        if img0 in img_to_idx:
+            if force_category:
+                existing_p = existing[img_to_idx[img0]]
+                if existing_p['categoryId'] != p['categoryId']:
+                    existing_p['categoryId'] = p['categoryId']
+                    existing_p['id'] = p['id']
+                    existing_p['slug'] = p['slug']
+                    reassigned += 1
+        else:
             existing.append(p)
-            existing_imgs.add(imgs[0])
+            img_to_idx[img0] = len(existing) - 1
             added += 1
 
+    if reassigned:
+        print(f"  Reassigned category for {reassigned} existing products")
     return existing, added
 
 
@@ -466,14 +480,20 @@ def main():
     scraped_urls = set()  # track URLs we've already scraped to avoid double-work
 
     # ── Step 1: Always scrape the hardcoded direct URLs ───────────────────────
+    # force_category=True: reassign existing products to the correct category.
     print(f"\nScraping {len(DIRECT_CATEGORY_URLS)} hardcoded category URLs...")
+    direct_products = []
     for idx, (cat_id, cat_url) in enumerate(DIRECT_CATEGORY_URLS.items(), 1):
         print(f"\n[direct {idx}/{len(DIRECT_CATEGORY_URLS)}] {cat_id} <- {cat_url}")
         products = scrape_category_products(cat_id, cat_url, forced_category_id=cat_id)
-        all_new.extend(products)
+        direct_products.extend(products)
         scraped_urls.add(cat_url)
         print(f"  Subtotal: {len(products)} scraped")
         time.sleep(DELAY)
+
+    # Merge direct products with force_category so existing products get reassigned
+    existing_products, direct_added = merge_products(existing_products, direct_products, force_category=True)
+    print(f"\nDirect scrape — new: {direct_added}, total now: {len(existing_products)}")
 
     # ── Step 2: Auto-discover remaining categories ────────────────────────────
     print("\nFetching auto-discovered category list...")
@@ -494,11 +514,14 @@ def main():
         print(f"  Subtotal: {len(products)} scraped")
         time.sleep(DELAY)
 
-    print(f"\nTotal scraped this run: {len(all_new)}")
+    print(f"\nAuto-discovery scraped: {len(all_new)}")
 
-    # Merge
-    merged, added = merge_products(existing_products, all_new)
-    print(f"New products added: {added}")
+    # Merge auto-discovered (no force_category — don't override direct assignments)
+    existing_products, auto_added = merge_products(existing_products, all_new)
+    print(f"Auto-discovery — new: {auto_added}, total now: {len(existing_products)}")
+    merged = existing_products
+    added = direct_added + auto_added
+    print(f"\nTotal new products added: {added}")
     print(f"Total products now: {len(merged)}")
 
     # Update counts
