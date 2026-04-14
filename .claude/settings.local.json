@@ -33,7 +33,9 @@
       "Bash(convert --version)",
       "Bash(node -e \"require\\('sharp'\\)\")",
       "Bash(python -c \"from PIL import Image; print\\('pillow available'\\)\")",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(wmic logicaldisk:*)",
+      "Bash(npx netlify-cli:*)"
     ],
     "deny": [],
     "ask": []

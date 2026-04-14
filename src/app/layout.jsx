@@ -101,7 +101,7 @@ const localBusinessSchema = {
   name: 'KS Promocionales',
   alternateName: 'KSPromocionales',
   description: 'Productos promocionales y regalos corporativos personalizados en Ecuador y Colombia. Tecnología, mugs, oficina, textiles y más con tu logo.',
-  url: BASE_URL,
+  url: `${BASE_URL}/`,
   telephone: '+593999814838',
   email: 'claudiagonzalez@kronosolopromocionales.com',
   image: `${BASE_URL}/images/og-image.jpg`,
@@ -159,7 +159,7 @@ const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   '@id': `${BASE_URL}/#website`,
-  url: BASE_URL,
+  url: `${BASE_URL}/`,
   name: 'KS Promocionales',
   description: 'Productos promocionales personalizados en Ecuador y Colombia',
   inLanguage: 'es-EC',
@@ -183,8 +183,6 @@ export default function RootLayout({ children }) {
           href="/images/hero/9781.jpg"
           fetchPriority="high"
         />
-        <link rel="dns-prefetch" href="https://catalogospromocionales.com" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
