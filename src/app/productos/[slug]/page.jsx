@@ -218,7 +218,7 @@ export default function ProductPage({ params }) {
               <div className="mb-6 md:mb-8">
                 <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4">Características</h2>
                 <ul className="space-y-2 md:space-y-3">
-                  {product.features.map((feature, idx) => (
+                  {(product.features ?? []).map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-2 md:gap-3 group">
                       <svg className="w-5 h-5 md:w-6 md:h-6 text-primary flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -233,7 +233,7 @@ export default function ProductPage({ params }) {
               <div className="mb-6 md:mb-8">
                 <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4">Casos de Uso</h2>
                 <div className="flex flex-wrap gap-2">
-                  {product.useCases.map((useCase, idx) => (
+                  {(product.useCases ?? []).map((useCase, idx) => (
                     <span
                       key={idx}
                       className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 md:px-4 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-medium transition-colors cursor-default"
