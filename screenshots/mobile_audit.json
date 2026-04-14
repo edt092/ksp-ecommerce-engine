@@ -1,0 +1,599 @@
+[
+  {
+    "label": "Homepage Mobile 375x812",
+    "url": "https://www.kronosolopromocionales.com",
+    "small_tap_targets": [
+      {
+        "text": "Toggle menu",
+        "w": 40,
+        "h": 38,
+        "y": 41
+      },
+      {
+        "text": "",
+        "w": 32,
+        "h": 32,
+        "y": 24
+      },
+      {
+        "text": "CONTACTO",
+        "w": 272,
+        "h": 46,
+        "y": 742
+      },
+      {
+        "text": "Rechazar",
+        "w": 93,
+        "h": 38,
+        "y": 758
+      },
+      {
+        "text": "Aceptar",
+        "w": 84,
+        "h": 38,
+        "y": 758
+      }
+    ],
+    "total_interactive": 102,
+    "small_tap_count": 67,
+    "horizontal_overflow": {
+      "bodyScrollWidth": 375,
+      "windowWidth": 375,
+      "hasHScroll": false
+    },
+    "small_font_nodes": [
+      {
+        "tag": "SPAN",
+        "text": "✦",
+        "fontSize": "12px",
+        "y": 8
+      },
+      {
+        "tag": "SPAN",
+        "text": "🇪🇨 Envíos a todo Ecuador",
+        "fontSize": "12px",
+        "y": 8
+      },
+      {
+        "tag": "SPAN",
+        "text": "·",
+        "fontSize": "12px",
+        "y": 8
+      },
+      {
+        "tag": "SPAN",
+        "text": "🇨🇴 Llegamos a Colombia",
+        "fontSize": "12px",
+        "y": 8
+      },
+      {
+        "tag": "SPAN",
+        "text": "·",
+        "fontSize": "12px",
+        "y": 8
+      },
+      {
+        "tag": "SPAN",
+        "text": "+1,200 productos personalizables",
+        "fontSize": "12px",
+        "y": 8
+      },
+      {
+        "tag": "SPAN",
+        "text": "·",
+        "fontSize": "12px",
+        "y": 8
+      },
+      {
+        "tag": "SPAN",
+        "text": "Cotización en 48 horas",
+        "fontSize": "12px",
+        "y": 8
+      },
+      {
+        "tag": "SPAN",
+        "text": "·",
+        "fontSize": "12px",
+        "y": 8
+      },
+      {
+        "tag": "SPAN",
+        "text": "🇪🇨 Envíos a todo Ecuador",
+        "fontSize": "12px",
+        "y": 8
+      }
+    ],
+    "ctas_above_fold_mobile": [
+      {
+        "text": "+593 999 814 838",
+        "y": 0,
+        "h": 0
+      },
+      {
+        "text": "Inicio",
+        "y": 0,
+        "h": 0
+      },
+      {
+        "text": "Catálogos",
+        "y": 0,
+        "h": 0
+      },
+      {
+        "text": "Ecuador",
+        "y": 0,
+        "h": 0
+      },
+      {
+        "text": "Colombia",
+        "y": 0,
+        "h": 0
+      },
+      {
+        "text": "Blog",
+        "y": 0,
+        "h": 0
+      },
+      {
+        "text": "Nosotros",
+        "y": 0,
+        "h": 0
+      },
+      {
+        "text": "Contacto",
+        "y": 0,
+        "h": 0
+      },
+      {
+        "text": "Cotizar Gratis",
+        "y": 0,
+        "h": 0
+      },
+      {
+        "text": "INICIO",
+        "y": 105,
+        "h": 48
+      }
+    ],
+    "whatsapp_button": {
+      "found": false
+    },
+    "nav_info": {
+      "count": 9,
+      "has_contacto": true,
+      "links": [
+        "+593 999 814 838",
+        "Inicio",
+        "Catálogos",
+        "Ecuador",
+        "Colombia",
+        "Blog",
+        "Nosotros",
+        "Contacto",
+        "Cotizar Gratis"
+      ]
+    }
+  },
+  {
+    "label": "Variedades Mobile 375x812",
+    "url": "https://www.kronosolopromocionales.com/categorias/variedades/",
+    "small_tap_targets": [
+      {
+        "text": "Toggle menu",
+        "w": 40,
+        "h": 38,
+        "y": 41
+      },
+      {
+        "text": "",
+        "w": 32,
+        "h": 32,
+        "y": 24
+      },
+      {
+        "text": "CONTACTO",
+        "w": 272,
+        "h": 46,
+        "y": 742
+      },
+      {
+        "text": "Inicio",
+        "w": 34,
+        "h": 20,
+        "y": 100
+      },
+      {
+        "text": "Categorías",
+        "w": 69,
+        "h": 20,
+        "y": 100
+      },
+      {
+        "text": "Rechazar",
+        "w": 93,
+        "h": 38,
+        "y": 758
+      },
+      {
+        "text": "Aceptar",
+        "w": 84,
+        "h": 38,
+        "y": 758
+      }
+    ],
+    "total_interactive": 96,
+    "small_tap_count": 71,
+    "horizontal_overflow": {
+      "bodyScrollWidth": 375,
+      "windowWidth": 375,
+      "hasHScroll": false
+    },
+    "small_font_nodes": [
+      {
+        "tag": "SPAN",
+        "text": "✦",
+        "fontSize": "12px",
+        "y": 8
+      },
+      {
+        "tag": "SPAN",
+        "text": "🇪🇨 Envíos a todo Ecuador",
+        "fontSize": "12px",
+        "y": 8
+      },
+      {
+        "tag": "SPAN",
+        "text": "·",
+        "fontSize": "12px",
+        "y": 8
+      },
+      {
+        "tag": "SPAN",
+        "text": "🇨🇴 Llegamos a Colombia",
+        "fontSize": "12px",
+        "y": 8
+      },
+      {
+        "tag": "SPAN",
+        "text": "·",
+        "fontSize": "12px",
+        "y": 8
+      },
+      {
+        "tag": "SPAN",
+        "text": "+1,200 productos personalizables",
+        "fontSize": "12px",
+        "y": 8
+      },
+      {
+        "tag": "SPAN",
+        "text": "·",
+        "fontSize": "12px",
+        "y": 8
+      },
+      {
+        "tag": "SPAN",
+        "text": "Cotización en 48 horas",
+        "fontSize": "12px",
+        "y": 8
+      },
+      {
+        "tag": "SPAN",
+        "text": "·",
+        "fontSize": "12px",
+        "y": 8
+      },
+      {
+        "tag": "SPAN",
+        "text": "🇪🇨 Envíos a todo Ecuador",
+        "fontSize": "12px",
+        "y": 8
+      }
+    ],
+    "ctas_above_fold_mobile": [
+      {
+        "text": "+593 999 814 838",
+        "y": 0,
+        "h": 0
+      },
+      {
+        "text": "Inicio",
+        "y": 0,
+        "h": 0
+      },
+      {
+        "text": "Catálogos",
+        "y": 0,
+        "h": 0
+      },
+      {
+        "text": "Ecuador",
+        "y": 0,
+        "h": 0
+      },
+      {
+        "text": "Colombia",
+        "y": 0,
+        "h": 0
+      },
+      {
+        "text": "Blog",
+        "y": 0,
+        "h": 0
+      },
+      {
+        "text": "Nosotros",
+        "y": 0,
+        "h": 0
+      },
+      {
+        "text": "Contacto",
+        "y": 0,
+        "h": 0
+      },
+      {
+        "text": "Cotizar Gratis",
+        "y": 0,
+        "h": 0
+      },
+      {
+        "text": "INICIO",
+        "y": 105,
+        "h": 48
+      }
+    ],
+    "whatsapp_button": {
+      "found": false
+    },
+    "nav_info": {
+      "count": 9,
+      "has_contacto": true,
+      "links": [
+        "+593 999 814 838",
+        "Inicio",
+        "Catálogos",
+        "Ecuador",
+        "Colombia",
+        "Blog",
+        "Nosotros",
+        "Contacto",
+        "Cotizar Gratis"
+      ]
+    }
+  },
+  {
+    "label": "Homepage Desktop 1366x768",
+    "url": "https://www.kronosolopromocionales.com",
+    "small_tap_targets": [
+      {
+        "text": "+593 999 814 838",
+        "w": 123,
+        "h": 16,
+        "y": 8
+      },
+      {
+        "text": "INICIO",
+        "w": 78,
+        "h": 36,
+        "y": 54
+      },
+      {
+        "text": "CATÁLOGOS",
+        "w": 122,
+        "h": 36,
+        "y": 54
+      },
+      {
+        "text": "ECUADOR",
+        "w": 103,
+        "h": 36,
+        "y": 54
+      },
+      {
+        "text": "COLOMBIA",
+        "w": 111,
+        "h": 36,
+        "y": 54
+      },
+      {
+        "text": "BLOG",
+        "w": 72,
+        "h": 36,
+        "y": 54
+      },
+      {
+        "text": "NOSOTROS",
+        "w": 114,
+        "h": 36,
+        "y": 54
+      },
+      {
+        "text": "CONTACTO",
+        "w": 114,
+        "h": 36,
+        "y": 54
+      },
+      {
+        "text": "COTIZAR GRATIS",
+        "w": 180,
+        "h": 40,
+        "y": 52
+      },
+      {
+        "text": "Precio Bomba",
+        "w": 254,
+        "h": 39,
+        "y": 166
+      },
+      {
+        "text": "Antiestrés",
+        "w": 254,
+        "h": 40,
+        "y": 205
+      },
+      {
+        "text": "Antimicrobianos",
+        "w": 254,
+        "h": 40,
+        "y": 245
+      },
+      {
+        "text": "Artículos de Escritura",
+        "w": 254,
+        "h": 40,
+        "y": 285
+      },
+      {
+        "text": "Reflectivos",
+        "w": 254,
+        "h": 40,
+        "y": 325
+      },
+      {
+        "text": "Automóvil",
+        "w": 254,
+        "h": 40,
+        "y": 365
+      }
+    ],
+    "total_interactive": 111,
+    "small_tap_count": 85,
+    "horizontal_overflow": {
+      "bodyScrollWidth": 1614,
+      "windowWidth": 1366,
+      "hasHScroll": true
+    },
+    "small_font_nodes": [
+      {
+        "tag": "SPAN",
+        "text": "✦",
+        "fontSize": "12px",
+        "y": 8
+      },
+      {
+        "tag": "SPAN",
+        "text": "🇪🇨 Envíos a todo Ecuador",
+        "fontSize": "12px",
+        "y": 8
+      },
+      {
+        "tag": "SPAN",
+        "text": "·",
+        "fontSize": "12px",
+        "y": 8
+      },
+      {
+        "tag": "SPAN",
+        "text": "🇨🇴 Llegamos a Colombia",
+        "fontSize": "12px",
+        "y": 8
+      },
+      {
+        "tag": "SPAN",
+        "text": "·",
+        "fontSize": "12px",
+        "y": 8
+      },
+      {
+        "tag": "SPAN",
+        "text": "+1,200 productos personalizables",
+        "fontSize": "12px",
+        "y": 8
+      },
+      {
+        "tag": "SPAN",
+        "text": "·",
+        "fontSize": "12px",
+        "y": 8
+      },
+      {
+        "tag": "SPAN",
+        "text": "Cotización en 48 horas",
+        "fontSize": "12px",
+        "y": 8
+      },
+      {
+        "tag": "SPAN",
+        "text": "·",
+        "fontSize": "12px",
+        "y": 8
+      },
+      {
+        "tag": "SPAN",
+        "text": "🇪🇨 Envíos a todo Ecuador",
+        "fontSize": "12px",
+        "y": 8
+      }
+    ],
+    "ctas_above_fold_mobile": [
+      {
+        "text": "+593 999 814 838",
+        "y": 8,
+        "h": 16
+      },
+      {
+        "text": "INICIO",
+        "y": 54,
+        "h": 36
+      },
+      {
+        "text": "CATÁLOGOS",
+        "y": 54,
+        "h": 36
+      },
+      {
+        "text": "ECUADOR",
+        "y": 54,
+        "h": 36
+      },
+      {
+        "text": "COLOMBIA",
+        "y": 54,
+        "h": 36
+      },
+      {
+        "text": "BLOG",
+        "y": 54,
+        "h": 36
+      },
+      {
+        "text": "NOSOTROS",
+        "y": 54,
+        "h": 36
+      },
+      {
+        "text": "CONTACTO",
+        "y": 54,
+        "h": 36
+      },
+      {
+        "text": "COTIZAR GRATIS",
+        "y": 52,
+        "h": 40
+      },
+      {
+        "text": "Inicio",
+        "y": 0,
+        "h": 0
+      }
+    ],
+    "whatsapp_button": {
+      "found": false
+    },
+    "nav_info": {
+      "count": 9,
+      "has_contacto": true,
+      "links": [
+        "+593 999 814 838",
+        "INICIO",
+        "CATÁLOGOS",
+        "ECUADOR",
+        "COLOMBIA",
+        "BLOG",
+        "NOSOTROS",
+        "CONTACTO",
+        "COTIZAR GRATIS"
+      ]
+    }
+  }
+]

@@ -9,7 +9,7 @@ module.exports = {
   // Configuración para sitios estáticos con output: 'export'
   generateIndexSitemap: false,
   // Excluir rutas que no deben estar en el sitemap
-  exclude: ['/api/*', '/_next/*', '/admin/*'],
+  exclude: ['/api/*', '/_next/*', '/admin/*', '/sitemap.xml'],
   robotsTxtOptions: {
     policies: [
       {
@@ -73,8 +73,6 @@ module.exports = {
 
     return {
       loc: normalizedPath,
-      changefreq,
-      priority,
       lastmod,
     };
   },

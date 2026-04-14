@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import ProductCard from './ProductCard';
 
-export default function ProductTabs({ products, categories, onQuickView }) {
+export default function ProductTabs({ latest = [], featured = [], bestsellers = [], categories, onQuickView }) {
   const [activeTab, setActiveTab] = useState('latest');
 
   const tabs = [
@@ -14,13 +14,10 @@ export default function ProductTabs({ products, categories, onQuickView }) {
 
   const getFilteredProducts = () => {
     switch (activeTab) {
-      case 'bestseller':
-        return products.filter(p => p.bestseller).slice(0, 8);
-      case 'featured':
-        return products.filter(p => p.featured).slice(0, 8);
+      case 'bestseller': return bestsellers;
+      case 'featured':   return featured;
       case 'latest':
-      default:
-        return products.slice(0, 8);
+      default:           return latest;
     }
   };
 

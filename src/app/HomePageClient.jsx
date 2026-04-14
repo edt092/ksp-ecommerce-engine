@@ -16,14 +16,11 @@ const QuickViewModal = dynamic(() => import('@/components/QuickViewModal'), {
   loading: () => null,
 });
 
-import categoriesData from '@/data/categories.json';
-import productsData from '@/data/products.json';
-
-export default function HomePageClient() {
+export default function HomePageClient({ latestProducts, featuredProducts, bestsellerProducts, categories }) {
   const [quickViewProduct, setQuickViewProduct] = useState(null);
 
   const getCategory = (categoryId) => {
-    return categoriesData.find(c => c.id === categoryId);
+    return categories.find(c => c.id === categoryId);
   };
 
   const handleQuickView = (product) => {
@@ -45,7 +42,7 @@ export default function HomePageClient() {
           <div className="flex gap-6">
             {/* Sidebar - Desktop Only */}
             <div className="hidden lg:block w-64 flex-shrink-0">
-              <CategorySidebar categories={categoriesData} />
+              <CategorySidebar categories={categories} />
             </div>
 
             {/* Hero Banner */}
@@ -64,8 +61,10 @@ export default function HomePageClient() {
 
       {/* Products with Tabs */}
       <ProductTabs
-        products={productsData}
-        categories={categoriesData}
+        latest={latestProducts}
+        featured={featuredProducts}
+        bestsellers={bestsellerProducts}
+        categories={categories}
         onQuickView={handleQuickView}
       />
 
@@ -80,7 +79,7 @@ export default function HomePageClient() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {categoriesData.slice(0, 8).map((category) => (
+            {categories.slice(0, 8).map((category) => (
               <Link
                 key={category.id}
                 href={`/categorias/${category.slug}/`}

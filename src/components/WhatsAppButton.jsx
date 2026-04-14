@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 
 export default function WhatsAppButton({
@@ -16,6 +16,12 @@ export default function WhatsAppButton({
 }) {
   const pathname = usePathname();
   const [isHovered, setIsHovered] = useState(false);
+  const [cookieBannerVisible, setCookieBannerVisible] = useState(false);
+
+  useEffect(() => {
+    const stored = localStorage.getItem('ks_cookie_consent');
+    if (!stored) setCookieBannerVisible(true);
+  }, []);
 
   // Determinar si debe ocultarse
   const shouldHide = hideOnBlog && position === 'fixed' && pathname?.startsWith('/blog');
@@ -45,7 +51,7 @@ export default function WhatsAppButton({
   // Fixed floating button
   if (position === 'fixed') {
     return (
-      <div className="fixed bottom-6 right-6 z-50">
+      <div className={`fixed right-6 z-50 transition-all duration-300 ${cookieBannerVisible ? 'bottom-32 sm:bottom-24' : 'bottom-6'}`}>
         {/* Tooltip */}
         <div
           className={`absolute bottom-full right-0 mb-3 transition-all duration-300 ${
