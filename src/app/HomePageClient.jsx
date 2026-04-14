@@ -6,6 +6,7 @@ import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import HeroBanner from '@/components/HeroBanner';
 import BenefitsBar from '@/components/BenefitsBar';
+import RealProductsGallery from '@/components/RealProductsGallery';
 import CategorySidebar from '@/components/CategorySidebar';
 import ProductTabs from '@/components/ProductTabs';
 
@@ -57,6 +58,9 @@ export default function HomePageClient() {
 
       {/* Benefits Bar */}
       <BenefitsBar />
+
+      {/* Real Products Gallery — E-E-A-T: demonstrates genuine experience */}
+      <RealProductsGallery />
 
       {/* Products with Tabs */}
       <ProductTabs
