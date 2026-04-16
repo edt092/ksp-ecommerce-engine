@@ -7,7 +7,7 @@ const BASE_URL = 'https://www.kronosolopromocionales.com';
 
 // Build date references — use real known dates rather than new Date()
 // which causes every lastmod to be identical and lie about modification time.
-const BUILD_DATE = '2026-04-09';
+const BUILD_DATE = '2026-04-16';
 
 export default function sitemap() {
   // --- Static routes -------------------------------------------------------
@@ -23,10 +23,15 @@ export default function sitemap() {
   ];
 
   // --- Product routes ------------------------------------------------------
-  const productRoutes = productsData.map((p) => ({
-    url: `${BASE_URL}/productos/${p.slug}/`,
-    lastModified: p.updatedAt || p.createdAt || BUILD_DATE,
-  }));
+  // Solo incluir productos con is_ai_optimized: true para evitar thin content.
+  // Los productos sin ese campo (generados por el scraper básico con plantillas)
+  // se excluyen del sitemap hasta que pasen por el pipeline de enriquecimiento.
+  const productRoutes = productsData
+    .filter((p) => p.is_ai_optimized === true)
+    .map((p) => ({
+      url: `${BASE_URL}/productos/${p.slug}/`,
+      lastModified: p.updatedAt || p.createdAt || BUILD_DATE,
+    }));
 
   // --- Blog routes ---------------------------------------------------------
   // Use real per-post dates. dateModified takes precedence over date.
