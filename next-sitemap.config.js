@@ -1,5 +1,12 @@
 /** @type {import('next-sitemap').IConfig} */
 const postsData = require('./data/blog/posts.json');
+const productsData = require('./data/products.json');
+
+// Set de slugs con contenido enriquecido (is_ai_optimized: true).
+// Productos que no estén aquí se excluyen del sitemap para evitar thin content.
+const optimizedSlugs = new Set(
+  productsData.filter(p => p.is_ai_optimized === true).map(p => p.slug)
+);
 
 module.exports = {
   siteUrl: process.env.SITE_URL || 'https://www.kronosolopromocionales.com',
@@ -48,6 +55,9 @@ module.exports = {
       priority = 0.9;
       changefreq = 'weekly';
     } else if (normalizedPath.startsWith('/productos/')) {
+      // Excluir productos sin contenido enriquecido
+      const slug = normalizedPath.replace(/^\/productos\//, '').replace(/\/$/, '');
+      if (!optimizedSlugs.has(slug)) return null;
       priority = 0.8;
       changefreq = 'weekly';
     } else if (normalizedPath.startsWith('/nosotros/')) {

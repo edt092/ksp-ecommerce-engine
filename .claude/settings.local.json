@@ -35,7 +35,10 @@
       "Bash(python -c \"from PIL import Image; print\\('pillow available'\\)\")",
       "Bash(python:*)",
       "Bash(wmic logicaldisk:*)",
-      "Bash(npx netlify-cli:*)"
+      "Bash(npx netlify-cli:*)",
+      "Bash(ls -la E:/coding/proyectos-personales/archivados/ksp-segunda-version/kspromocionales-tienda/out/sitemap*.xml)",
+      "Bash(ls -la E:/coding/proyectos-personales/archivados/promogimmicks/out/sitemap*.xml)",
+      "Bash(ls E:/coding/proyectos-personales/archivados/ksp-segunda-version/kspromocionales-tienda/out/*.xml)"
     ],
     "deny": [],
     "ask": []
