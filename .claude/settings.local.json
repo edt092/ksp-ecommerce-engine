@@ -38,7 +38,16 @@
       "Bash(npx netlify-cli:*)",
       "Bash(ls -la E:/coding/proyectos-personales/archivados/ksp-segunda-version/kspromocionales-tienda/out/sitemap*.xml)",
       "Bash(ls -la E:/coding/proyectos-personales/archivados/promogimmicks/out/sitemap*.xml)",
-      "Bash(ls E:/coding/proyectos-personales/archivados/ksp-segunda-version/kspromocionales-tienda/out/*.xml)"
+      "Bash(ls E:/coding/proyectos-personales/archivados/ksp-segunda-version/kspromocionales-tienda/out/*.xml)",
+      "Bash(pip show *)",
+      "Bash(pip install *)",
+      "Bash(GEMINI_API_KEY=AIzaSyBjLSB9TE814NnGelHjH9b2rKic5pt0Ocs python scripts/enrich_products.py --dry-run)",
+      "Bash(GEMINI_API_KEY=AIzaSyBjLSB9TE814NnGelHjH9b2rKic5pt0Ocs python scripts/enrich_products.py --limit 1 --verbose)",
+      "Bash(GEMINI_API_KEY=AIzaSyBjLSB9TE814NnGelHjH9b2rKic5pt0Ocs PYTHONIOENCODING=utf-8 python scripts/enrich_products.py --limit 1 --verbose)",
+      "Bash(GEMINI_API_KEY=AIzaSyBjLSB9TE814NnGelHjH9b2rKic5pt0Ocs PYTHONIOENCODING=utf-8 python scripts/enrich_products.py --limit 2 --verbose)",
+      "Bash(PYTHONIOENCODING=utf-8 python scripts/enrich_products.py --dry-run)",
+      "Skill(claude-api)",
+      "Bash(PYTHONIOENCODING=utf-8 python scripts/enrich_products.py --resume --dry-run)"
     ],
     "deny": [],
     "ask": []

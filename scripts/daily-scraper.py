@@ -17,6 +17,15 @@ import sys
 from urllib.parse import urljoin
 from collections import Counter
 
+# Importar el evaluador para marcar calidad desde el momento del scraping.
+# Si el archivo no existe (primer setup), el scraper sigue funcionando sin él.
+try:
+    sys.path.insert(0, os.path.dirname(__file__))
+    from content_evaluator import ContentEvaluator as _ContentEvaluator
+    _EVALUATOR = _ContentEvaluator()
+except ImportError:
+    _EVALUATOR = None
+
 # ── Config ────────────────────────────────────────────────────────────────────
 BASE_URL   = "https://www.catalogospromocionales.com"
 DELAY      = 1.5   # seconds between requests
@@ -258,6 +267,12 @@ def build_product(name, img_url, product_url, category_id):
         'useCases': ['regalos empresariales', 'campañas publicitarias', 'eventos corporativos'],
         'featured': False,
         'bestseller': False,
+        # Campos de calidad — el scraper básico siempre genera plantillas,
+        # así que todo producto nuevo nace como is_ai_optimized: false.
+        # enrich_products.py lo subirá a true cuando pase por el pipeline de agentes.
+        'is_ai_optimized': False,
+        'quality_score': 0,
+        'last_ai_update': None,
     }
 
 
