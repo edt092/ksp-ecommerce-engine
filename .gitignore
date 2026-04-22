@@ -46,6 +46,9 @@ data/*_scraped*.json
 data/products_merged.json
 data/productos_con_seo.json
 
+# Registro local de actualizaciones (no subir a GitHub)
+data/products-changelog.md
+
 # Python
 __pycache__/
 *.py[cod]
