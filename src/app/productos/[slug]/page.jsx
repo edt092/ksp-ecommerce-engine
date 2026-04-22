@@ -25,6 +25,13 @@ export async function generateMetadata({ params }) {
     };
   }
 
+  if (!product.is_ai_optimized) {
+    return {
+      title: product.name,
+      robots: { index: false, follow: false },
+    };
+  }
+
   const category = categoriesData.find(c => c.id === product.categoryId);
 
   return {
@@ -96,13 +103,18 @@ export default function ProductPage({ params }) {
       '@type': 'Offer',
       url: `${BASE_URL}/productos/${product.slug}/`,
       availability: 'https://schema.org/InStock',
+      price: '0',
+      priceCurrency: 'USD',
+      priceValidUntil: '2027-12-31',
       priceSpecification: {
         '@type': 'UnitPriceSpecification',
+        price: 0,
         priceCurrency: 'USD',
         description: 'Precio a cotizar — consulte por WhatsApp',
       },
       hasMerchantReturnPolicy: {
         '@type': 'MerchantReturnPolicy',
+        applicableCountry: 'EC',
         returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
         name: 'Sin devoluciones en productos personalizados',
       },
@@ -110,8 +122,8 @@ export default function ProductPage({ params }) {
         '@type': 'OfferShippingDetails',
         shippingRate: {
           '@type': 'MonetaryAmount',
+          value: 0,
           currency: 'USD',
-          description: 'Tarifa a cotizar según volumen y destino',
         },
         shippingDestination: {
           '@type': 'DefinedRegion',
