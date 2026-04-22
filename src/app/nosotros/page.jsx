@@ -169,7 +169,7 @@ export default function AboutPage() {
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">Quién está detrás</p>
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-                  Claudia Inés González Ortiz
+                  Claudia González
                 </h2>
                 <p className="text-gray-500 text-sm mb-5 font-medium">
                   Especialista en Productos Promocionales · Quito, Ecuador
