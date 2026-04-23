@@ -25,6 +25,21 @@ export async function generateMetadata({ params }) {
     };
   }
 
+  // Noindex duplicate slugs: slug-ID-EXTRAID where slug-ID also exists with same name
+  const baseSlug = product.slug.replace(/-\d+$/, '');
+  if (baseSlug !== product.slug) {
+    const baseProduct = productsData.find(p => p.slug === baseSlug);
+    if (baseProduct && baseProduct.name === product.name) {
+      return {
+        title: product.name,
+        robots: { index: false, follow: false },
+        alternates: {
+          canonical: `https://www.kronosolopromocionales.com/productos/${baseSlug}/`,
+        },
+      };
+    }
+  }
+
   if (!product.is_ai_optimized) {
     return {
       title: product.name,

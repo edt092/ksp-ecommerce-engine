@@ -10,3 +10,37 @@
 
 /blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-mexico    /blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-ecuador-y-colombia    301
 /blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-mexico/   /blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-ecuador-y-colombia/   301
+
+# 301 Redirects - URLs antiguas de WordPress/WooCommerce
+/product-category/salud-y-belleza    /categorias/cuidado-personal/    301
+/product-category/salud-y-belleza/   /categorias/cuidado-personal/    301
+/product-category/tecnologia         /categorias/tecnologia/           301
+/product-category/tecnologia/        /categorias/tecnologia/           301
+/product/auriculares-inalambricos-auriculares-bluetooth    /categorias/tecnologia/    301
+/product/auriculares-inalambricos-auriculares-bluetooth/   /categorias/tecnologia/    301
+
+# 301 Redirects - Slugs de producto sin ID numérico (formato anterior)
+/productos/aplausometro-redondo-produccion-nacional    /productos/aplausometro-redondo-produccion-nacional-5685/    301
+/productos/aplausometro-redondo-produccion-nacional/   /productos/aplausometro-redondo-produccion-nacional-5685/    301
+/productos/speaker-bluetooth-barack    /productos/speaker-bluetooth-barack-8135/    301
+/productos/speaker-bluetooth-barack/   /productos/speaker-bluetooth-barack-8135/    301
+/productos/set-destornillador-pistol   /categorias/herramientas/    301
+/productos/set-destornillador-pistol/  /categorias/herramientas/    301
+
+# 301 Redirects - Slugs rastreados sin indexar (sin ID numérico → con ID)
+/productos/llavero-ml-356                              /productos/llavero-ml-356-8039/                              301
+/productos/llavero-ml-356/                             /productos/llavero-ml-356-8039/                              301
+/productos/floyd-stylus                                /productos/floyd-stylus-5837/                                301
+/productos/floyd-stylus/                               /productos/floyd-stylus-5837/                                301
+/productos/mouse-pad-vaniat                            /productos/mouse-pad-vaniat-9862/                            301
+/productos/mouse-pad-vaniat/                           /productos/mouse-pad-vaniat-9862/                            301
+/productos/medidor-de-presion-para-neumaticos-nuevo    /productos/medidor-de-presion-para-neumaticos-nuevo-13297/   301
+/productos/medidor-de-presion-para-neumaticos-nuevo/   /productos/medidor-de-presion-para-neumaticos-nuevo-13297/   301
+/productos/linterna-cob-power                          /productos/linterna-cob-power-9544/                          301
+/productos/linterna-cob-power/                         /productos/linterna-cob-power-9544/                          301
+/productos/sticky-set-leader-eco                       /productos/sticky-set-leader-eco-3382/                       301
+/productos/sticky-set-leader-eco/                      /productos/sticky-set-leader-eco-3382/                       301
+/productos/audifonos-boom-precio-bomba                 /productos/audifonos-boom-precio-bomba-5657/                 301
+/productos/audifonos-boom-precio-bomba/                /productos/audifonos-boom-precio-bomba-5657/                 301
+/productos/rastreador-airtag-boomtag-nuevo             /productos/rastreador-airtag-boomtag-nuevo-13210/            301
+/productos/rastreador-airtag-boomtag-nuevo/            /productos/rastreador-airtag-boomtag-nuevo-13210/            301
