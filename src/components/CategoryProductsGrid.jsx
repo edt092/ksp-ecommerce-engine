@@ -4,16 +4,10 @@ import { useState, useEffect } from 'react';
 import ProductCard from './ProductCard';
 
 export default function CategoryProductsGrid({ products, category }) {
-  const [displayedProducts, setDisplayedProducts] = useState([]);
+  const PRODUCTS_PER_PAGE = 12;
+  const [displayedProducts, setDisplayedProducts] = useState(products.slice(0, PRODUCTS_PER_PAGE));
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
-
-  const PRODUCTS_PER_PAGE = 12;
-
-  // Cargar productos iniciales
-  useEffect(() => {
-    setDisplayedProducts(products.slice(0, PRODUCTS_PER_PAGE));
-  }, [products]);
 
   // Lazy loading al hacer scroll
   useEffect(() => {
