@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Calendar, Clock, Tag, ArrowLeft, Share2, Linkedin } from 'lucide-react';
 import postsData from '@/data/blog/posts.json';
 import { blogContent } from '@/data/blog/content';
+import { blogAdditions } from '@/data/blog/content/additions';
 import TableOfContents from '@/components/TableOfContents';
 
 export async function generateStaticParams() {
@@ -72,7 +73,7 @@ export default function BlogPostPage({ params }) {
     );
   }
 
-  const content = blogContent[post.slug] || '';
+  const content = (blogContent[post.slug] || '') + (blogAdditions[post.slug] || '');
   const relatedPosts = postsData
     .filter(p => p.category === post.category && p.id !== post.id)
     .slice(0, 3);
