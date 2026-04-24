@@ -59,7 +59,7 @@ export default function Header() {
               {/* Scrolling marquee */}
               <div className="flex items-center gap-2 overflow-hidden w-full">
                 <span className="text-accent font-bold shrink-0">✦</span>
-                <div className="overflow-hidden flex-1">
+                <div className="overflow-hidden flex-1 min-w-0">
                   <div className="flex gap-12 animate-marquee whitespace-nowrap">
                     <span>🇪🇨 Envíos a todo Ecuador</span>
                     <span>·</span>

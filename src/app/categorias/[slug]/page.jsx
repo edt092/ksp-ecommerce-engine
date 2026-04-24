@@ -49,8 +49,17 @@ export default function CategoryPage({ params }) {
     notFound();
   }
 
-  // Get all products for this category
-  const categoryProducts = productsData.filter(p => p.categoryId === category.id);
+  // Get all products for this category — slim to fields used by ProductCard only
+  const categoryProducts = productsData
+    .filter(p => p.categoryId === category.id)
+    .map(p => ({
+      id: p.id,
+      slug: p.slug,
+      name: p.name,
+      images: p.images?.length ? [p.images[0]] : [],
+      bestseller: p.bestseller || false,
+      featured: p.featured || false,
+    }));
 
   const BASE_URL = 'https://www.kronosolopromocionales.com';
 
@@ -180,6 +189,22 @@ export default function CategoryPage({ params }) {
           </div>
         </div>
       </section>
+
+      {/* Editorial — SEO prose section */}
+      {category.editorial && (
+        <section className="py-10 md:py-14 bg-gray-50 border-b border-gray-100">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h2 className="font-serif text-2xl md:text-3xl text-secondary mb-6">
+              {category.name} Promocionales para Empresas
+            </h2>
+            <div className="prose prose-gray max-w-none text-gray-600 leading-relaxed space-y-4">
+              {category.editorial.split('\n\n').map((paragraph, i) => (
+                <p key={i}>{paragraph}</p>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Products Grid */}
       <section className="py-12 md:py-16 lg:py-20 bg-white">

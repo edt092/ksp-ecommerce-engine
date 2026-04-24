@@ -158,6 +158,49 @@ export default function HeroBanner() {
             </div>
           </div>
 
+          {/* MOBILE — 3 product cards row (hidden on lg+) */}
+          <div className="flex lg:hidden justify-center items-end gap-3 mt-6 mb-2">
+            <div className="w-24 h-24 bg-white/8 border border-white/15 backdrop-blur-sm"
+              style={{ transform: 'rotate(-5deg)', boxShadow: '0 10px 30px rgba(0,0,0,0.4)' }}>
+              <div className="relative w-full h-full">
+                <Image
+                  src={PRODUCT_IMAGES[1]}
+                  alt="Bolígrafo antibacteriano Flom 4-1 personalizado con logo de empresa"
+                  fill
+                  sizes="96px"
+                  className="object-contain p-2"
+                />
+              </div>
+            </div>
+            <div className="w-32 h-32 bg-white/12 border border-accent/30 backdrop-blur-sm"
+              style={{ boxShadow: '0 15px 40px rgba(0,0,0,0.5), 0 0 20px rgba(245,158,11,0.15)' }}>
+              <div className="relative w-full h-full">
+                <Image
+                  src={PRODUCT_IMAGES[0]}
+                  alt="Termo metálico Calypso Chili 500ml con logo grabado para regalo corporativo"
+                  fill
+                  sizes="128px"
+                  priority
+                  className="object-contain p-3"
+                />
+                <div className="absolute top-0 left-0 w-5 h-0.5 bg-accent" />
+                <div className="absolute top-0 left-0 w-0.5 h-5 bg-accent" />
+              </div>
+            </div>
+            <div className="w-24 h-24 bg-white/8 border border-white/15 backdrop-blur-sm"
+              style={{ transform: 'rotate(5deg)', boxShadow: '0 10px 30px rgba(0,0,0,0.4)' }}>
+              <div className="relative w-full h-full">
+                <Image
+                  src={PRODUCT_IMAGES[2]}
+                  alt="Cuello multifuncional corporativo personalizado con logo"
+                  fill
+                  sizes="96px"
+                  className="object-contain p-2"
+                />
+              </div>
+            </div>
+          </div>
+
           {/* RIGHT — Floating product cards */}
           <div className="hidden lg:flex items-center justify-center animate-slide-in-right animate-delay-200">
             <div className="relative w-[420px] h-[460px]">
