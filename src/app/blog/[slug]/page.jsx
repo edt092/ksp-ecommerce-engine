@@ -74,6 +74,7 @@ export default function BlogPostPage({ params }) {
   }
 
   const content = (blogContent[post.slug] || '') + (blogAdditions[post.slug] || '');
+  const wordCount = content.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().split(' ').filter(Boolean).length;
   const relatedPosts = postsData
     .filter(p => p.category === post.category && p.id !== post.id)
     .slice(0, 3);
@@ -126,6 +127,8 @@ export default function BlogPostPage({ params }) {
     isPartOf: {
       '@id': `${BASE_URL}/#website`,
     },
+    wordCount: wordCount,
+    articleSection: post.categoryName,
   };
 
   const breadcrumbJsonLd = {

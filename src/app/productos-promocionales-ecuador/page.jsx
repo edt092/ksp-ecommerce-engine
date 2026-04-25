@@ -250,6 +250,32 @@ export default function EcuadorPage() {
           </div>
         </div>
       </section>
+
+      {/* Ecuador-specific: Pagos y logística */}
+      <section className="py-14 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-10">
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Facturación y pagos en Ecuador</h2>
+              <p className="text-gray-600 mb-3">
+                Emitimos facturas electrónicas con RUC activo ante el SRI para que puedas incluir tus compras en el crédito tributario. Aceptamos transferencias bancarias (Banco Pichincha, Banco del Pacífico, Produbanco), depósitos y pago contra entrega en Quito para pedidos confirmados.
+              </p>
+              <p className="text-gray-600">
+                Los pedidos desde Ecuador se procesan en dólares (USD), sin recargos de importación ni aranceles adicionales al ser artículos producidos o nacionalizados localmente.
+              </p>
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Logística en Ecuador</h2>
+              <p className="text-gray-600 mb-3">
+                Trabajamos con las principales transportadoras del país: Servientrega, Laar Courier y Speed. Los tiempos de entrega desde Quito son: 1-2 días hábiles a Guayaquil, Cuenca y Manta; 2-3 días a ciudades de la sierra norte y sur; 3-5 días a regiones de difícil acceso.
+              </p>
+              <p className="text-gray-600">
+                Para pedidos en Quito ofrecemos entrega directa sin costo adicional en sectores norte, sur y valles, coordinando con el cliente el horario más conveniente.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

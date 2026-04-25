@@ -1,5 +1,38 @@
 import Link from 'next/link';
 
+const FAQ_CONTACTO = [
+  {
+    q: '¿Cuál es el pedido mínimo para artículos personalizados?',
+    a: 'El mínimo varía según el artículo: desde 50 unidades para bolígrafos y artículos de escritura, 100 unidades para mugs y artículos plásticos, y 50 piezas para textiles. Consulta por WhatsApp el mínimo para el artículo específico que necesitas.',
+  },
+  {
+    q: '¿En cuánto tiempo recibo mi pedido?',
+    a: 'El plazo de producción es de 5 a 15 días hábiles según la técnica de personalización. Serigrafía estándar: 5-8 días. Bordado en textiles: 8-12 días. Grabado láser: 7-10 días. El tiempo incluye la revisión y aprobación del arte.',
+  },
+  {
+    q: '¿Hacen entregas fuera de Quito?',
+    a: 'Sí. Realizamos envíos a todo Ecuador y Colombia mediante transportadoras aliadas. El costo de envío varía según destino, peso y dimensiones del pedido. Comunícate por WhatsApp para recibir el costo exacto de envío a tu ciudad.',
+  },
+  {
+    q: '¿Puedo ver una muestra antes de hacer el pedido completo?',
+    a: 'Enviamos una prueba digital (mockup) gratuita antes de confirmar cualquier pedido. Para pedidos grandes también es posible solicitar una muestra física con costo adicional que se descuenta del total del pedido.',
+  },
+  {
+    q: '¿Qué formatos de logo aceptan?',
+    a: 'El formato ideal es vectorial: AI, EPS o PDF con trazados. También aceptamos PNG o JPG de alta resolución (mínimo 300 DPI). Si no tienes el logo en vectorial, nuestro equipo puede vectorizarlo sin costo adicional en la mayoría de los casos.',
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_CONTACTO.map(({ q, a }) => ({
+    '@type': 'Question',
+    name: q,
+    acceptedAnswer: { '@type': 'Answer', text: a },
+  })),
+};
+
 export const metadata = {
   title: 'Contacto | KS Promocionales Ecuador',
   description: 'Contacta a KSPromocionales para productos promocionales en Ecuador. Atendemos Quito, Guayaquil y todo el país. Cotiza tus artículos promocionales por WhatsApp.',
@@ -19,6 +52,10 @@ export const metadata = {
 export default function ContactoPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
 
       {/* Spacer for fixed header */}
       <div className="h-[88px] md:h-[96px]"></div>
@@ -212,6 +249,23 @@ export default function ContactoPage() {
               </svg>
               Cotizar Ahora
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-12 md:py-16 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <h2 className="font-serif text-2xl md:text-3xl text-secondary mb-8 text-center">
+            Preguntas Frecuentes
+          </h2>
+          <div className="space-y-4">
+            {FAQ_CONTACTO.map(({ q, a }, i) => (
+              <div key={i} className="bg-white border border-gray-200 p-6">
+                <h3 className="font-semibold text-gray-900 mb-2">{q}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{a}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

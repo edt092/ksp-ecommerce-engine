@@ -42,7 +42,7 @@ module.exports = {
         sans: ['var(--font-dm-sans)', 'system-ui', '-apple-system', 'sans-serif'],
         heading: ['var(--font-syne)', 'system-ui', 'sans-serif'],
         display: ['var(--font-syne)', 'system-ui', 'sans-serif'],
-        mono: ['var(--font-syne-mono)', 'monospace'],
+        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
         serif: ['var(--font-dm-serif)', 'Georgia', 'serif'],
       },
       animation: {

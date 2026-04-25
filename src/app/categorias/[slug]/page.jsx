@@ -49,9 +49,11 @@ export default function CategoryPage({ params }) {
     notFound();
   }
 
-  // Get all products for this category — slim to fields used by ProductCard only
-  const categoryProducts = productsData
-    .filter(p => p.categoryId === category.id)
+  // Slim products to card-only fields; prioritize bestsellers/featured; cap at 80
+  const allCategoryProducts = productsData.filter(p => p.categoryId === category.id);
+  const categoryProducts = allCategoryProducts
+    .sort((a, b) => (b.bestseller ? 1 : 0) - (a.bestseller ? 1 : 0) || (b.featured ? 1 : 0) - (a.featured ? 1 : 0))
+    .slice(0, 80)
     .map(p => ({
       id: p.id,
       slug: p.slug,
@@ -60,6 +62,7 @@ export default function CategoryPage({ params }) {
       bestseller: p.bestseller || false,
       featured: p.featured || false,
     }));
+  const totalProducts = allCategoryProducts.length;
 
   const BASE_URL = 'https://www.kronosolopromocionales.com';
 
@@ -127,7 +130,7 @@ export default function CategoryPage({ params }) {
               <div className="max-w-xl">
                 {/* Category Title */}
                 <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-4 leading-tight">
-                  {category.name}
+                  {category.name} Promocional Personalizado
                 </h1>
 
                 {/* Description */}
@@ -257,6 +260,23 @@ export default function CategoryPage({ params }) {
           )}
         </div>
       </section>
+
+      {/* Extended catalog CTA — shown only when products are capped at 80 */}
+      {totalProducts > 80 && (
+        <div className="bg-blue-50 border-t border-blue-100 py-6 text-center">
+          <p className="text-gray-600 text-sm mb-3">
+            Mostrando los 80 productos más populares de <strong>{totalProducts}</strong> disponibles en {category.name}.
+          </p>
+          <a
+            href={`https://wa.me/593999814838?text=${encodeURIComponent(`Hola, quiero ver el catálogo completo de ${category.name}`)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-primary text-white px-6 py-2 text-sm font-semibold hover:bg-primary-dark transition-colors"
+          >
+            Ver catálogo completo por WhatsApp
+          </a>
+        </div>
+      )}
 
       {/* CTA Section */}
       <section className="bg-secondary py-12 md:py-16">

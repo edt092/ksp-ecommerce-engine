@@ -55,7 +55,7 @@ export default function Header() {
           isScrolled ? 'h-0 opacity-0' : 'h-auto opacity-100'
         } bg-secondary text-white text-xs`}>
           <div className="container mx-auto px-4 py-2 flex items-center justify-between">
-            <div className="flex items-center gap-4 overflow-hidden">
+            <div className="flex items-center gap-4 overflow-hidden min-w-0">
               {/* Scrolling marquee */}
               <div className="flex items-center gap-2 overflow-hidden w-full">
                 <span className="text-accent font-bold shrink-0">✦</span>
