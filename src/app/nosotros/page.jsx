@@ -1,6 +1,35 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+const FAQ_NOSOTROS = [
+  {
+    q: '¿Qué hace diferente a KS Promocionales de otros proveedores?',
+    a: 'Combinamos asesoría personalizada, control de calidad en cada pedido y tiempos de entrega cumplidos. A diferencia de plataformas de e-commerce masivas, cada pedido tiene seguimiento directo con nuestra fundadora Claudia González. No vendemos lo que tenemos en bodega: buscamos el producto que mejor encaja con tu marca y presupuesto.',
+  },
+  {
+    q: '¿Trabajan con empresas pequeñas o solo con corporaciones grandes?',
+    a: 'Atendemos desde emprendedores que necesitan 50 unidades hasta empresas que piden 10,000 piezas. El precio por unidad mejora con el volumen, pero no tenemos mínimos que excluyan a negocios en crecimiento. Si eres una pyme, KS Promocionales es especialmente útil porque recibes la misma atención que las empresas grandes.',
+  },
+  {
+    q: '¿Tienen catálogo físico o cómo puedo ver los productos?',
+    a: 'Disponemos de catálogos digitales en nuestro sitio web y compartimos catálogos PDF por WhatsApp. Para clientes en Quito, también es posible coordinar una visita para ver muestras físicas de los principales artículos. Escríbenos y coordinamos la forma más cómoda para ti.',
+  },
+  {
+    q: '¿Cuántos años lleva KS Promocionales en el mercado?',
+    a: 'KS Promocionales es parte de un proyecto empresarial con raíces en el sector de artículos promocionales en Ecuador. Nuestra fundadora Claudia González tiene experiencia directa en la industria y relaciones establecidas con proveedores verificados en Ecuador y Colombia.',
+  },
+];
+
+const faqNosotrosSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_NOSOTROS.map(({ q, a }) => ({
+    '@type': 'Question',
+    name: q,
+    acceptedAnswer: { '@type': 'Answer', text: a },
+  })),
+};
+
 export const metadata = {
   title: 'Nosotros | KS Promocionales Ecuador — Claudia González',
   description: 'Conoce a Claudia González y el equipo detrás de KS Promocionales. Desde Quito servimos a empresas de Ecuador y Colombia con artículos promocionales personalizados y regalos corporativos de calidad.',
@@ -466,6 +495,27 @@ export default function AboutPage() {
                 Contactar por WhatsApp
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqNosotrosSchema) }}
+      />
+      <section className="py-12 md:py-16 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <h2 className="font-serif text-2xl md:text-3xl text-secondary mb-8 text-center">
+            Preguntas Frecuentes sobre KS Promocionales
+          </h2>
+          <div className="space-y-4">
+            {FAQ_NOSOTROS.map(({ q, a }, i) => (
+              <div key={i} className="bg-white border border-gray-200 p-6">
+                <h3 className="font-semibold text-gray-900 mb-2">{q}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{a}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -1,7 +1,7 @@
 import './globals.css';
 import Script from 'next/script';
 import dynamic from 'next/dynamic';
-import { Syne, DM_Sans, DM_Serif_Display, Syne_Mono } from 'next/font/google';
+import { Syne, DM_Sans, DM_Serif_Display } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -37,12 +37,10 @@ const dmSerif = DM_Serif_Display({
   display: 'swap',
 });
 
-const syneMono = Syne_Mono({
-  subsets: ['latin'],
-  variable: '--font-syne-mono',
-  weight: ['400'],
-  display: 'swap',
-});
+export const viewport = {
+  viewportFit: 'cover',
+  themeColor: '#001A6E',
+};
 
 export const metadata = {
   metadataBase: new URL('https://www.kronosolopromocionales.com'),
@@ -113,6 +111,7 @@ const localBusinessSchema = {
   },
   address: {
     '@type': 'PostalAddress',
+    streetAddress: 'Norte de Quito',
     addressLocality: 'Quito',
     addressRegion: 'Pichincha',
     postalCode: '170101',
@@ -170,7 +169,7 @@ const websiteSchema = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es-EC" className={`${syne.variable} ${dmSans.variable} ${dmSerif.variable} ${syneMono.variable}`}>
+    <html lang="es-EC" className={`${syne.variable} ${dmSans.variable} ${dmSerif.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="48x48" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -192,7 +191,7 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col font-sans antialiased">
+      <body className="min-h-screen flex flex-col font-sans antialiased overflow-x-hidden">
         {/* Google Consent Mode v2 — defaults denied until user accepts */}
         <Script id="google-consent-init" strategy="beforeInteractive">
           {`

@@ -1,8 +1,22 @@
 User-agent: *
 Allow: /
-
 Disallow: /api/
 Disallow: /admin/
 
-# Especifica la ubicación de tu sitemap
+# AI crawlers — permit indexing/citation, block mass scraping for training
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: CCBot
+Disallow: /
+
 Sitemap: https://www.kronosolopromocionales.com/sitemap.xml

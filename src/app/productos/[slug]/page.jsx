@@ -237,13 +237,13 @@ export default function ProductPage({ params }) {
 
               {/* Story */}
               <div className="bg-gradient-to-r from-primary/10 to-primary-light/10 rounded-xl md:rounded-2xl p-4 md:p-6 mb-6 md:mb-8">
-                <h2 className="text-base md:text-lg font-bold text-gray-900 mb-2 md:mb-3">La Historia</h2>
+                <h2 className="text-base md:text-lg font-bold text-gray-900 mb-2 md:mb-3">Historia del {product.name}</h2>
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed">{product.story}</p>
               </div>
 
               {/* Features */}
               <div className="mb-6 md:mb-8">
-                <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4">Características</h2>
+                <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4">Características del {product.name}</h2>
                 <ul className="space-y-2 md:space-y-3">
                   {(product.features ?? []).map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-2 md:gap-3 group">
@@ -258,7 +258,7 @@ export default function ProductPage({ params }) {
 
               {/* Use Cases */}
               <div className="mb-6 md:mb-8">
-                <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4">Casos de Uso</h2>
+                <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4">Casos de Uso del {product.name}</h2>
                 <div className="flex flex-wrap gap-2">
                   {(product.useCases ?? []).map((useCase, idx) => (
                     <span

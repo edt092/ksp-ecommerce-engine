@@ -250,6 +250,32 @@ export default function ColombiaPage() {
           </div>
         </div>
       </section>
+
+      {/* Colombia-specific: Pagos y logística */}
+      <section className="py-14 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-10">
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Facturación y pagos en Colombia</h2>
+              <p className="text-gray-600 mb-3">
+                Para clientes colombianos procesamos pedidos en pesos colombianos (COP) o dólares (USD) según acuerdo. Aceptamos pagos por PSE, transferencias bancarias a cuentas en Colombia (Bancolombia, Davivienda, BBVA Colombia) y Nequi para pedidos de menor monto.
+              </p>
+              <p className="text-gray-600">
+                Emitimos la documentación tributaria requerida para empresas colombianas que necesiten respaldar la compra ante la DIAN. Consulta los detalles con nuestro equipo según el régimen tributario de tu empresa.
+              </p>
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Logística en Colombia</h2>
+              <p className="text-gray-600 mb-3">
+                Enviamos a toda Colombia mediante Servientrega Colombia, Coordinadora, TCC y Deprisa. Los tiempos estimados desde Quito son: 3-5 días hábiles a Bogotá, Medellín y Cali; 5-7 días a Barranquilla, Cartagena y Bucaramanga; y 7-10 días a ciudades intermedias.
+              </p>
+              <p className="text-gray-600">
+                Para pedidos grandes con destino Colombia, también ofrecemos coordinación de transporte terrestre por Rumichaca o envío aéreo según urgencia y volumen. El costo de envío se calcula según peso, dimensiones y ciudad de destino.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

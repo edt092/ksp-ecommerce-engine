@@ -28,11 +28,6 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'randomuser.me',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
         hostname: 'catalogospromocionales.com',
         pathname: '/**',
       },
@@ -46,22 +41,6 @@ const nextConfig = {
   trailingSlash: true,
   eslint: {
     ignoreDuringBuilds: false,
-  },
-  // Configuración de webpack para Konva
-  webpack: (config, { isServer }) => {
-    // Resolver solo la versión del navegador de Konva
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      'konva/lib/index-node': false,
-      'konva/lib/index-node.js': false,
-    };
-
-    // Ignorar módulos que requieren canvas en servidor
-    if (isServer) {
-      config.externals = [...(config.externals || []), 'canvas', 'konva'];
-    }
-
-    return config;
   },
 }
 
