@@ -60,3 +60,6 @@ venv/
 
 # Archivos de conflicto de sincronización
 *Name clash*
+
+# Local Netlify folder
+.netlify
