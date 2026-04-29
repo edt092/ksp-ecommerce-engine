@@ -63,3 +63,6 @@ venv/
 
 # Local Netlify folder
 .netlify
+
+# Borradores de blog (flujo editorial local, nunca sube a GitHub)
+content/drafts/
