@@ -11,22 +11,12 @@ const optimizedSlugs = new Set(
 module.exports = {
   siteUrl: process.env.SITE_URL || 'https://www.kronosolopromocionales.com',
 
-  generateRobotsTxt: true,
+  generateRobotsTxt: false,
   outDir: './out',
   // Configuración para sitios estáticos con output: 'export'
   generateIndexSitemap: false,
   // Excluir rutas que no deben estar en el sitemap
   exclude: ['/api/*', '/_next/*', '/admin/*', '/sitemap.xml'],
-  robotsTxtOptions: {
-    policies: [
-      {
-        userAgent: '*',
-        allow: '/',
-        disallow: ['/api/', '/_next/', '/admin/'],
-      },
-    ],
-    additionalSitemaps: [],
-  },
   // Transformar URLs para añadir trailing slash (acorde a tu configuración)
   transform: async (config, path) => {
     // Normalizar path con trailing slash
