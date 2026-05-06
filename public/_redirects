@@ -28,6 +28,10 @@
 /productos/set-destornillador-pistol/  /categorias/herramientas/    301
 
 # 301 Redirects - Slugs rastreados sin indexar (sin ID numérico → con ID)
+/productos/llavero-destapador-campello                                        /productos/llavero-destapador-campello-4808/                                        301
+/productos/llavero-destapador-campello/                                       /productos/llavero-destapador-campello-4808/                                        301
+/productos/organizador-multiusos-con-esterilizador-uvc-led-oferta             /productos/organizador-multiusos-con-esterilizador-uvc-led-oferta-9494/             301
+/productos/organizador-multiusos-con-esterilizador-uvc-led-oferta/            /productos/organizador-multiusos-con-esterilizador-uvc-led-oferta-9494/             301
 /productos/llavero-ml-356                              /productos/llavero-ml-356-8039/                              301
 /productos/llavero-ml-356/                             /productos/llavero-ml-356-8039/                              301
 /productos/floyd-stylus                                /productos/floyd-stylus-5837/                                301
