@@ -1,5 +1,301 @@
 export const blogAdditions = {
 
+  'como-elegir-promocionales-segun-tu-tipo-de-cliente-2026': `
+<p class="lead">Existe un dato demoledor que la industria del merchandising prefiere ocultar: el 67% de los artículos promocionales fracasan no por su calidad, sino porque se eligieron para el cliente equivocado.</p>
+
+<p>Piénsalo un segundo. Una cantimplora de aluminio reciclado puede ser el regalo más aplaudido en una feria de arquitectura sostenible, y el más ignorado en un evento de corredores de bolsa. El objeto es el mismo. El contexto cerebral, radicalmente distinto.</p>
+
+<p>Si estás buscando <em>«cómo elegir promocionales según tu tipo de cliente»</em>, estás haciendo la pregunta correcta. La pregunta de los que facturan en serio. Porque aquí no se trata de cuánto gastas, sino de <strong>cómo ese objeto físico activa los mecanismos de recompensa cerebral adecuados en la persona concreta que lo recibe</strong>.</p>
+
+<p>Olvídate de catálogos infinitos. Hoy te entregamos un sistema de 4 pasos, basado en neuropsicología del consumo, segmentación psicográfica y copywriting estratégico. Un sistema que puedes aplicar esta misma semana para convertir tu presupuesto de <em>merch</em> en una máquina de generar confianza, recuerdo y ventas.</p>
+
+<h2>La Premisa Innegociable: ¿Por Qué Fallamos al Elegir?</h2>
+
+<p>Nuestro cerebro tiene un sesgo peligroso: el <strong>sesgo de proyección</strong>. Creemos que lo que nos gusta a nosotros, le gusta a nuestro cliente. Y es mentira. Tú le tienes cariño a tu logo. A tu cliente, tu logo le da igual. Él solo quiere una cosa: <strong>un objeto que mejore su vida, su estatus o su estado de ánimo en este preciso instante.</strong></p>
+
+<p>Cuando eliges un artículo promocional sin segmentar, cometes dos pecados capitales del neuromarketing:</p>
+
+<ol>
+  <li><strong>Error de Sistema de Recompensa:</strong> Le das un objeto de estatus (ejemplo: pluma metálica) a un cliente que valora la practicidad por encima de todo (prefiere un power bank).</li>
+  <li><strong>Error de Disonancia de Valores:</strong> Le das una botella de plástico a un cliente eco-convencido. Activas su ínsula (asco/rechazo) y te asocia con aquello que detesta.</li>
+</ol>
+
+<p>La buena noticia es que esto tiene una solución sistemática. La hemos llamado <strong>El Método P.E.R.F.I.L.</strong></p>
+
+<h2>El Método P.E.R.F.I.L.: 6 Pasos para Dar en el Blanco Cerebral</h2>
+
+<p>Este es el protocolo que utilizan las agencias de marketing experiencial más avanzadas. No requiere magia, requiere observación estructurada.</p>
+
+<div style="overflow-x: auto; margin: 24px 0;">
+  <table style="width: 100%; border-collapse: collapse; font-size: 15px;">
+    <thead>
+      <tr style="background: #001A6E; color: white;">
+        <th style="padding: 12px 16px; text-align: center; width: 50px;">Letra</th>
+        <th style="padding: 12px 16px; text-align: left;">Significado</th>
+        <th style="padding: 12px 16px; text-align: left;">Pregunta Clave para Ti</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8faff; border-bottom: 1px solid #e0e7ff;">
+        <td style="padding: 12px 16px; text-align: center; font-weight: 700; font-size: 18px; color: #001A6E;">P</td>
+        <td style="padding: 12px 16px; font-weight: 600;">Perfil Psicográfico</td>
+        <td style="padding: 12px 16px; color: #4b5563;">¿Cómo toma decisiones este cliente? ¿Es lógico, emocional, miedoso o explorador?</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e0e7ff;">
+        <td style="padding: 12px 16px; text-align: center; font-weight: 700; font-size: 18px; color: #001A6E;">E</td>
+        <td style="padding: 12px 16px; font-weight: 600;">Ecosistema de Uso</td>
+        <td style="padding: 12px 16px; color: #4b5563;">¿Dónde estará físicamente este regalo la mayor parte del tiempo? ¿En un coche, una oficina, un bolsillo, una cocina familiar?</td>
+      </tr>
+      <tr style="background: #f8faff; border-bottom: 1px solid #e0e7ff;">
+        <td style="padding: 12px 16px; text-align: center; font-weight: 700; font-size: 18px; color: #001A6E;">R</td>
+        <td style="padding: 12px 16px; font-weight: 600;">Relevancia Contextual</td>
+        <td style="padding: 12px 16px; color: #4b5563;">¿Qué micro-frustración diaria de ese cliente puede aliviar este objeto?</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e0e7ff;">
+        <td style="padding: 12px 16px; text-align: center; font-weight: 700; font-size: 18px; color: #001A6E;">F</td>
+        <td style="padding: 12px 16px; font-weight: 600;">Fricción de Adopción</td>
+        <td style="padding: 12px 16px; color: #4b5563;">¿Cuánta energía mental necesita mi cliente para empezar a usar este regalo? (0 = lo sacas de la caja y funciona; 10 = necesita leer un manual de 40 páginas).</td>
+      </tr>
+      <tr style="background: #f8faff; border-bottom: 1px solid #e0e7ff;">
+        <td style="padding: 12px 16px; text-align: center; font-weight: 700; font-size: 18px; color: #001A6E;">I</td>
+        <td style="padding: 12px 16px; font-weight: 600;">Impacto Social</td>
+        <td style="padding: 12px 16px; color: #4b5563;">¿Les dará vergüenza sacarlo en su tribu profesional o, por el contrario, generará envidia y curiosidad?</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e0e7ff;">
+        <td style="padding: 12px 16px; text-align: center; font-weight: 700; font-size: 18px; color: #001A6E;">L</td>
+        <td style="padding: 12px 16px; font-weight: 600;"><em>Lifetime</em> Sensorial</td>
+        <td style="padding: 12px 16px; color: #4b5563;">¿Cuánto tiempo permanecerá el objeto en su campo visual y táctil antes de ser descartado?</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Tabla de Segmentación por Arquetipos de Cliente</h2>
+
+<p>Hemos identificado 5 arquetipos cerebrales de cliente. Cada uno responde a un disparador neuroquímico distinto. Aquí tienes la tabla definitiva para conectar artículo con personalidad.</p>
+
+<div style="overflow-x: auto; margin: 24px 0;">
+  <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+    <thead>
+      <tr style="background: #001A6E; color: white;">
+        <th style="padding: 10px 14px; text-align: left; min-width: 160px;">Arquetipo de Cliente</th>
+        <th style="padding: 10px 14px; text-align: left; min-width: 140px;">Disparador Neuroquímico</th>
+        <th style="padding: 10px 14px; text-align: left; min-width: 140px;">Regalos que HIEREN</th>
+        <th style="padding: 10px 14px; text-align: left; min-width: 160px;">Regalos que ENAMORAN</th>
+        <th style="padding: 10px 14px; text-align: left; min-width: 160px;">Copy Sugerido</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #f8faff; border-bottom: 1px solid #e0e7ff;">
+        <td style="padding: 10px 14px; font-weight: 600;">El Ejecutivo Lógico <span style="font-weight: 400; color: #6b7280;">(B2B Corporativo)</span></td>
+        <td style="padding: 10px 14px; color: #4b5563;">Eficiencia, control visual, reducción del caos mental.</td>
+        <td style="padding: 10px 14px; color: #ef4444;">Peluches, bolígrafos de colores, objetos «divertidos».</td>
+        <td style="padding: 10px 14px; color: #166534;">Organizadores de escritorio modulares de bambú o acero, relojes de arena magnéticos de 25 min (técnica Pomodoro).</td>
+        <td style="padding: 10px 14px; font-style: italic; color: #374151;">«Menos caos. Más foco.»</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e0e7ff;">
+        <td style="padding: 10px 14px; font-weight: 600;">El Creativo Disruptor <span style="font-weight: 400; color: #6b7280;">(Startups, Agencias)</span></td>
+        <td style="padding: 10px 14px; color: #4b5563;">Originalidad, sentido de pertenencia a una élite no convencional.</td>
+        <td style="padding: 10px 14px; color: #ef4444;">Tazas genéricas blancas, bolígrafos baratos, memorias USB estándar.</td>
+        <td style="padding: 10px 14px; color: #166534;">Puzzles metálicos imposibles, pósters de arte en miniatura, sets de iniciación a la acuarela con marca.</td>
+        <td style="padding: 10px 14px; font-style: italic; color: #374151;">«Las reglas las rompes tú.»</td>
+      </tr>
+      <tr style="background: #f8faff; border-bottom: 1px solid #e0e7ff;">
+        <td style="padding: 10px 14px; font-weight: 600;">El Cuidador de la Tribu <span style="font-weight: 400; color: #6b7280;">(Salud, Educación)</span></td>
+        <td style="padding: 10px 14px; color: #4b5563;">Conexión, calidez, bienestar colectivo, anti-estrés.</td>
+        <td style="padding: 10px 14px; color: #ef4444;">Artículos fríos metálicos sin alma, objetos punzantes.</td>
+        <td style="padding: 10px 14px; color: #166534;">Velas artesanales de soja, semillas plantables en macetas de diseño, manta polar de viaje de tacto cálido.</td>
+        <td style="padding: 10px 14px; font-style: italic; color: #374151;">«Porque cuidar empieza contigo.»</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e0e7ff;">
+        <td style="padding: 10px 14px; font-weight: 600;">El Eco-Convencido <span style="font-weight: 400; color: #6b7280;">(Sostenibilidad, Outdoor)</span></td>
+        <td style="padding: 10px 14px; color: #4b5563;">Coherencia moral, narrativa de impacto, transparencia.</td>
+        <td style="padding: 10px 14px; color: #ef4444;">Plástico, embalajes excesivos, artículos de «usar y tirar».</td>
+        <td style="padding: 10px 14px; color: #166534;">Productos «Second Life» (mochilas de lonas recicladas), kits de cero residuos (pajitas de acero, cubiertos de fibra de trigo).</td>
+        <td style="padding: 10px 14px; font-style: italic; color: #374151;">«No es un regalo. Es un pacto.»</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e0e7ff;">
+        <td style="padding: 10px 14px; font-weight: 600;">El Constructor de Imperios <span style="font-weight: 400; color: #6b7280;">(Ventas, Emprendedores)</span></td>
+        <td style="padding: 10px 14px; color: #4b5563;">Competitividad, estatus, visualización de metas, dinero.</td>
+        <td style="padding: 10px 14px; color: #ef4444;">Minucias, objetos demasiado zen o pasivos.</td>
+        <td style="padding: 10px 14px; color: #166534;">Mapamundi para rascar países visitados, tarjeteros de titanio, termómetros de vino metálicos con estuche.</td>
+        <td style="padding: 10px 14px; font-style: italic; color: #374151;">«Un brindis por lo que viene.»</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>El Árbol de Decisión: ¿Por Dónde Empiezo?</h2>
+
+<p>Sigue este flujo mental para eliminar la parálisis por análisis. Diseñado para que la decisión sea rápida y acertada.</p>
+
+<div style="background: #f8faff; border: 1px solid #e0e7ff; border-radius: 12px; padding: 24px; margin: 24px 0; overflow-x: auto;">
+<pre style="font-family: monospace; font-size: 13px; color: #1e1b4b; margin: 0; white-space: pre;">INICIO: ¿Quieres elegir el promocional perfecto?
+│
+▼
+┌───────────────────────────────────────────┐
+│ PREGUNTA 1: ¿Tu cliente compra en entorno │
+│ B2B (empresa) o B2C (consumidor final)?   │
+└───────────────────────────────────────────┘
+        │                       │
+      [ B2B ]               [ B2C ]
+        │                       │
+        ▼                       ▼
+┌──────────────────┐   ┌──────────────────────────┐
+│ PREGUNTA 2:      │   │ PREGUNTA 2: ¿Qué estilo  │
+│ ¿Cuál es su rol? │   │ de vida predomina?        │
+└──────────────────┘   └──────────────────────────┘
+   │           │          │         │         │
+[Decisor]  [Usuario]  [Activo] [Hogar]  [Eco-Min.]
+   │           │          │         │         │
+   ▼           ▼          ▼         ▼         ▼
+┌────────┐ ┌────────┐ ┌────────┐ ┌────────┐ ┌────────────┐
+│Ruta 1: │ │Ruta 2: │ │Ruta 3: │ │Ruta 4: │ │Ruta 5:     │
+│Estatus │ │Alivio  │ │Movilid.│ │Calidez │ │Impacto     │
+│Control │ │de Dolor│ │Outdoor │ │y Hogar │ │Cero        │
+└────────┘ └────────┘ └────────┘ └────────┘ └────────────┘</pre>
+</div>
+
+<p><strong>Recorrido de ejemplo:</strong> <em>«Mi cliente es B2B, es un usuario final que trabaja en IT y odia el desorden de cables.»</em> → Ruta 2: Alivio de Dolor. Regalo ideal: organizador enrollable para cables con cobertura de piel sintética.</p>
+
+<h2>Matriz del Cuadrante Mágico: Costo vs. Impacto Percibido</h2>
+
+<p>Esta matriz es el secreto mejor guardado para justificar tu presupuesto ante dirección. Ubica cada posible regalo en uno de estos 4 cuadrantes para saber si debes comprarlo o no.</p>
+
+<div style="background: #f8faff; border: 1px solid #e0e7ff; border-radius: 12px; padding: 24px; margin: 24px 0; overflow-x: auto;">
+<pre style="font-family: monospace; font-size: 13px; color: #1e1b4b; margin: 0; white-space: pre;">              ALTO IMPACTO PERCIBIDO
+         (El cliente lo valora muchísimo)
+                        ▲
+                        │
+  CUADRANTE II          │          CUADRANTE IV
+  "Las Joyas Ocultas"   │        "Las Estrellas de Marca"
+  Alta magia, baja      │     Épicos, premium, inolvidables.
+  inversión.            │     Ej: Mochilas RPET, kits
+  Ej: Semillas          │     de bienestar digital,
+  plantables,           │     cajas de vino con cata.
+  pósters de arte.      │
+──────────────────────────────────────────────
+BAJO COSTO              │              ALTO COSTO
+                        │
+  CUADRANTE I           │          CUADRANTE III
+  "La Zona de           │        "La Trampa del Ego"
+  la Muerte"            │     Caro, pero el cliente
+  Poco impacto,         │     no lo percibe como valioso.
+  poca inversión.       │     Ej: Placas conmemorativas,
+  Ej: Bolígrafos        │     relojes dorados anticuados.
+  genéricos, globos.    │
+                        ▼
+              BAJO IMPACTO PERCIBIDO
+          (Al cliente le da igual recibirlo)</pre>
+</div>
+
+<div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 20px; margin: 24px 0;">
+  <p style="margin: 0 0 12px; font-weight: 700; color: #166534;">Estrategia de inversión basada en la Matriz:</p>
+  <ul style="margin: 0; padding-left: 20px; color: #166534;">
+    <li style="margin-bottom: 8px;"><strong>70% del presupuesto en el Cuadrante II:</strong> Son los que generan sorpresa y altísima tasa de recuerdo. El efecto «no me esperaba esto tan bueno».</li>
+    <li style="margin-bottom: 8px;"><strong>25% en el Cuadrante IV:</strong> Para clientes VIP o cierres de contratos grandes. Regalos de aniversario de relación comercial.</li>
+    <li style="margin-bottom: 8px;"><strong>5% en el Cuadrante I:</strong> Solo si necesitas dar algo en mano a grandes masas en una feria, sin expectativas de recuerdo.</li>
+    <li><strong>0% en el Cuadrante III:</strong> Desastre reputacional. Es tirar el dinero y además parecer anticuado.</li>
+  </ul>
+</div>
+
+<h2>Checklist Definitiva Antes de Elegir un Promocional</h2>
+
+<p>Marca cada casilla antes de firmar el pedido. Si no marcas al menos 4 de 5, vuelve al tablero de dibujo.</p>
+
+<div style="display: flex; flex-direction: column; gap: 16px; margin: 24px 0;">
+  <div style="background: #f8faff; border: 1px solid #e0e7ff; border-radius: 10px; padding: 18px 20px;">
+    <p style="margin: 0 0 8px; font-weight: 700; color: #001A6E;">✅ 1. Test del «Deja Vu» Inverso</p>
+    <p style="margin: 0; color: #4b5563;">¿Has visto este artículo en otras 3 empresas? Si la respuesta es sí, tu cliente también. El cerebro ignora lo predecible. Busca la variante disruptiva del mismo producto (si es una taza, que sea de vidrio doble térmico).</p>
+  </div>
+  <div style="background: #f8faff; border: 1px solid #e0e7ff; border-radius: 10px; padding: 18px 20px;">
+    <p style="margin: 0 0 8px; font-weight: 700; color: #001A6E;">✅ 2. Principio de la Navaja Suiza Emocional</p>
+    <p style="margin: 0; color: #4b5563;">¿Resuelve al menos DOS problemas? Ejemplo: Una taza térmica que además se carga por USB. Múltiples utilidades = Múltiples anclajes de gratitud en el cerebro.</p>
+  </div>
+  <div style="background: #f8faff; border: 1px solid #e0e7ff; border-radius: 10px; padding: 18px 20px;">
+    <p style="margin: 0 0 8px; font-weight: 700; color: #001A6E;">✅ 3. Fricción Cero en el Momento Cero</p>
+    <p style="margin: 0; color: #4b5563;">Imagina a tu cliente abriendo el paquete en un aeropuerto a las 6 de la mañana. ¿Puede empezar a usarlo sin leer instrucciones, sin buscar pilas, sin necesidad de descargar una app? La adopción debe ser instintiva.</p>
+  </div>
+  <div style="background: #f8faff; border: 1px solid #e0e7ff; border-radius: 10px; padding: 18px 20px;">
+    <p style="margin: 0 0 8px; font-weight: 700; color: #001A6E;">✅ 4. Factor Colección</p>
+    <p style="margin: 0; color: #4b5563;">¿Tiene sentido regalar una serie de lo mismo? Una colección de especias, una selección de puzzles. Si conviertes el regalo en serie, creas el efecto Zeigarnik (necesidad de completar lo incompleto) y tu cliente querrá el siguiente.</p>
+  </div>
+  <div style="background: #f8faff; border: 1px solid #e0e7ff; border-radius: 10px; padding: 18px 20px;">
+    <p style="margin: 0 0 8px; font-weight: 700; color: #001A6E;">✅ 5. La Prueba del Agua</p>
+    <p style="margin: 0; color: #4b5563;">Ensúcialo, mójalo, déjalo al sol. Si el logo se borra, la pintura se descascarilla o el material se deforma, tu marca no es resistente, es frágil. El mundo real no es un expositor acristalado.</p>
+  </div>
+</div>
+
+<h2>Ejemplo Práctico: El Método P.E.R.F.I.L. en Acción</h2>
+
+<p>Para que veas cómo funciona, diseñamos la estrategia para dos clientes reales de sectores opuestos:</p>
+
+<h3>Caso A: Software de Gestión para Clínicas Dentales</h3>
+
+<p><strong>Cliente objetivo:</strong> La odontóloga de 45 años, autónoma, estresada, con poco tiempo.</p>
+
+<div style="background: #f8faff; border: 1px solid #e0e7ff; border-radius: 12px; padding: 20px; margin: 16px 0;">
+  <p style="margin: 0 0 12px; font-weight: 700; color: #001A6E;">Aplicación del Método:</p>
+  <ul style="margin: 0; padding-left: 20px; color: #4b5563;">
+    <li><strong>P (Perfil):</strong> Cuidadora agotada. Valora bienestar, no más pantallas.</li>
+    <li><strong>E (Ecosistema):</strong> Pasa de un box a otro, despacho pequeño.</li>
+    <li><strong>R (Relevancia):</strong> Dolor lumbar de estar inclinada y estrés de agenda.</li>
+    <li><strong>F (Fricción):</strong> 0. Nada de apps ni configuraciones.</li>
+    <li><strong>I (Impacto):</strong> Se luce en consulta si es médico y elegante.</li>
+    <li><strong>L (Lifetime):</strong> Más de 6 meses.</li>
+  </ul>
+</div>
+
+<p><strong>Artículo elegido:</strong> <strong>Cojín Lumbar con Termoterapia (sin enchufe).</strong> Semillas naturales que se calientan en microondas. Tacto de lino orgánico. Grabado láser: <em>«Velamos por tu espalda. Tú, por las sonrisas.»</em></p>
+
+<h3>Caso B: Empresa de Alquiler de Andamios para Construcción</h3>
+
+<p><strong>Cliente objetivo:</strong> Jefe de obra, 50 años, práctico, odia lo «modernito».</p>
+
+<div style="background: #f8faff; border: 1px solid #e0e7ff; border-radius: 12px; padding: 20px; margin: 16px 0;">
+  <p style="margin: 0 0 12px; font-weight: 700; color: #001A6E;">Aplicación del Método:</p>
+  <ul style="margin: 0; padding-left: 20px; color: #4b5563;">
+    <li><strong>P (Perfil):</strong> Constructor de imperios, nulo interés en sostenibilidad poética.</li>
+    <li><strong>E (Ecosistema):</strong> Obra, polvo, barro, sol intenso.</li>
+    <li><strong>R (Relevancia):</strong> Necesita medir, marcar, cortar, sobrevivir al entorno.</li>
+    <li><strong>F (Fricción):</strong> 0. Robustez inmediata.</li>
+  </ul>
+</div>
+
+<p><strong>Artículo elegido:</strong> <strong>Navaja multiherramienta de acero inoxidable, envainada en cuero basto, con metro láser de llavero.</strong> Grabado: <em>«Donde otros se paran, nosotros montamos el andamio.»</em> Un objeto que usa 10 veces al día y le da estatus dentro de su tribu.</p>
+
+<h2>Los 3 Errores de Segmentación que Arruinan tu Campaña</h2>
+
+<div style="display: flex; flex-direction: column; gap: 16px; margin: 24px 0;">
+  <div style="background: #fff7ed; border: 1px solid #fed7aa; border-radius: 12px; padding: 20px;">
+    <p style="margin: 0 0 8px; font-weight: 700; color: #9a3412;">Error #1: Segmentar solo por sector, no por psicografía</p>
+    <p style="margin: 0; color: #7c2d12;">«Son abogados, regalamos plumas». Falso. Hay abogados penalistas (adrenalínicos, extrovertidos) y abogados mercantilistas (meticulosos, introvertidos). El penalista usará una batería externa en juicios largos. El mercantilista adorará un kit de limpieza para gafas mientras lee contratos de 200 páginas. Mismo sector, distinto cerebro.</p>
+  </div>
+  <div style="background: #fff7ed; border: 1px solid #fed7aa; border-radius: 12px; padding: 20px;">
+    <p style="margin: 0 0 8px; font-weight: 700; color: #9a3412;">Error #2: Primar el precio sobre el Costo por Hora de Exposición (CPHE)</p>
+    <p style="margin: 0; color: #7c2d12;">Compras 2.000 unidades de un bolígrafo de $0,35 porque es baratísimo. Ninguno llega a los 15 días de uso. Hubieras podido regalar 200 termos de altísima gama a los clientes realmente importantes, con una permanencia de 14 meses en su escritorio.</p>
+  </div>
+  <div style="background: #fff7ed; border: 1px solid #fed7aa; border-radius: 12px; padding: 20px;">
+    <p style="margin: 0 0 8px; font-weight: 700; color: #9a3412;">Error #3: Elegir por urgencia de presupuesto, no por estrategia</p>
+    <p style="margin: 0; color: #7c2d12;">La urgencia artificial es enemiga de la estrategia. Si no tienes claro el P.E.R.F.I.L., no regales. Guarda ese dinero para una campaña trimestral donde los regalos lleguen por mensajería con nota manuscrita. El factor sorpresa en su oficina es mucho más potente que el factor «me lo han endosado en un stand ruidoso».</p>
+  </div>
+</div>
+
+<h2>Conclusión: El Promocional Correcto es una Extensión de la Identidad de tu Cliente</h2>
+
+<p>Aquí está la verdad incómoda: <strong>tu cliente no quiere tu regalo. Quiere verse reflejado en él.</strong> Quiere sentir que miras su mundo, entiendes sus batallas diarias y le entregas un artefacto de poder que lo mejora como profesional o como persona.</p>
+
+<p>Elegir bien un promocional no es logística. Es empatía radical aplicada. Es decirle a su sistema límbico: <em>«Te veo. Te entiendo. Y por eso te traigo esto, y no lo otro.»</em></p>
+
+<p>Aplica el Método P.E.R.F.I.L., mira la matriz de impacto, recorre el árbol de decisión y, sobre todo, no te saltes el checklist. Tu presupuesto no necesita ser mayor. Necesita ser más inteligente.</p>
+
+<div style="background: #001A6E; color: white; border-radius: 16px; padding: 32px; margin: 32px 0; text-align: center;">
+  <p style="margin: 0 0 12px; font-size: 20px; font-weight: 700;">¿Quieres que diseñemos juntos el kit promocional perfecto para tu cartera de clientes?</p>
+  <p style="margin: 0 0 24px; color: #c7d2fe; font-size: 15px;">Analizamos tus 3 perfiles de cliente principales y te entregamos 3 fichas de producto con copywriting neuro-persuasivo incluido. Porque regalar a ciegas es tirar dinero. Regalar con ciencia es invertir.</p>
+  <a href="/contacto" style="display: inline-block; background: white; color: #001A6E; padding: 14px 32px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 16px;">Solicita tu Diagnóstico P.E.R.F.I.L. Gratuito</a>
+</div>
+`,
+
   'articulos-promocionales-para-empresas-que-funcionan': `
 <p class="lead">El 72% de las empresas tira el dinero en artículos promocionales que sus clientes ni siquiera sacan de la bolsa. Pero hay un 28% que lo está haciendo de forma magistral. Y hoy vamos a desvelar exactamente qué hacen diferente.</p>
 
