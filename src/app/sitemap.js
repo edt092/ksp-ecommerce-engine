@@ -20,6 +20,7 @@ export default function sitemap() {
     { url: `${BASE_URL}/politica-de-privacidad/`,           lastModified: '2026-01-01', priority: 0.3 },
     { url: `${BASE_URL}/productos-promocionales-ecuador/`,  lastModified: BUILD_DATE, priority: 0.9 },
     { url: `${BASE_URL}/productos-promocionales-colombia/`, lastModified: BUILD_DATE, priority: 0.9 },
+    { url: `${BASE_URL}/regalos-corporativos/`,             lastModified: BUILD_DATE, priority: 0.9 },
   ];
 
   // --- Product routes ------------------------------------------------------

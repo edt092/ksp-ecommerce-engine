@@ -4,6 +4,7 @@
   "description": "Tienda de productos promocionales con storytelling y conversiones por WhatsApp",
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/split-products-by-category.js",
     "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start",

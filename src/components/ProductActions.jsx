@@ -1,19 +1,24 @@
 'use client';
 
+import { useState } from 'react';
+import CountryWhatsAppModal from './CountryWhatsAppModal';
+
 export default function ProductActions({ product }) {
-  const handleDirectWhatsApp = () => {
-    const phoneNumber = '593999814838';
-    const message = product.whatsappMessage || `Hola! Me interesa el producto ${product.name}. ¿Podrían enviarme más información?`;
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-    window.open(whatsappUrl, '_blank');
-  };
+  const [open, setOpen] = useState(false);
+  const message = product.whatsappMessage || `Hola! Me interesa el producto ${product.name}. ¿Podrían enviarme más información?`;
 
   return (
     <div className="flex flex-col gap-3 md:gap-4">
-      {/* Botón principal: Cotización directa */}
+      {open && (
+        <CountryWhatsAppModal
+          message={message}
+          onClose={() => setOpen(false)}
+          context={product.name || 'product'}
+        />
+      )}
+
       <button
-        onClick={handleDirectWhatsApp}
+        onClick={() => setOpen(true)}
         className="group w-full bg-green-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-xl font-bold text-base md:text-lg hover:bg-green-700 hover:shadow-lg transform hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2 md:gap-3"
         aria-label="Cotizar por WhatsApp"
       >
@@ -24,7 +29,6 @@ export default function ProductActions({ product }) {
         <span className="sm:hidden">Cotizar por WhatsApp</span>
       </button>
 
-      {/* Info adicional */}
       <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm text-gray-600 mt-1 md:mt-2">
         <div className="flex items-center gap-2">
           <svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
