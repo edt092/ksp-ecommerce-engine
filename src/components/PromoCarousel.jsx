@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
+import CountryWhatsAppModal from './CountryWhatsAppModal';
 
 const slides = [
   {
@@ -20,7 +21,7 @@ const slides = [
     title: 'Mugs y Termos',
     subtitle: 'Personaliza tu marca',
     description: 'Amplia variedad de mugs, termos y vasos personalizables para tu empresa',
-    ctaStore: { text: 'Ver Colección', href: '/categorias/mugs-vasos-termos' },
+    ctaStore: { text: 'Ver Colección', href: '/categorias/mugs-y-termos-personalizados' },
     ctaWhatsapp: { text: 'Solicitar Cotización', message: 'Hola, me interesan los mugs y termos personalizados' }
   },
   {
@@ -29,7 +30,7 @@ const slides = [
     title: 'Tecnología Promocional',
     subtitle: 'Innovación para tu marca',
     description: 'Audífonos, parlantes, cargadores y más productos tech personalizados',
-    ctaStore: { text: 'Explorar Tech', href: '/categorias/tecnologia' },
+    ctaStore: { text: 'Explorar Tech', href: '/categorias/tecnologia-promocional' },
     ctaWhatsapp: { text: 'Pedir Info', message: 'Hola, me interesa la tecnología promocional' }
   },
   {
@@ -38,7 +39,7 @@ const slides = [
     title: 'Artículos de Escritura',
     subtitle: 'Impacta en cada oficina',
     description: 'Bolígrafos, libretas, organizadores y más para el día a día corporativo',
-    ctaStore: { text: 'Ver Artículos', href: '/categorias/escritura' },
+    ctaStore: { text: 'Ver Artículos', href: '/categorias/boligrafos-publicitarios' },
     ctaWhatsapp: { text: 'Cotizar', message: 'Hola, necesito artículos de escritura personalizados' }
   },
   {
@@ -47,7 +48,7 @@ const slides = [
     title: 'Artículos de Oficina',
     subtitle: 'Tu marca en cada escritorio',
     description: 'Libretas, calculadoras, sets de escritorio y más para el día a día corporativo',
-    ctaStore: { text: 'Ver Artículos', href: '/categorias/oficina' },
+    ctaStore: { text: 'Ver Artículos', href: '/categorias/articulos-de-oficina-personalizados' },
     ctaWhatsapp: { text: 'Solicitar Precio', message: 'Hola, me interesan artículos de oficina corporativos' }
   }
 ];
@@ -55,6 +56,7 @@ const slides = [
 export default function PromoCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [waMessage, setWaMessage] = useState(null);
 
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -77,13 +79,15 @@ export default function PromoCarousel() {
     return () => clearInterval(interval);
   }, [isAutoPlaying, nextSlide]);
 
-  const handleWhatsAppClick = (message) => {
-    const phoneNumber = '593999814838';
-    const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
-  };
-
   return (
+    <>
+    {waMessage && (
+      <CountryWhatsAppModal
+        message={waMessage}
+        onClose={() => setWaMessage(null)}
+        context="carousel"
+      />
+    )}
     <section className="py-16 md:py-20 bg-white">
       <div className="container mx-auto px-4">
         {/* Section Header */}
@@ -146,7 +150,7 @@ export default function PromoCarousel() {
                           <ArrowRight className="w-4 h-4" />
                         </Link>
                         <button
-                          onClick={() => handleWhatsAppClick(slide.ctaWhatsapp.message)}
+                          onClick={() => setWaMessage(slide.ctaWhatsapp.message)}
                           className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300"
                         >
                           <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -196,5 +200,6 @@ export default function PromoCarousel() {
         </div>
       </div>
     </section>
+    </>
   );
 }

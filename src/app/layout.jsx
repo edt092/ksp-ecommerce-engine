@@ -44,15 +44,15 @@ export const viewport = {
 
 export const metadata = {
   metadataBase: new URL('https://www.kronosolopromocionales.com'),
-  title: 'Productos Promocionales Ecuador | Regalos Corporativos KS',
-  description: 'Artículos promocionales y regalos corporativos en Ecuador. Personalizamos mugs, tecnología y más con tu logo. ¡Cotiza por WhatsApp! Envíos nacionales.',
+  title: 'Material Publicitario y Artículos Promocionales Ecuador | KS Promocionales',
+  description: 'Material publicitario y artículos promocionales personalizados con tu logo en Ecuador. Regalos corporativos, mugs, bolígrafos, tecnología y más. Cotiza hoy por WhatsApp.',
   openGraph: {
     type: 'website',
     locale: 'es_EC',
     url: 'https://www.kronosolopromocionales.com/',
     siteName: 'KS Promocionales',
-    title: 'Productos Promocionales Ecuador | Regalos Corporativos KS',
-    description: 'Artículos promocionales y regalos corporativos en Ecuador. Personalizamos mugs, tecnología y más con tu logo. ¡Cotiza por WhatsApp! Envíos nacionales.',
+    title: 'Material Publicitario y Artículos Promocionales Ecuador | KS Promocionales',
+    description: 'Material publicitario y artículos promocionales personalizados con tu logo en Ecuador. Regalos corporativos, mugs, bolígrafos, tecnología y más. Cotiza hoy por WhatsApp.',
     images: [
       {
         url: '/images/og-image.jpg',

@@ -46,6 +46,7 @@ module.exports = {
         serif: ['var(--font-dm-serif)', 'Georgia', 'serif'],
       },
       animation: {
+        'slideUpFade': 'slideUpFade 0.22s ease-out both',
         'fade-in': 'fadeIn 0.6s ease-out forwards',
         'slide-up': 'slideUp 0.7s ease-out forwards',
         'slide-down': 'slideDown 0.5s ease-out forwards',
@@ -88,6 +89,10 @@ module.exports = {
         marquee: {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-50%)' },
+        },
+        slideUpFade: {
+          '0%': { opacity: '0', transform: 'translateY(10px) scale(0.96)' },
+          '100%': { opacity: '1', transform: 'translateY(0) scale(1)' },
         },
       },
       boxShadow: {

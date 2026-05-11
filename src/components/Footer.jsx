@@ -14,12 +14,12 @@ const quickLinks = [
 ];
 
 const categories = [
-  { name: 'Tecnología', href: '/categorias/tecnologia' },
-  { name: 'Mugs y Termos', href: '/categorias/mugs' },
-  { name: 'Oficina', href: '/categorias/oficina' },
-  { name: 'Escritura', href: '/categorias/escritura' },
+  { name: 'Tecnología Promocional', href: '/categorias/tecnologia-promocional' },
+  { name: 'Mugs y Termos', href: '/categorias/mugs-y-termos-personalizados' },
+  { name: 'Artículos de Oficina', href: '/categorias/articulos-de-oficina-personalizados' },
+  { name: 'Bolígrafos Publicitarios', href: '/categorias/boligrafos-publicitarios' },
   { name: 'Ecología', href: '/categorias/ecologia' },
-  { name: 'Llaveros', href: '/categorias/llaveros' },
+  { name: 'Llaveros', href: '/categorias/llaveros-personalizados' },
   { name: 'Deportes', href: '/categorias/deportes' },
   { name: 'Novedades', href: '/categorias/novedades' },
 ];
