@@ -94,9 +94,9 @@ export default function ProductPage({ params }) {
 
   const category = categoriesData.find(c => c.id === product.categoryId);
 
-  // Get related products from same category
+  // Get related products from same category (optimized only, to avoid linking to noindex pages)
   const relatedProducts = productsData
-    .filter(p => p.categoryId === product.categoryId && p.id !== product.id)
+    .filter(p => p.categoryId === product.categoryId && p.id !== product.id && p.is_ai_optimized)
     .slice(0, 3);
 
   const BASE_URL = 'https://www.kronosolopromocionales.com';

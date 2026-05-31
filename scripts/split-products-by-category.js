@@ -12,6 +12,7 @@ const products = JSON.parse(readFileSync(PRODUCTS_PATH, 'utf-8'));
 
 const byCategory = {};
 for (const p of products) {
+  if (!p.is_ai_optimized) continue;
   const cid = p.categoryId;
   if (!cid) continue;
   if (!byCategory[cid]) byCategory[cid] = [];

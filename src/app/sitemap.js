@@ -7,20 +7,20 @@ const BASE_URL = 'https://www.kronosolopromocionales.com';
 
 // Build date references — use real known dates rather than new Date()
 // which causes every lastmod to be identical and lie about modification time.
-const BUILD_DATE = '2026-04-16';
+const BUILD_DATE = '2026-05-31';
 
 export default function sitemap() {
   // --- Static routes -------------------------------------------------------
   const staticRoutes = [
-    { url: `${BASE_URL}/`,                                  lastModified: BUILD_DATE, priority: 1.0 },
-    { url: `${BASE_URL}/contacto/`,                         lastModified: BUILD_DATE, priority: 0.8 },
-    { url: `${BASE_URL}/nosotros/`,                         lastModified: '2026-01-15', priority: 0.6 },
-    { url: `${BASE_URL}/blog/`,                             lastModified: BUILD_DATE, priority: 0.8 },
-    { url: `${BASE_URL}/catalogos-digitales/`,              lastModified: '2026-02-01', priority: 0.6 },
-    { url: `${BASE_URL}/politica-de-privacidad/`,           lastModified: '2026-01-01', priority: 0.3 },
-    { url: `${BASE_URL}/productos-promocionales-ecuador/`,  lastModified: BUILD_DATE, priority: 0.9 },
-    { url: `${BASE_URL}/productos-promocionales-colombia/`, lastModified: BUILD_DATE, priority: 0.9 },
-    { url: `${BASE_URL}/regalos-corporativos/`,             lastModified: BUILD_DATE, priority: 0.9 },
+    { url: `${BASE_URL}/`,                                  lastModified: BUILD_DATE, priority: 1.0, changeFrequency: 'weekly' },
+    { url: `${BASE_URL}/contacto/`,                         lastModified: BUILD_DATE, priority: 0.8, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/nosotros/`,                         lastModified: '2026-01-15', priority: 0.6, changeFrequency: 'yearly' },
+    { url: `${BASE_URL}/blog/`,                             lastModified: BUILD_DATE, priority: 0.8, changeFrequency: 'weekly' },
+    { url: `${BASE_URL}/catalogos-digitales/`,              lastModified: '2026-02-01', priority: 0.6, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/politica-de-privacidad/`,           lastModified: '2026-01-01', priority: 0.3, changeFrequency: 'yearly' },
+    { url: `${BASE_URL}/productos-promocionales-ecuador/`,  lastModified: BUILD_DATE, priority: 0.9, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/productos-promocionales-colombia/`, lastModified: BUILD_DATE, priority: 0.9, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/regalos-corporativos/`,             lastModified: BUILD_DATE, priority: 0.9, changeFrequency: 'monthly' },
   ];
 
   // --- Product routes ------------------------------------------------------
@@ -32,6 +32,8 @@ export default function sitemap() {
     .map((p) => ({
       url: `${BASE_URL}/productos/${p.slug}/`,
       lastModified: p.updatedAt || p.createdAt || BUILD_DATE,
+      priority: 0.6,
+      changeFrequency: 'monthly',
     }));
 
   // --- Blog routes ---------------------------------------------------------
@@ -43,12 +45,16 @@ export default function sitemap() {
       : p.date
         ? p.date.slice(0, 10)
         : BUILD_DATE,
+    priority: 0.7,
+    changeFrequency: 'monthly',
   }));
 
   // --- Category routes -----------------------------------------------------
   const categoryRoutes = categoriesData.map((c) => ({
     url: `${BASE_URL}/categorias/${c.slug}/`,
     lastModified: BUILD_DATE,
+    priority: 0.8,
+    changeFrequency: 'weekly',
   }));
 
   // --- Geo city routes (Ecuador) -------------------------------------------
@@ -59,11 +65,15 @@ export default function sitemap() {
   const ecuadorCityRoutes = ecuador.ciudades.map((ciudad) => ({
     url: `${BASE_URL}/productos-promocionales-ecuador/${ciudad.slug}/`,
     lastModified: BUILD_DATE,
+    priority: 0.7,
+    changeFrequency: 'monthly',
   }));
 
   const colombiaCityRoutes = colombia.ciudades.map((ciudad) => ({
     url: `${BASE_URL}/productos-promocionales-colombia/${ciudad.slug}/`,
     lastModified: BUILD_DATE,
+    priority: 0.7,
+    changeFrequency: 'monthly',
   }));
 
   const allRoutes = [

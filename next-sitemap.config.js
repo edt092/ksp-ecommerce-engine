@@ -74,6 +74,8 @@ module.exports = {
     return {
       loc: normalizedPath,
       lastmod,
+      priority,
+      changefreq,
     };
   },
   autoLastmod: true,
