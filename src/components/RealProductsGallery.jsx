@@ -208,39 +208,6 @@ export default function RealProductsGallery() {
         </dl>
       </div>
 
-      {/* ── Editorial bento grid — Desktop ── */}
-      <div className="container mx-auto px-4 py-10 md:py-12">
-        <div className="hidden md:grid gap-3 bento-grid">
-          <FeaturedCard
-            img={FEATURED[0]}
-            className="bento-tall"
-            sizesAttr="(max-width: 1280px) 42vw, 520px"
-            priority
-          />
-          {FEATURED.slice(1).map((img, i) => (
-            <FeaturedCard
-              key={i}
-              img={img}
-              className="bento-sm"
-              sizesAttr="(max-width: 1280px) 27vw, 340px"
-            />
-          ))}
-        </div>
-
-        {/* Mobile grid: 2-col with first image full-width */}
-        <div className="md:hidden grid grid-cols-2 gap-2">
-          <FeaturedCard
-            img={FEATURED[0]}
-            className="col-span-2 h-56"
-            sizesAttr="95vw"
-            priority
-          />
-          {FEATURED.slice(1).map((img, i) => (
-            <FeaturedCard key={i} img={img} className="h-44" sizesAttr="47vw" />
-          ))}
-        </div>
-      </div>
-
       {/* ── Divider ── */}
       <div className="container mx-auto px-4 pb-8">
         <div className="flex items-center gap-4">
