@@ -39,7 +39,7 @@ Catálogo digital B2B/B2C de artículos promocionales personalizados para Ecuado
 
 ## 1. Vision general
 
-KS Promocionales es una empresa ecuatoriana de regalos y artículos corporativos personalizados. Su catálogo cubre más de 3,900 productos en 34 categorías, disponibles para empresas en Ecuador (Quito, Guayaquil, Cuenca, Ibarra, Ambato) y Colombia (Bogotá, Medellín, Cali, Barranquilla, Cartagena). El canal de conversión principal no es un carrito de compras, sino WhatsApp Business: cada producto genera un mensaje prellenado con nombre y categoría para cotización directa.
+KS Promocionales es una empresa ecuatoriana de regalos y artículos corporativos personalizados. Su catálogo cubre más de 3,950 productos en 34 categorías (90% enriquecidos con IA), disponibles para empresas en Ecuador (Quito, Guayaquil, Cuenca, Ibarra, Ambato) y Colombia (Bogotá, Medellín, Cali, Barranquilla, Cartagena). El canal de conversión principal no es un carrito de compras, sino WhatsApp Business: cada producto genera un mensaje prellenado con nombre y categoría para cotización directa.
 
 **Restricciones de diseño que determinan toda la arquitectura:**
 
@@ -384,11 +384,12 @@ El sitio usa **App Router** (Next.js 14) con `output: 'export'`. No hay rutas di
 | Ruta | Fuente de params | Páginas generadas |
 |---|---|---|
 | `/` | — | 1 |
-| `/productos/[slug]/` | `data/products.json` → todos los slugs | ~3,947 |
+| `/productos/[slug]/` | `data/products.json` → todos los slugs | ~3,951 |
 | `/categorias/[slug]/` | `data/categories.json` → 34 slugs | 34 |
-| `/blog/[slug]/` | `data/blog/posts.json` → slugs | 33+ |
+| `/blog/[slug]/` | `data/blog/posts.json` → slugs | 35+ |
 | `/productos-promocionales-ecuador/[ciudad]/` | `data/geo-data.js` → 5 ciudades | 5 |
 | `/productos-promocionales-colombia/[ciudad]/` | `data/geo-data.js` → 5 ciudades | 5 |
+| `/regalos-corporativos/` | Estática | 1 |
 | `/blog/`, `/contacto/`, `/nosotros/`, etc. | Estáticas | ~8 |
 
 Si un slug no existe en la fuente de datos, la página llama `notFound()` y el build falla explícitamente (no silencia el error).
@@ -442,7 +443,8 @@ El archivo `data/products.json` se importa directamente en los page components c
 #### Layout raíz (`src/app/layout.jsx`)
 
 Punto de entrada de todo el árbol de componentes. Responsable de:
-- Cargar fuentes Google (Syne, DM Sans, DM Serif, Syne Mono) con `display: 'swap'`
+- Cargar fuentes Google (Plus Jakarta Sans, Inter, DM Serif Display) con `display: 'swap'`
+- Inyectar Script `afterInteractive` con los observers JS del Design System v2 (reveal, glass tracking, header scroll)
 - Inyectar snippet de Google Analytics 4 (ID `G-2SCDPRFSNF`)
 - Renderizar JSON-LD `LocalBusiness` + `WebSite` en `<head>`
 - Definir los `alternates` globales de hreflang (es-EC, es-CO, x-default)
@@ -472,7 +474,7 @@ Botón flotante verde con pulso animado. Lógica:
 
 #### `RealProductsGallery.jsx`
 
-Galería de fotos reales de productos servidas desde `public/images/galeria-real/`. Sirve como señal E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) ante Google: demuestra que los productos existen y se comercializan realmente.
+Galería de fotos reales de productos servidas desde `public/images/galeria-real/`. Sirve como señal E-E-A-T ante Google. Contiene tres tiras marquee animadas (desktop) y tres strips swipeables (mobile). El bento grid editorial fue eliminado en mayo 2026 — solo quedan las tiras de imágenes + CTA.
 
 ---
 
@@ -592,35 +594,62 @@ El sitio sirve el mismo contenido en español a ambos mercados. Los hreflang es-
 
 **Framework:** Tailwind CSS 3.4 con design tokens personalizados en `tailwind.config.js`.
 
+**Estética:** Premium Glassmorphism — fondos deep-navy/midnight con superficies semitransparentes, `backdrop-filter: blur`, orbs animados y acento naranja de alta energía. Documentado en `DESIGN.md`.
+
 ### Paleta de colores
 
 | Token | Valor | Uso |
 |---|---|---|
-| `primary` | `#0047AB` | Botones, links, hover states |
-| `primary-light` | `#2962FF` | Variante clara de CTA |
-| `primary-dark` | `#001A6E` | Textos sobre fondo claro |
-| `secondary` | `#0A0A23` | Texto principal, body |
-| `accent` / `gold` | `#F59E0B` | Badges, highlights, CTAs |
-| `navy` | `#001A6E` | Fondos oscuros premium |
-| `cream` | `#F0F4FF` | Fondos de tarjetas, secciones |
+| `primary` | `#001A6E` | Fondos, headers, elementos brand |
+| `primary-dark` | `#000a3b` | Variante más oscura |
+| `accent` | `#E87722` | CTAs, botones primarios, highlights — "el color de acción" |
+| `accent-dark` | `#994700` | Hover de CTAs |
+| `deep-navy` | `#000D3D` | Header glassmorphism, hero |
+| `midnight` | `#0D0D1A` | Footer, secciones más oscuras, announcement bar |
+| `glass-border` | `rgba(255,255,255,0.08)` | Bordes de superficies glass |
+| `glass-fill` | `rgba(255,255,255,0.04)` | Relleno de cards glass |
+| `whatsapp-green` | `#25D366` | Botón y pulse WhatsApp |
 
-### Tipografía (Google Fonts)
+### Tipografía (Google Fonts via next/font)
 
 | Variable CSS | Fuente | Pesos | Uso |
 |---|---|---|---|
-| `--font-syne` | Syne | 400–800 | Headlines, display, navbar |
-| `--font-dm-sans` | DM Sans | 300–600 | Body, descripciones |
-| `--font-dm-serif` | DM Serif Display | 400 | Énfasis editorial |
-| `--font-syne-mono` | Syne Mono | 400 | Código, datos técnicos |
+| `--font-jakarta` | Plus Jakarta Sans | 400–800 | Headlines, H1–H6, display, stats |
+| `--font-inter` | Inter | 300–600 | Body, descripciones, labels |
+| `--font-dm-serif` | DM Serif Display | 400 | Énfasis editorial italic en hero |
 
-Todas cargadas con `display: 'swap'` para evitar FOIT.
+En `tailwind.config.js`: `font-heading` y `font-display` → Jakarta; `font-sans` → Inter.
+
+### Design System v2 — 12 upgrades (DESIGN.md)
+
+Todos implementados en `src/app/globals.css` + Script `afterInteractive` en `layout.jsx`:
+
+| # | Upgrade | Implementación |
+|---|---|---|
+| 1 | Blobs animados `float-1/float-2` | `.blob`, `.blob-1/2/3`, `@keyframes float1/float2` |
+| 2 | Gradient text hero blanco→naranja | `.text-gradient-orange`, `@keyframes gradientShift` |
+| 3 | Count-up stats con IntersectionObserver | `AnimatedCounter` en `HeroBanner.jsx` |
+| 4 | Product card hover glow naranja | `.group:has(img):hover` |
+| 5 | Category card glassmorphism hover | `.category-card:hover` — `backdrop-filter: blur(20px)` |
+| 6 | CTA glow naranja con pseudo-elemento | `.glow-orange`, `.glow-orange::after` |
+| 7 | Glass card mouse-reactive radial glow | `.glass-card::before` con `--mouse-x/--mouse-y` + Script JS |
+| 8 | Section underline animada on scroll | `.section-underline` + `lineObs` IntersectionObserver |
+| 9 | Nav link sliding underline | `Header.jsx` — `<span>` que hace `scale-x-0 → scale-x-100` |
+| 10 | WhatsApp pulse verde enhanced | `.pulse-whatsapp`, `@keyframes pulseGreen` |
+| 11 | Section reveal on scroll | `.reveal/.reveal.visible` + `revealObs` IntersectionObserver |
+| 12 | Featured badge gradient pill | `.featured-badge` |
+
+### Header glassmorphism
+
+`Header.jsx` usa fondo `rgba(0,13,61,0.85)` con `backdrop-filter: blur(16px)`. Al scroll supera 40px se opaca a `rgba(0,13,61,0.97)` vía Script. Texto blanco con underline naranja en links activos. El logo (`/ksp-1.png`) se muestra sin filtro — tiene fondo navy sólido que contrasta sobre el deep-navy del header.
 
 ### Animaciones y efectos
 
-- `marquee` — ticker de anuncio en el header
-- `float` — efecto hover en hero
-- `glow`, `blue-glow`, `gold-glow` — sombras animadas en CTAs
-- `pulse` — botón WhatsApp flotante
+- `marquee` — ticker en announcement bar
+- `float-1`, `float-2` — blobs hero y footer (9s y 11s, easing distinto)
+- `gradient-shift` — gradient text animado en H1
+- `pulse-green` — WhatsApp pulse con doble capa de glow
+- `glow-orange` — CTAs con pseudo-elemento blur detrás
 - `fadeIn`, `slideUp`, `slideDown`, `scaleIn`, `slideInRight` — transiciones de UI
 
 ### Image CDN (Netlify)
