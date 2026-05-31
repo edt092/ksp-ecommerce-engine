@@ -29,7 +29,7 @@ export default function CategoryGrid({ categories }) {
             <Link
               key={category.id}
               href={`/categorias/${category.slug}/`}
-              className="group relative overflow-hidden rounded-2xl bg-white shadow-card hover:shadow-card-hover transition-all duration-300"
+              className="group relative overflow-hidden rounded-2xl bg-white shadow-card category-card"
               style={{
                 animationDelay: `${index * 100}ms`,
               }}

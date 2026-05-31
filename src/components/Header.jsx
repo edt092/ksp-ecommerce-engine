@@ -48,15 +48,21 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 shadow-navy bg-white/95 backdrop-blur-md">
-
+      {/* ── Glassmorphism dark header ── */}
+      <header
+        className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-white/8"
+        style={{
+          backgroundColor: isScrolled ? 'rgba(0,13,61,0.97)' : 'rgba(0,13,61,0.85)',
+          backdropFilter: 'blur(16px)',
+          WebkitBackdropFilter: 'blur(16px)',
+        }}
+      >
         {/* Announcement bar */}
         <div className={`transition-all duration-300 overflow-hidden ${
           isScrolled ? 'h-0 opacity-0' : 'h-auto opacity-100'
-        } bg-secondary text-white text-xs`}>
+        } bg-midnight border-b border-white/5 text-white text-xs`}>
           <div className="container mx-auto px-4 py-2 flex items-center justify-between">
             <div className="flex items-center gap-4 overflow-hidden min-w-0">
-              {/* Scrolling marquee */}
               <div className="flex items-center gap-2 overflow-hidden w-full">
                 <span className="text-accent font-bold shrink-0">✦</span>
                 <div className="overflow-hidden flex-1 min-w-0">
@@ -65,17 +71,17 @@ export default function Header() {
                     <span>·</span>
                     <span>🇨🇴 Llegamos a Colombia</span>
                     <span>·</span>
-                    <span>+1,200 productos personalizables</span>
+                    <span>+3,500 productos personalizables</span>
                     <span>·</span>
-                    <span>Cotización en 48 horas</span>
+                    <span>Cotización en menos de 2 horas</span>
                     <span>·</span>
                     <span>🇪🇨 Envíos a todo Ecuador</span>
                     <span>·</span>
                     <span>🇨🇴 Llegamos a Colombia</span>
                     <span>·</span>
-                    <span>+1,200 productos personalizables</span>
+                    <span>+3,500 productos personalizables</span>
                     <span>·</span>
-                    <span>Cotización en 48 horas</span>
+                    <span>Cotización en menos de 2 horas</span>
                     <span>·</span>
                   </div>
                 </div>
@@ -94,67 +100,65 @@ export default function Header() {
         </div>
 
         {/* Main navbar */}
-        <div className="border-b border-gray-100">
-          <div className="container mx-auto px-4">
-            <div className="flex items-center justify-between h-18 md:h-20">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-18 md:h-20">
 
-              {/* Logo */}
-              <Link href="/" className="flex-shrink-0 relative z-10">
-                <Image
-                  src="/ksp-1.png"
-                  alt="KS Promocionales"
-                  width={180}
-                  height={60}
-                  className="h-14 md:h-16 w-auto object-contain"
-                />
-              </Link>
+            {/* Logo */}
+            <Link href="/" className="flex-shrink-0 relative z-10">
+              <Image
+                src="/ksp-1.png"
+                alt="KS Promocionales"
+                width={180}
+                height={60}
+                className="h-14 md:h-16 w-auto object-contain brightness-0 invert"
+              />
+            </Link>
 
-              {/* Desktop Navigation */}
-              <nav className="hidden lg:flex items-center gap-1">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className={`relative px-4 py-2 text-sm font-semibold uppercase tracking-wider transition-colors duration-200 group ${
-                      pathname === item.href
-                        ? 'text-primary'
-                        : 'text-secondary/70 hover:text-secondary'
-                    }`}
-                  >
-                    {item.name}
-                    <span className={`absolute bottom-0 left-4 right-4 h-0.5 bg-accent transition-transform duration-200 origin-left ${
-                      pathname === item.href ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-                    }`} />
-                  </Link>
-                ))}
-              </nav>
-
-              {/* Right: CTA + Mobile toggle */}
-              <div className="flex items-center gap-3">
-                {/* WhatsApp CTA — Desktop */}
-                <a
-                  href={`https://wa.me/${WA_NUMBER}?text=Hola%2C%20quiero%20cotizar%20productos%20promocionales`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hidden md:flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-5 py-2.5 text-sm font-bold uppercase tracking-wide transition-all duration-200 shadow-gold-glow/20 hover:shadow-gold-glow/50"
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center gap-1">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`relative px-4 py-2 text-sm font-semibold uppercase tracking-wider transition-colors duration-200 group ${
+                    pathname === item.href
+                      ? 'text-accent'
+                      : 'text-white/70 hover:text-white'
+                  }`}
                 >
-                  <WAIcon />
-                  Cotizar Gratis
-                </a>
+                  {item.name}
+                  <span className={`absolute bottom-0 left-4 right-4 h-0.5 bg-accent transition-transform duration-200 origin-left ${
+                    pathname === item.href ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                  }`} />
+                </Link>
+              ))}
+            </nav>
 
-                {/* Hamburger */}
-                <button
-                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                  className="lg:hidden p-2.5 transition-colors text-secondary hover:bg-gray-100"
-                  aria-label="Toggle menu"
-                >
-                  <div className="w-5 flex flex-col gap-1.5">
-                    <span className={`block h-0.5 transition-all duration-300 bg-secondary ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-                    <span className={`block h-0.5 transition-all duration-300 bg-secondary ${isMobileMenuOpen ? 'opacity-0' : ''}`} />
-                    <span className={`block h-0.5 transition-all duration-300 bg-secondary ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
-                  </div>
-                </button>
-              </div>
+            {/* Right: CTA + Mobile toggle */}
+            <div className="flex items-center gap-3">
+              {/* WhatsApp CTA — Desktop */}
+              <a
+                href={`https://wa.me/${WA_NUMBER}?text=Hola%2C%20quiero%20cotizar%20productos%20promocionales`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden md:flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-5 py-2.5 text-sm font-bold uppercase tracking-wide transition-all duration-200 rounded-full glow-orange"
+              >
+                <WAIcon />
+                Cotizar Gratis
+              </a>
+
+              {/* Hamburger */}
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="lg:hidden p-2.5 transition-colors text-white/70 hover:text-white hover:bg-white/10 rounded-lg"
+                aria-label="Toggle menu"
+              >
+                <div className="w-5 flex flex-col gap-1.5">
+                  <span className={`block h-0.5 transition-all duration-300 bg-white ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+                  <span className={`block h-0.5 transition-all duration-300 bg-white ${isMobileMenuOpen ? 'opacity-0' : ''}`} />
+                  <span className={`block h-0.5 transition-all duration-300 bg-white ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+                </div>
+              </button>
             </div>
           </div>
         </div>
@@ -166,14 +170,15 @@ export default function Header() {
       }`}>
         {/* Backdrop */}
         <div
-          className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+          className="absolute inset-0 bg-black/70 backdrop-blur-sm"
           onClick={() => setIsMobileMenuOpen(false)}
         />
 
         {/* Drawer */}
-        <div className={`absolute top-0 right-0 h-full w-80 max-w-[90vw] bg-secondary flex flex-col transition-transform duration-300 ${
+        <div className={`absolute top-0 right-0 h-full w-80 max-w-[90vw] flex flex-col transition-transform duration-300 ${
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}>
+        }`} style={{ background: 'rgba(0,13,61,0.97)', backdropFilter: 'blur(20px)' }}>
+
           {/* Drawer header */}
           <div className="flex items-center justify-between p-6 border-b border-white/10">
             <span className="font-heading font-bold text-white text-lg tracking-wide">MENÚ</span>
@@ -193,7 +198,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`flex items-center gap-3 px-4 py-3.5 font-heading font-semibold text-sm uppercase tracking-wider transition-all duration-200 animate-slide-up`}
+                className="flex items-center gap-3 px-4 py-3.5 font-heading font-semibold text-sm uppercase tracking-wider transition-all duration-200 rounded-xl hover:bg-white/5"
                 style={{ animationDelay: `${i * 60}ms`, animationFillMode: 'both' }}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -213,7 +218,7 @@ export default function Header() {
               href={`https://wa.me/${WA_NUMBER}?text=Hola%2C%20quiero%20cotizar%20productos%20promocionales`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2.5 w-full bg-[#25D366] text-white py-4 font-bold text-sm uppercase tracking-wide transition-colors hover:bg-[#128C7E]"
+              className="flex items-center justify-center gap-2.5 w-full bg-[#25D366] text-white py-4 font-bold text-sm uppercase tracking-wide transition-colors hover:bg-[#128C7E] rounded-xl pulse-whatsapp"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               <WAIcon />
@@ -221,7 +226,7 @@ export default function Header() {
             </a>
             <Link
               href="/contacto"
-              className="flex items-center justify-center w-full border border-white/20 text-white/70 py-3 font-semibold text-sm uppercase tracking-wide hover:text-white hover:border-white/40 transition-colors"
+              className="flex items-center justify-center w-full border border-white/20 text-white/70 py-3 font-semibold text-sm uppercase tracking-wide hover:text-white hover:border-accent/50 transition-colors rounded-xl"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Contacto

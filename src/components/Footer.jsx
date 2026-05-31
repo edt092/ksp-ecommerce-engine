@@ -46,24 +46,27 @@ export default function Footer() {
     <footer>
       {/* ── Pre-footer CTA band ── */}
       <div className="relative overflow-hidden py-14 md:py-20" style={{
-        background: 'linear-gradient(135deg, #000D3D 0%, #001A6E 50%, #002494 100%)',
+        background: 'linear-gradient(135deg, #000D3D 0%, #0D0D1A 50%, #000a3b 100%)',
       }}>
         {/* Grid overlay */}
-        <div className="absolute inset-0 opacity-100"
+        <div className="absolute inset-0"
           style={{
-            backgroundImage: 'linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)',
+            backgroundImage: 'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)',
             backgroundSize: '40px 40px',
           }}
         />
-        {/* Gold top line */}
-        <div className="absolute top-0 left-0 right-0 h-1"
-          style={{ background: 'linear-gradient(90deg, transparent, #F59E0B 30%, #FCD34D 50%, #F59E0B 70%, transparent)' }} />
+        {/* Orange blob accent */}
+        <div className="blob blob-1 w-48 h-48 -bottom-10 right-1/4 opacity-40"
+          style={{ background: 'rgba(232,119,34,0.12)' }} />
+        {/* Orange top line */}
+        <div className="absolute top-0 left-0 right-0 h-0.5"
+          style={{ background: 'linear-gradient(90deg, transparent, #E87722 30%, #ff8934 50%, #E87722 70%, transparent)' }} />
 
         <div className="relative z-10 container mx-auto px-4 text-center">
           <p className="text-white/50 text-xs font-mono uppercase tracking-[0.3em] mb-4">¿Tienes un proyecto?</p>
           <h2 className="font-heading font-black text-white text-3xl md:text-4xl lg:text-5xl mb-4 leading-tight">
             Impulsa tu marca con{' '}
-            <span className="text-transparent bg-clip-text" style={{ backgroundImage: 'linear-gradient(135deg, #FCD34D, #F59E0B)' }}>
+            <span className="text-transparent bg-clip-text" style={{ backgroundImage: 'linear-gradient(135deg, #ffffff, #ff8934, #E87722)' }}>
               productos que se recuerdan
             </span>
           </h2>
@@ -83,7 +86,7 @@ export default function Footer() {
       </div>
 
       {/* ── Main footer ── */}
-      <div className="bg-secondary text-white">
+      <div className="text-white" style={{ background: '#0D0D1A' }}>
         <div className="container mx-auto px-4 py-14">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
 
