@@ -71,7 +71,7 @@ KS Promocionales es una empresa ecuatoriana de regalos y artículos corporativos
 │                          │                                              │
 │  scripts/enrich_products.py  (manual / bajo demanda)                   │
 │  → Filtra productos con thin content (ContentEvaluator score < 60)      │
-│  → Orquesta pipeline de 4 agentes LLM (Gemini / Claude / GPT)          │
+│  → Orquesta pipeline de 4 agentes Claude (Haiku 4.5 / Sonnet 4.6)      │
 │  → Guarda progreso incremental cada 10 productos                        │
 │                          │                                              │
 │  scripts/content_evaluator.py                                           │
@@ -197,39 +197,44 @@ El scraper genera contenido de plantilla genérico. El pipeline de IA transforma
                     product.last_ai_update  = ISO timestamp
 ```
 
-Cada agente es una llamada independiente a la API de LLM. El contexto de marca (`BRAND_CONTEXT`) se inyecta en cada llamada. El Copywriter recibe feedback del Evaluador si el primer intento falla, y reintenta hasta 2 veces.
+Cada agente es una llamada independiente a la API de Anthropic (Claude). El contexto de marca (`BRAND_CONTEXT`) se inyecta en cada llamada mediante `cache_control: ephemeral` en el system prompt, lo que activa el **prompt caching de Anthropic** y reduce el costo de tokens en reintentos y ejecuciones por lotes.
 
-**Modelos soportados actualmente:**
+El Copywriter recibe feedback del Evaluador si el primer intento falla, y reintenta hasta 2 veces antes de guardar el mejor resultado obtenido.
 
-| Flag | Modelo por defecto | Uso recomendado |
+**Modelos de Claude disponibles:**
+
+| Flag | Modelo | Uso recomendado |
 |---|---|---|
-| `--model flash` | `gemini-1.5-flash` | Toda la cola (barato) |
-| `--model pro` | `gemini-1.5-pro` | 200 productos prioritarios |
-
-La clase `ProductPipeline` en `agent_pipeline.py` es agnóstica al proveedor. Migrar a otro LLM (Claude, GPT-4o) requiere únicamente reemplazar el método `_call_api()` y el cliente.
+| `--model haiku` (default) | `claude-haiku-4-5` | Toda la cola (rápido y económico) |
+| `--model sonnet` | `claude-sonnet-4-6` | Categorías prioritarias (mayor calidad) |
 
 **Flags disponibles:**
 
 ```bash
 PYTHONIOENCODING=utf-8 python scripts/enrich_products.py
 
-  --limit N       Procesar solo los primeros N productos thin
-  --priority      Priorizar categorías de alta conversión (mugs, tecnología, etc.)
-  --model pro     Usar Gemini Pro en vez de Flash
-  --resume        Saltar productos con is_ai_optimized: true
-  --dry-run       Mostrar cuántos procesaría sin hacer llamadas a la API
-  --verbose       Imprimir trazas detalladas de cada agente
+  --limit N        Procesar solo los primeros N productos thin
+  --priority       Priorizar categorías de alta conversión (mugs, tecnología, etc.)
+  --model sonnet   Usar Claude Sonnet en vez de Haiku
+  --resume         Saltar productos con is_ai_optimized: true
+  --dry-run        Mostrar cuántos procesaría sin hacer llamadas a la API
+  --verbose        Imprimir trazas detalladas de cada agente
 
 # Combinación recomendada para primera pasada:
 PYTHONIOENCODING=utf-8 python scripts/enrich_products.py --priority --limit 200 --resume
+
+# Ejemplo: enriquecer todos los productos thin con Haiku
+PYTHONIOENCODING=utf-8 python scripts/enrich_products.py --resume
 ```
 
-**Estimación de costo (Gemini):**
+**Estimación de costo (Claude, precios aprox. a mayo 2026):**
 
-| Modelo | Productos | Costo estimado |
+| Modelo | Costo aprox. por producto | 432 productos thin |
 |---|---|---|
-| Flash (3,244 thin) | Todos | ~$1.65 USD |
-| Pro (200 prioritarios) | Top categories | ~$0.80 USD |
+| Haiku 4.5 (`--model haiku`) | ~$0.0060 USD | ~$2.60 USD |
+| Sonnet 4.6 (`--model sonnet`) | ~$0.063 USD | ~$27 USD |
+
+_Cálculo base: ~1,500 tokens input + ~900 tokens output por producto (3 llamadas). El prompt caching reduce el costo real de input cuando se procesan lotes consecutivos._
 
 ---
 
@@ -397,21 +402,35 @@ Si un slug no existe en la fuente de datos, la página llama `notFound()` y el b
 ```
 npm run build
       │
-      ├── Next.js lee data/products.json (una vez, en memoria)
-      │         data/categories.json
-      │         data/blog/posts.json
-      │         data/geo-data.js
+      │
+      ├── prebuild: scripts/split-products-by-category.js
+      │         └── Lee data/products.json
+      │         └── Filtra solo is_ai_optimized: true
+      │         └── Escribe data/category-products/[categoryId].json
+      │             (34 archivos, máx 80 productos c/u, 6 campos slim)
+      │             → elimina la necesidad de importar products.json en category pages
+      │
+      ├── Next.js lee data/categories.json, data/blog/posts.json, data/geo-data.js
+      │   (products.json ya NO se importa en category pages — solo en productos/[slug])
       │
       ├── Por cada ruta dinámica:
       │   generateStaticParams() → lista de { slug }
       │   generateMetadata(params) → <head> completo con og:, twitter:, canonical
       │   Page Component(params) → HTML + JSON-LD inline
       │
+      │   Notas sobre productos/[slug]:
+      │   - Se generan páginas para TODOS los productos (~3,948)
+      │   - Productos sin is_ai_optimized reciben robots: { index: false }
+      │   - Las category pages solo enlazan a is_ai_optimized: true
+      │     → evita que Google rastreé páginas thin y desperdicie crawl budget
+      │
       ├── Componentes server → renderizados a HTML (sin JS en cliente)
-      │   Componentes client (HomePageClient, QuickViewModal) → hydration JS bundle
+      │   Componentes client (QuickViewModal) → hydration JS bundle
       │
       └── postbuild: next-sitemap
-                └── Lee out/ y genera out/sitemap.xml + out/robots.txt
+                └── Lee out/ con transform() que filtra !is_ai_optimized
+                └── Aplica priority + changefreq por tipo de ruta
+                └── Genera out/sitemap.xml con lastmod = fecha del build
 ```
 
 El archivo `data/products.json` se importa directamente en los page components con `import productsData from '@/data/products.json'`. En build time esto funciona como una importación de módulo normal. En runtime de cliente este mismo import queda bundleado en el JS del cliente si el componente es `'use client'` — ese es el problema de los 1.9 MB de bundle en `HomePageClient.jsx` (ver sección 14).
@@ -713,9 +732,8 @@ Archivo de referencia: `.env.example`
 
 | Variable | Requerida por | Descripción |
 |---|---|---|
-| `GEMINI_API_KEY` | `enrich_products.py` | API key de Google AI Studio para el pipeline de enriquecimiento |
-| `ANTHROPIC_API_KEY` | `agent_pipeline.py` (si se migra a Claude) | API key de Anthropic |
-| `NEXT_PUBLIC_GA_ID` | `layout.jsx` | Google Analytics 4 Measurement ID (actualmente hardcodeado) |
+| `ANTHROPIC_API_KEY` | `agent_pipeline.py`, `enrich_products.py` | API key de Anthropic — requerida para el pipeline de enriquecimiento IA |
+| `NEXT_PUBLIC_GA_ID` | `layout.jsx` | Google Analytics 4 Measurement ID (actualmente hardcodeado como `G-2SCDPRFSNF`) |
 
 En producción (Netlify), las variables se configuran en el panel de Build > Environment variables. El proyecto Next.js no requiere variables en tiempo de build para generar las páginas, ya que todos los datos vienen de los archivos JSON locales.
 
@@ -754,13 +772,16 @@ netlify deploy --prod --dir=out
 # Scrapear productos nuevos del proveedor
 python scripts/daily-scraper.py
 
-# Ver cuántos productos necesitan enriquecimiento
+# Ver cuántos productos necesitan enriquecimiento (sin gastar API)
 PYTHONIOENCODING=utf-8 python scripts/enrich_products.py --dry-run
 
-# Enriquecer primero las categorías prioritarias (200 productos)
+# Enriquecer primero las categorías prioritarias con Claude Haiku (rápido)
 PYTHONIOENCODING=utf-8 python scripts/enrich_products.py --priority --limit 200 --resume
 
-# Rebuild para actualizar el sitio
+# Para mejor calidad, usar Sonnet en categorías top (más caro)
+PYTHONIOENCODING=utf-8 python scripts/enrich_products.py --priority --limit 50 --model sonnet --resume
+
+# Rebuild para actualizar el sitio (prebuild regenera category-products/ automáticamente)
 npm run build
 ```
 
@@ -768,18 +789,19 @@ npm run build
 
 ## 13. Referencia de scripts
 
-| Script | Lenguaje | Propósito |
-|---|---|---|
-| `scripts/daily-scraper.py` | Python | Web scraping + merge incremental en products.json |
-| `scripts/enrich_products.py` | Python | CLI para ejecutar el pipeline de enriquecimiento IA |
-| `scripts/agent_pipeline.py` | Python | Pipeline 4-agentes LLM (Investigador, Copywriter, SEO, Evaluador) |
-| `scripts/content_evaluator.py` | Python | Scoring de calidad de contenido (0–100) + gate de is_ai_optimized |
-| `scripts/mark-quality-products.py` | Python | Marcar productos como is_ai_optimized en batch |
-| `scripts/fix_all_categories.py` | Python | Correcciones masivas de categoryId en products.json |
-| `scripts/generate-products.js` | JS | [Legacy v1] generación de productos, reemplazado por el scraper Python |
-| `scripts/optimize-seo.js` | JS | [Legacy v1] optimización SEO batch, reemplazado por agent_pipeline |
-| `scripts/capture_screenshot.py` | Python | Capturas de pantalla del sitio para auditorías visuales |
-| `scripts/mobile_audit.py` | Python | Auditoría de renderizado mobile (Playwright) |
+| Script | Lenguaje | Cuándo corre | Propósito |
+|---|---|---|---|
+| `scripts/daily-scraper.py` | Python | GitHub Actions (cron diario) | Web scraping + merge incremental en products.json |
+| `scripts/enrich_products.py` | Python | Manual / bajo demanda | CLI para ejecutar el pipeline de enriquecimiento IA |
+| `scripts/agent_pipeline.py` | Python | Llamado por enrich_products.py | Pipeline 4-agentes Claude (Investigador, Copywriter, SEO, Evaluador) |
+| `scripts/content_evaluator.py` | Python | Llamado por agent_pipeline + enrich | Scoring de calidad de contenido (0–100) + gate de is_ai_optimized |
+| `scripts/split-products-by-category.js` | JS | `npm run prebuild` (automático) | Genera data/category-products/[id].json — solo productos is_ai_optimized, máx 80 por categoría |
+| `scripts/mark-quality-products.py` | Python | Manual / auditoría | Marcar productos como is_ai_optimized en batch |
+| `scripts/fix_all_categories.py` | Python | Manual / mantenimiento | Correcciones masivas de categoryId en products.json |
+| `scripts/generate-products.js` | JS | [Legacy v1] | Generación de productos v1 — reemplazado por daily-scraper.py |
+| `scripts/optimize-seo.js` | JS | [Legacy v1] | Optimización SEO batch v1 — reemplazado por agent_pipeline.py |
+| `scripts/capture_screenshot.py` | Python | Manual / auditoría | Capturas de pantalla del sitio para auditorías visuales |
+| `scripts/mobile_audit.py` | Python | Manual / auditoría | Auditoría de renderizado mobile (Playwright) |
 
 **Comandos npm:**
 
@@ -798,13 +820,9 @@ npm run start     # Next.js production server (no aplica con output: export)
 
 El directorio `out/` en producción puede quedar desincronizado si se modifica `data/products.json` (via scraper o enriquecimiento IA) sin ejecutar un nuevo `npm run build`. Los cambios en JSON **no se reflejan automáticamente en el sitio** hasta el próximo deploy.
 
-### CRITICO: Bundle de productos en cliente
+### ALTO: Contenido thin en productos sin enriquecer
 
-`HomePageClient.jsx` importa `data/products.json` (10 MB, 3,947 productos) como módulo JavaScript. Este import queda bundleado en el JS del cliente, generando un bundle de ~1.9 MB y un INP estimado de 200–400ms. La solución es pasar solo los datos necesarios desde el server component padre como props.
-
-### ALTO: Contenido thin en mayoría de productos
-
-Aproximadamente el 82% de los productos (productos sin `is_ai_optimized: true`) tienen contenido de plantilla idéntico. Google clasifica estas páginas como thin content. El sitemap ya los excluye, pero están pre-renderizados en `out/` y son rastreables por Googlebot directamente.
+Los productos sin `is_ai_optimized: true` (~432 actualmente) tienen contenido de plantilla idéntico. El sitemap los excluye y las category pages ya no los enlazan (fix mayo 2026), por lo que Google no los descubre por crawl orgánico. Sin embargo siguen pre-renderizados en `out/` y son accesibles directamente. La solución definitiva es enriquecer toda la cola via `enrich_products.py` o excluirlos del `generateStaticParams`.
 
 ### ALTO: Overflow horizontal en desktop
 
@@ -816,15 +834,23 @@ Las imágenes de producto en el hero están en la columna `lg:block`, invisible 
 
 ### MEDIO: Formatos duplicados de slug en sitemap
 
-Existen ~1,100 productos con dos formatos de slug históricos (uno limpio y uno con sufijo de hash). Ambos generan páginas HTML, lo que puede ser interpretado como contenido duplicado.
+Existen ~256 productos con dos formatos de slug históricos (uno limpio y uno con sufijo de hash). Ambos generan páginas HTML. El producto base tiene contenido canónico; el duplicado tiene `noindex` y `canonical` apuntando al base (manejado en `generateMetadata`). Los redirects 301 correspondientes están en `public/_redirects`.
 
-### MEDIO: Dos generadores de sitemap en conflicto
+### MEDIO: Dos generadores de sitemap en coexistencia
 
-`src/app/sitemap.js` (Next.js nativo) y `next-sitemap.config.js` (postbuild) coexisten. El postbuild siempre sobreescribe. El primero se descarta silenciosamente. Mantener ambos genera confusión; se recomienda eliminar `src/app/sitemap.js`.
+`src/app/sitemap.js` (Next.js nativo) y `next-sitemap.config.js` (postbuild) coexisten. El postbuild siempre sobreescribe el archivo `out/sitemap.xml`. La lógica de filtrado y prioridades está en `next-sitemap.config.js`; `src/app/sitemap.js` queda como referencia pero no llega al sitio. Se recomienda eliminar `src/app/sitemap.js` para evitar confusión.
 
 ### MEDIO: Colisión z-index WhatsApp + Cookie banner
 
 El botón flotante de WhatsApp y el banner de cookie consent comparten capas z-index similares. En algunos viewpoints mobile se superponen.
+
+### RESUELTO (mayo 2026): Bundle de productos en category pages
+
+~~`HomePageClient.jsx` importa `data/products.json` completo al cliente.~~ Corregido: `scripts/split-products-by-category.js` (prebuild) genera archivos slim por categoría en `data/category-products/[categoryId].json`. Las category pages leen solo su archivo vía `fs.readFileSync` en el server component, sin importar el JSON completo de 10 MB al bundle del cliente.
+
+### RESUELTO (mayo 2026): Sitemap sin priority/changefreq
+
+~~El `transform()` de `next-sitemap.config.js` calculaba `priority` y `changefreq` pero no los retornaba.~~ Corregido: el objeto de retorno ahora incluye ambos campos.
 
 ---
 
