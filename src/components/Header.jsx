@@ -144,7 +144,7 @@ export default function Header() {
                 className="hidden md:flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-5 py-2.5 text-sm font-bold uppercase tracking-wide transition-all duration-200 rounded-full glow-orange"
               >
                 <WAIcon />
-                Cotizar Gratis
+                Solicitar Catálogo
               </a>
 
               {/* Hamburger */}
