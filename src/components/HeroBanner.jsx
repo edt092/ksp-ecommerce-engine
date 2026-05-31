@@ -55,28 +55,30 @@ function AnimatedCounter({ target, suffix, duration = 1800 }) {
 export default function HeroBanner() {
   return (
     <section className="relative min-h-screen flex flex-col overflow-hidden">
-      {/* ── Deep navy gradient background ── */}
+      {/* ── Deep navy → midnight gradient (DESIGN.md) ── */}
       <div className="absolute inset-0 z-0" style={{
-        background: 'linear-gradient(135deg, #000D3D 0%, #001A6E 45%, #002494 75%, #0033A0 100%)',
+        background: 'linear-gradient(135deg, #000D3D 0%, #0D0D1A 45%, #000a3b 100%)',
       }} />
 
       {/* ── Grid overlay ── */}
-      <div className="absolute inset-0 z-0 opacity-100"
+      <div className="absolute inset-0 z-0"
         style={{
-          backgroundImage: 'linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)',
+          backgroundImage: 'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)',
           backgroundSize: '48px 48px',
         }}
       />
 
-      {/* ── Blue glow orbs ── */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-3xl opacity-20 pointer-events-none z-0"
-        style={{ background: 'radial-gradient(circle, #2962FF, transparent)' }} />
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full blur-3xl opacity-15 pointer-events-none z-0"
-        style={{ background: 'radial-gradient(circle, #0047AB, transparent)' }} />
+      {/* ── Animated blobs (DESIGN.md upgrade 1) ── */}
+      <div className="blob blob-1 w-72 h-72 top-20 -right-16 z-0"
+        style={{ background: 'rgba(232,119,34,0.15)' }} />
+      <div className="blob blob-2 w-96 h-96 -bottom-10 -left-20 z-0"
+        style={{ background: 'rgba(0,26,110,0.40)' }} />
+      <div className="blob blob-3 w-56 h-56 z-0"
+        style={{ background: 'rgba(232,119,34,0.08)', top: '50%', left: '50%' }} />
 
-      {/* ── Gold accent line top ── */}
-      <div className="absolute top-0 left-0 right-0 h-1 z-10"
-        style={{ background: 'linear-gradient(90deg, transparent, #F59E0B 30%, #FCD34D 50%, #F59E0B 70%, transparent)' }} />
+      {/* ── Orange accent line top ── */}
+      <div className="absolute top-0 left-0 right-0 h-0.5 z-10"
+        style={{ background: 'linear-gradient(90deg, transparent, #E87722 30%, #ff8934 50%, #E87722 70%, transparent)' }} />
 
       {/* ── Main content ── */}
       <div className="relative z-10 flex-1 flex items-center container mx-auto px-4 pt-32 pb-16">
@@ -96,7 +98,7 @@ export default function HeroBanner() {
             <h1 className="font-heading font-black text-white leading-[1.05] mb-6 animate-slide-up" style={{ fontSize: 'clamp(2.4rem, 5vw, 4rem)' }}>
               Artículos{' '}
               <span className="relative inline-block">
-                <span className="text-gradient-gold">Promocionales</span>
+                <span className="text-gradient-orange">Promocionales</span>
               </span>
               <br />
               que hacen{' '}
@@ -300,7 +302,7 @@ export default function HeroBanner() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {STATS.map(({ value, suffix, label }) => (
               <div key={label} className="text-center group">
-                <div className="font-mono font-black text-white text-3xl md:text-4xl leading-none mb-1 group-hover:text-accent transition-colors duration-300">
+                <div className="font-heading font-black text-white text-3xl md:text-4xl leading-none mb-1 group-hover:text-accent transition-colors duration-300">
                   <AnimatedCounter target={value} suffix={suffix} />
                 </div>
                 <div className="text-white/50 text-xs font-semibold uppercase tracking-widest">{label}</div>

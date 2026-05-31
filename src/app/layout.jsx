@@ -1,7 +1,7 @@
 import './globals.css';
 import Script from 'next/script';
 import dynamic from 'next/dynamic';
-import { Syne, DM_Sans, DM_Serif_Display } from 'next/font/google';
+import { Plus_Jakarta_Sans, Inter, DM_Serif_Display } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -15,16 +15,16 @@ const CookieConsent = dynamic(() => import('@/components/CookieConsent'), {
   loading: () => null,
 });
 
-const syne = Syne({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  variable: '--font-syne',
+  variable: '--font-jakarta',
   weight: ['400', '500', '600', '700', '800'],
   display: 'swap',
 });
 
-const dmSans = DM_Sans({
+const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-dm-sans',
+  variable: '--font-inter',
   weight: ['300', '400', '500', '600'],
   display: 'swap',
 });
@@ -169,7 +169,7 @@ const websiteSchema = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es-EC" className={`${syne.variable} ${dmSans.variable} ${dmSerif.variable}`}>
+    <html lang="es-EC" className={`${jakarta.variable} ${inter.variable} ${dmSerif.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="48x48" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -214,6 +214,53 @@ export default function RootLayout({ children }) {
           `}
         </Script>
 
+        {/* Design System v2 — JS observers (upgrades 7, 8, 11) */}
+        <Script id="design-system-observers" strategy="afterInteractive">{`
+          (function() {
+            // Upgrade 11 — Section reveal on scroll
+            var hero = document.querySelector('section.relative.min-h-screen');
+            document.querySelectorAll('section, footer').forEach(function(el, i) {
+              if (el === hero || el.classList.contains('no-reveal')) return;
+              el.classList.add('reveal');
+              el.style.transitionDelay = Math.min(i * 0.04, 0.2) + 's';
+            });
+            var revealObs = new IntersectionObserver(function(entries) {
+              entries.forEach(function(e) {
+                if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); }
+              });
+            }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+            document.querySelectorAll('.reveal').forEach(function(el) { revealObs.observe(el); });
+
+            // Upgrade 8 — Section underline animation
+            var lineObs = new IntersectionObserver(function(entries) {
+              entries.forEach(function(e) {
+                if (e.isIntersecting) { e.target.classList.add('visible'); lineObs.unobserve(e.target); }
+              });
+            }, { threshold: 0.8 });
+            document.querySelectorAll('.section-underline').forEach(function(el) { lineObs.observe(el); });
+
+            // Upgrade 7 — Glass card mouse tracking
+            document.querySelectorAll('.glass-card').forEach(function(card) {
+              card.addEventListener('mousemove', function(e) {
+                var r = card.getBoundingClientRect();
+                card.style.setProperty('--mouse-x', (e.clientX - r.left) + 'px');
+                card.style.setProperty('--mouse-y', (e.clientY - r.top) + 'px');
+              });
+            });
+
+            // Header scroll opacity
+            var header = document.querySelector('header');
+            if (header) {
+              window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                  header.style.backgroundColor = 'rgba(0,13,61,0.97)';
+                } else {
+                  header.style.backgroundColor = 'rgba(0,13,61,0.85)';
+                }
+              }, { passive: true });
+            }
+          })();
+        `}</Script>
         <Header />
         <main className="flex-grow">
           {children}
