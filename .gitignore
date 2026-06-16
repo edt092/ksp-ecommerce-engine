@@ -69,3 +69,9 @@ venv/
 
 # Borradores de blog (flujo editorial local, nunca sube a GitHub)
 content/drafts/
+
+# Documentación local y planning docs (no relevantes para producción)
+*.md
+
+# Scripts de desarrollo / scraping (no necesarios en producción)
+scripts/*.py

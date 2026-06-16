@@ -1,91 +1,6 @@
 // Datos geográficos para páginas de SEO local — KS Promocionales
-
-export const colombia = {
-  slug: 'productos-promocionales-colombia',
-  nombre: 'Colombia',
-  codigo: 'CO',
-  seoTitle: 'Productos Promocionales Colombia | Regalos Corporativos KS',
-  seoDescription: 'Productos promocionales y regalos corporativos en Colombia. Artículos publicitarios personalizados con envíos a Bogotá, Medellín, Cali, Barranquilla y Cartagena.',
-  h1: 'Productos Promocionales en Colombia',
-  intro: 'KS Promocionales es tu aliado estratégico para artículos publicitarios y regalos corporativos en Colombia. Ofrecemos la más amplia variedad de productos personalizados para impulsar tu marca en todo el territorio nacional.',
-  ciudades: [
-    {
-      slug: 'bogota',
-      nombre: 'Bogotá',
-      pais: 'colombia',
-      seoTitle: 'Productos Promocionales Bogotá | Merchandising y Regalos Corporativos KS',
-      seoDescription: 'Productos promocionales en Bogotá. Artículos publicitarios, merchandising corporativo y regalos empresariales con entrega rápida en toda la capital colombiana.',
-      h1: 'Productos Promocionales en Bogotá',
-      intro: 'En Bogotá, la capital económica y cultural de Colombia, ofrecemos la más completa selección de productos promocionales y regalos corporativos. Atendemos empresas en Chapinero, Usaquén, Suba, Kennedy, Fontibón y toda la ciudad.',
-      caracteristicas: [
-        'Entrega express en Bogotá y municipios aledaños',
-        'Atención personalizada para empresas y pymes capitalinas',
-        'Productos para ferias, congresos y eventos corporativos',
-        'Stock disponible para pedidos urgentes',
-      ],
-    },
-    {
-      slug: 'medellin',
-      nombre: 'Medellín',
-      pais: 'colombia',
-      seoTitle: 'Productos Promocionales Medellín | Merchandising Empresarial Antioquia KS',
-      seoDescription: 'Productos promocionales en Medellín y Antioquia. Artículos publicitarios personalizados y merchandising corporativo. Envíos a El Poblado, Laureles, Envigado e Itagüí.',
-      h1: 'Productos Promocionales en Medellín',
-      intro: 'Medellín, la ciudad de la innovación, merece los mejores productos promocionales. Servimos a empresas en El Poblado, Laureles, Envigado, Itagüí, Bello y todo el Valle de Aburrá con atención personalizada.',
-      caracteristicas: [
-        'Envíos a todo el Valle de Aburrá',
-        'Productos para ferias y eventos en Plaza Mayor',
-        'Atención al sector textil, tecnológico y financiero',
-        'Opciones eco-friendly para empresas innovadoras',
-      ],
-    },
-    {
-      slug: 'cali',
-      nombre: 'Cali',
-      pais: 'colombia',
-      seoTitle: 'Productos Promocionales Cali | Merchandising Valle del Cauca KS',
-      seoDescription: 'Productos promocionales en Cali y Valle del Cauca. Artículos publicitarios, merchandising corporativo y regalos empresariales con envíos a toda la región.',
-      h1: 'Productos Promocionales en Cali',
-      intro: 'Cali, capital del Valle del Cauca, cuenta con nuestra selección premium de productos promocionales. Atendemos empresas en el norte, sur, zonas industriales y toda la región del suroccidente colombiano.',
-      caracteristicas: [
-        'Envíos a Cali, Palmira, Yumbo y Jamundí',
-        'Productos para eventos empresariales y ferias regionales',
-        'Atención al sector agroindustrial y farmacéutico',
-        'Artículos personalizados para todos los presupuestos',
-      ],
-    },
-    {
-      slug: 'barranquilla',
-      nombre: 'Barranquilla',
-      pais: 'colombia',
-      seoTitle: 'Productos Promocionales Barranquilla | Merchandising Costa Caribe KS',
-      seoDescription: 'Productos promocionales en Barranquilla y la Costa Caribe colombiana. Artículos publicitarios personalizados y merchandising corporativo con envíos a toda la región.',
-      h1: 'Productos Promocionales en Barranquilla',
-      intro: 'Barranquilla, la puerta de oro de Colombia, merece productos promocionales de primera calidad. Servimos a empresas en el norte, sur, zona industrial portuaria y toda el área metropolitana.',
-      caracteristicas: [
-        'Envíos a toda la Costa Caribe colombiana',
-        'Productos resistentes al clima tropical y costero',
-        'Atención al sector portuario, logístico e industrial',
-        'Merchandising para el Carnaval y eventos culturales',
-      ],
-    },
-    {
-      slug: 'cartagena',
-      nombre: 'Cartagena',
-      pais: 'colombia',
-      seoTitle: 'Productos Promocionales Cartagena | Merchandising Corporativo Bolívar KS',
-      seoDescription: 'Productos promocionales en Cartagena de Indias. Artículos publicitarios para hoteles, turismo y empresas. Merchandising corporativo en la costa caribe colombiana.',
-      h1: 'Productos Promocionales en Cartagena',
-      intro: 'Cartagena de Indias, patrimonio de la humanidad, requiere productos promocionales de excelencia. Atendemos hoteles, empresas turísticas, navieras y corporaciones en la ciudad amurallada y sus alrededores.',
-      caracteristicas: [
-        'Productos especiales para el sector turístico y hotelero',
-        'Merchandising para congresos, convenciones y eventos',
-        'Artículos resistentes al clima caribeño',
-        'Atención a empresas de la zona industrial de Mamonal',
-      ],
-    },
-  ],
-};
+// Site Ecuador-only — no se vende en Colombia (ver public/_redirects para
+// el 301 de las antiguas rutas /productos-promocionales-colombia/*).
 
 export const ecuador = {
   slug: 'productos-promocionales-ecuador',
@@ -174,7 +89,7 @@ export const ecuador = {
   ],
 };
 
-export const paises = [ecuador, colombia];
+export const paises = [ecuador];
 
 export function getPaisBySlug(slug) {
   return paises.find(p => p.slug === slug);

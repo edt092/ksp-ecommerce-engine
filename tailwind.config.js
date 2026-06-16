@@ -8,54 +8,64 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        // ── KS Design System tokens ───────────────────────────────
+        ks: {
+          navy:         '#0F2178',
+          'navy-dark':  '#091557',
+          'navy-mid':   '#1A3299',
+          'navy-light': '#2B4BC4',
+          'navy-wash':  '#EDF0FB',
+          'navy-ghost': '#F5F7FF',
+          orange:       '#F5A520',
+          'orange-dark':'#D48A0A',
+          'orange-light':'#FFBA3D',
+          'orange-wash':'#FFF4DC',
+        },
         // ── Primary palette ──────────────────────────────────────
         primary: {
-          DEFAULT: '#001A6E',
-          light: '#2d4090',
-          dark: '#000a3b',
+          DEFAULT: '#0F2178',
+          light: '#2B4BC4',
+          dark: '#091557',
         },
         secondary: {
           DEFAULT: '#0A0A23',
           light: '#1A1A3E',
           dark: '#000010',
         },
-        // ── Accent: orange (DESIGN.md) ────────────────────────────
+        // ── Accent: orange ───────────────────────────────────────
         accent: {
-          DEFAULT: '#E87722',
-          light: '#ff8934',
-          dark: '#994700',
+          DEFAULT: '#F5A520',
+          light: '#FFBA3D',
+          dark: '#D48A0A',
         },
-        // ── New DESIGN.md tokens ──────────────────────────────────
-        'deep-navy':      '#000D3D',
+        // ── Utility tokens ────────────────────────────────────────
+        'deep-navy':      '#091557',
         'midnight':       '#0D0D1A',
         'glass-border':   'rgba(255,255,255,0.08)',
         'glass-fill':     'rgba(255,255,255,0.04)',
         'whatsapp-green': '#25D366',
-        // ── Keep legacy ───────────────────────────────────────────
         navy: {
-          DEFAULT: '#001A6E',
-          light: '#002494',
-          dark: '#000D3D',
+          DEFAULT: '#0F2178',
+          light: '#2B4BC4',
+          dark: '#091557',
         },
         cream: {
-          DEFAULT: '#F0F4FF',
-          dark: '#E1E8FF',
+          DEFAULT: '#EDF0FB',
+          dark: '#D4DCF5',
         },
         gold: {
-          DEFAULT: '#E87722',
-          light: '#ff8934',
-          dark: '#994700',
+          DEFAULT: '#F5A520',
+          light: '#FFBA3D',
+          dark: '#D48A0A',
         },
       },
       fontFamily: {
-        // Plus Jakarta Sans → all headings
-        sans:    ['var(--font-inter)', 'system-ui', '-apple-system', 'sans-serif'],
-        heading: ['var(--font-jakarta)', 'system-ui', 'sans-serif'],
-        display: ['var(--font-jakarta)', 'system-ui', 'sans-serif'],
-        jakarta: ['var(--font-jakarta)', 'system-ui', 'sans-serif'],
-        inter:   ['var(--font-inter)',   'system-ui', 'sans-serif'],
+        sans:    ['var(--font-nunito-sans)', 'system-ui', '-apple-system', 'sans-serif'],
+        heading: ['var(--font-syne)', 'system-ui', 'sans-serif'],
+        display: ['var(--font-syne)', 'system-ui', 'sans-serif'],
+        syne:    ['var(--font-syne)', 'system-ui', 'sans-serif'],
+        nunito:  ['var(--font-nunito-sans)', 'system-ui', 'sans-serif'],
         mono:    ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
-        serif:   ['var(--font-dm-serif)', 'Georgia', 'serif'],
       },
       animation: {
         'slideUpFade':    'slideUpFade 0.22s ease-out both',
@@ -155,6 +165,14 @@ module.exports = {
       backgroundSize: {
         'grid': '40px 40px',
         'dot':  '24px 24px',
+      },
+      scale: {
+        '102': '1.02',
+        '103': '1.03',
+        '105': '1.05',
+        '108': '1.08',
+        '110': '1.10',
+        '115': '1.15',
       },
       borderRadius: {
         '4xl': '2rem',

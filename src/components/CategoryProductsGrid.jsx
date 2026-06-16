@@ -1,80 +1,95 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import ProductCard from './ProductCard';
 
 export default function CategoryProductsGrid({ products, category }) {
-  const PRODUCTS_PER_PAGE = 12;
-  const [displayedProducts, setDisplayedProducts] = useState(products.slice(0, PRODUCTS_PER_PAGE));
-  const [page, setPage] = useState(1);
-  const [loading, setLoading] = useState(false);
+  const PER_PAGE = 12;
+  const [displayed, setDisplayed] = useState(products.slice(0, PER_PAGE));
+  const [page,      setPage]      = useState(1);
+  const [loading,   setLoading]   = useState(false);
+  const sentinelRef = useRef(null);
 
-  // Lazy loading al hacer scroll
+  const loadMore = useCallback(() => {
+    setDisplayed(prevDisplayed => {
+      if (prevDisplayed.length >= products.length) return prevDisplayed;
+      setLoading(true);
+      setTimeout(() => {
+        setPage(prevPage => {
+          const next  = prevPage + 1;
+          const start = prevPage * PER_PAGE;
+          setDisplayed(prev => [...prev, ...products.slice(start, next * PER_PAGE)]);
+          setLoading(false);
+          return next;
+        });
+      }, 250);
+      return prevDisplayed;
+    });
+  }, [products]);
+
+  // Trigger loadMore well before the sentinel (placed right after the grid)
+  // actually enters the viewport — independent of how much content (help
+  // box, related categories, footer…) sits further down the page.
   useEffect(() => {
-    const handleScroll = () => {
-      // Verificar si el usuario llegó al final de la página
-      const scrollHeight = document.documentElement.scrollHeight;
-      const scrollTop = document.documentElement.scrollTop;
-      const clientHeight = document.documentElement.clientHeight;
+    const sentinel = sentinelRef.current;
+    if (!sentinel) return;
 
-      if (scrollTop + clientHeight >= scrollHeight - 500 && !loading) {
-        loadMoreProducts();
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [page, loading, products]);
-
-  const loadMoreProducts = () => {
-    if (displayedProducts.length >= products.length) return;
-
-    setLoading(true);
-
-    // Simular delay para mejor UX
-    setTimeout(() => {
-      const nextPage = page + 1;
-      const start = page * PRODUCTS_PER_PAGE;
-      const end = nextPage * PRODUCTS_PER_PAGE;
-      const newProducts = products.slice(start, end);
-
-      setDisplayedProducts(prev => [...prev, ...newProducts]);
-      setPage(nextPage);
-      setLoading(false);
-    }, 300);
-  };
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !loading) loadMore();
+      },
+      { rootMargin: '0px 0px 800px 0px' }
+    );
+    observer.observe(sentinel);
+    return () => observer.disconnect();
+  }, [loading, loadMore, displayed.length]);
 
   return (
     <div className="space-y-8">
-      {/* Grid de productos */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-        {displayedProducts.map((product, index) => (
+      {/* Products grid */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
+        {displayed.map((product, index) => (
           <div
             key={product.id}
             className="animate-slide-up"
-            style={{ animationDelay: `${(index % PRODUCTS_PER_PAGE) * 50}ms` }}
+            style={{ animationDelay: `${(index % PER_PAGE) * 40}ms` }}
           >
-            <ProductCard
-              product={product}
-              category={category}
-            />
+            <ProductCard product={product} category={category} />
           </div>
         ))}
       </div>
 
-      {/* Loading indicator */}
+      {/* Load-more sentinel — sits right after the grid; rootMargin makes the
+          observer fire ~800px early, well before the user reaches anything
+          below the grid (help box, related categories, footer). */}
+      {displayed.length < products.length && <div ref={sentinelRef} aria-hidden="true" />}
+
+      {/* Loader */}
       {loading && (
         <div className="flex justify-center py-8">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
-            <span className="text-gray-600">Cargando más productos...</span>
+          <div className="flex items-center gap-3 text-sm text-gray-500">
+            <div
+              className="w-5 h-5 border-2 border-[#0F2178] border-t-transparent rounded-full"
+              style={{ animation: 'spin 0.7s linear infinite' }}
+            />
+            Cargando más productos…
           </div>
         </div>
       )}
 
-      {/* Sentinel: más productos están siendo cargados */}
-      {!loading && displayedProducts.length < products.length && (
-        <div className="h-4" />
+      {/* Progress bar */}
+      {displayed.length < products.length && !loading && (
+        <div className="text-center pb-4">
+          <div className="inline-flex items-center gap-3 text-xs text-gray-400">
+            <div className="w-32 h-1 bg-gray-100 rounded-full overflow-hidden">
+              <div
+                className="h-full bg-[#0F2178] rounded-full transition-all duration-500"
+                style={{ width: `${(displayed.length / products.length) * 100}%` }}
+              />
+            </div>
+            <span>{displayed.length} de {products.length} productos</span>
+          </div>
+        </div>
       )}
     </div>
   );

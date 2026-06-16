@@ -32,8 +32,7 @@ let count = 0;
 for (const [categoryId, items] of Object.entries(byCategory)) {
   const total = items.length;
   const sorted = items
-    .sort((a, b) => (b.bestseller ? 1 : 0) - (a.bestseller ? 1 : 0) || (b.featured ? 1 : 0) - (a.featured ? 1 : 0))
-    .slice(0, 80);
+    .sort((a, b) => (b.bestseller ? 1 : 0) - (a.bestseller ? 1 : 0) || (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
 
   writeFileSync(join(OUT_DIR, `${categoryId}.json`), JSON.stringify({ total, products: sorted }), 'utf-8');
   count++;

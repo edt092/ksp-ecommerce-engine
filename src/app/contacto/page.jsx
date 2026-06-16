@@ -11,7 +11,7 @@ const FAQ_CONTACTO = [
   },
   {
     q: '¿Hacen entregas fuera de Quito?',
-    a: 'Sí. Realizamos envíos a todo Ecuador y Colombia mediante transportadoras aliadas. El costo de envío varía según destino, peso y dimensiones del pedido. Comunícate por WhatsApp para recibir el costo exacto de envío a tu ciudad.',
+    a: 'Sí. Realizamos envíos a todo Ecuador mediante transportadoras aliadas. El costo de envío varía según destino, peso y dimensiones del pedido. Comunícate por WhatsApp para recibir el costo exacto de envío a tu ciudad.',
   },
   {
     q: '¿Puedo ver una muestra antes de hacer el pedido completo?',

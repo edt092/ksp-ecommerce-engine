@@ -1,11 +1,11 @@
 # KS Promocionales — kronosolopromocionales.com
-> Artículos promocionales y regalos corporativos personalizados en Ecuador y Colombia.
+> Artículos promocionales y regalos corporativos personalizados en Ecuador.
 
 ## Empresa
 - Nombre: KS Promocionales
 - Fundadora: Claudia González
 - Contacto: claudiagonzalez@kronosolopromocionales.com | +593 999 814 838
-- Cobertura: Ecuador (Quito, Guayaquil, Cuenca, Ambato, Manta) y Colombia (Bogotá, Medellín, Cali)
+- Cobertura: Ecuador (Quito, Guayaquil, Cuenca, Ambato, Manta)
 - WhatsApp para cotizaciones: https://wa.me/593999814838
 
 ## Catálogo principal
@@ -24,7 +24,6 @@
 - Producto: https://www.kronosolopromocionales.com/productos/[slug]/
 - Blog: https://www.kronosolopromocionales.com/blog/
 - Ecuador: https://www.kronosolopromocionales.com/productos-promocionales-ecuador/
-- Colombia: https://www.kronosolopromocionales.com/productos-promocionales-colombia/
 - Nosotros: https://www.kronosolopromocionales.com/nosotros/
 - Contacto: https://www.kronosolopromocionales.com/contacto/
 - Catálogos digitales: https://www.kronosolopromocionales.com/catalogos-digitales/

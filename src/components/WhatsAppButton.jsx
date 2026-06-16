@@ -1,12 +1,8 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
-import CountryWhatsAppModal, {
-  WA_COUNTRIES,
-  openCountryWhatsApp,
-  trackWhatsAppClick,
-} from './CountryWhatsAppModal';
+import { buildWhatsAppUrl, trackWhatsAppClick } from '@/lib/whatsapp';
 
 const WA_ICON = (
   <svg className="w-7 h-7 sm:w-8 sm:h-8 text-white relative z-10" fill="currentColor" viewBox="0 0 24 24">
@@ -20,77 +16,11 @@ const WA_ICON_SM = (
   </svg>
 );
 
-// ── Popup that emerges above the fixed floating button ─────────────────────
-function FloatingPopup({ message, onClose, context }) {
-  return (
-    <div
-      className="absolute bottom-[calc(100%+12px)] right-0 w-64 sm:w-72 bg-white rounded-2xl shadow-2xl overflow-hidden
-                 animate-[slideUpFade_0.22s_ease-out_both]"
-      style={{ transformOrigin: 'bottom right' }}
-    >
-      {/* Header */}
-      <div className="bg-[#25D366] px-4 pt-4 pb-3">
-        <div className="flex items-center justify-between">
-          <p className="text-white font-semibold text-sm leading-tight">
-            ¿Desde dónde nos escribes?
-          </p>
-          <button
-            onClick={onClose}
-            className="text-white/80 hover:text-white transition-colors p-0.5 rounded-full hover:bg-white/20"
-            aria-label="Cerrar"
-          >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-        <p className="text-white/75 text-xs mt-0.5">Elige tu país para atenderte mejor</p>
-      </div>
-
-      {/* Country cards */}
-      <div className="p-3 flex flex-col gap-2">
-        {WA_COUNTRIES.map((c) => (
-          <button
-            key={c.code}
-            onClick={() => {
-              trackWhatsAppClick(c.code, context);
-              openCountryWhatsApp(c.phone, message);
-              onClose();
-            }}
-            className="flex items-center gap-3 w-full px-3 py-3 rounded-xl border-2 border-gray-100
-                       hover:border-[#25D366] hover:bg-green-50 active:scale-[0.97]
-                       transition-all duration-150 group text-left"
-          >
-            <span className="text-3xl leading-none select-none">{c.flag}</span>
-            <div className="flex-1 min-w-0">
-              <p className="font-semibold text-gray-800 text-sm group-hover:text-[#128C7E] transition-colors">
-                {c.label}
-              </p>
-              <p className="text-gray-400 text-xs truncate">{c.hint}</p>
-            </div>
-            <svg
-              className="w-4 h-4 text-gray-300 group-hover:text-[#25D366] transition-colors flex-shrink-0"
-              fill="none" stroke="currentColor" viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-        ))}
-      </div>
-
-      {/* Arrow pointing toward the button */}
-      <div
-        className="absolute -bottom-[8px] right-6 w-4 h-4 bg-white rotate-45 shadow-md"
-        style={{ boxShadow: '2px 2px 4px rgba(0,0,0,0.08)' }}
-      />
-    </div>
-  );
-}
-
 // ── Main component ──────────────────────────────────────────────────────────
+// Site is Ecuador-only — links straight to WhatsApp, no country picker.
 export default function WhatsAppButton({
   message = '¡Hola! Me gustaría conocer más sobre sus productos promocionales.',
-  // phoneNumber prop kept for backwards compat but ignored — country selector handles routing
+  // phoneNumber prop kept for backwards compat but ignored — single number now
   position = 'fixed',
   className = '',
   children,
@@ -100,79 +30,36 @@ export default function WhatsAppButton({
   hideOnBlog = true,
 }) {
   const pathname = usePathname();
-  const [open, setOpen] = useState(false);
   const [cookieBannerVisible, setCookieBannerVisible] = useState(false);
-  const containerRef = useRef(null);
 
   useEffect(() => {
     const stored = localStorage.getItem('ks_cookie_consent');
     if (!stored) setCookieBannerVisible(true);
   }, []);
 
-  useEffect(() => {
-    if (!open) return;
-    const handler = (e) => {
-      if (containerRef.current && !containerRef.current.contains(e.target)) {
-        setOpen(false);
-      }
-    };
-    document.addEventListener('mousedown', handler);
-    document.addEventListener('touchstart', handler);
-    return () => {
-      document.removeEventListener('mousedown', handler);
-      document.removeEventListener('touchstart', handler);
-    };
-  }, [open]);
-
   const shouldHide = hideOnBlog && position === 'fixed' && pathname?.startsWith('/blog');
   if (shouldHide) return null;
 
   const context = productName || categoryName || 'general';
+  const href = buildWhatsAppUrl(message);
 
   // ── Fixed floating button ──────────────────────────────────────────────
   if (position === 'fixed') {
     return (
-      <div
-        ref={containerRef}
-        className={`fixed right-4 sm:right-6 z-50 transition-all duration-300 ${
-          cookieBannerVisible ? 'bottom-32 sm:bottom-24' : 'bottom-4 sm:bottom-6'
-        }`}
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={() => trackWhatsAppClick(context)}
+        aria-label="Contactar por WhatsApp"
+        className={`fixed right-4 sm:right-6 z-50 flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16
+                    rounded-full shadow-2xl transition-all duration-300 transform bg-[#25D366] hover:bg-[#128C7E] hover:scale-110
+                    ${cookieBannerVisible ? 'bottom-32 sm:bottom-24' : 'bottom-4 sm:bottom-6'}`}
       >
-        {open && (
-          <FloatingPopup
-            message={message}
-            onClose={() => setOpen(false)}
-            context={context}
-          />
-        )}
-
-        <button
-          onClick={() => setOpen((v) => !v)}
-          className={`relative flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16
-                      rounded-full shadow-2xl transition-all duration-300 transform
-                      ${open
-                        ? 'bg-[#128C7E] scale-95'
-                        : 'bg-[#25D366] hover:bg-[#128C7E] hover:scale-110'
-                      }`}
-          aria-label="Contactar por WhatsApp"
-          aria-expanded={open}
-        >
-          {!open && (
-            <>
-              <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-75 animate-ping" />
-              <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-50 animate-pulse" />
-            </>
-          )}
-
-          {open ? (
-            <svg className="w-7 h-7 text-white relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          ) : (
-            WA_ICON
-          )}
-        </button>
-      </div>
+        <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-75 animate-ping" />
+        <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-50 animate-pulse" />
+        {WA_ICON}
+      </a>
     );
   }
 
@@ -184,23 +71,17 @@ export default function WhatsAppButton({
   };
 
   return (
-    <>
-      {open && (
-        <CountryWhatsAppModal
-          message={message}
-          onClose={() => setOpen(false)}
-          context={context}
-        />
-      )}
-      <button
-        onClick={() => setOpen(true)}
-        className={`inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg
-                    transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl
-                    ${variantStyles[variant]} ${className}`}
-      >
-        {WA_ICON_SM}
-        {children || 'Cotizar por WhatsApp'}
-      </button>
-    </>
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={() => trackWhatsAppClick(context)}
+      className={`inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg
+                  transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl
+                  ${variantStyles[variant]} ${className}`}
+    >
+      {WA_ICON_SM}
+      {children || 'Cotizar por WhatsApp'}
+    </a>
   );
 }

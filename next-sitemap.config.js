@@ -29,16 +29,10 @@ module.exports = {
     if (normalizedPath === '/') {
       priority = 1.0;
       changefreq = 'daily';
-    } else if (
-      normalizedPath === '/productos-promocionales-ecuador/' ||
-      normalizedPath === '/productos-promocionales-colombia/'
-    ) {
+    } else if (normalizedPath === '/productos-promocionales-ecuador/') {
       priority = 0.95;
       changefreq = 'weekly';
-    } else if (
-      normalizedPath.startsWith('/productos-promocionales-ecuador/') ||
-      normalizedPath.startsWith('/productos-promocionales-colombia/')
-    ) {
+    } else if (normalizedPath.startsWith('/productos-promocionales-ecuador/')) {
       priority = 0.9;
       changefreq = 'weekly';
     } else if (normalizedPath.startsWith('/categorias/')) {

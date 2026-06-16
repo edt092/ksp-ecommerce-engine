@@ -16,7 +16,7 @@ const FAQ_NOSOTROS = [
   },
   {
     q: '¿Cuántos años lleva KS Promocionales en el mercado?',
-    a: 'KS Promocionales es parte de un proyecto empresarial con raíces en el sector de artículos promocionales en Ecuador. Nuestra fundadora Claudia González tiene experiencia directa en la industria y relaciones establecidas con proveedores verificados en Ecuador y Colombia.',
+    a: 'KS Promocionales es parte de un proyecto empresarial con raíces en el sector de artículos promocionales en Ecuador. Nuestra fundadora Claudia González tiene experiencia directa en la industria y relaciones establecidas con proveedores verificados en Ecuador.',
   },
 ];
 
@@ -32,7 +32,7 @@ const faqNosotrosSchema = {
 
 export const metadata = {
   title: 'Nosotros | KS Promocionales Ecuador — Claudia González',
-  description: 'Conoce a Claudia González y el equipo detrás de KS Promocionales. Desde Quito servimos a empresas de Ecuador y Colombia con artículos promocionales personalizados y regalos corporativos de calidad.',
+  description: 'Conoce a Claudia González y el equipo detrás de KS Promocionales. Desde Quito servimos a empresas de Ecuador con artículos promocionales personalizados y regalos corporativos de calidad.',
   alternates: {
     canonical: 'https://www.kronosolopromocionales.com/nosotros/',
   },
@@ -98,7 +98,7 @@ const personSchema = {
   givenName: 'Claudia',
   familyName: 'González Ortiz',
   jobTitle: 'Fundadora y Especialista en Productos Promocionales',
-  description: 'Especialista en productos promocionales con años de experiencia sirviendo a empresas de Ecuador y Colombia desde Quito.',
+  description: 'Especialista en productos promocionales con años de experiencia sirviendo a empresas de Ecuador desde Quito.',
   image: {
     '@type': 'ImageObject',
     url: `${BASE_URL}/images/team/claudia-gonzalez.jpg`,
@@ -164,7 +164,7 @@ export default function AboutPage() {
             </h1>
             <p className="text-white/90 text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed max-w-3xl mx-auto">
               Somos KS Promocionales, una empresa ecuatoriana especializada en artículos
-              promocionales personalizados para empresas de Ecuador y Colombia.
+              promocionales personalizados para empresas de Ecuador.
             </p>
           </div>
         </div>
@@ -205,7 +205,7 @@ export default function AboutPage() {
                 </p>
                 <div className="space-y-4 text-gray-700 leading-relaxed text-base">
                   <p>
-                    Claudia lleva años conectando a empresas de Ecuador y Colombia con artículos
+                    Claudia lleva años conectando a empresas de Ecuador con artículos
                     promocionales que realmente funcionan: los que el cliente guarda, usa y recuerda.
                     Su enfoque siempre fue simple — entender el negocio del cliente antes de proponer
                     un producto.
@@ -277,7 +277,7 @@ export default function AboutPage() {
                 necesitaba.
               </p>
               <p>
-                Hoy, KS Promocionales trabaja con empresas de todos los tamaños en Ecuador y Colombia —
+                Hoy, KS Promocionales trabaja con empresas de todos los tamaños en Ecuador —
                 desde startups tecnológicas que necesitan swag para su primer evento hasta corporaciones
                 que buscan kits de regalo para cientos de clientes. El catálogo supera los 1,200 productos,
                 pero la promesa sigue siendo la misma: entender tu marca antes de recomendar un artículo.
@@ -288,7 +288,7 @@ export default function AboutPage() {
             <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
                 { stat: '1,200+', label: 'Productos disponibles' },
-                { stat: '2', label: 'Países · Ecuador y Colombia' },
+                { stat: '+10', label: 'Años de experiencia' },
                 { stat: '48h', label: 'Respuesta de cotización' },
                 { stat: '100%', label: 'Atención personalizada' },
               ].map((item) => (
@@ -399,7 +399,6 @@ export default function AboutPage() {
               <h3 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-3">Cobertura</h3>
               <ul className="space-y-1.5 text-sm text-gray-600">
                 <li>🇪🇨 Ecuador — Envíos nacionales</li>
-                <li>🇨🇴 Colombia — Envíos a principales ciudades</li>
                 <li>📦 +1,200 productos personalizables</li>
                 <li>⏱ Cotización garantizada en 48h</li>
               </ul>

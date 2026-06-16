@@ -1,7 +1,7 @@
 import productsData from '@/data/products.json';
 import blogData from '@/data/blog/posts.json';
 import categoriesData from '@/data/categories.json';
-import { ecuador, colombia } from '@/data/geo-data';
+import { ecuador } from '@/data/geo-data';
 
 const BASE_URL = 'https://www.kronosolopromocionales.com';
 
@@ -19,8 +19,13 @@ export default function sitemap() {
     { url: `${BASE_URL}/catalogos-digitales/`,              lastModified: '2026-02-01', priority: 0.6, changeFrequency: 'monthly' },
     { url: `${BASE_URL}/politica-de-privacidad/`,           lastModified: '2026-01-01', priority: 0.3, changeFrequency: 'yearly' },
     { url: `${BASE_URL}/productos-promocionales-ecuador/`,  lastModified: BUILD_DATE, priority: 0.9, changeFrequency: 'monthly' },
-    { url: `${BASE_URL}/productos-promocionales-colombia/`, lastModified: BUILD_DATE, priority: 0.9, changeFrequency: 'monthly' },
     { url: `${BASE_URL}/regalos-corporativos/`,             lastModified: BUILD_DATE, priority: 0.9, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/articulos-promocionales/`,          lastModified: BUILD_DATE, priority: 0.9, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/material-publicitario/`,            lastModified: BUILD_DATE, priority: 0.9, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/merchandising-corporativo/`,        lastModified: BUILD_DATE, priority: 0.9, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/parlantes-bluetooth/`,              lastModified: BUILD_DATE, priority: 0.8, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/audifonos-promocionales/`,          lastModified: BUILD_DATE, priority: 0.8, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/soportes-para-celular/`,            lastModified: BUILD_DATE, priority: 0.8, changeFrequency: 'monthly' },
   ];
 
   // --- Product routes ------------------------------------------------------
@@ -58,19 +63,11 @@ export default function sitemap() {
   }));
 
   // --- Geo city routes (Ecuador) -------------------------------------------
-  // WARNING: 5 Ecuador city pages + 5 Colombia city pages = 10 location pages total.
-  // This is below the 30-page warning threshold but these pages are near-duplicates
-  // (only city name, intro, and caracteristicas differ). Monitor carefully before
-  // expanding. Do NOT add more cities without ensuring 60%+ unique content per page.
+  // Site is Ecuador-only — 5 city pages. These are near-duplicates (only city
+  // name, intro, and caracteristicas differ), well below the 30-page warning
+  // threshold. Do NOT add more cities without ensuring 60%+ unique content per page.
   const ecuadorCityRoutes = ecuador.ciudades.map((ciudad) => ({
     url: `${BASE_URL}/productos-promocionales-ecuador/${ciudad.slug}/`,
-    lastModified: BUILD_DATE,
-    priority: 0.7,
-    changeFrequency: 'monthly',
-  }));
-
-  const colombiaCityRoutes = colombia.ciudades.map((ciudad) => ({
-    url: `${BASE_URL}/productos-promocionales-colombia/${ciudad.slug}/`,
     lastModified: BUILD_DATE,
     priority: 0.7,
     changeFrequency: 'monthly',
@@ -82,7 +79,6 @@ export default function sitemap() {
     ...productRoutes,
     ...blogRoutes,
     ...ecuadorCityRoutes,
-    ...colombiaCityRoutes,
   ];
 
   // Guard: warn in dev if approaching the 50,000 URL hard limit.

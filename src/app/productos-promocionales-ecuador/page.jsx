@@ -28,7 +28,6 @@ export const metadata = {
     canonical: 'https://www.kronosolopromocionales.com/productos-promocionales-ecuador/',
     languages: {
       'es-EC': 'https://www.kronosolopromocionales.com/productos-promocionales-ecuador/',
-      'es-CO': 'https://www.kronosolopromocionales.com/productos-promocionales-colombia/',
       'x-default': 'https://www.kronosolopromocionales.com/',
     },
   },

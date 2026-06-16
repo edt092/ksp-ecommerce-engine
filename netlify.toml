@@ -57,13 +57,26 @@
 
 [[redirects]]
   from   = "/blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-mexico"
-  to     = "/blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-ecuador-y-colombia"
+  to     = "/blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-ecuador"
   status = 301
   force  = true
 
 [[redirects]]
   from   = "/blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-mexico/"
-  to     = "/blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-ecuador-y-colombia/"
+  to     = "/blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-ecuador/"
+  status = 301
+  force  = true
+
+# Site es Ecuador-only — slug anterior con "colombia" renombrado
+[[redirects]]
+  from   = "/blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-ecuador-y-colombia"
+  to     = "/blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-ecuador"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-ecuador-y-colombia/"
+  to     = "/blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-ecuador/"
   status = 301
   force  = true
 

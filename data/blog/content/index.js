@@ -4,7 +4,7 @@ export const blogContent = {
 
 <p class="lead">La tecnología dejó de ser un regalo "diferente" para convertirse en el estándar de los regalos corporativos de alto impacto. En 2026, un cliente que recibe un gadget útil no lo guarda en un cajón: lo usa todos los días y tu logo va con él.</p>
 
-<p>Esta lista no es un catálogo. Es una selección basada en qué artículos tecnológicos generan el mayor retorno de visibilidad de marca, cuáles tienen mejor recepción según el sector y cuáles son los más solicitados actualmente en Ecuador y Colombia. Cada ítem incluye rango de precio real, técnica de personalización recomendada y para qué industria funciona mejor.</p>
+<p>Esta lista no es un catálogo. Es una selección basada en qué artículos tecnológicos generan el mayor retorno de visibilidad de marca, cuáles tienen mejor recepción según el sector y cuáles son los más solicitados actualmente en Ecuador. Cada ítem incluye rango de precio real, técnica de personalización recomendada y para qué industria funciona mejor.</p>
 
 <h2>Por qué los artículos tecnológicos dominan el merchandising en 2026</h2>
 
@@ -243,7 +243,7 @@ export const blogContent = {
 <p>Grabado láser en plástico barato se ve peor que serigrafía en aluminio de calidad. El material del artículo comunica más que la técnica de personalización. Antes de decidir el método, elige un artículo con materiales que te representen.</p>
 
 <h3>Regla 3: Certifica la funcionalidad</h3>
-<p>Un power bank que explota, unos auriculares que distorsionan o un hub que no reconoce dispositivos dañan tu imagen de marca más que no regalar nada. Pide siempre especificaciones técnicas verificables: capacidad real (mAh), certificación CE/FCC, velocidad de carga (W), rango Bluetooth (m). Un proveedor serio las tiene disponibles. <a href="/categorias/tecnologia">Ver especificaciones de nuestra línea tecnológica</a>. Para almacenamiento portátil de calidad garantizada, revisa nuestra selección de <a href="/categorias/memorias-usb" class="text-primary hover:underline font-medium">memorias USB personalizadas</a>.</p>
+<p>Un power bank que explota, unos auriculares que distorsionan o un hub que no reconoce dispositivos dañan tu imagen de marca más que no regalar nada. Pide siempre especificaciones técnicas verificables: capacidad real (mAh), certificación CE/FCC, velocidad de carga (W), rango Bluetooth (m). Un proveedor serio las tiene disponibles. <a href="/categorias/tecnologia-promocional">Ver especificaciones de nuestra línea tecnológica</a>. Para almacenamiento portátil de calidad garantizada, revisa nuestra selección de <a href="/categorias/memorias-usb-personalizadas" class="text-primary hover:underline font-medium">memorias USB personalizadas</a>.</p>
 
 <h2>¿Cuándo pedir para tener a tiempo?</h2>
 
@@ -262,7 +262,7 @@ export const blogContent = {
   <h3 style="color: white; font-size: 22px; margin: 0 0 10px 0; font-weight: bold;">¿Tienes un evento o campaña en mente?</h3>
   <p style="color: rgba(255,255,255,0.75); margin: 0 0 24px 0;">Cuéntanos qué necesitas y en 48h tienes opciones con precios reales. Sin rodeos.</p>
   <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
-    <a href="/categorias/tecnologia" style="display: inline-block; background: rgba(255,255,255,0.12); color: white; padding: 12px 22px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px; border: 1px solid rgba(255,255,255,0.25);">Ver catálogo tecnología</a>
+    <a href="/categorias/tecnologia-promocional" style="display: inline-block; background: rgba(255,255,255,0.12); color: white; padding: 12px 22px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px; border: 1px solid rgba(255,255,255,0.25);">Ver catálogo tecnología</a>
     <a href="https://wa.me/593999814838?text=Hola%20Claudia%2C%20me%20interesan%20los%20regalos%20corporativos%20tecnol%C3%B3gicos%20para%202026" style="display: inline-block; background: #25D366; color: white; padding: 12px 22px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 14px;">💬 Cotizar por WhatsApp</a>
   </div>
 </div>
@@ -273,7 +273,7 @@ export const blogContent = {
 
 <p class="lead">Cada año, miles de empresas ecuatorianas invierten en productos promocionales que terminan en un cajón. No porque la idea sea mala, sino porque nadie les dijo cómo elegirlos correctamente. Esta guía existe para que ese no sea tu caso.</p>
 
-<p>Después de asesorar a cientos de empresas en Ecuador y Colombia —desde startups hasta corporaciones— hemos identificado los patrones que separan un artículo que genera recordación de marca de uno que genera decepción. Todo está aquí.</p>
+<p>Después de asesorar a cientos de empresas en Ecuador —desde startups hasta corporaciones— hemos identificado los patrones que separan un artículo que genera recordación de marca de uno que genera decepción. Todo está aquí.</p>
 
 <h2>¿Qué es realmente el merchandising corporativo?</h2>
 
@@ -410,10 +410,10 @@ export const blogContent = {
 <p>Sets ejecutivos de escritura, termos premium, artículos de cuero. Los clientes VIP de este sector esperan calidad perceptible. Un bolígrafo metálico grabado con láser deja mejor impresión que diez plásticos con logo impreso. Explora nuestros <a href="/categorias/oficina">artículos de oficina premium</a>.</p>
 
 <h3>Salud y farmacéutica</h3>
-<p>Artículos de uso cotidiano en consultorios: bolígrafos (muchos, siempre se pierden), libretas clínicas, porta-instrumentos personalizados, termos para médicos de guardia. Considera también artículos con propiedades antimicrobianas. Ver <a href="/categorias/escritura">artículos de escritura</a>.</p>
+<p>Artículos de uso cotidiano en consultorios: bolígrafos (muchos, siempre se pierden), libretas clínicas, porta-instrumentos personalizados, termos para médicos de guardia. Considera también artículos con propiedades antimicrobianas. Ver <a href="/categorias/boligrafos-publicitarios">artículos de escritura</a>.</p>
 
 <h3>Tecnología y startups</h3>
-<p>Power banks, cables USB multiconector, mouse pads, auriculares Bluetooth de gama media. Este sector valora la funcionalidad y el diseño más que la tradición. El swag debe verse "cool" para que el equipo lo use con orgullo. Ver <a href="/categorias/tecnologia">artículos tecnológicos</a>.</p>
+<p>Power banks, cables USB multiconector, mouse pads, auriculares Bluetooth de gama media. Este sector valora la funcionalidad y el diseño más que la tradición. El swag debe verse "cool" para que el equipo lo use con orgullo. Ver <a href="/categorias/tecnologia-promocional">artículos tecnológicos</a>.</p>
 
 <h3>Hotelería y turismo</h3>
 <p>Amenities personalizados, toallas y textiles de habitación, bolsas de lavandería, libretas de bienvenida. La clave aquí es coherencia visual: todo debe verse como parte del mismo sistema de diseño. Los productos sostenibles (<a href="/categorias/ecologia">línea ecológica</a>) tienen gran acogida en hoteles con certificaciones ambientales.</p>
@@ -470,8 +470,8 @@ export const blogContent = {
   <h3 style="color: white; font-size: 24px; margin: 0 0 12px 0; font-weight: bold;">¿Listo para elegir el artículo correcto?</h3>
   <p style="color: rgba(255,255,255,0.8); margin: 0 0 24px 0; font-size: 16px;">Cotización personalizada en 48h. Sin mínimos absurdos. Sin formularios.</p>
   <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-    <a href="/categorias/tecnologia" style="display: inline-block; background: rgba(255,255,255,0.15); color: white; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px; border: 1px solid rgba(255,255,255,0.3);">Ver Tecnología</a>
-    <a href="/categorias/mugs" style="display: inline-block; background: rgba(255,255,255,0.15); color: white; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px; border: 1px solid rgba(255,255,255,0.3);">Ver Mugs & Termos</a>
+    <a href="/categorias/tecnologia-promocional" style="display: inline-block; background: rgba(255,255,255,0.15); color: white; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px; border: 1px solid rgba(255,255,255,0.3);">Ver Tecnología</a>
+    <a href="/categorias/mugs-y-termos-personalizados" style="display: inline-block; background: rgba(255,255,255,0.15); color: white; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px; border: 1px solid rgba(255,255,255,0.3);">Ver Mugs & Termos</a>
     <a href="https://wa.me/593999814838?text=Hola%20Claudia%2C%20le%C3%AD%20la%20gu%C3%ADa%20y%20quiero%20cotizar%20productos%20para%20mi%20empresa" style="display: inline-block; background: #25D366; color: white; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 14px;">💬 Cotizar por WhatsApp</a>
   </div>
 </div>
@@ -534,7 +534,7 @@ export const blogContent = {
 
     <p>Desde textiles premium hasta tecnología de última generación, desde artículos económicos para distribución masiva hasta regalos corporativos elegantes para clientes VIP, tenemos la solución perfecta para tu estrategia de marketing. Contáctanos por WhatsApp para una cotización personalizada y descubre cómo los productos promocionales pueden transformar la presencia de tu marca en Ecuador.</p>
 
-    <p>Explora las últimas tendencias en nuestra sección de <a href="/categorias/novedades" class="text-primary hover:underline font-medium">productos promocionales novedosos</a>, o descubre nuestra línea de <a href="/categorias/tecnologia" class="text-primary hover:underline font-medium">tecnología promocional personalizable</a> para cautivar a tu audiencia.</p>
+    <p>Explora las últimas tendencias en nuestra sección de <a href="/categorias/novedades" class="text-primary hover:underline font-medium">productos promocionales novedosos</a>, o descubre nuestra línea de <a href="/categorias/tecnologia-promocional" class="text-primary hover:underline font-medium">tecnología promocional personalizable</a> para cautivar a tu audiencia.</p>
   `,
 
   'mejores-productos-promocionales-2025': `
@@ -549,7 +549,7 @@ export const blogContent = {
     <h3>2. Botellas Térmicas Premium</h3>
     <p>La sostenibilidad es protagonista. Las botellas térmicas de acero inoxidable no solo reducen el uso de plástico, sino que también mantienen bebidas frías por 24 horas o calientes por 12 horas. Son perfectas para deportistas, oficinistas y cualquier persona consciente del medio ambiente. La personalización con grabado láser garantiza durabilidad del branding.</p>
 
-    <h3>3. Textiles de Alta Calidad</h3>
+    <h3>3. Textiles de Alta Cuencadad</h3>
     <p>Polos, camisetas y chompas de algodón premium o materiales técnicos son inversiones que pagan dividendos a largo plazo. Un textil bien diseñado se convierte en publicidad móvil constante. La clave está en elegir calidades superiores: telas suaves, costuras reforzadas y colores que no se desvanecen.</p>
 
     <h3>4. Audífonos Bluetooth TWS</h3>
@@ -594,7 +594,7 @@ export const blogContent = {
     <h3>4. Evalúa la Capacidad de Personalización y la Visibilidad del Logo</h3>
     <p>No todos los productos ofrecen las mismas posibilidades de personalización. Antes de decidir, verifica el área de impresión disponible, las técnicas aplicables (serigrafía, bordado, grabado láser, sublimación) y cómo lucirá tu logo en el producto terminado. Un logo bien posicionado en un producto de alta calidad comunica profesionalismo; uno mal ejecutado puede dañar la percepción de tu marca en lugar de fortalecerla. En KS Promocionales te asesoramos sin costo en este proceso para que cada artículo sea un reflejo fiel de tu identidad corporativa.</p>
 
-    <p>Descubre las novedades de temporada en nuestra sección de <a href="/categorias/novedades" class="text-primary hover:underline font-medium">productos promocionales novedosos</a>, o impresiona a tus clientes VIP con nuestra <a href="/categorias/tecnologia" class="text-primary hover:underline font-medium">línea de tecnología promocional</a> y nuestra selección de <a href="/categorias/mugs" class="text-primary hover:underline font-medium">mugs y termos personalizados</a>.</p>
+    <p>Descubre las novedades de temporada en nuestra sección de <a href="/categorias/novedades" class="text-primary hover:underline font-medium">productos promocionales novedosos</a>, o impresiona a tus clientes VIP con nuestra <a href="/categorias/tecnologia-promocional" class="text-primary hover:underline font-medium">línea de tecnología promocional</a> y nuestra selección de <a href="/categorias/mugs-y-termos-personalizados" class="text-primary hover:underline font-medium">mugs y termos personalizados</a>.</p>
   `,
 
   'estrategias-marketing-merchandising-empresarial': `
@@ -712,7 +712,7 @@ export const blogContent = {
 
     <p>Seguir estas recomendaciones convierte la producción de merchandising en un proceso predecible y controlado, donde el resultado final refleja con fidelidad la identidad visual que tu empresa ha construido con tanto esfuerzo.</p>
 
-    <p>Ve cómo tu logo cobra vida en nuestra sección de <a href="/categorias/novedades" class="text-primary hover:underline font-medium">productos promocionales novedosos</a>, o explora nuestra colección de <a href="/categorias/escritura" class="text-primary hover:underline font-medium">artículos de escritura personalizados</a> donde el diseño y la funcionalidad se unen.</p>
+    <p>Ve cómo tu logo cobra vida en nuestra sección de <a href="/categorias/novedades" class="text-primary hover:underline font-medium">productos promocionales novedosos</a>, o explora nuestra colección de <a href="/categorias/boligrafos-publicitarios" class="text-primary hover:underline font-medium">artículos de escritura personalizados</a> donde el diseño y la funcionalidad se unen.</p>
   `,
 
   'merchandising-eventos-corporativos-ecuador': `
@@ -724,7 +724,7 @@ export const blogContent = {
 
     <h2>Productos que Funcionan en Eventos Ecuatorianos</h2>
 
-    <h3>1. Textiles de Calidad Premium</h3>
+    <h3>1. Textiles de Cuencadad Premium</h3>
     <p>En ferias y conferencias, las camisetas y polos de calidad superior son altamente valorados. El clima de Ecuador (especialmente en ciudades como Quito) favorece el uso constante de estas prendas. La clave: telas suaves (cotton peinado mínimo 180gr/m²), colores que no se desvanecen y bordado de calidad. Los asistentes usan estas prendas regularmente, convirtiéndolas en publicidad móvil continua.</p>
 
     <h3>2. Botellas Térmicas y Termos</h3>
@@ -821,7 +821,7 @@ export const blogContent = {
     <h2>Conclusión: Tecnología que Conecta</h2>
     <p>El merchandising tecnológico efectivo no es gastar más, es elegir inteligentemente productos que tus audiencias usan diariamente. Cada uso refuerza tu marca. Cada carga de batería salvada, cada playlist escuchada, cada archivo transferido es una micro-interacción con tu marca. En KS Promocionales te ayudamos a seleccionar exactamente los gadgets que tu audiencia valorará, usará y recordará.</p>
 
-    <p>Explora nuestra <a href="/categorias/tecnologia" class="text-primary hover:underline font-medium">categoría de tecnología promocional</a> con gadgets como power banks, cables y cargadores. Para artículos de almacenamiento portátil, visita nuestra selección de <a href="/categorias/memorias-usb" class="text-primary hover:underline font-medium">memorias USB personalizadas</a>.</p>
+    <p>Explora nuestra <a href="/categorias/tecnologia-promocional" class="text-primary hover:underline font-medium">categoría de tecnología promocional</a> con gadgets como power banks, cables y cargadores. Para artículos de almacenamiento portátil, visita nuestra selección de <a href="/categorias/memorias-usb-personalizadas" class="text-primary hover:underline font-medium">memorias USB personalizadas</a>.</p>
   `,
 
   'branding-textiles-personalizados-empresas': `
@@ -831,7 +831,7 @@ export const blogContent = {
     <h2>La Psicología del Textil Corporativo</h2>
     <p>Vestir ropa de una marca es un acto de afiliación pública. Las personas solo visten prendas de marcas con las que se identifican o de las que se sienten orgullosas. Si tus empleados no usan voluntariamente los textiles corporativos fuera del trabajo, algo falla. La calidad percibida del textil refleja directamente la calidad percibida de la empresa.</p>
 
-    <h2>Principio 1: Calidad Ante Todo</h2>
+    <h2>Principio 1: Cuencadad Ante Todo</h2>
     <p>La tentación de ahorrar comprando textiles económicos es comprensible pero contraproducente. Un polo que pierde forma tras 2 lavadas, destiñe o tiene costuras que se abren comunica: "Esta empresa no invierte en calidad". Inversamente, un textil premium que mantiene forma, color y suavidad tras 50 lavadas comunica excelencia.</p>
 
     <p>Estándares mínimos recomendados: algodón peinado 180gr/m² o superior para polos, cotton premium 240gr/m² para camisetas casuales, mezclas polyester-algodón de alta calidad para deportivo, y costuras reforzadas en áreas de estrés. La diferencia de costo entre calidad media y premium es marginal, pero el impacto percibido es exponencial.</p>
@@ -885,7 +885,7 @@ export const blogContent = {
     <h2>Conclusión: Textiles que Unifican y Venden</h2>
     <p>Los textiles corporativos bien ejecutados fortalecen cultura organizacional, generan orgullo de pertenencia y convierten empleados en embajadores voluntarios de marca. Cada persona que viste tu marca en la calle es publicidad móvil gratuita. En KS Promocionales diseñamos programas textiles completos: desde selección de prendas hasta estrategia de distribución y medición de impacto. Tu equipo merece textiles de los que se sientan orgullosos.</p>
 
-    <p>Explora nuestra colección de <a href="/categorias/confeccion" class="text-primary hover:underline font-medium">textiles y confección personalizados</a> (camisetas, polos, chompas) y nuestra línea de <a href="/categorias/gorras" class="text-primary hover:underline font-medium">gorras corporativas bordadas</a> para completar el uniforme de tu equipo.</p>
+    <p>Explora nuestra colección de <a href="/categorias/confeccion" class="text-primary hover:underline font-medium">textiles y confección personalizados</a> (camisetas, polos, chompas) y nuestra línea de <a href="/categorias/gorras-personalizadas" class="text-primary hover:underline font-medium">gorras corporativas bordadas</a> para completar el uniforme de tu equipo.</p>
   `,
 
   'colores-psicologia-merchandising-corporativo': `
@@ -1033,7 +1033,7 @@ export const blogContent = {
     <h2>Conclusión: Regalos que Fortalecen Relaciones</h2>
     <p>Los regalos corporativos de fin de año no son gasto, son inversión en capital relacional. Un regalo thoughtful y de calidad fortalece vínculos que se traducen en negocios del año siguiente. La diferencia entre un cliente que renueva y uno que no, a menudo radica en estos gestos de aprecio consistentes. En KS Promocionales diseñamos programas completos de regalos corporativos: desde selección estratégica hasta logística de entrega y medición de impacto. Porque tu gratitud merece ser memorable.</p>
 
-    <p>Visita nuestros <a href="/categorias/novedades" class="text-primary hover:underline font-medium">productos promocionales novedosos</a> para encontrar ideas frescas para esta temporada, o sorprende a tus clientes VIP con una selección de <a href="/categorias/mugs" class="text-primary hover:underline font-medium">mugs y termos personalizados</a> de alta calidad.</p>
+    <p>Visita nuestros <a href="/categorias/novedades" class="text-primary hover:underline font-medium">productos promocionales novedosos</a> para encontrar ideas frescas para esta temporada, o sorprende a tus clientes VIP con una selección de <a href="/categorias/mugs-y-termos-personalizados" class="text-primary hover:underline font-medium">mugs y termos personalizados</a> de alta calidad.</p>
   `,
 
   'personalizacion-productos-tecnicas-impresion': `
@@ -1153,10 +1153,10 @@ export const blogContent = {
     <h3>Cuadernos con Tapa Dura</h3>
     <p>Primera opción: Grabado láser (tapa cuero/corcho). Alternativa: Impresión digital + laminado (tapa cartón).</p>
 
-    <h2>Optimización de Costos Sin Sacrificar Calidad</h2>
+    <h2>Optimización de Costos Sin Sacrificar Cuencadad</h2>
     <p>Estrategias inteligentes: simplifica diseños para reducir número de colores en serigrafía/tampografía, consolida órdenes para alcanzar volúmenes que justifiquen serigrafía vs. digital, usa bordado solo en áreas visibles clave (no en todo el producto), y considera técnicas híbridas (serigrafía para diseño principal + bordado para detalle premium en subset de productos).</p>
 
-    <h2>Control de Calidad: Qué Exigir</h2>
+    <h2>Control de Cuencadad: Qué Exigir</h2>
     <p>Antes de producción masiva, solicita siempre: muestra física con personalización exacta, verificación de colores en material final (no solo en pantalla), prueba de durabilidad (lavadas para textiles, resistencia a rayones para grabados), y aprobación escrita antes de producción completa. Previene errores costosos.</p>
 
     <h2>Conclusión: Técnica Correcta, Resultado Perfecto</h2>
@@ -1257,7 +1257,7 @@ export const blogContent = {
     <h2>Conclusión: Elegancia que Construye Imperios Comerciales</h2>
     <p>Los regalos corporativos elegantes son puentes que conectan empresas con clientes VIP en nivel emocional profundo. No son gastos, son inversiones estratégicas en capital relacional. La diferencia entre un cliente leal de por vida y uno que migra a la competencia frecuentemente radica en estos gestos thoughtful de aprecio. En KS Promocionales diseñamos programas completos de regalos corporativos elegantes: desde investigación de preferencias de clientes hasta logística de entrega personalizada y medición de impacto en renovaciones. Porque tus clientes VIP merecen regalos tan excepcionales como la relación que compartes con ellos.</p>
 
-    <p>Para impresionar a tus clientes más importantes, explora nuestra colección de <a href="/categorias/maletines" class="text-primary hover:underline font-medium">maletines y portafolios ejecutivos personalizados</a> y nuestros <a href="/categorias/novedades" class="text-primary hover:underline font-medium">artículos promocionales de alta gama</a>.</p>
+    <p>Para impresionar a tus clientes más importantes, explora nuestra colección de <a href="/categorias/mochilas-y-maletines-personalizados" class="text-primary hover:underline font-medium">maletines y portafolios ejecutivos personalizados</a> y nuestros <a href="/categorias/novedades" class="text-primary hover:underline font-medium">artículos promocionales de alta gama</a>.</p>
   `,
 
   'marketing-sostenible-productos-ecologicos-promocionales': `
@@ -1487,7 +1487,7 @@ export const blogContent = {
 
     <p>Ahora, te invitamos a dar el siguiente paso: analiza tu público objetivo, define tu mensaje clave y contacta a proveedores confiables para solicitar muestras y cotizaciones. ¡No subestimes el poder de un producto promocional bien elegido para impulsar el reconocimiento de tu marca y fidelizar a tus clientes en el dinámico mercado ecuatoriano! Elige sabiamente, ¡y observa cómo tu inversión se traduce en resultados tangibles!</p>
 
-    <p>Explora nuestros <a href="/categorias/novedades" class="text-primary hover:underline font-medium">artículos promocionales novedosos</a> o descubre la más reciente <a href="/categorias/tecnologia" class="text-primary hover:underline font-medium">tecnología promocional personalizable</a> para tu empresa.</p>
+    <p>Explora nuestros <a href="/categorias/novedades" class="text-primary hover:underline font-medium">artículos promocionales novedosos</a> o descubre la más reciente <a href="/categorias/tecnologia-promocional" class="text-primary hover:underline font-medium">tecnología promocional personalizable</a> para tu empresa.</p>
   `,
 
   'beneficios-productos-promocionales-ecuador-guia-completa': `
@@ -1577,7 +1577,7 @@ export const blogContent = {
 
     <p>En última instancia, el éxito de una campaña de marketing con <strong>merchandising promocional</strong> radica en la planificación estratégica, la creatividad y la consistencia. Al combinar estos elementos, podrás aprovechar al máximo el potencial de estos productos y lograr resultados significativos para tu negocio en el mercado ecuatoriano.</p>
 
-    <p>Descubre los artículos más populares del momento en nuestra sección de <a href="/categorias/novedades" class="text-primary hover:underline font-medium">novedades y productos destacados</a>, o explora los últimos gadgets en nuestra <a href="/categorias/tecnologia" class="text-primary hover:underline font-medium">categoría de tecnología promocional</a>.</p>
+    <p>Descubre los artículos más populares del momento en nuestra sección de <a href="/categorias/novedades" class="text-primary hover:underline font-medium">novedades y productos destacados</a>, o explora los últimos gadgets en nuestra <a href="/categorias/tecnologia-promocional" class="text-primary hover:underline font-medium">categoría de tecnología promocional</a>.</p>
   `,
 
   'productos-promocionales-baratos-guia-completa': `
@@ -1589,7 +1589,7 @@ export const blogContent = {
 
     <p>Comencemos por comprender el poder real de los <strong>productos promocionales económicos</strong>. No los subestimes por su bajo costo; bien elegidos, pueden ser una herramienta de marketing sorprendentemente efectiva. Piensa en ellos como pequeños embajadores de tu marca, trabajando silenciosamente para generar reconocimiento y lealtad.</p>
 
-    <p>Pero, ¿por qué deberías considerar invertir en <strong>merchandising promocional barato</strong>? La respuesta es simple: accesibilidad y alcance. Permiten llegar a un público mucho más amplio que las estrategias de marketing tradicionales, sin incurrir en gastos exorbitantes. Una campaña de correo electrónico, por ejemplo, puede terminar en la carpeta de spam, mientras que un <a href="/productos/boligrafo-metalico-shell-oferta">bolígrafo con tu logo</a> estará en el escritorio de tu cliente potencial durante meses.</p>
+    <p>Pero, ¿por qué deberías considerar invertir en <strong>merchandising promocional barato</strong>? La respuesta es simple: accesibilidad y alcance. Permiten llegar a un público mucho más amplio que las estrategias de marketing tradicionales, sin incurrir en gastos exorbitantes. Una campaña de correo electrónico, por ejemplo, puede terminar en la carpeta de spam, mientras que un <a href="/productos/boligrafo-metalico-shell-oferta-7326">bolígrafo con tu logo</a> estará en el escritorio de tu cliente potencial durante meses.</p>
 
     <p>¿Cómo encajan estos <strong>artículos promocionales económicos</strong> en una estrategia de marketing global? Funcionan como un complemento poderoso para otras iniciativas. Por ejemplo, si estás lanzando un nuevo producto, incluir un pequeño regalo con cada compra online puede aumentar la satisfacción del cliente y fomentar la repetición de compra.</p>
 
@@ -1600,19 +1600,19 @@ export const blogContent = {
     <p>Aquí te presento algunas ideas creativas para <strong>productos promocionales baratos</strong> que pueden impulsar tu negocio:</p>
 
     <h3>Bolsas de Tela Reutilizables</h3>
-    <p>Son prácticas, ecológicas y ofrecen una gran superficie para tu logo. En nuestra tienda encontrarás opciones como la <a href="/productos/bolsa-en-algodon-botanik">Bolsa en Algodón Botanik</a> o la <a href="/productos/bolsa-en-algodon-con-fuelle">Bolsa en Algodón Con Fuelle</a>, perfectas para personalizar con tu marca.</p>
+    <p>Son prácticas, ecológicas y ofrecen una gran superficie para tu logo. En nuestra tienda encontrarás opciones como la <a href="/productos/bolsa-en-algodon-botanik-10690">Bolsa en Algodón Botanik</a> o la <a href="/productos/bolsa-en-algodon-botanik-10690">Bolsa en Algodón Con Fuelle</a>, perfectas para personalizar con tu marca.</p>
 
     <h3>Semillas Personalizadas</h3>
-    <p>Pequeños sobres de semillas con el logo de tu empresa son una opción original y sostenible. Es un regalo que simboliza crecimiento y cuidado. Explora nuestra sección de <a href="/categoria/ecologicos">productos ecológicos</a> para más opciones sostenibles.</p>
+    <p>Pequeños sobres de semillas con el logo de tu empresa son una opción original y sostenible. Es un regalo que simboliza crecimiento y cuidado. Explora nuestra sección de <a href="/categorias/ecologia">productos ecológicos</a> para más opciones sostenibles.</p>
 
     <h3>Protectores de Webcam</h3>
-    <p>En la era digital, la privacidad es un tema importante. Un protector de webcam personalizado es un regalo útil y relevante. Descubre más opciones en nuestra categoría de <a href="/categoria/tecnologia">tecnología promocional</a>.</p>
+    <p>En la era digital, la privacidad es un tema importante. Un protector de webcam personalizado es un regalo útil y relevante. Descubre más opciones en nuestra categoría de <a href="/categorias/tecnologia-promocional">tecnología promocional</a>.</p>
 
     <h3>Artículos de Escritura</h3>
-    <p>Los <a href="/categoria/escritura">bolígrafos promocionales</a> siguen siendo una de las opciones más efectivas y económicas. El <a href="/productos/boligrafo-dormin-bamboo">Bolígrafo Dormin Bamboo</a> combina sostenibilidad y elegancia, mientras que el <a href="/productos/boligrafo-metalico-shell-oferta">Bolígrafo Metálico Shell</a> ofrece una excelente relación calidad-precio.</p>
+    <p>Los <a href="/categorias/boligrafos-publicitarios">bolígrafos promocionales</a> siguen siendo una de las opciones más efectivas y económicas. El <a href="/productos/boligrafo-dormin-bamboo-10839">Bolígrafo Dormin Bamboo</a> combina sostenibilidad y elegancia, mientras que el <a href="/productos/boligrafo-metalico-shell-oferta-7326">Bolígrafo Metálico Shell</a> ofrece una excelente relación calidad-precio.</p>
 
     <h3>Artículos de Oficina Útiles</h3>
-    <p>Los <a href="/categoria/oficina">artículos de oficina</a> como el <a href="/productos/sticky-set-truck-nuevo">Sticky Set Truck</a> son excelentes opciones económicas que permanecen en el escritorio de tus clientes.</p>
+    <p>Los <a href="/categorias/articulos-de-oficina-personalizados">artículos de oficina</a> como el <a href="/productos/sticky-set-truck-nuevo-13280">Sticky Set Truck</a> son excelentes opciones económicas que permanecen en el escritorio de tus clientes.</p>
 
     <h2>Dónde Encontrar Productos Promocionales Baratos</h2>
 
@@ -1622,32 +1622,32 @@ export const blogContent = {
     <p>Sitios web como Alibaba, AliExpress o DHgate ofrecen una amplia variedad de productos a precios muy competitivos. Sin embargo, es crucial verificar la reputación del proveedor y leer las reseñas de otros compradores.</p>
 
     <h3>Proveedores Locales en Ecuador</h3>
-    <p>Si estás en Ecuador, <strong>KS Promocionales</strong> es tu mejor opción. Ofrecemos una amplia gama de <a href="/categorias">productos promocionales</a> con precios competitivos y personalización de calidad. Desde <a href="/categoria/mugs-vasos-termos">mugs y termos</a> hasta <a href="/categoria/tecnologia">tecnología promocional</a>, tenemos opciones para todos los presupuestos.</p>
+    <p>Si estás en Ecuador, <strong>KS Promocionales</strong> es tu mejor opción. Ofrecemos una amplia gama de <a href="/">productos promocionales</a> con precios competitivos y personalización de calidad. Desde <a href="/categorias/mugs-y-termos-personalizados">mugs y termos</a> hasta <a href="/categorias/tecnologia-promocional">tecnología promocional</a>, tenemos opciones para todos los presupuestos.</p>
 
     <h2>Cómo Elegir el Producto Promocional Barato Perfecto</h2>
 
     <h3>Segmenta tu Audiencia</h3>
-    <p>Si tu público es joven y preocupado por el medio ambiente, los <a href="/categoria/ecologicos">productos ecológicos</a> serán los artículos promocionales más adecuados. Para ejecutivos, considera <a href="/categoria/oficina">artículos de oficina premium</a>.</p>
+    <p>Si tu público es joven y preocupado por el medio ambiente, los <a href="/categorias/ecologia">productos ecológicos</a> serán los artículos promocionales más adecuados. Para ejecutivos, considera <a href="/categorias/articulos-de-oficina-personalizados">artículos de oficina premium</a>.</p>
 
     <h3>Compra al Por Mayor</h3>
     <p>Generalmente, los proveedores ofrecen descuentos significativos en grandes cantidades, lo que reduce el costo unitario de cada producto. Sin embargo, es crucial evitar la sobrecompra.</p>
 
     <h3>Flexibilidad con los Materiales</h3>
-    <p>Explora alternativas más económicas que sigan transmitiendo la calidad de tu marca. Por ejemplo, en lugar de bolígrafos de metal, opta por <a href="/productos/boligrafo-dormin-bamboo">bolígrafos de plástico reciclado</a> con un diseño atractivo.</p>
+    <p>Explora alternativas más económicas que sigan transmitiendo la calidad de tu marca. Por ejemplo, en lugar de bolígrafos de metal, opta por <a href="/productos/boligrafo-dormin-bamboo-10839">bolígrafos de plástico reciclado</a> con un diseño atractivo.</p>
 
     <h2>Casos de Éxito: Ejemplos Inspiradores</h2>
 
     <h3>La Cafetería y sus Llaveros</h3>
-    <p>Una pequeña cafetería que regalaba <a href="/categoria/llaveros">llaveros personalizados</a> con forma de taza de café a sus primeros 100 clientes cada mes. El costo por llavero era mínimo, pero el impacto en la <strong>visibilidad local</strong> fue significativo.</p>
+    <p>Una pequeña cafetería que regalaba <a href="/categorias/llaveros-personalizados">llaveros personalizados</a> con forma de taza de café a sus primeros 100 clientes cada mes. El costo por llavero era mínimo, pero el impacto en la <strong>visibilidad local</strong> fue significativo.</p>
 
     <h3>Estrategia Viral con Pegatinas</h3>
     <p>Una empresa de software que distribuyó pegatinas con el logo de su empresa en una conferencia tecnológica. Aunque las pegatinas son un producto promocional barato, su diseño atractivo las convirtieron en un artículo muy codiciado.</p>
 
     <h3>Productos Recomendados para Campañas Exitosas</h3>
     <ul>
-      <li><strong><a href="/categoria/bolsos-mochilas">Bolsas de tela reutilizables</a>:</strong> Ofrecen una gran superficie para tu logo.</li>
-      <li><strong><a href="/categoria/mugs-vasos-termos">Mugs personalizados</a>:</strong> El <a href="/productos/mug-plastico-stash-500-ml-nuevo">Mug Plástico Stash 500 ml</a> es una excelente opción económica.</li>
-      <li><strong><a href="/categoria/escritura">Artículos de escritura</a>:</strong> Siempre útiles en oficinas y hogares.</li>
+      <li><strong><a href="/categorias/mochilas-y-maletines-personalizados">Bolsas de tela reutilizables</a>:</strong> Ofrecen una gran superficie para tu logo.</li>
+      <li><strong><a href="/categorias/mugs-y-termos-personalizados">Mugs personalizados</a>:</strong> El <a href="/productos/mug-plastico-stash-500-ml-nuevo-13534">Mug Plástico Stash 500 ml</a> es una excelente opción económica.</li>
+      <li><strong><a href="/categorias/boligrafos-publicitarios">Artículos de escritura</a>:</strong> Siempre útiles en oficinas y hogares.</li>
     </ul>
 
     <h2>Medir el Éxito: Cómo Analizar el ROI</h2>
@@ -1672,7 +1672,7 @@ export const blogContent = {
         <h3 itemprop="name">¿Qué tipo de productos promocionales económicos suelen ser más efectivos?</h3>
         <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
           <div itemprop="text">
-            <p>Artículos de uso diario como <a href="/categoria/bolsos-mochilas">bolsas de tela reutilizables</a>, memorias USB con tu logo o pequeños kits de jardinería suelen generar un buen impacto. Considera la durabilidad del producto.</p>
+            <p>Artículos de uso diario como <a href="/categorias/mochilas-y-maletines-personalizados">bolsas de tela reutilizables</a>, memorias USB con tu logo o pequeños kits de jardinería suelen generar un buen impacto. Considera la durabilidad del producto.</p>
           </div>
         </div>
       </div>
@@ -1681,7 +1681,7 @@ export const blogContent = {
         <h3 itemprop="name">¿Cómo puedo evitar que mis artículos promocionales baratos se perciban como de baja calidad?</h3>
         <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
           <div itemprop="text">
-            <p>La clave está en el diseño y la utilidad. Incluso un <a href="/categoria/escritura">bolígrafo económico</a> puede parecer valioso si tiene un diseño atractivo y tinta de buena calidad. Opta por materiales reciclados o biodegradables.</p>
+            <p>La clave está en el diseño y la utilidad. Incluso un <a href="/categorias/boligrafos-publicitarios">bolígrafo económico</a> puede parecer valioso si tiene un diseño atractivo y tinta de buena calidad. Opta por materiales reciclados o biodegradables.</p>
           </div>
         </div>
       </div>
@@ -1690,7 +1690,7 @@ export const blogContent = {
         <h3 itemprop="name">¿Dónde puedo encontrar proveedores confiables en Ecuador?</h3>
         <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
           <div itemprop="text">
-            <p>En <strong>KS Promocionales</strong> ofrecemos una amplia gama de <a href="/categorias">productos promocionales</a> con precios competitivos y envíos a todo Ecuador.</p>
+            <p>En <strong>KS Promocionales</strong> ofrecemos una amplia gama de <a href="/">productos promocionales</a> con precios competitivos y envíos a todo Ecuador.</p>
           </div>
         </div>
       </div>
@@ -1705,15 +1705,15 @@ export const blogContent = {
     <h2>Explora Nuestras Categorías de Productos Económicos</h2>
 
     <ul>
-      <li><strong><a href="/categoria/escritura">Artículos de Escritura</a></strong> - Bolígrafos, lápices y más desde precios accesibles</li>
-      <li><strong><a href="/categoria/llaveros">Llaveros Personalizados</a></strong> - Económicos y siempre visibles</li>
-      <li><strong><a href="/categoria/bolsos-mochilas">Bolsos y Mochilas</a></strong> - Bolsas de tela ecológicas</li>
-      <li><strong><a href="/categoria/mugs-vasos-termos">Mugs y Termos</a></strong> - Uso diario garantizado</li>
-      <li><strong><a href="/categoria/ecologicos">Productos Ecológicos</a></strong> - Sostenibilidad a buen precio</li>
-      <li><strong><a href="/categoria/oficina">Artículos de Oficina</a></strong> - Organizadores y accesorios útiles</li>
+      <li><strong><a href="/categorias/boligrafos-publicitarios">Artículos de Escritura</a></strong> - Bolígrafos, lápices y más desde precios accesibles</li>
+      <li><strong><a href="/categorias/llaveros-personalizados">Llaveros Personalizados</a></strong> - Económicos y siempre visibles</li>
+      <li><strong><a href="/categorias/mochilas-y-maletines-personalizados">Bolsos y Mochilas</a></strong> - Bolsas de tela ecológicas</li>
+      <li><strong><a href="/categorias/mugs-y-termos-personalizados">Mugs y Termos</a></strong> - Uso diario garantizado</li>
+      <li><strong><a href="/categorias/ecologia">Productos Ecológicos</a></strong> - Sostenibilidad a buen precio</li>
+      <li><strong><a href="/categorias/articulos-de-oficina-personalizados">Artículos de Oficina</a></strong> - Organizadores y accesorios útiles</li>
     </ul>
 
-    <p><strong>¿Quieres ver más opciones?</strong> Visita nuestro <a href="/categorias">catálogo completo</a> o explora nuestros <a href="/catalogos-digitales">catálogos digitales</a> para inspirarte.</p>
+    <p><strong>¿Quieres ver más opciones?</strong> Visita nuestro <a href="/">catálogo completo</a> o explora nuestros <a href="/">catálogos digitales</a> para inspirarte.</p>
   `,
 
   'productos-promocionales-por-mayor-mayoreo-guia-completa': `
@@ -1724,7 +1724,7 @@ export const blogContent = {
       <h3 style="margin: 0 0 16px 0; font-size: 24px; font-weight: bold;">¿Necesitas productos promocionales al por mayor?</h3>
       <p style="margin: 0 0 24px 0; opacity: 0.9;">En KS Promocionales te ofrecemos los mejores precios por volumen en Ecuador</p>
       <a href="https://wa.me/593999814838?text=Hola,%20me%20interesa%20cotizar%20productos%20promocionales%20al%20por%20mayor" style="display: inline-block; background: white; color: #ea580c; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-right: 12px;">Cotizar por WhatsApp</a>
-      <a href="/categorias" style="display: inline-block; background: rgba(255,255,255,0.2); color: white; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: bold; border: 2px solid white;">Ver Catálogo</a>
+      <a href="/" style="display: inline-block; background: rgba(255,255,255,0.2); color: white; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: bold; border: 2px solid white;">Ver Catálogo</a>
     </div>
 
     <h2 id="qué-son-los-productos-promocionales-al-por-mayor">¿Qué son los Productos Promocionales al Por Mayor y Por Qué Son Importantes?</h2>
@@ -1746,17 +1746,17 @@ export const blogContent = {
     <div style="background: #f8fafc; border-radius: 16px; padding: 24px; margin: 32px 0; border: 1px solid #e2e8f0;">
       <h4 style="margin: 0 0 16px 0; color: #1e293b;">Productos Ideales para Compra por Mayor:</h4>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
-        <a href="/productos/boligrafo-metalico-shell-oferta" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0; transition: all 0.3s;">
+        <a href="/productos/boligrafo-metalico-shell-oferta-7326" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0; transition: all 0.3s;">
           <img src="https://catalogospromocionales.com/images/productos/13341.jpg" alt="Bolígrafo Metálico Shell" style="width: 100%; height: 120px; object-fit: contain; margin-bottom: 12px;">
           <p style="margin: 0; color: #1e293b; font-weight: 600; font-size: 14px;">Bolígrafo Metálico Shell</p>
           <p style="margin: 4px 0 0 0; color: #64748b; font-size: 12px;">Ideal para grandes cantidades</p>
         </a>
-        <a href="/productos/boligrafo-dormin-bamboo" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0; transition: all 0.3s;">
+        <a href="/productos/boligrafo-dormin-bamboo-10839" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0; transition: all 0.3s;">
           <img src="https://catalogospromocionales.com/images/productos/9802.jpg" alt="Bolígrafo Dormin Bamboo" style="width: 100%; height: 120px; object-fit: contain; margin-bottom: 12px;">
           <p style="margin: 0; color: #1e293b; font-weight: 600; font-size: 14px;">Bolígrafo Dormin Bamboo</p>
           <p style="margin: 4px 0 0 0; color: #64748b; font-size: 12px;">Ecológico y económico</p>
         </a>
-        <a href="/categorias/escritura" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0; transition: all 0.3s;">
+        <a href="/categorias/boligrafos-publicitarios" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0; transition: all 0.3s;">
           <div style="width: 100%; height: 120px; background: linear-gradient(135deg, #f97316, #ea580c); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
             <span style="color: white; font-weight: bold;">Ver Más +</span>
           </div>
@@ -1771,11 +1771,11 @@ export const blogContent = {
     <p>La variedad de <strong>productos promocionales por mayoreo</strong> es inmensa:</p>
 
     <ul>
-      <li><strong>Artículos de escritura:</strong> <a href="/categorias/escritura">Bolígrafos, lápices, marcadores</a> - los clásicos que nunca fallan.</li>
-      <li><strong>Ropa:</strong> <a href="/categorias/textiles">Camisetas, gorras, sudaderas</a> - embajadores móviles de tu marca.</li>
+      <li><strong>Artículos de escritura:</strong> <a href="/categorias/boligrafos-publicitarios">Bolígrafos, lápices, marcadores</a> - los clásicos que nunca fallan.</li>
+      <li><strong>Ropa:</strong> <a href="/categorias/camisetas-y-confeccion-corporativa">Camisetas, gorras, sudaderas</a> - embajadores móviles de tu marca.</li>
       <li><strong>Artículos de oficina:</strong> <a href="/categorias/oficina">Tazas, libretas, calendarios</a> - presencia constante en el escritorio.</li>
-      <li><strong>Tecnología:</strong> <a href="/categorias/tecnologia">Memorias USB, power banks, audífonos</a> - alto valor percibido.</li>
-      <li><strong>Bolsas y mochilas:</strong> <a href="/categorias/bolsos-mochilas">Bolsas de tela, mochilas promocionales</a> - publicidad ambulante.</li>
+      <li><strong>Tecnología:</strong> <a href="/categorias/tecnologia-promocional">Memorias USB, power banks, audífonos</a> - alto valor percibido.</li>
+      <li><strong>Bolsas y mochilas:</strong> <a href="/categorias/mochilas-y-maletines-personalizados">Bolsas de tela, mochilas promocionales</a> - publicidad ambulante.</li>
     </ul>
 
     <h2 id="beneficios-de-comprar-al-por-mayor">Beneficios Clave de Comprar Productos Promocionales al Por Mayor</h2>
@@ -1809,17 +1809,17 @@ export const blogContent = {
     <div style="background: #f8fafc; border-radius: 16px; padding: 24px; margin: 32px 0; border: 1px solid #e2e8f0;">
       <h4 style="margin: 0 0 16px 0; color: #1e293b;">Tecnología Promocional por Mayor:</h4>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
-        <a href="/productos/memoria-usb-metalica-giratoria-8-gb" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0;">
+        <a href="/categorias/memorias-usb-personalizadas" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0;">
           <img src="https://catalogospromocionales.com/images/productos/10177.jpg" alt="Memoria USB 8GB" style="width: 100%; height: 120px; object-fit: contain; margin-bottom: 12px;">
           <p style="margin: 0; color: #1e293b; font-weight: 600; font-size: 14px;">Memoria USB 8GB</p>
           <p style="margin: 4px 0 0 0; color: #64748b; font-size: 12px;">Metálica giratoria</p>
         </a>
-        <a href="/productos/parlante-bluetooth-con-led-vogue" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0;">
+        <a href="/categorias/tecnologia-promocional" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0;">
           <img src="https://catalogospromocionales.com/images/productos/12687.jpg" alt="Parlante Bluetooth Vogue" style="width: 100%; height: 120px; object-fit: contain; margin-bottom: 12px;">
           <p style="margin: 0; color: #1e293b; font-weight: 600; font-size: 14px;">Parlante Bluetooth Vogue</p>
           <p style="margin: 4px 0 0 0; color: #64748b; font-size: 12px;">Con LED personalizable</p>
         </a>
-        <a href="/categorias/tecnologia" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0;">
+        <a href="/categorias/tecnologia-promocional" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0;">
           <div style="width: 100%; height: 120px; background: linear-gradient(135deg, #3b82f6, #1d4ed8); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
             <span style="color: white; font-weight: bold;">Ver Más +</span>
           </div>
@@ -1889,17 +1889,17 @@ export const blogContent = {
     <div style="background: #f8fafc; border-radius: 16px; padding: 24px; margin: 32px 0; border: 1px solid #e2e8f0;">
       <h4 style="margin: 0 0 16px 0; color: #1e293b;">Textiles para Compra por Mayor:</h4>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
-        <a href="/productos/polo-cotton-nature-hombre" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0;">
+        <a href="/categorias/camisetas-y-confeccion-corporativa" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0;">
           <img src="https://catalogospromocionales.com/images/productos/7010.jpg" alt="Polo Cotton Nature" style="width: 100%; height: 120px; object-fit: contain; margin-bottom: 12px;">
           <p style="margin: 0; color: #1e293b; font-weight: 600; font-size: 14px;">Polo Cotton Nature</p>
           <p style="margin: 4px 0 0 0; color: #64748b; font-size: 12px;">Algodón de calidad</p>
         </a>
-        <a href="/productos/gorra-6-paneles-galva" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0;">
+        <a href="/categorias/gorras-personalizadas" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0;">
           <img src="https://catalogospromocionales.com/images/productos/9901.jpg" alt="Gorra 6 Paneles Galva" style="width: 100%; height: 120px; object-fit: contain; margin-bottom: 12px;">
           <p style="margin: 0; color: #1e293b; font-weight: 600; font-size: 14px;">Gorra 6 Paneles Galva</p>
           <p style="margin: 4px 0 0 0; color: #64748b; font-size: 12px;">Ideal para eventos</p>
         </a>
-        <a href="/categorias/textiles" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0;">
+        <a href="/categorias/camisetas-y-confeccion-corporativa" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0;">
           <div style="width: 100%; height: 120px; background: linear-gradient(135deg, #8b5cf6, #7c3aed); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
             <span style="color: white; font-weight: bold;">Ver Más +</span>
           </div>
@@ -1936,17 +1936,17 @@ export const blogContent = {
     <div style="background: #f8fafc; border-radius: 16px; padding: 24px; margin: 32px 0; border: 1px solid #e2e8f0;">
       <h4 style="margin: 0 0 16px 0; color: #1e293b;">Mugs y Termos para Mayor Impacto:</h4>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
-        <a href="/productos/mug-sublimable-11-onzas" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0;">
+        <a href="/categorias/mugs-y-termos-personalizados" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0;">
           <img src="https://catalogospromocionales.com/images/productos/1175.jpg" alt="Mug Sublimable 11oz" style="width: 100%; height: 120px; object-fit: contain; margin-bottom: 12px;">
           <p style="margin: 0; color: #1e293b; font-weight: 600; font-size: 14px;">Mug Sublimable 11oz</p>
           <p style="margin: 4px 0 0 0; color: #64748b; font-size: 12px;">El clásico que nunca falla</p>
         </a>
-        <a href="/productos/vaso-termico-treking-pro-450-ml" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0;">
+        <a href="/categorias/mugs-y-termos-personalizados" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0;">
           <img src="https://catalogospromocionales.com/images/productos/10820.jpg" alt="Vaso Térmico Treking" style="width: 100%; height: 120px; object-fit: contain; margin-bottom: 12px;">
           <p style="margin: 0; color: #1e293b; font-weight: 600; font-size: 14px;">Vaso Térmico Treking</p>
           <p style="margin: 4px 0 0 0; color: #64748b; font-size: 12px;">450ml premium</p>
         </a>
-        <a href="/categorias/mugs-vasos-termos" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0;">
+        <a href="/categorias/mugs-y-termos-personalizados" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0;">
           <div style="width: 100%; height: 120px; background: linear-gradient(135deg, #ec4899, #db2777); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
             <span style="color: white; font-weight: bold;">Ver Más +</span>
           </div>
@@ -2005,19 +2005,19 @@ export const blogContent = {
       <p style="margin: 0 0 24px 0; font-size: 18px; opacity: 0.95;">Cotiza tu pedido por mayor hoy y recibe asesoría personalizada sin compromiso</p>
       <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;">
         <a href="https://wa.me/593999814838?text=Hola,%20quiero%20cotizar%20productos%20promocionales%20al%20por%20mayor" style="display: inline-flex; align-items: center; gap: 8px; background: white; color: #ea580c; padding: 18px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px;">Cotizar por WhatsApp</a>
-        <a href="/categorias" style="display: inline-block; background: rgba(255,255,255,0.15); color: white; padding: 18px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px; border: 2px solid rgba(255,255,255,0.5);">Ver Catálogo Completo</a>
-        <a href="/catalogos-digitales" style="display: inline-block; background: rgba(255,255,255,0.15); color: white; padding: 18px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px; border: 2px solid rgba(255,255,255,0.5);">Descargar Catálogo PDF</a>
+        <a href="/" style="display: inline-block; background: rgba(255,255,255,0.15); color: white; padding: 18px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px; border: 2px solid rgba(255,255,255,0.5);">Ver Catálogo Completo</a>
+        <a href="/" style="display: inline-block; background: rgba(255,255,255,0.15); color: white; padding: 18px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px; border: 2px solid rgba(255,255,255,0.5);">Descargar Catálogo PDF</a>
       </div>
     </div>
 
     <h2>Explora Nuestras Categorías para Compra por Mayor</h2>
 
     <ul>
-      <li><strong><a href="/categorias/escritura">Artículos de Escritura</a></strong> - Bolígrafos ideales para distribución masiva</li>
-      <li><strong><a href="/categorias/textiles">Textiles Personalizados</a></strong> - Polos, camisetas y gorras para equipos</li>
-      <li><strong><a href="/categorias/tecnologia">Tecnología Promocional</a></strong> - Gadgets que impresionan</li>
-      <li><strong><a href="/categorias/mugs-vasos-termos">Mugs y Termos</a></strong> - El clásico que nunca falla</li>
-      <li><strong><a href="/categorias/bolsos-mochilas">Bolsos y Mochilas</a></strong> - Publicidad ambulante</li>
+      <li><strong><a href="/categorias/boligrafos-publicitarios">Artículos de Escritura</a></strong> - Bolígrafos ideales para distribución masiva</li>
+      <li><strong><a href="/categorias/camisetas-y-confeccion-corporativa">Textiles Personalizados</a></strong> - Polos, camisetas y gorras para equipos</li>
+      <li><strong><a href="/categorias/tecnologia-promocional">Tecnología Promocional</a></strong> - Gadgets que impresionan</li>
+      <li><strong><a href="/categorias/mugs-y-termos-personalizados">Mugs y Termos</a></strong> - El clásico que nunca falla</li>
+      <li><strong><a href="/categorias/mochilas-y-maletines-personalizados">Bolsos y Mochilas</a></strong> - Publicidad ambulante</li>
       <li><strong><a href="/categorias/oficina">Artículos de Oficina</a></strong> - Presencia en cada escritorio</li>
     </ul>
 
@@ -2037,7 +2037,7 @@ export const blogContent = {
         <h3 style="color: white; margin: 0 0 12px 0; font-size: 28px; font-weight: bold;">Productos Promocionales Navideños</h3>
         <p style="color: rgba(255,255,255,0.9); margin: 0 0 24px 0; font-size: 16px;">Sorprende a tus clientes y colaboradores con regalos corporativos personalizados</p>
         <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;">
-          <a href="/categorias" style="display: inline-flex; align-items: center; gap: 8px; background: white; color: #dc2626; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">Ver Catálogo Navideño</a>
+          <a href="/" style="display: inline-flex; align-items: center; gap: 8px; background: white; color: #dc2626; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">Ver Catálogo Navideño</a>
           <a href="https://wa.me/593999814838?text=Hola,%20me%20interesan%20productos%20promocionales%20navideños%20para%20mi%20empresa" style="display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: white; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">Cotizar por WhatsApp</a>
         </div>
       </div>
@@ -2066,7 +2066,7 @@ export const blogContent = {
         <span style="color: #dc2626; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Productos Recomendados para Visibilidad</span>
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
-        <a href="/categoria/mugs-vasos-termos" style="display: flex; gap: 12px; padding: 16px; background: white; border-radius: 12px; text-decoration: none; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.2s;">
+        <a href="/categorias/mugs-y-termos-personalizados" style="display: flex; gap: 12px; padding: 16px; background: white; border-radius: 12px; text-decoration: none; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.2s;">
           <img src="https://images.unsplash.com/photo-1511268559489-34b624fbfcf5?w=200&q=80" alt="Tazas Navideñas" style="width: 70px; height: 70px; object-fit: cover; border-radius: 8px;">
           <div>
             <p style="margin: 0 0 4px 0; color: #dc2626; font-size: 11px; font-weight: 600;">MUGS Y TERMOS</p>
@@ -2074,7 +2074,7 @@ export const blogContent = {
             <p style="margin: 0; color: #64748b; font-size: 12px;">Personalizadas con tu logo</p>
           </div>
         </a>
-        <a href="/categoria/oficina" style="display: flex; gap: 12px; padding: 16px; background: white; border-radius: 12px; text-decoration: none; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.2s;">
+        <a href="/categorias/articulos-de-oficina-personalizados" style="display: flex; gap: 12px; padding: 16px; background: white; border-radius: 12px; text-decoration: none; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.2s;">
           <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=200&q=80" alt="Calendarios" style="width: 70px; height: 70px; object-fit: cover; border-radius: 8px;">
           <div>
             <p style="margin: 0 0 4px 0; color: #dc2626; font-size: 11px; font-weight: 600;">OFICINA</p>
@@ -2123,7 +2123,7 @@ export const blogContent = {
             <h4 style="margin: 0 0 8px 0; color: #1e293b; font-size: 20px;">Calendarios de Adviento Personalizados</h4>
             <p style="margin: 0 0 16px 0; color: #64748b; font-size: 14px; line-height: 1.6;">Mantén tu marca presente durante todo diciembre. Incluye chocolates, mensajes inspiradores o mini cupones de descuento detrás de cada ventanilla.</p>
             <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-              <a href="/categoria/variedades" style="display: inline-flex; align-items: center; gap: 6px; background: #dc2626; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 13px;">Ver Productos</a>
+              <a href="/categorias/variedades" style="display: inline-flex; align-items: center; gap: 6px; background: #dc2626; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 13px;">Ver Productos</a>
               <a href="https://wa.me/593999814838?text=Hola,%20me%20interesan%20calendarios%20de%20adviento%20personalizados" style="display: inline-flex; align-items: center; gap: 6px; background: #25D366; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 13px;">Cotizar</a>
             </div>
           </div>
@@ -2149,22 +2149,22 @@ export const blogContent = {
         <span style="font-size: 20px;">🎄</span> Explora Nuestros Productos Clásicos Navideños
       </h4>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px;">
-        <a href="/categoria/mugs-vasos-termos" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0; text-align: center;">
+        <a href="/categorias/mugs-y-termos-personalizados" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0; text-align: center;">
           <img src="https://images.unsplash.com/photo-1511268559489-34b624fbfcf5?w=200&q=80" alt="Tazas y Termos" style="width: 100%; height: 100px; object-fit: cover; border-radius: 8px; margin-bottom: 10px;">
           <p style="margin: 0; color: #1e293b; font-weight: 600; font-size: 13px;">Tazas y Termos</p>
           <p style="margin: 4px 0 0 0; color: #dc2626; font-size: 11px; font-weight: 500;">128 productos</p>
         </a>
-        <a href="/categoria/oficina" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0; text-align: center;">
+        <a href="/categorias/articulos-de-oficina-personalizados" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0; text-align: center;">
           <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=200&q=80" alt="Agendas y Calendarios" style="width: 100%; height: 100px; object-fit: cover; border-radius: 8px; margin-bottom: 10px;">
           <p style="margin: 0; color: #1e293b; font-weight: 600; font-size: 13px;">Agendas y Calendarios</p>
           <p style="margin: 4px 0 0 0; color: #dc2626; font-size: 11px; font-weight: 500;">61 productos</p>
         </a>
-        <a href="/categoria/llaveros" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0; text-align: center;">
+        <a href="/categorias/llaveros-personalizados" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0; text-align: center;">
           <img src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=200&q=80" alt="Llaveros" style="width: 100%; height: 100px; object-fit: cover; border-radius: 8px; margin-bottom: 10px;">
           <p style="margin: 0; color: #1e293b; font-weight: 600; font-size: 13px;">Llaveros Navideños</p>
           <p style="margin: 4px 0 0 0; color: #dc2626; font-size: 11px; font-weight: 500;">12 productos</p>
         </a>
-        <a href="/categorias" style="display: block; background: linear-gradient(135deg, #dc2626, #16a34a); border-radius: 12px; padding: 16px; text-decoration: none; text-align: center;">
+        <a href="/" style="display: block; background: linear-gradient(135deg, #dc2626, #16a34a); border-radius: 12px; padding: 16px; text-decoration: none; text-align: center;">
           <div style="width: 100%; height: 100px; display: flex; align-items: center; justify-content: center;">
             <span style="color: white; font-size: 32px;">→</span>
           </div>
@@ -2187,7 +2187,7 @@ export const blogContent = {
           <h4 style="margin: 0 0 8px 0; color: white; font-size: 20px;">Gadgets Tecnológicos Navideños</h4>
           <p style="margin: 0 0 16px 0; color: #94a3b8; font-size: 14px; line-height: 1.6;">Power banks, audífonos Bluetooth, cargadores inalámbricos y más. Regalos que posicionan tu marca como innovadora.</p>
           <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-            <a href="/categoria/tecnologia" style="display: inline-flex; align-items: center; gap: 6px; background: #dc2626; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 13px;">Ver Tecnología</a>
+            <a href="/categorias/tecnologia-promocional" style="display: inline-flex; align-items: center; gap: 6px; background: #dc2626; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 13px;">Ver Tecnología</a>
             <a href="https://wa.me/593999814838?text=Hola,%20me%20interesan%20productos%20tecnológicos%20para%20regalos%20navideños" style="display: inline-flex; align-items: center; gap: 6px; background: #25D366; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 13px;">Cotizar</a>
           </div>
         </div>
@@ -2224,7 +2224,7 @@ export const blogContent = {
           <p style="margin: 8px 0 0 0; color: #1e293b; font-size: 12px; font-weight: 500;">Biodegradables</p>
         </div>
       </div>
-      <a href="/categoria/ecologicos" style="display: inline-flex; align-items: center; gap: 8px; background: #16a34a; color: white; padding: 12px 24px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 14px;">Ver Productos Ecológicos →</a>
+      <a href="/categorias/ecologia" style="display: inline-flex; align-items: center; gap: 8px; background: #16a34a; color: white; padding: 12px 24px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 14px;">Ver Productos Ecológicos →</a>
     </div>
 
     <h3 id="productos-de-larga-duración-y-utilidad">Productos de Larga Duración y Utilidad</h3>
@@ -2258,17 +2258,17 @@ export const blogContent = {
         <div style="background: white; padding: 16px; border-radius: 12px;">
           <p style="margin: 0 0 8px 0; color: #a855f7; font-size: 12px; font-weight: 600;">CLIENTES VIP</p>
           <p style="margin: 0 0 12px 0; color: #1e293b; font-size: 14px;">Sets premium, tecnología de alta gama, mochilas ejecutivas</p>
-          <a href="/categoria/tecnologia" style="color: #a855f7; font-size: 13px; font-weight: 500; text-decoration: none;">Ver opciones →</a>
+          <a href="/categorias/tecnologia-promocional" style="color: #a855f7; font-size: 13px; font-weight: 500; text-decoration: none;">Ver opciones →</a>
         </div>
         <div style="background: white; padding: 16px; border-radius: 12px;">
           <p style="margin: 0 0 8px 0; color: #a855f7; font-size: 12px; font-weight: 600;">COLABORADORES</p>
           <p style="margin: 0 0 12px 0; color: #1e293b; font-size: 14px;">Textiles corporativos, termos, kits de oficina</p>
-          <a href="/categoria/textiles" style="color: #a855f7; font-size: 13px; font-weight: 500; text-decoration: none;">Ver opciones →</a>
+          <a href="/categorias/camisetas-y-confeccion-corporativa" style="color: #a855f7; font-size: 13px; font-weight: 500; text-decoration: none;">Ver opciones →</a>
         </div>
         <div style="background: white; padding: 16px; border-radius: 12px;">
           <p style="margin: 0 0 8px 0; color: #a855f7; font-size: 12px; font-weight: 600;">PROSPECTOS</p>
           <p style="margin: 0 0 12px 0; color: #1e293b; font-size: 14px;">Bolígrafos, llaveros, artículos de bajo costo alto impacto</p>
-          <a href="/categoria/escritura" style="color: #a855f7; font-size: 13px; font-weight: 500; text-decoration: none;">Ver opciones →</a>
+          <a href="/categorias/boligrafos-publicitarios" style="color: #a855f7; font-size: 13px; font-weight: 500; text-decoration: none;">Ver opciones →</a>
         </div>
       </div>
     </div>
@@ -2297,7 +2297,7 @@ export const blogContent = {
 
     <p>Antes de siquiera pensar en qué tipo de <strong>artículos promocionales</strong> comprar, debes tener claros tus objetivos. ¿Buscas aumentar el reconocimiento de marca, fidelizar clientes existentes o atraer nuevos prospectos? Definir estos objetivos te ayudará a elegir los productos más adecuados y a dirigir tus esfuerzos de manera efectiva. Además, es fundamental conocer a tu público objetivo. ¿Cuáles son sus intereses? ¿Qué tipo de productos valorarán más? Cuanto mejor comprendas a tu audiencia, más eficaz será tu campaña de <strong>productos promocionales navideños</strong>.</p>
 
-    <h3 id="prioriza-la-calidad-sobre-la-cantidad">Prioriza la Calidad sobre la Cantidad</h3>
+    <h3 id="prioriza-la-calidad-sobre-la-cantidad">Prioriza la Cuencadad sobre la Cantidad</h3>
 
     <p>En lugar de optar por una gran cantidad de productos baratos y de baja calidad, considera invertir en menos artículos, pero de mayor calidad. Un producto de buena calidad no solo durará más tiempo, sino que también reflejará positivamente en la imagen de tu marca. Un <strong>producto promocional navideño</strong> de calidad puede convertirse en un regalo apreciado que se utilizará durante años, manteniendo tu marca presente en la mente del cliente. Recuerda que la percepción de valor es clave para generar un impacto duradero.</p>
 
@@ -2314,7 +2314,7 @@ export const blogContent = {
           <p style="margin: 0 0 16px 0; color: #78350f; font-size: 14px; line-height: 1.6;">Pedidos de 100+ unidades reciben descuento especial. Cotiza hoy y aprovecha nuestras ofertas de temporada.</p>
           <div style="display: flex; flex-wrap: wrap; gap: 10px;">
             <a href="https://wa.me/593999814838?text=Hola,%20quiero%20cotizar%20productos%20navideños%20por%20volumen" style="display: inline-flex; align-items: center; gap: 6px; background: #f59e0b; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px;">Solicitar Cotización</a>
-            <a href="/catalogos-digitales" style="display: inline-flex; align-items: center; gap: 6px; background: white; color: #f59e0b; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px; border: 2px solid #f59e0b;">Ver Catálogo PDF</a>
+            <a href="/" style="display: inline-flex; align-items: center; gap: 6px; background: white; color: #f59e0b; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px; border: 2px solid #f59e0b;">Ver Catálogo PDF</a>
           </div>
         </div>
       </div>
@@ -2373,7 +2373,7 @@ export const blogContent = {
           <h4 style="margin: 0 0 8px 0; color: #1e293b; font-size: 20px;">Kits de Regalo Corporativos</h4>
           <p style="margin: 0 0 16px 0; color: #64748b; font-size: 14px; line-height: 1.6;">Paquetes armados con múltiples productos coordinados. Empaque premium incluido para una experiencia de unboxing memorable.</p>
           <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-            <a href="/categoria/variedades" style="display: inline-flex; align-items: center; gap: 6px; background: #16a34a; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 13px;">Ver Kits</a>
+            <a href="/categorias/variedades" style="display: inline-flex; align-items: center; gap: 6px; background: #16a34a; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 13px;">Ver Kits</a>
             <a href="https://wa.me/593999814838?text=Hola,%20me%20interesan%20kits%20de%20regalo%20corporativos%20para%20navidad" style="display: inline-flex; align-items: center; gap: 6px; background: #25D366; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 13px;">Armar mi Kit</a>
           </div>
         </div>
@@ -2476,7 +2476,7 @@ export const blogContent = {
       <li>Un ejemplo: en lugar de la típica taza con el logo, considera una suscripción a un servicio de streaming para un público joven y aficionado a la tecnología.</li>
     </ul>
 
-    <h3 id="priorizar-el-precio-sobre-la-calidad">Priorizar el Precio Sobre la Calidad</h3>
+    <h3 id="priorizar-el-precio-sobre-la-calidad">Priorizar el Precio Sobre la Cuencadad</h3>
 
     <p>Es tentador optar por los <strong>artículos promocionales</strong> más baratos, especialmente si tienes un presupuesto ajustado. Sin embargo, un producto de baja calidad puede reflejar negativamente en tu marca.</p>
 
@@ -2593,7 +2593,7 @@ export const blogContent = {
           <a href="https://wa.me/593999814838?text=Hola,%20quiero%20cotizar%20productos%20promocionales%20navideños%20para%20mi%20empresa" style="display: inline-flex; align-items: center; gap: 10px; background: white; color: #dc2626; padding: 18px 36px; border-radius: 14px; text-decoration: none; font-weight: bold; font-size: 16px; box-shadow: 0 8px 25px rgba(0,0,0,0.25);">
             <span style="font-size: 20px;">💬</span> Cotizar por WhatsApp
           </a>
-          <a href="/categorias" style="display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.15); color: white; padding: 18px 36px; border-radius: 14px; text-decoration: none; font-weight: bold; font-size: 16px; border: 2px solid rgba(255,255,255,0.5);">
+          <a href="/" style="display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.15); color: white; padding: 18px 36px; border-radius: 14px; text-decoration: none; font-weight: bold; font-size: 16px; border: 2px solid rgba(255,255,255,0.5);">
             <span style="font-size: 20px;">🎁</span> Ver Catálogo Completo
           </a>
         </div>
@@ -2604,17 +2604,17 @@ export const blogContent = {
     <h2>Explora Nuestras Categorías para Regalos Navideños</h2>
 
     <ul>
-      <li><strong><a href="/categoria/mugs-vasos-termos">Tazas y Termos</a></strong> - Perfectos para las mañanas de invierno</li>
-      <li><strong><a href="/categoria/oficina">Artículos de Oficina</a></strong> - Calendarios, agendas y más</li>
-      <li><strong><a href="/categoria/tecnologia">Tecnología Promocional</a></strong> - Gadgets que impresionan</li>
-      <li><strong><a href="/categoria/ecologicos">Productos Ecológicos</a></strong> - Regalos con conciencia ambiental</li>
-      <li><strong><a href="/categoria/variedades">Variedades</a></strong> - Sets y kits de regalo</li>
-      <li><strong><a href="/categoria/textiles">Textiles Personalizados</a></strong> - Bufandas, gorros y más</li>
+      <li><strong><a href="/categorias/mugs-y-termos-personalizados">Tazas y Termos</a></strong> - Perfectos para las mañanas de invierno</li>
+      <li><strong><a href="/categorias/articulos-de-oficina-personalizados">Artículos de Oficina</a></strong> - Calendarios, agendas y más</li>
+      <li><strong><a href="/categorias/tecnologia-promocional">Tecnología Promocional</a></strong> - Gadgets que impresionan</li>
+      <li><strong><a href="/categorias/ecologia">Productos Ecológicos</a></strong> - Regalos con conciencia ambiental</li>
+      <li><strong><a href="/categorias/variedades">Variedades</a></strong> - Sets y kits de regalo</li>
+      <li><strong><a href="/categorias/camisetas-y-confeccion-corporativa">Textiles Personalizados</a></strong> - Bufandas, gorros y más</li>
     </ul>
 
     <p>En <strong>KS Promocionales</strong> te ayudamos a encontrar los productos navideños perfectos para tu campaña. <a href="https://wa.me/593999814838?text=Hola,%20necesito%20asesoría%20para%20elegir%20productos%20promocionales%20navideños">Escríbenos por WhatsApp</a> para una asesoría personalizada y sin compromiso.</p>
 
-    <p>Descubre ideas frescas en nuestra sección de <a href="/categorias/novedades" class="text-primary hover:underline font-medium">productos promocionales novedosos</a>, o regala calidez esta temporada con nuestra colección de <a href="/categorias/mugs" class="text-primary hover:underline font-medium">mugs y termos personalizados</a>.</p>
+    <p>Descubre ideas frescas en nuestra sección de <a href="/categorias/novedades" class="text-primary hover:underline font-medium">productos promocionales novedosos</a>, o regala calidez esta temporada con nuestra colección de <a href="/categorias/mugs-y-termos-personalizados" class="text-primary hover:underline font-medium">mugs y termos personalizados</a>.</p>
   `,
 
   'adios-a-las-perdidas-boomtag-bp-29-el-rastreador-airtag-promocional-que-impulsa-tu-marca': `
@@ -2664,7 +2664,7 @@ export const blogContent = {
 <p>¿Listo para llevar tu marca al siguiente nivel? Contáctanos ahora mismo para hablar con un asesor experto que te guiará en el proceso. ¡Estamos aquí para ayudarte a alcanzar tus objetivos de marketing! Llama al [Numero de telefono] o envíanos un correo a [Correo electrónico]. ¡Te esperamos!</p>
 <h2>Conclusion</h2>
 <p>En resumen, el Boomtag BP-29 se erige como una solución integral para la gestión de activos y una herramienta de marketing promocional de vanguardia. Permite a tus clientes y empleados mantener sus pertenencias seguras, al tiempo que tu marca gana visibilidad constante y un posicionamiento innovador. No se trata solo de evitar pérdidas, sino de construir lealtad y fortalecer tu imagen. ¿Listo para transformar la manera en que te conectas con tu audiencia y proteges tus valiosos recursos? ¡Solicita hoy mismo una cotización y descubre cómo el Boomtag BP-29 puede revolucionar tu estrategia!</p>
-<p>Descubre más gadgets innovadores en nuestra <a href="/categorias/tecnologia" class="text-primary hover:underline font-medium">categoría de tecnología promocional</a>, o explora nuestros <a href="/categorias/novedades" class="text-primary hover:underline font-medium">productos promocionales novedosos</a> para sorprender a tus clientes.</p>
+<p>Descubre más gadgets innovadores en nuestra <a href="/categorias/tecnologia-promocional" class="text-primary hover:underline font-medium">categoría de tecnología promocional</a>, o explora nuestros <a href="/categorias/novedades" class="text-primary hover:underline font-medium">productos promocionales novedosos</a> para sorprender a tus clientes.</p>
 <p>---</p>
 <h2>¿Listo para impulsar tu marca con BP-29?</h2>
 <blockquote><p><strong>¿Te interesa este producto?</strong></p><p><a href="https://wa.me/+593999814838?text=Hola%21%20Me%20interesa%20BP-29.%20Quisiera%20mas%20informacion.">Solicita tu cotización vía WhatsApp aquí</a></p></blockquote>
@@ -2673,11 +2673,11 @@ export const blogContent = {
 <p>con los mejores precios del mercado.</p>
   `,
 
-  'promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-ecuador-y-colombia': `
+  'promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-ecuador': `
 
 <p>¿Cuántas veces al día toca tu equipo de trabajo superficies compartidas, bolígrafos prestados o elementos de oficina que pasan de mano en mano? En entornos corporativos, la higiene ya no es solo responsabilidad del área de facilities: es también una declaración de valores de marca. Las empresas que entregan artículos promocionales con propiedades antimicrobianas no solo cuidan a sus colaboradores y clientes, también comunican un mensaje poderoso: <strong>nos importa tu bienestar</strong>.</p>
 
-<p>En KS Promocionales llevamos esta tendencia al mundo del marketing B2B en Ecuador y Colombia. Si buscas un regalo corporativo que combine utilidad real, diferenciación y cuidado de la salud, los <a href="/categorias/antimicrobianos">productos antimicrobianos promocionales</a> son exactamente lo que tu estrategia necesita.</p>
+<p>En KS Promocionales llevamos esta tendencia al mundo del marketing B2B en Ecuador. Si buscas un regalo corporativo que combine utilidad real, diferenciación y cuidado de la salud, los <a href="/categorias/antimicrobianos">productos antimicrobianos promocionales</a> son exactamente lo que tu estrategia necesita.</p>
 
 <h2>¿Qué son los productos promocionales antimicrobianos?</h2>
 
@@ -2709,7 +2709,7 @@ export const blogContent = {
 <h3>4. Cumplimiento de protocolos internos de higiene</h3>
 <p>Muchas empresas con certificaciones ISO o estándares de inocuidad alimentaria están incorporando materiales antimicrobianos en su dotación. Regalar artículos con estas características refuerza la cultura de seguridad sin necesidad de invertir en campañas adicionales.</p>
 
-<h2>Industrias y casos de uso en Ecuador y Colombia</h2>
+<h2>Industrias y casos de uso en Ecuador</h2>
 
 <p>Los productos antimicrobianos no son exclusivos del sector salud. A continuación, los rubros donde su uso como regalo corporativo genera mayor impacto:</p>
 
@@ -2727,7 +2727,7 @@ export const blogContent = {
 <p>El proceso de personalización de artículos antimicrobianos es prácticamente idéntico al de cualquier artículo promocional convencional. Lo importante es confirmar que la técnica de impresión elegida no afecte las propiedades del material.</p>
 
 <ul>
-  <li><strong>Bolígrafos antibacterianos (<a href="/categorias/escritura">ver categoría escritura</a>):</strong> se personalizan con serigrafía o tampografía directamente sobre la carcasa. El acabado antimicrobiano es del material, no de la tinta, así que la personalización es totalmente compatible.</li>
+  <li><strong>Bolígrafos antibacterianos (<a href="/categorias/boligrafos-publicitarios">ver categoría escritura</a>):</strong> se personalizan con serigrafía o tampografía directamente sobre la carcasa. El acabado antimicrobiano es del material, no de la tinta, así que la personalización es totalmente compatible.</li>
   <li><strong>Dispensadores de gel:</strong> impresión de logo en etiqueta adhesiva de alta calidad o serigrafía directa en el cuerpo plástico. Se puede incluir el nombre del evento, fecha y mensaje personalizado.</li>
   <li><strong>Sets de cubiertos:</strong> grabado láser o serigrafía en el estuche. El material del cubierto en sí no requiere personalización adicional.</li>
   <li><strong>Mascarillas:</strong> bordado o impresión sublimada del logo en la parte exterior. Importante verificar que el tratamiento sea de la tela y no un coating que se degrade con el lavado.</li>
@@ -2738,7 +2738,7 @@ export const blogContent = {
 
 <h2>Por qué elegir KS Promocionales para tus artículos antimicrobianos</h2>
 
-<p>Somos una empresa ecuatoriana especializada en artículos promocionales para el mercado B2B de Ecuador y Colombia. Nuestra ventaja no es solo el producto: es el acompañamiento completo desde la cotización hasta la entrega.</p>
+<p>Somos una empresa ecuatoriana especializada en artículos promocionales para el mercado B2B de Ecuador. Nuestra ventaja no es solo el producto: es el acompañamiento completo desde la cotización hasta la entrega.</p>
 
 <ul>
   <li><strong>Stock disponible y producción nacional:</strong> varios de nuestros artículos antimicrobianos se producen localmente, lo que reduce tiempos de entrega y costos de importación.</li>
@@ -2819,7 +2819,7 @@ export const blogContent = {
   <li><strong>Producción local en Ecuador:</strong> tiempos de entrega más cortos, sin riesgos de aduana y con posibilidad de hacer ajustes ágiles si el diseño necesita cambios.</li>
   <li><strong>Control de calidad directo:</strong> supervisamos el proceso de personalización y enviamos prueba digital antes de iniciar producción.</li>
   <li><strong>Pedidos a medida:</strong> adaptamos propuestas a tu presupuesto real, no a catálogos estándar. Si tienes una fecha límite, nos organizamos para cumplirla.</li>
-  <li><strong>Experiencia B2B:</strong> trabajamos con empresas de todos los tamaños en Ecuador y Colombia. Emitimos factura electrónica, manejamos órdenes de compra y coordinamos entregas a bodegas o puntos de distribución.</li>
+  <li><strong>Experiencia B2B:</strong> trabajamos con empresas de todos los tamaños en Ecuador. Emitimos factura electrónica, manejamos órdenes de compra y coordinamos entregas a bodegas o puntos de distribución.</li>
 </ul>
 
 <p>El destapador de botella con imán personalizado es uno de esos artículos que parece simple pero genera resultados sostenidos. Cada unidad que sale con tu logo es un embajador de tu marca que trabaja sin descanso, en el espacio más íntimo y cotidiano de tu cliente: su hogar. Si quieres empezar con una estrategia de marketing promocional inteligente y de bajo costo, este es el artículo por donde comenzar.</p>
@@ -2893,7 +2893,7 @@ export const blogContent = {
 
 <h2>Por qué elegir KS Promocionales para tus herramientas Mustang</h2>
 
-<p>En KS Promocionales somos distribuidores especializados en artículos corporativos para empresas en Ecuador y Colombia. No somos una tienda genérica: somos un aliado estratégico de marketing.</p>
+<p>En KS Promocionales somos distribuidores especializados en artículos corporativos para empresas en Ecuador. No somos una tienda genérica: somos un aliado estratégico de marketing.</p>
 
 <ul>
   <li><strong>Acceso directo a línea Mustang:</strong> trabajamos con stock disponible y tiempos de producción cortos para pedidos urgentes.</li>
@@ -3135,7 +3135,7 @@ export const blogContent = {
 
 <p class="text-gray-700 leading-relaxed mb-4">Esta característica es especialmente valiosa para empresas del sector salud, educación, servicios financieros y cualquier organización que valore el bienestar de sus clientes y empleados. En ciudades como Quito, Guayaquil y Cuenca, donde el ritmo empresarial es intenso, contar con artículos promocionales que demuestren preocupación por la salud marca una diferencia significativa.</p>
 
-<h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4 border-l-4 border-primary pl-4">PRECIO BOMBA: Calidad Premium a Costo Accesible</h2>
+<h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4 border-l-4 border-primary pl-4">PRECIO BOMBA: Cuencadad Premium a Costo Accesible</h2>
 
 <p class="text-gray-700 leading-relaxed mb-4">Una de las mayores ventajas del Bolígrafo Flom 4-1 Antibacteriano es su increíble relación calidad-precio. Catalogado como "PRECIO BOMBA", este producto permite a las empresas ecuatorianas acceder a un artículo promocional de alta gama sin comprometer su presupuesto de marketing.</p>
 
@@ -3212,7 +3212,7 @@ export const blogContent = {
 
 <p class="text-gray-700 leading-relaxed mb-4">Nuestro equipo de asesores está listo para ayudarte a elegir la mejor opción de personalización para tu empresa.</p>
 
-<p class="text-gray-700 leading-relaxed mb-4">Descubre más opciones en nuestra línea de <a href="/categorias/antimicrobianos" class="text-primary hover:underline font-medium">productos promocionales antimicrobianos</a>, o explora toda nuestra colección de <a href="/categorias/escritura" class="text-primary hover:underline font-medium">artículos de escritura personalizados</a>.</p>
+<p class="text-gray-700 leading-relaxed mb-4">Descubre más opciones en nuestra línea de <a href="/categorias/antimicrobianos" class="text-primary hover:underline font-medium">productos promocionales antimicrobianos</a>, o explora toda nuestra colección de <a href="/categorias/boligrafos-publicitarios" class="text-primary hover:underline font-medium">artículos de escritura personalizados</a>.</p>
 
 <blockquote class="border-l-4 border-primary pl-4 italic text-gray-600 my-4"><strong>Dato Pro:</strong> Aprovecha el precio especial "BOMBA" disponible por tiempo limitado.</blockquote>
 <blockquote class="border-l-4 border-primary pl-4 italic text-gray-600 my-4">🛒 <strong><a href="https://www.kronosolopromocionales.com/#categorias" class="text-primary hover:underline font-medium">Ver catálogo completo de Promocionales</a></strong></blockquote>
@@ -3248,7 +3248,7 @@ export const blogContent = {
       </div>
     </div>
     <div style="text-align: center; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
-      <a href="/tienda/ecologia" style="display: inline-flex; align-items: center; gap: 8px; background: white; color: #ea580c; padding: 14px 28px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: transform 0.2s;">
+      <a href="/categorias/ecologia" style="display: inline-flex; align-items: center; gap: 8px; background: white; color: #ea580c; padding: 14px 28px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: transform 0.2s;">
         🛒 Ver Catálogo
       </a>
       <a href="https://wa.me/593999814838?text=Hola%2C%20me%20interesan%20los%20ecologia%20promocionales" style="display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: white; padding: 14px 28px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
@@ -3298,7 +3298,7 @@ export const blogContent = {
   <h3 style="color: white; font-size: 28px; margin: 0 0 16px 0; font-weight: bold;">Personaliza tus productos ahora</h3>
   <p style="color: #dbeafe; font-size: 16px; margin: 0 0 24px 0;">Tu logo, tus colores, tu marca. Hacemos realidad tu visión.</p>
   <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
-    <a href="/tienda" style="display: inline-block; background: white; color: #1d4ed8; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px;">🛒 Ver Catálogo</a>
+    <a href="/" style="display: inline-block; background: white; color: #1d4ed8; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px;">🛒 Ver Catálogo</a>
     <a href="https://wa.me/593999814838?text=Hola%2C%20me%20interesan%20los%20productos%20promocionales" style="display: inline-block; background: #25D366; color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px;">💬 Cotizar Ahora</a>
   </div>
 </div>
@@ -3315,7 +3315,7 @@ export const blogContent = {
     <img src="https://catalogospromocionales.com/images/productos/9914.jpg" alt="Bolsa ecológica de algodón personalizada con logo para empresas Ecuador" style="width: 70px; height: 70px; object-fit: contain; border-radius: 10px; background: white; padding: 8px;" />
     <img src="https://catalogospromocionales.com/images/productos/10652.jpg" alt="Cuaderno de bambú ecológico personalizado para regalos corporativos Ecuador" style="width: 70px; height: 70px; object-fit: contain; border-radius: 10px; background: white; padding: 8px;" />
   </div>
-  <a href="/tienda/ecologia" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px;">
+  <a href="/categorias/ecologia" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px;">
     Explorar Productos Ecológicos →
   </a>
 </div>
@@ -3344,7 +3344,7 @@ export const blogContent = {
         <a href="https://wa.me/593999814838?text=Hola%2C%20necesito%20cotizaci%C3%B3n%20para%20ecologia%20promocionales" style="display: inline-flex; align-items: center; gap: 6px; background: #22c55e; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 14px;">
           💬 Cotizar Mayoreo
         </a>
-        <a href="/tienda/ecologia" style="display: inline-flex; align-items: center; gap: 6px; background: white; color: #166534; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 14px; border: 2px solid #22c55e;">
+        <a href="/categorias/ecologia" style="display: inline-flex; align-items: center; gap: 6px; background: white; color: #166534; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 14px; border: 2px solid #22c55e;">
           Ver Productos
         </a>
       </div>
@@ -3378,11 +3378,11 @@ export const blogContent = {
 </div>
 
 
-<h3>🏆 Opción Premium (Alta Calidad y Durabilidad)</h3>
+<h3>🏆 Opción Premium (Alta Cuencadad y Durabilidad)</h3>
 <ul>
 <li>✅ Materiales orgánicos certificados y procesos de producción sostenibles.</li><li>✅ Diseño exclusivo y personalización detallada.</li><li>✅ Ideal para: Empresas que buscan transmitir una imagen de lujo y compromiso ambiental.</li>
 </ul>
-<h3>⭐ Opción Estándar (Buena Relación Calidad-Precio)</h3>
+<h3>⭐ Opción Estándar (Buena Relación Cuencadad-Precio)</h3>
 <ul>
 <li>✅ Materiales reciclados y biodegradables.</li><li>✅ Personalización estándar con logo y mensaje.</li><li>✅ Ideal para: Campañas promocionales de alcance medio y empresas que buscan un equilibrio entre costo y sostenibilidad.</li>
 </ul>
@@ -3418,7 +3418,7 @@ export const blogContent = {
     <img src="https://catalogospromocionales.com/images/productos/9914.jpg" alt="Bolsa ecológica de algodón personalizada con logo para empresas Ecuador" style="width: 55px; height: 55px; object-fit: contain; border-radius: 8px; background: white; padding: 6px;" />
     <img src="https://catalogospromocionales.com/images/productos/10652.jpg" alt="Cuaderno de bambú ecológico personalizado para regalos corporativos Ecuador" style="width: 55px; height: 55px; object-fit: contain; border-radius: 8px; background: white; padding: 6px;" />
   </div>
-  <a href="/tienda/ecologia" style="display: inline-block; background: white; color: #059669; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px;">
+  <a href="/categorias/ecologia" style="display: inline-block; background: white; color: #059669; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px;">
     Ver Productos Ecológicos Disponibles →
   </a>
 </div>
@@ -3434,7 +3434,7 @@ export const blogContent = {
 
 <strong>¿Dónde puedo encontrar proveedores de productos promocionales ecológicos en Ecuador?</strong>
 
-<p>¡Nosotros somos tu mejor opción! Contamos con un amplio catálogo de <em>productos promocionales ecológicos</em> de alta calidad y personalizables. Visita nuestra <a href="https://www.example.com<a href="/tienda/ecologia" class="cta-store">/tienda/ecologia</a>" class="cta-link">tienda/ecologia</a> para explorar todas las opciones.</p>
+<p>¡Nosotros somos tu mejor opción! Contamos con un amplio catálogo de <em>productos promocionales ecológicos</em> de alta calidad y personalizables. Visita nuestra <a href="https://www.kronosolopromocionales.com"/categorias/ecologia" class="cta-store">/categorias/ecologia</a>" class="cta-link">tienda/ecologia</a> para explorar todas las opciones.</p>
 
 <h2>Conclusión: Impulsa tu Marca de Forma Sostenible</h2>
 
@@ -3448,7 +3448,7 @@ export const blogContent = {
   <h3 style="color: white; font-size: 32px; margin: 0 0 16px 0; font-weight: bold;">¿Listo para impulsar tu marca?</h3>
   <p style="color: #fed7aa; font-size: 18px; margin: 0 0 32px 0;">Obtén tu cotización personalizada en minutos. Sin compromiso.</p>
   <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-    <a href="/tienda" style="display: inline-block; background: white; color: #ea580c; padding: 18px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px;">🛒 Explorar Catálogo</a>
+    <a href="/" style="display: inline-block; background: white; color: #ea580c; padding: 18px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px;">🛒 Explorar Catálogo</a>
     <a href="https://wa.me/593999814838?text=Hola%2C%20me%20interesan%20los%20productos%20promocionales" style="display: inline-block; background: #25D366; color: white; padding: 18px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px;">💬 Hablar con un asesor</a>
   </div>
   <p style="color: #fdba74; font-size: 14px; margin: 24px 0 0 0;">📞 Respuesta garantizada en menos de 24 horas</p>
@@ -3466,7 +3466,7 @@ export const blogContent = {
         <img src="https://catalogospromocionales.com/images/productos/10652.jpg" alt="Cuaderno Bambú" style="width: 75px; height: 75px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
     </div>
     <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
-      <a href="/tienda/ecologia" style="display: inline-flex; align-items: center; gap: 8px; background: white; color: #7c3aed; padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
+      <a href="/categorias/ecologia" style="display: inline-flex; align-items: center; gap: 8px; background: white; color: #7c3aed; padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
         🛒 Explorar Catálogo
       </a>
       <a href="https://wa.me/593999814838?text=Hola%2C%20me%20interesan%20los%20ecologia%20promocionales" style="display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: white; padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
@@ -3509,7 +3509,7 @@ export const blogContent = {
       </div>
     </div>
     <div style="text-align: center; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
-      <a href="/tienda" style="display: inline-flex; align-items: center; gap: 8px; background: white; color: #ea580c; padding: 14px 28px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: transform 0.2s;">
+      <a href="/" style="display: inline-flex; align-items: center; gap: 8px; background: white; color: #ea580c; padding: 14px 28px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: transform 0.2s;">
         🛒 Ver Catálogo
       </a>
       <a href="https://wa.me/593999814838?text=Hola%2C%20me%20interesan%20los%20productos%20promocionales" style="display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: white; padding: 14px 28px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
@@ -3544,11 +3544,11 @@ export const blogContent = {
 </div>
 
 
-<h3>🏆 Calidad Premium</h3>
+<h3>🏆 Cuencadad Premium</h3>
 <ul>
 <li>✅ Materiales duraderos y acabados impecables</li><li>✅ Diseño exclusivo y personalizado</li><li>✅ Ideal para: empresas que buscan proyectar una imagen de lujo y sofisticación</li>
 </ul>
-<h3>⭐ Calidad Estándar</h3>
+<h3>⭐ Cuencadad Estándar</h3>
 <ul>
 <li>✅ Excelente relación calidad-precio</li><li>✅ Amplia variedad de opciones disponibles</li><li>✅ Ideal para: promociones masivas y eventos corporativos</li>
 </ul>
@@ -3571,7 +3571,7 @@ export const blogContent = {
     <img src="https://catalogospromocionales.com/images/productos/9531.jpg" alt="Bolígrafo premium personalizado con logo para empresas en Quito Ecuador" style="width: 70px; height: 70px; object-fit: contain; border-radius: 10px; background: white; padding: 8px;" />
     <img src="https://catalogospromocionales.com/images/productos/161.jpg" alt="Llavero metálico personalizado con logo para empresas en Quito Ecuador" style="width: 70px; height: 70px; object-fit: contain; border-radius: 10px; background: white; padding: 8px;" />
   </div>
-  <a href="/tienda" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px;">
+  <a href="/" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px;">
     Explorar productos promocionales →
   </a>
 </div>
@@ -3585,7 +3585,7 @@ export const blogContent = {
   <h3 style="color: white; font-size: 28px; margin: 0 0 16px 0; font-weight: bold;">Personaliza tus productos ahora</h3>
   <p style="color: #dbeafe; font-size: 16px; margin: 0 0 24px 0;">Tu logo, tus colores, tu marca. Hacemos realidad tu visión.</p>
   <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
-    <a href="/tienda" style="display: inline-block; background: white; color: #1d4ed8; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px;">🛒 Ver Catálogo</a>
+    <a href="/" style="display: inline-block; background: white; color: #1d4ed8; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px;">🛒 Ver Catálogo</a>
     <a href="https://wa.me/593999814838?text=Hola%2C%20me%20interesan%20los%20productos%20promocionales" style="display: inline-block; background: #25D366; color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px;">💬 Cotizar Ahora</a>
   </div>
 </div>
@@ -3609,7 +3609,7 @@ export const blogContent = {
         <a href="https://wa.me/593999814838?text=Hola%2C%20necesito%20cotizaci%C3%B3n%20para%20productos%20promocionales" style="display: inline-flex; align-items: center; gap: 6px; background: #22c55e; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 14px;">
           💬 Cotizar Mayoreo
         </a>
-        <a href="/tienda" style="display: inline-flex; align-items: center; gap: 6px; background: white; color: #166534; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 14px; border: 2px solid #22c55e;">
+        <a href="/" style="display: inline-flex; align-items: center; gap: 6px; background: white; color: #166534; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 14px; border: 2px solid #22c55e;">
           Ver Productos
         </a>
       </div>
@@ -3661,7 +3661,7 @@ export const blogContent = {
 <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 32px; border-radius: 16px; margin: 32px 0; text-align: center;">
   <p style="color: #a7f3d0; font-size: 14px; margin: 0 0 8px 0;">🏆 +500 EMPRESAS CONFÍAN EN NOSOTROS</p>
   <h3 style="color: white; font-size: 24px; margin: 0 0 16px 0; font-weight: bold;">Únete a las marcas que ya destacan</h3>
-  <p style="color: #d1fae5; margin: 0 0 24px 0;">Calidad garantizada • Entregas puntuales • Soporte dedicado</p>
+  <p style="color: #d1fae5; margin: 0 0 24px 0;">Cuencadad garantizada • Entregas puntuales • Soporte dedicado</p>
   <a href="https://wa.me/593999814838?text=Hola%2C%20me%20interesan%20los%20productos%20promocionales" style="display: inline-block; background: white; color: #059669; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px;">💬 Hablar con un Asesor</a>
 </div>
 
@@ -3682,7 +3682,7 @@ export const blogContent = {
     <img src="https://catalogospromocionales.com/images/productos/9531.jpg" alt="Bolígrafo premium personalizado con logo para empresas en Quito Ecuador" style="width: 55px; height: 55px; object-fit: contain; border-radius: 8px; background: white; padding: 6px;" />
     <img src="https://catalogospromocionales.com/images/productos/161.jpg" alt="Llavero metálico personalizado con logo para empresas en Quito Ecuador" style="width: 55px; height: 55px; object-fit: contain; border-radius: 8px; background: white; padding: 6px;" />
   </div>
-  <a href="/tienda" style="display: inline-block; background: white; color: #059669; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px;">
+  <a href="/" style="display: inline-block; background: white; color: #059669; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px;">
     Ver productos promocionales Disponibles →
   </a>
 </div>
@@ -3696,13 +3696,13 @@ export const blogContent = {
 
 <p>En resumen, los <em>productos promocionales en Quito para empresas</em> son una herramienta poderosa para aumentar la visibilidad de tu marca, fidelizar clientes y generar un impacto duradero. ¡Elige los productos adecuados, personalízalos y observa cómo tu negocio crece!</p>
 
-<p>Descubre las últimas tendencias en nuestra sección de <a href="/categorias/novedades" class="text-primary hover:underline font-medium">productos promocionales novedosos</a>, o impacta a tus clientes con nuestra <a href="/categorias/tecnologia" class="text-primary hover:underline font-medium">línea de tecnología promocional</a>.</p>
+<p>Descubre las últimas tendencias en nuestra sección de <a href="/categorias/novedades" class="text-primary hover:underline font-medium">productos promocionales novedosos</a>, o impacta a tus clientes con nuestra <a href="/categorias/tecnologia-promocional" class="text-primary hover:underline font-medium">línea de tecnología promocional</a>.</p>
 
 <div style="background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%); padding: 40px; border-radius: 20px; margin: 40px 0; text-align: center;">
   <h3 style="color: white; font-size: 32px; margin: 0 0 16px 0; font-weight: bold;">¿Listo para impulsar tu marca?</h3>
   <p style="color: #fed7aa; font-size: 18px; margin: 0 0 32px 0;">Obtén tu cotización personalizada en minutos. Sin compromiso.</p>
   <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-    <a href="/tienda" style="display: inline-block; background: white; color: #ea580c; padding: 18px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px;">🛒 Explorar Catálogo</a>
+    <a href="/" style="display: inline-block; background: white; color: #ea580c; padding: 18px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px;">🛒 Explorar Catálogo</a>
     <a href="https://wa.me/593999814838?text=Hola%2C%20me%20interesan%20los%20productos%20promocionales" style="display: inline-block; background: #25D366; color: white; padding: 18px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px;">💬 Hablar con un asesor</a>
   </div>
   <p style="color: #fdba74; font-size: 14px; margin: 24px 0 0 0;">📞 Respuesta garantizada en menos de 24 horas</p>
@@ -3721,7 +3721,7 @@ export const blogContent = {
         <img src="https://catalogospromocionales.com/images/productos/10689.jpg" alt="Set Ecológico" style="width: 75px; height: 75px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
     </div>
     <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
-      <a href="/tienda" style="display: inline-flex; align-items: center; gap: 8px; background: white; color: #7c3aed; padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
+      <a href="/" style="display: inline-flex; align-items: center; gap: 8px; background: white; color: #7c3aed; padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
         🛒 Explorar Catálogo
       </a>
       <a href="https://wa.me/593999814838?text=Hola%2C%20me%20interesan%20los%20productos%20promocionales" style="display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: white; padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
@@ -3766,7 +3766,7 @@ export const blogContent = {
       </div>
     </div>
     <div style="text-align: center; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
-      <a href="/tienda/llaveros" style="display: inline-flex; align-items: center; gap: 8px; background: white; color: #ea580c; padding: 14px 28px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: transform 0.2s;">
+      <a href="/categorias/llaveros-personalizados" style="display: inline-flex; align-items: center; gap: 8px; background: white; color: #ea580c; padding: 14px 28px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: transform 0.2s;">
         🛒 Ver Catálogo
       </a>
       <a href="https://wa.me/593999814838?text=Hola%2C%20me%20interesan%20los%20llaveros%20promocionales" style="display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: white; padding: 14px 28px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
@@ -3790,7 +3790,7 @@ Aquí te mostramos algunas razones clave por las que deberías considerar los ll
   <h3 style="color: white; font-size: 28px; margin: 0 0 16px 0; font-weight: bold;">Personaliza tus productos ahora</h3>
   <p style="color: #dbeafe; font-size: 16px; margin: 0 0 24px 0;">Tu logo, tus colores, tu marca. Hacemos realidad tu visión.</p>
   <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
-    <a href="/tienda" style="display: inline-block; background: white; color: #1d4ed8; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px;">🛒 Ver Catálogo</a>
+    <a href="/" style="display: inline-block; background: white; color: #1d4ed8; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px;">🛒 Ver Catálogo</a>
     <a href="https://wa.me/593999814838?text=Hola%2C%20me%20interesan%20los%20productos%20promocionales" style="display: inline-block; background: #25D366; color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px;">💬 Cotizar Ahora</a>
   </div>
 </div>
@@ -3816,11 +3816,11 @@ Aquí te mostramos algunas razones clave por las que deberías considerar los ll
 </div>
 
 
-<h3>🏆 Calidad Premium</h3>
+<h3>🏆 Cuencadad Premium</h3>
 <ul>
 <li>✅ <strong>Materiales duraderos:</strong> Acero inoxidable, cuero, aleaciones de alta calidad.</li><li>✅ <strong>Acabados impecables:</strong> Grabado láser, impresión a todo color con resina epoxi.</li><li>✅ <strong>Ideal para:</strong> Empresas que buscan proyectar una imagen de lujo y sofisticación.</li><li><strong>Ejemplos:</strong> Llaveros metálicos con el logo grabado, llaveros de cuero con detalles personalizados.</li>
 </ul>
-<h3>⭐ Calidad Estándar</h3>
+<h3>⭐ Cuencadad Estándar</h3>
 <ul>
 <li>✅ <strong>Excelente relación calidad-precio:</strong> Plástico resistente, metal ligero.</li><li>✅ <strong>Materiales resistentes:</strong> Ideal para uso diario.</li><li>✅ <strong>Ideal para:</strong> Promociones masivas, eventos corporativos, regalos a empleados.</li><li><strong>Ejemplos:</strong> Llaveros de plástico con impresión a color, llaveros metálicos sencillos con el logo impreso.</li>
 </ul>
@@ -3841,7 +3841,7 @@ Aquí te mostramos algunas razones clave por las que deberías considerar los ll
     <img src="https://catalogospromocionales.com/images/productos/2174.jpg" alt="Llavero de cuero personalizado para regalos corporativos Ecuador" style="width: 70px; height: 70px; object-fit: contain; border-radius: 10px; background: white; padding: 8px;" />
     <img src="https://catalogospromocionales.com/images/productos/3509.jpg" alt="Llavero acrílico con logo grabado para empresas en Ecuador" style="width: 70px; height: 70px; object-fit: contain; border-radius: 10px; background: white; padding: 8px;" />
   </div>
-  <a href="/tienda/llaveros" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px;">
+  <a href="/categorias/llaveros-personalizados" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px;">
     Explorar Llaveros →
   </a>
 </div>
@@ -3881,7 +3881,7 @@ Aquí te mostramos algunas razones clave por las que deberías considerar los ll
         <a href="https://wa.me/593999814838?text=Hola%2C%20necesito%20cotizaci%C3%B3n%20para%20llaveros%20promocionales" style="display: inline-flex; align-items: center; gap: 6px; background: #22c55e; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 14px;">
           💬 Cotizar Mayoreo
         </a>
-        <a href="/tienda/llaveros" style="display: inline-flex; align-items: center; gap: 6px; background: white; color: #166534; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 14px; border: 2px solid #22c55e;">
+        <a href="/categorias/llaveros-personalizados" style="display: inline-flex; align-items: center; gap: 6px; background: white; color: #166534; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 14px; border: 2px solid #22c55e;">
           Ver Productos
         </a>
       </div>
@@ -3924,7 +3924,7 @@ Los llaveros promocionales se pueden utilizar en una variedad de situaciones:
 <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 32px; border-radius: 16px; margin: 32px 0; text-align: center;">
   <p style="color: #a7f3d0; font-size: 14px; margin: 0 0 8px 0;">🏆 +500 EMPRESAS CONFÍAN EN NOSOTROS</p>
   <h3 style="color: white; font-size: 24px; margin: 0 0 16px 0; font-weight: bold;">Únete a las marcas que ya destacan</h3>
-  <p style="color: #d1fae5; margin: 0 0 24px 0;">Calidad garantizada • Entregas puntuales • Soporte dedicado</p>
+  <p style="color: #d1fae5; margin: 0 0 24px 0;">Cuencadad garantizada • Entregas puntuales • Soporte dedicado</p>
   <a href="https://wa.me/593999814838?text=Hola%2C%20me%20interesan%20los%20productos%20promocionales" style="display: inline-block; background: white; color: #059669; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px;">💬 Hablar con un Asesor</a>
 </div>
 
@@ -3945,13 +3945,13 @@ Los llaveros promocionales se pueden utilizar en una variedad de situaciones:
     <img src="https://catalogospromocionales.com/images/productos/2174.jpg" alt="Llavero de cuero personalizado para regalos corporativos Ecuador" style="width: 55px; height: 55px; object-fit: contain; border-radius: 8px; background: white; padding: 6px;" />
     <img src="https://catalogospromocionales.com/images/productos/3509.jpg" alt="Llavero acrílico con logo grabado para empresas en Ecuador" style="width: 55px; height: 55px; object-fit: contain; border-radius: 8px; background: white; padding: 6px;" />
   </div>
-  <a href="/tienda/llaveros" style="display: inline-block; background: white; color: #059669; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px;">
+  <a href="/categorias/llaveros-personalizados" style="display: inline-block; background: white; color: #059669; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px;">
     Ver Llaveros Disponibles →
   </a>
 </div>
 
 
-<p>1.  <strong>Visita nuestra tienda online:</strong> Explora nuestra amplia selección de llaveros promocionales. [<a href="/tienda/llaveros" class="cta-store">/tienda/llaveros</a>]
+<p>1.  <strong>Visita nuestra tienda online:</strong> Explora nuestra amplia selección de llaveros promocionales. [<a href="/categorias/llaveros-personalizados" class="cta-store">/categorias/llaveros-personalizados</a>]
 2.  <strong>Elige el modelo que mejor se adapte a tus necesidades:</strong> Considera tu presupuesto, público objetivo y mensaje que quieres transmitir.
 3.  <strong>Personaliza tu diseño:</strong> Sube tu logo, añade un mensaje creativo y elige los colores que representen tu marca.
 4.  <strong>Realiza tu pedido:</strong> ¡Recibe tus llaveros promocionales en la puerta de tu casa u oficina!</p>
@@ -3968,7 +3968,7 @@ Los llaveros promocionales se pueden utilizar en una variedad de situaciones:
   <h3 style="color: white; font-size: 32px; margin: 0 0 16px 0; font-weight: bold;">¿Listo para impulsar tu marca?</h3>
   <p style="color: #fed7aa; font-size: 18px; margin: 0 0 32px 0;">Obtén tu cotización personalizada en minutos. Sin compromiso.</p>
   <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-    <a href="/tienda" style="display: inline-block; background: white; color: #ea580c; padding: 18px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px;">🛒 Explorar Catálogo</a>
+    <a href="/" style="display: inline-block; background: white; color: #ea580c; padding: 18px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px;">🛒 Explorar Catálogo</a>
     <a href="https://wa.me/593999814838?text=Hola%2C%20me%20interesan%20los%20productos%20promocionales" style="display: inline-block; background: #25D366; color: white; padding: 18px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px;">💬 Hablar con un asesor</a>
   </div>
   <p style="color: #fdba74; font-size: 14px; margin: 24px 0 0 0;">📞 Respuesta garantizada en menos de 24 horas</p>
@@ -3986,7 +3986,7 @@ Los llaveros promocionales se pueden utilizar en una variedad de situaciones:
         <img src="https://catalogospromocionales.com/images/productos/3509.jpg" alt="Llavero Metálico" style="width: 75px; height: 75px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
     </div>
     <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
-      <a href="/tienda/llaveros" style="display: inline-flex; align-items: center; gap: 8px; background: white; color: #7c3aed; padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
+      <a href="/categorias/llaveros-personalizados" style="display: inline-flex; align-items: center; gap: 8px; background: white; color: #7c3aed; padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
         🛒 Explorar Catálogo
       </a>
       <a href="https://wa.me/593999814838?text=Hola%2C%20me%20interesan%20los%20llaveros%20promocionales" style="display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: white; padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
@@ -4015,11 +4015,11 @@ Los llaveros promocionales se pueden utilizar en una variedad de situaciones:
 
 <p>Elegir el bolígrafo adecuado para tu campaña promocional es crucial. Aquí te presentamos una comparativa para ayudarte a tomar la mejor decisión:</p>
 
-<h3>🏆 Calidad Premium</h3>
+<h3>🏆 Cuencadad Premium</h3>
 <ul>
 <li>✅ <strong>Materiales duraderos:</strong> Metales, resinas de alta calidad.</li><li>✅ <strong>Acabados impecables:</strong> Grabado láser, impresión de alta resolución.</li><li>✅ <strong>Ideal para:</strong> Clientes VIP, regalos corporativos de alto impacto.</li>
 </ul>
-<h3>⭐ Calidad Estándar</h3>
+<h3>⭐ Cuencadad Estándar</h3>
 <ul>
 <li>✅ <strong>Excelente relación calidad-precio:</strong> Plásticos resistentes, diseños modernos.</li><li>✅ <strong>Buena durabilidad:</strong> Mecanismos confiables, tinta de calidad.</li><li>✅ <strong>Ideal para:</strong> Eventos, ferias, promociones generales.</li>
 </ul>
@@ -4046,7 +4046,7 @@ Los llaveros promocionales se pueden utilizar en una variedad de situaciones:
 <ul>
 <li>  <strong>Bolígrafos de plástico:</strong> Económicos y versátiles, ideales para grandes campañas.</li><li>  <strong>Bolígrafos de metal:</strong> Elegantes y duraderos, perfectos para regalos corporativos.</li><li>  <strong>Bolígrafos ecológicos:</strong> Fabricados con materiales reciclados, ideales para empresas con conciencia ambiental.</li><li>  <strong>Bolígrafos multifunción:</strong> Con puntero para pantallas táctiles, linterna o regla, para mayor utilidad.</li><li>  <strong>Sets de regalo:</strong> Incluyen bolígrafo y otros accesorios, como llaveros o libretas.</li>
 </ul>
-Visita nuestra sección de <a href="/categorias/escritura" class="text-primary hover:underline font-medium">artículos de escritura personalizados</a> para explorar todas las opciones.
+Visita nuestra sección de <a href="/categorias/boligrafos-publicitarios" class="text-primary hover:underline font-medium">artículos de escritura personalizados</a> para explorar todas las opciones.
 
 <h2>Personalización y Usos Estratégicos</h2>
 
@@ -4083,7 +4083,7 @@ Visita nuestra sección de <a href="/categorias/escritura" class="text-primary h
   <h3 style="color: white; font-size: 28px; margin: 0 0 16px 0; font-weight: bold;">Personaliza tus productos ahora</h3>
   <p style="color: #dbeafe; font-size: 16px; margin: 0 0 24px 0;">Tu logo, tus colores, tu marca. Hacemos realidad tu visión.</p>
   <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
-    <a href="/tienda" style="display: inline-block; background: white; color: #1d4ed8; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px;">🛒 Ver Catálogo</a>
+    <a href="/" style="display: inline-block; background: white; color: #1d4ed8; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px;">🛒 Ver Catálogo</a>
     <a href="https://wa.me/593999814838?text=Hola%2C%20me%20interesan%20los%20productos%20promocionales" style="display: inline-block; background: #25D366; color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px;">💬 Cotizar Ahora</a>
   </div>
 </div>
@@ -4091,7 +4091,7 @@ Visita nuestra sección de <a href="/categorias/escritura" class="text-primary h
   <p style="color: #bfdbfe; font-size: 14px; margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 1px;">✨ Personalización Premium</p>
   <h3 style="color: white; font-size: 28px; margin: 0 0 16px 0; font-weight: bold;">Personaliza tus productos promocionales ahora</h3>
   <p style="color: #e0e7ff; margin: 0 0 24px 0;">Tu logo, tus colores, tu marca. Diseño incluido sin costo adicional.</p>
-  <a href="/tienda" style="display: inline-block; background: white; color: #1d4ed8; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 16px; margin-right: 12px;">🛒 Ver Catálogo</a>
+  <a href="/" style="display: inline-block; background: white; color: #1d4ed8; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 16px; margin-right: 12px;">🛒 Ver Catálogo</a>
   <a href="https://wa.me/593999814838?text=Hola%2C%20me%20interesan%20los%20productos%20promocionales" style="display: inline-block; background: #25D366; color: white; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 16px;">💬 Cotizar por WhatsApp</a>
 </div>
 [/CTA_PERSONALIZA]</p>
@@ -4123,7 +4123,7 @@ Visita nuestra sección de <a href="/categorias/escritura" class="text-primary h
       </div>
     </div>
     <div style="text-align: center; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
-      <a href="/tienda" style="display: inline-flex; align-items: center; gap: 8px; background: white; color: #ea580c; padding: 14px 28px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: transform 0.2s;">
+      <a href="/" style="display: inline-flex; align-items: center; gap: 8px; background: white; color: #ea580c; padding: 14px 28px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: transform 0.2s;">
         🛒 Ver Catálogo
       </a>
       <a href="https://wa.me/593999814838?text=Hola%2C%20me%20interesan%20los%20productos%20promocionales" style="display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: white; padding: 14px 28px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
@@ -4167,11 +4167,11 @@ Visita nuestra sección de <a href="/categorias/escritura" class="text-primary h
 </div>
 
 
-<h3>🏆 Calidad Premium</h3>
+<h3>🏆 Cuencadad Premium</h3>
 <ul>
 <li>✅ Materiales duraderos y acabados impecables</li><li>✅ Diseño exclusivo y personalizado</li><li>✅ Ideal para: clientes VIP y eventos especiales</li>
 </ul>
-<h3>⭐ Calidad Estándar</h3>
+<h3>⭐ Cuencadad Estándar</h3>
 <ul>
 <li>✅ Excelente relación calidad-precio</li><li>✅ Amplia variedad de opciones disponibles</li><li>✅ Ideal para: promociones masivas y eventos comunitarios</li>
 </ul>
@@ -4210,7 +4210,7 @@ Visita nuestra sección de <a href="/categorias/escritura" class="text-primary h
     <img src="https://catalogospromocionales.com/images/productos/9531.jpg" alt="Bolígrafo publicitario personalizado para eventos de Carnaval 2026 Ecuador" style="width: 70px; height: 70px; object-fit: contain; border-radius: 10px; background: white; padding: 8px;" />
     <img src="https://catalogospromocionales.com/images/productos/161.jpg" alt="Llavero promocional personalizado para Carnaval 2026 Ecuador" style="width: 70px; height: 70px; object-fit: contain; border-radius: 10px; background: white; padding: 8px;" />
   </div>
-  <a href="/tienda" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px;">
+  <a href="/" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px;">
     Explorar productos promocionales →
   </a>
 </div>
@@ -4245,7 +4245,7 @@ Visita nuestra sección de <a href="/categorias/escritura" class="text-primary h
         <a href="https://wa.me/593999814838?text=Hola%2C%20necesito%20cotizaci%C3%B3n%20para%20productos%20promocionales" style="display: inline-flex; align-items: center; gap: 6px; background: #22c55e; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 14px;">
           💬 Cotizar Mayoreo
         </a>
-        <a href="/tienda" style="display: inline-flex; align-items: center; gap: 6px; background: white; color: #166534; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 14px; border: 2px solid #22c55e;">
+        <a href="/" style="display: inline-flex; align-items: center; gap: 6px; background: white; color: #166534; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 14px; border: 2px solid #22c55e;">
           Ver Productos
         </a>
       </div>
@@ -4282,14 +4282,14 @@ Visita nuestra sección de <a href="/categorias/escritura" class="text-primary h
 <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 32px; border-radius: 16px; margin: 32px 0; text-align: center;">
   <p style="color: #a7f3d0; font-size: 14px; margin: 0 0 8px 0;">🏆 +500 EMPRESAS CONFÍAN EN NOSOTROS</p>
   <h3 style="color: white; font-size: 24px; margin: 0 0 16px 0; font-weight: bold;">Únete a las marcas que ya destacan</h3>
-  <p style="color: #d1fae5; margin: 0 0 24px 0;">Calidad garantizada • Entregas puntuales • Soporte dedicado</p>
+  <p style="color: #d1fae5; margin: 0 0 24px 0;">Cuencadad garantizada • Entregas puntuales • Soporte dedicado</p>
   <a href="https://wa.me/593999814838?text=Hola%2C%20me%20interesan%20los%20productos%20promocionales" style="display: inline-block; background: white; color: #059669; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px;">💬 Hablar con un Asesor</a>
 </div>
 <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 32px; border-radius: 16px; margin: 32px 0; text-align: center;">
   <p style="color: #a7f3d0; font-size: 14px; margin: 0 0 8px 0;">🏆 +500 EMPRESAS CONFÍAN EN NOSOTROS</p>
   <h3 style="color: white; font-size: 24px; margin: 0 0 16px 0; font-weight: bold;">Únete a las marcas que ya destacan</h3>
   <p style="color: #d1fae5; margin: 0 0 24px 0;">Empresas en Ecuador eligen nuestros productos promocionales para impulsar su marca.</p>
-  <a href="/tienda" style="display: inline-block; background: white; color: #059669; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 16px;">Ver productos promocionales →</a>
+  <a href="/" style="display: inline-block; background: white; color: #059669; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 16px;">Ver productos promocionales →</a>
 </div>
 [/CTA_SOCIAL]
 
@@ -4320,7 +4320,7 @@ Estos son solo algunos ejemplos de cómo los <em>productos promocionales carnava
     <img src="https://catalogospromocionales.com/images/productos/9531.jpg" alt="Bolígrafo publicitario personalizado para eventos de Carnaval 2026 Ecuador" style="width: 55px; height: 55px; object-fit: contain; border-radius: 8px; background: white; padding: 6px;" />
     <img src="https://catalogospromocionales.com/images/productos/161.jpg" alt="Llavero promocional personalizado para Carnaval 2026 Ecuador" style="width: 55px; height: 55px; object-fit: contain; border-radius: 8px; background: white; padding: 6px;" />
   </div>
-  <a href="/tienda" style="display: inline-block; background: white; color: #059669; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px;">
+  <a href="/" style="display: inline-block; background: white; color: #059669; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px;">
     Ver productos promocionales Disponibles →
   </a>
 </div>
@@ -4342,7 +4342,7 @@ Estos son solo algunos ejemplos de cómo los <em>productos promocionales carnava
   <h3 style="color: white; font-size: 32px; margin: 0 0 16px 0; font-weight: bold;">¿Listo para impulsar tu marca?</h3>
   <p style="color: #fed7aa; font-size: 18px; margin: 0 0 32px 0;">Obtén tu cotización personalizada en minutos. Sin compromiso.</p>
   <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-    <a href="/tienda" style="display: inline-block; background: white; color: #ea580c; padding: 18px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px;">🛒 Explorar Catálogo</a>
+    <a href="/" style="display: inline-block; background: white; color: #ea580c; padding: 18px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px;">🛒 Explorar Catálogo</a>
     <a href="https://wa.me/593999814838?text=Hola%2C%20me%20interesan%20los%20productos%20promocionales" style="display: inline-block; background: #25D366; color: white; padding: 18px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px;">💬 Hablar con un asesor</a>
   </div>
   <p style="color: #fdba74; font-size: 14px; margin: 24px 0 0 0;">📞 Respuesta garantizada en menos de 24 horas</p>
@@ -4351,7 +4351,7 @@ Estos son solo algunos ejemplos de cómo los <em>productos promocionales carnava
   <h3 style="color: white; font-size: 32px; margin: 0 0 16px 0; font-weight: bold;">¿Listo para impulsar tu marca?</h3>
   <p style="color: #fed7aa; font-size: 18px; margin: 0 0 32px 0;">Obtén tu cotización personalizada en minutos. Sin compromiso.</p>
   <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-    <a href="/tienda" style="display: inline-flex; align-items: center; gap: 8px; background: white; color: #ea580c; padding: 18px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px;">
+    <a href="/" style="display: inline-flex; align-items: center; gap: 8px; background: white; color: #ea580c; padding: 18px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px;">
       🛒 Explorar productos promocionales
     </a>
     <a href="https://wa.me/593999814838?text=Hola%2C%20me%20interesan%20los%20productos%20promocionales" style="display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: white; padding: 18px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px;">
@@ -4375,7 +4375,7 @@ Estos son solo algunos ejemplos de cómo los <em>productos promocionales carnava
         <img src="https://catalogospromocionales.com/images/productos/10689.jpg" alt="Set Ecológico" style="width: 75px; height: 75px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
     </div>
     <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
-      <a href="/tienda" style="display: inline-flex; align-items: center; gap: 8px; background: white; color: #7c3aed; padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
+      <a href="/" style="display: inline-flex; align-items: center; gap: 8px; background: white; color: #7c3aed; padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
         🛒 Explorar Catálogo
       </a>
       <a href="https://wa.me/593999814838?text=Hola%2C%20me%20interesan%20los%20productos%20promocionales" style="display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: white; padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
@@ -4396,7 +4396,7 @@ Estos son solo algunos ejemplos de cómo los <em>productos promocionales carnava
   <h3 style="color: white; font-size: 28px; margin: 0 0 16px 0; font-weight: bold;">Personaliza tus regalos corporativos ahora</h3>
   <p style="color: #dbeafe; font-size: 16px; margin: 0 0 24px 0;">Tu logo, tus colores, tu marca. Hacemos realidad tu visión.</p>
   <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
-    <a href="/tienda" style="display: inline-block; background: white; color: #1d4ed8; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px;">🛒 Ver Catálogo</a>
+    <a href="/" style="display: inline-block; background: white; color: #1d4ed8; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px;">🛒 Ver Catálogo</a>
     <a href="https://wa.me/593999814838?text=Hola%2C%20me%20interesan%20los%20regalos%20corporativos%20para%20San%20Valent%C3%ADn" style="display: inline-block; background: #25D366; color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px;">💬 Cotizar Ahora</a>
   </div>
 </div>
@@ -4408,11 +4408,11 @@ Estos son solo algunos ejemplos de cómo los <em>productos promocionales carnava
 <div class="tip-box" style="background: #fef3c7; border-left: 4px solid #f59e0b; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 20px 0;">
     <p style="margin: 0; color: #92400e;">💡 <strong>Dato importante:</strong> Un regalo corporativo bien seleccionado puede aumentar la percepción positiva de tu marca en un 79%.</p>
 </div>
-<h3>🏆 Calidad Premium</h3>
+<h3>🏆 Cuencadad Premium</h3>
 <ul>
 <li>✅ <em>Diseños exclusivos</em> que reflejan la identidad de tu marca.</li><li>✅ <em>Materiales duraderos</em> que garantizan la longevidad del regalo.</li><li>✅ <em>Empaques personalizados</em> que añaden un toque de elegancia.</li><li>✅ Ideal para: clientes VIP y socios estratégicos.</li>
 </ul>
-<h3>⭐ Calidad Estándar</h3>
+<h3>⭐ Cuencadad Estándar</h3>
 <ul>
 <li>✅ <em>Excelente relación calidad-precio</em> para un presupuesto equilibrado.</li><li>✅ <em>Variedad de opciones</em> para adaptarse a diferentes gustos.</li><li>✅ <em>Personalización versátil</em> con tu logo y mensaje.</li><li>✅ Ideal para: campañas de alcance masivo y eventos corporativos.</li>
 </ul>
@@ -4479,7 +4479,7 @@ Un empaque atractivo puede hacer que tu regalo sea aún más memorable.
 <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 32px; border-radius: 16px; margin: 32px 0; text-align: center;">
   <p style="color: #a7f3d0; font-size: 14px; margin: 0 0 8px 0;">🏆 +500 EMPRESAS CONFÍAN EN NOSOTROS</p>
   <h3 style="color: white; font-size: 24px; margin: 0 0 16px 0; font-weight: bold;">Únete a las marcas que ya destacan</h3>
-  <p style="color: #d1fae5; margin: 0 0 24px 0;">Calidad garantizada • Entregas puntuales • Soporte dedicado</p>
+  <p style="color: #d1fae5; margin: 0 0 24px 0;">Cuencadad garantizada • Entregas puntuales • Soporte dedicado</p>
   <a href="https://wa.me/593999814838?text=Hola%2C%20me%20interesan%20los%20regalos%20corporativos" style="display: inline-block; background: white; color: #059669; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px;">💬 Hablar con un Asesor</a>
 </div>
 
@@ -4495,13 +4495,13 @@ Un empaque atractivo puede hacer que tu regalo sea aún más memorable.
 
 <p>Los <strong>regalos corporativos para el dia del amor y amistad ecuador</strong> son una herramienta poderosa para fortalecer la relación con tus clientes y empleados. ¡No pierdas la oportunidad de demostrarles cuánto te importan! Invierte en regalos que dejen una huella duradera y generen resultados positivos para tu negocio. ¡Haz que este <em>Día del Amor y la Amistad</em> sea inolvidable!</p>
 
-<p>Descubre ideas originales en nuestra sección de <a href="/categorias/novedades" class="text-primary hover:underline font-medium">productos promocionales novedosos</a>, o sorprende con un detalle cálido con nuestra colección de <a href="/categorias/mugs" class="text-primary hover:underline font-medium">mugs y termos personalizados</a>.</p>
+<p>Descubre ideas originales en nuestra sección de <a href="/categorias/novedades" class="text-primary hover:underline font-medium">productos promocionales novedosos</a>, o sorprende con un detalle cálido con nuestra colección de <a href="/categorias/mugs-y-termos-personalizados" class="text-primary hover:underline font-medium">mugs y termos personalizados</a>.</p>
 
 <div style="background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%); padding: 40px; border-radius: 20px; margin: 40px 0; text-align: center;">
   <h3 style="color: white; font-size: 32px; margin: 0 0 16px 0; font-weight: bold;">¿Listo para impulsar tu marca este Día del Amor?</h3>
   <p style="color: #fed7aa; font-size: 18px; margin: 0 0 32px 0;">Obtén tu cotización personalizada en minutos. Sin compromiso.</p>
   <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-    <a href="/tienda" style="display: inline-block; background: white; color: #ea580c; padding: 18px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px;">🛒 Explorar Catálogo</a>
+    <a href="/" style="display: inline-block; background: white; color: #ea580c; padding: 18px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px;">🛒 Explorar Catálogo</a>
     <a href="https://wa.me/593999814838?text=Hola%2C%20me%20interesan%20los%20regalos%20corporativos%20para%20San%20Valent%C3%ADn" style="display: inline-block; background: #25D366; color: white; padding: 18px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px;">💬 Hablar con un asesor</a>
   </div>
   <p style="color: #fdba74; font-size: 14px; margin: 24px 0 0 0;">📞 Respuesta garantizada en menos de 24 horas</p>
@@ -4526,7 +4526,7 @@ Un empaque atractivo puede hacer que tu regalo sea aún más memorable.
   <h3 style="color: white; font-size: 28px; margin: 0 0 16px 0; font-weight: bold;">Personaliza tus Productos ahora</h3>
   <p style="color: #dbeafe; font-size: 16px; margin: 0 0 24px 0;">Tu logo, tus colores, tu marca. Hacemos realidad tu visión.</p>
   <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
-    <a href="/tienda/productos" style="display: inline-block; background: white; color: #1d4ed8; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px;">🛒 Ver Catálogo</a>
+    <a href="/" style="display: inline-block; background: white; color: #1d4ed8; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px;">🛒 Ver Catálogo</a>
     <a href="https://wa.me/593999814838?text=Hola%2C%20me%20interesan%20los%20productos%20promocionales" style="display: inline-block; background: #25D366; color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px;">💬 Cotizar Ahora</a>
   </div>
 </div>
@@ -4536,11 +4536,11 @@ Un empaque atractivo puede hacer que tu regalo sea aún más memorable.
 
 <p>Ofrecemos una variedad de opciones para adaptarnos a tus necesidades y presupuesto. Aquí te presentamos una comparación de nuestras líneas de productos:</p>
 
-<h3>🏆 Calidad Premium</h3>
+<h3>🏆 Cuencadad Premium</h3>
 <ul>
 <li>✅ Materiales de alta calidad y durabilidad superior.</li><li>✅ Acabados impecables y colores neón vibrantes.</li><li>✅ Personalización completa con tu logo y diseño.</li><li>✅ Ideal para: empresas que buscan proyectar una imagen de excelencia y distinción.</li>
 </ul>
-<h3>⭐ Calidad Estándar</h3>
+<h3>⭐ Cuencadad Estándar</h3>
 <ul>
 <li>✅ Excelente relación calidad-precio.</li><li>✅ Materiales resistentes y colores neón llamativos.</li><li>✅ Personalización con tu logo.</li><li>✅ Ideal para: promociones masivas y eventos corporativos.</li>
 </ul>
@@ -4596,7 +4596,7 @@ Un empaque atractivo puede hacer que tu regalo sea aún más memorable.
 <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 32px; border-radius: 16px; margin: 32px 0; text-align: center;">
   <p style="color: #a7f3d0; font-size: 14px; margin: 0 0 8px 0;">🏆 +500 EMPRESAS CONFÍAN EN NOSOTROS</p>
   <h3 style="color: white; font-size: 24px; margin: 0 0 16px 0; font-weight: bold;">Únete a las marcas que ya destacan</h3>
-  <p style="color: #d1fae5; margin: 0 0 24px 0;">Calidad garantizada • Entregas puntuales • Soporte dedicado</p>
+  <p style="color: #d1fae5; margin: 0 0 24px 0;">Cuencadad garantizada • Entregas puntuales • Soporte dedicado</p>
   <a href="https://wa.me/593999814838?text=Hola%2C%20me%20interesan%20los%20productos%20promocionales" style="display: inline-block; background: white; color: #059669; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px;">💬 Hablar con un Asesor</a>
 </div>
 
@@ -4629,7 +4629,7 @@ Un empaque atractivo puede hacer que tu regalo sea aún más memorable.
   <h3 style="color: white; font-size: 32px; margin: 0 0 16px 0; font-weight: bold;">¿Listo para impulsar tu marca?</h3>
   <p style="color: #fed7aa; font-size: 18px; margin: 0 0 32px 0;">Obtén tu cotización personalizada en minutos. Sin compromiso.</p>
   <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-    <a href="/tienda/productos" style="display: inline-block; background: white; color: #ea580c; padding: 18px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px;">🛒 Explorar Productos</a>
+    <a href="/" style="display: inline-block; background: white; color: #ea580c; padding: 18px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px;">🛒 Explorar Productos</a>
     <a href="https://wa.me/593999814838?text=Hola%2C%20me%20interesan%20los%20productos%20promocionales" style="display: inline-block; background: #25D366; color: white; padding: 18px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px;">💬 Hablar con un asesor</a>
   </div>
   <p style="color: #fdba74; font-size: 14px; margin: 24px 0 0 0;">📞 Respuesta garantizada en menos de 24 horas</p>

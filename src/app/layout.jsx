@@ -1,7 +1,7 @@
 import './globals.css';
 import Script from 'next/script';
 import dynamic from 'next/dynamic';
-import { Plus_Jakarta_Sans, Inter, DM_Serif_Display } from 'next/font/google';
+import { Syne, Nunito_Sans } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -15,44 +15,36 @@ const CookieConsent = dynamic(() => import('@/components/CookieConsent'), {
   loading: () => null,
 });
 
-const jakarta = Plus_Jakarta_Sans({
+const syne = Syne({
   subsets: ['latin'],
-  variable: '--font-jakarta',
+  variable: '--font-syne',
+  weight: ['600', '700', '800'],
+  display: 'swap',
+});
+
+const nunitoSans = Nunito_Sans({
+  subsets: ['latin'],
+  variable: '--font-nunito-sans',
   weight: ['400', '500', '600', '700', '800'],
-  display: 'swap',
-});
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  weight: ['300', '400', '500', '600'],
-  display: 'swap',
-});
-
-const dmSerif = DM_Serif_Display({
-  subsets: ['latin'],
-  variable: '--font-dm-serif',
-  weight: ['400'],
-  style: ['normal', 'italic'],
   display: 'swap',
 });
 
 export const viewport = {
   viewportFit: 'cover',
-  themeColor: '#001A6E',
+  themeColor: '#0F2178',
 };
 
 export const metadata = {
   metadataBase: new URL('https://www.kronosolopromocionales.com'),
-  title: 'Material Publicitario y Artículos Promocionales Ecuador | KS Promocionales',
-  description: 'Material publicitario y artículos promocionales personalizados con tu logo en Ecuador. Regalos corporativos, mugs, bolígrafos, tecnología y más. Cotiza hoy por WhatsApp.',
+  title: 'Artículos Promocionales y Merchandising Corporativo para Empresas | KS Promocionales',
+  description: 'Compra artículos promocionales, regalos corporativos y material publicitario personalizado para empresas en Ecuador. Catálogo B2B para eventos, marcas y campañas corporativas.',
   openGraph: {
     type: 'website',
     locale: 'es_EC',
     url: 'https://www.kronosolopromocionales.com/',
     siteName: 'KS Promocionales',
-    title: 'Material Publicitario y Artículos Promocionales Ecuador | KS Promocionales',
-    description: 'Material publicitario y artículos promocionales personalizados con tu logo en Ecuador. Regalos corporativos, mugs, bolígrafos, tecnología y más. Cotiza hoy por WhatsApp.',
+    title: 'Artículos Promocionales y Merchandising Corporativo para Empresas | KS Promocionales',
+    description: 'Compra artículos promocionales, regalos corporativos y material publicitario personalizado para empresas en Ecuador. Catálogo B2B para eventos, marcas y campañas corporativas.',
     images: [
       {
         url: '/images/og-image.jpg',
@@ -72,7 +64,6 @@ export const metadata = {
     canonical: 'https://www.kronosolopromocionales.com/',
     languages: {
       'es-EC': 'https://www.kronosolopromocionales.com/',
-      'es-CO': 'https://www.kronosolopromocionales.com/',
       'x-default': 'https://www.kronosolopromocionales.com/',
     },
   },
@@ -98,7 +89,7 @@ const localBusinessSchema = {
   '@id': `${BASE_URL}/#localbusiness`,
   name: 'KS Promocionales',
   alternateName: 'KSPromocionales',
-  description: 'Productos promocionales y regalos corporativos personalizados en Ecuador y Colombia. Tecnología, mugs, oficina, textiles y más con tu logo.',
+  description: 'Productos promocionales y regalos corporativos personalizados en Ecuador. Tecnología, mugs, oficina, textiles y más con tu logo.',
   url: `${BASE_URL}/`,
   telephone: '+593999814838',
   email: 'claudiagonzalez@kronosolopromocionales.com',
@@ -139,7 +130,6 @@ const localBusinessSchema = {
   priceRange: '$$',
   areaServed: [
     { '@type': 'Country', name: 'Ecuador' },
-    { '@type': 'Country', name: 'Colombia' },
   ],
   sameAs: [
     'https://www.facebook.com/kspromocionales',
@@ -160,7 +150,7 @@ const websiteSchema = {
   '@id': `${BASE_URL}/#website`,
   url: `${BASE_URL}/`,
   name: 'KS Promocionales',
-  description: 'Productos promocionales personalizados en Ecuador y Colombia',
+  description: 'Productos promocionales personalizados en Ecuador',
   inLanguage: 'es-EC',
   publisher: {
     '@id': `${BASE_URL}/#localbusiness`,
@@ -169,7 +159,7 @@ const websiteSchema = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es-EC" className={`${jakarta.variable} ${inter.variable} ${dmSerif.variable}`}>
+    <html lang="es-EC" className={`${syne.variable} ${nunitoSans.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="48x48" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />

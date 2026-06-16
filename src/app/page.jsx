@@ -20,10 +20,9 @@ const onlineStoreJsonLd = {
   '@type': 'OnlineStore',
   name: 'KS Promocionales',
   url: 'https://www.kronosolopromocionales.com',
-  description: 'Tienda de artículos promocionales y material publicitario personalizado con logo en Ecuador y Colombia.',
+  description: 'Tienda de artículos promocionales y material publicitario personalizado con logo en Ecuador.',
   areaServed: [
     { '@type': 'Country', name: 'Ecuador' },
-    { '@type': 'Country', name: 'Colombia' },
   ],
   currenciesAccepted: 'USD',
   priceRange: '$-$$$',

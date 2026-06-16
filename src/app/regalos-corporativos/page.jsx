@@ -1,12 +1,13 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const dynamic = 'force-static';
 
 const BASE_URL = 'https://www.kronosolopromocionales.com';
 
 export const metadata = {
-  title: 'Regalos Corporativos Personalizados Ecuador | KS Promocionales',
-  description: 'Regalos corporativos personalizados con el logo de tu empresa en Ecuador. Mugs, tecnología, bolígrafos, maletines y más. Cotiza sin compromiso por WhatsApp.',
+  title: 'Regalos Corporativos Personalizados para Empresas | KS Promocionales',
+  description: 'Regalos corporativos personalizados para empresas en Ecuador. Mugs, tecnología, bolígrafos, maletines y más con tu logo. Catálogo B2B con opciones para clientes, empleados y eventos.',
   alternates: {
     canonical: `${BASE_URL}/regalos-corporativos/`,
     languages: {
@@ -16,68 +17,250 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: 'Regalos Corporativos Personalizados Ecuador | KS Promocionales',
-    description: 'Regalos corporativos personalizados con el logo de tu empresa en Ecuador. Cotiza sin compromiso.',
+    title: 'Regalos Corporativos Personalizados para Empresas | KS Promocionales',
+    description: 'Regalos corporativos personalizados para empresas. Catálogo B2B para clientes, empleados y eventos en Ecuador.',
     type: 'website',
   },
 };
 
-const GIFT_CATEGORIES = [
+const ALL_CATEGORIES = [
   {
-    name: 'Mugs y Termos Personalizados',
-    slug: 'mugs-y-termos-personalizados',
-    description: 'El regalo de escritorio más usado. Cerámica, acero inoxidable y sublimación con tu logo.',
-    emoji: '☕',
-    ideal: 'Ferias, onboarding, fin de año',
+    id: 'precio-bomba',
+    name: 'Precio Bomba',
+    slug: 'precio-bomba',
+    description: 'Ofertas especiales con los mejores precios en artículos promocionales.',
+    ideal: 'Campañas masivas, presupuesto ajustado',
   },
   {
-    name: 'Tecnología Promocional',
-    slug: 'tecnologia-promocional',
-    description: 'Audífonos, power banks y gadgets personalizados. Los más valorados por ejecutivos.',
-    emoji: '💻',
-    ideal: 'Reconocimientos, clientes VIP',
+    id: 'antiestres',
+    name: 'Antiestrés',
+    slug: 'antiestres',
+    description: 'Pelotas, figuras y accesorios relajantes personalizados.',
+    ideal: 'Bienestar corporativo, call centers',
   },
   {
+    id: 'antimicrobianos',
+    name: 'Antimicrobianos',
+    slug: 'antimicrobianos',
+    description: 'Bolígrafos antibacteriales, geles, mascarillas y accesorios de higiene.',
+    ideal: 'Salud, farmacéutico, educativo',
+  },
+  {
+    id: 'escritura',
     name: 'Bolígrafos Publicitarios',
     slug: 'boligrafos-publicitarios',
     description: 'Desde 50 unidades. Metálicos, ecológicos y ejecutivos con tu logo impreso.',
-    emoji: '✏️',
     ideal: 'Eventos, ferias, capacitaciones',
   },
   {
-    name: 'Artículos de Oficina',
-    slug: 'articulos-de-oficina-personalizados',
-    description: 'Organizadores, agendas y sets de escritorio que mantienen tu marca visible cada día.',
-    emoji: '🗂️',
-    ideal: 'Kits de bienvenida, convenciones',
+    id: 'reflectivos',
+    name: 'Reflectivos',
+    slug: 'reflectivos',
+    description: 'Chalecos, pulseras, llaveros y accesorios con cintas retroreflectantes.',
+    ideal: 'Construcción, minero, vial',
   },
   {
-    name: 'Mochilas y Maletines',
-    slug: 'mochilas-y-maletines-personalizados',
-    description: 'Portafolio ejecutivo y mochilas corporativas con tu logo bordado o grabado.',
-    emoji: '💼',
-    ideal: 'Directivos, clientes VIP, equipos de ventas',
+    id: 'automovil',
+    name: 'Automóvil',
+    slug: 'automovil',
+    description: 'Organizadores de maletero, cargadores portátiles y accesorios para el auto.',
+    ideal: 'Clientes con vehículo propio',
   },
   {
+    id: 'bar-y-vino',
+    name: 'Bar y Vino',
+    slug: 'bar-y-vino',
+    description: 'Descorchadores, sets de vino, hieleras y copas grabadas.',
+    ideal: 'Clientes VIP, ejecutivos',
+  },
+  {
+    id: 'bicicleta',
+    name: 'Bicicleta',
+    slug: 'bicicleta',
+    description: 'Luces LED, candados, bolsos de cuadro y porta-bidones.',
+    ideal: 'Estilo de vida activo y sostenible',
+  },
+  {
+    id: 'calculadoras',
+    name: 'Calculadoras',
+    slug: 'calculadoras',
+    description: 'Calculadoras de bolsillo, escritorio y científicas.',
+    ideal: 'Financiero, contable, educativo',
+  },
+  {
+    id: 'confeccion',
+    name: 'Confección',
+    slug: 'camisetas-y-confeccion-corporativa',
+    description: 'Camisetas, polos, chaquetas y uniformes con bordado o estampado.',
+    ideal: 'Uniformes, equipos, eventos',
+  },
+  {
+    id: 'deportes',
+    name: 'Deportes',
+    slug: 'deportes',
+    description: 'Botellas de agua, toallas, mochilas, balones y accesorios fitness.',
+    ideal: 'Patrocinios, bienestar corporativo',
+  },
+  {
+    id: 'econature',
+    name: 'EcoNature',
+    slug: 'econature',
+    description: 'Línea premium sostenible: bambú, corcho, algodón orgánico y bioplásticos.',
+    ideal: 'Sostenibilidad premium',
+  },
+  {
+    id: 'ecologia',
+    name: 'Ecología',
+    slug: 'ecologia',
+    description: 'Bolsas reutilizables, termos sin plástico y artículos biodegradables.',
+    ideal: 'Campañas ESG y RSE',
+  },
+  {
+    id: 'golf',
+    name: 'Golf',
+    slug: 'golf',
+    description: 'Bolas, tees, guantes, toallas y accesorios de cancha.',
+    ideal: 'Torneos ejecutivos, clientes VIP',
+  },
+  {
+    id: 'gorras',
     name: 'Gorras Personalizadas',
     slug: 'gorras-personalizadas',
     description: 'Alta visibilidad. Bordado computarizado desde 12 unidades.',
-    emoji: '🧢',
     ideal: 'Eventos masivos, campañas de campo',
   },
   {
+    id: 'herramientas',
+    name: 'Herramientas',
+    slug: 'herramientas',
+    description: 'Sets de destornilladores, llaves multiusos y cajas de herramientas.',
+    ideal: 'Construcción, industria',
+  },
+  {
+    id: 'hogar',
+    name: 'Hogar',
+    slug: 'hogar',
+    description: 'Sets de cocina, organizadores, marcos de foto y velas aromáticas.',
+    ideal: 'Regalos de fin de año',
+  },
+  {
+    id: 'iluminacion',
+    name: 'Iluminación',
+    slug: 'iluminacion',
+    description: 'Linternas recargables, lámparas LED y llaveros luminosos.',
+    ideal: 'Eventos nocturnos',
+  },
+  {
+    id: 'infantil',
+    name: 'Infantil',
+    slug: 'infantil',
+    description: 'Mochilas, loncheras, kits de colores y juegos didácticos.',
+    ideal: 'Campañas familiares',
+  },
+  {
+    id: 'juegos',
+    name: 'Juegos',
+    slug: 'juegos',
+    description: 'Juegos de mesa, naipes, cubos y kits de entretenimiento.',
+    ideal: 'Team buildings, activaciones',
+  },
+  {
+    id: 'llaveros',
     name: 'Llaveros Personalizados',
     slug: 'llaveros-personalizados',
     description: 'El artículo con mayor vida útil. Metal, cuero y PVC desde 50 unidades.',
-    emoji: '🔑',
-    ideal: 'Gran volumen, ferias, distribución masiva',
+    ideal: 'Gran volumen, distribución masiva',
   },
   {
-    name: 'Artículos Ecológicos',
-    slug: 'ecologia',
-    description: 'Bambú, papel reciclado y bioplásticos. Demuestra el compromiso ambiental de tu empresa.',
-    emoji: '🌿',
-    ideal: 'Empresas con política de sostenibilidad',
+    id: 'maletines',
+    name: 'Mochilas y Maletines',
+    slug: 'mochilas-y-maletines-personalizados',
+    description: 'Portafolio ejecutivo y mochilas corporativas con tu logo bordado o grabado.',
+    ideal: 'Directivos, clientes VIP',
+  },
+  {
+    id: 'master-line',
+    name: 'Master Line',
+    slug: 'master-line',
+    description: 'Línea premium: artículos de escritorio de alta gama y accesorios ejecutivos.',
+    ideal: 'Regalos ejecutivos premium',
+  },
+  {
+    id: 'medicos',
+    name: 'Médicos',
+    slug: 'medicos',
+    description: 'Lapiceros clínicos, libretas de prescripción y kits médicos.',
+    ideal: 'Visita médica, laboratorios',
+  },
+  {
+    id: 'memorias-usb',
+    name: 'Memorias USB',
+    slug: 'memorias-usb-personalizadas',
+    description: '8GB, 16GB y 32GB en formatos tarjeta, llave, clip y figuras.',
+    ideal: 'Capacitaciones, contenido digital',
+  },
+  {
+    id: 'mugs',
+    name: 'Mugs y Termos Personalizados',
+    slug: 'mugs-y-termos-personalizados',
+    description: 'El regalo de escritorio más usado. Cerámica, acero inoxidable y sublimación.',
+    ideal: 'Ferias, onboarding, fin de año',
+  },
+  {
+    id: 'novedades',
+    name: 'Novedades',
+    slug: 'novedades',
+    description: 'Gadgets, accesorios lifestyle y artículos sorprendentes.',
+    ideal: 'Últimas tendencias',
+  },
+  {
+    id: 'oficina',
+    name: 'Artículos de Oficina',
+    slug: 'articulos-de-oficina-personalizados',
+    description: 'Organizadores, agendas y sets de escritorio para el escritorio diario.',
+    ideal: 'Kits de bienvenida, convenciones',
+  },
+  {
+    id: 'paraguas',
+    name: 'Paraguas',
+    slug: 'paraguas',
+    description: 'Golf, compactos y tipo capota con armadura reforzada.',
+    ideal: 'Visibilidad en días de lluvia',
+  },
+  {
+    id: 'cuidado-personal',
+    name: 'Cuidado Personal',
+    slug: 'cuidado-personal',
+    description: 'Neceseres, kits de viaje, sets de manicura y amenities.',
+    ideal: 'Hoteles, clínicas, wellness',
+  },
+  {
+    id: 'produccion-nacional',
+    name: 'Producción Nacional',
+    slug: 'produccion-nacional',
+    description: 'Cuero repujado, cerámica artesanal, textiles locales y madera.',
+    ideal: 'Hecho en Ecuador',
+  },
+  {
+    id: 'relojes',
+    name: 'Relojes',
+    slug: 'relojes',
+    description: 'Relojes de pared, escritorio y despertadores personalizados.',
+    ideal: 'Impacto de marca diario',
+  },
+  {
+    id: 'tecnologia',
+    name: 'Tecnología Promocional',
+    slug: 'tecnologia-promocional',
+    description: 'Audífonos, power banks y gadgets personalizados.',
+    ideal: 'Reconocimientos, clientes VIP',
+  },
+  {
+    id: 'variedades',
+    name: 'Variedades',
+    slug: 'variedades',
+    description: 'Artículos mixtos de múltiples categorías para kits combinados.',
+    ideal: 'Kits combinados, públicos diversos',
   },
 ];
 
@@ -115,8 +298,8 @@ const itemListJsonLd = {
   name: 'Regalos Corporativos Personalizados Ecuador — KS Promocionales',
   description: 'Categorías de regalos corporativos personalizados disponibles en Ecuador',
   url: `${BASE_URL}/regalos-corporativos/`,
-  numberOfItems: GIFT_CATEGORIES.length,
-  itemListElement: GIFT_CATEGORIES.map((cat, idx) => ({
+  numberOfItems: ALL_CATEGORIES.length,
+  itemListElement: ALL_CATEGORIES.map((cat, idx) => ({
     '@type': 'ListItem',
     position: idx + 1,
     item: {
@@ -144,22 +327,11 @@ export default function RegalosPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
-      {/* Spacer for fixed header */}
-      <div className="h-[88px] md:h-[96px]" />
-
-      {/* Breadcrumb */}
-      <div className="bg-gray-50 border-b border-gray-200">
-        <div className="container mx-auto px-4 py-3">
-          <nav className="flex items-center gap-2 text-sm">
-            <Link href="/" className="text-gray-500 hover:text-primary transition-colors">Inicio</Link>
-            <span className="text-gray-400">›</span>
-            <span className="text-secondary font-medium">Regalos Corporativos</span>
-          </nav>
-        </div>
-      </div>
-
       {/* Hero */}
-      <section className="bg-primary py-16 md:py-24">
+      <section
+        className="relative bg-primary py-16 md:py-24 bg-cover bg-center"
+        style={{ backgroundImage: "linear-gradient(rgba(15, 33, 120, 0.85), rgba(15, 33, 120, 0.85)), url('/images/regalos-promocionales.png')" }}
+      >
         <div className="container mx-auto px-4 text-center">
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight">
             Regalos Corporativos Personalizados Ecuador
@@ -191,26 +363,37 @@ export default function RegalosPage() {
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="font-serif text-3xl md:text-4xl text-secondary text-center mb-4">
-            Los Regalos Corporativos Más Solicitados
+            Explora las 34 Categorías de Regalos Corporativos
           </h2>
           <p className="text-gray-500 text-center max-w-xl mx-auto mb-12">
             Selecciona la categoría que mejor se adapte a tu presupuesto, evento y público objetivo.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {GIFT_CATEGORIES.map((cat) => (
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-x-6 gap-y-12 md:gap-y-14 max-w-7xl mx-auto">
+            {ALL_CATEGORIES.map((cat) => (
               <Link
                 key={cat.slug}
                 href={`/categorias/${cat.slug}/`}
-                className="group block border border-gray-200 p-6 hover:border-primary hover:shadow-lg transition-all duration-200"
+                className="group flex flex-col items-center text-center"
               >
-                <span className="text-4xl mb-4 block">{cat.emoji}</span>
-                <h3 className="font-semibold text-secondary text-lg mb-2 group-hover:text-primary transition-colors">
+                <div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full overflow-hidden ring-4 ring-gray-100 shadow-sm mb-5 transition-all duration-300 ease-out group-hover:ring-accent/40 group-hover:shadow-xl group-hover:-translate-y-1.5">
+                  <Image
+                    src={`/images/categorias/${cat.id}.png`}
+                    alt={cat.name}
+                    fill
+                    loading="lazy"
+                    sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, 128px"
+                    className="object-cover"
+                  />
+                </div>
+                <h3 className="font-semibold text-secondary text-base md:text-lg mb-2 leading-snug group-hover:text-primary transition-colors">
                   {cat.name}
                 </h3>
-                <p className="text-gray-500 text-sm mb-4 leading-relaxed">{cat.description}</p>
-                <p className="text-xs text-gray-400 font-medium uppercase tracking-wide">
-                  Ideal para: {cat.ideal}
+                <p className="text-gray-500 text-sm leading-relaxed mb-3 max-w-[210px]">
+                  {cat.description}
                 </p>
+                <span className="inline-block text-[11px] font-semibold uppercase tracking-wide text-primary bg-primary/5 px-3 py-1.5 rounded-full">
+                  {cat.ideal}
+                </span>
               </Link>
             ))}
           </div>
