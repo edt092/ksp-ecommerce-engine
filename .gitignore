@@ -72,6 +72,7 @@ content/drafts/
 
 # Documentación local y planning docs (no relevantes para producción)
 *.md
+!README.md
 
 # Scripts de desarrollo / scraping (no necesarios en producción)
 scripts/*.py
