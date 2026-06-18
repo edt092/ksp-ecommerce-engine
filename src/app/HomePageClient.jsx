@@ -142,6 +142,25 @@ export default function HomePageClient({ latestProducts, featuredProducts, bests
     return () => clearInterval(id);
   }, []);
 
+  // Re-init reveal observer on every mount (fixes client-side navigation: elements
+  // re-rendered by React won't be watched by the one-time layout script observer)
+  useEffect(() => {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach((el) => {
+      if (!el.classList.contains('visible')) obs.observe(el);
+    });
+
+    return () => obs.disconnect();
+  }, []);
+
   const getCategory = (id) => categories.find(c => c.id === id);
 
   const productSets = {
