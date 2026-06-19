@@ -19,7 +19,8 @@ const path = require('path');
 const https = require('https');
 
 // ── Config ──────────────────────────────────────────────────────────────────
-const CONNECTION = 'postgresql://neondb_owner:REDACTED@ep-cool-thunder-at39o4zb-pooler.c-9.us-east-1.aws.neon.tech/neondb?sslmode=require';
+// CONNECTION is loaded from DATABASE_URL in .env (never hardcode credentials here)
+const CONNECTION = null; // resolved at runtime via readEnv()
 const HAIKU_MODEL = 'claude-haiku-4-5-20251001';
 const BATCH_SIZE = 5; // products per Claude API call
 
@@ -261,9 +262,15 @@ async function main() {
     process.exit(1);
   }
 
+  const connectionString = env['DATABASE_URL'];
+  if (!connectionString) {
+    console.error('❌ DATABASE_URL no encontrado en .env. Agrega la cadena de conexión de Neon.');
+    process.exit(1);
+  }
+
   // ── 1. Connect & extract from Neon ──
   console.log('🔌 Conectando a Neon DB...');
-  const client = new Client({ connectionString: CONNECTION });
+  const client = new Client({ connectionString });
   await client.connect();
   console.log('✅ Conectado\n');
 
