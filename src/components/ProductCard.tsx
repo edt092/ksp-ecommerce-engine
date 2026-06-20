@@ -13,7 +13,7 @@ const EyeIcon = () => (
   </svg>
 );
 
-export default function ProductCard({ product, category, onQuickView }) {
+export default function ProductCard({ product, category, onQuickView = null }) {
   const [imgError, setImgError] = useState(false);
 
   const waText = encodeURIComponent(

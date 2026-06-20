@@ -141,7 +141,7 @@ export default function BlogProductCarousel({ theme = 'navidenos', variant = 'fu
 
         <div className="mt-4 text-center">
           <Link
-            href="/categorias"
+            href="/regalos-corporativos/"
             className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary-dark transition-colors"
           >
             Ver todos los productos
@@ -268,7 +268,7 @@ export default function BlogProductCarousel({ theme = 'navidenos', variant = 'fu
         {/* Footer CTA */}
         <div className="px-6 py-4 bg-gradient-to-r from-red-700 to-green-700 text-center">
           <Link
-            href="/categorias"
+            href="/regalos-corporativos/"
             className="inline-flex items-center gap-2 text-white font-semibold hover:text-yellow-200 transition-colors"
           >
             <Gift className="w-4 h-4" />

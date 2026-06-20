@@ -40,7 +40,7 @@ export default function TableOfContents({ content }) {
         // Asignar el ID al encabezado
         heading.id = id;
         // Agregar scroll-margin para compensar el header fijo
-        heading.style.scrollMarginTop = '100px';
+        (heading as HTMLElement).style.scrollMarginTop = '100px';
       });
 
       setHeadings(headingData);

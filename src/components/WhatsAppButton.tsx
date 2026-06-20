@@ -23,7 +23,7 @@ export default function WhatsAppButton({
   // phoneNumber prop kept for backwards compat but ignored — single number now
   position = 'fixed',
   className = '',
-  children,
+  children = null,
   productName = null,
   categoryName = null,
   variant = 'default',

@@ -32,7 +32,7 @@ export default function sitemap() {
   // Solo incluir productos con is_ai_optimized: true para evitar thin content.
   // Los productos sin ese campo (generados por el scraper básico con plantillas)
   // se excluyen del sitemap hasta que pasen por el pipeline de enriquecimiento.
-  const productRoutes = productsData
+  const productRoutes = (productsData as any[])
     .filter((p) => p.is_ai_optimized === true)
     .map((p) => ({
       url: `${BASE_URL}/productos/${p.slug}/`,

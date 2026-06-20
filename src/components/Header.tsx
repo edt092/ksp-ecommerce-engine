@@ -56,21 +56,12 @@ const WAIcon = ({ size = 'sm' }) => (
   </svg>
 );
 
-const ChevronDown = () => (
-  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
-  </svg>
-);
 
 export default function Header() {
-  const [isScrolled,      setIsScrolled]      = useState(false);
-  const [isMobileOpen,    setIsMobileOpen]    = useState(false);
-  const [isCatOpen,       setIsCatOpen]       = useState(false);
-  const [isMobileCatOpen, setIsMobileCatOpen] = useState(false);
+  const [isScrolled,   setIsScrolled]   = useState(false);
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
   const pathname  = usePathname();
-  const catRef    = useRef(null);
-  const rafId     = useRef(null);
-  const catTimer  = useRef(null);
+  const rafId = useRef(null);
 
   useEffect(() => {
     const onScroll = () => {
@@ -82,10 +73,7 @@ export default function Header() {
     return () => { window.removeEventListener('scroll', onScroll); cancelAnimationFrame(rafId.current); };
   }, []);
 
-  useEffect(() => { setIsMobileOpen(false); setIsCatOpen(false); }, [pathname]);
-
-  const openCat  = () => { clearTimeout(catTimer.current); setIsCatOpen(true); };
-  const closeCat = () => { catTimer.current = setTimeout(() => setIsCatOpen(false), 140); };
+  useEffect(() => { setIsMobileOpen(false); }, [pathname]);
 
   return (
     <>
@@ -162,92 +150,7 @@ export default function Header() {
             </Link>
 
             {/* Desktop nav */}
-            <nav className="hidden lg:flex items-center gap-0.5" ref={catRef}>
-
-              {/* Categorías — with mega dropdown */}
-              <div className="relative" onMouseEnter={openCat} onMouseLeave={closeCat}>
-                <button
-                  className={`group flex items-center gap-1.5 px-4 py-2 text-sm font-semibold rounded-lg transition-colors duration-150 ${
-                    isCatOpen ? 'text-white' : 'text-white/70 hover:text-white'
-                  }`}
-                >
-                  <span className="relative pb-0.5">
-                    Categorías
-                    <span
-                      className={`absolute bottom-0 left-0 h-[2px] rounded-full bg-gradient-to-r from-[#F5A520] to-[#FFBA3D] transition-[width] duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${
-                        isCatOpen ? 'w-full' : 'w-0 group-hover:w-full'
-                      }`}
-                    />
-                  </span>
-                  <span className={`transition-transform duration-300 ${isCatOpen ? 'rotate-180' : ''}`}>
-                    <ChevronDown />
-                  </span>
-                </button>
-
-                {/* Mega menu */}
-                <div
-                  className="absolute top-full left-1/2 pt-3 z-50"
-                  style={{
-                    opacity: isCatOpen ? 1 : 0,
-                    pointerEvents: isCatOpen ? 'auto' : 'none',
-                    transform: `translateX(-50%) translateY(${isCatOpen ? '0px' : '-10px'})`,
-                    transition: 'opacity 0.25s ease, transform 0.25s ease',
-                    minWidth: '720px',
-                  }}
-                >
-                  <div className="mega-menu-panel rounded-2xl overflow-hidden">
-                    <div className="p-6">
-                      <div className="grid grid-cols-3 gap-6">
-                        {categoryGroups.map((group) => (
-                          <div key={group.label}>
-                            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#F5A520]/55 mb-3">
-                              {group.label}
-                            </p>
-                            <ul className="space-y-0.5">
-                              {group.items.map((item) => (
-                                <li key={item.slug + item.name}>
-                                  <Link
-                                    href={`/categorias/${item.slug}/`}
-                                    className="mega-item flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm text-white/65 hover:text-white transition-all duration-150 group/item"
-                                  >
-                                    <span className="text-base leading-none w-5 text-center shrink-0">{item.icon}</span>
-                                    <span className="flex-1 group-hover/item:translate-x-0.5 transition-transform duration-150">
-                                      {item.name}
-                                    </span>
-                                    <span className="text-[#F5A520] opacity-0 group-hover/item:opacity-100 transition-opacity duration-150 text-xs">
-                                      →
-                                    </span>
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        ))}
-                      </div>
-
-                      {/* Bottom bar */}
-                      <div className="mt-5 pt-4 border-t border-white/6 flex items-center justify-between">
-                        <p className="text-white/30 text-xs">
-                          <span className="text-[#F5A520]/80 font-semibold">+3,500</span>
-                          {' '}productos personalizables con tu logo
-                        </p>
-                        <Link
-                          href="/regalos-corporativos/"
-                          className="group/all flex items-center gap-1.5 text-[#F5A520] text-sm font-semibold hover:text-[#FFBA3D] transition-colors duration-200"
-                        >
-                          Ver todas las categorías
-                          <svg
-                            className="w-3.5 h-3.5 transition-transform duration-200 group-hover/all:translate-x-1"
-                            fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                          >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                          </svg>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <nav className="hidden lg:flex items-center gap-0.5">
 
               {/* Regular nav links */}
               {navLinks.map((item) => {
@@ -353,49 +256,7 @@ export default function Header() {
 
           {/* Nav */}
           <nav className="flex-1 overflow-y-auto p-4 space-y-0.5">
-            {/* Categorías accordion */}
-            <button
-              onClick={() => setIsMobileCatOpen(v => !v)}
-              className={`flex items-center justify-between w-full px-4 py-3 text-sm font-semibold rounded-xl transition-all duration-200 ${
-                isMobileCatOpen
-                  ? 'text-white bg-white/8 border border-white/8'
-                  : 'text-white/75 hover:text-white hover:bg-white/5 border border-transparent'
-              }`}
-            >
-              Categorías
-              <span className={`transition-transform duration-300 ${isMobileCatOpen ? 'rotate-180' : ''}`}>
-                <ChevronDown />
-              </span>
-            </button>
-
-            {/* Accordion body — smooth max-height transition */}
-            <div
-              className="overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]"
-              style={{ maxHeight: isMobileCatOpen ? '480px' : '0', opacity: isMobileCatOpen ? 1 : 0 }}
-            >
-              <div className="ml-4 pl-3.5 py-1.5 space-y-0.5 border-l border-[#F5A520]/25">
-                {categoryGroups.flatMap(g => g.items).map((item) => (
-                  <Link
-                    key={item.slug + item.name}
-                    href={`/categorias/${item.slug}/`}
-                    className="flex items-center gap-2.5 px-3 py-2.5 text-sm text-white/55 hover:text-white hover:bg-white/6 rounded-lg transition-all duration-150 group"
-                    onClick={() => setIsMobileOpen(false)}
-                  >
-                    <span className="w-5 text-center shrink-0">{item.icon}</span>
-                    <span className="group-hover:translate-x-0.5 transition-transform duration-150">{item.name}</span>
-                  </Link>
-                ))}
-                <Link
-                  href="/regalos-corporativos/"
-                  className="flex items-center gap-2 px-3 py-2.5 text-sm text-[#F5A520] font-semibold hover:text-[#FFBA3D] transition-colors duration-150"
-                  onClick={() => setIsMobileOpen(false)}
-                >
-                  Ver todas las categorías →
-                </Link>
-              </div>
-            </div>
-
-            <div className="pt-2 mt-1 border-t border-white/6 space-y-0.5">
+            <div className="space-y-0.5">
               {navLinks.map((item) => {
                 const isActive = pathname === item.href;
                 return (

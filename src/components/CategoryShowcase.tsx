@@ -84,7 +84,7 @@ export default function CategoryShowcase({ categories }) {
         </p>
 
         <a
-          href="/productos"
+          href="/regalos-corporativos/"
           className="inline-block mt-6 px-7 py-3 bg-[#F5A520] text-white font-bold text-sm rounded-full hover:bg-[#e09618] transition-colors"
         >
           Ver Productos
