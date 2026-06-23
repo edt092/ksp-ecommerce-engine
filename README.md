@@ -10,7 +10,7 @@ Storefront and data pipeline for a promotional products company in Ecuador. The 
 
 There are three moving parts: the Next.js storefront, the data pipeline, and the deploy.
 
-**Storefront** — Next.js 14 with `output: 'export'`. At build time it generates static HTML for every product, category, blog post, and landing page, then pushes the result to Netlify's CDN. No server in production. The product catalog (`data/products.json`, `data/categories.json`) is committed to the repo, so Netlify doesn't need a database connection at build time.
+**Storefront** — Next.js 14 with `output: 'export'`, written in TypeScript. At build time it generates static HTML for every product, category, blog post, and landing page, then pushes the result to Netlify's CDN. No server in production. The product catalog (`data/products.json`, `data/categories.json`) is committed to the repo, so Netlify doesn't need a database connection at build time.
 
 **Data pipeline** — Products come from a supplier catalog at `catalogospromocionales.com`. The pipeline has two layers:
 
@@ -20,7 +20,7 @@ There are three moving parts: the Next.js storefront, the data pipeline, and the
 
 There's a `.github/workflows/daily-scraper.yml` that was set up to run a daily Python scraper on a cron. It references `scripts/daily-scraper.py`, which doesn't exist in the repo right now — the workflow runs but would fail on the scrape step. The daily commit messages you see in the log (`chore(data): daily scraper update [skip ci]`) came from an earlier period when that script was in place.
 
-**Deploy** — `npm run build` runs three things in sequence: `split-products-by-category.js` (prebuild), `next build`, and `next-sitemap` (postbuild). Netlify is configured in `netlify.toml` with security headers (HSTS, CSP, X-Frame-Options) and 301 redirect rules for old slugs. The `out/` directory is the publish target.
+**Deploy** — `pnpm build` runs three things in sequence: `split-products-by-category.js` (prebuild), `next build`, and `next-sitemap` (postbuild). Netlify is configured in `netlify.toml` with security headers (HSTS, CSP, X-Frame-Options) and 301 redirect rules for old slugs. The `out/` directory is the publish target.
 
 ---
 
@@ -40,15 +40,17 @@ There's a `.github/workflows/daily-scraper.yml` that was set up to run a daily P
 
 **es-CO hreflang on all pages.** The site is Ecuador-only, but hreflang tags also declare `es-CO`. This is a leftover from an earlier version of the project that included Colombia. It hasn't caused indexing problems, but it's technically incorrect and would be cleaned up in a future pass.
 
+**TypeScript throughout.** The storefront (`src/`) is fully TypeScript. Scripts in `scripts/` remain plain JavaScript since they run in Node.js without a build step.
+
 ---
 
 ## Running locally
 
-Requirements: Node.js 18+.
+Requirements: Node.js 18+, pnpm.
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 The dev server reads directly from `data/products.json` and `data/categories.json`. No database connection needed for development.
@@ -56,7 +58,7 @@ The dev server reads directly from `data/products.json` and `data/categories.jso
 To run a production build locally:
 
 ```bash
-npm run build
+pnpm build
 # out/ contains the full static site
 ```
 
@@ -76,11 +78,24 @@ node scripts/sync-from-neon.js --skip-ai
 node scripts/sync-from-neon.js --limit=20
 ```
 
-Requires a `.env` file with:
+Requires a `.env` file with the following variables (see `.env.example`):
 
 ```
-ANTHROPIC_API_KEY=your_key
-# DATABASE_URL is hardcoded in sync-from-neon.js for now
+# Neon (serverless Postgres) connection string — required for sync-from-neon.js
+DATABASE_URL=postgres://...
+
+# Anthropic API — required for AI enrichment in sync-from-neon.js
+ANTHROPIC_API_KEY=sk-ant-...
+
+# Google Analytics 4 — optional, used by the storefront
+NEXT_PUBLIC_GA_ID=G-...
+
+# WhatsApp Business number (country code + number, no + or spaces)
+NEXT_PUBLIC_WHATSAPP_NUMBER=593...
+
+# Production site URL and name
+NEXT_PUBLIC_SITE_URL=https://kronosolopromocionales.com
+NEXT_PUBLIC_SITE_NAME=KS Promocionales
 ```
 
 After a sync, commit `data/products.json` to trigger a Netlify redeploy.
@@ -107,26 +122,60 @@ After a sync, commit `data/products.json` to trigger a Netlify redeploy.
 src/app/                          # Next.js App Router pages
   productos/[slug]/               # Product detail — 2,096 static pages
   categorias/[slug]/              # Category pages — 34 categories
-  blog/[slug]/                    # Blog posts
-  regalos-corporativos/           # Hub landing pages (several)
+  blog/[slug]/                    # Blog post detail
+  blog/                           # Blog index
+  regalos-corporativos/           # Hub landing page
   productos-promocionales-ecuador/[ciudad]/  # Geo pages by city
-  sitemap.js                      # Dynamic sitemap source
+  productos-promocionales-ecuador/ # Geo index page
+  articulos-promocionales/        # Landing page
+  audifonos-promocionales/        # Landing page
+  parlantes-bluetooth/            # Landing page
+  soportes-para-celular/          # Landing page
+  material-publicitario/          # Landing page
+  merchandising-corporativo/      # Landing page
+  catalogos-digitales/            # Digital catalog viewer
+  nosotros/                       # About page
+  contacto/                       # Contact page
+  politica-de-privacidad/         # Privacy policy
+  HomePageClient.tsx              # Client component for homepage
+  not-found.tsx                   # 404 page
+  sitemap.ts                      # Dynamic sitemap source
+
+src/components/                   # Shared React components
+  Header.tsx / Footer.tsx
+  ProductCard.tsx / ProductTabs.tsx / ProductImageGallery.tsx / ProductActions.tsx
+  CategoryGrid.tsx / CategoryProductsGrid.tsx / CategoryShowcase.tsx / CategorySidebar.tsx
+  StorytellingHero.tsx / PromoCarousel.tsx / BlogProductCarousel.tsx
+  QuickViewModal.tsx / BenefitsBar.tsx / WhatsAppButton.tsx
+  CookieConsent.tsx / TableOfContents.tsx
+
+src/lib/
+  whatsapp.ts                     # WhatsApp URL builder
+
+src/types/                        # TypeScript declarations
 
 data/
   products.json                   # Full catalog — committed to repo
   categories.json                 # Category definitions
   category-products/              # Split files generated at build (gitignored)
-  blog/                           # Blog posts and content
+  blog/posts.json                 # Blog post content
 
 scripts/
   sync-from-neon.js               # DB → products.json sync with AI enrichment
   split-products-by-category.js   # Prebuild: splits catalog by category
   dedupe-products.js              # Deduplication utility
+  fix-broken-product-images.js    # Image URL repair utility
+  verify-product-images.js        # Image URL verification
+  purge-colombia-products.js      # One-time Colombia product removal
+  generate-blog-fase3.js          # Blog post generation helper
+  fix-blog-links.js               # Blog internal link repair
 
 .github/workflows/
   daily-scraper.yml               # Broken — see limitations above
 
 netlify.toml                      # Build config, security headers, 301 redirects
+netlify-image-loader.js           # Custom Next.js image loader for Netlify
 next.config.js                    # output: export, custom image loader
 next-sitemap.config.js            # Sitemap generation rules
+tsconfig.json                     # TypeScript configuration
 ```
