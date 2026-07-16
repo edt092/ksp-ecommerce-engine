@@ -26,7 +26,6 @@ export async function generateMetadata({ params }) {
       canonical: `https://www.kronosolopromocionales.com/categorias/${params.slug}/`,
       languages: {
         'es-EC': `https://www.kronosolopromocionales.com/categorias/${params.slug}/`,
-        'es-CO': `https://www.kronosolopromocionales.com/categorias/${params.slug}/`,
         'x-default': `https://www.kronosolopromocionales.com/categorias/${params.slug}/`,
       },
     },

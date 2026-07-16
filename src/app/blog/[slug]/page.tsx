@@ -5,6 +5,7 @@ import postsData from '@/data/blog/posts.json';
 import { blogContent } from '@/data/blog/content';
 import { blogAdditions } from '@/data/blog/content/additions';
 import { blogFase3 } from '@/data/blog/content/fase3';
+import { blogContentPipeline } from '@/data/blog/content/pipeline';
 import TableOfContents from '@/components/TableOfContents';
 
 export async function generateStaticParams() {
@@ -51,7 +52,6 @@ export async function generateMetadata({ params }) {
       canonical: `https://www.kronosolopromocionales.com/blog/${params.slug}/`,
       languages: {
         'es-EC': `https://www.kronosolopromocionales.com/blog/${params.slug}/`,
-        'es-CO': `https://www.kronosolopromocionales.com/blog/${params.slug}/`,
         'x-default': `https://www.kronosolopromocionales.com/blog/${params.slug}/`,
       },
     },
@@ -74,7 +74,7 @@ export default function BlogPostPage({ params }) {
     );
   }
 
-  const content = (blogContent[post.slug] || '') + (blogAdditions[post.slug] || '') + (blogFase3[post.slug] || '');
+  const content = (blogContent[post.slug] || '') + (blogAdditions[post.slug] || '') + (blogFase3[post.slug] || '') + (blogContentPipeline[post.slug] || '');
   const wordCount = content.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().split(' ').filter(Boolean).length;
   const relatedPosts = postsData
     .filter(p => p.category === post.category && p.id !== post.id)

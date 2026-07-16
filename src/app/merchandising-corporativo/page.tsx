@@ -11,7 +11,6 @@ export const metadata = {
     canonical: `${BASE_URL}/merchandising-corporativo/`,
     languages: {
       'es-EC': `${BASE_URL}/merchandising-corporativo/`,
-      'es-CO': `${BASE_URL}/merchandising-corporativo/`,
       'x-default': `${BASE_URL}/merchandising-corporativo/`,
     },
   },

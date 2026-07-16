@@ -11,7 +11,6 @@ export const metadata = {
     canonical: `${BASE_URL}/material-publicitario/`,
     languages: {
       'es-EC': `${BASE_URL}/material-publicitario/`,
-      'es-CO': `${BASE_URL}/material-publicitario/`,
       'x-default': `${BASE_URL}/material-publicitario/`,
     },
   },

@@ -11,7 +11,6 @@ export const metadata = {
     canonical: `${BASE_URL}/soportes-para-celular/`,
     languages: {
       'es-EC': `${BASE_URL}/soportes-para-celular/`,
-      'es-CO': `${BASE_URL}/soportes-para-celular/`,
       'x-default': `${BASE_URL}/soportes-para-celular/`,
     },
   },

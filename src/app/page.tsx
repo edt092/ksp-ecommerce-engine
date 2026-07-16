@@ -9,7 +9,6 @@ export const metadata = {
     canonical: 'https://www.kronosolopromocionales.com/',
     languages: {
       'es-EC': 'https://www.kronosolopromocionales.com/',
-      'es-CO': 'https://www.kronosolopromocionales.com/',
       'x-default': 'https://www.kronosolopromocionales.com/',
     },
   },

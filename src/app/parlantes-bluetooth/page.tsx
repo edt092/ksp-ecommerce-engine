@@ -11,7 +11,6 @@ export const metadata = {
     canonical: `${BASE_URL}/parlantes-bluetooth/`,
     languages: {
       'es-EC': `${BASE_URL}/parlantes-bluetooth/`,
-      'es-CO': `${BASE_URL}/parlantes-bluetooth/`,
       'x-default': `${BASE_URL}/parlantes-bluetooth/`,
     },
   },

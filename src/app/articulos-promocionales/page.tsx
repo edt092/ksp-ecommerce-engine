@@ -11,7 +11,6 @@ export const metadata = {
     canonical: `${BASE_URL}/articulos-promocionales/`,
     languages: {
       'es-EC': `${BASE_URL}/articulos-promocionales/`,
-      'es-CO': `${BASE_URL}/articulos-promocionales/`,
       'x-default': `${BASE_URL}/articulos-promocionales/`,
     },
   },

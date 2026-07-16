@@ -12,7 +12,6 @@ export const metadata = {
     canonical: `${BASE_URL}/regalos-corporativos/`,
     languages: {
       'es-EC': `${BASE_URL}/regalos-corporativos/`,
-      'es-CO': `${BASE_URL}/regalos-corporativos/`,
       'x-default': `${BASE_URL}/regalos-corporativos/`,
     },
   },

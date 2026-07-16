@@ -38,7 +38,7 @@ There's a `.github/workflows/daily-scraper.yml` that was set up to run a daily P
 
 **Neon for the product database.** Neon's free tier covers this workload. The main reason to use a database at all (versus just editing JSON) is that it decouples the scraper from the storefront — you can run syncs, enrichment passes, and deduplication without touching the repo each time, then commit the final state when it's ready.
 
-**es-CO hreflang on all pages.** The site is Ecuador-only, but hreflang tags also declare `es-CO`. This is a leftover from an earlier version of the project that included Colombia. It hasn't caused indexing problems, but it's technically incorrect and would be cleaned up in a future pass.
+**Ecuador-only, no Colombia signals.** The site used to also target Colombia; that market was dropped. The `es-CO` hreflang alternate (a leftover from that earlier version) has been removed from all page templates, and `data/products.json` had ~1,500 products with Colombian city names or "Colombia" text embedded in `story`/`keywords`/`seoTitle` fields from an AI-enrichment batch that wasn't scoped correctly — cleaned up via `scripts/clean-colombia.js` (kept for reference; not part of the build).
 
 **TypeScript throughout.** The storefront (`src/`) is fully TypeScript. Scripts in `scripts/` remain plain JavaScript since they run in Node.js without a build step.
 

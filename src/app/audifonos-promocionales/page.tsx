@@ -11,7 +11,6 @@ export const metadata = {
     canonical: `${BASE_URL}/audifonos-promocionales/`,
     languages: {
       'es-EC': `${BASE_URL}/audifonos-promocionales/`,
-      'es-CO': `${BASE_URL}/audifonos-promocionales/`,
       'x-default': `${BASE_URL}/audifonos-promocionales/`,
     },
   },
