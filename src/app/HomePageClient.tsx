@@ -647,6 +647,29 @@ export default function HomePageClient({ latestProducts, featuredProducts, bests
       </section>
 
       {/* ═══════════════════════════════════════════════
+          EXPLORE HUBS — enlazado interno contextual
+          ═══════════════════════════════════════════════ */}
+      <section className="py-10 bg-white">
+        <div className="container mx-auto px-4">
+          <p className="reveal text-center text-sm text-gray-500 max-w-2xl mx-auto leading-relaxed">
+            Descubre más sobre nuestra oferta:{' '}
+            <Link href="/articulos-promocionales/" className="text-[#0F2178] font-semibold hover:underline">
+              artículos promocionales
+            </Link>
+            ,{' '}
+            <Link href="/merchandising-corporativo/" className="text-[#0F2178] font-semibold hover:underline">
+              merchandising corporativo
+            </Link>{' '}
+            y cobertura de{' '}
+            <Link href="/productos-promocionales-ecuador/" className="text-[#0F2178] font-semibold hover:underline">
+              envíos en todo Ecuador
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════
           CATALOG FEATURE
           ═══════════════════════════════════════════════ */}
       <section className="py-20 md:py-28 bg-white">

@@ -34,8 +34,9 @@ const geoLinks = [
   { name: 'Ecuador',     href: '/productos-promocionales-ecuador' },
   { name: 'Quito',       href: '/productos-promocionales-ecuador/quito' },
   { name: 'Guayaquil',   href: '/productos-promocionales-ecuador/guayaquil' },
-  { name: 'Cuenca',      href: '/productos-promocionales-ecuador' },
-  { name: 'Ambato',      href: '/productos-promocionales-ecuador' },
+  { name: 'Cuenca',      href: '/productos-promocionales-ecuador/cuenca' },
+  { name: 'Ambato',      href: '/productos-promocionales-ecuador/ambato' },
+  { name: 'Manta',       href: '/productos-promocionales-ecuador/manta' },
   { name: 'Machala',     href: '/productos-promocionales-ecuador' },
 ];
 

@@ -61,7 +61,7 @@ export const ecuador = {
       nombre: 'Manta',
       pais: 'ecuador',
       seoTitle: 'Productos Promocionales Manta | Merchandising Manabí KS',
-      seoDescription: 'Productos promocionales en Manta y Manabí. Artículos publicitarios para empresas pesqueras, turísticas e industriales con envíos a toda la provincia.',
+      seoDescription: 'Productos promocionales en Manta y Manabí. Artículos publicitarios personalizados para empresas pesqueras, turísticas e industriales. Cotiza por WhatsApp con envíos a toda la provincia.',
       h1: 'Productos Promocionales en Manta',
       intro: 'Manta, puerto principal del Ecuador y capital de Manabí, cuenta con nuestra línea especializada de artículos promocionales. Servimos al sector pesquero, turístico, industrial y comercial de toda la provincia.',
       caracteristicas: [
