@@ -117,16 +117,44 @@ individualmente contra `data/blog/posts.json` y los 4 archivos de contenido
 exacto como registro en `posts.json` y como clave en los archivos de contenido; si no aparece,
 buscar coincidencias parciales por tema (fuzzy match) antes de concluir que no hay equivalente.
 
-| Redirect (origen) | Destino declarado | Estado | Evidencia | Recomendación | Decisión pendiente |
+| Redirect (origen) | Destino declarado | Estado | Evidencia | Recomendación | Decisión |
 | --- | --- | --- | --- | --- | --- |
-| `/blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-mexico` (+ variante `-en-ecuador-y-colombia`) | `/blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-ecuador` | **Válido** | El slug destino existe en `posts.json` y tiene contenido real en `additions.js:1098` e `index.js:2692`. | **A — mantener el redirect tal cual**, ya apunta al equivalente exacto. | Ninguna — no requiere acción. |
-| `/blog/plumas-ecologicas-baltimore-impulsa-tu-marca-con-conciencia-ambiental-en-mexico` (con y sin trailing slash) | `/blog/plumas-ecologicas-baltimore-impulsa-tu-marca-con-conciencia-ambiental-en-ecuador` | **Roto** | El slug destino NO existe en `posts.json` ni como clave en `index.js`, `additions.js`, `fase3.js` ni `pipeline.js`. Búsqueda difusa por tema ("pluma", "ecologic") solo encuentra artículos genéricos de sostenibilidad sin relación clara con un producto "Baltimore". Sin impresiones en `Páginas.csv` de GSC (no aparece en el export). | **C — mantener documentado, decisión humana.** No hay un candidato semánticamente equivalente inequívoco entre los 3 artículos genéricos de sostenibilidad encontrados — elegir uno sería adivinar. Alternativa si el negocio confirma que el post nunca existirá: **D — retirar el redirect y permitir 404/410** (bajo riesgo dado que no hay señal de GSC ni backlink conocido, aunque no se puede descartar un backlink externo no visible en estos datos). | **Sí — requiere que el negocio confirme si el post "plumas ecológicas Baltimore" existió alguna vez y con qué slug, o si se autoriza retirar el redirect.** |
-| `/blog/mug-metalico-vinga-eco-mu-442-impulsa-tu-marca-con-conciencia-ambiental-en-mexico` (con y sin trailing slash) | `/blog/mug-metalico-vinga-eco-mu-442-impulsa-tu-marca-con-conciencia-ambiental-en-ecuador` | **Roto** | Misma situación que el anterior: destino no existe en ningún archivo de contenido ni en `posts.json`. Sin impresiones en `Páginas.csv`. | **C — mantener documentado, decisión humana** (mismo razonamiento). Alternativa: **D** si se confirma que no hay backlinks externos ni valor SEO. | **Sí — requiere la misma confirmación del negocio.** |
+| `/blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-mexico` (+ variante `-en-ecuador-y-colombia`) | `/blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-ecuador` | **Válido** | El slug destino existe en `posts.json` y tiene contenido real en `additions.js:1098` e `index.js:2692`. | **A — mantener el redirect tal cual**, ya apunta al equivalente exacto. | Conservado sin cambios — su destino es válido. |
+| `/blog/plumas-ecologicas-baltimore-impulsa-tu-marca-con-conciencia-ambiental-en-mexico` (con y sin trailing slash) | `/blog/plumas-ecologicas-baltimore-impulsa-tu-marca-con-conciencia-ambiental-en-ecuador` | **Roto** | El slug destino NO existe en `posts.json` ni como clave en `index.js`, `additions.js`, `fase3.js` ni `pipeline.js`. Búsqueda difusa por tema ("pluma", "ecologic") solo encuentra artículos genéricos de sostenibilidad sin relación clara con un producto "Baltimore". Sin impresiones en `Páginas.csv` de GSC (no aparece en el export). | **D — retirado.** | **Regla eliminada el 2026-07-19** (ver sección 5.1.1). |
+| `/blog/mug-metalico-vinga-eco-mu-442-impulsa-tu-marca-con-conciencia-ambiental-en-mexico` (con y sin trailing slash) | `/blog/mug-metalico-vinga-eco-mu-442-impulsa-tu-marca-con-conciencia-ambiental-en-ecuador` | **Roto** | Misma situación que el anterior: destino no existe en ningún archivo de contenido ni en `posts.json`. Sin impresiones en `Páginas.csv`. | **D — retirado.** | **Regla eliminada el 2026-07-19** (ver sección 5.1.1). |
 
-**No se redirigió ninguno de los 2 casos rotos a home, a `/blog/` ni a una categoría genérica** —
-el brief de esta sesión lo prohíbe explícitamente, y no hay evidencia suficiente para elegir un
-destino semántico específico sin adivinar. **No se modificó ni eliminó ningún redirect existente
-en esta sesión.**
+### 5.1.1 Decisión adoptada (2026-07-19)
+
+**Decisión:** retirar las reglas de redirect rotas de `plumas-ecologicas-baltimore` y
+`mug-metalico-vinga` (4 bloques en `netlify.toml`, 4 líneas en `public/_redirects` — con y sin
+trailing slash cada uno).
+
+**Fecha:** 2026-07-19.
+
+**Motivo:** los destinos no existen en `posts.json` ni en ningún archivo de contenido de blog;
+las URLs de origen no aparecen en el export disponible de GSC (sin clics ni impresiones
+registradas); no existe un equivalente semántico inequívoco al que redirigir. Mantener un 301
+hacia un destino que en la práctica es un 404 añade un salto de red innecesario sin beneficio de
+SEO. **No se creó ni inventó contenido** para llenar el vacío, y no se redirigió a home, a
+`/blog/` ni a un artículo genérico.
+
+**Comportamiento esperado:** las 4 URLs de origen ahora responden 404 directamente (regla
+catch-all `/* → /404.html` ya existente en `netlify.toml`), en vez de un 301 hacia otro 404.
+
+**El redirect de `promocionales-antimicrobianos` se conservó sin cambios** — su destino
+(`/blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-ecuador`) es
+un post real y existente.
+
+**Nota para referencia futura (no accionada en esta decisión):** el catálogo sí tiene productos
+con nombres parecidos — `mug-metalico-vinga-eco-350-ml-13313` y
+`set-de-boligrafos-baltimore-vinga-eco-13400` — pero son fichas de **producto**, no los artículos
+de **blog** a los que apuntaban estas reglas (slugs y tipo de contenido distintos). No se redirigió
+a ellos porque esa habría sido una decisión distinta (equivalente semántico de producto, no de
+blog) no autorizada en este cambio.
+
+**Actualización 2026-07-19:** las 2 reglas rotas se retiraron (ver sección 5.1.1) — no se
+redirigieron a home, a `/blog/` ni a una categoría genérica, y no se inventó un destino. La regla
+de `promocionales-antimicrobianos` (destino válido) no se tocó.
 
 ## 5.2 Corrección del generador de razones de `reports/redirect-map.csv` (revisión post-commit)
 
@@ -172,11 +200,10 @@ conservaron sin cambios en las 8 filas afectadas.
 - **Verificación en producción (`production_verified`)**: ningún redirect fue probado con una petición HTTP real. Ejecutar manualmente `curl -I https://www.kronosolopromocionales.com/<ruta>` para cada regla crítica tras el próximo deploy.
 - **Dominio primario en Netlify**: esta sesión no operó Netlify (prohibido explícitamente). Falta confirmar en el dashboard que `www.kronosolopromocionales.com` es el dominio primario.
 - **Core Web Vitals de campo**: requieren Search Console/CrUX/PageSpeed Insights con acceso de red — no disponibles en este entorno. Ver `docs/core-web-vitals-field-checklist.md`.
-- **Destino real de los 2 redirects rotos** listados arriba.
 
 ## 7. Riesgos
 
-- Los 2 redirects rotos de blog (sección 6) siguen enviando a cualquier visitante o bot que llegue por esa URL antigua a una página 404 en vez de a contenido real.
+- Los 2 redirects rotos de blog (`plumas-ecologicas-baltimore`, `mug-metalico-vinga`) se retiraron el 2026-07-19 (ver sección 5.1.1) — cualquier visitante o bot que llegue por esas URLs antiguas ahora recibe un 404 directo en vez de un 301 hacia otro 404. Riesgo residual mínimo: si existiera algún backlink externo desconocido hacia esas URLs, dejaría de recibir cualquier redirect (antes tampoco llegaba a contenido real, así que el cambio no empeora la experiencia del usuario final).
 - **`data/blog/content/pipeline.js` está sin trackear en git y SÍ es requerido para el build**: `src/app/blog/[slug]/page.tsx` lo importa de forma estática (`import { blogContentPipeline } from '@/data/blog/content/pipeline'`) y lo usa en la concatenación de contenido de cada post. Un import de ES module que no resuelve rompe el build de Next.js — no es un fallback silencioso. **Corrección de esta sesión (seo-6): se decidió Opción A — versionar el archivo tal cual está** (un registro vacío `export const blogContentPipeline = {}`, con los comentarios que documentan que solo `pipeline/publish/blog_adapter.py` debe escribir ahí). No se eliminó el import (Opción B) porque el propio archivo documenta que un pipeline externo espera escribir/ampliarlo — quitar el import rompería ese contrato.
 - **Corrección de clasificación (seo-6):** en la sesión anterior se afirmó incorrectamente que `public/images/blog/_placeholder-ksp.jpg` (sin trackear) era el fallback de imagen de 11 productos. Verificado con evidencia: los 11 productos en `data/products.json` referencian `/images/products/_placeholder-ksp.jpg` (nótese `products`, no `blog`), que **ya está versionado** (`git ls-files` lo confirma) — esos 11 productos no corren ningún riesgo. El archivo `public/images/blog/_placeholder-ksp.jpg` es un archivo distinto, sin ninguna referencia en `src/` ni `data/` (verificado con búsqueda exhaustiva) — procedencia desconocida, no relacionado con ningún producto ni con esta tarea SEO. No se debe incluir en ningún commit SEO ni eliminar sin autorización.
 - Los redirects de dominio (`netlify.toml`) son una garantía a nivel de repo, pero si el dashboard de Netlify tiene una configuración de dominio contradictoria, el comportamiento real en producción puede diferir de lo que este repo declara.
