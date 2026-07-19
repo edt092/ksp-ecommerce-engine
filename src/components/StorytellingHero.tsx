@@ -14,7 +14,6 @@ export default function StorytellingHero() {
     <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-primary via-primary to-primary-dark">
       {/* Background Pattern */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-5"></div>
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-accent/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3"></div>
       </div>
