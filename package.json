@@ -7,7 +7,11 @@
     "prebuild": "node scripts/validate-unique-slugs.js && node scripts/split-products-by-category.js",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "seo:analyze": "node scripts/analyze-gsc.mjs",
+    "seo:redirects": "node scripts/build-redirect-map.mjs",
+    "seo:links": "node scripts/find-broken-internal-links.mjs",
+    "seo:test": "node scripts/run-seo-tests.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.553.0",
