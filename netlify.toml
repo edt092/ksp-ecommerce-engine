@@ -29,6 +29,30 @@
     "https://.*\\.catalogospromocionales\\.com/.*",
   ]
 
+# ─── 301 Redirects: canonicalización de dominio (apex/http → https+www) ────────
+# GSC reporta clics fragmentados entre https://www, https:// (sin www) y http://
+# (sin www). Estas reglas garantizan un único destino canónico independientemente
+# de la configuración del dashboard de Netlify. Deben ir ANTES que cualquier otra
+# regla de redirect para tener prioridad.
+
+[[redirects]]
+  from   = "http://kronosolopromocionales.com/*"
+  to     = "https://www.kronosolopromocionales.com/:splat"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "http://www.kronosolopromocionales.com/*"
+  to     = "https://www.kronosolopromocionales.com/:splat"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "https://kronosolopromocionales.com/*"
+  to     = "https://www.kronosolopromocionales.com/:splat"
+  status = 301
+  force  = true
+
 # ─── 301 Redirects: limpieza de URLs con señal de México ───────────────────────
 
 [[redirects]]
