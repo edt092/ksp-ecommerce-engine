@@ -195,6 +195,34 @@ muestran `"301 Redirects: limpieza de URLs con señal de México"` (el encabezad
 de esa sección). `config_verified=true`, `production_verified=false` y `TARGET_NO_ENCONTRADO` se
 conservaron sin cambios en las 8 filas afectadas.
 
+## 5.3 Auditoría de 404 reportados por GSC Coverage Validation (2026-07-19)
+
+Origen: `C:\Users\Dagon\Desktop\KSP-SEO\404_error\` (`Tabla.csv`, `Metadatos.csv` — incidencia
+"No se ha encontrado (404)", sitemap "Todas las páginas conocidas"). 7 URLs reportadas,
+auditadas una por una contra `data/products.json` y `public/_redirects`/`netlify.toml` vigentes:
+
+| URL reportada | Último rastreo GSC | Estado GSC | Diagnóstico | Acción |
+| --- | --- | --- | --- | --- |
+| `/productos/pano-en-microfibra/` | 2026-05-17 | Pendiente | Slug real sin sufijo de ID — el producto existe como `pano-en-microfibra-3192` (`is_ai_optimized: true`). Sin redirect previo. 14 impresiones reales en `Páginas.csv`. | **Corregido**: 301 añadido en `public/_redirects` (con y sin trailing slash). |
+| `/productos/aplausometro-redondo-produccion-nacional/` | 2026-04-14 | Pendiente | Ya tiene 301 vigente hacia `aplausometro-redondo-produccion-nacional-5685/` desde la sesión seo-4. | **Sin acción** — dato de GSC anterior al fix; pendiente de que Google re-rastree. |
+| `/productos/set-destornillador-pistol/` | 2026-02-23 | Pendiente | Ya tiene 301 vigente hacia `/categorias/herramientas/` desde la sesión seo-4. | **Sin acción** — dato de GSC anterior al fix. |
+| `https://kronosolopromocionales.com/product-category/tecnologia/` (dominio sin `www`) | 2026-01-29 | Pendiente | Requiere 2 saltos ya cubiertos: canonicalización de dominio (`netlify.toml`, sesión seo-4) + `/product-category/tecnologia/` → `/categorias/tecnologia-promocional/` (`public/_redirects`, corregido en sesión seo-5 tras detectar una cadena rota). | **Sin acción** — dato de GSC anterior a ambos fixes. |
+| `/productos/canguro-dior/` | 2026-07-11 | Error | Ya tiene 301 vigente hacia `canguro-dior-9823/` desde la sesión seo-4 (anterior a este rastreo, pero Google aún no revalidó). | **Sin acción** — dato de GSC anterior a la re-validación; el fix ya está desplegado (commit `a3c5a3c`, pusheado). |
+| `/productos/vaso-tapa-plastico-14-oz-produccion-nacional/` | 2026-07-08 | Error | Slug real sin sufijo de ID — el producto existe como `vaso-tapa-plastico-14-oz-produccion-nacional-2871` (`is_ai_optimized: true`). Sin redirect previo. 14 impresiones en la URL rota, 1 impresión ya en la URL correcta (Google está en transición). | **Corregido**: 301 añadido en `public/_redirects` (con y sin trailing slash). |
+| `/productos/$` | 2026-07-05 | Error | URL inválida/manipulada — no corresponde a ningún patrón generado por el código (`grep` de `${product.slug}` en todos los templates confirma que siempre interpola un slug real; ningún archivo de contenido contiene literalmente `productos/$`). Probable bot, escáner o enlace externo roto/truncado. | **Sin acción** — no se crea un redirect ni una página falsa para una URL sin origen identificable en el sitio. Sigue respondiendo 404 vía la regla catch-all existente (`/* → /404.html`), que es el comportamiento correcto. |
+
+**Principio aplicado en los 2 casos corregidos:** mismo patrón que el hallazgo #12 de `seo-4.md`
+(slugs indexados por Google antes de que el pipeline de datos añadiera el sufijo numérico de ID).
+Se verificó `is_ai_optimized: true` en ambos destinos antes de redirigir (confirma que están en
+el sitemap y son indexables). No se redirigió ninguna URL a home ni se inventó contenido.
+
+**Nota sobre "Pendiente" vs "Error" en GSC:** ambos estados en este reporte corresponden a
+rastreos previos a los fixes ya desplegados (commits de las sesiones seo-4 a seo-6, ya
+pusheados a `origin/main` en `cb062c0`). GSC no vuelve a marcar una URL como resuelta hasta que
+Google Search Console la re-rastrea — puede tardar días o semanas independientemente de que el
+fix ya esté en producción. No se debe interpretar "Pendiente"/"Error" en este export como prueba
+de que un fix ya desplegado no funcionó.
+
 ## 6. Qué falta validar
 
 - **Verificación en producción (`production_verified`)**: ningún redirect fue probado con una petición HTTP real. Ejecutar manualmente `curl -I https://www.kronosolopromocionales.com/<ruta>` para cada regla crítica tras el próximo deploy.
