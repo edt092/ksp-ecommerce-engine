@@ -78,6 +78,7 @@ content/drafts/
 !docs/
 !docs/**/*.md
 !reports/gsc-summary.md
+!reports/core-web-vitals-lab.md
 
 # Scripts de desarrollo / scraping (no necesarios en producción)
 scripts/*.py
