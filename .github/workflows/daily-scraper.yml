@@ -1,9 +1,11 @@
 name: Daily Product Scraper
 
 on:
-  schedule:
-    # Runs every day at 06:00 UTC (02:00 Ecuador time)
-    - cron: '0 6 * * *'
+  # Cron desactivado: scripts/daily-scraper.py no existe en el repo (gitignorado por
+  # scripts/*.py y nunca comiteado), asi que el schedule fallaba silenciosamente cada
+  # dia. Reactivar el bloque "schedule" solo despues de restaurar/commitear ese script.
+  # schedule:
+  #   - cron: '0 6 * * *'
   workflow_dispatch: # Allow manual trigger
 
 permissions:
