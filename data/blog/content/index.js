@@ -313,7 +313,7 @@ export const blogContent = {
 
 <ul>
   <li><strong>Reconocimiento masivo:</strong> distribuir 500 artículos en una feria. Prioridad: costo, utilidad cotidiana, superficie de branding. Productos ideales: bolígrafos, libretas, bolsas no tejidas.</li>
-  <li><strong>Fidelización de clientes VIP:</strong> regalar a 20 clientes estratégicos. Prioridad: calidad percibida, personalización premium. Productos ideales: termos de acero, sets de escritura, mochilas ejecutivas.</li>
+  <li><strong>Fidelización de clientes VIP:</strong> regalar a 20 clientes estratégicos. Prioridad: calidad percibida, personalización premium. Productos ideales: <a href="/categorias/mugs-y-termos-personalizados" class="text-primary hover:underline font-medium">termos de acero</a>, sets de escritura, mochilas ejecutivas.</li>
   <li><strong>Onboarding de empleados:</strong> dar bienvenida a nuevos colaboradores. Prioridad: utilidad diaria en el trabajo, refuerzo de cultura. Productos ideales: kit con mug, libreta, bolígrafo y cargador USB.</li>
   <li><strong>Evento de lanzamiento:</strong> crear recordación post-evento. Prioridad: diferenciación, conexión con el tema del evento. Productos ideales: artículos temáticos, ediciones especiales.</li>
 </ul>
@@ -407,7 +407,7 @@ export const blogContent = {
 <p>Esto no es teoría: es lo que hemos visto funcionar en cientos de proyectos.</p>
 
 <h3>Banca y seguros</h3>
-<p>Sets ejecutivos de escritura, termos premium, artículos de cuero. Los clientes VIP de este sector esperan calidad perceptible. Un bolígrafo metálico grabado con láser deja mejor impresión que diez plásticos con logo impreso. Explora nuestros <a href="/categorias/oficina">artículos de oficina premium</a>.</p>
+<p>Sets ejecutivos de escritura, termos premium, artículos de cuero. Los clientes VIP de este sector esperan calidad perceptible. Un bolígrafo metálico grabado con láser deja mejor impresión que diez plásticos con logo impreso. Explora nuestros <a href="/categorias/articulos-de-oficina-personalizados">artículos de oficina premium</a>.</p>
 
 <h3>Salud y farmacéutica</h3>
 <p>Artículos de uso cotidiano en consultorios: bolígrafos (muchos, siempre se pierden), libretas clínicas, porta-instrumentos personalizados, termos para médicos de guardia. Considera también artículos con propiedades antimicrobianas. Ver <a href="/categorias/boligrafos-publicitarios">artículos de escritura</a>.</p>
@@ -649,7 +649,7 @@ export const blogContent = {
     <h2>Conclusión Estratégica</h2>
     <p>El merchandising efectivo requiere pensamiento estratégico, no solo presupuesto. Segmenta audiencias, elige momentos de entrega estratégicos, integra digital-físico, invierte en packaging, mide resultados y alinea productos con narrativa de marca. En KS Promocionales no solo vendemos productos, co-creamos estrategias que multiplican tu ROI.</p>
 
-    <p>Explora nuestra sección de <a href="/categorias/novedades" class="text-primary hover:underline font-medium">productos promocionales novedosos</a> para encontrar artículos que conecten con tu audiencia, o completa tu estrategia con nuestra línea de <a href="/categorias/oficina" class="text-primary hover:underline font-medium">artículos promocionales para oficina</a>.</p>
+    <p>Explora nuestra sección de <a href="/categorias/novedades" class="text-primary hover:underline font-medium">productos promocionales novedosos</a> para encontrar artículos que conecten con tu audiencia, o completa tu estrategia con nuestra línea de <a href="/categorias/articulos-de-oficina-personalizados" class="text-primary hover:underline font-medium">artículos promocionales para oficina</a>.</p>
   `,
 
   'diseno-logos-productos-promocionales': `
@@ -885,7 +885,7 @@ export const blogContent = {
     <h2>Conclusión: Textiles que Unifican y Venden</h2>
     <p>Los textiles corporativos bien ejecutados fortalecen cultura organizacional, generan orgullo de pertenencia y convierten empleados en embajadores voluntarios de marca. Cada persona que viste tu marca en la calle es publicidad móvil gratuita. En KS Promocionales diseñamos programas textiles completos: desde selección de prendas hasta estrategia de distribución y medición de impacto. Tu equipo merece textiles de los que se sientan orgullosos.</p>
 
-    <p>Explora nuestra colección de <a href="/categorias/confeccion" class="text-primary hover:underline font-medium">textiles y confección personalizados</a> (camisetas, polos, chompas) y nuestra línea de <a href="/categorias/gorras-personalizadas" class="text-primary hover:underline font-medium">gorras corporativas bordadas</a> para completar el uniforme de tu equipo.</p>
+    <p>Explora nuestra colección de <a href="/categorias/camisetas-y-confeccion-corporativa" class="text-primary hover:underline font-medium">textiles y confección personalizados</a> (camisetas, polos, chompas) y nuestra línea de <a href="/categorias/gorras-personalizadas" class="text-primary hover:underline font-medium">gorras corporativas bordadas</a> para completar el uniforme de tu equipo.</p>
   `,
 
   'colores-psicologia-merchandising-corporativo': `
@@ -1789,7 +1789,7 @@ export const blogContent = {
     <ul>
       <li><strong>Artículos de escritura:</strong> <a href="/categorias/boligrafos-publicitarios">Bolígrafos, lápices, marcadores</a> - los clásicos que nunca fallan.</li>
       <li><strong>Ropa:</strong> <a href="/categorias/camisetas-y-confeccion-corporativa">Camisetas, gorras, sudaderas</a> - embajadores móviles de tu marca.</li>
-      <li><strong>Artículos de oficina:</strong> <a href="/categorias/oficina">Tazas, libretas, calendarios</a> - presencia constante en el escritorio.</li>
+      <li><strong>Artículos de oficina:</strong> <a href="/categorias/articulos-de-oficina-personalizados">Tazas, libretas, calendarios</a> - presencia constante en el escritorio.</li>
       <li><strong>Tecnología:</strong> <a href="/categorias/tecnologia-promocional">Memorias USB, power banks, audífonos</a> - alto valor percibido.</li>
       <li><strong>Bolsas y mochilas:</strong> <a href="/categorias/mochilas-y-maletines-personalizados">Bolsas de tela, mochilas promocionales</a> - publicidad ambulante.</li>
     </ul>
@@ -2034,7 +2034,7 @@ export const blogContent = {
       <li><strong><a href="/categorias/tecnologia-promocional">Tecnología Promocional</a></strong> - Gadgets que impresionan</li>
       <li><strong><a href="/categorias/mugs-y-termos-personalizados">Mugs y Termos</a></strong> - El clásico que nunca falla</li>
       <li><strong><a href="/categorias/mochilas-y-maletines-personalizados">Bolsos y Mochilas</a></strong> - Publicidad ambulante</li>
-      <li><strong><a href="/categorias/oficina">Artículos de Oficina</a></strong> - Presencia en cada escritorio</li>
+      <li><strong><a href="/categorias/articulos-de-oficina-personalizados">Artículos de Oficina</a></strong> - Presencia en cada escritorio</li>
     </ul>
 
     <p>En <strong>KS Promocionales</strong> te ayudamos a encontrar los productos perfectos para tu campaña. <a href="https://wa.me/593999814838?text=Hola,%20necesito%20asesoría%20para%20elegir%20productos%20promocionales%20al%20por%20mayor">Escríbenos por WhatsApp</a> para una asesoría personalizada.</p>
@@ -2747,7 +2747,7 @@ export const blogContent = {
   <li><strong>Dispensadores de gel:</strong> impresión de logo en etiqueta adhesiva de alta calidad o serigrafía directa en el cuerpo plástico. Se puede incluir el nombre del evento, fecha y mensaje personalizado.</li>
   <li><strong>Sets de cubiertos:</strong> grabado láser o serigrafía en el estuche. El material del cubierto en sí no requiere personalización adicional.</li>
   <li><strong>Mascarillas:</strong> bordado o impresión sublimada del logo en la parte exterior. Importante verificar que el tratamiento sea de la tela y no un coating que se degrade con el lavado.</li>
-  <li><strong>Artículos de <a href="/categorias/oficina">oficina</a> en general:</strong> mouse pads, organizadores y superficies de trabajo con tratamiento antimicrobiano se personalizan con sublimación o impresión UV.</li>
+  <li><strong>Artículos de <a href="/categorias/articulos-de-oficina-personalizados">oficina</a> en general:</strong> mouse pads, organizadores y superficies de trabajo con tratamiento antimicrobiano se personalizan con sublimación o impresión UV.</li>
 </ul>
 
 <p>En KS Promocionales te asesoramos en cada paso: desde la selección del artículo correcto para tu industria hasta la técnica de personalización que mejor represente tu marca.</p>
@@ -2905,7 +2905,7 @@ export const blogContent = {
 
 <p>Recuerda siempre pedir una prueba de color antes de aprobar la producción masiva. En KS Promocionales incluimos esta validación en nuestro proceso estándar.</p>
 
-<p>También puedes combinar el set de herramientas con otros artículos de nuestras categorías <a href="/categorias/novedades">novedades</a> y <a href="/categorias/oficina">oficina</a> para armar un kit corporativo completo con mayor impacto visual.</p>
+<p>También puedes combinar el set de herramientas con otros artículos de nuestras categorías <a href="/categorias/novedades">novedades</a> y <a href="/categorias/articulos-de-oficina-personalizados">oficina</a> para armar un kit corporativo completo con mayor impacto visual.</p>
 
 <h2>Por qué elegir KS Promocionales para tus herramientas Mustang</h2>
 
@@ -3107,13 +3107,13 @@ export const blogContent = {
 
 <p class="text-gray-700 leading-relaxed mb-4">Adicionalmente, a diferencia de la publicidad digital, el cuello multifuncional no tiene un "costo de renovación" mensual. Cada vez que el beneficiario lo usa, su marca comunica sin costo adicional. Este efecto residual acumulado durante meses o años es uno de los argumentos más sólidos a favor del merchandising textil como canal de branding a largo plazo.</p>
 
-<p class="text-gray-700 leading-relaxed mb-4">Explora nuestra línea completa de <a href="/categorias/deportes" class="text-primary hover:underline font-medium">artículos promocionales para deportes</a> y descubre toda nuestra colección de <a href="/categorias/confeccion" class="text-primary hover:underline font-medium">confección y textiles personalizados</a> para encontrar la combinación perfecta para tu estrategia.</p>
+<p class="text-gray-700 leading-relaxed mb-4">Explora nuestra línea completa de <a href="/categorias/deportes" class="text-primary hover:underline font-medium">artículos promocionales para deportes</a> y descubre toda nuestra colección de <a href="/categorias/camisetas-y-confeccion-corporativa" class="text-primary hover:underline font-medium">confección y textiles personalizados</a> para encontrar la combinación perfecta para tu estrategia.</p>
 
 <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4 border-l-4 border-primary pl-4">¡Impulsa tu Marca Hoy!</h2>
 
 <p class="text-gray-700 leading-relaxed mb-4">Debido a la altísima demanda, la disponibilidad es limitada. ¡Contáctanos HOY mismo para asegurar tu pedido!</p>
 
-<p class="text-gray-700 leading-relaxed mb-4">Complementa tu estrategia con nuestra selección de <a href="/categorias/deportes" class="text-primary hover:underline font-medium">artículos promocionales para deportes</a> y toda nuestra línea de <a href="/categorias/confeccion" class="text-primary hover:underline font-medium">confección y textiles personalizados</a>.</p>
+<p class="text-gray-700 leading-relaxed mb-4">Complementa tu estrategia con nuestra selección de <a href="/categorias/deportes" class="text-primary hover:underline font-medium">artículos promocionales para deportes</a> y toda nuestra línea de <a href="/categorias/camisetas-y-confeccion-corporativa" class="text-primary hover:underline font-medium">confección y textiles personalizados</a>.</p>
 
 <hr class="my-8 border-gray-200" />
 

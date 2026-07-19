@@ -708,7 +708,7 @@ Un termo que quema los labios, un cuaderno que se deforma con la humedad, un lla
     <li><a href="/categorias/mugs-y-termos-personalizados">Mugs y Termos Personalizados</a></li>
     <li><a href="/categorias/mochilas-y-maletines-personalizados">Morrales y Maletines Corporativos</a></li>
     <li><a href="/categorias/tecnologia-promocional">Tecnología Promocional</a></li>
-    <li><a href="/productos/speaker-bluetooth-bass-swisspeak-8933">Speaker Bluetooth Bass Swisspeak</a></li>
+    <li><a href="/productos/speaker-bluetooth-bass-swiss-peak-8933">Speaker Bluetooth Bass Swisspeak</a></li>
 </ul>
 `,
 
@@ -1002,7 +1002,7 @@ Un termo que quema los labios, un cuaderno que se deforma con la humedad, un lla
   'solucion-antiestres-bolas-neon-promocionales-para-empresas-en-ecuador': `
 <h2>ROI de los artículos antiestrés en campañas de marketing corporativo</h2>
 <p>Los artículos antiestrés son uno de los productos con mayor tiempo de permanencia en el escritorio del receptor. A diferencia de un folleto que va al reciclaje en días o un calendario que se descarta en enero, una bola antiestrés puede vivir en un escritorio durante años. Esto la convierte en un vehículo de comunicación de marca extraordinariamente eficiente.</p>
-<p>Un estudio de la Promotional Products Association International (PPAI) indica que los artículos antiestrés tienen una tasa de retención del 81% a los 12 meses de haberse recibido. Eso significa que 8 de cada 10 personas que reciben una pelota antiestrés con tu logo aún la tienen al año siguiente.</p>
+<p>Al ser un objeto pequeño, útil y sin fecha de caducidad, es habitual que el receptor lo conserve en su escritorio mucho después de recibirlo — a diferencia de material impreso que se descarta en días.</p>
 <h2>Sectores que más aprovechan los artículos antiestrés</h2>
 <ul>
 <li><strong>Contact centers y call centers:</strong> entorno de alta presión donde los agentes agradecen cualquier herramienta de alivio de tensión durante las llamadas.</li>
@@ -1057,7 +1057,7 @@ Un termo que quema los labios, un cuaderno que se deforma con la humedad, un lla
 </div>
 
 <h2>¿Por qué elegir KS Promocionales para tus artículos antiestrés en Ecuador?</h2>
-<p>Con más de diez años de experiencia en artículos promocionales para el mercado ecuatoriano, en KS Promocionales conocemos los tiempos, las normativas y las preferencias del comprador corporativo local. Trabajamos directamente con fabricantes para ofrecerte precios competitivos sin intermediarios, con muestras físicas disponibles antes de confirmar tu pedido masivo. Nuestro equipo de diseño te apoya sin costo adicional en la adaptación de tu logo al formato de impresión. <a href="/categorias/anti-estres/">Explora toda nuestra línea antiestrés</a> o <a href="/contacto/">cotiza ahora</a> tu pedido personalizado.</p>`,
+<p>Con más de diez años de experiencia en artículos promocionales para el mercado ecuatoriano, en KS Promocionales conocemos los tiempos, las normativas y las preferencias del comprador corporativo local. Trabajamos directamente con fabricantes para ofrecerte precios competitivos sin intermediarios, con muestras físicas disponibles antes de confirmar tu pedido masivo. Nuestro equipo de diseño te apoya sin costo adicional en la adaptación de tu logo al formato de impresión. <a href="/categorias/antiestres/">Explora toda nuestra línea antiestrés</a> o <a href="/contacto/">cotiza ahora</a> tu pedido personalizado.</p>`,
 
   'herramientas-mustang-promocionales-impulsa-tu-marca-con-soluciones-practicas-ecuador': `
 <h2>Por qué los kits de herramientas Mustang son la elección inteligente para empresas técnicas</h2>
@@ -1295,7 +1295,7 @@ Un termo que quema los labios, un cuaderno que se deforma con la humedad, un lla
 </div>
 
 <h2>Da el siguiente paso: cotiza tus artículos promocionales</h2>
-<p>Elegir el artículo promocional correcto para tu empresa no debería ser una apuesta. Con la información de esta guía tienes los criterios para tomar una decisión fundamentada. El siguiente paso es simple: <a href="/contacto/">contacta a nuestro equipo</a> con los datos de tu campaña y te preparamos una propuesta con los mejores artículos para tu industria, presupuesto y fecha de entrega. <a href="/categorias/">Explora nuestro catálogo completo</a> de más de 3.000 artículos personalizables disponibles para Ecuador.</p>`,
+<p>Elegir el artículo promocional correcto para tu empresa no debería ser una apuesta. Con la información de esta guía tienes los criterios para tomar una decisión fundamentada. El siguiente paso es simple: <a href="/contacto/">contacta a nuestro equipo</a> con los datos de tu campaña y te preparamos una propuesta con los mejores artículos para tu industria, presupuesto y fecha de entrega. <a href="/regalos-corporativos/">Explora nuestro catálogo completo</a> de más de 3.000 artículos personalizables disponibles para Ecuador.</p>`,
 
   'branding-textiles-personalizados-empresas': `
 <h2>Guía completa: textiles corporativos personalizados para tu empresa</h2>
@@ -1369,7 +1369,7 @@ Un termo que quema los labios, un cuaderno que se deforma con la humedad, un lla
 <h3>Productos recomendados</h3>
 <ul>
     <li><a href="/categorias/tecnologia-promocional">Ver Tecnología Promocional</a></li>
-    <li><a href="/productos/speaker-bluetooth-bass-swisspeak-8933">Speaker Bluetooth Bass Swisspeak</a></li>
+    <li><a href="/productos/speaker-bluetooth-bass-swiss-peak-8933">Speaker Bluetooth Bass Swisspeak</a></li>
     <li><a href="/productos/puerto-usb-ruler-bamboo-10814">Puerto USB Ruler Bamboo</a></li>
     <li><a href="/audifonos-promocionales/">Auriculares y Parlantes Bluetooth</a></li>
 </ul>
