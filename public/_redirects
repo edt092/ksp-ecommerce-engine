@@ -16,6 +16,18 @@
 /productos-promocionales-colombia/cartagena   /productos-promocionales-ecuador/    301
 /productos-promocionales-colombia/cartagena/  /productos-promocionales-ecuador/    301
 
+# 301 Redirects - Slugs sin ID indexados por Google que hoy dan 404 (GSC 2026-07-15, hallazgo #12 seo-4.md)
+/productos/portacomida-produccion-nacional                    /productos/portacomida-produccion-nacional-4857/                    301
+/productos/portacomida-produccion-nacional/                    /productos/portacomida-produccion-nacional-4857/                    301
+/productos/canguro-dior                                        /productos/canguro-dior-9823/                                        301
+/productos/canguro-dior/                                        /productos/canguro-dior-9823/                                        301
+/productos/bola-para-mascotas                                  /productos/bola-para-mascotas-10979/                                 301
+/productos/bola-para-mascotas/                                  /productos/bola-para-mascotas-10979/                                 301
+/productos/copa-para-vino-7oz-produccion-nacional               /productos/copa-para-vino-7oz-produccion-nacional-2007/              301
+/productos/copa-para-vino-7oz-produccion-nacional/               /productos/copa-para-vino-7oz-produccion-nacional-2007/              301
+/productos/speaker-bluetooth-con-lampara-oferta                /productos/speaker-bluetooth-con-lampara-oferta-9579/                301
+/productos/speaker-bluetooth-con-lampara-oferta/                /productos/speaker-bluetooth-con-lampara-oferta-9579/                301
+
 # 301 Redirects - Slugs de producto con "colombia", renombrados (limpieza SEO 2026-07-16)
 /productos/paraguas-colombia-27-5913                          /productos/paraguas-27-5913/                          301
 /productos/paraguas-colombia-27-5913/                          /productos/paraguas-27-5913/                          301
@@ -44,10 +56,10 @@
 # 301 Redirects - URLs antiguas de WordPress/WooCommerce
 /product-category/salud-y-belleza    /categorias/cuidado-personal/    301
 /product-category/salud-y-belleza/   /categorias/cuidado-personal/    301
-/product-category/tecnologia         /categorias/tecnologia/           301
-/product-category/tecnologia/        /categorias/tecnologia/           301
-/product/auriculares-inalambricos-auriculares-bluetooth    /categorias/tecnologia/    301
-/product/auriculares-inalambricos-auriculares-bluetooth/   /categorias/tecnologia/    301
+/product-category/tecnologia         /categorias/tecnologia-promocional/           301
+/product-category/tecnologia/        /categorias/tecnologia-promocional/           301
+/product/auriculares-inalambricos-auriculares-bluetooth    /categorias/tecnologia-promocional/    301
+/product/auriculares-inalambricos-auriculares-bluetooth/   /categorias/tecnologia-promocional/    301
 
 # 301 Redirects - Slugs de producto sin ID numérico (formato anterior)
 /productos/aplausometro-redondo-produccion-nacional    /productos/aplausometro-redondo-produccion-nacional-5685/    301
