@@ -70,9 +70,17 @@ venv/
 # Borradores de blog (flujo editorial local, nunca sube a GitHub)
 content/drafts/
 
-# Documentación local y planning docs (no relevantes para producción)
+# Documentación local general
 *.md
 !README.md
 
+# Documentación SEO versionada (explica decisiones técnicas, redirects, medición y estrategia)
+!docs/
+!docs/**/*.md
+!reports/gsc-summary.md
+
 # Scripts de desarrollo / scraping (no necesarios en producción)
 scripts/*.py
+
+# Caché incremental de TypeScript
+*.tsbuildinfo

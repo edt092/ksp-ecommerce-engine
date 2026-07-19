@@ -1,0 +1,47 @@
+file,status,category,include_in_commit,proposed_commit,reason,risk,requires_user_confirmation
+data/blog/content/pipeline.js,untracked,G,true,0,"CORREGIDO en sesión seo-6: es NECESARIO para un clon limpio (import estático en src/app/blog/[slug]/page.tsx). Decisión: Opción A, versionar el registro vacío tal cual.",low,false
+next-sitemap.config.js,deleted,A,true,1,"Eliminado: next-sitemap sustituido por src/app/sitemap.ts como fuente única",low,false
+package.json,modified,A,true,"1 (hunk prebuild/postbuild), 8 (hunk alias seo:*)","Dos conjuntos de cambios en el MISMO hunk físico — requiere git add -p con edición manual (opción e). Ver docs/staging-instructions.md",low,false
+pnpm-lock.yaml,modified,A,true,1,"Efecto secundario de pnpm remove next-sitemap",low,false
+scripts/validate-unique-slugs.js,untracked,A,true,1,"Validación de slugs únicos, enganchado a prebuild en el mismo commit",low,false
+netlify.toml,modified,A,true,2,"3 reglas de redirect de dominio (http/no-www -> https+www). config_verified=true, production_verified=false (no se puede probar sin operar Netlify)",medium,true
+public/_redirects,modified,A,true,3,"15 redirects nuevos: 5 productos 404 + fix de cadena de 2 saltos de categoria tecnologia. No se afirma que TODOS los redirects del archivo sean válidos (2 preexistentes con target roto, ver docs/seo-audit-gsc.md 5.1)",low,false
+data/blog/posts.json,modified,A,true,"4 (hunk dedupe), 5 (hunks metaTitle/dateModified)","3 hunks distintos: 1 elimina el duplicado (commit 4), 2 son metadata de fin-de-año/2025 (commit 5). Requiere git add -p",low,false
+data/blog/content/index.js,modified,A,true,"5 (2 de 12 hunks: evergreen 2025 + checklist fin de año), 6 (10 de 12 hunks: fixes de enlaces sin relación)","12 hunks distintos verificados uno por uno. Ningún hunk fuera de los 2 de refresh editorial tiene dateModified asociado (correcto, son fixes mecánicos)",low,false
+data/blog/content/additions.js,modified,A,true,6,"5 hunks: 2 typos de slug, 1 categoria mal escrita, 1 destino inexistente corregido, 1 estadística sin fuente (PPAI) removida",low,false
+data/categories.json,modified,A,true,7,"Diferenciación H1/seoTitle bolígrafos (0 clics, sin CTR que proteger) + editorial mugs con capacidades reales",low,false
+data/geo-data.js,modified,A,true,7,"seoDescription de Manta reforzada con CTA",low,false
+src/app/HomePageClient.tsx,modified,A,true,7,"Nueva sección de enlaces contextuales a 3 hubs comerciales",low,false
+src/components/Footer.tsx,modified,A,true,7,"Fix de geoLinks: Cuenca/Ambato apuntaban a landing genérica; se agregó Manta",low,false
+scripts/analyze-gsc.mjs,untracked,A,true,8,"Script de análisis GSC. Corregido en sesión seo-6: ya no hardcodea una ruta personal por defecto (ahora exige argumento o GSC_DIR), y el resumen generado usa fecha de corte en vez de ruta local",low,false
+scripts/build-redirect-map.mjs,untracked,A,true,8,"Corregido en sesión seo-6: GSC_DIR ya no hardcodea ruta personal (ahora opcional, sin ella omite el cruce de impresiones con aviso claro)",low,false
+scripts/find-broken-internal-links.mjs,untracked,A,true,8,"Sin cambios en esta sesión respecto a seo-5",low,false
+scripts/run-seo-tests.mjs,untracked,A,true,8,"Sin cambios en esta sesión respecto a seo-5",low,false
+scripts/serve-static.mjs,untracked,A,true,8,"Servidor estático mínimo sin dependencias, usado para la auditoría de Core Web Vitals de laboratorio",low,false
+src/components/StorytellingHero.tsx,modified,F,true,10,"Componente NO usado en ninguna página (verificado, cero importadores en src/app). Fix válido pero independiente — no mezclar con enlazado interno (commit 7)",low,false
+.gitignore,modified,C,true,9,"Permite versionar docs/**/*.md y reports/gsc-summary.md; añade *.tsbuildinfo. No se agregó regla de backups (ver fila data/products.json.backup)",low,false
+docs/seo-audit-gsc.md,untracked,C,true,9,"Documentación SEO, corregida en esta sesión (placeholder, pipeline.js, redirects rotos)",low,false
+docs/seo-roadmap-100-clicks.md,untracked,C,true,9,"Documentación SEO",low,false
+docs/keyword-url-map.md,untracked,C,true,9,"Documentación SEO",low,false
+docs/seo-measurement-plan.md,untracked,C,true,9,"Documentación SEO",low,false
+docs/core-web-vitals-field-checklist.md,untracked,C,true,9,"Documentación SEO (sesión seo-5)",low,false
+docs/phase-4-authority-playbook.md,untracked,C,true,9,"Documentación SEO (sesión seo-5). Ningún outreach real realizado",low,false
+docs/templates/seo-case-study-template.md,untracked,C,true,9,"Plantilla vacía, sin datos de clientes inventados",low,false
+docs/editorial-link-outreach-plan.md,untracked,C,true,9,"Documentación SEO (sesión seo-5). Ningún contacto real realizado",low,false
+docs/proposed-commit-plan.md,untracked,C,true,9,"Este plan de commits (v2, corregido en sesión seo-6)",low,false
+docs/staging-instructions.md,untracked,C,true,9,"Instrucciones de staging parcial con git add -p (sesión seo-6)",low,false
+reports/gsc-summary.md,untracked,B,true,9,"Reporte GSC. Corregido en sesión seo-6: ya no incluye la ruta local del usuario, usa fecha de corte neutral",low,false
+reports/gsc-page-opportunities.csv,untracked,B,true,9,"Reporte GSC generado",low,false
+reports/gsc-query-opportunities.csv,untracked,B,true,9,"Reporte GSC generado",low,false
+reports/gsc-product-opportunities.csv,untracked,B,true,9,"Reporte GSC generado",low,false
+reports/gsc-domain-variants.csv,untracked,B,true,9,"Reporte GSC generado",low,false
+reports/gsc-legacy-urls.csv,untracked,B,true,9,"Reporte GSC generado",low,false
+reports/redirect-map.csv,untracked,B,true,9,"Distingue config_verified/production_verified correctamente (verificado en esta sesión, no requería corrección)",low,false
+reports/broken-internal-links.csv,untracked,B,true,9,"Reporte de enlaces rotos, vacío tras las correcciones de los commits 6/7",low,false
+reports/core-web-vitals-lab.md,untracked,B,true,9,"Datos de laboratorio (Lighthouse real, no inventado), con caveats explícitos sobre el sesgo del servidor local",low,false
+reports/working-tree-classification.csv,untracked,B,true,9,"Este archivo (v2, esquema con proposed_commit)",low,false
+data/products.json.pre-colombia-cleanup-backup,untracked,E,false,,"Backup de 7.4MB de sesión anterior (limpieza Colombia). No relacionado con seo-4/5/6.",low,true
+data/products_backup_before_new_categories_2026-07-10T20-41-39-907Z.json,untracked,E,false,,"Backup de 7.2MB previo a categorías Vasos/Termos/Tomatodos. No relacionado con esta tarea.",low,true
+data/products_backup_before_new_categories_2026-07-10T20-44-12-215Z.json,untracked,E,false,,"Segundo backup casi idéntico al anterior (3 min de diferencia). No relacionado con esta tarea.",low,true
+public/images/blog/_placeholder-ksp.jpg,untracked,F,false,,"CORREGIDO en sesión seo-6: NO es el fallback de los 11 productos (esos usan /images/products/_placeholder-ksp.jpg, ya versionado). Sin ninguna referencia en src/ ni data/ — procedencia desconocida. No incluir en ningún commit SEO. No eliminar sin autorización.",medium,true
+tsconfig.tsbuildinfo,untracked,D,false,,"Caché incremental de TypeScript, artefacto de build local, ahora gitignorado explícitamente",low,false
