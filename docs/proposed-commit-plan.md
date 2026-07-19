@@ -1,9 +1,29 @@
-# Plan de commits propuesto (no ejecutado) — v2, corregido en sesión seo-6
+# Plan de commits propuesto — v2, corregido en sesión seo-6
 
-Ningún commit fue creado en esta o en sesiones anteriores. Esta es la **versión corregida** del
-plan (la v1 tenía 3 errores de hecho, corregidos abajo con evidencia). Basado en la clasificación
-completa de `reports/working-tree-classification.csv` y en la inspección hunk-por-hunk de cada
-archivo de contenido (ver `docs/seo-audit-gsc.md`).
+**Estado: commits 0–9 ejecutados y validados; este documento se conserva como registro del plan
+aplicado**, no como un plan pendiente. Hashes reales del historial (`git log --oneline`):
+
+```text
+9a173e2 fix(blog): include required pipeline content registry
+7d13323 fix(seo): consolidate sitemap generation and validate unique slugs
+fd5605f fix(seo): canonicalize protocol and domain redirects
+a3c5a3c fix(seo): preserve legacy product and category URLs
+d14d71e fix(content): remove duplicate blog post entry
+61d47c7 feat(seo): refresh priority blog content and metadata
+907737c fix(content): correct broken internal links and remove unsourced claims across blog articles
+173afd2 feat(seo): improve commercial and geographic internal linking
+eb47adc chore(seo): add GSC analysis and validation tooling
+4dae389 docs(seo): add audit roadmap reports and measurement plan
+```
+
+El Commit 10 (opcional, `StorytellingHero.tsx`) **no se ejecutó** — sigue pendiente de decisión
+del usuario. Ver `docs/seo-audit-gsc.md` para la corrección post-commit del generador de razones
+de `reports/redirect-map.csv` (sesión de revisión posterior a estos 10 commits).
+
+Esta es la **versión corregida** del plan original (la v1 tenía 3 errores de hecho, corregidos
+abajo con evidencia). Basado en la clasificación completa de
+`reports/working-tree-classification.csv` y en la inspección hunk-por-hunk de cada archivo de
+contenido (ver `docs/seo-audit-gsc.md`).
 
 ## Veredicto sobre el plan anterior (v1)
 
@@ -249,9 +269,12 @@ y `pnpm build` (exit 0).
 **Riesgo:** bajo. Los alias `seo:*` solo invocan los scripts ya commiteados; no afectan
 `prebuild`/`postbuild`.
 
-**Prueba que debe pasar antes del commit:** ejecutar `pnpm run seo:analyze -- "<ruta>"`,
+**Prueba que debe pasar antes del commit:** ejecutar `pnpm run seo:analyze "<directorio-exportacion-gsc>"`,
 `pnpm run seo:redirects`, `pnpm run seo:links`, `pnpm run seo:test` (tras un build) y confirmar
-exit 0 en los 4.
+exit 0 en los 4. **Nota:** no uses `--` antes de la ruta — con la versión local de pnpm ese
+separador se reenvía literalmente como argumento al script y falla (exit 1). Esto es una
+desviación de sintaxis de invocación de pnpm, no un bug de `analyze-gsc.mjs` (verificado: el
+mismo script con la misma ruta, invocado sin `--`, termina en exit 0).
 
 **⚠️ Nota de staging parcial obligatoria:** `package.json` cambia en el Commit 1 (prebuild/postbuild)
 y en este Commit 8 (alias `seo:*`), **en el mismo hunk físico** del diff (están a menos de 3 líneas

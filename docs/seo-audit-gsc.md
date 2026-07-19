@@ -128,6 +128,45 @@ el brief de esta sesión lo prohíbe explícitamente, y no hay evidencia suficie
 destino semántico específico sin adivinar. **No se modificó ni eliminó ningún redirect existente
 en esta sesión.**
 
+## 5.2 Corrección del generador de razones de `reports/redirect-map.csv` (revisión post-commit)
+
+Tras crear los 10 commits, se detectó que la columna `reason` de `reports/redirect-map.csv`
+asociaba **razones incorrectas o mal formadas** a ciertas filas — no un problema de los datos de
+`config_verified`/`production_verified`/`notes` (esos siempre fueron correctos), sino del texto
+descriptivo generado por `scripts/build-redirect-map.mjs`. Dos bugs distintos, ambos corregidos
+con cambio mínimo, sin tocar `targets` ni `status` de ningún redirect:
+
+1. **`public/_redirects` — arrastre de razón entre secciones no relacionadas.** El parser
+   mantenía `currentReason` indefinidamente hasta ver un nuevo comentario `#`, pero el archivo
+   tiene un bloque de 10 redirects de blog (`plumas-ecologicas-baltimore`, `mug-metalico-vinga`,
+   `promocionales-antimicrobianos`) que sigue a la sección "Slugs de producto con 'colombia'"
+   separado solo por una línea en blanco, **sin comentario propio**. Resultado: esas filas
+   heredaban la razón "Slugs de producto con 'colombia', renombrados" — topicalmente incorrecta
+   (son redirects de contenido de blog, no de renombrado de producto). **Corrección:** el parser
+   ahora reinicia `currentReason` a un valor neutral (`"Redirect histórico sin razón específica
+   documentada"`) en cada línea en blanco; un comentario nuevo lo sobrescribe inmediatamente si
+   existe. Se verificó que ninguna sección legítima del archivo tiene líneas en blanco *dentro*
+   de un mismo bloque comentado (solo *entre* bloques), por lo que este cambio no afecta ninguna
+   atribución correcta existente.
+2. **`netlify.toml` — comentarios multilínea truncados a la última línea.** El parser sobrescribía
+   `lastComment` en cada línea `#` en vez de acumularlas, perdiendo las primeras líneas de
+   comentarios de varias líneas (ej. la explicación completa de "canonicalización de dominio"
+   quedaba reducida a solo su última oración, "regla de redirect para tener prioridad."). También
+   dejaba caracteres decorativos de caja (`─`) sin limpiar. **Corrección:** el parser ahora
+   acumula todas las líneas de comentario consecutivas en un único texto antes de asignarlo como
+   razón, y limpia los caracteres de caja (sin tocar guiones largos `—` legítimos de puntuación).
+
+**Verificación:** ambas correcciones son generales (no hardcodean las 2 URLs de blog específicas)
+— se validan contra la estructura real de comentarios/secciones de ambos archivos. Se añadió
+`scripts/run-seo-tests.mjs` → prueba `"reports/redirect-map.csv: razones no heredadas de una
+sección no relacionada"`, que falla si cualquier fila cuya URL no mencione "colombia" recibe una
+razón que sí la mencione — cobertura general, no solo de las 2 URLs de este caso. Después de la
+corrección: `plumas-ecologicas-baltimore` y `mug-metalico-vinga` (origen `_redirects`) muestran
+`"Redirect histórico sin razón específica documentada"`; sus equivalentes en `netlify.toml`
+muestran `"301 Redirects: limpieza de URLs con señal de México"` (el encabezado real y completo
+de esa sección). `config_verified=true`, `production_verified=false` y `TARGET_NO_ENCONTRADO` se
+conservaron sin cambios en las 8 filas afectadas.
+
 ## 6. Qué falta validar
 
 - **Verificación en producción (`production_verified`)**: ningún redirect fue probado con una petición HTTP real. Ejecutar manualmente `curl -I https://www.kronosolopromocionales.com/<ruta>` para cada regla crítica tras el próximo deploy.

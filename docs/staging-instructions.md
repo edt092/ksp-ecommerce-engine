@@ -1,5 +1,10 @@
 # Instrucciones de staging parcial
 
+**Estado: los commits 0–9 ya se ejecutaron siguiendo estas instrucciones.** Este documento se
+conserva como registro reproducible de cómo se separó cada hunk, útil como referencia si se
+necesita repetir un staging parcial similar en el futuro (ej. el Commit 10 opcional, aún
+pendiente de autorización).
+
 Comandos exactos para dejar cada commit del `docs/proposed-commit-plan.md` (v2) listo para
 revisión, usando `git add -p` donde un archivo se reparte entre varios commits. **Ningún comando
 de este documento ejecuta `git commit`** — son solo instrucciones de staging para que el usuario

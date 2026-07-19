@@ -72,7 +72,8 @@ if (!GSC_DIR) {
 // ─── public/_redirects ──────────────────────────────────────────────────────
 
 const entries = []; // { source, target, status, reason, origin }
-let currentReason = 'Redirect histórico (sin comentario específico)';
+const NO_REASON = 'Redirect histórico sin razón específica documentada';
+let currentReason = NO_REASON;
 
 if (!existsSync(join(ROOT, 'public', '_redirects'))) {
   throw new Error('No existe public/_redirects — no se puede construir el mapa de redirects.');
@@ -80,9 +81,17 @@ if (!existsSync(join(ROOT, 'public', '_redirects'))) {
 const redirectsText = readFileSync(join(ROOT, 'public', '_redirects'), 'utf-8');
 for (const rawLine of redirectsText.split('\n')) {
   const line = rawLine.trim();
-  if (!line) continue;
+  if (!line) {
+    // En este archivo una línea en blanco siempre marca el final de un bloque de
+    // reglas — cada sección de comentario y sus reglas están juntas sin blancos
+    // internos (verificado). Si tras el blanco no aparece un comentario nuevo
+    // antes de la siguiente regla, esa regla NO pertenece a la sección anterior:
+    // se reinicia a un valor neutral en vez de arrastrar una razón no relacionada.
+    currentReason = NO_REASON;
+    continue;
+  }
   if (line.startsWith('#')) {
-    currentReason = line.replace(/^#\s*/, '').replace(/^301 Redirects\s*-\s*/, '');
+    currentReason = line.replace(/^#\s*/, '').replace(/^301 Redirects\s*-\s*/, '').replace(/[─]+/g, '').trim() || NO_REASON;
     continue;
   }
   const parts = line.split(/\s+/);
@@ -98,10 +107,24 @@ if (!existsSync(join(ROOT, 'netlify.toml'))) {
 }
 const netlifyText = readFileSync(join(ROOT, 'netlify.toml'), 'utf-8');
 let lastComment = 'Redirect de configuración Netlify';
+let pendingCommentLines = [];
 const netlifyLines = netlifyText.split('\n');
 for (let i = 0; i < netlifyLines.length; i++) {
   const line = netlifyLines[i].trim();
-  if (line.startsWith('#')) { lastComment = line.replace(/^#+\s*/, ''); continue; }
+  if (line.startsWith('#')) {
+    // Los comentarios de netlify.toml suelen ser multilínea (varias líneas "#"
+    // consecutivas forman una sola explicación). Se acumulan todas, en vez de
+    // quedarnos solo con la última línea vista, que era el bug original.
+    const cleaned = line.replace(/^#+\s*/, '').replace(/[─]+/g, '').trim();
+    if (cleaned) pendingCommentLines.push(cleaned);
+    continue;
+  }
+  if (line !== '' && pendingCommentLines.length > 0) {
+    // La primera línea no-comentario tras un bloque de comentarios "cierra" ese
+    // bloque: se fija como razón vigente y se limpia el acumulador.
+    lastComment = pendingCommentLines.join(' ');
+    pendingCommentLines = [];
+  }
   if (line === '[[redirects]]') {
     const block = { from: '', to: '', status: '' };
     for (let j = i + 1; j < netlifyLines.length && netlifyLines[j].trim() !== '' && !netlifyLines[j].trim().startsWith('[['); j++) {

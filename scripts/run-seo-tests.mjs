@@ -214,6 +214,41 @@ check('rutas legacy críticas conservadas mediante redirect', () => {
   return `${critical.length} rutas legacy verificadas`;
 });
 
+check('reports/redirect-map.csv: razones no heredadas de una sección no relacionada', () => {
+  // Regresión general (no hardcodea URLs específicas): si un redirect NO menciona
+  // "colombia" ni en su source ni en su target, su "reason" tampoco debería
+  // mencionar "colombia" — evita que el generador arrastre el comentario de una
+  // sección anterior no relacionada (bug detectado en la sesión de revisión).
+  const csvPath = join(ROOT, 'reports', 'redirect-map.csv');
+  assert(existsSync(csvPath), 'reports/redirect-map.csv no existe — ejecuta scripts/build-redirect-map.mjs primero');
+  const lines = readFileSync(csvPath, 'utf-8').split('\n').filter(Boolean);
+  const header = lines[0].split(',');
+  const reasonIdx = header.indexOf('reason');
+  const mismatches = [];
+  for (const line of lines.slice(1)) {
+    // Parser CSV simple compatible con comillas dobles (igual que en build-redirect-map.mjs).
+    const cols = [];
+    let cur = '', inQ = false;
+    for (let i = 0; i < line.length; i++) {
+      const ch = line[i];
+      if (ch === '"') { if (inQ && line[i + 1] === '"') { cur += '"'; i++; } else inQ = !inQ; }
+      else if (ch === ',' && !inQ) { cols.push(cur); cur = ''; }
+      else cur += ch;
+    }
+    cols.push(cur);
+    const source = (cols[0] || '').toLowerCase();
+    const target = (cols[1] || '').toLowerCase();
+    const reason = (cols[reasonIdx] || '').toLowerCase();
+    const pathMentionsColombia = source.includes('colombia') || target.includes('colombia');
+    const reasonMentionsColombia = reason.includes('colombia');
+    if (reasonMentionsColombia && !pathMentionsColombia) {
+      mismatches.push(`${cols[0]} -> reason: "${cols[reasonIdx]}"`);
+    }
+  }
+  assert(mismatches.length === 0, `${mismatches.length} fila(s) con razón de "colombia" sin relación con el path, ej: ${mismatches[0]}`);
+  return `${lines.length - 1} filas verificadas`;
+});
+
 console.log('\n[2c] Enlaces internos y assets locales');
 
 check('sin enlaces internos rotos conocidos (reports/broken-internal-links.csv)', () => {
