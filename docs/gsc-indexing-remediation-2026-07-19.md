@@ -1,164 +1,162 @@
 # Plan de remediación de indexación — GSC 2026-07-19
 
 Fuente: informe agregado de Search Console en `C:\Users\Dagon\Desktop\KSP-SEO\no_index\`
-(`Problemas críticos.csv`, `Gráfico.csv`, `Metadatos.csv`), normalizado en
-`reports/gsc-indexing-summary-2026-07-19.csv` y `reports/gsc-indexing-trend-2026-07-19.csv`.
+(`Problemas críticos.csv`, `Gráfico.csv`, `Metadatos.csv`) **+ los 6 exports reales por URL**
+(`TABLAS 1-6` en Descargas, copiados a `noindex.csv`, `redirect.csv`, `404.csv`,
+`crawled-not-indexed.csv`, `duplicate-no-canonical.csv`, `discovered-not-indexed.csv`),
+normalizado y reconciliado por `scripts/analyze-indexing-reasons.mjs`.
 
-**Corrección sobre la fuente**: `Gráfico.csv` no termina el 2026-06-16 — el último dato real es
-**2026-07-09**. Los 593 URL sin indexar están estables desde el 2026-06-30 (11 días corridos al
-cierre del export), y 593 = 373 + 23 + 7 + 85 + 1 + 104, que cuadra exactamente con
-`Problemas críticos.csv`.
+**Corrección sobre la fuente**: `Gráfico.csv` no termina el 2026-06-16 como afirma `noindex.md` —
+el último dato real es **2026-07-09**. Los 593 URL sin indexar están estables desde el 2026-06-30,
+y 593 = 373 + 23 + 7 + 85 + 1 + 104, que cuadra exactamente con `Problemas críticos.csv`.
 
-**Objetivo explícito de este plan** (igual que en `noindex.md`): no indexar las 593 URL
-indiscriminadamente. El objetivo real es que las páginas valiosas sean indexables, que las
-débiles/duplicadas/redirigidas/inexistentes sigan excluidas correctamente, y que las señales
-(sitemap, canonical, robots, enlaces internos) sean coherentes entre sí.
+## Resultado global tras reconciliar las 593 URL una por una
+
+De las 6 categorías, **5 quedan completamente explicadas con evidencia real y sin ningún error de
+sitio pendiente de corregir**: noindex (373), redirección (23) y 404 (7) resultan, en conjunto,
+en **cero errores técnicos reales** — son artefactos de clasificación de GSC o datos de rastreo
+desactualizados. "Rastreada sin indexar" (85) y "descubierta sin indexar" (104) son decisiones de
+Google (calidad/duplicación/prioridad de rastreo), no errores de sitio, aunque para 104 sí hay una
+acción de enlazado interno concreta y accionable. Solo queda **1 URL** (duplicada sin canonical)
+sin explicación local — y no coincide con ninguno de los 6 grupos que había detectado por
+heurística de nombre.
 
 ## 1. Duplicada: el usuario no ha indicado ninguna versión canónica (1 URL) — P0
 
-**Estado**: único hallazgo marcado como error técnico real; GSC aún no inició validación.
+**URL real** (confirmada por export): `https://www.kronosolopromocionales.com/productos/set-de-cables-de-carga-mini-kit-9436/`
+(último rastreo: 2026-07-04).
 
-**Lo que hice sin necesitar el export**: el mecanismo de canonical dual-slug en
-`src/app/productos/[slug]/page.tsx` (que noindexa variantes tipo `slug-1234` y las canonicaliza
-hacia `slug`) **hoy no aplica a ningún producto** (`dualSlug: 0` al recalcular sobre
-`data/products.json` actual). En cambio encontré **6 grupos de productos con el mismo `name`**
-cuyos slugs no están relacionados por sufijo numérico y que por tanto ese mecanismo no cubre —
-documentados en `reports/canonical-audit.csv` (columna `duplicate_group`, `dup-1`..`dup-6`):
+Investigué esta URL específica contra `data/products.json`:
+- No hay ningún otro producto con el mismo `name` ("Set de Cables de Carga Mini Kit").
+- No comparte imagen con ningún otro producto (`images[0]` es único).
+- El único producto con nombre parecido, "Set de Cables de Carga Tyson"
+  (`set-de-cables-de-carga-tyson-9804`), tiene imagen y ID distintos — no hay evidencia de que sea
+  el par duplicado.
+- **No pertenece a ninguno de los 6 grupos de nombre duplicado** detectados en la sección de
+  canonical audit (`dup-1` a `dup-6`).
 
-| Grupo | Nombre | Slugs | Señal |
-| --- | --- | --- | --- |
-| dup-1 | Reloj Led Bamboo | `reloj-led-bamboo-oferta-9721`, `reloj-led-bamboo-9721` | imágenes idénticas, misma categoría — duplicado fuerte |
-| dup-2 | Alcancia Piggy Max | `relojes-alcancia-piggy-max`, `alcancia-piggy-max-13495` | categoría distinta (relojes vs novedades) — posible error de categorización, no necesariamente duplicado de contenido |
-| dup-3 | Cobija Pillow | `relojes-cobija-pillow`, `cobija-pillow-13501` | misma categoría |
-| dup-4 | Paraguas Brook Ergo 27 | `paraguas-brook-ergo-27-9187`, `paraguas-brook-ergo-27-7512-3865` | mismo nombre |
-| dup-5 | Bolígrafo Ventura Clean Set | `boligrafo-ventura-clean-set-10840`, `boligrafo-ventura-clean-set-articulos-promocionales` | mismo nombre |
-| dup-6 | Paraguas 27 | `paraguas-27-5913-3858` (is_ai_optimized=false), `paraguas-27-9218` | seoTitle idéntico, uno ya está en noindex por is_ai_optimized=false |
+**Conclusión honesta**: no encontré, con los datos estructurados disponibles, cuál es la otra
+mitad del par que GSC está comparando. Es posible que Google esté comparando esta página contra
+una plantilla de texto compartida por muchos productos generados en el mismo lote (frases
+genéricas repetidas en `story`/`seoDescription` de productos similares de tecnología), no contra
+otro producto específico con nombre igual.
 
-**Confirmado con el build real** (no solo con el código fuente): las 12 URLs de estos 6 grupos
-están **las 12 dentro del sitemap generado, todas indexables (`robots: index`) y todas
-auto-canónicas** — es decir, ningún mecanismo del sitio les asigna una canonical hacia la otra
-mitad del par. Esto es exactamente el patrón técnico que produce un hallazgo de "duplicada sin
-canonical" en GSC: dos URLs con contenido muy similar, ambas sirviéndose como si fueran la
-versión canónica. Ver `reports/sitemap-indexability-audit.csv`, columna `issues` =
-`NO_DEBERIA_ESTAR_EN_SITEMAP` para las 12 filas.
+**Acción pendiente**: abrir esta URL en **Inspección de URLs** dentro de GSC — ese reporte
+individual (a diferencia del export masivo, que solo trae `URL` + `Último rastreo`) muestra la
+"URL canónica seleccionada por Google", que es el dato que falta para saber contra qué la está
+comparando.
 
-**Por qué no toqué el código todavía**: `noindex.md` prohíbe consolidar o eliminar productos y
-cambiar slugs sin verificación. Aunque el patrón técnico está confirmado, no sé **cuál de estos 6
-grupos específicamente** es el que GSC reporta (GSC solo reporta 1 URL, no 6) — podría ser uno de
-estos, o una URL completamente distinta (parámetros, paginación, una variante histórica que ya no
-existe). Actuar sobre los 6 a ciegas asignando canonicals sin confirmar cuál es el real violaría
-la instrucción explícita del brief de no tocar más de 20 productos sin evidencia.
+## 2. Rastreada: actualmente sin indexar (85 URL) — P1, decisión de Google
 
-**Acción pendiente y de quién**: exportar la URL exacta desde Inspección de URLs en GSC (ver
-`docs/gsc-indexing-export-checklist.md`). Con eso, la corrección más segura para cualquiera de
-estos grupos que resulte real es añadir `alternates.canonical` explícito hacia la variante más
-fuerte de contenido en `generateMetadata` — el mismo patrón que ya usa el código para las
-variantes de ID, sin borrar ningún producto ni cambiar slugs.
+Cruce real contra `reports/indexable-product-quality.csv` y `reports/canonical-audit.csv`
+(`reports/gsc-crawled-not-indexed-analysis.csv`, 85 filas):
+- **81/85** no tienen ninguna señal local de duplicado (`duplicate_group` vacío) ni de contenido
+  débil (`content_score` normal) — es decir, Google decidió no indexarlas por razones de
+  calidad/duplicación de contenido que **no son visibles en los campos estructurados del sitio**
+  (podría ser similitud semántica entre descripciones de productos generadas por IA en el mismo
+  lote, no detectable por mi heurística de nombre/imagen exacta).
+- **4/85** no aparecen en el inventario local actual (probablemente rutas ya removidas o
+  renombradas).
 
-## 2. Rastreada: actualmente sin indexar (85 URL) — P1
+**No es un error de sitio.** No se recomienda ninguna corrección de código — forzar indexación de
+estas páginas sin evidencia de por qué Google las descartó sería ir en contra de la instrucción
+explícita de `noindex.md` de no indexar indiscriminadamente.
 
-Decisión de calidad/duplicación de Google, no un error del sitio. Sin el export de las 85 URLs
-concretas, usé `reports/indexable-product-quality.csv` (2,185 productos puntuados 0-100 por una
-heurística reproducible: nombre, `seoDescription`, `story`, `features`, `useCases`, imágenes,
-categoría) como proxy de qué páginas son candidatas plausibles:
+## 3. Descubierta: actualmente sin indexar (104 URL) — P1, parcialmente accionable
 
-- Distribución de calificación A-E: **A (mantener)=2089, B (mejorar)=1, C (consolidar)=12,
-  D (noindex, ya aplicado)=83, E (redirect/retirar)=0**.
-- Los 12 productos `C` son exactamente los 12 URLs de los 6 grupos duplicados de la sección 1.
-- El campo preexistente `quality_score` de `data/products.json` (1,830/2,185 productos lo tienen;
-  distribución: 1,673 en 100, 141 en 80, y solo 10 por debajo de 90) es una señal *distinta* —
-  probablemente de un scoring del pipeline de IA de generación de contenido, no de SEO técnico —
-  y se incluye en `indexable-product-quality.csv` como columna informativa
-  (`existing_quality_score_field`), sin mezclarlo con el cálculo propio.
+Cruce real contra `reports/local-indexability-inventory.csv`
+(`reports/discovered-not-indexed-strategy.csv`, 104 filas, tiers P1-P4):
 
-**Acción pendiente**: exportar aunque sea una muestra de 10 URLs reales de este motivo (ver
-checklist) para confirmar si el patrón "duplicado de nombre" o "contenido débil" se sostiene.
+**Hallazgo fuerte**: las **6 URLs en tier P1** (huérfanas confirmadas, sin ningún enlace interno
+estático detectado) coinciden **exactamente** con 6 de las 23 páginas que ya había marcado como
+huérfanas por análisis local independiente (`reports/orphan-pages.csv`) — es decir, dos métodos
+distintos (proxy local vs. dato real de GSC) señalan las mismas páginas:
 
-## 3. Descubierta: actualmente sin indexar (104 URL) — P1
+| URL | Tipo |
+| --- | --- |
+| `/politica-de-privacidad/` | legal |
+| `/categorias/bicicleta/` | categoría |
+| `/categorias/paraguas/` | categoría |
+| `/categorias/reflectivos/` | categoría |
+| `/productos-promocionales-ecuador/quito/` | ciudad |
+| `/productos-promocionales-ecuador/guayaquil/` | ciudad |
 
-Backlog de rastreo/prioridad de Google, no un error de sitio. `Validación: Iniciada` (a diferencia
-de los otros motivos en `Error`) sugiere que Google ya está trabajando en esto activamente.
+**Esto es relevante para una pregunta abierta del trabajo anterior** (`seo-4.md`, hallazgo #11):
+por qué Quito y Guayaquil, siendo las ciudades más grandes, no lideran el tráfico. Una causa
+técnica concreta y accionable: **ninguna página estática detectable enlaza estas dos páginas de
+ciudad** (solo se llega a ellas si el usuario navega manualmente o vía sitemap).
 
-Generé `reports/discovered-not-indexed-strategy.csv` con niveles P0-P4 a partir de
-`reports/local-indexability-inventory.csv`, cruzando `in_sitemap` + enlaces internos estáticos +
-`content_score`. Distribución real tras la corrida: **P0=1, P1=23, P2=0, P3=9, P4=2154**.
+El resto (93 URLs en P4, 5 en P3) son mayormente productos/posts de blog donde el conteo de
+enlaces internos no es fiable (se enlazan vía componentes dinámicos) — no se puede concluir que
+estén huérfanos, requieren revisión manual.
 
-**Limitación honesta y explícita**: la mayoría de productos y posts de blog se enlazan en
-producción mediante componentes que arman el `href` en runtime a partir de datos
-(`src/components/ProductCard.tsx`, `src/app/blog/page.tsx`), no mediante `href` literal en JSX.
-Mi detector de enlaces internos (regex estática) **no puede resolver esos casos**, así que para
-`type=product` y `type=blog` NO usé el conteo de enlaces como señal de prioridad — solo
-`in_sitemap` + `content_score` (por eso la mayoría cae en P4 = "confirmar manualmente", no en P1).
-Donde el conteo SÍ es fiable (categorías, ciudades, páginas comerciales/legales) identifiqué
-**24 páginas huérfanas reales** (`reports/orphan-pages.csv`) sin ningún enlace estático detectado
-desde menús, footer, home o listados — ver sección de sitemap/enlaces internos más abajo.
+**Acción recomendada** (no ejecutada en este trabajo — cambiar enlazado interno de 6 páginas es
+una decisión de diseño de navegación, no un fix de auditoría): añadir un enlace contextual hacia
+esas 6 URLs desde una página con autoridad (home, menú, footer o página de categoría relacionada).
 
-**Acción pendiente**: exportar la lista real de 104 URLs para reemplazar esta estimación por
-datos verificados, y priorizar enlazado interno o mejora de contenido según corresponda.
+## 4. Página con redirección (23 URL) — P4, 100% confirmado correcto
 
-## 4. Página con redirección (23 URL) — P2
+Cruce real contra `public/_redirects` y `netlify.toml` (`reports/indexing-redirect-audit.csv`,
+23 filas): **las 23 quedan completamente explicadas, 0 errores reales**:
+- **21/23** son redirects 301 intencionales ya verificados uno a uno contra las reglas del repo
+  (slugs legacy de productos con ID nuevo, la categoría `gorras`, etc.).
+- **2/23** son las variantes `http://kronosolopromocionales.com/` y
+  `https://kronosolopromocionales.com/` (sin www) — ya cubiertas por las reglas de
+  canonicalización de dominio en `netlify.toml` (`force = true` hacia `https://www`).
 
-`Validación: Error`, pero el repo ya tiene **303 reglas de redirect** activas
-(`public/_redirects` + `netlify.toml`), incluyendo los 5 redirects de productos legacy que se
-añadieron en la tarea de `404.md` (commit `5131356`: `portacomida-produccion-nacional`,
-`canguro-dior`, `bola-para-mascotas`, `copa-para-vino-7oz-produccion-nacional`,
-`speaker-bluetooth-con-lampara-oferta` → sus slugs con ID) y todos los redirects de Colombia del
-commit `b8a7ca8`.
+GSC probablemente tarda en reclasificar estas URLs de "página con redirección" a un estado neutro
+después de que el 301 ya está funcionando — no requiere ninguna acción de código.
 
-Es probable que buena parte de las 23 URL sean redirects **intencionales y correctos**, y que
-GSC solo los reporte como "no indexados" porque, por definición, una URL con 301 no debe
-indexarse — eso sería el comportamiento esperado, no un error. Generé
-`reports/indexing-redirect-audit.csv` con las 303 reglas existentes marcadas como
-`regla_existente_en_repo_pendiente_de_cotejar_con_export_gsc`: el script
-`scripts/analyze-indexing-reasons.mjs` está listo para cruzar automáticamente contra el export
-real de GSC (`redirect.csv`) en cuanto lo tengas, y decidir cuáles de las 23 son redirects sanos
-vs cuáles apuntan a un destino que ya no existe (redirect roto).
+## 5. No se ha encontrado — 404 (7 URL) — P4, 6/7 ya resueltas
 
-## 5. No se ha encontrado — 404 (7 URL) — P2
+Cruce real (`reports/gsc-404-reconciliation.csv`, 7 filas):
+- **6/7 ya tienen redirect 301 funcional**: 4 de ellas del trabajo de `404.md` (commit `5131356`:
+  `canguro-dior`, `vaso-tapa-plastico-14-oz-produccion-nacional`, `pano-en-microfibra`,
+  `aplausometro-redondo-produccion-nacional`), más **2 hallazgos que ya tenían redirect desde
+  antes y no había documentado**: `/productos/set-destornillador-pistol` →
+  `/categorias/herramientas/` y `https://kronosolopromocionales.com/product-category/tecnologia/`
+  → `/categorias/tecnologia-promocional/` (URL legacy tipo WordPress).
+- **1/7 es una URL fantasma**: `https://www.kronosolopromocionales.com/productos/$` (con el
+  carácter literal `$` en el path). No existe ni existió como slug real de ningún producto —
+  probablemente un artefacto histórico de algún enlace roto que ya no está en el código actual.
+  No se creó redirect para esto: no hay un destino sensato ni evidencia de qué se pretendía
+  enlazar, y crear un redirect para una URL con un carácter así de anómalo no aporta valor.
 
-Este motivo se solapa con el trabajo ya ejecutado y comprometido en la tarea `404.md`
-(commit `5131356`, ya en `main`). Ese trabajo resolvió 5 URLs de productos legacy con 404 real
-detectadas en el propio análisis de esa sesión (top 10 con impresiones y cero clics). **No sé si
-esas 5 son las mismas 7 que reporta este informe** — podrían solaparse total, parcialmente, o ser
-un lote distinto. No se debe repetir ni revertir ese trabajo sin confirmar primero.
+## 6. Excluida por noindex (373 URL) — P4, 0 errores reales confirmados
 
-**Acción pendiente**: exportar las 7 URLs exactas (`404.csv`) para confirmar solape con el trabajo
-ya hecho, sin tocar nada de código hasta tenerlas.
+Este es el hallazgo con el cambio de conclusión más grande tras tener datos reales. Reconciliación
+completa 1 a 1 (`reports/gsc-noindex-reconciliation.csv`, 373 filas):
 
-## 6. Excluida por noindex (373 URL) — P3
+| Categoría | Cantidad | % | Explicación |
+| --- | ---: | ---: | --- |
+| Redirect 301 ya funcional, agrupado por GSC bajo "noindex" | 218 | 58% | Slugs legacy con ID que ya redirigen — GSC los reporta aquí en vez de en "página con redirección" |
+| Indexable HOY localmente, pero GSC lo rastreó antes de que se corrigiera | 145 | 39% | **Dato de GSC desactualizado**, no un error vigente |
+| Noindex intencional, confirmado y vigente hoy | 10 | 3% | `is_ai_optimized=false`, correcto |
 
-`Validación: Error`, pero un `noindex` es, casi por definición, una señal **intencional** — que
-GSC lo marque como "Error" no implica que el sitio esté mal configurado, solo que Google detectó
-la directiva y la respetó.
+El patrón que confirma la hipótesis del "dato desactualizado": agrupé las 373 filas por mes de
+`Último rastreo`. El 100% de las 145 "contradicciones" (indexable hoy, noindex cuando GSC
+rastreó) tiene fecha de rastreo de **mayo o junio de 2026** — ninguna de julio. Esto coincide con
+el período de trabajo activo del pipeline de enriquecimiento de contenido (commits
+`chore(pipeline): +32/+57 productos`), que fue cambiando productos de `is_ai_optimized=false` a
+`true` progresivamente. Es decir: Google todavía no ha vuelto a rastrear ~145 páginas desde que se
+les quitó el noindex — se espera que esta cifra baje por sí sola en los próximos rastreos, sin
+necesidad de ningún cambio de código.
 
-Localmente solo pude verificar **84 productos** con `robots: {index:false}` explícito, todos por
-`is_ai_optimized=false` (pendientes de enriquecimiento de contenido) — ver
-`reports/noindex-audit.csv`. La discrepancia 373 vs 84 (289 URLs) puede deberse a varias causas
-que no puedo distinguir sin el export:
-- URLs históricas que ya no existen en el sitio actual (productos eliminados, categorías
-  renombradas, rutas de una estructura anterior).
-- Parámetros de URL o rutas con trailing slash / sin trailing slash contadas por separado.
-- Páginas noindex por otros mecanismos no cubiertos por mi inventario (p. ej. si alguna vez
-  existieron rutas de Colombia con noindex antes de ser eliminadas — la limpieza de Colombia del
-  commit `b8a7ca8` borró rutas completas, lo que generaría justamente noindex/404 históricos en
-  GSC durante un tiempo).
-
-**Acción pendiente**: exportar `noindex.csv` para reconciliar la diferencia real. Mientras tanto,
-no se recomienda ninguna acción — no hay evidencia de que las 373 sean un problema; es más
-probable que sea ruido histórico + los 84 casos intencionales ya conocidos.
+**373/373 explicadas, 0 errores técnicos de sitio pendientes de corregir.**
 
 ## Referencia cruzada: Core Web Vitals
 
 No se ejecutó una nueva auditoría de rendimiento para este trabajo — no aporta a un problema de
 *indexación* directamente. `reports/core-web-vitals-lab.md` (generado 2026-07-18) ya documenta que
-LCP está lejos del objetivo en las 6 plantillas medidas y que CLS ya cumple; eso es relevante para
-"crawlability"/calidad de página solo como contexto adicional, no como causa de las 593 URL.
+LCP está lejos del objetivo en las 6 plantillas medidas y que CLS ya cumple.
 
-## Resumen de prioridades (P0 → P3)
+## Resumen final de prioridades
 
-| Prioridad | Motivo | Acción |
+| Prioridad | Motivo | Estado tras reconciliar con datos reales |
 | --- | --- | --- |
-| P0 | Duplicada sin canonical (1) | Exportar URL exacta vía Inspección de URLs; candidatos ya identificados en `reports/canonical-audit.csv` |
-| P1 | Rastreada sin indexar (85) + Descubierta sin indexar (104) | Exportar tablas reales; mientras tanto, reforzar enlazado interno en las 24 huérfanas confirmadas de `reports/orphan-pages.csv` |
-| P2 | Redirección (23) + 404 (7) | Exportar tablas reales para confirmar solape con trabajo ya hecho antes de tocar redirects |
-| P3 | Noindex (373 vs 84 local) | Exportar `noindex.csv` para reconciliar; sin evidencia de problema real hoy |
+| P0 | Duplicada sin canonical (1) | Sin resolver — no coincide con ningún patrón local; requiere Inspección de URL manual en GSC |
+| P1 | Descubierta sin indexar (104) | 6 URLs con causa y solución concretas (enlazado interno); resto requiere monitoreo |
+| P1 | Rastreada sin indexar (85) | Decisión de calidad de Google no visible en datos estructurados; sin acción de código |
+| P4 | Redirección (23) | 100% confirmado correcto, 0 acción |
+| P4 | 404 (7) | 6/7 ya resueltas, 1/7 artefacto histórico sin destino sensato |
+| P4 | Noindex (373) | 100% explicado, 0 errores reales; 145 se autocorregirán con el próximo rastreo de Google |

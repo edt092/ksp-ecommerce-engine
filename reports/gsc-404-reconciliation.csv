@@ -1,0 +1,8 @@
+url,last_crawled,matched_locally,local_type,redirect_target,verdict
+https://www.kronosolopromocionales.com/productos/canguro-dior/,2026-07-11,true,redirect,/productos/canguro-dior-9823/,ya_resuelto_con_redirect_301
+https://www.kronosolopromocionales.com/productos/vaso-tapa-plastico-14-oz-produccion-nacional/,2026-07-08,true,redirect,/productos/vaso-tapa-plastico-14-oz-produccion-nacional-2871/,ya_resuelto_con_redirect_301
+https://www.kronosolopromocionales.com/productos/$/,2026-07-05,false,,,no_existe_localmente_404_real_pendiente_de_decidir_redirect_o_dejar_asi
+https://www.kronosolopromocionales.com/productos/pano-en-microfibra/,2026-05-17,true,redirect,/productos/pano-en-microfibra-3192/,ya_resuelto_con_redirect_301
+https://www.kronosolopromocionales.com/productos/aplausometro-redondo-produccion-nacional/,2026-04-14,true,redirect,/productos/aplausometro-redondo-produccion-nacional-5685/,ya_resuelto_con_redirect_301
+https://www.kronosolopromocionales.com/productos/set-destornillador-pistol/,2026-02-23,true,redirect,/categorias/herramientas/,ya_resuelto_con_redirect_301
+https://www.kronosolopromocionales.com/product-category/tecnologia/,2026-01-29,true,redirect,/categorias/tecnologia-promocional/,ya_resuelto_con_redirect_301
