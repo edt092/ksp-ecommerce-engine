@@ -539,17 +539,17 @@ export const blogContent = {
 
   'mejores-productos-promocionales-2025': `
     <h2>La Evolución del Merchandising Corporativo</h2>
-    <p>El mercado de productos promocionales ha experimentado una transformación significativa en los últimos años. Las empresas ya no buscan simplemente regalar artículos con su logo; ahora buscan productos que generen valor real y conexión emocional con sus audiencias. En 2025, la tendencia se centra en la funcionalidad, sostenibilidad y tecnología.</p>
+    <p>El mercado de productos promocionales ha experimentado una transformación significativa en los últimos años. Las empresas ya no buscan simplemente regalar artículos con su logo; ahora buscan productos que generen valor real y conexión emocional con sus audiencias. La tendencia actual se centra en la funcionalidad, sostenibilidad y tecnología.</p>
 
     <h2>Los 10 Productos Promocionales Más Efectivos</h2>
 
     <h3>1. Power Banks de Alta Capacidad</h3>
-    <p>En la era digital, la batería es oro. Los power banks personalizados con capacidades de 10,000mAh o más son extremadamente valorados. Tu marca acompañará a tus clientes todo el día, cada día. El ROI de estos productos es excepcional: según estudios recientes, el 89% de los usuarios conserva power banks promocionales por más de 2 años.</p>
+    <p>En la era digital, la batería es oro. Los power banks personalizados con capacidades de 10,000mAh o más son extremadamente valorados. Tu marca acompañará a tus clientes todo el día, cada día. Al ser un producto de uso frecuente y larga vida útil, genera impresiones de marca sostenidas mucho después de la entrega.</p>
 
     <h3>2. Botellas Térmicas Premium</h3>
     <p>La sostenibilidad es protagonista. Las botellas térmicas de acero inoxidable no solo reducen el uso de plástico, sino que también mantienen bebidas frías por 24 horas o calientes por 12 horas. Son perfectas para deportistas, oficinistas y cualquier persona consciente del medio ambiente. La personalización con grabado láser garantiza durabilidad del branding.</p>
 
-    <h3>3. Textiles de Alta Cuencadad</h3>
+    <h3>3. Textiles de Alta Calidad</h3>
     <p>Polos, camisetas y chompas de algodón premium o materiales técnicos son inversiones que pagan dividendos a largo plazo. Un textil bien diseñado se convierte en publicidad móvil constante. La clave está en elegir calidades superiores: telas suaves, costuras reforzadas y colores que no se desvanecen.</p>
 
     <h3>4. Audífonos Bluetooth TWS</h3>
@@ -577,7 +577,7 @@ export const blogContent = {
     <p>Al elegir productos promocionales, considera: <strong>utilidad real</strong> (¿lo usarán frecuentemente?), <strong>calidad percibida</strong> (refleja tu marca), <strong>durabilidad</strong> (impacto a largo plazo), <strong>capacidad de personalización</strong> (visibilidad de marca) y <strong>alineación con valores</strong> (sostenibilidad, innovación).</p>
 
     <h2>Conclusión</h2>
-    <p>Los mejores productos promocionales 2025 combinan funcionalidad, calidad y alineación con tendencias actuales. No se trata de cantidad sino de impacto. Un solo producto bien elegido genera más valor que docenas de artículos mediocres. En KS Promocionales te ayudamos a seleccionar exactamente lo que tu marca necesita.</p>
+    <p>Los mejores productos promocionales combinan funcionalidad, calidad y alineación con tendencias actuales. No se trata de cantidad sino de impacto. Un solo producto bien elegido genera más valor que docenas de artículos mediocres. En KS Promocionales te ayudamos a seleccionar exactamente lo que tu marca necesita.</p>
 
     <h2>Cómo Elegir el Producto Promocional Correcto para tu Empresa</h2>
     <p>Con tantas opciones disponibles, elegir el artículo correcto puede parecer abrumador. Estas cuatro variables te guiarán hacia la decisión más inteligente para tu inversión:</p>
@@ -1030,10 +1030,26 @@ export const blogContent = {
     <h2>Errores Fatales a Evitar</h2>
     <p>No cometas: regalos genéricos sin personalización (comunicar "eres uno más del montón"), calidad inferior evidente (daña percepción de marca), entregas tardías post-20 de diciembre (pierden impacto), regalos inapropiados culturalmente (alcohol a clientes que no consumen, por ejemplo), y omitir tarjeta personalizada (pierde oportunidad de conexión personal).</p>
 
+    <h2>Checklist Antes de Solicitar tu Cotización</h2>
+    <p>Antes de contactarnos, define estos puntos: tendrás una cotización más precisa y rápida.</p>
+    <ul>
+      <li><strong>Número de destinatarios por tier:</strong> ¿cuántos clientes estratégicos, clientes generales, proveedores y colaboradores recibirán regalo?</li>
+      <li><strong>Presupuesto de referencia por tier:</strong> un rango aproximado por categoría de destinatario (no hace falta cifra exacta, ayuda a filtrar opciones).</li>
+      <li><strong>Fecha límite de entrega:</strong> ¿cuándo debe estar en manos del destinatario? Define también si hay entregas escalonadas por tier.</li>
+      <li><strong>Nivel de personalización deseado:</strong> logo grabado/impreso, mensaje personalizado, packaging de marca, o combinación.</li>
+      <li><strong>Ciudad(es) de entrega:</strong> si tus destinatarios están en varias ciudades del país, dínoslo para planificar logística.</li>
+      <li><strong>Restricciones a considerar:</strong> alergias, preferencias religiosas o culturales, o políticas internas del cliente sobre regalos corporativos.</li>
+    </ul>
+    <p>Con esta información, nuestro equipo te presenta opciones concretas alineadas a tu <a href="/regalos-corporativos/" class="text-primary hover:underline font-medium">programa de regalos corporativos</a> sin idas y vueltas innecesarias.</p>
+
     <h2>Conclusión: Regalos que Fortalecen Relaciones</h2>
-    <p>Los regalos corporativos de fin de año no son gasto, son inversión en capital relacional. Un regalo thoughtful y de calidad fortalece vínculos que se traducen en negocios del año siguiente. La diferencia entre un cliente que renueva y uno que no, a menudo radica en estos gestos de aprecio consistentes. En KS Promocionales diseñamos programas completos de regalos corporativos: desde selección estratégica hasta logística de entrega y medición de impacto. Porque tu gratitud merece ser memorable.</p>
+    <p>Los regalos corporativos de fin de año no son gasto, son inversión en capital relacional. Un regalo thoughtful y de calidad fortalece vínculos que se traducen en negocios del año siguiente. La diferencia entre un cliente que renueva y uno que no, a menudo radica en estos gestos de aprecio consistentes. En KS Promocionales diseñamos programas completos de <a href="/regalos-corporativos/" class="text-primary hover:underline font-medium">regalos corporativos</a>: desde selección estratégica hasta logística de entrega y medición de impacto. Porque tu gratitud merece ser memorable.</p>
 
     <p>Visita nuestros <a href="/categorias/novedades" class="text-primary hover:underline font-medium">productos promocionales novedosos</a> para encontrar ideas frescas para esta temporada, o sorprende a tus clientes VIP con una selección de <a href="/categorias/mugs-y-termos-personalizados" class="text-primary hover:underline font-medium">mugs y termos personalizados</a> de alta calidad.</p>
+
+    <p style="text-align:center; margin-top: 24px;">
+      <a href="https://wa.me/593999814838?text=Hola,%20quiero%20cotizar%20un%20programa%20de%20regalos%20corporativos%20de%20fin%20de%20a%C3%B1o" style="display: inline-block; background: #25D366; color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px;">💬 Cotizar mi programa de regalos corporativos</a>
+    </p>
   `,
 
   'personalizacion-productos-tecnicas-impresion': `
