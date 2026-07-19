@@ -11,6 +11,8 @@
     "seo:analyze": "node scripts/analyze-gsc.mjs",
     "seo:redirects": "node scripts/build-redirect-map.mjs",
     "seo:links": "node scripts/find-broken-internal-links.mjs",
+    "seo:indexability": "node scripts/audit-indexability.mjs",
+    "seo:indexing": "node scripts/analyze-indexing-reasons.mjs",
     "seo:test": "node scripts/run-seo-tests.mjs"
   },
   "dependencies": {
