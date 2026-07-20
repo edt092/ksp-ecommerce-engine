@@ -4,6 +4,50 @@ Continuación de `docs/seo-master-plan-2026-07-19.md` y `reports/audit-findings-
 Este documento es solo el punto de partida para la próxima sesión — no repite el análisis ya
 hecho, solo el estado y lo que falta.
 
+## Fase 11 — metadata a escala: auditoría + muestra corregida (commit `e1fdb8c`)
+
+- `scripts/audit-metadata-quality.mjs` (nuevo, reutilizable): audita title/description de los
+  2.036 productos indexables + 37 categorías + 40 posts de blog. Genera
+  `reports/metadata-duplication-audit.csv` (productos) y
+  `reports/metadata-duplication-audit-categories-blog.csv`.
+- **Corregidos 17 de 19 productos** con `seoTitle` exactamente duplicado entre sí (7 títulos
+  distintos repetidos). No eran duplicados de producto (imágenes distintas en todos los
+  casos) — un bug de pipeline les puso un título genérico de categoría. El peor caso: 9
+  productos compartían "Pelota Antiestrés Personalizada | Ecuador", incluyendo un **soporte
+  para celular** y un **frisbee** que ni siquiera son pelotas antiestrés. Cada título nuevo
+  usa solo datos reales del producto (nombre, medidas cuando existen). Duplicados exactos de
+  title: 19 → 2. Descriptions: 0 duplicados exactos en todo el catálogo (ya cumplía el
+  principio del plan de no repetir fórmula sin dato real).
+- Validado: `validate-unique-slugs`, `seo:links`, `seo:redirects`, `seo:indexability`,
+  `pnpm build`, `seo:test` en 0.
+- **Commit local, no pusheado aún** al cierre de esta sesión — pendiente decisión del usuario.
+
+### 🔴 Hallazgos de Fase 11 pendientes de decisión (no tocados esta sesión)
+
+- **Par de mugs sin diferenciador real**: `mug-metalico-star-350ml-8986` (categoría Mugs y
+  Termos) y `mug-metalico-star-350ml-13197` (categoría Novedades) — mismo nombre exacto,
+  misma capacidad (350ml), mismo material descrito, pero imágenes distintas (8986.jpg vs
+  13197.jpg) así que NO calificaron para el protocolo de duplicados de Fase 2. Quedaron con
+  su `seoTitle` original (duplicado) en vez de forzar un título con un diferenciador
+  inventado. Recomendación: revisar visualmente si son el mismo producto fotografiado dos
+  veces (posible duplicado no detectado) o de verdad dos productos distintos sin dato que los
+  diferencie.
+- **4 "productos" que en realidad son portadas de catálogo**: `relojes-catalogo-novelties`,
+  `relojes-catalogo-novelties-2026`, `relojes-catalogo-mundial-2026`,
+  `relojes-catalogo-produccion-nacional` — todos categoría `relojes`, todos con
+  `is_ai_optimized=true` (indexados como si fueran productos cotizables) pero sus imágenes
+  son literalmente portadas de catálogo (`PORTADA-*.jpg`, `PRODUCCION_NACIONAL.jpg`), no
+  fotos de un reloj específico. `relojes-catalogo-produccion-nacional` es el peor caso: su
+  `name` es "Catálogo Producción Nacional" pero su `seoTitle` habla de "Relojes Promocionales
+  Personalizados" en general — compite en la misma keyword que relojes reales sin ofrecer un
+  producto cotizable. Pendiente decidir: ¿noindex (no son productos reales) o mantener como
+  landing de catálogo con contenido honesto sobre qué es?
+- **Longitud de title/description en riesgo de truncamiento**: ~38 productos, 8 categorías y
+  32 de 40 posts de blog superan 65/165 caracteres. Volumen grande — no se tocó esta sesión
+  (el plan pide explícitamente no regenerar metadata a escala sin revisión de muestra;
+  arreglar 32 posts de blog uno por uno es trabajo para una sesión dedicada). Ver las columnas
+  `title_status`/`description_status` en ambos CSV para la lista completa.
+
 ## Fase 6/7 — piloto de página de ciudad (Quito): implementado (commit `a2eed60`)
 
 - `reports/schema-entity-audit.csv` generado (14 URLs muestra, 53 bloques JSON-LD). Confirma
