@@ -795,3 +795,26 @@
 /productos/woodymas-3690/   /productos/woody-3690/   301
 /productos/ecologikmas-8231   /productos/ecologik-8231/   301
 /productos/ecologikmas-8231/   /productos/ecologik-8231/   301
+
+# 301 Redirects — Fase 2 Batch 6: consolidación de duplicados LIKELY_DUPLICATE validados campo por campo
+# reports/product-duplicate-candidates.csv + reports/batch6-duplicate-redirects.csv
+/productos/paraguas-23-roma-urban-travel-9217   /productos/paraguas-23-9217/   301
+/productos/paraguas-23-roma-urban-travel-9217/   /productos/paraguas-23-9217/   301
+/productos/paraguas-27-gentle-urban-travel-9218   /productos/paraguas-27-9218/   301
+/productos/paraguas-27-gentle-urban-travel-9218/   /productos/paraguas-27-9218/   301
+/productos/mug-eco-chic-bambu-disfruta-tu-cafe-con-estilo-sustentable-9699   /productos/mug-metalico-con-bamboo-500ml-9699/   301
+/productos/mug-eco-chic-bambu-disfruta-tu-cafe-con-estilo-sustentable-9699/   /productos/mug-metalico-con-bamboo-500ml-9699/   301
+/productos/agarre-total-flexi-tu-copiloto-ideal-7518   /productos/soporte-para-movil-flexi-7518/   301
+/productos/agarre-total-flexi-tu-copiloto-ideal-7518/   /productos/soporte-para-movil-flexi-7518/   301
+/productos/no-pierdas-mas-tiempo-encuentra-tus-llaves-con-keyfind-7776   /productos/localizador-de-llaves-7776/   301
+/productos/no-pierdas-mas-tiempo-encuentra-tus-llaves-con-keyfind-7776/   /productos/localizador-de-llaves-7776/   301
+/productos/pilot-grip-tu-copiloto-perfecto-9080   /productos/soporte-para-moviles-pilot-9080/   301
+/productos/pilot-grip-tu-copiloto-perfecto-9080/   /productos/soporte-para-moviles-pilot-9080/   301
+/productos/escudo-solar-auto-frescura-y-proteccion-para-tu-viaje-1442   /productos/protector-solar-para-carro-1442/   301
+/productos/escudo-solar-auto-frescura-y-proteccion-para-tu-viaje-1442/   /productos/protector-solar-para-carro-1442/   301
+/productos/turboclean-mini-el-aspirador-imbatible-para-tu-auto-7410   /productos/aspiradora-para-carro-7410/   301
+/productos/turboclean-mini-el-aspirador-imbatible-para-tu-auto-7410/   /productos/aspiradora-para-carro-7410/   301
+/productos/ecologica-vita-bolsa-reutilizable-hecha-en-mexico-9364   /productos/bolsa-en-cambrel-multiusos-vita-prod-nacional-9364/   301
+/productos/ecologica-vita-bolsa-reutilizable-hecha-en-mexico-9364/   /productos/bolsa-en-cambrel-multiusos-vita-prod-nacional-9364/   301
+/productos/descanso-tricolor-cojin-de-viaje-3-en-1-9333   /productos/cojin-de-viaje-triple-uso-produccion-nacional-9333/   301
+/productos/descanso-tricolor-cojin-de-viaje-3-en-1-9333/   /productos/cojin-de-viaje-triple-uso-produccion-nacional-9333/   301
