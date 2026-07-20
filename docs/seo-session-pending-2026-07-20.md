@@ -4,6 +4,42 @@ Continuación de `docs/seo-master-plan-2026-07-19.md` y `reports/audit-findings-
 Este documento es solo el punto de partida para la próxima sesión — no repite el análisis ya
 hecho, solo el estado y lo que falta.
 
+## Fase 6/7 — piloto de página de ciudad (Quito): implementado (commit `a2eed60`)
+
+- `reports/schema-entity-audit.csv` generado (14 URLs muestra, 53 bloques JSON-LD). Confirma
+  que las 5 páginas de ciudad emitían cada una su propio `LocalBusiness` sin `@id` compartido
+  (5 "negocios" ante Google en vez de la entidad real única en `layout.tsx#localbusiness`).
+  También encontró y arregló un caso igual en el `OnlineStore` de la home
+  (`src/app/page.tsx`) — le faltaba `@id`, ahora comparte el de `#localbusiness`.
+- Piloto solo en Quito (`src/lib/city-pilot.ts`, `CITY_PILOT_SLUGS`): schema pasa de
+  `LocalBusiness` independiente a `Service` (`provider` → `#localbusiness`) +
+  `BreadcrumbList` + `FAQPage`, más una sección de FAQ visible (misma fuente que el schema,
+  verificado que coinciden literalmente). Guayaquil/Cuenca/Manta/Ambato **sin tocar** —
+  verificado en `out/` que mantienen exactamente su schema y contenido anteriores.
+- De paso: cifra desactualizada "1,200 productos" en `data/geo-data.js` (se había escapado
+  del fix de Fase 4 de la sesión anterior porque vive en un string de datos, no en JSX) →
+  corregida a "2.100". Enlaces a ciudades sin trailing slash corregidos en 2 archivos.
+- Medida similitud Jaccard de contenido entre las 5 ciudades: 20.5%–47.5%, mayoría 22–30% —
+  ya razonablemente diferenciado, no fue necesaria reescritura de contenido para el piloto.
+- Validado: `validate-unique-slugs`, `seo:links`, `seo:redirects`, `seo:indexability`,
+  `pnpm build`, `seo:test` en 0. Revisión visual en navegador confirmada.
+- **Commit local, no pusheado aún** al cierre de esta sesión — pendiente decisión del usuario.
+
+### 🔴 Pendiente antes de extender a Guayaquil/Cuenca/Manta/Ambato (requiere aprobación explícita)
+
+- El plan advierte que **Cuenca, Ambato y Manta ya mostraron rendimiento positivo en GSC
+  histórico** — a diferencia de la extensión de Fase 9 (aprobada y aplicada en la misma
+  sesión sin este riesgo), aquí se recomienda revisar esos datos de GSC reales antes de
+  tocar esas 3 páginas, aunque el cambio de schema en sí es de bajo riesgo (no modifica
+  contenido visible, solo unifica la entidad — el riesgo real estaría en tocar contenido).
+  Guayaquil no tiene esa señal de alerta en el plan.
+- `reports/schema-entity-audit.csv` deja las 4 filas de Guayaquil/Cuenca/Manta/Ambato
+  marcadas `duplicate_entity=true`, acción `PENDIENTE`, listas para cuando se apruebe extender.
+- La dirección `streetAddress: "Norte de Quito"` en el `LocalBusiness` global (`layout.tsx`)
+  sigue sin verificar — el propio `plan-seo.md` la cita textualmente como ejemplo de qué NO
+  usar (Fase 17). Fuera de alcance de Fase 6/7, pero vale la pena resolverlo en una sesión
+  futura pidiendo al negocio una dirección real o el área de servicio apropiada.
+
 ## Sesión 2026-07-20 — resumen
 
 - Confirmado en producción (vía curl) que el fix de imágenes del commit `bf80bee` funciona:
