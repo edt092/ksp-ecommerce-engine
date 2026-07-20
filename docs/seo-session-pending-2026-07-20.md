@@ -4,6 +4,40 @@ Continuación de `docs/seo-master-plan-2026-07-19.md` y `reports/audit-findings-
 Este documento es solo el punto de partida para la próxima sesión — no repite el análisis ya
 hecho, solo el estado y lo que falta.
 
+## Fase 12 — interlinking blog↔categorías: implementado (commit `dc66fa8`)
+
+Ver `docs/content-cluster-priority-map.md` para el detalle completo. Resumen:
+
+- `scripts/audit-content-clusters.mjs` (nuevo): 6 posts sin ningún enlace comercial → 0. Mapa
+  de los 7 clústeres prioritarios del plan (5 cubiertos, "mugs y termos" sin ningún post de
+  apoyo, "kits de bienvenida" sin categoría/landing ni posts — clúster sin construir).
+- **Hallazgo no planeado**: 5 posts de `data/blog/content/fase3.js` estaban truncados a mitad
+  de frase/HTML (bug de `max_tokens=6000` en `scripts/generate-blog-fase3.js`, corregido a
+  16000). Se intentó regenerar vía API con autorización del usuario — **saldo de API limitado,
+  se detuvo tras 2 intentos** (1 completado bien, 1 aún truncado incluso con más tokens).
+  🔴 **Error propio durante la sesión**: un comando de bash con backticks sin escapar corrompió
+  `fase3.js` por completo a mitad del proceso — se recuperó con `git checkout`, pero el
+  contenido ya generado por la API para "mejores-regalos-corporativos" se perdió (el gasto de
+  API ya se había hecho, no se pudo recuperar el texto). Lección para futuras sesiones: nunca
+  pasar HTML/JS con backticks embebidos a través de un string de bash `-e`; usar siempre un
+  archivo `.js` real ejecutado con `node archivo.js`.
+- Sin más presupuesto de API, los 5 posts quedaron con las etiquetas HTML rotas cerradas
+  limpiamente + un párrafo de cierre corto y un enlace comercial real (sin inventar el
+  contenido que falta). Quedan **más cortos de lo previsto originalmente** — pendiente
+  regenerarlos completos cuando haya saldo de API disponible (el fix de `max_tokens` ya está
+  hecho, solo falta ejecutar `node scripts/generate-blog-fase3.js --only <slug>` por cada uno).
+- Falta la otra mitad del enlazado bidireccional: **ninguna** categoría/landing enlaza de
+  vuelta a un post de blog. Sugerencia ya documentada en
+  `docs/content-cluster-priority-map.md`: sección "Artículos relacionados" en
+  `src/app/categorias/[slug]/page.tsx`.
+- 4 posts (no 3, como decía el audit original) con intención muy solapada detectados
+  ("Guía Completa: Productos Promocionales X" — beneficios/por mayor/baratos/general, enero
+  2025) — **no tocados**, requieren datos reales de GSC antes de decidir
+  mantener/reenfocar/consolidar.
+- Validado: `validate-unique-slugs`, `seo:links`, `seo:redirects`, `seo:indexability`,
+  `pnpm build`, `seo:test` en 0.
+- **Commit local, no pusheado aún** al cierre de esta sesión — pendiente decisión del usuario.
+
 ## Fase 11 — metadata a escala: auditoría + muestra corregida (commit `e1fdb8c`)
 
 - `scripts/audit-metadata-quality.mjs` (nuevo, reutilizable): audita title/description de los
