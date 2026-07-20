@@ -36,6 +36,18 @@ const nextConfig = {
         hostname: '*.catalogospromocionales.com',
         pathname: '/**',
       },
+      {
+        // catalogospromocionales.com ahora redirige (308) todas las imágenes
+        // aquí — es el dominio final real que sirve los archivos.
+        protocol: 'https',
+        hostname: 'cataprom.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.cataprom.com',
+        pathname: '/**',
+      },
     ],
   },
   trailingSlash: true,

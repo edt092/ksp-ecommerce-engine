@@ -1763,12 +1763,12 @@ export const blogContent = {
       <h4 style="margin: 0 0 16px 0; color: #1e293b;">Productos Ideales para Compra por Mayor:</h4>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
         <a href="/productos/boligrafo-metalico-shell-oferta-7326" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0; transition: all 0.3s;">
-          <img src="https://catalogospromocionales.com/images/productos/13341.jpg" alt="Bolígrafo Metálico Shell" style="width: 100%; height: 120px; object-fit: contain; margin-bottom: 12px;">
+          <img src="https://cataprom.com/images/productos/13341.jpg" alt="Bolígrafo Metálico Shell" style="width: 100%; height: 120px; object-fit: contain; margin-bottom: 12px;">
           <p style="margin: 0; color: #1e293b; font-weight: 600; font-size: 14px;">Bolígrafo Metálico Shell</p>
           <p style="margin: 4px 0 0 0; color: #64748b; font-size: 12px;">Ideal para grandes cantidades</p>
         </a>
         <a href="/productos/boligrafo-dormin-bamboo-10839" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0; transition: all 0.3s;">
-          <img src="https://catalogospromocionales.com/images/productos/9802.jpg" alt="Bolígrafo Dormin Bamboo" style="width: 100%; height: 120px; object-fit: contain; margin-bottom: 12px;">
+          <img src="https://cataprom.com/images/productos/9802.jpg" alt="Bolígrafo Dormin Bamboo" style="width: 100%; height: 120px; object-fit: contain; margin-bottom: 12px;">
           <p style="margin: 0; color: #1e293b; font-weight: 600; font-size: 14px;">Bolígrafo Dormin Bamboo</p>
           <p style="margin: 4px 0 0 0; color: #64748b; font-size: 12px;">Ecológico y económico</p>
         </a>
@@ -1826,12 +1826,12 @@ export const blogContent = {
       <h4 style="margin: 0 0 16px 0; color: #1e293b;">Tecnología Promocional por Mayor:</h4>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
         <a href="/categorias/memorias-usb-personalizadas" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0;">
-          <img src="https://catalogospromocionales.com/images/productos/10177.jpg" alt="Memoria USB 8GB" style="width: 100%; height: 120px; object-fit: contain; margin-bottom: 12px;">
+          <img src="https://cataprom.com/images/productos/10177.jpg" alt="Memoria USB 8GB" style="width: 100%; height: 120px; object-fit: contain; margin-bottom: 12px;">
           <p style="margin: 0; color: #1e293b; font-weight: 600; font-size: 14px;">Memoria USB 8GB</p>
           <p style="margin: 4px 0 0 0; color: #64748b; font-size: 12px;">Metálica giratoria</p>
         </a>
         <a href="/categorias/tecnologia-promocional" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0;">
-          <img src="https://catalogospromocionales.com/images/productos/12687.jpg" alt="Parlante Bluetooth Vogue" style="width: 100%; height: 120px; object-fit: contain; margin-bottom: 12px;">
+          <img src="https://cataprom.com/images/productos/12687.jpg" alt="Parlante Bluetooth Vogue" style="width: 100%; height: 120px; object-fit: contain; margin-bottom: 12px;">
           <p style="margin: 0; color: #1e293b; font-weight: 600; font-size: 14px;">Parlante Bluetooth Vogue</p>
           <p style="margin: 4px 0 0 0; color: #64748b; font-size: 12px;">Con LED personalizable</p>
         </a>
@@ -1906,12 +1906,12 @@ export const blogContent = {
       <h4 style="margin: 0 0 16px 0; color: #1e293b;">Textiles para Compra por Mayor:</h4>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
         <a href="/categorias/camisetas-y-confeccion-corporativa" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0;">
-          <img src="https://catalogospromocionales.com/images/productos/7010.jpg" alt="Polo Cotton Nature" style="width: 100%; height: 120px; object-fit: contain; margin-bottom: 12px;">
+          <img src="https://cataprom.com/images/productos/7010.jpg" alt="Polo Cotton Nature" style="width: 100%; height: 120px; object-fit: contain; margin-bottom: 12px;">
           <p style="margin: 0; color: #1e293b; font-weight: 600; font-size: 14px;">Polo Cotton Nature</p>
           <p style="margin: 4px 0 0 0; color: #64748b; font-size: 12px;">Algodón de calidad</p>
         </a>
         <a href="/categorias/gorras-personalizadas" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0;">
-          <img src="https://catalogospromocionales.com/images/productos/9901.jpg" alt="Gorra 6 Paneles Galva" style="width: 100%; height: 120px; object-fit: contain; margin-bottom: 12px;">
+          <img src="https://cataprom.com/images/productos/9901.jpg" alt="Gorra 6 Paneles Galva" style="width: 100%; height: 120px; object-fit: contain; margin-bottom: 12px;">
           <p style="margin: 0; color: #1e293b; font-weight: 600; font-size: 14px;">Gorra 6 Paneles Galva</p>
           <p style="margin: 4px 0 0 0; color: #64748b; font-size: 12px;">Ideal para eventos</p>
         </a>
@@ -1953,12 +1953,12 @@ export const blogContent = {
       <h4 style="margin: 0 0 16px 0; color: #1e293b;">Mugs y Termos para Mayor Impacto:</h4>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
         <a href="/categorias/mugs-y-termos-personalizados" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0;">
-          <img src="https://catalogospromocionales.com/images/productos/1175.jpg" alt="Mug Sublimable 11oz" style="width: 100%; height: 120px; object-fit: contain; margin-bottom: 12px;">
+          <img src="https://cataprom.com/images/productos/1175.jpg" alt="Mug Sublimable 11oz" style="width: 100%; height: 120px; object-fit: contain; margin-bottom: 12px;">
           <p style="margin: 0; color: #1e293b; font-weight: 600; font-size: 14px;">Mug Sublimable 11oz</p>
           <p style="margin: 4px 0 0 0; color: #64748b; font-size: 12px;">El clásico que nunca falla</p>
         </a>
         <a href="/categorias/mugs-y-termos-personalizados" style="display: block; background: white; border-radius: 12px; padding: 16px; text-decoration: none; border: 1px solid #e2e8f0;">
-          <img src="https://catalogospromocionales.com/images/productos/10820.jpg" alt="Vaso Térmico Treking" style="width: 100%; height: 120px; object-fit: contain; margin-bottom: 12px;">
+          <img src="https://cataprom.com/images/productos/10820.jpg" alt="Vaso Térmico Treking" style="width: 100%; height: 120px; object-fit: contain; margin-bottom: 12px;">
           <p style="margin: 0; color: #1e293b; font-weight: 600; font-size: 14px;">Vaso Térmico Treking</p>
           <p style="margin: 4px 0 0 0; color: #64748b; font-size: 12px;">450ml premium</p>
         </a>
@@ -2925,7 +2925,7 @@ export const blogContent = {
 
 <p class="text-gray-700 leading-relaxed mb-4">Este artículo explorará cómo estos ingeniosos utensilios no solo combaten los gérmenes, sino que también elevan la imagen de tu marca en Ecuador. Descubre cómo este regalo corporativo ecológico puede diferenciarte de la competencia, fidelizar a tus clientes y promover un estilo de vida saludable. Analizaremos los beneficios de los productos promocionales antimicrobianos, su impacto positivo en el medio ambiente y las infinitas posibilidades para personalizar estos sets con el logo de tu empresa. ¡Prepárate para revolucionar tus estrategias de marketing con un toque de higiene y sofisticación!</p>
 
-<img src="https://catalogospromocionales.com/images/productos/9694.jpg" alt="Set de Cubiertos Eco - Material Antibacteriano personalizado para empresas" class="w-full rounded-xl my-6 shadow-lg" />
+<img src="https://cataprom.com/images/productos/9694.jpg" alt="Set de Cubiertos Eco - Material Antibacteriano personalizado para empresas" class="w-full rounded-xl my-6 shadow-lg" />
 
 <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Di Adiós a la Preocupación por la Higiene: Cubiertos Eco Antibacterianos en Quito, Guayaquil y Más</h2>
 
@@ -3031,7 +3031,7 @@ export const blogContent = {
 
 <p class="text-gray-700 leading-relaxed mb-4">Este artículo le mostrará cómo estos prácticos accesorios, ideales para la sublimación, pueden convertirse en el regalo promocional perfecto para sus clientes y empleados. ¡Prepárese para una estrategia imbatible!</p>
 
-<img src="https://catalogospromocionales.com/images/productos/8689.jpg" alt="Cuello Multifuncional para Sublimación personalizado para empresas" class="w-full rounded-lg shadow-md my-6" />
+<img src="https://cataprom.com/images/productos/8689.jpg" alt="Cuello Multifuncional para Sublimación personalizado para empresas" class="w-full rounded-lg shadow-md my-6" />
 
 <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4 border-l-4 border-primary pl-4">¿Por Qué el Cuello Multifuncional Sublimado es el Regalo Promocional Ideal?</h2>
 
@@ -3130,7 +3130,7 @@ export const blogContent = {
 
 <p class="text-gray-700 leading-relaxed mb-4">Descubre por qué este bolígrafo multifuncional está revolucionando el mercado de regalos corporativos en Ecuador, desde Quito hasta Guayaquil y Cuenca.</p>
 
-<img src="https://catalogospromocionales.com/images/productos/9531.jpg" alt="Bolígrafo Flom 4-1 Antibacteriano personalizado para empresas" class="w-full rounded-lg shadow-md my-6" />
+<img src="https://cataprom.com/images/productos/9531.jpg" alt="Bolígrafo Flom 4-1 Antibacteriano personalizado para empresas" class="w-full rounded-lg shadow-md my-6" />
 
 <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4 border-l-4 border-primary pl-4">4 Funciones en 1: Más que un Simple Bolígrafo</h2>
 
@@ -3251,15 +3251,15 @@ export const blogContent = {
     <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 24px;">
       
       <div style="text-align: center; transition: transform 0.3s;">
-        <img src="https://catalogospromocionales.com/images/productos/10689.jpg" alt="Set Ecológico" style="width: 90px; height: 90px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
+        <img src="https://cataprom.com/images/productos/10689.jpg" alt="Set Ecológico" style="width: 90px; height: 90px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
         <p style="color: #fef3c7; font-size: 11px; margin: 8px 0 0 0; font-weight: 500;">Set Ecológico</p>
       </div>
       <div style="text-align: center; transition: transform 0.3s;">
-        <img src="https://catalogospromocionales.com/images/productos/9914.jpg" alt="Bolsa Eco" style="width: 90px; height: 90px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
+        <img src="https://cataprom.com/images/productos/9914.jpg" alt="Bolsa Eco" style="width: 90px; height: 90px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
         <p style="color: #fef3c7; font-size: 11px; margin: 8px 0 0 0; font-weight: 500;">Bolsa Eco</p>
       </div>
       <div style="text-align: center; transition: transform 0.3s;">
-        <img src="https://catalogospromocionales.com/images/productos/10652.jpg" alt="Cuaderno Bambú" style="width: 90px; height: 90px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
+        <img src="https://cataprom.com/images/productos/10652.jpg" alt="Cuaderno Bambú" style="width: 90px; height: 90px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
         <p style="color: #fef3c7; font-size: 11px; margin: 8px 0 0 0; font-weight: 500;">Cuaderno Bambú</p>
       </div>
     </div>
@@ -3286,7 +3286,7 @@ export const blogContent = {
 <div style="background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); padding: 28px; border-radius: 16px; margin: 28px 0; border: 2px solid #a78bfa;">
   <div style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap;">
     <div style="flex-shrink: 0; position: relative;">
-      <img src="https://catalogospromocionales.com/images/productos/10689.jpg" alt="Set ecológico personalizado con logo para empresas en Ecuador" style="width: 100px; height: 100px; object-fit: contain; border-radius: 12px; background: white; padding: 10px;" />
+      <img src="https://cataprom.com/images/productos/10689.jpg" alt="Set ecológico personalizado con logo para empresas en Ecuador" style="width: 100px; height: 100px; object-fit: contain; border-radius: 12px; background: white; padding: 10px;" />
       <span style="position: absolute; top: -8px; right: -8px; background: #fbbf24; color: #78350f; padding: 4px 8px; border-radius: 8px; font-size: 11px; font-weight: bold;">⚡ RÁPIDO</span>
     </div>
     <div style="flex: 1; min-width: 220px;">
@@ -3327,9 +3327,9 @@ export const blogContent = {
   <h3 style="color: white; font-size: 28px; margin: 0 0 12px 0; font-weight: bold; line-height: 1.3;">Haz que tu marca<br/>se vea en todos lados</h3>
   <p style="color: #cbd5e1; font-size: 15px; margin: 0 0 24px 0;">Productos promocionales que dejan huella</p>
   <div style="display: flex; justify-content: center; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;">
-    <img src="https://catalogospromocionales.com/images/productos/10689.jpg" alt="Set ecológico personalizado con logo para empresas en Ecuador" style="width: 70px; height: 70px; object-fit: contain; border-radius: 10px; background: white; padding: 8px;" />
-    <img src="https://catalogospromocionales.com/images/productos/9914.jpg" alt="Bolsa ecológica de algodón personalizada con logo para empresas Ecuador" style="width: 70px; height: 70px; object-fit: contain; border-radius: 10px; background: white; padding: 8px;" />
-    <img src="https://catalogospromocionales.com/images/productos/10652.jpg" alt="Cuaderno de bambú ecológico personalizado para regalos corporativos Ecuador" style="width: 70px; height: 70px; object-fit: contain; border-radius: 10px; background: white; padding: 8px;" />
+    <img src="https://cataprom.com/images/productos/10689.jpg" alt="Set ecológico personalizado con logo para empresas en Ecuador" style="width: 70px; height: 70px; object-fit: contain; border-radius: 10px; background: white; padding: 8px;" />
+    <img src="https://cataprom.com/images/productos/9914.jpg" alt="Bolsa ecológica de algodón personalizada con logo para empresas Ecuador" style="width: 70px; height: 70px; object-fit: contain; border-radius: 10px; background: white; padding: 8px;" />
+    <img src="https://cataprom.com/images/productos/10652.jpg" alt="Cuaderno de bambú ecológico personalizado para regalos corporativos Ecuador" style="width: 70px; height: 70px; object-fit: contain; border-radius: 10px; background: white; padding: 8px;" />
   </div>
   <a href="/categorias/ecologia" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px;">
     Explorar Productos Ecológicos →
@@ -3347,8 +3347,8 @@ export const blogContent = {
 <div style="background: #f0fdf4; border: 2px solid #22c55e; padding: 28px; border-radius: 16px; margin: 28px 0;">
   <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
     <div style="flex-shrink: 0; display: flex; gap: 8px;">
-      <img src="https://catalogospromocionales.com/images/productos/10689.jpg" alt="Set ecológico personalizado con logo para empresas en Ecuador" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px; background: white; padding: 6px; border: 1px solid #e5e7eb;" />
-      <img src="https://catalogospromocionales.com/images/productos/9914.jpg" alt="Bolsa ecológica de algodón personalizada con logo para empresas Ecuador" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px; background: white; padding: 6px; border: 1px solid #e5e7eb;" />
+      <img src="https://cataprom.com/images/productos/10689.jpg" alt="Set ecológico personalizado con logo para empresas en Ecuador" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px; background: white; padding: 6px; border: 1px solid #e5e7eb;" />
+      <img src="https://cataprom.com/images/productos/9914.jpg" alt="Bolsa ecológica de algodón personalizada con logo para empresas Ecuador" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px; background: white; padding: 6px; border: 1px solid #e5e7eb;" />
     </div>
     <div style="flex: 1; min-width: 200px;">
       <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
@@ -3430,9 +3430,9 @@ export const blogContent = {
     <span style="background: rgba(255,255,255,0.2); color: white; padding: 6px 12px; border-radius: 20px; font-size: 12px;">Gobierno</span>
   </div>
   <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 24px;">
-    <img src="https://catalogospromocionales.com/images/productos/10689.jpg" alt="Set ecológico personalizado con logo para empresas en Ecuador" style="width: 55px; height: 55px; object-fit: contain; border-radius: 8px; background: white; padding: 6px;" />
-    <img src="https://catalogospromocionales.com/images/productos/9914.jpg" alt="Bolsa ecológica de algodón personalizada con logo para empresas Ecuador" style="width: 55px; height: 55px; object-fit: contain; border-radius: 8px; background: white; padding: 6px;" />
-    <img src="https://catalogospromocionales.com/images/productos/10652.jpg" alt="Cuaderno de bambú ecológico personalizado para regalos corporativos Ecuador" style="width: 55px; height: 55px; object-fit: contain; border-radius: 8px; background: white; padding: 6px;" />
+    <img src="https://cataprom.com/images/productos/10689.jpg" alt="Set ecológico personalizado con logo para empresas en Ecuador" style="width: 55px; height: 55px; object-fit: contain; border-radius: 8px; background: white; padding: 6px;" />
+    <img src="https://cataprom.com/images/productos/9914.jpg" alt="Bolsa ecológica de algodón personalizada con logo para empresas Ecuador" style="width: 55px; height: 55px; object-fit: contain; border-radius: 8px; background: white; padding: 6px;" />
+    <img src="https://cataprom.com/images/productos/10652.jpg" alt="Cuaderno de bambú ecológico personalizado para regalos corporativos Ecuador" style="width: 55px; height: 55px; object-fit: contain; border-radius: 8px; background: white; padding: 6px;" />
   </div>
   <a href="/categorias/ecologia" style="display: inline-block; background: white; color: #059669; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px;">
     Ver Productos Ecológicos Disponibles →
@@ -3477,9 +3477,9 @@ export const blogContent = {
     <p style="color: #e0e7ff; font-size: 17px; margin: 0 0 28px 0;">Estos Productos Ecológicos pueden llevar tu logo</p>
     <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 28px;">
       
-        <img src="https://catalogospromocionales.com/images/productos/10689.jpg" alt="Set Ecológico" style="width: 75px; height: 75px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
-        <img src="https://catalogospromocionales.com/images/productos/9914.jpg" alt="Bolsa Eco" style="width: 75px; height: 75px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
-        <img src="https://catalogospromocionales.com/images/productos/10652.jpg" alt="Cuaderno Bambú" style="width: 75px; height: 75px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+        <img src="https://cataprom.com/images/productos/10689.jpg" alt="Set Ecológico" style="width: 75px; height: 75px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+        <img src="https://cataprom.com/images/productos/9914.jpg" alt="Bolsa Eco" style="width: 75px; height: 75px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+        <img src="https://cataprom.com/images/productos/10652.jpg" alt="Cuaderno Bambú" style="width: 75px; height: 75px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
     </div>
     <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
       <a href="/categorias/ecologia" style="display: inline-flex; align-items: center; gap: 8px; background: white; color: #7c3aed; padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
@@ -3512,15 +3512,15 @@ export const blogContent = {
     <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 24px;">
       
       <div style="text-align: center; transition: transform 0.3s;">
-        <img src="https://catalogospromocionales.com/images/productos/608.jpg" alt="Mug Personalizado" style="width: 90px; height: 90px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
+        <img src="https://cataprom.com/images/productos/608.jpg" alt="Mug Personalizado" style="width: 90px; height: 90px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
         <p style="color: #fef3c7; font-size: 11px; margin: 8px 0 0 0; font-weight: 500;">Mug Personalizado</p>
       </div>
       <div style="text-align: center; transition: transform 0.3s;">
-        <img src="https://catalogospromocionales.com/images/productos/9531.jpg" alt="Bolígrafo Premium" style="width: 90px; height: 90px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
+        <img src="https://cataprom.com/images/productos/9531.jpg" alt="Bolígrafo Premium" style="width: 90px; height: 90px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
         <p style="color: #fef3c7; font-size: 11px; margin: 8px 0 0 0; font-weight: 500;">Bolígrafo Premium</p>
       </div>
       <div style="text-align: center; transition: transform 0.3s;">
-        <img src="https://catalogospromocionales.com/images/productos/161.jpg" alt="Llavero Clásico" style="width: 90px; height: 90px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
+        <img src="https://cataprom.com/images/productos/161.jpg" alt="Llavero Clásico" style="width: 90px; height: 90px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
         <p style="color: #fef3c7; font-size: 11px; margin: 8px 0 0 0; font-weight: 500;">Llavero Clásico</p>
       </div>
     </div>
@@ -3545,7 +3545,7 @@ export const blogContent = {
 <div style="background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); padding: 28px; border-radius: 16px; margin: 28px 0; border: 2px solid #a78bfa;">
   <div style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap;">
     <div style="flex-shrink: 0; position: relative;">
-      <img src="https://catalogospromocionales.com/images/productos/608.jpg" alt="Mug cerámico personalizado con logo para empresas en Quito Ecuador" style="width: 100px; height: 100px; object-fit: contain; border-radius: 12px; background: white; padding: 10px;" />
+      <img src="https://cataprom.com/images/productos/608.jpg" alt="Mug cerámico personalizado con logo para empresas en Quito Ecuador" style="width: 100px; height: 100px; object-fit: contain; border-radius: 12px; background: white; padding: 10px;" />
       <span style="position: absolute; top: -8px; right: -8px; background: #fbbf24; color: #78350f; padding: 4px 8px; border-radius: 8px; font-size: 11px; font-weight: bold;">⚡ RÁPIDO</span>
     </div>
     <div style="flex: 1; min-width: 220px;">
@@ -3583,9 +3583,9 @@ export const blogContent = {
   <h3 style="color: white; font-size: 28px; margin: 0 0 12px 0; font-weight: bold; line-height: 1.3;">Haz que tu marca<br/>se vea en todos lados</h3>
   <p style="color: #cbd5e1; font-size: 15px; margin: 0 0 24px 0;">Productos promocionales que dejan huella</p>
   <div style="display: flex; justify-content: center; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;">
-    <img src="https://catalogospromocionales.com/images/productos/608.jpg" alt="Mug cerámico personalizado con logo para empresas en Quito Ecuador" style="width: 70px; height: 70px; object-fit: contain; border-radius: 10px; background: white; padding: 8px;" />
-    <img src="https://catalogospromocionales.com/images/productos/9531.jpg" alt="Bolígrafo premium personalizado con logo para empresas en Quito Ecuador" style="width: 70px; height: 70px; object-fit: contain; border-radius: 10px; background: white; padding: 8px;" />
-    <img src="https://catalogospromocionales.com/images/productos/161.jpg" alt="Llavero metálico personalizado con logo para empresas en Quito Ecuador" style="width: 70px; height: 70px; object-fit: contain; border-radius: 10px; background: white; padding: 8px;" />
+    <img src="https://cataprom.com/images/productos/608.jpg" alt="Mug cerámico personalizado con logo para empresas en Quito Ecuador" style="width: 70px; height: 70px; object-fit: contain; border-radius: 10px; background: white; padding: 8px;" />
+    <img src="https://cataprom.com/images/productos/9531.jpg" alt="Bolígrafo premium personalizado con logo para empresas en Quito Ecuador" style="width: 70px; height: 70px; object-fit: contain; border-radius: 10px; background: white; padding: 8px;" />
+    <img src="https://cataprom.com/images/productos/161.jpg" alt="Llavero metálico personalizado con logo para empresas en Quito Ecuador" style="width: 70px; height: 70px; object-fit: contain; border-radius: 10px; background: white; padding: 8px;" />
   </div>
   <a href="/" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px;">
     Explorar productos promocionales →
@@ -3612,8 +3612,8 @@ export const blogContent = {
 <div style="background: #f0fdf4; border: 2px solid #22c55e; padding: 28px; border-radius: 16px; margin: 28px 0;">
   <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
     <div style="flex-shrink: 0; display: flex; gap: 8px;">
-      <img src="https://catalogospromocionales.com/images/productos/608.jpg" alt="Mug cerámico personalizado con logo para empresas en Quito Ecuador" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px; background: white; padding: 6px; border: 1px solid #e5e7eb;" />
-      <img src="https://catalogospromocionales.com/images/productos/9531.jpg" alt="Bolígrafo premium personalizado con logo para empresas en Quito Ecuador" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px; background: white; padding: 6px; border: 1px solid #e5e7eb;" />
+      <img src="https://cataprom.com/images/productos/608.jpg" alt="Mug cerámico personalizado con logo para empresas en Quito Ecuador" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px; background: white; padding: 6px; border: 1px solid #e5e7eb;" />
+      <img src="https://cataprom.com/images/productos/9531.jpg" alt="Bolígrafo premium personalizado con logo para empresas en Quito Ecuador" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px; background: white; padding: 6px; border: 1px solid #e5e7eb;" />
     </div>
     <div style="flex: 1; min-width: 200px;">
       <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
@@ -3694,9 +3694,9 @@ export const blogContent = {
     <span style="background: rgba(255,255,255,0.2); color: white; padding: 6px 12px; border-radius: 20px; font-size: 12px;">Gobierno</span>
   </div>
   <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 24px;">
-    <img src="https://catalogospromocionales.com/images/productos/608.jpg" alt="Mug cerámico personalizado con logo para empresas en Quito Ecuador" style="width: 55px; height: 55px; object-fit: contain; border-radius: 8px; background: white; padding: 6px;" />
-    <img src="https://catalogospromocionales.com/images/productos/9531.jpg" alt="Bolígrafo premium personalizado con logo para empresas en Quito Ecuador" style="width: 55px; height: 55px; object-fit: contain; border-radius: 8px; background: white; padding: 6px;" />
-    <img src="https://catalogospromocionales.com/images/productos/161.jpg" alt="Llavero metálico personalizado con logo para empresas en Quito Ecuador" style="width: 55px; height: 55px; object-fit: contain; border-radius: 8px; background: white; padding: 6px;" />
+    <img src="https://cataprom.com/images/productos/608.jpg" alt="Mug cerámico personalizado con logo para empresas en Quito Ecuador" style="width: 55px; height: 55px; object-fit: contain; border-radius: 8px; background: white; padding: 6px;" />
+    <img src="https://cataprom.com/images/productos/9531.jpg" alt="Bolígrafo premium personalizado con logo para empresas en Quito Ecuador" style="width: 55px; height: 55px; object-fit: contain; border-radius: 8px; background: white; padding: 6px;" />
+    <img src="https://cataprom.com/images/productos/161.jpg" alt="Llavero metálico personalizado con logo para empresas en Quito Ecuador" style="width: 55px; height: 55px; object-fit: contain; border-radius: 8px; background: white; padding: 6px;" />
   </div>
   <a href="/" style="display: inline-block; background: white; color: #059669; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px;">
     Ver productos promocionales Disponibles →
@@ -3731,10 +3731,10 @@ export const blogContent = {
     <p style="color: #e0e7ff; font-size: 17px; margin: 0 0 28px 0;">Estos productos promocionales pueden llevar tu logo</p>
     <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 28px;">
       
-        <img src="https://catalogospromocionales.com/images/productos/608.jpg" alt="Mug Personalizado" style="width: 75px; height: 75px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
-        <img src="https://catalogospromocionales.com/images/productos/9531.jpg" alt="Bolígrafo Premium" style="width: 75px; height: 75px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
-        <img src="https://catalogospromocionales.com/images/productos/161.jpg" alt="Llavero Clásico" style="width: 75px; height: 75px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
-        <img src="https://catalogospromocionales.com/images/productos/10689.jpg" alt="Set Ecológico" style="width: 75px; height: 75px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+        <img src="https://cataprom.com/images/productos/608.jpg" alt="Mug Personalizado" style="width: 75px; height: 75px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+        <img src="https://cataprom.com/images/productos/9531.jpg" alt="Bolígrafo Premium" style="width: 75px; height: 75px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+        <img src="https://cataprom.com/images/productos/161.jpg" alt="Llavero Clásico" style="width: 75px; height: 75px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+        <img src="https://cataprom.com/images/productos/10689.jpg" alt="Set Ecológico" style="width: 75px; height: 75px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
     </div>
     <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
       <a href="/" style="display: inline-flex; align-items: center; gap: 8px; background: white; color: #7c3aed; padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
@@ -3769,15 +3769,15 @@ export const blogContent = {
     <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 24px;">
       
       <div style="text-align: center; transition: transform 0.3s;">
-        <img src="https://catalogospromocionales.com/images/productos/161.jpg" alt="Llavero Clásico" style="width: 90px; height: 90px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
+        <img src="https://cataprom.com/images/productos/161.jpg" alt="Llavero Clásico" style="width: 90px; height: 90px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
         <p style="color: #fef3c7; font-size: 11px; margin: 8px 0 0 0; font-weight: 500;">Llavero Clásico</p>
       </div>
       <div style="text-align: center; transition: transform 0.3s;">
-        <img src="https://catalogospromocionales.com/images/productos/2174.jpg" alt="Llavero Premium" style="width: 90px; height: 90px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
+        <img src="https://cataprom.com/images/productos/2174.jpg" alt="Llavero Premium" style="width: 90px; height: 90px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
         <p style="color: #fef3c7; font-size: 11px; margin: 8px 0 0 0; font-weight: 500;">Llavero Premium</p>
       </div>
       <div style="text-align: center; transition: transform 0.3s;">
-        <img src="https://catalogospromocionales.com/images/productos/3509.jpg" alt="Llavero Metálico" style="width: 90px; height: 90px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
+        <img src="https://cataprom.com/images/productos/3509.jpg" alt="Llavero Metálico" style="width: 90px; height: 90px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
         <p style="color: #fef3c7; font-size: 11px; margin: 8px 0 0 0; font-weight: 500;">Llavero Metálico</p>
       </div>
     </div>
@@ -3817,7 +3817,7 @@ Aquí te mostramos algunas razones clave por las que deberías considerar los ll
 <div style="background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); padding: 28px; border-radius: 16px; margin: 28px 0; border: 2px solid #a78bfa;">
   <div style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap;">
     <div style="flex-shrink: 0; position: relative;">
-      <img src="https://catalogospromocionales.com/images/productos/161.jpg" alt="Llavero metálico personalizado con logo para empresas en Ecuador" style="width: 100px; height: 100px; object-fit: contain; border-radius: 12px; background: white; padding: 10px;" />
+      <img src="https://cataprom.com/images/productos/161.jpg" alt="Llavero metálico personalizado con logo para empresas en Ecuador" style="width: 100px; height: 100px; object-fit: contain; border-radius: 12px; background: white; padding: 10px;" />
       <span style="position: absolute; top: -8px; right: -8px; background: #fbbf24; color: #78350f; padding: 4px 8px; border-radius: 8px; font-size: 11px; font-weight: bold;">⚡ RÁPIDO</span>
     </div>
     <div style="flex: 1; min-width: 220px;">
@@ -3853,9 +3853,9 @@ Aquí te mostramos algunas razones clave por las que deberías considerar los ll
   <h3 style="color: white; font-size: 28px; margin: 0 0 12px 0; font-weight: bold; line-height: 1.3;">Haz que tu marca<br/>se vea en todos lados</h3>
   <p style="color: #cbd5e1; font-size: 15px; margin: 0 0 24px 0;">Productos promocionales que dejan huella</p>
   <div style="display: flex; justify-content: center; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;">
-    <img src="https://catalogospromocionales.com/images/productos/161.jpg" alt="Llavero metálico personalizado con logo para empresas en Ecuador" style="width: 70px; height: 70px; object-fit: contain; border-radius: 10px; background: white; padding: 8px;" />
-    <img src="https://catalogospromocionales.com/images/productos/2174.jpg" alt="Llavero de cuero personalizado para regalos corporativos Ecuador" style="width: 70px; height: 70px; object-fit: contain; border-radius: 10px; background: white; padding: 8px;" />
-    <img src="https://catalogospromocionales.com/images/productos/3509.jpg" alt="Llavero acrílico con logo grabado para empresas en Ecuador" style="width: 70px; height: 70px; object-fit: contain; border-radius: 10px; background: white; padding: 8px;" />
+    <img src="https://cataprom.com/images/productos/161.jpg" alt="Llavero metálico personalizado con logo para empresas en Ecuador" style="width: 70px; height: 70px; object-fit: contain; border-radius: 10px; background: white; padding: 8px;" />
+    <img src="https://cataprom.com/images/productos/2174.jpg" alt="Llavero de cuero personalizado para regalos corporativos Ecuador" style="width: 70px; height: 70px; object-fit: contain; border-radius: 10px; background: white; padding: 8px;" />
+    <img src="https://cataprom.com/images/productos/3509.jpg" alt="Llavero acrílico con logo grabado para empresas en Ecuador" style="width: 70px; height: 70px; object-fit: contain; border-radius: 10px; background: white; padding: 8px;" />
   </div>
   <a href="/categorias/llaveros-personalizados" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px;">
     Explorar Llaveros →
@@ -3884,8 +3884,8 @@ Aquí te mostramos algunas razones clave por las que deberías considerar los ll
 <div style="background: #f0fdf4; border: 2px solid #22c55e; padding: 28px; border-radius: 16px; margin: 28px 0;">
   <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
     <div style="flex-shrink: 0; display: flex; gap: 8px;">
-      <img src="https://catalogospromocionales.com/images/productos/161.jpg" alt="Llavero metálico personalizado con logo para empresas en Ecuador" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px; background: white; padding: 6px; border: 1px solid #e5e7eb;" />
-      <img src="https://catalogospromocionales.com/images/productos/2174.jpg" alt="Llavero de cuero personalizado para regalos corporativos Ecuador" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px; background: white; padding: 6px; border: 1px solid #e5e7eb;" />
+      <img src="https://cataprom.com/images/productos/161.jpg" alt="Llavero metálico personalizado con logo para empresas en Ecuador" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px; background: white; padding: 6px; border: 1px solid #e5e7eb;" />
+      <img src="https://cataprom.com/images/productos/2174.jpg" alt="Llavero de cuero personalizado para regalos corporativos Ecuador" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px; background: white; padding: 6px; border: 1px solid #e5e7eb;" />
     </div>
     <div style="flex: 1; min-width: 200px;">
       <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
@@ -3957,9 +3957,9 @@ Los llaveros promocionales se pueden utilizar en una variedad de situaciones:
     <span style="background: rgba(255,255,255,0.2); color: white; padding: 6px 12px; border-radius: 20px; font-size: 12px;">Gobierno</span>
   </div>
   <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 24px;">
-    <img src="https://catalogospromocionales.com/images/productos/161.jpg" alt="Llavero metálico personalizado con logo para empresas en Ecuador" style="width: 55px; height: 55px; object-fit: contain; border-radius: 8px; background: white; padding: 6px;" />
-    <img src="https://catalogospromocionales.com/images/productos/2174.jpg" alt="Llavero de cuero personalizado para regalos corporativos Ecuador" style="width: 55px; height: 55px; object-fit: contain; border-radius: 8px; background: white; padding: 6px;" />
-    <img src="https://catalogospromocionales.com/images/productos/3509.jpg" alt="Llavero acrílico con logo grabado para empresas en Ecuador" style="width: 55px; height: 55px; object-fit: contain; border-radius: 8px; background: white; padding: 6px;" />
+    <img src="https://cataprom.com/images/productos/161.jpg" alt="Llavero metálico personalizado con logo para empresas en Ecuador" style="width: 55px; height: 55px; object-fit: contain; border-radius: 8px; background: white; padding: 6px;" />
+    <img src="https://cataprom.com/images/productos/2174.jpg" alt="Llavero de cuero personalizado para regalos corporativos Ecuador" style="width: 55px; height: 55px; object-fit: contain; border-radius: 8px; background: white; padding: 6px;" />
+    <img src="https://cataprom.com/images/productos/3509.jpg" alt="Llavero acrílico con logo grabado para empresas en Ecuador" style="width: 55px; height: 55px; object-fit: contain; border-radius: 8px; background: white; padding: 6px;" />
   </div>
   <a href="/categorias/llaveros-personalizados" style="display: inline-block; background: white; color: #059669; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px;">
     Ver Llaveros Disponibles →
@@ -3997,9 +3997,9 @@ Los llaveros promocionales se pueden utilizar en una variedad de situaciones:
     <p style="color: #e0e7ff; font-size: 17px; margin: 0 0 28px 0;">Estos Llaveros pueden llevar tu logo</p>
     <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 28px;">
       
-        <img src="https://catalogospromocionales.com/images/productos/161.jpg" alt="Llavero Clásico" style="width: 75px; height: 75px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
-        <img src="https://catalogospromocionales.com/images/productos/2174.jpg" alt="Llavero Premium" style="width: 75px; height: 75px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
-        <img src="https://catalogospromocionales.com/images/productos/3509.jpg" alt="Llavero Metálico" style="width: 75px; height: 75px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+        <img src="https://cataprom.com/images/productos/161.jpg" alt="Llavero Clásico" style="width: 75px; height: 75px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+        <img src="https://cataprom.com/images/productos/2174.jpg" alt="Llavero Premium" style="width: 75px; height: 75px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+        <img src="https://cataprom.com/images/productos/3509.jpg" alt="Llavero Metálico" style="width: 75px; height: 75px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
     </div>
     <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
       <a href="/categorias/llaveros-personalizados" style="display: inline-flex; align-items: center; gap: 8px; background: white; color: #7c3aed; padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
@@ -4126,15 +4126,15 @@ Visita nuestra sección de <a href="/categorias/boligrafos-publicitarios" class=
     <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 24px;">
       
       <div style="text-align: center; transition: transform 0.3s;">
-        <img src="https://catalogospromocionales.com/images/productos/608.jpg" alt="Mug Personalizado" style="width: 90px; height: 90px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
+        <img src="https://cataprom.com/images/productos/608.jpg" alt="Mug Personalizado" style="width: 90px; height: 90px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
         <p style="color: #fef3c7; font-size: 11px; margin: 8px 0 0 0; font-weight: 500;">Mug Personalizado</p>
       </div>
       <div style="text-align: center; transition: transform 0.3s;">
-        <img src="https://catalogospromocionales.com/images/productos/9531.jpg" alt="Bolígrafo Premium" style="width: 90px; height: 90px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
+        <img src="https://cataprom.com/images/productos/9531.jpg" alt="Bolígrafo Premium" style="width: 90px; height: 90px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
         <p style="color: #fef3c7; font-size: 11px; margin: 8px 0 0 0; font-weight: 500;">Bolígrafo Premium</p>
       </div>
       <div style="text-align: center; transition: transform 0.3s;">
-        <img src="https://catalogospromocionales.com/images/productos/161.jpg" alt="Llavero Clásico" style="width: 90px; height: 90px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
+        <img src="https://cataprom.com/images/productos/161.jpg" alt="Llavero Clásico" style="width: 90px; height: 90px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" />
         <p style="color: #fef3c7; font-size: 11px; margin: 8px 0 0 0; font-weight: 500;">Llavero Clásico</p>
       </div>
     </div>
@@ -4168,7 +4168,7 @@ Visita nuestra sección de <a href="/categorias/boligrafos-publicitarios" class=
 <div style="background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); padding: 28px; border-radius: 16px; margin: 28px 0; border: 2px solid #a78bfa;">
   <div style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap;">
     <div style="flex-shrink: 0; position: relative;">
-      <img src="https://catalogospromocionales.com/images/productos/608.jpg" alt="Mug personalizado con logo para campaña de Carnaval 2026 Ecuador" style="width: 100px; height: 100px; object-fit: contain; border-radius: 12px; background: white; padding: 10px;" />
+      <img src="https://cataprom.com/images/productos/608.jpg" alt="Mug personalizado con logo para campaña de Carnaval 2026 Ecuador" style="width: 100px; height: 100px; object-fit: contain; border-radius: 12px; background: white; padding: 10px;" />
       <span style="position: absolute; top: -8px; right: -8px; background: #fbbf24; color: #78350f; padding: 4px 8px; border-radius: 8px; font-size: 11px; font-weight: bold;">⚡ RÁPIDO</span>
     </div>
     <div style="flex: 1; min-width: 220px;">
@@ -4222,9 +4222,9 @@ Visita nuestra sección de <a href="/categorias/boligrafos-publicitarios" class=
   <h3 style="color: white; font-size: 28px; margin: 0 0 12px 0; font-weight: bold; line-height: 1.3;">Haz que tu marca<br/>se vea en todos lados</h3>
   <p style="color: #cbd5e1; font-size: 15px; margin: 0 0 24px 0;">Productos promocionales que dejan huella</p>
   <div style="display: flex; justify-content: center; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;">
-    <img src="https://catalogospromocionales.com/images/productos/608.jpg" alt="Mug personalizado con logo para campaña de Carnaval 2026 Ecuador" style="width: 70px; height: 70px; object-fit: contain; border-radius: 10px; background: white; padding: 8px;" />
-    <img src="https://catalogospromocionales.com/images/productos/9531.jpg" alt="Bolígrafo publicitario personalizado para eventos de Carnaval 2026 Ecuador" style="width: 70px; height: 70px; object-fit: contain; border-radius: 10px; background: white; padding: 8px;" />
-    <img src="https://catalogospromocionales.com/images/productos/161.jpg" alt="Llavero promocional personalizado para Carnaval 2026 Ecuador" style="width: 70px; height: 70px; object-fit: contain; border-radius: 10px; background: white; padding: 8px;" />
+    <img src="https://cataprom.com/images/productos/608.jpg" alt="Mug personalizado con logo para campaña de Carnaval 2026 Ecuador" style="width: 70px; height: 70px; object-fit: contain; border-radius: 10px; background: white; padding: 8px;" />
+    <img src="https://cataprom.com/images/productos/9531.jpg" alt="Bolígrafo publicitario personalizado para eventos de Carnaval 2026 Ecuador" style="width: 70px; height: 70px; object-fit: contain; border-radius: 10px; background: white; padding: 8px;" />
+    <img src="https://cataprom.com/images/productos/161.jpg" alt="Llavero promocional personalizado para Carnaval 2026 Ecuador" style="width: 70px; height: 70px; object-fit: contain; border-radius: 10px; background: white; padding: 8px;" />
   </div>
   <a href="/" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px;">
     Explorar productos promocionales →
@@ -4248,8 +4248,8 @@ Visita nuestra sección de <a href="/categorias/boligrafos-publicitarios" class=
 <div style="background: #f0fdf4; border: 2px solid #22c55e; padding: 28px; border-radius: 16px; margin: 28px 0;">
   <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
     <div style="flex-shrink: 0; display: flex; gap: 8px;">
-      <img src="https://catalogospromocionales.com/images/productos/608.jpg" alt="Mug personalizado con logo para campaña de Carnaval 2026 Ecuador" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px; background: white; padding: 6px; border: 1px solid #e5e7eb;" />
-      <img src="https://catalogospromocionales.com/images/productos/9531.jpg" alt="Bolígrafo publicitario personalizado para eventos de Carnaval 2026 Ecuador" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px; background: white; padding: 6px; border: 1px solid #e5e7eb;" />
+      <img src="https://cataprom.com/images/productos/608.jpg" alt="Mug personalizado con logo para campaña de Carnaval 2026 Ecuador" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px; background: white; padding: 6px; border: 1px solid #e5e7eb;" />
+      <img src="https://cataprom.com/images/productos/9531.jpg" alt="Bolígrafo publicitario personalizado para eventos de Carnaval 2026 Ecuador" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px; background: white; padding: 6px; border: 1px solid #e5e7eb;" />
     </div>
     <div style="flex: 1; min-width: 200px;">
       <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
@@ -4332,9 +4332,9 @@ Estos son solo algunos ejemplos de cómo los <em>productos promocionales carnava
     <span style="background: rgba(255,255,255,0.2); color: white; padding: 6px 12px; border-radius: 20px; font-size: 12px;">Gobierno</span>
   </div>
   <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 24px;">
-    <img src="https://catalogospromocionales.com/images/productos/608.jpg" alt="Mug personalizado con logo para campaña de Carnaval 2026 Ecuador" style="width: 55px; height: 55px; object-fit: contain; border-radius: 8px; background: white; padding: 6px;" />
-    <img src="https://catalogospromocionales.com/images/productos/9531.jpg" alt="Bolígrafo publicitario personalizado para eventos de Carnaval 2026 Ecuador" style="width: 55px; height: 55px; object-fit: contain; border-radius: 8px; background: white; padding: 6px;" />
-    <img src="https://catalogospromocionales.com/images/productos/161.jpg" alt="Llavero promocional personalizado para Carnaval 2026 Ecuador" style="width: 55px; height: 55px; object-fit: contain; border-radius: 8px; background: white; padding: 6px;" />
+    <img src="https://cataprom.com/images/productos/608.jpg" alt="Mug personalizado con logo para campaña de Carnaval 2026 Ecuador" style="width: 55px; height: 55px; object-fit: contain; border-radius: 8px; background: white; padding: 6px;" />
+    <img src="https://cataprom.com/images/productos/9531.jpg" alt="Bolígrafo publicitario personalizado para eventos de Carnaval 2026 Ecuador" style="width: 55px; height: 55px; object-fit: contain; border-radius: 8px; background: white; padding: 6px;" />
+    <img src="https://cataprom.com/images/productos/161.jpg" alt="Llavero promocional personalizado para Carnaval 2026 Ecuador" style="width: 55px; height: 55px; object-fit: contain; border-radius: 8px; background: white; padding: 6px;" />
   </div>
   <a href="/" style="display: inline-block; background: white; color: #059669; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 15px;">
     Ver productos promocionales Disponibles →
@@ -4385,10 +4385,10 @@ Estos son solo algunos ejemplos de cómo los <em>productos promocionales carnava
     <p style="color: #e0e7ff; font-size: 17px; margin: 0 0 28px 0;">Estos productos promocionales pueden llevar tu logo</p>
     <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 28px;">
       
-        <img src="https://catalogospromocionales.com/images/productos/608.jpg" alt="Mug Personalizado" style="width: 75px; height: 75px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
-        <img src="https://catalogospromocionales.com/images/productos/9531.jpg" alt="Bolígrafo Premium" style="width: 75px; height: 75px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
-        <img src="https://catalogospromocionales.com/images/productos/161.jpg" alt="Llavero Clásico" style="width: 75px; height: 75px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
-        <img src="https://catalogospromocionales.com/images/productos/10689.jpg" alt="Set Ecológico" style="width: 75px; height: 75px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+        <img src="https://cataprom.com/images/productos/608.jpg" alt="Mug Personalizado" style="width: 75px; height: 75px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+        <img src="https://cataprom.com/images/productos/9531.jpg" alt="Bolígrafo Premium" style="width: 75px; height: 75px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+        <img src="https://cataprom.com/images/productos/161.jpg" alt="Llavero Clásico" style="width: 75px; height: 75px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+        <img src="https://cataprom.com/images/productos/10689.jpg" alt="Set Ecológico" style="width: 75px; height: 75px; object-fit: contain; border-radius: 12px; background: white; padding: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
     </div>
     <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
       <a href="/" style="display: inline-flex; align-items: center; gap: 8px; background: white; color: #7c3aed; padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
