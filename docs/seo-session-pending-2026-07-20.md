@@ -81,18 +81,37 @@ hecho, solo el estado y lo que falta.
   `seo:redirects`, `pnpm build`, `seo:test`) en 0.
 - **Commit local, no pusheado aún** al cierre de esta sesión — pendiente decisión del usuario.
 
-### 🔴 Pendiente antes de extender a las 37 categorías (requiere aprobación humana explícita — regla del plan, no autorizada aún)
+### Extendida a las 26 categorías con más de 24 productos (commit `9e4882c`)
 
-- Medir engagement/CTR real de la paginación piloto en producción antes de decidir extender.
-- Revisar si `CATEGORY_PAGE_SIZE=24` es apropiado para categorías con distribuciones de tamaño
-  muy distintas — varias categorías tienen <20 productos y no necesitarían paginación en
-  absoluto (solo activar la whitelist para categorías por encima de cierto umbral, ej. >40-50
-  productos).
+Aprobado por el usuario en la misma sesión. Se generó primero
+`reports/category-product-link-coverage.csv` (las 37 categorías, enlaces reales vs. total)
+para decidir el umbral: 26 categorías tienen >24 productos y hoy exponían solo 12 enlaces
+reales; las 11 restantes ya exponen el 100% sin paginación. Solo se tocó
+`PAGINATED_CATEGORY_SLUGS` en `src/lib/category-pagination.ts` — el resto de la
+infraestructura ya era genérica. 66 páginas nuevas, 92 páginas totales entre las 26
+categorías. Verificado programáticamente (cobertura exacta, sin duplicados, canonicals
+correctos) para las 26, más revisión visual del caso límite (relojes, última página con 2
+productos). Todas las validaciones en 0.
+
+**Commits `192a345`, `e691af7`, `9e4882c` locales, no pusheados aún al cierre de esta
+sesión** — pendiente decisión del usuario.
+
+### 🔴 Pendiente de una sesión futura
+
+- Medir engagement/CTR real de la paginación en producción tras el despliegue.
 - No se hizo revisión visual en viewport móvil real en esta sesión (la herramienta de
-  resize_window del navegador no reflejó el cambio de viewport en las capturas) — el
+  `resize_window` del navegador no reflejó el cambio de viewport en las capturas) — el
   componente reutiliza las mismas clases Tailwind responsive que el resto del sitio
   (`grid-cols-2 sm:grid-cols-3 lg:grid-cols-4`), pero vale la pena una verificación visual
-  explícita en móvil real antes de extender a más categorías.
+  explícita en móvil real.
+- La categoría `novedades` (269 productos, la más grande) es probablemente un bucket
+  temporal/de aterrizaje para productos aún sin categorización definitiva final (muchos IDs
+  con prefijo `novedades-*` aparecieron durante la revisión de duplicados de Fase 2 de esta
+  sesión) — vale la pena confirmar con el negocio si esa categoría debería existir como
+  landing pública paginada a largo plazo o si sus productos deberían recategorizarse.
+- `reports/category-product-link-coverage.csv` quedó con el conteo de enlaces reales
+  pre-cálculo (asume 12 para todo lo no paginado, que es el comportamiento real de
+  `CategoryProductsGrid`) — si se cambia el `PER_PAGE` del scroll infinito, regenerar.
 
 ## Hallazgos confirmados de la Fase 0 — sin implementar todavía
 
