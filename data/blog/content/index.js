@@ -1616,7 +1616,7 @@ export const blogContent = {
     <p>Aquí te presento algunas ideas creativas para <strong>productos promocionales baratos</strong> que pueden impulsar tu negocio:</p>
 
     <h3>Bolsas de Tela Reutilizables</h3>
-    <p>Son prácticas, ecológicas y ofrecen una gran superficie para tu logo. En nuestra tienda encontrarás opciones como la <a href="/productos/bolsa-en-algodon-botanik-10690">Bolsa en Algodón Botanik</a> o la <a href="/productos/bolsa-en-algodon-botanik-10690">Bolsa en Algodón Con Fuelle</a>, perfectas para personalizar con tu marca.</p>
+    <p>Son prácticas, ecológicas y ofrecen una gran superficie para tu logo. En nuestra tienda encontrarás opciones como la <a href="/productos/bolsa-en-algodon-botanik-100gr-10690">Bolsa en Algodón Botanik</a> o la <a href="/productos/bolsa-en-algodon-con-fuelle-100gr-10691">Bolsa en Algodón Con Fuelle</a>, perfectas para personalizar con tu marca.</p>
 
     <h3>Semillas Personalizadas</h3>
     <p>Pequeños sobres de semillas con el logo de tu empresa son una opción original y sostenible. Es un regalo que simboliza crecimiento y cuidado. Explora nuestra sección de <a href="/categorias/ecologia">productos ecológicos</a> para más opciones sostenibles.</p>

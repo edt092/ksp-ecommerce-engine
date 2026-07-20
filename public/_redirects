@@ -80,8 +80,8 @@
 /productos/floyd-stylus/                               /productos/floyd-stylus-5837/                                301
 /productos/mouse-pad-vaniat                            /productos/mouse-pad-vaniat-9862/                            301
 /productos/mouse-pad-vaniat/                           /productos/mouse-pad-vaniat-9862/                            301
-/productos/medidor-de-presion-para-neumaticos-nuevo    /productos/medidor-de-presion-para-neumaticos-nuevo-13297/   301
-/productos/medidor-de-presion-para-neumaticos-nuevo/   /productos/medidor-de-presion-para-neumaticos-nuevo-13297/   301
+/productos/medidor-de-presion-para-neumaticos-nuevo    /productos/medidor-de-presion-para-neumaticos-13297/   301
+/productos/medidor-de-presion-para-neumaticos-nuevo/   /productos/medidor-de-presion-para-neumaticos-13297/   301
 /productos/linterna-cob-power                          /productos/linterna-cob-power-9544/                          301
 /productos/linterna-cob-power/                         /productos/linterna-cob-power-9544/                          301
 /productos/sticky-set-leader-eco                       /productos/sticky-set-leader-eco-3382/                       301
@@ -668,3 +668,46 @@
 /productos/bolsa-clear-trenza-con-ribete-produccion-nacionalmas-6463/  /productos/bolsa-clear-trenza-con-ribete-produccion-nacional-6463/   301
 /productos/botilito-sport-650ml-produccion-nacionalmas-4083     /productos/botilito-sport-650ml-produccion-nacional-4083/    301
 /productos/botilito-sport-650ml-produccion-nacionalmas-4083/    /productos/botilito-sport-650ml-produccion-nacional-4083/    301
+
+# 301 Redirects — Fase 2 Batch 3: consolidación de duplicados LIKELY_DUPLICATE validados campo por campo
+# reports/product-duplicate-candidates.csv + reports/batch3-duplicate-redirects.csv
+/productos/mini-linterna-ozen-nuevo-13296   /productos/mini-linterna-ozen-13296/   301
+/productos/mini-linterna-ozen-nuevo-13296/   /productos/mini-linterna-ozen-13296/   301
+/productos/medidor-de-presion-para-neumaticos-nuevo-13297   /productos/medidor-de-presion-para-neumaticos-13297/   301
+/productos/medidor-de-presion-para-neumaticos-nuevo-13297/   /productos/medidor-de-presion-para-neumaticos-13297/   301
+/productos/speaker-bluetooth-novark-nuevo-13298   /productos/speaker-bluetooth-novark-13298/   301
+/productos/speaker-bluetooth-novark-nuevo-13298/   /productos/speaker-bluetooth-novark-13298/   301
+/productos/teclado-bluetooth-orbi-nuevo-13299   /productos/teclado-bluetooth-orbi-13299/   301
+/productos/teclado-bluetooth-orbi-nuevo-13299/   /productos/teclado-bluetooth-orbi-13299/   301
+/productos/mouse-inalambrico-lumo-nuevo-13300   /productos/mouse-inalambrico-lumo-13300/   301
+/productos/mouse-inalambrico-lumo-nuevo-13300/   /productos/mouse-inalambrico-lumo-13300/   301
+/productos/bolsa-en-algodon-botanik-10690   /productos/bolsa-en-algodon-botanik-100gr-10690/   301
+/productos/bolsa-en-algodon-botanik-10690/   /productos/bolsa-en-algodon-botanik-100gr-10690/   301
+/productos/bolsa-en-algodon-con-fuelle-10691   /productos/bolsa-en-algodon-con-fuelle-100gr-10691/   301
+/productos/bolsa-en-algodon-con-fuelle-10691/   /productos/bolsa-en-algodon-con-fuelle-100gr-10691/   301
+/productos/paraguas-trendy-poliester-27-fibra-de-vidrio-5693   /productos/paraguas-trendy-poliester-27-5693/   301
+/productos/paraguas-trendy-poliester-27-fibra-de-vidrio-5693/   /productos/paraguas-trendy-poliester-27-5693/   301
+/productos/set-enfriador-de-vino-chill-precio-bomba-9753   /productos/set-enfriador-de-vino-chill-9753/   301
+/productos/set-enfriador-de-vino-chill-precio-bomba-9753/   /productos/set-enfriador-de-vino-chill-9753/   301
+/productos/estuche-doble-regal-6048   /productos/estuche-doble-regal-prod-nacional-6048/   301
+/productos/estuche-doble-regal-6048/   /productos/estuche-doble-regal-prod-nacional-6048/   301
+/productos/set-de-cafe-eco-precio-bomba-9680   /productos/set-de-cafe-eco-9680/   301
+/productos/set-de-cafe-eco-precio-bomba-9680/   /productos/set-de-cafe-eco-9680/   301
+/productos/balmax-stylus-precio-bomba-7330   /productos/balmax-stylus-7330/   301
+/productos/balmax-stylus-precio-bomba-7330/   /productos/balmax-stylus-7330/   301
+/productos/motobike-master-kit-la-herramienta-que-tu-moto-necesita-6530   /productos/set-de-herramientas-motobike-6530/   301
+/productos/motobike-master-kit-la-herramienta-que-tu-moto-necesita-6530/   /productos/set-de-herramientas-motobike-6530/   301
+/productos/set-de-herramientas-con-lampara-led-precio-bomba-10250   /productos/set-de-herramientas-con-lampara-led-10250/   301
+/productos/set-de-herramientas-con-lampara-led-precio-bomba-10250/   /productos/set-de-herramientas-con-lampara-led-10250/   301
+/productos/set-de-destornilladores-everest-precio-bomba-7991   /productos/set-de-destornilladores-everest-7991/   301
+/productos/set-de-destornilladores-everest-precio-bomba-7991/   /productos/set-de-destornilladores-everest-7991/   301
+/productos/molde-de-silicona-ice-face-precio-bomba-10677   /productos/molde-de-silicona-ice-face-10677/   301
+/productos/molde-de-silicona-ice-face-precio-bomba-10677/   /productos/molde-de-silicona-ice-face-10677/   301
+/productos/mini-herramientero-blazor-nuevo-13334   /productos/mini-herramientero-blazor-13334/   301
+/productos/mini-herramientero-blazor-nuevo-13334/   /productos/mini-herramientero-blazor-13334/   301
+/productos/memoria-usb-carabinero-precio-neto-4727   /productos/memoria-usb-carabinero-precio-neto-oferta-4727/   301
+/productos/memoria-usb-carabinero-precio-neto-4727/   /productos/memoria-usb-carabinero-precio-neto-oferta-4727/   301
+/productos/memoria-mini-usb-en-imitacion-cuero-precio-neto-5277   /productos/memoria-mini-usb-en-imitacion-cuero-precio-neto-oferta-5277/   301
+/productos/memoria-mini-usb-en-imitacion-cuero-precio-neto-5277/   /productos/memoria-mini-usb-en-imitacion-cuero-precio-neto-oferta-5277/   301
+/productos/memoria-usb-braxton-precio-neto-7987   /productos/memoria-usb-braxton-precio-neto-oferta-7987/   301
+/productos/memoria-usb-braxton-precio-neto-7987/   /productos/memoria-usb-braxton-precio-neto-oferta-7987/   301
