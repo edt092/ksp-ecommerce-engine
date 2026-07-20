@@ -1,7 +1,10 @@
+import { readFileSync } from 'fs';
+import { join } from 'path';
 import productsData from '@/data/products.json';
 import blogData from '@/data/blog/posts.json';
 import categoriesData from '@/data/categories.json';
 import { ecuador } from '@/data/geo-data';
+import { PAGINATED_CATEGORY_SLUGS, totalPagesFor } from '@/lib/category-pagination';
 
 const BASE_URL = 'https://www.kronosolopromocionales.com';
 
@@ -62,6 +65,30 @@ export default function sitemap() {
     changeFrequency: 'weekly',
   }));
 
+  // --- Category pagination routes (Fase 9 piloto, plan-seo.md) -------------
+  // Solo páginas 2..N de las categorías en PAGINATED_CATEGORY_SLUGS.
+  const categoryPaginationRoutes: { url: string; lastModified: string; priority: number; changeFrequency: string }[] = [];
+  for (const slug of PAGINATED_CATEGORY_SLUGS) {
+    const category = categoriesData.find((c) => c.slug === slug);
+    if (!category) continue;
+    let products: any[] = [];
+    try {
+      const raw = readFileSync(join(process.cwd(), 'data', 'category-products', `${category.id}.json`), 'utf-8');
+      products = JSON.parse(raw).products;
+    } catch {
+      continue;
+    }
+    const totalPages = totalPagesFor(products.length);
+    for (let page = 2; page <= totalPages; page++) {
+      categoryPaginationRoutes.push({
+        url: `${BASE_URL}/categorias/${slug}/pagina/${page}/`,
+        lastModified: BUILD_DATE,
+        priority: 0.5,
+        changeFrequency: 'weekly',
+      });
+    }
+  }
+
   // --- Geo city routes (Ecuador) -------------------------------------------
   // Site is Ecuador-only — 5 city pages. These are near-duplicates (only city
   // name, intro, and caracteristicas differ), well below the 30-page warning
@@ -76,6 +103,7 @@ export default function sitemap() {
   const allRoutes = [
     ...staticRoutes,
     ...categoryRoutes,
+    ...categoryPaginationRoutes,
     ...productRoutes,
     ...blogRoutes,
     ...ecuadorCityRoutes,
