@@ -6,14 +6,15 @@
 // cuando en realidad existe una sola entidad real (ver el LocalBusiness con
 // @id estable en src/app/layout.tsx, #localbusiness).
 //
-// Piloto: SOLO Quito. Es la ciudad de la dirección real ya declarada en el
-// LocalBusiness global (layout.tsx), por lo que un modelo Service→provider
-// apuntando a ese @id es honesto sin necesitar verificar nada nuevo del
-// negocio. Las otras 4 ciudades (Cuenca, Ambato, Manta con rendimiento
-// histórico positivo en GSC según el plan; Guayaquil sin dato) mantienen su
-// schema y contenido actuales sin cambios hasta aprobación explícita para
-// extender. No añadir slugs aquí sin esa aprobación.
-export const CITY_PILOT_SLUGS = new Set<string>(['quito']);
+// Piloto validado en Quito (build, canonicals, revisión visual — commit
+// a2eed60), extendido a Guayaquil el 2026-07-20: es la única de las 4
+// ciudades restantes sin advertencia de rendimiento histórico en GSC en el
+// plan. Cuenca, Ambato y Manta SÍ tienen esa advertencia ("ya mostraron
+// rendimiento positivo en GSC histórico") — el cambio de schema no toca
+// contenido visible, pero se dejan fuera hasta revisar esos datos reales
+// antes de tocar esas páginas, por decisión explícita del usuario. No
+// añadir esos 3 slugs aquí sin esa revisión.
+export const CITY_PILOT_SLUGS = new Set<string>(['quito', 'guayaquil']);
 
 export function isPilotCity(slug: string): boolean {
   return CITY_PILOT_SLUGS.has(slug);
