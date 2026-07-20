@@ -160,7 +160,17 @@ export const blogFase3 = {
       <td style="padding:12px 16px;border-bottom:1px solid #e0e7ff;"><strong>Equipo de campo / ventas</strong></td>
       <td style="padding:12px 16px;border-bottom:1px solid #e0e7ff;">Gorra, morral, termo mediano, llavero metálico</td>
       <td style="padding:12px 16px;border-bottom:1px solid #e0e7ff;">USD 12 – USD 35 por persona</td>
-      <td style="padding:12px 16px;border-bottom:1px solid #e0e7ff;">Durabilidad y funcionalidad en campo`,
+      <td style="padding:12px 16px;border-bottom:1px solid #e0e7ff;">Durabilidad y funcionalidad en campo
+    </tr>
+  </tbody>
+</table>
+
+<div style="background:#001A6E;border-radius:12px;padding:32px;margin-top:32px;text-align:center;">
+  <p style="color:#fff;font-size:1.1rem;margin-bottom:16px;">Explora nuestro catálogo completo de regalos corporativos y encuentra la opción ideal según tu presupuesto y el perfil de quien lo recibe.</p>
+  <a href="https://wa.me/593999814838?text=Hola%2C%20necesito%20cotizar%20regalos%20corporativos%20para%20mi%20empresa" style="background:#f5a520;color:#fff;padding:14px 32px;border-radius:50px;text-decoration:none;font-weight:bold;display:inline-block;">Cotizar por WhatsApp</a>
+  <p style="margin-top:16px;font-size:0.85rem;color:#cbd5e1;">O visita nuestro <a href="https://www.kronosolopromocionales.com/regalos-corporativos/" style="color:#93c5fd;">catálogo de regalos corporativos</a>.</p>
+</div>
+`,
 
   "merchandising-para-ferias-empresariales-ecuador": `<article style="font-family: Arial, sans-serif; color: #1a1a1a; max-width: 860px; margin: 0 auto; line-height: 1.75;">
 
@@ -308,10 +318,12 @@ export const blogFase3 = {
 
   <p>Este sistema de tres capas también tiene un beneficio operativo: el equipo de stand sabe exactamente qué artículo entregar en cada momento, sin improvisar ni gastar el presupuesto de Tier 3 en los primeros visitantes del día.</p>
 
-  <h2 style="color: #001f5b; font-size: 1.6rem; margin-top: 2.5rem; border-left: 5px solid #f47920; padding-left: 14px;">Errores que destruyen el retorno de inversión en ferias</h2>
-
-  <ol style="padding-left: 1.5rem; line-height: 2.2;">
-    <li>`,
+  <div style="background:#0a2463;border-radius:12px;padding:32px;margin-top:40px;text-align:center;">
+    <p style="color:#fff;font-size:1.1rem;margin-bottom:16px;">¿Tienes una feria empresarial próxima? Cotiza tu kit de merchandising con tiempo.</p>
+    <a href="https://wa.me/593999814838?text=Hola%2C%20necesito%20cotizar%20merchandising%20para%20una%20feria%20empresarial" style="background:#f47920;color:#fff;padding:14px 32px;border-radius:50px;text-decoration:none;font-weight:bold;display:inline-block;">Cotizar para mi feria</a>
+    <p style="margin-top:16px;font-size:0.85rem;color:#cbd5e1;">O explora nuestro <a href="https://www.kronosolopromocionales.com/merchandising-corporativo/" style="color:#93c5fd;">catálogo de merchandising corporativo</a>.</p>
+  </div>
+`,
 
   "boligrafos-promocionales-personalizados-guia-empresas-ecuador": `<article style="font-family: Arial, sans-serif; max-width: 900px; margin: 0 auto; color: #222; line-height: 1.7;">
 
@@ -529,17 +541,11 @@ export const blogFase3 = {
     <strong style="color: #0a2240;">📋 Tip de presupuesto:</strong> Siempre cotiza con al menos dos rangos de cantidad (por ejemplo, 500 y 1,000 unidades) para evaluar cuánto baja el precio unitario. En la mayoría de los casos, duplicar el pedido reduce el costo por unidad entre un 20% y un 35%, lo que puede justificar el volumen adicional si tienes eventos futuros en el año.
   </div>
 
-  <!-- SECCIÓN 5 -->
-  <h2 style="color: #0a2240; font-size: 1.5rem; margin-top: 40px; border-left: 5px solid #f47920; padding-left: 12px;">
-    Errores a evitar al comprar bolígrafos promocionales
-  </h2>
-  <p>
-    Estos son los cinco errores más frecuentes que cometen los equipos de compras y marketing en Ecuador al cotizar bolígrafos, y cómo evitarlos:
-  </p>
-
-  <div style="margin: 20px 0;">
-
-    <div style="background-color:`,
+  <div style="background:#f8faff;border:1px solid #e0e7ff;border-radius:12px;padding:24px;margin-top:32px;">
+    <p style="margin:0 0 12px;">Si buscas bolígrafos promocionales de calidad para tu empresa, revisa nuestro <a href="https://www.kronosolopromocionales.com/categorias/boligrafos-publicitarios/">catálogo de bolígrafos publicitarios</a> con opciones metálicas, ecológicas y ejecutivas.</p>
+    <a href="https://wa.me/593999814838?text=Hola%2C%20necesito%20cotizar%20bol%C3%ADgrafos%20promocionales%20personalizados" style="display:inline-block;background:#0a2240;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:bold;">Cotizar bolígrafos por WhatsApp</a>
+  </div>
+`,
 
   "articulos-promocionales-ecologicos-para-empresas-ecuador": `<article>
 
@@ -754,7 +760,11 @@ export const blogFase3 = {
 
 <p>Este mito tiene una raíz histórica legítima: en los primeros años del merchandising ecológico, la oferta era limitada y la calidad inconsistente. Eso cambió. Los termos de acero inoxidable de doble pared superan en durabilidad térmica a sus equivalentes de plástico. El grabado láser sobre bambú es más permanente que la impresión serigráfica sobre plástico. Las libretas con tapa de cartón reciclado prensado pueden tener la misma o mejor rigidez que una libreta de tapa plástica. La clave está en seleccionar proveedores que trabajen con fichas técnicas verificables y muestras físicas antes del pedido.</p>
 
-<p`,
+<div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:24px;margin-top:32px;">
+  <p style="margin:0 0 12px;">Descubre nuestra línea completa de <a href="https://www.kronosolopromocionales.com/categorias/ecologia/">artículos promocionales ecológicos</a> para alinear tu merchandising con tus objetivos de sostenibilidad.</p>
+  <a href="https://wa.me/593999814838?text=Hola%2C%20necesito%20cotizar%20art%C3%ADculos%20promocionales%20ecol%C3%B3gicos" style="display:inline-block;background:#166534;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:bold;">Cotizar línea ecológica</a>
+</div>
+`,
 
   "cuanto-cuestan-los-articulos-promocionales-personalizados-ecuador": `<article>
 
@@ -1033,6 +1043,9 @@ export const blogFase3 = {
 <h3>¿Los precios incluyen IVA?</h3>
 <p>Depende del proveedor y de cómo presenten sus cotizaciones. En Ecuador el IVA vigente es del 15%, y todo proveedor formal debe facturarlo. Siempre confirma si los precios que te cotizaron son con o sin IVA antes de aprobar un presupuesto. En las tablas de este artículo, los precios indicados ya incluyen IVA 15%.</p>
 
-<h3>¿Cuáles son las formas de pago habituales?</h3>
-<p>La mayoría de proveedores en Ecuador trabajan con un anticipo del 50% al iniciar la`
+<div style="background:#f8faff;border:1px solid #e0e7ff;border-radius:12px;padding:24px;margin-top:32px;">
+  <p style="margin:0 0 12px;">Revisa nuestro <a href="https://www.kronosolopromocionales.com/articulos-promocionales/">catálogo completo de artículos promocionales</a> y solicita una cotización a la medida de tu presupuesto.</p>
+  <a href="https://wa.me/593999814838?text=Hola%2C%20necesito%20una%20cotizaci%C3%B3n%20de%20art%C3%ADculos%20promocionales" style="display:inline-block;background:#0a2240;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:bold;">Solicitar cotización</a>
+</div>
+`
 };

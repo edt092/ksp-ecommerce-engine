@@ -50,7 +50,7 @@ function callClaude(userPrompt) {
   return new Promise((resolve, reject) => {
     const body = JSON.stringify({
       model: MODEL,
-      max_tokens: 6000,
+      max_tokens: 16000,
       messages: [{ role: 'user', content: userPrompt }],
       system: `Eres un redactor SEO especializado en B2B y artículos promocionales para Ecuador.
 Escribes en español neutro latinoamericano, tono profesional pero directo.
@@ -409,10 +409,17 @@ async function main() {
   );
   console.log(`\n✅  Contenido escrito en: data/blog/content/fase3.js`);
 
-  // Append to posts.json
-  const updatedPosts = [...existingPosts, ...newPosts];
+  // Reemplaza en su lugar si el slug ya existía (--only regenerando uno
+  // existente); si no, lo agrega al final. Antes esto SIEMPRE hacía
+  // append, así que --only sobre un slug existente dejaba dos entradas
+  // duplicadas del mismo post en posts.json.
+  const newBySlug = new Map(newPosts.map((p) => [p.slug, p]));
+  const updatedPosts = existingPosts.map((p) => newBySlug.get(p.slug) ?? p);
+  for (const p of newPosts) {
+    if (!existingSlugs.has(p.slug)) updatedPosts.push(p);
+  }
   fs.writeFileSync(POSTS_FILE, JSON.stringify(updatedPosts, null, 2), 'utf-8');
-  console.log(`✅  ${newPosts.length} post(s) agregados a data/blog/posts.json`);
+  console.log(`✅  ${newPosts.length} post(s) escritos en data/blog/posts.json (reemplazando si ya existían)`);
 
   console.log(`\n🎉  Listo. Slugs generados:`);
   newPosts.forEach(p => console.log(`   /blog/${p.slug}/`));

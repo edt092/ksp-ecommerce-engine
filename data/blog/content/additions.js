@@ -294,6 +294,8 @@ BAJO COSTO              │              ALTO COSTO
   <p style="margin: 0 0 24px; color: #c7d2fe; font-size: 15px;">Analizamos tus 3 perfiles de cliente principales y te entregamos 3 fichas de producto con copywriting neuro-persuasivo incluido. Porque regalar a ciegas es tirar dinero. Regalar con ciencia es invertir.</p>
   <a href="/contacto" style="display: inline-block; background: white; color: #001A6E; padding: 14px 32px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 16px;">Solicita tu Diagnóstico P.E.R.F.I.L. Gratuito</a>
 </div>
+
+<p>Mientras tanto, explora nuestro <a href="/regalos-corporativos/">catálogo de regalos corporativos</a> organizado por perfil y presupuesto.</p>
 `,
 
   'articulos-promocionales-para-empresas-que-funcionan': `
