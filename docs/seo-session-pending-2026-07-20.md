@@ -25,16 +25,21 @@ hecho, solo el estado y lo que falta.
   `pnpm build`, `seo:test` en 0. Revisión visual en navegador confirmada.
 - **Commit local, no pusheado aún** al cierre de esta sesión — pendiente decisión del usuario.
 
-### 🔴 Pendiente antes de extender a Guayaquil/Cuenca/Manta/Ambato (requiere aprobación explícita)
+### Extendido a Guayaquil (commit `7775596`)
+
+Aprobado por el usuario en la misma sesión: Guayaquil es la única de las 4 ciudades
+restantes sin advertencia de rendimiento GSC histórico en el plan, así que recibió el mismo
+fix (Service + BreadcrumbList + FAQ). Verificado igual que Quito (FAQ visible = schema,
+canonical correcto, resto del sitio sin cambios). Todas las validaciones en 0.
+
+### 🔴 Pendiente antes de extender a Cuenca/Manta/Ambato (requiere revisión de GSC real)
 
 - El plan advierte que **Cuenca, Ambato y Manta ya mostraron rendimiento positivo en GSC
-  histórico** — a diferencia de la extensión de Fase 9 (aprobada y aplicada en la misma
-  sesión sin este riesgo), aquí se recomienda revisar esos datos de GSC reales antes de
-  tocar esas 3 páginas, aunque el cambio de schema en sí es de bajo riesgo (no modifica
-  contenido visible, solo unifica la entidad — el riesgo real estaría en tocar contenido).
-  Guayaquil no tiene esa señal de alerta en el plan.
-- `reports/schema-entity-audit.csv` deja las 4 filas de Guayaquil/Cuenca/Manta/Ambato
-  marcadas `duplicate_entity=true`, acción `PENDIENTE`, listas para cuando se apruebe extender.
+  histórico** — se prefiere revisar esos datos reales de Search Console antes de tocar esas
+  3 páginas, aunque el cambio de schema en sí es de bajo riesgo (no modifica contenido
+  visible, solo unifica la entidad).
+- `reports/schema-entity-audit.csv` deja las 3 filas de Cuenca/Manta/Ambato marcadas
+  `duplicate_entity=true`, acción `PENDIENTE`, listas para cuando se revisen esos datos.
 - La dirección `streetAddress: "Norte de Quito"` en el `LocalBusiness` global (`layout.tsx`)
   sigue sin verificar — el propio `plan-seo.md` la cita textualmente como ejemplo de qué NO
   usar (Fase 17). Fuera de alcance de Fase 6/7, pero vale la pena resolverlo en una sesión
