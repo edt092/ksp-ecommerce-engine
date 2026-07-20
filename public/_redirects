@@ -90,8 +90,8 @@
 /productos/audifonos-boom-precio-bomba/                /productos/audifonos-boom-precio-bomba-5657/                 301
 /productos/resaltador-magico-en-cera                   /productos/resaltador-magico-en-cera-4672/                   301
 /productos/resaltador-magico-en-cera/                  /productos/resaltador-magico-en-cera-4672/                   301
-/productos/rastreador-airtag-boomtag-nuevo             /productos/rastreador-airtag-boomtag-nuevo-13210/            301
-/productos/rastreador-airtag-boomtag-nuevo/            /productos/rastreador-airtag-boomtag-nuevo-13210/            301
+/productos/rastreador-airtag-boomtag-nuevo             /productos/rastreador-airtag-boomtag-13210/                  301
+/productos/rastreador-airtag-boomtag-nuevo/            /productos/rastreador-airtag-boomtag-13210/                  301
 
 # 301 Redirects - Dual slugs (slug+ID → base slug, generado automáticamente)
 /productos/bolsa-en-cambrel-con-fuelle-para-sublimacion-nuevo-13587-2022    /productos/bolsa-en-cambrel-con-fuelle-para-sublimacion-nuevo-13587/    301
@@ -627,3 +627,28 @@
 /categorias/maletines/                             /categorias/mochilas-y-maletines-personalizados/         301
 /categorias/confeccion                             /categorias/camisetas-y-confeccion-corporativa/          301
 /categorias/confeccion/                            /categorias/camisetas-y-confeccion-corporativa/          301
+
+# 301 Redirects — Fase 2 Batch 1: consolidación de duplicados exactos por SKU
+# Producto duplicado con datos genéricos ("-nuevo-") -> entrada canónica con contenido enriquecido
+# Validado 1:1 (mismo categoryId, misma imagen, mismo nombre normalizado, sin specs/materiales en conflicto)
+# reports/product-duplicate-candidates.csv + reports/batch1-duplicate-redirects.csv
+/productos/speaker-bluetooth-beach-35-boompods-nuevo-13213    /productos/speaker-bluetooth-beach-35-boompods-13213/    301
+/productos/speaker-bluetooth-beach-35-boompods-nuevo-13213/   /productos/speaker-bluetooth-beach-35-boompods-13213/    301
+/productos/rastreador-airtag-boomtag-nuevo-13210              /productos/rastreador-airtag-boomtag-13210/              301
+/productos/rastreador-airtag-boomtag-nuevo-13210/             /productos/rastreador-airtag-boomtag-13210/              301
+/productos/rastreador-airtag-boomcard-nuevo-13211             /productos/rastreador-airtag-boomcard-13211/             301
+/productos/rastreador-airtag-boomcard-nuevo-13211/            /productos/rastreador-airtag-boomcard-13211/             301
+/productos/audifonos-bluetooth-anc-nuevo-13212                /productos/audifonos-bluetooth-anc-13212/                301
+/productos/audifonos-bluetooth-anc-nuevo-13212/               /productos/audifonos-bluetooth-anc-13212/                301
+/productos/resaltadores-jeringa-nuevo-13262                   /productos/resaltadores-jeringa-13262/                   301
+/productos/resaltadores-jeringa-nuevo-13262/                  /productos/resaltadores-jeringa-13262/                   301
+/productos/boligrafo-scroll-nuevo-13294                       /productos/boligrafo-scroll-13294/                       301
+/productos/boligrafo-scroll-nuevo-13294/                      /productos/boligrafo-scroll-13294/                       301
+/productos/bbq-grill-soccer-cook-nuevo-13202                  /productos/bbq-grill-soccer-cook-13202/                  301
+/productos/bbq-grill-soccer-cook-nuevo-13202/                 /productos/bbq-grill-soccer-cook-13202/                  301
+/productos/masajeador-hyper-eco-nuevo-13338                   /productos/masajeador-hyper-eco-13338/                   301
+/productos/masajeador-hyper-eco-nuevo-13338/                  /productos/masajeador-hyper-eco-13338/                   301
+/productos/pastillero-radion-nuevo-13332                      /productos/pastillero-radion-13332/                      301
+/productos/pastillero-radion-nuevo-13332/                     /productos/pastillero-radion-13332/                      301
+/productos/soporte-para-celular-pop-it-nuevo-13320             /productos/soporte-para-celular-pop-it-13320/            301
+/productos/soporte-para-celular-pop-it-nuevo-13320/            /productos/soporte-para-celular-pop-it-13320/            301
