@@ -257,20 +257,9 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-white/6">
-          <div className="container mx-auto px-4 py-5 flex flex-col sm:flex-row justify-between items-center gap-3 text-center sm:text-left">
+          <div className="container mx-auto px-4 py-5 flex flex-col sm:flex-row justify-center items-center gap-3 text-center sm:text-left">
             <p className="text-white/25 text-xs">
               © {year} KS Promocionales · RUC 1719403345001 · Quito, Ecuador
-            </p>
-            <p className="text-white/25 text-xs">
-              Desarrollado por{' '}
-              <a
-                href="https://edwinbayonaitmanager.online/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white/40 hover:text-white transition-colors"
-              >
-                Bayona Digital Systems
-              </a>
             </p>
           </div>
         </div>
