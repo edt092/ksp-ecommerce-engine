@@ -14,9 +14,14 @@ export const metadata = {
   },
 };
 
+// Mismo @id que el LocalBusiness de src/app/layout.tsx (#localbusiness):
+// permite que Google fusione ambos bloques en una sola entidad del grafo en
+// vez de interpretar la tienda online como un negocio distinto (Fase 7,
+// plan-seo.md).
 const onlineStoreJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'OnlineStore',
+  '@id': 'https://www.kronosolopromocionales.com/#localbusiness',
   name: 'KS Promocionales',
   url: 'https://www.kronosolopromocionales.com',
   description: 'Tienda de artículos promocionales y material publicitario personalizado con logo en Ecuador.',

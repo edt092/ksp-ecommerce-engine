@@ -134,7 +134,7 @@ export default function EcuadorPage() {
             {ecuador.ciudades.map((ciudad) => (
               <Link
                 key={ciudad.slug}
-                href={`/productos-promocionales-ecuador/${ciudad.slug}`}
+                href={`/productos-promocionales-ecuador/${ciudad.slug}/`}
                 className="group bg-white border border-gray-200 rounded-2xl p-6 hover:border-primary hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-start gap-4">

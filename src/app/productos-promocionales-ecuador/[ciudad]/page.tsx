@@ -2,6 +2,37 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { MapPin, ArrowRight, ArrowLeft, CheckCircle } from 'lucide-react';
 import { ecuador, getCiudadBySlug } from '@/data/geo-data';
+import { isPilotCity } from '@/lib/city-pilot';
+
+const BASE_URL = 'https://www.kronosolopromocionales.com';
+
+// FAQ genérica reutilizable por ciudad — respuestas de política real de la
+// empresa (cotización solo por WhatsApp, sin precios públicos, plazos y
+// cantidades mínimas variables según producto) más una respuesta de
+// cobertura construida a partir del dato real ya presente en
+// data/geo-data.js (ciudad.caracteristicas[0]), sin inventar nada nuevo por
+// ciudad. El array se usa tanto para el contenido visible como para el
+// FAQPage JSON-LD, así nunca pueden desincronizarse.
+function buildCityFaq(ciudad) {
+  return [
+    {
+      question: `¿Hacen entregas en toda ${ciudad.nombre}?`,
+      answer: `Sí. ${ciudad.caracteristicas[0]}.`,
+    },
+    {
+      question: `¿Cómo cotizo productos promocionales en ${ciudad.nombre}?`,
+      answer: 'Escríbenos por WhatsApp con el producto y la cantidad que necesitas. Te respondemos con precio, tiempos de producción y opciones de personalización según tu pedido.',
+    },
+    {
+      question: '¿Cuál es el tiempo de entrega?',
+      answer: 'Depende del producto, la cantidad y la técnica de personalización elegida. Te lo confirmamos al cotizar.',
+    },
+    {
+      question: '¿Tienen cantidad mínima de pedido?',
+      answer: 'La cantidad mínima varía según el producto. Consúltala directamente por WhatsApp para tu pedido específico.',
+    },
+  ];
+}
 
 export function generateStaticParams() {
   return ecuador.ciudades.map((ciudad) => ({
@@ -59,31 +90,80 @@ export default function CiudadEcuadorPage({ params }) {
   }
 
   const otrasCiudades = ecuador.ciudades.filter(c => c.slug !== params.ciudad);
+  const pilot = isPilotCity(ciudad.slug);
+  const cityUrl = `${BASE_URL}/productos-promocionales-ecuador/${ciudad.slug}/`;
+  const faq = pilot ? buildCityFaq(ciudad) : [];
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: `KS Promocionales ${ciudad.nombre}`,
-    description: ciudad.seoDescription,
-    url: `https://www.kronosolopromocionales.com/productos-promocionales-ecuador/${ciudad.slug}/`,
-    areaServed: {
-      '@type': 'City',
-      name: ciudad.nombre,
-      containedInPlace: { '@type': 'Country', name: 'Ecuador' },
-    },
-    parentOrganization: {
-      '@type': 'Organization',
-      name: 'KS Promocionales',
-      url: 'https://www.kronosolopromocionales.com',
-    },
-  };
+  // Fase 6/7 (plan-seo.md): las ciudades piloto usan un modelo Service que
+  // apunta al @id real de layout.tsx (#localbusiness) en vez de declarar un
+  // LocalBusiness independiente por ciudad — evita que Google interprete 5
+  // negocios distintos donde solo existe una entidad real. Las ciudades
+  // fuera del piloto mantienen el schema anterior sin cambios (ver
+  // src/lib/city-pilot.ts) hasta aprobación explícita para extender.
+  const jsonLdBlocks = pilot
+    ? [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: `Productos promocionales y regalos corporativos en ${ciudad.nombre}`,
+          description: ciudad.seoDescription,
+          serviceType: 'Productos promocionales y regalos corporativos personalizados',
+          url: cityUrl,
+          provider: { '@id': `${BASE_URL}/#localbusiness` },
+          areaServed: {
+            '@type': 'City',
+            name: ciudad.nombre,
+            containedInPlace: { '@type': 'Country', name: 'Ecuador' },
+          },
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Inicio', item: `${BASE_URL}/` },
+            { '@type': 'ListItem', position: 2, name: 'Ecuador', item: `${BASE_URL}/productos-promocionales-ecuador/` },
+            { '@type': 'ListItem', position: 3, name: ciudad.nombre, item: cityUrl },
+          ],
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: faq.map((f) => ({
+            '@type': 'Question',
+            name: f.question,
+            acceptedAnswer: { '@type': 'Answer', text: f.answer },
+          })),
+        },
+      ]
+    : [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'LocalBusiness',
+          name: `KS Promocionales ${ciudad.nombre}`,
+          description: ciudad.seoDescription,
+          url: cityUrl,
+          areaServed: {
+            '@type': 'City',
+            name: ciudad.nombre,
+            containedInPlace: { '@type': 'Country', name: 'Ecuador' },
+          },
+          parentOrganization: {
+            '@type': 'Organization',
+            name: 'KS Promocionales',
+            url: BASE_URL,
+          },
+        },
+      ];
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      {jsonLdBlocks.map((block, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(block) }}
+        />
+      ))}
 
       {/* Breadcrumb */}
       <div className="bg-gray-50 pt-28 pb-4">
@@ -181,6 +261,28 @@ export default function CiudadEcuadorPage({ params }) {
         </div>
       </section>
 
+      {/* FAQ local — solo ciudades piloto (Fase 6/7, plan-seo.md). El
+          contenido visible es exactamente el mismo array que alimenta el
+          FAQPage JSON-LD de arriba (buildCityFaq), para que nunca queden
+          desincronizados. */}
+      {pilot && faq.length > 0 && (
+        <section className="py-16 lg:py-24 bg-white">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10 text-center">
+              Preguntas Frecuentes — {ciudad.nombre}
+            </h2>
+            <div className="space-y-6">
+              {faq.map((item, index) => (
+                <div key={index} className="border border-gray-200 rounded-xl p-6">
+                  <h3 className="font-bold text-gray-900 text-lg mb-2">{item.question}</h3>
+                  <p className="text-gray-600 leading-relaxed">{item.answer}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Otras ciudades */}
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -196,7 +298,7 @@ export default function CiudadEcuadorPage({ params }) {
             {otrasCiudades.map((otraCiudad) => (
               <Link
                 key={otraCiudad.slug}
-                href={`/productos-promocionales-ecuador/${otraCiudad.slug}`}
+                href={`/productos-promocionales-ecuador/${otraCiudad.slug}/`}
                 className="bg-white border border-gray-200 hover:border-primary rounded-xl p-4 text-center transition-all hover:shadow-lg group"
               >
                 <MapPin className="mx-auto text-primary mb-2 group-hover:scale-110 transition-transform" size={24} />

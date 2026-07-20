@@ -9,7 +9,7 @@ export const ecuador = {
   seoTitle: 'Productos Promocionales Ecuador | Regalos Corporativos KS',
   seoDescription: 'Productos promocionales y regalos corporativos en Ecuador. Artículos publicitarios personalizados con envíos a Quito, Guayaquil, Cuenca, Manta y Ambato.',
   h1: 'Productos Promocionales en Ecuador',
-  intro: 'KS Promocionales es tu aliado estratégico en artículos publicitarios y regalos corporativos en Ecuador. Ofrecemos más de 1,200 productos personalizados con tu logo para impulsar tu marca en todo el país.',
+  intro: 'KS Promocionales es tu aliado estratégico en artículos publicitarios y regalos corporativos en Ecuador. Ofrecemos más de 2.100 productos personalizados con tu logo para impulsar tu marca en todo el país.',
   ciudades: [
     {
       slug: 'quito',
