@@ -4,6 +4,35 @@ Continuación de `docs/seo-master-plan-2026-07-19.md` y `reports/audit-findings-
 Este documento es solo el punto de partida para la próxima sesión — no repite el análisis ya
 hecho, solo el estado y lo que falta.
 
+## Fase 10 — contenido delgado: CERRADA (commit `51bd3a9`)
+
+- `scripts/audit-product-content-quality.mjs` audita los 2.036 productos indexables y cruza
+  con `reports/gsc-product-opportunities.csv` (export real de GSC, período 2025-03-16 a
+  2026-07-15, ya existía en el repo de una sesión anterior). Distribución: A=1808, B=147,
+  C=81, D/E=0 — la limpieza de duplicados de Fase 2 ya eliminó los peores casos.
+- Cohorte piloto de 20 seleccionada con el criterio exacto del plan (impresiones>0, top-20,
+  clasificación B/C) contra datos reales de GSC, no una aproximación.
+- 13 de 20 productos mejorados reorganizando datos reales que ya existían en `story` pero no
+  llegaban a `shortDescription`/`seoDescription` (medidas, materiales, funciones concretas).
+- 7 de 20 (5 "Speaker Bluetooth" casi clonados entre sí + 2 más) son contenido de plantilla
+  genuinamente delgado sin ficha técnica real disponible localmente — se deduplicó el texto
+  idéntico (3 compartían el mismo párrafo palabra por palabra) sin fabricar diferenciadores.
+  Un caso sí tenía dato real aprovechable ("Boompods" es una marca de audio real).
+- Validado completo, en verde.
+- **Commit local, no pusheado aún** al cierre de esta sesión — pendiente decisión del usuario.
+
+### 🔴 Pendiente de Fase 10
+
+- Los 7 productos de plantilla delgada (`speaker-bluetooth-barack-8135`,
+  `speaker-bluetooth-rocco-8637`, `speaker-bluetooth-clock-eco-10835`,
+  `speaker-bluetooth-lights-eco-9798`, `summit-stylus-5747`,
+  `set-de-herramientas-apache-10288`) necesitan ficha técnica real del proveedor (batería,
+  alcance Bluetooth, cantidad/tipo de herramientas) para una mejora sustantiva — no se puede
+  hacer más sin inventar datos.
+- Quedan 12 candidatos más de la lista de 32 (impresiones>0, top-20, clasificación B/C) sin
+  tocar — ver `reports/product-content-quality.csv` para la lista completa y decidir si se
+  amplía la cohorte en una sesión futura.
+
 ## Fase 5 — lastmod del sitemap: CERRADA (commit `849663a`)
 
 - `scripts/audit-sitemap-lastmod.mjs` audita las 2.132 URLs. Hallazgo: `BUILD_DATE` se aplicaba
