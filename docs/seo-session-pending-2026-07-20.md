@@ -56,11 +56,43 @@ hecho, solo el estado y lo que falta.
   BLOCKED_REQUIRES_VISUAL_VERIFICATION: misma imagen pero descripciones materialmente distintas
   (mug metálico abierto vs. termo de doble pared con retención de calor 8h).
 - Catálogo tras Fase 2 completa: 2185 → 2100 productos (85 consolidados).
-- Siguiente fase sugerida por el plan: Fase 3 (integridad producto↔ruta, ya resuelta como falso
-  positivo en sesión 1) → Fase 6/7 (piloto de página de ciudad) o Fase 9 (piloto de categoría
-  rastreable `boligrafos-publicitarios`, 174 productos con solo 12 enlaces `<a>` reales) son
-  probablemente los siguientes de mayor impacto SEO pendientes.
 - Ver `reports/product-duplicate-candidates.csv` y `reports/batch{1,2,3,4,5,6}-duplicate-redirects.csv`.
+
+## Fase 9 — Paginación de categorías: PILOTO implementado (commit `192a345`)
+
+- Confirmado en `out/`: `boligrafos-publicitarios` (171 productos tras Fase 2, antes 174) solo
+  exponía 12 `<a href>` reales; el resto vivía en `CategoryProductsGrid` (scroll infinito
+  client-side).
+- Implementada Opción A del plan (paginación estática) **solo para esta categoría**:
+  - `src/lib/category-pagination.ts` — whitelist `PAGINATED_CATEGORY_SLUGS` (hoy solo
+    `boligrafos-publicitarios`) + `CATEGORY_PAGE_SIZE=24`.
+  - `src/components/StaticProductsGrid.tsx` + `src/components/CategoryPagination.tsx` — grid
+    servidor sin scroll infinito + nav Anterior/Siguiente con enlaces reales.
+  - `src/app/categorias/[slug]/page.tsx` — rama condicional solo para slugs en la whitelist;
+    las otras 36 categorías siguen exactamente igual (verificado: `precio-bomba` sigue con 12
+    enlaces, sin nav de paginación).
+  - `src/app/categorias/[slug]/pagina/[page]/page.tsx` — ruta nueva, páginas 2..8 generadas
+    solo para el piloto.
+  - `src/app/sitemap.ts` — incluye las 7 páginas adicionales del piloto.
+- Verificado: 24 enlaces × 7 páginas + 3 en la última = 171 (exacto, sin duplicados),
+  canonicals autorreferenciales por página, títulos distintos, JSON-LD parseable, revisión
+  visual en navegador (desktop) con clic real en "Siguiente" confirmando la navegación.
+  Todas las validaciones (`validate-unique-slugs`, `seo:links`, `seo:indexability`,
+  `seo:redirects`, `pnpm build`, `seo:test`) en 0.
+- **Commit local, no pusheado aún** al cierre de esta sesión — pendiente decisión del usuario.
+
+### 🔴 Pendiente antes de extender a las 37 categorías (requiere aprobación humana explícita — regla del plan, no autorizada aún)
+
+- Medir engagement/CTR real de la paginación piloto en producción antes de decidir extender.
+- Revisar si `CATEGORY_PAGE_SIZE=24` es apropiado para categorías con distribuciones de tamaño
+  muy distintas — varias categorías tienen <20 productos y no necesitarían paginación en
+  absoluto (solo activar la whitelist para categorías por encima de cierto umbral, ej. >40-50
+  productos).
+- No se hizo revisión visual en viewport móvil real en esta sesión (la herramienta de
+  resize_window del navegador no reflejó el cambio de viewport en las capturas) — el
+  componente reutiliza las mismas clases Tailwind responsive que el resto del sitio
+  (`grid-cols-2 sm:grid-cols-3 lg:grid-cols-4`), pero vale la pena una verificación visual
+  explícita en móvil real antes de extender a más categorías.
 
 ## Hallazgos confirmados de la Fase 0 — sin implementar todavía
 
