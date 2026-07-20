@@ -652,3 +652,19 @@
 /productos/pastillero-radion-nuevo-13332/                     /productos/pastillero-radion-13332/                      301
 /productos/soporte-para-celular-pop-it-nuevo-13320             /productos/soporte-para-celular-pop-it-13320/            301
 /productos/soporte-para-celular-pop-it-nuevo-13320/            /productos/soporte-para-celular-pop-it-13320/            301
+
+# 301 Redirects — Fase 2 Batch 2: consolidación de duplicados exactos validados 1:1 + fusión de contenido factual
+# 3742 (técnica de personalización en conflicto) y 10282 (afirmación "plegable" sin verificar) quedan BLOCKED, no incluidos aquí
+# reports/product-duplicate-candidates.csv + reports/batch2-duplicate-redirects.csv
+/productos/paraguas-golf-cuadrado-30-oferta-1085                /productos/paraguas-golf-cuadrado-30-1085/                301
+/productos/paraguas-golf-cuadrado-30-oferta-1085/               /productos/paraguas-golf-cuadrado-30-1085/                301
+/productos/paraguas-lancelot-27-oferta-6865                     /productos/paraguas-lancelot-27-6865/                     301
+/productos/paraguas-lancelot-27-oferta-6865/                    /productos/paraguas-lancelot-27-6865/                     301
+/productos/bolsa-clear-zuzy-con-ribete-produccion-nacionalmas-6460    /productos/bolsa-clear-zuzy-con-ribete-produccion-nacional-6460/    301
+/productos/bolsa-clear-zuzy-con-ribete-produccion-nacionalmas-6460/   /productos/bolsa-clear-zuzy-con-ribete-produccion-nacional-6460/    301
+/productos/reloj-led-bamboo-oferta-9721                         /productos/reloj-led-bamboo-9721/                         301
+/productos/reloj-led-bamboo-oferta-9721/                        /productos/reloj-led-bamboo-9721/                         301
+/productos/bolsa-clear-trenza-con-ribete-produccion-nacionalmas-6463   /productos/bolsa-clear-trenza-con-ribete-produccion-nacional-6463/   301
+/productos/bolsa-clear-trenza-con-ribete-produccion-nacionalmas-6463/  /productos/bolsa-clear-trenza-con-ribete-produccion-nacional-6463/   301
+/productos/botilito-sport-650ml-produccion-nacionalmas-4083     /productos/botilito-sport-650ml-produccion-nacional-4083/    301
+/productos/botilito-sport-650ml-produccion-nacionalmas-4083/    /productos/botilito-sport-650ml-produccion-nacional-4083/    301
