@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { catalogCountLabel, catalogCountLabelReferences } from '@/lib/business-facts';
 
 export const dynamic = 'force-static';
 
@@ -213,7 +214,7 @@ export default function ArticulosPromocionalesPage() {
               Categorías de Artículos Promocionales
             </h2>
             <p className="text-gray-500 text-center mb-12 max-w-xl mx-auto">
-              Más de 3,500 referencias personalizables con el logo de tu empresa. Encuentra la categoría ideal para tu campaña o evento.
+              {catalogCountLabelReferences}, personalizables con el logo de tu empresa. Encuentra la categoría ideal para tu campaña o evento.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {CATEGORIES.map((cat) => (
@@ -250,7 +251,7 @@ export default function ArticulosPromocionalesPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { title: '+3,500 referencias', desc: 'El catálogo más completo de artículos promocionales en Ecuador.' },
+                { title: catalogCountLabel, desc: 'El catálogo más completo de artículos promocionales en Ecuador.' },
                 { title: 'Personalización profesional', desc: 'Serigrafía, grabado láser, bordado y más. Tu logo en cada artículo con alta calidad.' },
                 { title: 'Cotización en 48 horas', desc: 'Respuesta rápida por WhatsApp. Sin formularios complicados ni esperas largas.' },
               ].map((b) => (

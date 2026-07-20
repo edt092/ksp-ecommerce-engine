@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { catalogCountLabel } from '@/lib/business-facts';
 
 const FAQ_NOSOTROS = [
   {
@@ -279,7 +280,7 @@ export default function AboutPage() {
               <p>
                 Hoy, KS Promocionales trabaja con empresas de todos los tamaños en Ecuador —
                 desde startups tecnológicas que necesitan swag para su primer evento hasta corporaciones
-                que buscan kits de regalo para cientos de clientes. El catálogo supera los 1,200 productos,
+                que buscan kits de regalo para cientos de clientes. El catálogo supera los 2,100 productos,
                 pero la promesa sigue siendo la misma: entender tu marca antes de recomendar un artículo.
               </p>
             </div>
@@ -287,7 +288,7 @@ export default function AboutPage() {
             {/* Data points */}
             <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
-                { stat: '1,200+', label: 'Productos disponibles' },
+                { stat: catalogCountLabel, label: 'Productos disponibles' },
                 { stat: '+10', label: 'Años de experiencia' },
                 { stat: '48h', label: 'Respuesta de cotización' },
                 { stat: '100%', label: 'Atención personalizada' },
@@ -399,7 +400,7 @@ export default function AboutPage() {
               <h3 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-3">Cobertura</h3>
               <ul className="space-y-1.5 text-sm text-gray-600">
                 <li>🇪🇨 Ecuador — Envíos nacionales</li>
-                <li>📦 +1,200 productos personalizables</li>
+                <li>📦 {catalogCountLabel} personalizables</li>
                 <li>⏱ Cotización garantizada en 48h</li>
               </ul>
             </div>

@@ -3,6 +3,7 @@
 import { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { catalogCountLabelLong } from '@/lib/business-facts';
 
 export default function CategoryShowcase({ categories }) {
   const trackRef   = useRef(null);
@@ -65,7 +66,7 @@ export default function CategoryShowcase({ categories }) {
       <div className="reveal container mx-auto px-4 text-center mb-10 md:mb-14">
         <div className="inline-flex items-center gap-2 bg-[#EDF0FB] text-[#0F2178] text-[11px] font-bold uppercase tracking-[0.18em] px-4 py-2 rounded-full mb-5">
           <span className="w-1.5 h-1.5 rounded-full bg-[#F5A520] shrink-0" />
-          Más de 3.500 productos promocionales
+          {catalogCountLabelLong}
         </div>
 
         <h2

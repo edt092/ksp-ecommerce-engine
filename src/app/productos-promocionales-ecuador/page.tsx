@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { MapPin, ArrowRight, Package, Truck, Award } from 'lucide-react';
 import { ecuador } from '@/data/geo-data';
+import { catalogCountLabel } from '@/lib/business-facts';
 
 export const metadata = {
   title: ecuador.seoTitle,
@@ -99,7 +100,7 @@ export default function EcuadorPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold text-primary mb-2">1,200+</div>
+              <div className="text-4xl font-bold text-primary mb-2">{catalogCountLabel}</div>
               <div className="text-gray-400">Productos Disponibles</div>
             </div>
             <div>
@@ -174,7 +175,7 @@ export default function EcuadorPage() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Amplio Catálogo</h3>
               <p className="text-gray-600">
-                Más de 1,200 productos promocionales en tecnología, mugs, oficina, ecología, textiles y mucho más.
+                {catalogCountLabel} promocionales en tecnología, mugs, oficina, ecología, textiles y mucho más.
               </p>
             </div>
             <div className="bg-white rounded-2xl p-8 shadow-lg">

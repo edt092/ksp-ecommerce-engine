@@ -6,6 +6,7 @@ import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import ProductCard from '@/components/ProductCard';
 import CategoryShowcase from '@/components/CategoryShowcase';
+import { catalogCountLabel, catalogCountLabelLong, catalogCountLabelReferences } from '@/lib/business-facts';
 
 const QuickViewModal = dynamic(() => import('@/components/QuickViewModal'), {
   ssr: false, loading: () => null,
@@ -24,7 +25,7 @@ const WA_TEXT   = encodeURIComponent('Hola, quiero cotizar productos promocional
 
 /* ─── Static data ───────────────────────────────────────────── */
 const stats = [
-  { value: '+3,500', label: 'Productos' },
+  { value: catalogCountLabel, label: 'Productos' },
   { value: '+1,000', label: 'Clientes'  },
   { value: '+10',    label: 'Años'      },
   { value: '48h',    label: 'Respuesta' },
@@ -231,7 +232,7 @@ export default function HomePageClient({ latestProducts, featuredProducts, bests
               {/* Eyebrow badge */}
               <div className="reveal inline-flex items-center gap-2.5 bg-white/8 border border-white/15 rounded-full px-4 py-2 mb-8">
                 <span className="w-2 h-2 rounded-full bg-[#25D366] animate-pulse shrink-0" />
-                <span className="text-white/80 text-sm font-medium">+3,500 referencias personalizables disponibles</span>
+                <span className="text-white/80 text-sm font-medium">{catalogCountLabelReferences}, personalizables disponibles</span>
               </div>
 
               {/* H1 */}
@@ -309,7 +310,7 @@ export default function HomePageClient({ latestProducts, featuredProducts, bests
                       d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
                   </svg>
                 ),
-                title: '+3,500 Productos',
+                title: catalogCountLabel,
                 sub: 'Personalizables con tu logo',
                 href: '/regalos-corporativos/',
               },
@@ -444,7 +445,7 @@ export default function HomePageClient({ latestProducts, featuredProducts, bests
           <SectionTitle
             label="Catálogo Completo"
             title="Explora Nuestras Categorías"
-            subtitle="Más de 3,500 artículos promocionales organizados para que encuentres lo que buscas."
+            subtitle={`${catalogCountLabelLong} organizados para que encuentres lo que buscas.`}
           />
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-5">

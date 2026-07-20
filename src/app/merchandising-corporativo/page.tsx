@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { catalogCountLabelReferences } from '@/lib/business-facts';
 
 export const dynamic = 'force-static';
 
@@ -233,7 +234,7 @@ export default function MerchandisingCorporativoPage() {
           <div className="container mx-auto px-4 max-w-4xl">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
-                { href: '/articulos-promocionales/', title: 'Artículos Promocionales', desc: 'Catálogo completo de más de 3,500 referencias.' },
+                { href: '/articulos-promocionales/', title: 'Artículos Promocionales', desc: `Catálogo completo. ${catalogCountLabelReferences}` },
                 { href: '/material-publicitario/', title: 'Material Publicitario', desc: 'Artículos para ferias, eventos y campañas.' },
                 { href: '/regalos-corporativos/', title: 'Regalos Corporativos', desc: 'Ideas de regalos para empresas y directivos.' },
               ].map((link) => (

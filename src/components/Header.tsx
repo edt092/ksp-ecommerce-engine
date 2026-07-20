@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
+import { catalogCountLabel } from '@/lib/business-facts';
 
 const WA_NUMBER = '593999814838';
 const WA_TEXT   = 'Hola%2C%20quiero%20cotizar%20productos%20promocionales%20para%20mi%20empresa';
@@ -103,7 +104,7 @@ export default function Header() {
                   <div className="flex gap-10 animate-marquee whitespace-nowrap text-white/60">
                     <span>🇪🇨 Envíos a todo Ecuador</span>
                     <span className="text-white/20">·</span>
-                    <span>+3,500 productos personalizables</span>
+                    <span>{catalogCountLabel} personalizables</span>
                     <span className="text-white/20">·</span>
                     <span>Cotización en menos de 48 horas</span>
                     <span className="text-white/20">·</span>
@@ -111,7 +112,7 @@ export default function Header() {
                     <span className="text-white/20">·</span>
                     <span>🇪🇨 Envíos a todo Ecuador</span>
                     <span className="text-white/20">·</span>
-                    <span>+3,500 productos personalizables</span>
+                    <span>{catalogCountLabel} personalizables</span>
                     <span className="text-white/20">·</span>
                     <span>Cotización en menos de 48 horas</span>
                     <span className="text-white/20">·</span>

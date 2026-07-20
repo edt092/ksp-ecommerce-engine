@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { catalogCountLabelLong, catalogCountLabelReferences } from '@/lib/business-facts';
 
 export const dynamic = 'force-static';
 
@@ -336,7 +337,7 @@ export default function RegalosPage() {
             Regalos Corporativos Personalizados Ecuador
           </h1>
           <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-10">
-            Más de 1,200 artículos promocionales personalizados con el logo de tu empresa.
+            {catalogCountLabelReferences}, personalizados con el logo de tu empresa.
             Cotiza sin compromiso y recibe asesoría gratuita.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -408,7 +409,7 @@ export default function RegalosPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: 'Más de 1,200 Productos',
+                title: catalogCountLabelLong,
                 desc: 'El catálogo más completo de artículos promocionales y regalos corporativos en Ecuador.',
               },
               {

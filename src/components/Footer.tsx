@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { catalogCountLabel } from '@/lib/business-facts';
 
 const WA_NUMBER = '593999814838';
 const WA_TEXT   = encodeURIComponent('Hola, quiero cotizar productos promocionales para mi empresa');
@@ -131,7 +132,7 @@ export default function Footer() {
 
               {/* Geo tags */}
               <div className="flex flex-wrap gap-2 mb-6">
-                {['🇪🇨 Ecuador', '+3,500 Productos', '⚡ 48h Respuesta'].map((tag) => (
+                {['🇪🇨 Ecuador', catalogCountLabel, '⚡ 48h Respuesta'].map((tag) => (
                   <span
                     key={tag}
                     className="text-[10px] font-bold uppercase tracking-wider text-white/30 border border-white/10 px-2.5 py-1"
