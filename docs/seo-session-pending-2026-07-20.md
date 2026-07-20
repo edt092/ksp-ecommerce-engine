@@ -4,6 +4,22 @@ Continuación de `docs/seo-master-plan-2026-07-19.md` y `reports/audit-findings-
 Este documento es solo el punto de partida para la próxima sesión — no repite el análisis ya
 hecho, solo el estado y lo que falta.
 
+## Fase 5 — lastmod del sitemap: CERRADA (commit `849663a`)
+
+- `scripts/audit-sitemap-lastmod.mjs` audita las 2.132 URLs. Hallazgo: `BUILD_DATE` se aplicaba
+  al 100% de los 2.036 productos indexables (no "algunos" como sugería el código) porque
+  `updatedAt`/`createdAt` no existen en `products.json` — el campo real es `last_ai_update`
+  (87.8% de cobertura), que `sitemap.ts` nunca leía.
+- `src/app/sitemap.ts`: productos usan `last_ai_update` real cuando existe (si no, se omite
+  lastmod, no `BUILD_DATE`); blog sin cambio de lógica (ya 100% real); categorías/paginación
+  de categorías/ciudades → lastmod omitido por completo (no hay fecha real por ítem, y usar
+  la fecha de git del archivo de datos compartido daría la misma fecha a las 37
+  categorías/5 ciudades — el mismo problema con otro valor); páginas estáticas → fecha real
+  de git log por archivo en vez de `BUILD_DATE` compartido.
+- Resultado: 1.842 de 2.198 URLs (83.8%) con lastmod real y verificable; 356 sin lastmod en
+  vez de fecha inventada. Validado completo, en verde.
+- **Commit local, no pusheado aún** al cierre de esta sesión — pendiente decisión del usuario.
+
 ## Fase 12 — interlinking blog↔categorías: implementado (commit `dc66fa8`)
 
 Ver `docs/content-cluster-priority-map.md` para el detalle completo. Resumen:
