@@ -24,13 +24,6 @@ const HERO_SLIDES = [
 const WA_TEXT   = encodeURIComponent('Hola, quiero cotizar productos promocionales para mi empresa');
 
 /* ─── Static data ───────────────────────────────────────────── */
-const stats = [
-  { value: catalogCountLabel, label: 'Productos' },
-  { value: '+1,000', label: 'Clientes'  },
-  { value: '+10',    label: 'Años'      },
-  { value: '48h',    label: 'Respuesta' },
-];
-
 const solutions = [
   { img: '/images/soluciones/welcome_kits.png',       title: 'Welcome Kits',      desc: 'Kits de bienvenida personalizados para nuevos colaboradores y clientes corporativos.' },
   { img: '/images/soluciones/ferias_y_eventos.png',   title: 'Ferias y Eventos',  desc: 'Material POP, stands y artículos promocionales para eventos y exposiciones.' },
@@ -303,7 +296,7 @@ export default function HomePageClient({ latestProducts, featuredProducts, bests
           ═══════════════════════════════════════════════ */}
       <div className="bg-white border-b border-gray-100 shadow-sm">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-gray-100">
+          <div className="grid grid-cols-1 sm:grid-cols-3 divide-x divide-gray-100">
             {[
               {
                 icon: (
@@ -315,17 +308,6 @@ export default function HomePageClient({ latestProducts, featuredProducts, bests
                 title: catalogCountLabel,
                 sub: 'Personalizables con tu logo',
                 href: '/regalos-corporativos/',
-              },
-              {
-                icon: (
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8}
-                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                ),
-                title: '+1,000 Clientes',
-                sub: 'Empresas confían en KS',
-                href: null,
               },
               {
                 icon: (

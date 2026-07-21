@@ -300,6 +300,53 @@ productos), Fase 11 (metadata a escala), Fase 12 (interlinking blog↔categoría
 Fase 3 (producto 10589 — el contenido siempre fue correcto), Fase 18 (Machala — el footer ya
 enlaza a la landing nacional, no a un 404), Fase 13 (enlace externo del footer — ya eliminado).
 
+## Sesión 2026-07-21
+
+### Fase 14 — H1 mobile: CERRADA (commit `6e505ad`, pusheado pendiente de confirmación)
+
+- El fix ya estaba escrito de la sesión anterior (`{' '}` de respaldo en los dos `<br
+  className="hidden sm:block" />` del H1 del home) pero bloqueado por un lock de archivo en
+  `out/`. El lock ya no estaba presente esta sesión — `pnpm build` corrió limpio, validado con
+  `seo:test` en 0, y commiteado por separado (no mezclado con Fase 8) siguiendo la regla de un
+  concern por commit.
+
+### Fase 8 — Reseñas, testimonios y logos: parte automatizable CERRADA (sin commit-hash aún, ver nota abajo)
+
+Alcance acordado con el usuario: hacer todo lo pendiente de Fase 8 **excepto** crear un Google
+Business Profile (explícitamente fuera de alcance, decisión del usuario).
+
+- **Auditoría de la afirmación "+1.000 empresas confían en KS"**: sin evidencia interna
+  (`src/lib/business-facts.ts` no la respalda) ni pública. Por indicación directa del plan
+  ("no repetir la afirmación", "no sustituir por otra cifra inventada"), se removió la tarjeta
+  del trust strip de `src/app/HomePageClient.tsx` (usuario eligió "quitar la tarjeta" entre 3
+  opciones ofrecidas). El grid pasó de 4 a 3 columnas (`grid-cols-1 sm:grid-cols-3`).
+  De paso se eliminó un array `stats` muerto (nunca leído en ningún render) que repetía la
+  misma cifra "+1,000" sin usarse — ts ya lo marcaba como "declared but never read".
+- **Infraestructura opcional creada** (inerte hasta que existan datos reales):
+  - `src/lib/testimonials.ts` — interfaz `Testimonial` con los campos exactos del plan
+    (`clientName`, `company`, `role`, `quote`, `rating`, `date`, `permission`,
+    `relatedProducts`, `logo`, `source`) + `getPublishableTestimonials()` que filtra por
+    `permission===true`.
+  - `src/components/TestimonialsSection.tsx` — recibe `testimonials: Testimonial[]` por props,
+    devuelve `null` si no hay ninguno publicable. No está importado en ninguna página todavía
+    (no hay datos reales que pasarle).
+  - `docs/review-collection-workflow.md` — proceso humano completo: solicitud por WhatsApp
+    post-entrega, consentimiento explícito (texto/nombre/logo por separado), moderación,
+    publicación, retiro, respuesta a críticas, prohibición de incentivos condicionados y de
+    comprar reseñas.
+- **`data/testimonials.json` deliberadamente NO se creó** — el plan prohíbe publicarlo vacío o
+  con contenido inventado, y no hay ningún testimonio real recolectado todavía. Se documentó en
+  el propio `testimonials.ts` y en el workflow que ese archivo se crea recién cuando el negocio
+  autorice el primer testimonio real.
+- Validado: `pnpm build`, `validate-unique-slugs`, `seo:links`, `seo:test` en 0. Revisión visual
+  en navegador (localhost:5099 sobre `out/`) confirmando el trust strip en 3 columnas sin la
+  tarjeta retirada.
+- Pendiente real: la recolección de testimonios en sí es 100% acción humana del negocio (no
+  automatizable, tal como dice el propio plan) — no hay nada más que este repo pueda hacer para
+  cerrar Fase 8 por completo.
+- **GBP (Google Business Profile) sigue explícitamente fuera de alcance** — no crear, no
+  investigar setup, no tocar salvo pedido directo del usuario.
+
 ## Siguiente paso sugerido
 
 Continuar con los 59 LIKELY_DUPLICATE aplicando el mismo protocolo de Batch 2 (confirmar mismo
