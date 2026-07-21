@@ -244,8 +244,10 @@ export default function HomePageClient({ latestProducts, featuredProducts, bests
                   '--stagger': '80ms',
                 }}
               >
-                Artículos Promocionales<br className="hidden sm:block" />
-                <span className="text-gradient-orange">que fortalecen</span><br className="hidden sm:block" />
+                Artículos Promocionales{' '}
+                <br className="hidden sm:block" />
+                <span className="text-gradient-orange">que fortalecen</span>{' '}
+                <br className="hidden sm:block" />
                 tu marca
               </h1>
 
