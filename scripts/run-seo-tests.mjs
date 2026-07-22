@@ -342,5 +342,165 @@ for (const rel of sampleTargets) {
   });
 }
 
+console.log('\n[4] Structured data — Product/ItemList (offers.md)');
+
+// offers.md — corrige "Debe especificarse offers, review o aggregateRating".
+// Estas pruebas recorren TODO out/ (no solo la muestra de [3]) porque el bug
+// original afectaba 23 URLs distintas de forma dispersa.
+
+function collectTypedNodes(node, targetType, results = []) {
+  if (node == null || typeof node !== 'object') return results;
+  if (Array.isArray(node)) {
+    for (const item of node) collectTypedNodes(item, targetType, results);
+    return results;
+  }
+  const types = Array.isArray(node['@type']) ? node['@type'] : [node['@type']];
+  if (types.includes(targetType)) results.push(node);
+  for (const key of Object.keys(node)) {
+    if (key === '@type') continue;
+    collectTypedNodes(node[key], targetType, results);
+  }
+  return results;
+}
+
+function forEachJsonLdBlock(files, fn) {
+  for (const file of files) {
+    const html = readFileSync(file, 'utf-8');
+    const blocks = [...html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)];
+    for (const [, json] of blocks) {
+      let parsed;
+      try {
+        parsed = JSON.parse(json);
+      } catch {
+        continue; // ya cubierto por "JSON-LD parseable" en [3]
+      }
+      fn(file, parsed);
+    }
+  }
+}
+
+const allHtmlFiles = walkHtml(OUT);
+
+check('ningún Product sin name, ni sin offers/review/aggregateRating', () => {
+  const offenders = [];
+  forEachJsonLdBlock(allHtmlFiles, (file, parsed) => {
+    for (const p of collectTypedNodes(parsed, 'Product')) {
+      if (!p.name) { offenders.push(`${file}: Product sin name`); continue; }
+      if (!p.offers && !p.review && !p.aggregateRating) {
+        offenders.push(`${file}: Product "${p.name}" sin offers/review/aggregateRating`);
+      }
+    }
+  });
+  assert(offenders.length === 0, `${offenders.length} Product(s) incompleto(s), ej: ${offenders[0]}`);
+  return `${allHtmlFiles.length} páginas verificadas`;
+});
+
+check('ninguna categoría (ni producto) representada como Product dentro de un ItemList', () => {
+  const offenders = [];
+  forEachJsonLdBlock(allHtmlFiles, (file, parsed) => {
+    for (const il of collectTypedNodes(parsed, 'ItemList')) {
+      for (const li of il.itemListElement || []) {
+        if (li.item && (li.item['@type'] === 'Product' || li.item['@type'] === 'ProductGroup')) {
+          offenders.push(`${file}: ItemList "${il.name}" anida ${li.item['@type']} en un ListItem`);
+        }
+      }
+    }
+  });
+  assert(offenders.length === 0, `${offenders.length} ocurrencia(s), ej: ${offenders[0]}`);
+});
+
+check('ItemList.numberOfItems coincide con la cantidad de itemListElement', () => {
+  const offenders = [];
+  forEachJsonLdBlock(allHtmlFiles, (file, parsed) => {
+    for (const il of collectTypedNodes(parsed, 'ItemList')) {
+      const count = (il.itemListElement || []).length;
+      if (il.numberOfItems !== count) {
+        offenders.push(`${file}: ItemList "${il.name}" numberOfItems=${il.numberOfItems} vs ${count} elemento(s)`);
+      }
+    }
+  });
+  assert(offenders.length === 0, `${offenders.length} desajuste(s), ej: ${offenders[0]}`);
+});
+
+check('ListItem.position consecutivas y URLs absolutas en ItemList/Product', () => {
+  const offenders = [];
+  forEachJsonLdBlock(allHtmlFiles, (file, parsed) => {
+    for (const il of collectTypedNodes(parsed, 'ItemList')) {
+      for (const li of il.itemListElement || []) {
+        const url = li.url || li.item?.url;
+        if (url && !url.startsWith(SITE + '/')) {
+          offenders.push(`${file}: ListItem con URL no absoluta/canónica: ${url}`);
+        }
+      }
+    }
+    for (const p of collectTypedNodes(parsed, 'Product')) {
+      if (p.url && !p.url.startsWith(SITE + '/')) {
+        offenders.push(`${file}: Product con URL no absoluta/canónica: ${p.url}`);
+      }
+    }
+  });
+  assert(offenders.length === 0, `${offenders.length} URL(s) no absolutas, ej: ${offenders[0]}`);
+});
+
+check('Offer con price real (>0) y priceCurrency cuando existe', () => {
+  const offenders = [];
+  forEachJsonLdBlock(allHtmlFiles, (file, parsed) => {
+    for (const p of collectTypedNodes(parsed, 'Product')) {
+      if (!p.offers) continue;
+      for (const o of Array.isArray(p.offers) ? p.offers : [p.offers]) {
+        if (typeof o.price !== 'number' || o.price <= 0) offenders.push(`${file}: Offer de "${p.name}" sin price real`);
+        if (!o.priceCurrency) offenders.push(`${file}: Offer de "${p.name}" sin priceCurrency`);
+      }
+    }
+  });
+  assert(offenders.length === 0, `${offenders.length} Offer(s) inválida(s), ej: ${offenders[0]}`);
+});
+
+check('AggregateRating con reviewCount >= 1 y ratingValue dentro de escala', () => {
+  const offenders = [];
+  forEachJsonLdBlock(allHtmlFiles, (file, parsed) => {
+    for (const r of collectTypedNodes(parsed, 'AggregateRating')) {
+      const best = r.bestRating ?? 5;
+      if (!(r.reviewCount >= 1)) offenders.push(`${file}: AggregateRating con reviewCount=${r.reviewCount}`);
+      if (!(r.ratingValue >= 1 && r.ratingValue <= best)) offenders.push(`${file}: AggregateRating ratingValue=${r.ratingValue} fuera de 1..${best}`);
+    }
+  });
+  assert(offenders.length === 0, `${offenders.length} AggregateRating(s) inválido(s), ej: ${offenders[0]}`);
+});
+
+console.log('\n[4b] Páginas representativas de la corrección de offers.md');
+
+const structuredDataSamples = [
+  join('categorias', 'antiestres', 'index.html'),
+  join('categorias', 'boligrafos-publicitarios', 'pagina', '2', 'index.html'),
+  join('regalos-corporativos', 'index.html'),
+  join('articulos-promocionales', 'index.html'),
+  join('material-publicitario', 'index.html'),
+  join('productos', 'boligrafo-medic-7022', 'index.html'),
+  join('productos', 'set-de-vino-en-bambu-ii-9719', 'index.html'),
+];
+
+for (const rel of structuredDataSamples) {
+  const full = join(OUT, rel);
+  if (!existsSync(full)) {
+    console.log(`  SKIP  ${rel} (no encontrado en out/)`);
+    continue;
+  }
+  const html = readFileSync(full, 'utf-8');
+  const blocks = [...html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].map(([, j]) => JSON.parse(j));
+
+  check(`sin Product incompleto — ${rel}`, () => {
+    const products = blocks.flatMap((b) => collectTypedNodes(b, 'Product'));
+    const incomplete = products.filter((p) => !p.offers && !p.review && !p.aggregateRating);
+    assert(incomplete.length === 0, `${incomplete.length} Product(s) incompleto(s) en esta página`);
+    return `${products.length} Product(s) en la página (0 incompletos)`;
+  });
+
+  check(`BreadcrumbList presente — ${rel}`, () => {
+    const crumbs = blocks.flatMap((b) => collectTypedNodes(b, 'BreadcrumbList'));
+    assert(crumbs.length > 0, 'no se encontró BreadcrumbList');
+  });
+}
+
 console.log(`\n${failures === 0 ? 'TODAS LAS PRUEBAS PASARON' : `${failures} PRUEBA(S) FALLARON`}\n`);
 process.exit(failures === 0 ? 0 : 1);

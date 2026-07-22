@@ -82,16 +82,13 @@ export default function ProductPage({ params }) {
 
   const BASE_URL = 'https://www.kronosolopromocionales.com';
 
-  const productJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Product',
-    name: product.name,
-    description: product.seoDescription || product.shortDescription,
-    image: product.images?.map(img => img.startsWith('http') ? img : `${BASE_URL}${img}`),
-    sku: String(product.id),
-    brand: { '@type': 'Brand', name: 'KS Promocionales' },
-    url: `${BASE_URL}/productos/${product.slug}/`,
-  };
+  // offers.md — no se emite Product JSON-LD aquí: el negocio cotiza solo
+  // por WhatsApp (sin precio público) y no existe ninguna reseña real
+  // todavía (data/testimonials.json no existe, ver src/lib/testimonials.ts).
+  // Google exige offers, review o aggregateRating en todo Product; emitir
+  // uno sin ellos es la causa de la incidencia de Search Console. Cuando
+  // exista una oferta u opinión real y visible en esta página, usar
+  // buildProductJsonLd (src/lib/structured-data.ts) para construirlo.
 
   const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
@@ -105,7 +102,6 @@ export default function ProductPage({ params }) {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
       {/* ─── PRODUCT DETAIL ─────────────────────────────────── */}
