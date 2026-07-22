@@ -100,7 +100,8 @@ export default function CategoryPagePaginated({ params }) {
     itemListElement: pageProducts.map((product, idx) => ({
       '@type': 'ListItem',
       position: start + idx + 1,
-      item: { '@type': 'Product', name: product.name, url: `${BASE_URL}/productos/${product.slug}/` },
+      name: product.name,
+      url: `${BASE_URL}/productos/${product.slug}/`,
     })),
   };
 

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { catalogCountLabel, catalogCountLabelReferences } from '@/lib/business-facts';
+import { buildNeutralItemList } from '@/lib/structured-data';
 
 export const dynamic = 'force-static';
 
@@ -129,23 +130,15 @@ const breadcrumbJsonLd = {
   ],
 };
 
-const itemListJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'ItemList',
+const itemListJsonLd = buildNeutralItemList({
   name: 'Artículos Promocionales Personalizados para Empresas — KS Promocionales',
   description: 'Catálogo de artículos promocionales disponibles en Ecuador',
   url: `${BASE_URL}/articulos-promocionales/`,
-  numberOfItems: CATEGORIES.length,
-  itemListElement: CATEGORIES.map((cat, idx) => ({
-    '@type': 'ListItem',
-    position: idx + 1,
-    item: {
-      '@type': 'Product',
-      name: cat.name,
-      url: `${BASE_URL}/categorias/${cat.slug}/`,
-    },
+  entries: CATEGORIES.map((cat) => ({
+    name: cat.name,
+    url: `${BASE_URL}/categorias/${cat.slug}/`,
   })),
-};
+});
 
 const faqJsonLd = {
   '@context': 'https://schema.org',

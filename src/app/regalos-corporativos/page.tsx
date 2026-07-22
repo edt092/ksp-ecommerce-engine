@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { catalogCountLabelLong, catalogCountLabelReferences } from '@/lib/business-facts';
+import { buildNeutralItemList } from '@/lib/structured-data';
 
 export const dynamic = 'force-static';
 
@@ -292,23 +293,15 @@ const breadcrumbJsonLd = {
   ],
 };
 
-const itemListJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'ItemList',
+const itemListJsonLd = buildNeutralItemList({
   name: 'Regalos Corporativos Personalizados Ecuador — KS Promocionales',
   description: 'Categorías de regalos corporativos personalizados disponibles en Ecuador',
   url: `${BASE_URL}/regalos-corporativos/`,
-  numberOfItems: ALL_CATEGORIES.length,
-  itemListElement: ALL_CATEGORIES.map((cat, idx) => ({
-    '@type': 'ListItem',
-    position: idx + 1,
-    item: {
-      '@type': 'Product',
-      name: cat.name,
-      url: `${BASE_URL}/categorias/${cat.slug}/`,
-    },
+  entries: ALL_CATEGORIES.map((cat) => ({
+    name: cat.name,
+    url: `${BASE_URL}/categorias/${cat.slug}/`,
   })),
-};
+});
 
 const faqJsonLd = {
   '@context': 'https://schema.org',

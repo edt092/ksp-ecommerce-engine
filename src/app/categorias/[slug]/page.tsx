@@ -8,6 +8,7 @@ import StaticProductsGrid from '@/components/StaticProductsGrid';
 import CategoryPagination from '@/components/CategoryPagination';
 import categoriesData from '@/data/categories.json';
 import { isPaginatedCategory, totalPagesFor, CATEGORY_PAGE_SIZE } from '@/lib/category-pagination';
+import { buildNeutralItemList } from '@/lib/structured-data';
 import WAIcon from '@/components/icons/WhatsAppIcon';
 
 export async function generateStaticParams() {
@@ -63,19 +64,15 @@ export default function CategoryPage({ params }) {
     ],
   };
 
-  const itemListJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
+  const itemListJsonLd = buildNeutralItemList({
     name: `${category.name} — KS Promocionales`,
     description: category.seoDescription,
     url: `${BASE_URL}/categorias/${category.slug}/`,
-    numberOfItems: categoryProducts.length,
-    itemListElement: categoryProducts.slice(0, 20).map((product, idx) => ({
-      '@type': 'ListItem',
-      position: idx + 1,
-      item: { '@type': 'Product', name: product.name, url: `${BASE_URL}/productos/${product.slug}/` },
+    entries: categoryProducts.slice(0, 20).map((product) => ({
+      name: product.name,
+      url: `${BASE_URL}/productos/${product.slug}/`,
     })),
-  };
+  });
 
   /* Related categories (same first letter group or just a few others) */
   const relatedCategories = categoriesData
