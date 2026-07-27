@@ -9,6 +9,7 @@ import CategoryPagination from '@/components/CategoryPagination';
 import categoriesData from '@/data/categories.json';
 import { isPaginatedCategory, totalPagesFor, CATEGORY_PAGE_SIZE } from '@/lib/category-pagination';
 import { CATEGORY_LANDING_LINKS } from '@/lib/category-landing-links';
+import { CATEGORY_BLOG_LINKS } from '@/lib/category-blog-links';
 import { buildNeutralItemList } from '@/lib/structured-data';
 import WAIcon from '@/components/icons/WhatsAppIcon';
 
@@ -81,6 +82,7 @@ export default function CategoryPage({ params }) {
     .slice(0, 6);
 
   const landingLinks = CATEGORY_LANDING_LINKS[category.slug] || [];
+  const blogLinks = CATEGORY_BLOG_LINKS[category.slug] || [];
 
   // Fase 9 (plan-seo.md): categorías grandes en la lista de piloto usan
   // paginación estática con enlaces reales en vez de scroll infinito
@@ -309,6 +311,29 @@ export default function CategoryPage({ params }) {
           )}
         </div>
       </section>
+
+      {/* ─── GUÍAS RELACIONADAS (blog) ────────────────────────── */}
+      {blogLinks.length > 0 && (
+        <section className="py-14 md:py-20 bg-[#F8F9FC] border-t border-gray-100">
+          <div className="container mx-auto px-4">
+            <h2 className="font-bold text-[#0A0A23] text-2xl mb-8" style={{ letterSpacing: '-0.02em' }}>
+              Guías relacionadas
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {blogLinks.map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/blog/${post.slug}/`}
+                  className="block p-5 rounded-xl bg-white border border-gray-100 hover:shadow-md transition-all"
+                >
+                  <p className="text-xs font-bold uppercase tracking-wider text-[#F5A520] mb-2">Blog</p>
+                  <h3 className="font-bold text-[#0F2178] text-sm leading-snug">{post.title}</h3>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ─── SPECIALIZED LANDINGS ─────────────────────────────── */}
       {landingLinks.length > 0 && (
