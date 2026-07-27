@@ -103,7 +103,7 @@ function walk(dir, exts, out = []) {
   return out;
 }
 
-const linkCounts = new Map(); // '/productos/slug/' -> count
+let linkCounts = new Map(); // '/productos/slug/' -> count
 const hrefPattern = /href=\{?[`"']([^`"'{}]+)[`"']\}?/g;
 const codeFiles = [
   ...walk(join(ROOT, 'src'), ['.tsx', '.ts', '.jsx', '.js']),
@@ -128,8 +128,42 @@ for (const file of codeFiles) {
     linkCounts.set(href, (linkCounts.get(href) || 0) + 1);
   }
 }
-// Categorías y ciudades también reciben enlaces vía componentes dinámicos (grids/menus)
-// que no son detectables por regex estático — se documenta como límite conocido.
+// LÍMITE DEL MÉTODO ANTERIOR: la regex sobre fuente solo detecta
+// `href="/ruta/"` literal en JSX. Cualquier enlace armado desde un array de
+// datos (Header.tsx navLinks, Footer.tsx quickLinks/categories/geoLinks,
+// CategoryShowcase.tsx `href={`/categorias/${slug}/`}`, y ahora también
+// src/lib/category-landing-links.ts) renderiza `href={variable}`, invisible
+// a esta regex aunque el HTML final sí tenga el enlace real. Por eso, si
+// existe un build (`out/`), se prefiere abajo un conteo sobre el HTML ya
+// generado — la fuente de verdad real de lo que un crawler ve — y el
+// resultado de esta regex queda solo como fallback pre-build.
+const linksFromRealHtml = existsSync(OUT);
+if (linksFromRealHtml) {
+  const htmlLinkCounts = new Map();
+  const anchorPattern = /<a\b[^>]*\bhref="([^"]*)"[^>]*>/gi;
+  for (const file of walk(OUT, ['.html'])) {
+    const html = readFileSync(file, 'utf-8');
+    let m;
+    anchorPattern.lastIndex = 0;
+    while ((m = anchorPattern.exec(html)) !== null) {
+      let href = m[1];
+      if (/^https?:\/\//.test(href)) {
+        try {
+          const u = new URL(href);
+          if (!['www.kronosolopromocionales.com', 'kronosolopromocionales.com'].includes(u.host)) continue;
+          href = u.pathname;
+        } catch { continue; }
+      }
+      if (!href.startsWith('/')) continue; // descarta mailto:, tel:, wa.me, javascript:
+      href = (href.split('#')[0].split('?')[0]) || '/';
+      if (!href.endsWith('/') && !href.includes('.')) href += '/';
+      htmlLinkCounts.set(href, (htmlLinkCounts.get(href) || 0) + 1);
+    }
+  }
+  linkCounts = htmlLinkCounts;
+} else {
+  console.warn('[audit-indexability] AVISO: out/ no existe — usando conteo de enlaces por regex sobre fuente (menos fiable, no ve href dinámicos). Ejecuta "pnpm build" antes para un conteo real desde el HTML.');
+}
 
 // ─── Sitemap generado (si existe) ───────────────────────────────────────────
 
@@ -419,17 +453,18 @@ const sitemapAuditRows = inventory.map((r) => {
 const sitemapHeader = ['url', 'type', 'in_sitemap', 'recommended_state', 'robots_index', 'canonical_self_referential', 'issues'];
 writeFileSync(join(REPORTS, 'sitemap-indexability-audit.csv'), toCsv(sitemapHeader, sitemapAuditRows), 'utf-8');
 
-// internal-link-graph.csv — cuántos enlaces internos ESTÁTICOS (href literal en JSX)
-// recibe cada URL indexable, detectados por regex sobre src/**/*.tsx,ts,jsx,js y
-// data/blog/content/*.js.
-// LÍMITE CONOCIDO E IMPORTANTE: productos y posts de blog se enlazan en la práctica
-// desde componentes que arman el href en runtime a partir de datos
-// (src/components/ProductCard.tsx, QuickViewModal.tsx, src/app/blog/page.tsx —
-// p.ej. href={`/productos/${slug}/`}), lo cual la regex NO puede resolver a un slug
-// concreto. Por eso, para type=product y type=blog, internal_links_in=0 NO significa
-// "página huérfana": significa "el conteo no es fiable con este método". Para
-// type=category/city/commercial/legal sí es una señal razonable porque esos enlaces
-// suelen ser literales (menús, footer, home).
+// internal-link-graph.csv — cuántos enlaces internos recibe cada URL indexable.
+// Cuando existe out/ (build reciente), el conteo viene de <a href="..."> real en
+// el HTML generado — fuente de verdad, fiable para todos los tipos por igual.
+// Sin build, cae a una regex sobre el código fuente que solo detecta
+// `href="/ruta/"` literal en JSX: no ve enlaces armados desde un array de datos
+// (Header.tsx navLinks, Footer.tsx quickLinks/categories/geoLinks,
+// CategoryShowcase.tsx, src/lib/category-landing-links.ts, ProductCard.tsx,
+// blog/page.tsx), así que en ese modo product/blog/category/city/legal quedan
+// marcados como no fiables — ver plan_accion_seo_ksp_vs_articulospromocionales_ec.md
+// sección P0 (páginas huérfanas) para el caso que motivó esta corrección
+// (2026-07-26): 21 de 23 filas de orphan-pages.csv eran falsos positivos del
+// modo sin-build.
 const linkGraphRows = inventory
   .filter((r) => r.recommended_state.startsWith('A'))
   .map((r) => ({
@@ -437,7 +472,7 @@ const linkGraphRows = inventory
     type: r.type,
     internal_links_in: r.internal_links_in,
     in_sitemap: r.in_sitemap,
-    link_count_reliable: ['product', 'blog'].includes(r.type) ? 'false' : 'true',
+    link_count_reliable: linksFromRealHtml || !['product', 'blog', 'category', 'city', 'legal'].includes(r.type) ? 'true' : 'false',
   }))
   .sort((a, b) => a.internal_links_in - b.internal_links_in);
 const linkGraphHeader = ['url', 'type', 'internal_links_in', 'in_sitemap', 'link_count_reliable'];
@@ -449,7 +484,12 @@ writeFileSync(join(REPORTS, 'internal-link-graph.csv'), toCsv(linkGraphHeader, l
 // link_count_reliable para no perder la visibilidad de esos datos crudos).
 const orphanRows = linkGraphRows
   .filter((r) => r.internal_links_in === 0 && r.link_count_reliable === 'true')
-  .map((r) => ({ ...r, notes: 'Sin enlaces internos estáticos detectados por regex en menús/footer/home/listados — candidata real a huérfana, revisar manualmente' }));
+  .map((r) => ({
+    ...r,
+    notes: linksFromRealHtml
+      ? 'Cero <a href> apuntando a esta URL en todo out/ tras el build — candidata real a huérfana, revisar manualmente'
+      : 'Sin enlaces internos literales <Link href="/ruta/"> detectados en el cuerpo de otras páginas/posts (estimación sin build) — candidata real a huérfana, revisar manualmente',
+  }));
 const orphanHeader = ['url', 'type', 'internal_links_in', 'in_sitemap', 'notes'];
 writeFileSync(join(REPORTS, 'orphan-pages.csv'), toCsv(orphanHeader, orphanRows), 'utf-8');
 
@@ -467,8 +507,10 @@ console.log(`  - Productos: ${products.length}`);
 console.log(`  - Reglas de redirect: ${redirectSources.size}`);
 console.log(`[audit-indexability] Distribución de calidad de productos: A=${gradeCounts.A} B=${gradeCounts.B} C=${gradeCounts.C} D=${gradeCounts.D} E=${gradeCounts.E}`);
 console.log(`[audit-indexability] Grupos de nombre duplicado sin canonical dual-slug: ${new Set(duplicateGroups.values()).size} grupos, ${duplicateGroups.size} URLs afectadas`);
-console.log(`[audit-indexability] Páginas huérfanas potenciales (solo tipos con conteo fiable — categorías/ciudades/comerciales/legales): ${orphanRows.length}`);
-console.log('[audit-indexability] AVISO: productos y blog quedan excluidos de orphan-pages.csv porque se enlazan vía componentes dinámicos (ProductCard.tsx, blog/page.tsx) que la regex estática no puede resolver — ver internal-link-graph.csv columna link_count_reliable=false para esos casos.');
+console.log(`[audit-indexability] Páginas huérfanas potenciales: ${orphanRows.length} (conteo ${linksFromRealHtml ? 'desde HTML real de out/ — fiable para todos los tipos' : 'estimado sin build — solo tipo comercial es fiable, ver AVISO'})`);
+if (!linksFromRealHtml) {
+  console.log('[audit-indexability] AVISO: productos, blog, categorías, ciudades y legal quedan excluidos de orphan-pages.csv porque se enlazan vía componentes dinámicos (ProductCard.tsx, blog/page.tsx, CategoryShowcase.tsx, Header.tsx/Footer.tsx navLinks/quickLinks/geoLinks) que la regex estática no puede resolver sin un build — ver internal-link-graph.csv columna link_count_reliable=false para esos casos.');
+}
 console.log('[audit-indexability] Reportes generados en reports/: local-indexability-inventory.csv, noindex-audit.csv, canonical-audit.csv, indexable-product-quality.csv, sitemap-indexability-audit.csv, internal-link-graph.csv, orphan-pages.csv');
 
 process.exit(0);
