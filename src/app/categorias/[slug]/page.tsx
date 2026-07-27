@@ -8,6 +8,7 @@ import StaticProductsGrid from '@/components/StaticProductsGrid';
 import CategoryPagination from '@/components/CategoryPagination';
 import categoriesData from '@/data/categories.json';
 import { isPaginatedCategory, totalPagesFor, CATEGORY_PAGE_SIZE } from '@/lib/category-pagination';
+import { CATEGORY_LANDING_LINKS } from '@/lib/category-landing-links';
 import { buildNeutralItemList } from '@/lib/structured-data';
 import WAIcon from '@/components/icons/WhatsAppIcon';
 
@@ -78,6 +79,8 @@ export default function CategoryPage({ params }) {
   const relatedCategories = categoriesData
     .filter(c => c.id !== category.id && c.image)
     .slice(0, 6);
+
+  const landingLinks = CATEGORY_LANDING_LINKS[category.slug] || [];
 
   // Fase 9 (plan-seo.md): categorías grandes en la lista de piloto usan
   // paginación estática con enlaces reales en vez de scroll infinito
@@ -306,6 +309,29 @@ export default function CategoryPage({ params }) {
           )}
         </div>
       </section>
+
+      {/* ─── SPECIALIZED LANDINGS ─────────────────────────────── */}
+      {landingLinks.length > 0 && (
+        <section className="py-14 md:py-20 bg-white border-t border-gray-100">
+          <div className="container mx-auto px-4">
+            <h2 className="font-bold text-[#0A0A23] text-2xl mb-8" style={{ letterSpacing: '-0.02em' }}>
+              Guías especializadas en {category.name}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {landingLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="block p-5 rounded-xl border border-gray-100 hover:shadow-md transition-all"
+                >
+                  <h3 className="font-bold text-[#0F2178] mb-1">{link.title}</h3>
+                  <p className="text-gray-500 text-sm">{link.desc}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ─── RELATED CATEGORIES ───────────────────────────────── */}
       {relatedCategories.length > 0 && (
