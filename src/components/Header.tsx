@@ -16,7 +16,7 @@ const categoryGroups = [
       { name: 'Artículos de Escritura', slug: 'boligrafos-publicitarios', icon: '✏️' },
       { name: 'Tecnología', slug: 'tecnologia-promocional', icon: '💻' },
       { name: 'Mugs y Termos', slug: 'mugs-y-termos-personalizados', icon: '☕' },
-      { name: 'Bolsos y Maletines', slug: 'maletines-personalizados', icon: '💼' },
+      { name: 'Bolsos y Maletines', slug: 'mochilas-y-maletines-personalizados', icon: '💼' },
     ],
   },
   {
@@ -24,7 +24,7 @@ const categoryGroups = [
     items: [
       { name: 'Oficina', slug: 'articulos-de-oficina-personalizados', icon: '🗂️' },
       { name: 'Novedades', slug: 'novedades', icon: '⭐' },
-      { name: 'Regalos Ejecutivos', slug: 'novedades', icon: '🎁' },
+      { name: 'Relojes', slug: 'relojes', icon: '⌚' },
       { name: 'Llaveros', slug: 'llaveros-personalizados', icon: '🔑' },
     ],
   },
@@ -61,6 +61,7 @@ const WAIcon = ({ size = 'sm' }) => (
 export default function Header() {
   const [isScrolled,   setIsScrolled]   = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [isMegaOpen,   setIsMegaOpen]   = useState(false);
   const pathname  = usePathname();
   const rafId = useRef(null);
 
@@ -152,6 +153,61 @@ export default function Header() {
 
             {/* Desktop nav */}
             <nav className="hidden lg:flex items-center gap-0.5">
+
+              {/* Categories mega-menu */}
+              <div
+                className="relative"
+                onMouseEnter={() => setIsMegaOpen(true)}
+                onMouseLeave={() => setIsMegaOpen(false)}
+              >
+                <button
+                  type="button"
+                  className={`group relative px-4 py-2 text-sm font-semibold rounded-lg transition-colors duration-150 flex items-center gap-1.5 ${
+                    isMegaOpen ? 'text-white' : 'text-white/70 hover:text-white'
+                  }`}
+                  aria-expanded={isMegaOpen}
+                  aria-haspopup="true"
+                >
+                  Categorías
+                  <svg
+                    className={`w-3.5 h-3.5 transition-transform duration-200 ${isMegaOpen ? 'rotate-180' : ''}`}
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+
+                {isMegaOpen && (
+                  <div
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[640px] max-w-[90vw] rounded-2xl overflow-hidden shadow-2xl"
+                    style={{ background: '#0A1440', border: '1px solid rgba(255,255,255,0.08)' }}
+                  >
+                    <div className="grid grid-cols-3 gap-6 p-6">
+                      {categoryGroups.map((group) => (
+                        <div key={group.label}>
+                          <p className="text-[11px] font-bold uppercase tracking-wider text-white/40 mb-3">
+                            {group.label}
+                          </p>
+                          <ul className="space-y-1">
+                            {group.items.map((item) => (
+                              <li key={item.slug}>
+                                <Link
+                                  href={`/categorias/${item.slug}/`}
+                                  className="flex items-center gap-2 px-2 py-1.5 rounded-lg text-sm text-white/75 hover:text-white hover:bg-white/8 transition-colors"
+                                  onClick={() => setIsMegaOpen(false)}
+                                >
+                                  <span aria-hidden="true">{item.icon}</span>
+                                  {item.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
 
               {/* Regular nav links */}
               {navLinks.map((item) => {
@@ -278,6 +334,24 @@ export default function Header() {
                   </Link>
                 );
               })}
+            </div>
+
+            {/* Categories */}
+            <div className="mt-2 pt-2 border-t border-white/8 space-y-0.5">
+              <p className="px-4 pt-2 pb-1 text-[11px] font-bold uppercase tracking-wider text-white/35">
+                Categorías
+              </p>
+              {categoryGroups.flatMap((group) => group.items).map((item) => (
+                <Link
+                  key={item.slug}
+                  href={`/categorias/${item.slug}/`}
+                  className="flex items-center gap-2.5 px-4 py-2.5 text-sm text-white/70 hover:text-white hover:bg-white/5 rounded-xl transition-all duration-200"
+                  onClick={() => setIsMobileOpen(false)}
+                >
+                  <span aria-hidden="true">{item.icon}</span>
+                  {item.name}
+                </Link>
+              ))}
             </div>
           </nav>
 
