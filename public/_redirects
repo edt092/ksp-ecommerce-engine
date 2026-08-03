@@ -28,6 +28,14 @@
 /productos/speaker-bluetooth-con-lampara-oferta                /productos/speaker-bluetooth-con-lampara-oferta-9579/                301
 /productos/speaker-bluetooth-con-lampara-oferta/                /productos/speaker-bluetooth-con-lampara-oferta-9579/                301
 
+# 301 Redirects - Slugs sin SKU indexados por Google (GSC 2026-07-19, "Rastreada: sin indexar", crawled abr-2026), hoy 404
+/productos/set-de-contenedores-x-3-unidades-produccion-nacional    /productos/set-de-contenedores-x-3-unidades-produccion-nacional-6269/    301
+/productos/set-de-contenedores-x-3-unidades-produccion-nacional/   /productos/set-de-contenedores-x-3-unidades-produccion-nacional-6269/    301
+/productos/botilito-en-tritan-bugsy-630ml                          /productos/botilito-en-tritan-bugsy-630ml-6815/                          301
+/productos/botilito-en-tritan-bugsy-630ml/                         /productos/botilito-en-tritan-bugsy-630ml-6815/                          301
+/productos/gorra-brixton-urban-travel                              /productos/gorra-brixton-urban-travel-10601/                             301
+/productos/gorra-brixton-urban-travel/                             /productos/gorra-brixton-urban-travel-10601/                             301
+
 # 301 Redirects - Slugs sin ID indexados por Google, hallazgo GSC Coverage Validation 2026-07-19 (404_error)
 /productos/pano-en-microfibra                                  /productos/pano-en-microfibra-3192/                                  301
 /productos/pano-en-microfibra/                                 /productos/pano-en-microfibra-3192/                                  301
