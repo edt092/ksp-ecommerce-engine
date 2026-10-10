@@ -15,15 +15,15 @@ export const ecuador = {
       slug: 'quito',
       nombre: 'Quito',
       pais: 'ecuador',
-      seoTitle: 'Productos Promocionales Quito | Artículos Publicitarios y Regalos Corporativos KS',
+      seoTitle: 'Productos Promocionales y Regalos Corporativos en Quito | KS',
       seoDescription: 'Productos promocionales en Quito. Artículos publicitarios, merchandising corporativo y regalos empresariales con entrega en todo el Distrito Metropolitano.',
-      h1: 'Productos Promocionales en Quito',
+      h1: 'Productos Promocionales y Regalos Corporativos en Quito',
       intro: 'En Quito, capital del Ecuador, brindamos soluciones integrales en productos promocionales y regalos corporativos. Atendemos empresas en el norte, sur, centro histórico, valles de Cumbayá, Tumbaco, Los Chillos y toda la ciudad.',
       caracteristicas: [
         'Entrega en todo el Distrito Metropolitano de Quito',
         'Atención a empresas del sector público y privado',
         'Productos para ferias en Quorum y centros de convenciones',
-        'Stock disponible para entregas inmediatas',
+        'Disponibilidad de stock confirmada en cada cotización',
       ],
     },
     {

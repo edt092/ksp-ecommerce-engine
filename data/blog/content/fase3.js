@@ -1,6 +1,6 @@
 // AUTO-GENERADO por scripts/generate-blog-fase3.js — NO editar manualmente
 export const blogFase3 = {
-  "mejores-regalos-corporativos-para-empresas-ecuador-2026": `<p class="lead">Las empresas ecuatorianas destinan entre el 3 % y el 7 % de su presupuesto de marketing a artículos promocionales y regalos corporativos, según estimaciones del sector publicitario local para 2025-2026. Sin embargo, más de la mitad de esas inversiones no logran el impacto esperado porque se elige el producto equivocado, sin personalización adecuada o con plazos que no permiten garantía de calidad. Si usted gestiona las compras o la comunicación de marca de una empresa mediana o grande en Quito, Guayaquil, Cuenca, Ambato o Loja, este artículo le dará un mapa claro para tomar mejores decisiones.</p>
+  "mejores-regalos-corporativos-para-empresas-ecuador-2026": `<p class="lead">Para muchas empresas ecuatorianas, los artículos promocionales y los regalos corporativos son una partida fija del presupuesto de marketing. Aun así, una parte de esa inversión no logra el impacto esperado porque se elige el producto equivocado, sin personalización adecuada o con plazos que no permiten controlar la calidad. Si usted gestiona las compras o la comunicación de marca de una empresa mediana o grande en Quito, Guayaquil, Cuenca, Ambato o Loja, este artículo le dará un mapa claro para tomar mejores decisiones.</p>
 
 <p>Los <strong>regalos corporativos para empresas Ecuador</strong> han evolucionado: ya no se trata de regalar cualquier cosa con un logo impreso. Los gerentes comerciales y de marketing más exigentes del país hoy evalúan utilidad, durabilidad, coherencia con la marca y el mensaje que transmite el obsequio a quien lo recibe. En las páginas siguientes encontrará los 8 artículos más efectivos del mercado, criterios de selección por perfil de receptor, los errores que más se cometen al comprar en volumen y respuestas a las preguntas que con mayor frecuencia hacen los equipos de compras antes de cerrar un pedido.</p>
 
@@ -154,7 +154,7 @@ export const blogFase3 = {
       <td style="padding:12px 16px;border-bottom:1px solid #e0e7ff;"><strong>Ejecutivo senior / cliente estratégico</strong></td>
       <td style="padding:12px 16px;border-bottom:1px solid #e0e7ff;">Termo premium, audífonos, morral, set de escritorio de lujo</td>
       <td style="padding:12px 16px;border-bottom:1px solid #e0e7ff;">USD 35 – USD 80 por persona</td>
-      <td style="padding:12px 16px;border-bottom:1px solid #e0e7ff;">Cuencadad percibida alta, personalización con nombre</td>
+      <td style="padding:12px 16px;border-bottom:1px solid #e0e7ff;">Calidad percibida alta, personalización con nombre</td>
     </tr>
     <tr>
       <td style="padding:12px 16px;border-bottom:1px solid #e0e7ff;"><strong>Equipo de campo / ventas</strong></td>
@@ -187,7 +187,7 @@ export const blogFase3 = {
   <p>Dentro del stand, el merchandising cumple tres funciones simultáneas:</p>
   <ul style="padding-left: 1.5rem;">
     <li><strong>Atracción visual:</strong> Una bolsa con buen diseño o una gorra llamativa convierte a cada visitante que se aleja en un anuncio ambulante dentro del recinto ferial.</li>
-    <li><strong>Cuencaficación de prospectos:</strong> Segmentar qué artículo dar a quién permite a tu equipo de ventas identificar rápidamente el nivel de interés del visitante.</li>
+    <li><strong>Calificación de prospectos:</strong> Segmentar qué artículo dar a quién permite a tu equipo de ventas identificar rápidamente el nivel de interés del visitante.</li>
     <li><strong>Diferenciación de marca:</strong> En sectores donde varios competidores tienen stands similares —construcción, tecnología, alimentos, servicios financieros—, el artículo con mejor acabado y diseño habla directamente de la calidad de tu empresa.</li>
   </ul>
 
@@ -323,13 +323,10 @@ export const blogFase3 = {
     <a href="https://wa.me/593999814838?text=Hola%2C%20necesito%20cotizar%20merchandising%20para%20una%20feria%20empresarial" style="background:#f47920;color:#fff;padding:14px 32px;border-radius:50px;text-decoration:none;font-weight:bold;display:inline-block;">Cotizar para mi feria</a>
     <p style="margin-top:16px;font-size:0.85rem;color:#cbd5e1;">O explora nuestro <a href="https://www.kronosolopromocionales.com/merchandising-corporativo/" style="color:#93c5fd;">catálogo de merchandising corporativo</a>.</p>
   </div>
+</article>
 `,
 
   "boligrafos-promocionales-personalizados-guia-empresas-ecuador": `<article style="font-family: Arial, sans-serif; max-width: 900px; margin: 0 auto; color: #222; line-height: 1.7;">
-
-  <h1 style="color: #0a2240; font-size: 2rem; border-bottom: 4px solid #f47920; padding-bottom: 12px;">
-    Bolígrafos promocionales personalizados para empresas en Ecuador: guía completa para comprar bien
-  </h1>
 
   <p>
     Cada año, algún artículo de tendencias proclama que los bolígrafos promocionales están obsoletos. Y cada año, los datos dicen lo contrario. Según el <em>Promotional Products Association International (PPAI)</em>, los bolígrafos son el artículo promocional más utilizado en el mundo y generan más de <strong>3,000 impresiones por unidad</strong> a lo largo de su vida útil. Su costo por impresión es inferior a un centavo de dólar, un número que ninguna pauta en redes sociales puede igualar con la misma permanencia física.
@@ -545,11 +542,11 @@ export const blogFase3 = {
     <p style="margin:0 0 12px;">Si buscas bolígrafos promocionales de calidad para tu empresa, revisa nuestro <a href="https://www.kronosolopromocionales.com/categorias/boligrafos-publicitarios/">catálogo de bolígrafos publicitarios</a> con opciones metálicas, ecológicas y ejecutivas.</p>
     <a href="https://wa.me/593999814838?text=Hola%2C%20necesito%20cotizar%20bol%C3%ADgrafos%20promocionales%20personalizados" style="display:inline-block;background:#0a2240;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:bold;">Cotizar bolígrafos por WhatsApp</a>
   </div>
+</article>
 `,
 
   "articulos-promocionales-ecologicos-para-empresas-ecuador": `<article>
 
-<h1>Artículos promocionales ecológicos para empresas Ecuador: guía completa para marcas con compromiso ESG</h1>
 
 <p>Regalar una lapicera de plástico desechable en 2026 ya no es un detalle menor. Es una declaración de principios — y no precisamente favorable. Para una empresa que publica reportes de sostenibilidad, que firma compromisos con el Pacto Global de la ONU o que participa en mesas de RSE del Consejo Empresarial para el Desarrollo Sostenible del Ecuador (CEDES), distribuir artículos promocionales fabricados en materiales vírgenes de un solo uso genera una contradicción visible que los stakeholders ya no pasan por alto.</p>
 
@@ -764,11 +761,11 @@ export const blogFase3 = {
   <p style="margin:0 0 12px;">Descubre nuestra línea completa de <a href="https://www.kronosolopromocionales.com/categorias/ecologia/">artículos promocionales ecológicos</a> para alinear tu merchandising con tus objetivos de sostenibilidad.</p>
   <a href="https://wa.me/593999814838?text=Hola%2C%20necesito%20cotizar%20art%C3%ADculos%20promocionales%20ecol%C3%B3gicos" style="display:inline-block;background:#166534;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:bold;">Cotizar línea ecológica</a>
 </div>
+</article>
 `,
 
   "cuanto-cuestan-los-articulos-promocionales-personalizados-ecuador": `<article>
 
-<h1>¿Cuánto cuestan los artículos promocionales personalizados en Ecuador? Guía de precios 2026</h1>
 
 <p>La primera pregunta que hace cualquier gerente de compras o coordinador de marketing antes de arrancar una campaña es siempre la misma: <strong>¿cuánto me va a costar esto?</strong> La respuesta honesta es: depende. Pero esa respuesta, sin contexto, no le sirve a nadie.</p>
 
@@ -1047,5 +1044,6 @@ export const blogFase3 = {
   <p style="margin:0 0 12px;">Revisa nuestro <a href="https://www.kronosolopromocionales.com/articulos-promocionales/">catálogo completo de artículos promocionales</a> y solicita una cotización a la medida de tu presupuesto.</p>
   <a href="https://wa.me/593999814838?text=Hola%2C%20necesito%20una%20cotizaci%C3%B3n%20de%20art%C3%ADculos%20promocionales" style="display:inline-block;background:#0a2240;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:bold;">Solicitar cotización</a>
 </div>
+</article>
 `
 };

@@ -151,7 +151,7 @@ export const blogAdditions = {
    ▼           ▼          ▼         ▼         ▼
 ┌────────┐ ┌────────┐ ┌────────┐ ┌────────┐ ┌────────────┐
 │Ruta 1: │ │Ruta 2: │ │Ruta 3: │ │Ruta 4: │ │Ruta 5:     │
-│Estatus │ │Alivio  │ │Movilid.│ │Cuencadez │ │Impacto     │
+│Estatus │ │Alivio  │ │Movilid.│ │Calidez │ │Impacto     │
 │Control │ │de Dolor│ │Outdoor │ │y Hogar │ │Cero        │
 └────────┘ └────────┘ └────────┘ └────────┘ └────────────┘</pre>
 </div>
@@ -346,7 +346,7 @@ BAJO COSTO              │              ALTO COSTO
 <p>Vamos a lo práctico. Esto es lo que las empresas inteligentes están regalando y por qué está disparando su engagement.</p>
 
 <figure style="margin: 24px 0; text-align: center;">
-  <img src="/images/blog/articulos-promocionales-empresas-funcionan/gorras-bordadas-personalizadas.png" alt="Gorras bordadas personalizadas con logo de empresa — ejemplo de artículo promocional wearable" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.10);" loading="lazy" />
+  <img src="/images/blog/articulos-promocionales-empresas-funcionan/gorras-bordadas-personalizadas.jpg" alt="Gorras bordadas personalizadas con logo de empresa — ejemplo de artículo promocional wearable" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.10);" loading="lazy" />
   <figcaption style="margin-top: 8px; font-size: 13px; color: #6b7280;">Gorras con bordado personalizado — uno de los artículos promocionales con mayor retención de marca a largo plazo.</figcaption>
 </figure>
 
@@ -384,7 +384,7 @@ BAJO COSTO              │              ALTO COSTO
 <blockquote><p><em>«Las mejores ideas se escriben en piedra. Las demás, en servilletas.»</em></p></blockquote>
 
 <figure style="margin: 24px 0; text-align: center;">
-  <img src="/images/blog/articulos-promocionales-empresas-funcionan/bolso-promocional-mopinal.png" alt="Bolso promocional MOPINAL personalizado con logo — ejemplo de artículo wearable corporativo" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.10);" loading="lazy" />
+  <img src="/images/blog/articulos-promocionales-empresas-funcionan/bolso-promocional-mopinal.jpg" alt="Bolso promocional MOPINAL personalizado con logo — ejemplo de artículo wearable corporativo" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.10);" loading="lazy" />
   <figcaption style="margin-top: 8px; font-size: 13px; color: #6b7280;">Bolso corporativo con logo bordado: alta visibilidad, uso diario y transferencia directa de atributos de marca.</figcaption>
 </figure>
 
@@ -416,7 +416,7 @@ BAJO COSTO              │              ALTO COSTO
 </div>
 
 <figure style="margin: 24px 0; text-align: center;">
-  <img src="/images/blog/articulos-promocionales-empresas-funcionan/kit-promocional-neumoflux.png" alt="Kit promocional NeumoFlux con bolso, spray y accesorios personalizados — ejemplo de kit de emergencia situacional" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.10);" loading="lazy" />
+  <img src="/images/blog/articulos-promocionales-empresas-funcionan/kit-promocional-neumoflux.jpg" alt="Kit promocional NeumoFlux con bolso, spray y accesorios personalizados — ejemplo de kit de emergencia situacional" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.10);" loading="lazy" />
   <figcaption style="margin-top: 8px; font-size: 13px; color: #6b7280;">Kit NeumoFlux: bolso, spray aromático y accesorios — ejemplo real de kit promocional hiper-segmentado para el sector salud/bienestar.</figcaption>
 </figure>
 
@@ -430,7 +430,7 @@ BAJO COSTO              │              ALTO COSTO
 </ul>
 
 <figure style="margin: 24px 0; text-align: center;">
-  <img src="/images/blog/articulos-promocionales-empresas-funcionan/pelota-bagovit-solar.png" alt="Pelota Bagòvit Solar personalizada con logo — artículo promocional de alto impacto para eventos" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.10);" loading="lazy" />
+  <img src="/images/blog/articulos-promocionales-empresas-funcionan/pelota-bagovit-solar.jpg" alt="Pelota Bagòvit Solar personalizada con logo — artículo promocional de alto impacto para eventos" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.10);" loading="lazy" />
   <figcaption style="margin-top: 8px; font-size: 13px; color: #6b7280;">Pelota Bagòvit Solar: artículo promocional de alto impacto visual, ideal para eventos y activaciones de marca.</figcaption>
 </figure>
 
@@ -510,7 +510,7 @@ Esta es la métrica que todo CFO debería exigir.</p>
   <li>Un termo de acero inoxidable de $12 que se usa durante 18 meses, 5 días a la semana, visible en la mesa del cliente, te cuesta centavos por hora de exposición. <strong>Invierte en CPHE, no en costo unitario.</strong></li>
 </ul>
 
-<p><strong>Paso 4: Testea el Tacto en Frío, en Cuencaente y en Mojado.</strong><br>
+<p><strong>Paso 4: Testea el Tacto en Frío, en Caliente y en Mojado.</strong><br>
 Un termo que quema los labios, un cuaderno que se deforma con la humedad, un llavero que rompe el bolsillo. Cada micro-fricción es un pequeño daño reputacional.</p>
 
 <h2>El Copywriting en la Nota que Acompaña al Regalo</h2>
@@ -664,7 +664,7 @@ Un termo que quema los labios, un cuaderno que se deforma con la humedad, un lla
 <h2>Métricas para evaluar el impacto de tu campaña de marketing sostenible</h2>
 <p>A diferencia de la publicidad digital, los artículos sostenibles generan un impacto difícil de cuantificar pero real y duradero. Estas son las métricas que las empresas líderes en Ecuador utilizan para evaluar el retorno de sus campañas eco-friendly:</p>
 <ul>
-<li><strong>Tasa de retención del artículo:</strong> ¿cuántos receptores conservan el artículo a los 6 y 12 meses? Los artículos ecológicos de calidad tienen tasas de retención superiores al 80% porque son durables y funcionales, no descartables.</li>
+<li><strong>Tasa de retención del artículo:</strong> ¿cuántos receptores conservan el artículo a los 6 y 12 meses? Los artículos ecológicos de calidad se conservan más tiempo porque son durables y funcionales, no descartables.</li>
 <li><strong>Conversaciones generadas:</strong> un artículo con certificación ambiental visible genera preguntas espontáneas de colegas, multiplicando el alcance orgánico de la marca sin costo adicional.</li>
 <li><strong>NPS diferencial:</strong> comparar el Net Promoter Score de clientes que recibieron artículos sostenibles vs. artículos convencionales. Las empresas que miden esto consistentemente reportan un diferencial de 8 a 15 puntos NPS a favor de los artículos ecológicos.</li>
 <li><strong>Impacto ambiental cuantificado:</strong> calcula y comunica cuántas botellas plásticas fueron reemplazadas por termos reutilizables, o cuántos kilogramos de CO2 dejaron de emitirse. Estos números concretos amplifican el mensaje de sostenibilidad en comunicaciones corporativas.</li>

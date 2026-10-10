@@ -287,12 +287,12 @@ export const blogContent = {
   <li><strong>Posicionamiento:</strong> la calidad del artículo comunica el nivel de tu empresa antes de que digas una sola palabra.</li>
 </ul>
 
-<p>En Ecuador, el mercado de productos promocionales movió más de $80 millones USD en 2024, con crecimiento sostenido impulsado por el sector bancario, farmacéutico y tecnológico. Cada vez más empresas lo ven como inversión de marketing, no como gasto.</p>
+<p>En Ecuador, sectores como el bancario, el farmacéutico y el tecnológico compran productos promocionales de forma recurrente. Cada vez más empresas lo ven como inversión de marketing, no como gasto.</p>
 
 <h2>Los 5 errores más comunes (y cómo evitarlos)</h2>
 
 <h3>Error 1: Comprar por precio, no por utilidad</h3>
-<p>El bolígrafo más barato del catálogo parece una ganga hasta que te das cuenta de que el 70% acaba tirado en la primera semana. El costo real no es el precio de compra: es el precio dividido por los meses de uso. Un termo de acero inoxidable a $8 que se usa 2 años cuesta menos por impresión que un bolígrafo plástico a $0.50 que dura un mes.</p>
+<p>El bolígrafo más barato del catálogo parece una ganga hasta que te das cuenta de que muchos acaban en la basura en la primera semana. El costo real no es el precio de compra: es el precio dividido por los meses de uso. Un termo de acero inoxidable a $8 que se usa 2 años cuesta menos por impresión que un bolígrafo plástico a $0.50 que dura un mes.</p>
 <p><strong>Regla práctica:</strong> pregúntate siempre "¿yo guardaría esto?" antes de confirmar el pedido.</p>
 
 <h3>Error 2: Logo grande, resultado feo</h3>
@@ -302,7 +302,7 @@ export const blogContent = {
 <p>Una empresa que se posiciona como premium no puede regalar artículos de baja calidad. Una empresa que habla de sostenibilidad no puede regalar plásticos de un solo uso. El producto promocional es una extensión física de tu identidad de marca. Si no encaja, daña.</p>
 
 <h3>Error 4: Pedir sin briefar</h3>
-<p>El 80% de los pedidos que no cumplen expectativas se deben a un brief incompleto, no a errores del proveedor. "Quiero mugs con mi logo" es una instrucción que puede producir 50 resultados distintos. Más adelante en esta guía te mostramos cómo hacer un brief que funcione.</p>
+<p>Muchos pedidos que no cumplen expectativas fallan por un brief incompleto, no por errores del proveedor. "Quiero mugs con mi logo" es una instrucción que puede producir 50 resultados distintos. Más adelante en esta guía te mostramos cómo hacer un brief que funcione.</p>
 
 <h3>Error 5: No planificar con tiempo</h3>
 <p>La producción de artículos personalizados en Ecuador toma entre 7 y 21 días según el tipo de producto y la técnica de personalización. Llegar con urgencia reduce las opciones, aumenta el costo y eleva el riesgo de errores. Si tienes un evento el 15 de noviembre, empieza el proceso el 25 de octubre como máximo.</p>
@@ -724,7 +724,7 @@ export const blogContent = {
 
     <h2>Productos que Funcionan en Eventos Ecuatorianos</h2>
 
-    <h3>1. Textiles de Cuencadad Premium</h3>
+    <h3>1. Textiles de Calidad Premium</h3>
     <p>En ferias y conferencias, las camisetas y polos de calidad superior son altamente valorados. El clima de Ecuador (especialmente en ciudades como Quito) favorece el uso constante de estas prendas. La clave: telas suaves (cotton peinado mínimo 180gr/m²), colores que no se desvanecen y bordado de calidad. Los asistentes usan estas prendas regularmente, convirtiéndolas en publicidad móvil continua.</p>
 
     <h3>2. Botellas Térmicas y Termos</h3>
@@ -831,7 +831,7 @@ export const blogContent = {
     <h2>La Psicología del Textil Corporativo</h2>
     <p>Vestir ropa de una marca es un acto de afiliación pública. Las personas solo visten prendas de marcas con las que se identifican o de las que se sienten orgullosas. Si tus empleados no usan voluntariamente los textiles corporativos fuera del trabajo, algo falla. La calidad percibida del textil refleja directamente la calidad percibida de la empresa.</p>
 
-    <h2>Principio 1: Cuencadad Ante Todo</h2>
+    <h2>Principio 1: Calidad Ante Todo</h2>
     <p>La tentación de ahorrar comprando textiles económicos es comprensible pero contraproducente. Un polo que pierde forma tras 2 lavadas, destiñe o tiene costuras que se abren comunica: "Esta empresa no invierte en calidad". Inversamente, un textil premium que mantiene forma, color y suavidad tras 50 lavadas comunica excelencia.</p>
 
     <p>Estándares mínimos recomendados: algodón peinado 180gr/m² o superior para polos, cotton premium 240gr/m² para camisetas casuales, mezclas polyester-algodón de alta calidad para deportivo, y costuras reforzadas en áreas de estrés. La diferencia de costo entre calidad media y premium es marginal, pero el impacto percibido es exponencial.</p>
@@ -1169,10 +1169,10 @@ export const blogContent = {
     <h3>Cuadernos con Tapa Dura</h3>
     <p>Primera opción: Grabado láser (tapa cuero/corcho). Alternativa: Impresión digital + laminado (tapa cartón).</p>
 
-    <h2>Optimización de Costos Sin Sacrificar Cuencadad</h2>
+    <h2>Optimización de Costos Sin Sacrificar Calidad</h2>
     <p>Estrategias inteligentes: simplifica diseños para reducir número de colores en serigrafía/tampografía, consolida órdenes para alcanzar volúmenes que justifiquen serigrafía vs. digital, usa bordado solo en áreas visibles clave (no en todo el producto), y considera técnicas híbridas (serigrafía para diseño principal + bordado para detalle premium en subset de productos).</p>
 
-    <h2>Control de Cuencadad: Qué Exigir</h2>
+    <h2>Control de Calidad: Qué Exigir</h2>
     <p>Antes de producción masiva, solicita siempre: muestra física con personalización exacta, verificación de colores en material final (no solo en pantalla), prueba de durabilidad (lavadas para textiles, resistencia a rayones para grabados), y aprobación escrita antes de producción completa. Previene errores costosos.</p>
 
     <h2>Conclusión: Técnica Correcta, Resultado Perfecto</h2>
@@ -2313,7 +2313,7 @@ export const blogContent = {
 
     <p>Antes de siquiera pensar en qué tipo de <strong>artículos promocionales</strong> comprar, debes tener claros tus objetivos. ¿Buscas aumentar el reconocimiento de marca, fidelizar clientes existentes o atraer nuevos prospectos? Definir estos objetivos te ayudará a elegir los productos más adecuados y a dirigir tus esfuerzos de manera efectiva. Además, es fundamental conocer a tu público objetivo. ¿Cuáles son sus intereses? ¿Qué tipo de productos valorarán más? Cuanto mejor comprendas a tu audiencia, más eficaz será tu campaña de <strong>productos promocionales navideños</strong>.</p>
 
-    <h3 id="prioriza-la-calidad-sobre-la-cantidad">Prioriza la Cuencadad sobre la Cantidad</h3>
+    <h3 id="prioriza-la-calidad-sobre-la-cantidad">Prioriza la Calidad sobre la Cantidad</h3>
 
     <p>En lugar de optar por una gran cantidad de productos baratos y de baja calidad, considera invertir en menos artículos, pero de mayor calidad. Un producto de buena calidad no solo durará más tiempo, sino que también reflejará positivamente en la imagen de tu marca. Un <strong>producto promocional navideño</strong> de calidad puede convertirse en un regalo apreciado que se utilizará durante años, manteniendo tu marca presente en la mente del cliente. Recuerda que la percepción de valor es clave para generar un impacto duradero.</p>
 
@@ -2492,7 +2492,7 @@ export const blogContent = {
       <li>Un ejemplo: en lugar de la típica taza con el logo, considera una suscripción a un servicio de streaming para un público joven y aficionado a la tecnología.</li>
     </ul>
 
-    <h3 id="priorizar-el-precio-sobre-la-calidad">Priorizar el Precio Sobre la Cuencadad</h3>
+    <h3 id="priorizar-el-precio-sobre-la-calidad">Priorizar el Precio Sobre la Calidad</h3>
 
     <p>Es tentador optar por los <strong>artículos promocionales</strong> más baratos, especialmente si tienes un presupuesto ajustado. Sin embargo, un producto de baja calidad puede reflejar negativamente en tu marca.</p>
 
@@ -3151,7 +3151,7 @@ export const blogContent = {
 
 <p class="text-gray-700 leading-relaxed mb-4">Esta característica es especialmente valiosa para empresas del sector salud, educación, servicios financieros y cualquier organización que valore el bienestar de sus clientes y empleados. En ciudades como Quito, Guayaquil y Cuenca, donde el ritmo empresarial es intenso, contar con artículos promocionales que demuestren preocupación por la salud marca una diferencia significativa.</p>
 
-<h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4 border-l-4 border-primary pl-4">PRECIO BOMBA: Cuencadad Premium a Costo Accesible</h2>
+<h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4 border-l-4 border-primary pl-4">PRECIO BOMBA: Calidad Premium a Costo Accesible</h2>
 
 <p class="text-gray-700 leading-relaxed mb-4">Una de las mayores ventajas del Bolígrafo Flom 4-1 Antibacteriano es su increíble relación calidad-precio. Catalogado como "PRECIO BOMBA", este producto permite a las empresas ecuatorianas acceder a un artículo promocional de alta gama sin comprometer su presupuesto de marketing.</p>
 
@@ -3394,11 +3394,11 @@ export const blogContent = {
 </div>
 
 
-<h3>🏆 Opción Premium (Alta Cuencadad y Durabilidad)</h3>
+<h3>🏆 Opción Premium (Alta Calidad y Durabilidad)</h3>
 <ul>
 <li>✅ Materiales orgánicos certificados y procesos de producción sostenibles.</li><li>✅ Diseño exclusivo y personalización detallada.</li><li>✅ Ideal para: Empresas que buscan transmitir una imagen de lujo y compromiso ambiental.</li>
 </ul>
-<h3>⭐ Opción Estándar (Buena Relación Cuencadad-Precio)</h3>
+<h3>⭐ Opción Estándar (Buena Relación Calidad-Precio)</h3>
 <ul>
 <li>✅ Materiales reciclados y biodegradables.</li><li>✅ Personalización estándar con logo y mensaje.</li><li>✅ Ideal para: Campañas promocionales de alcance medio y empresas que buscan un equilibrio entre costo y sostenibilidad.</li>
 </ul>
@@ -3560,11 +3560,11 @@ export const blogContent = {
 </div>
 
 
-<h3>🏆 Cuencadad Premium</h3>
+<h3>🏆 Calidad Premium</h3>
 <ul>
 <li>✅ Materiales duraderos y acabados impecables</li><li>✅ Diseño exclusivo y personalizado</li><li>✅ Ideal para: empresas que buscan proyectar una imagen de lujo y sofisticación</li>
 </ul>
-<h3>⭐ Cuencadad Estándar</h3>
+<h3>⭐ Calidad Estándar</h3>
 <ul>
 <li>✅ Excelente relación calidad-precio</li><li>✅ Amplia variedad de opciones disponibles</li><li>✅ Ideal para: promociones masivas y eventos corporativos</li>
 </ul>
@@ -3677,7 +3677,7 @@ export const blogContent = {
 <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 32px; border-radius: 16px; margin: 32px 0; text-align: center;">
   <p style="color: #a7f3d0; font-size: 14px; margin: 0 0 8px 0;">🏆 +500 EMPRESAS CONFÍAN EN NOSOTROS</p>
   <h3 style="color: white; font-size: 24px; margin: 0 0 16px 0; font-weight: bold;">Únete a las marcas que ya destacan</h3>
-  <p style="color: #d1fae5; margin: 0 0 24px 0;">Cuencadad garantizada • Entregas puntuales • Soporte dedicado</p>
+  <p style="color: #d1fae5; margin: 0 0 24px 0;">Calidad garantizada • Entregas puntuales • Soporte dedicado</p>
   <a href="https://wa.me/593999814838?text=Hola%2C%20me%20interesan%20los%20productos%20promocionales" style="display: inline-block; background: white; color: #059669; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px;">💬 Hablar con un Asesor</a>
 </div>
 
@@ -3832,11 +3832,11 @@ Aquí te mostramos algunas razones clave por las que deberías considerar los ll
 </div>
 
 
-<h3>🏆 Cuencadad Premium</h3>
+<h3>🏆 Calidad Premium</h3>
 <ul>
 <li>✅ <strong>Materiales duraderos:</strong> Acero inoxidable, cuero, aleaciones de alta calidad.</li><li>✅ <strong>Acabados impecables:</strong> Grabado láser, impresión a todo color con resina epoxi.</li><li>✅ <strong>Ideal para:</strong> Empresas que buscan proyectar una imagen de lujo y sofisticación.</li><li><strong>Ejemplos:</strong> Llaveros metálicos con el logo grabado, llaveros de cuero con detalles personalizados.</li>
 </ul>
-<h3>⭐ Cuencadad Estándar</h3>
+<h3>⭐ Calidad Estándar</h3>
 <ul>
 <li>✅ <strong>Excelente relación calidad-precio:</strong> Plástico resistente, metal ligero.</li><li>✅ <strong>Materiales resistentes:</strong> Ideal para uso diario.</li><li>✅ <strong>Ideal para:</strong> Promociones masivas, eventos corporativos, regalos a empleados.</li><li><strong>Ejemplos:</strong> Llaveros de plástico con impresión a color, llaveros metálicos sencillos con el logo impreso.</li>
 </ul>
@@ -3940,7 +3940,7 @@ Los llaveros promocionales se pueden utilizar en una variedad de situaciones:
 <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 32px; border-radius: 16px; margin: 32px 0; text-align: center;">
   <p style="color: #a7f3d0; font-size: 14px; margin: 0 0 8px 0;">🏆 +500 EMPRESAS CONFÍAN EN NOSOTROS</p>
   <h3 style="color: white; font-size: 24px; margin: 0 0 16px 0; font-weight: bold;">Únete a las marcas que ya destacan</h3>
-  <p style="color: #d1fae5; margin: 0 0 24px 0;">Cuencadad garantizada • Entregas puntuales • Soporte dedicado</p>
+  <p style="color: #d1fae5; margin: 0 0 24px 0;">Calidad garantizada • Entregas puntuales • Soporte dedicado</p>
   <a href="https://wa.me/593999814838?text=Hola%2C%20me%20interesan%20los%20productos%20promocionales" style="display: inline-block; background: white; color: #059669; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px;">💬 Hablar con un Asesor</a>
 </div>
 
@@ -4031,11 +4031,11 @@ Los llaveros promocionales se pueden utilizar en una variedad de situaciones:
 
 <p>Elegir el bolígrafo adecuado para tu campaña promocional es crucial. Aquí te presentamos una comparativa para ayudarte a tomar la mejor decisión:</p>
 
-<h3>🏆 Cuencadad Premium</h3>
+<h3>🏆 Calidad Premium</h3>
 <ul>
 <li>✅ <strong>Materiales duraderos:</strong> Metales, resinas de alta calidad.</li><li>✅ <strong>Acabados impecables:</strong> Grabado láser, impresión de alta resolución.</li><li>✅ <strong>Ideal para:</strong> Clientes VIP, regalos corporativos de alto impacto.</li>
 </ul>
-<h3>⭐ Cuencadad Estándar</h3>
+<h3>⭐ Calidad Estándar</h3>
 <ul>
 <li>✅ <strong>Excelente relación calidad-precio:</strong> Plásticos resistentes, diseños modernos.</li><li>✅ <strong>Buena durabilidad:</strong> Mecanismos confiables, tinta de calidad.</li><li>✅ <strong>Ideal para:</strong> Eventos, ferias, promociones generales.</li>
 </ul>
@@ -4183,11 +4183,11 @@ Visita nuestra sección de <a href="/categorias/boligrafos-publicitarios" class=
 </div>
 
 
-<h3>🏆 Cuencadad Premium</h3>
+<h3>🏆 Calidad Premium</h3>
 <ul>
 <li>✅ Materiales duraderos y acabados impecables</li><li>✅ Diseño exclusivo y personalizado</li><li>✅ Ideal para: clientes VIP y eventos especiales</li>
 </ul>
-<h3>⭐ Cuencadad Estándar</h3>
+<h3>⭐ Calidad Estándar</h3>
 <ul>
 <li>✅ Excelente relación calidad-precio</li><li>✅ Amplia variedad de opciones disponibles</li><li>✅ Ideal para: promociones masivas y eventos comunitarios</li>
 </ul>
@@ -4298,7 +4298,7 @@ Visita nuestra sección de <a href="/categorias/boligrafos-publicitarios" class=
 <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 32px; border-radius: 16px; margin: 32px 0; text-align: center;">
   <p style="color: #a7f3d0; font-size: 14px; margin: 0 0 8px 0;">🏆 +500 EMPRESAS CONFÍAN EN NOSOTROS</p>
   <h3 style="color: white; font-size: 24px; margin: 0 0 16px 0; font-weight: bold;">Únete a las marcas que ya destacan</h3>
-  <p style="color: #d1fae5; margin: 0 0 24px 0;">Cuencadad garantizada • Entregas puntuales • Soporte dedicado</p>
+  <p style="color: #d1fae5; margin: 0 0 24px 0;">Calidad garantizada • Entregas puntuales • Soporte dedicado</p>
   <a href="https://wa.me/593999814838?text=Hola%2C%20me%20interesan%20los%20productos%20promocionales" style="display: inline-block; background: white; color: #059669; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px;">💬 Hablar con un Asesor</a>
 </div>
 <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 32px; border-radius: 16px; margin: 32px 0; text-align: center;">
@@ -4424,11 +4424,11 @@ Estos son solo algunos ejemplos de cómo los <em>productos promocionales carnava
 <div class="tip-box" style="background: #fef3c7; border-left: 4px solid #f59e0b; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 20px 0;">
     <p style="margin: 0; color: #92400e;">💡 <strong>Dato importante:</strong> Un regalo corporativo bien seleccionado puede aumentar la percepción positiva de tu marca en un 79%.</p>
 </div>
-<h3>🏆 Cuencadad Premium</h3>
+<h3>🏆 Calidad Premium</h3>
 <ul>
 <li>✅ <em>Diseños exclusivos</em> que reflejan la identidad de tu marca.</li><li>✅ <em>Materiales duraderos</em> que garantizan la longevidad del regalo.</li><li>✅ <em>Empaques personalizados</em> que añaden un toque de elegancia.</li><li>✅ Ideal para: clientes VIP y socios estratégicos.</li>
 </ul>
-<h3>⭐ Cuencadad Estándar</h3>
+<h3>⭐ Calidad Estándar</h3>
 <ul>
 <li>✅ <em>Excelente relación calidad-precio</em> para un presupuesto equilibrado.</li><li>✅ <em>Variedad de opciones</em> para adaptarse a diferentes gustos.</li><li>✅ <em>Personalización versátil</em> con tu logo y mensaje.</li><li>✅ Ideal para: campañas de alcance masivo y eventos corporativos.</li>
 </ul>
@@ -4495,7 +4495,7 @@ Un empaque atractivo puede hacer que tu regalo sea aún más memorable.
 <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 32px; border-radius: 16px; margin: 32px 0; text-align: center;">
   <p style="color: #a7f3d0; font-size: 14px; margin: 0 0 8px 0;">🏆 +500 EMPRESAS CONFÍAN EN NOSOTROS</p>
   <h3 style="color: white; font-size: 24px; margin: 0 0 16px 0; font-weight: bold;">Únete a las marcas que ya destacan</h3>
-  <p style="color: #d1fae5; margin: 0 0 24px 0;">Cuencadad garantizada • Entregas puntuales • Soporte dedicado</p>
+  <p style="color: #d1fae5; margin: 0 0 24px 0;">Calidad garantizada • Entregas puntuales • Soporte dedicado</p>
   <a href="https://wa.me/593999814838?text=Hola%2C%20me%20interesan%20los%20regalos%20corporativos" style="display: inline-block; background: white; color: #059669; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px;">💬 Hablar con un Asesor</a>
 </div>
 
@@ -4552,11 +4552,11 @@ Un empaque atractivo puede hacer que tu regalo sea aún más memorable.
 
 <p>Ofrecemos una variedad de opciones para adaptarnos a tus necesidades y presupuesto. Aquí te presentamos una comparación de nuestras líneas de productos:</p>
 
-<h3>🏆 Cuencadad Premium</h3>
+<h3>🏆 Calidad Premium</h3>
 <ul>
 <li>✅ Materiales de alta calidad y durabilidad superior.</li><li>✅ Acabados impecables y colores neón vibrantes.</li><li>✅ Personalización completa con tu logo y diseño.</li><li>✅ Ideal para: empresas que buscan proyectar una imagen de excelencia y distinción.</li>
 </ul>
-<h3>⭐ Cuencadad Estándar</h3>
+<h3>⭐ Calidad Estándar</h3>
 <ul>
 <li>✅ Excelente relación calidad-precio.</li><li>✅ Materiales resistentes y colores neón llamativos.</li><li>✅ Personalización con tu logo.</li><li>✅ Ideal para: promociones masivas y eventos corporativos.</li>
 </ul>
@@ -4612,7 +4612,7 @@ Un empaque atractivo puede hacer que tu regalo sea aún más memorable.
 <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 32px; border-radius: 16px; margin: 32px 0; text-align: center;">
   <p style="color: #a7f3d0; font-size: 14px; margin: 0 0 8px 0;">🏆 +500 EMPRESAS CONFÍAN EN NOSOTROS</p>
   <h3 style="color: white; font-size: 24px; margin: 0 0 16px 0; font-weight: bold;">Únete a las marcas que ya destacan</h3>
-  <p style="color: #d1fae5; margin: 0 0 24px 0;">Cuencadad garantizada • Entregas puntuales • Soporte dedicado</p>
+  <p style="color: #d1fae5; margin: 0 0 24px 0;">Calidad garantizada • Entregas puntuales • Soporte dedicado</p>
   <a href="https://wa.me/593999814838?text=Hola%2C%20me%20interesan%20los%20productos%20promocionales" style="display: inline-block; background: white; color: #059669; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 15px;">💬 Hablar con un Asesor</a>
 </div>
 

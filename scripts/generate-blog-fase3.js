@@ -365,6 +365,13 @@ async function main() {
     try {
       const html = await callClaude(post.prompt);
 
+      // src/app/blog/[slug]/page.tsx ya emite el título como <h1>; un <h1> en
+      // el cuerpo duplica el encabezado principal (3 posts lo tenían, corregido
+      // 2026-10-09). Se rechaza el post en vez de reescribir el HTML a ciegas.
+      if (/<h1[\s>]/i.test(html)) {
+        throw new Error('el HTML generado contiene <h1>; el cuerpo debe empezar en <h2>. Ajusta el prompt y regenera este post.');
+      }
+
       // Estimate word count
       const words = html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().split(' ').length;
       console.log(`   ✓ ${words} palabras generadas`);
