@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { catalogCountLabelLong, catalogCountLabelReferences } from '@/lib/business-facts';
+import { catalogCountLabelLong, catalogCountLabelReferences, leadTimeAnswer, minimumOrderAnswer } from '@/lib/business-facts';
 import { buildNeutralItemList } from '@/lib/structured-data';
+import { categoryIconSrc } from '@/lib/category-icons';
 
 export const dynamic = 'force-static';
 
@@ -50,7 +51,7 @@ const ALL_CATEGORIES = [
     id: 'escritura',
     name: 'Bolígrafos Publicitarios',
     slug: 'boligrafos-publicitarios',
-    description: 'Desde 50 unidades. Metálicos, ecológicos y ejecutivos con tu logo impreso.',
+    description: 'Metálicos, ecológicos y ejecutivos con tu logo impreso.',
     ideal: 'Eventos, ferias, capacitaciones',
   },
   {
@@ -127,7 +128,7 @@ const ALL_CATEGORIES = [
     id: 'gorras',
     name: 'Gorras Personalizadas',
     slug: 'gorras-personalizadas',
-    description: 'Alta visibilidad. Bordado computarizado desde 12 unidades.',
+    description: 'Alta visibilidad. Bordado computarizado.',
     ideal: 'Eventos masivos, campañas de campo',
   },
   {
@@ -169,7 +170,7 @@ const ALL_CATEGORIES = [
     id: 'llaveros',
     name: 'Llaveros Personalizados',
     slug: 'llaveros-personalizados',
-    description: 'El artículo con mayor vida útil. Metal, cuero y PVC desde 50 unidades.',
+    description: 'El artículo con mayor vida útil. Metal, cuero y PVC.',
     ideal: 'Gran volumen, distribución masiva',
   },
   {
@@ -263,16 +264,41 @@ const ALL_CATEGORIES = [
     description: 'Artículos mixtos de múltiples categorías para kits combinados.',
     ideal: 'Kits combinados, públicos diversos',
   },
+  // Las 3 categorías de bebida añadidas en mayo 2026 no estaban en este
+  // directorio (34 de 37). Descripción tomada de su seoDescription en
+  // data/categories.json; sin ícono propio en /images/categorias/, usan la
+  // imagen de la categoría.
+  {
+    id: 'vasos-personalizados',
+    name: 'Vasos Personalizados',
+    slug: 'vasos-personalizados',
+    description: 'Metálicos, plásticos, de vidrio y ecológicos con tu logo.',
+    image: 'https://cataprom.com/images/productos/13534.jpg',
+  },
+  {
+    id: 'termos-personalizados',
+    name: 'Termos Personalizados',
+    slug: 'termos-personalizados',
+    description: 'Acero inoxidable, doble pared y opciones ecológicas.',
+    image: 'https://cataprom.com/images/productos/13534.jpg',
+  },
+  {
+    id: 'tomatodos-botilitos',
+    name: 'Tomatodos y Botilitos',
+    slug: 'tomatodos-y-botilitos-personalizados',
+    description: 'Metálicos, plásticos y ecológicos con tu logo.',
+    image: 'https://cataprom.com/images/productos/13534.jpg',
+  },
 ];
 
 const FAQS = [
   {
     question: '¿Cuál es el mínimo de pedido para regalos corporativos?',
-    answer: 'Depende del producto. En bolígrafos el mínimo es 50 unidades, en gorras 12 unidades, en mugs 24 unidades. Contáctanos por WhatsApp para conocer el mínimo exacto de cada artículo.',
+    answer: minimumOrderAnswer,
   },
   {
     question: '¿Cuánto tiempo tarda en llegar un pedido de regalos corporativos?',
-    answer: 'El tiempo de entrega estándar es de 10 a 15 días hábiles desde la aprobación del arte. Tenemos opciones express para pedidos urgentes. Hacemos envíos a todo Ecuador.',
+    answer: `${leadTimeAnswer} Hacemos envíos a todo Ecuador.`,
   },
   {
     question: '¿Puedo ver una muestra antes de hacer el pedido?',
@@ -323,7 +349,7 @@ export default function RegalosPage() {
       {/* Hero */}
       <section
         className="relative bg-primary py-16 md:py-24 bg-cover bg-center"
-        style={{ backgroundImage: "linear-gradient(rgba(15, 33, 120, 0.85), rgba(15, 33, 120, 0.85)), url('/images/regalos-promocionales.png')" }}
+        style={{ backgroundImage: "linear-gradient(rgba(15, 33, 120, 0.85), rgba(15, 33, 120, 0.85)), url('/images/regalos-promocionales.webp')" }}
       >
         <div className="container mx-auto px-4 text-center">
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight">
@@ -356,7 +382,7 @@ export default function RegalosPage() {
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="font-serif text-3xl md:text-4xl text-secondary text-center mb-4">
-            Explora las 34 Categorías de Regalos Corporativos
+            Explora las {ALL_CATEGORIES.length} Categorías de Regalos Corporativos
           </h2>
           <p className="text-gray-500 text-center max-w-xl mx-auto mb-12">
             Selecciona la categoría que mejor se adapte a tu presupuesto, evento y público objetivo.
@@ -370,7 +396,7 @@ export default function RegalosPage() {
               >
                 <div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full overflow-hidden ring-4 ring-gray-100 shadow-sm mb-5 transition-all duration-300 ease-out group-hover:ring-accent/40 group-hover:shadow-xl group-hover:-translate-y-1.5">
                   <Image
-                    src={`/images/categorias/${cat.id}.png`}
+                    src={categoryIconSrc(cat)}
                     alt={cat.name}
                     fill
                     loading="lazy"
@@ -384,9 +410,11 @@ export default function RegalosPage() {
                 <p className="text-gray-500 text-sm leading-relaxed mb-3 max-w-[210px]">
                   {cat.description}
                 </p>
-                <span className="inline-block text-[11px] font-semibold uppercase tracking-wide text-primary bg-primary/5 px-3 py-1.5 rounded-full">
-                  {cat.ideal}
-                </span>
+                {'ideal' in cat && cat.ideal && (
+                  <span className="inline-block text-[11px] font-semibold uppercase tracking-wide text-primary bg-primary/5 px-3 py-1.5 rounded-full">
+                    {cat.ideal}
+                  </span>
+                )}
               </Link>
             ))}
           </div>
@@ -411,7 +439,7 @@ export default function RegalosPage() {
               },
               {
                 title: 'Envíos a Todo Ecuador',
-                desc: 'Entregamos en Quito, Guayaquil, Cuenca y todo el país. Tiempo estándar: 10-15 días hábiles.',
+                desc: 'Entregamos en Quito, Guayaquil, Cuenca y todo el país. Plazo confirmado en cada cotización.',
               },
             ].map((item) => (
               <div key={item.title} className="text-center">

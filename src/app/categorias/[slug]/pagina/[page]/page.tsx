@@ -7,6 +7,7 @@ import CategoryPagination from '@/components/CategoryPagination';
 import categoriesData from '@/data/categories.json';
 import WAIcon from '@/components/icons/WhatsAppIcon';
 import { PAGINATED_CATEGORY_SLUGS, CATEGORY_PAGE_SIZE, totalPagesFor } from '@/lib/category-pagination';
+import { displayName, toCardProduct } from '@/lib/product-display';
 
 const BASE_URL = 'https://www.kronosolopromocionales.com';
 
@@ -52,9 +53,13 @@ export async function generateMetadata({ params }) {
 
   const canonical = `${BASE_URL}/categorias/${category.slug}/pagina/${page}/`;
 
+  const title = `${category.seoTitle} — Página ${page} de ${totalPages}`;
+  const description = `${category.seoDescription} Página ${page} de ${totalPages}.`;
   return {
-    title: `${category.seoTitle} — Página ${page} de ${totalPages}`,
-    description: `${category.seoDescription} Página ${page} de ${totalPages}.`,
+    title,
+    description,
+    openGraph: { title, description, url: canonical, type: 'website', locale: 'es_EC', siteName: 'KS Promocionales' },
+    twitter: { card: 'summary_large_image', title, description },
     alternates: {
       canonical,
       languages: {
@@ -100,7 +105,7 @@ export default function CategoryPagePaginated({ params }) {
     itemListElement: pageProducts.map((product, idx) => ({
       '@type': 'ListItem',
       position: start + idx + 1,
-      name: product.name,
+      name: displayName(product),
       url: `${BASE_URL}/productos/${product.slug}/`,
     })),
   };
@@ -113,7 +118,7 @@ export default function CategoryPagePaginated({ params }) {
       {/* ─── HERO (compacto — el contenido editorial completo vive solo en
           la página 1 para no duplicar texto entre páginas) ────────────── */}
       <section
-        className="relative overflow-hidden pt-16 md:pt-[68px]"
+        className="relative overflow-hidden" /* sin pt: el header ocupa espacio en el flujo (decisions.md D-07) */
         style={{ background: 'linear-gradient(135deg, #091557 0%, #0F2178 50%, #0F2178 100%)' }}
       >
         <div className="absolute inset-0 grid-pattern pointer-events-none opacity-70" />
@@ -144,7 +149,17 @@ export default function CategoryPagePaginated({ params }) {
       {/* ─── PRODUCTS GRID ────────────────────────────────────── */}
       <section className="py-14 md:py-20 bg-white">
         <div className="container mx-auto px-4">
-          <StaticProductsGrid products={pageProducts} category={category} />
+          <div className="flex justify-end mb-6">
+            {/* UX-02: el selector «Ordenar» no hacía nada; el orden real (A–Z sobre
+                toda la categoría, no solo esta página) vive en /buscar/. */}
+            <Link
+              href={`/buscar/?categoria=${category.slug}&orden=nombre_asc`}
+              className="inline-flex items-center gap-2 min-h-[44px] px-4 rounded-lg border border-gray-200 text-sm font-semibold text-[#0F2178] hover:border-[#0F2178] transition-colors"
+            >
+              Ordenar A–Z o buscar en {category.name}
+            </Link>
+          </div>
+          <StaticProductsGrid products={pageProducts.map(toCardProduct)} category={category} />
           <CategoryPagination basePath={`/categorias/${category.slug}`} currentPage={page} totalPages={totalPages} />
 
           <div

@@ -1,4 +1,7 @@
 import Link from 'next/link';
+import LandingProductShortlist from '@/components/LandingProductShortlist';
+import { selectLandingProducts, SPEAKERS_PATTERN } from '@/lib/landing-products';
+import { leadTimeAnswer, minimumOrderAnswer } from '@/lib/business-facts';
 
 export const dynamic = 'force-static';
 
@@ -28,7 +31,7 @@ const FAQS = [
   },
   {
     question: '¿Cuál es el mínimo de pedido para parlantes bluetooth personalizados?',
-    answer: 'El mínimo varía según el modelo, generalmente desde 10 a 25 unidades. Para pedidos de muestra o test unitario, contáctanos por WhatsApp y evaluamos opciones.',
+    answer: `${minimumOrderAnswer} Para pedidos de muestra, escríbenos por WhatsApp y evaluamos opciones.`,
   },
   {
     question: '¿Para qué ocasiones son ideales los parlantes bluetooth como regalo corporativo?',
@@ -36,7 +39,7 @@ const FAQS = [
   },
   {
     question: '¿Cuánto tiempo tarda la producción de parlantes personalizados?',
-    answer: 'El tiempo de producción es de 10 a 20 días hábiles desde la aprobación del arte, dependiendo de la cantidad y el modelo. Contacta con tiempo suficiente antes de tu evento.',
+    answer: `${leadTimeAnswer} Contáctanos con tiempo suficiente antes de tu evento.`,
   },
 ];
 
@@ -69,7 +72,7 @@ export default function ParlantesBluetooth() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
-      <main>
+      <div>
         {/* Hero */}
         <section style={{ background: 'linear-gradient(135deg, #000D3D 0%, #001259 50%, #0F2178 100%)', paddingTop: '7rem', paddingBottom: '4rem' }}>
           <div className="container mx-auto px-4 max-w-5xl">
@@ -108,6 +111,14 @@ export default function ParlantesBluetooth() {
             </div>
           </div>
         </section>
+
+        <LandingProductShortlist
+          title="Parlantes bluetooth disponibles para personalizar"
+          intro="Modelos reales del catálogo. Abre cada ficha para ver fotos y características, o cotiza directamente por WhatsApp."
+          products={selectLandingProducts(SPEAKERS_PATTERN, 12)}
+          viewAllHref="/categorias/tecnologia-promocional/"
+          viewAllLabel="Ver toda la tecnología promocional"
+        />
 
         {/* Benefits */}
         <section className="py-16 md:py-24 bg-white">
@@ -212,7 +223,7 @@ export default function ParlantesBluetooth() {
             </a>
           </div>
         </section>
-      </main>
+      </div>
     </>
   );
 }

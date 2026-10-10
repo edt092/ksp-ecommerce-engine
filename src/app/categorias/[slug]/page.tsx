@@ -11,6 +11,8 @@ import { isPaginatedCategory, totalPagesFor, CATEGORY_PAGE_SIZE } from '@/lib/ca
 import { CATEGORY_LANDING_LINKS } from '@/lib/category-landing-links';
 import { CATEGORY_BLOG_LINKS } from '@/lib/category-blog-links';
 import { buildNeutralItemList } from '@/lib/structured-data';
+import { displayName, toCardProduct } from '@/lib/product-display';
+import { selectRelatedCategories } from '@/lib/related-categories';
 import WAIcon from '@/components/icons/WhatsAppIcon';
 
 export async function generateStaticParams() {
@@ -21,19 +23,30 @@ export async function generateMetadata({ params }) {
   const category = categoriesData.find(c => c.slug === params.slug);
   if (!category) return { title: 'Categoría no encontrada' };
 
+  const url = `https://www.kronosolopromocionales.com/categorias/${params.slug}/`;
+  // twitter/openGraph propios: sin ellos se heredaban del layout el título,
+  // la descripción y la URL del home.
   return {
     title: category.seoTitle,
     description: category.seoDescription,
     openGraph: {
       title: category.seoTitle,
       description: category.seoDescription,
+      url,
       type: 'website',
+      locale: 'es_EC',
+      siteName: 'KS Promocionales',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: category.seoTitle,
+      description: category.seoDescription,
     },
     alternates: {
-      canonical: `https://www.kronosolopromocionales.com/categorias/${params.slug}/`,
+      canonical: url,
       languages: {
-        'es-EC': `https://www.kronosolopromocionales.com/categorias/${params.slug}/`,
-        'x-default': `https://www.kronosolopromocionales.com/categorias/${params.slug}/`,
+        'es-EC': url,
+        'x-default': url,
       },
     },
   };
@@ -66,30 +79,33 @@ export default function CategoryPage({ params }) {
     ],
   };
 
-  const itemListJsonLd = buildNeutralItemList({
-    name: `${category.name} — KS Promocionales`,
-    description: category.seoDescription,
-    url: `${BASE_URL}/categorias/${category.slug}/`,
-    entries: categoryProducts.slice(0, 20).map((product) => ({
-      name: product.name,
-      url: `${BASE_URL}/productos/${product.slug}/`,
-    })),
-  });
-
-  /* Related categories (same first letter group or just a few others) */
-  const relatedCategories = categoriesData
-    .filter(c => c.id !== category.id && c.image)
-    .slice(0, 6);
-
-  const landingLinks = CATEGORY_LANDING_LINKS[category.slug] || [];
-  const blogLinks = CATEGORY_BLOG_LINKS[category.slug] || [];
-
   // Fase 9 (plan-seo.md): categorías grandes en la lista de piloto usan
   // paginación estática con enlaces reales en vez de scroll infinito
   // client-side. Ver src/lib/category-pagination.ts.
   const paginated = isPaginatedCategory(category.slug);
   const totalPages = paginated ? totalPagesFor(categoryProducts.length) : 1;
   const pageOneProducts = paginated ? categoryProducts.slice(0, CATEGORY_PAGE_SIZE) : categoryProducts;
+
+  // El ItemList describe exactamente los productos enlazados en el HTML de
+  // esta página: antes usaba slice(0, 20) mientras la página 1 mostraba 24,
+  // y la página 2 empezaba en la posición 25 (faltaban 21–24). Las
+  // categorías no paginadas tienen ≤12 productos y CategoryProductsGrid los
+  // renderiza todos en el HTML estático (ver category-pagination.ts).
+  const itemListJsonLd = buildNeutralItemList({
+    name: `${category.name} — KS Promocionales`,
+    description: category.seoDescription,
+    url: `${BASE_URL}/categorias/${category.slug}/`,
+    entries: pageOneProducts.map((product) => ({
+      name: displayName(product),
+      url: `${BASE_URL}/productos/${product.slug}/`,
+    })),
+  });
+
+  /* Related categories — familias semánticas (src/lib/related-categories.ts) */
+  const relatedCategories = selectRelatedCategories(category, categoriesData, 6);
+
+  const landingLinks = CATEGORY_LANDING_LINKS[category.slug] || [];
+  const blogLinks = CATEGORY_BLOG_LINKS[category.slug] || [];
 
   return (
     <>
@@ -101,7 +117,7 @@ export default function CategoryPage({ params }) {
           to the top edge so the navy header sits on matching navy instead of a
           bare spacer div, while inner content still clears the header. */}
       <section
-        className="relative overflow-hidden pt-16 md:pt-[68px]"
+        className="relative overflow-hidden" /* sin pt: el header ocupa espacio en el flujo (decisions.md D-07) */
         style={{ background: 'linear-gradient(135deg, #091557 0%, #0F2178 50%, #0F2178 100%)' }}
       >
         {/* Background pattern */}
@@ -114,7 +130,7 @@ export default function CategoryPage({ params }) {
         <div className="relative z-10 container mx-auto px-4 py-14 md:py-20">
           {/* Breadcrumb */}
           <nav className="mb-8" aria-label="Breadcrumb">
-            <ol className="flex items-center gap-2 text-sm text-white/50">
+            <ol className="flex flex-wrap items-center gap-2 text-sm text-white/50">
               <li><Link href="/" className="hover:text-white transition-colors">Inicio</Link></li>
               <li className="text-white/25">/</li>
               <li><Link href="/regalos-corporativos/" className="hover:text-white transition-colors">Categorías</Link></li>
@@ -123,20 +139,23 @@ export default function CategoryPage({ params }) {
             </ol>
           </nav>
 
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* grid-cols-1 + min-w-0: sin ellos la columna única de móvil crecía
+              hasta el ancho de la palabra más larga del H1 y el overflow del
+              hero recortaba H1 y párrafo (U01, verificado a 320/375 px). */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left: Info */}
-            <div>
+            <div className="min-w-0">
               <div className="inline-flex items-center gap-2 bg-white/8 border border-white/15 rounded-full px-4 py-1.5 text-white/70 text-sm mb-6">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#F5A520]" />
                 {totalProducts || category.productCount || 0} productos disponibles
               </div>
 
-              <h1 className="font-black text-white leading-tight mb-5"
-                style={{ fontSize: 'clamp(2rem, 4vw, 3.25rem)', letterSpacing: '-0.03em' }}>
+              <h1 className="font-black text-white leading-tight mb-5 break-words hyphens-auto text-[clamp(1.5rem,7.5vw,2.5rem)] lg:text-[clamp(2rem,4vw,3.25rem)]"
+                style={{ letterSpacing: '-0.03em' }}>
                 {category.h1 || `${category.name} Personalizados con Logo Ecuador`}
               </h1>
 
-              <p className="text-white/65 text-lg leading-relaxed mb-8 max-w-xl">
+              <p className="text-white/65 text-base md:text-lg leading-relaxed mb-8 max-w-xl break-words">
                 {category.story}
               </p>
 
@@ -175,7 +194,7 @@ export default function CategoryPage({ params }) {
             </div>
 
             {/* Right: Category image */}
-            <div className="flex items-center justify-center">
+            <div className="min-w-0 flex items-center justify-center">
               {category.image ? (
                 <div
                   className="relative w-full max-w-md aspect-square overflow-hidden float-1"
@@ -241,28 +260,24 @@ export default function CategoryPage({ params }) {
                 {categoryProducts.length} productos personalizables con tu logo
               </p>
             </div>
-
-            {/* Sort */}
-            <div className="flex items-center gap-2.5">
-              <span className="text-sm text-gray-500 shrink-0">Ordenar:</span>
-              <select
-                className="text-sm border border-gray-200 rounded-lg px-3 py-2 bg-white text-gray-700 focus:outline-none focus:border-[#0F2178] transition-colors"
-              >
-                <option>Más relevantes</option>
-                <option>Nombre A-Z</option>
-                <option>Nombre Z-A</option>
-              </select>
-            </div>
+            {/* UX-02: el selector «Ordenar» no hacía nada; el orden real (A–Z sobre
+                toda la categoría, no solo esta página) vive en /buscar/. */}
+            <Link
+              href={`/buscar/?categoria=${category.slug}&orden=nombre_asc`}
+              className="inline-flex items-center gap-2 min-h-[44px] px-4 rounded-lg border border-gray-200 text-sm font-semibold text-[#0F2178] hover:border-[#0F2178] transition-colors"
+            >
+              Ordenar A–Z o buscar en {category.name}
+            </Link>
           </div>
 
           {categoryProducts.length > 0 ? (
             paginated ? (
               <>
-                <StaticProductsGrid products={pageOneProducts} category={category} />
+                <StaticProductsGrid products={pageOneProducts.map(toCardProduct)} category={category} />
                 <CategoryPagination basePath={`/categorias/${category.slug}`} currentPage={1} totalPages={totalPages} />
               </>
             ) : (
-              <CategoryProductsGrid products={categoryProducts} category={category} />
+              <CategoryProductsGrid products={categoryProducts.map(toCardProduct)} category={category} />
             )
           ) : (
             <div className="text-center py-20 bg-[#F8F9FC] rounded-2xl border border-gray-100">

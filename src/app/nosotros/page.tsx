@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { catalogCountLabel } from '@/lib/business-facts';
+import { catalogCountLabel, responseTimeLabel } from '@/lib/business-facts';
 
 const FAQ_NOSOTROS = [
   {
@@ -96,6 +96,7 @@ const personSchema = {
   '@type': 'Person',
   '@id': `${BASE_URL}/nosotros/#claudia-gonzalez`,
   name: 'Claudia Inés González Ortiz',
+  alternateName: 'Claudia González',
   givenName: 'Claudia',
   familyName: 'González Ortiz',
   jobTitle: 'Fundadora y Especialista en Productos Promocionales',
@@ -401,7 +402,7 @@ export default function AboutPage() {
               <ul className="space-y-1.5 text-sm text-gray-600">
                 <li>🇪🇨 Ecuador — Envíos nacionales</li>
                 <li>📦 {catalogCountLabel} personalizables</li>
-                <li>⏱ Cotización garantizada en 48h</li>
+                <li>⏱ {responseTimeLabel}</li>
               </ul>
             </div>
           </div>

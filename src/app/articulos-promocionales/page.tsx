@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { catalogCountLabel, catalogCountLabelReferences } from '@/lib/business-facts';
+import { catalogCountLabel, catalogCountLabelReferences, leadTimeAnswer, minimumOrderAnswer } from '@/lib/business-facts';
 import { buildNeutralItemList } from '@/lib/structured-data';
 
 export const dynamic = 'force-static';
@@ -27,7 +27,7 @@ const CATEGORIES = [
   {
     name: 'Bolígrafos Promocionales',
     slug: 'boligrafos-publicitarios',
-    description: 'Bolígrafos, lapiceros y esferos con tu logo. Metálicos, ecológicos y ejecutivos desde 50 unidades.',
+    description: 'Bolígrafos, lapiceros y esferos con tu logo. Metálicos, ecológicos y ejecutivos.',
     keyword: 'bolígrafos promocionales',
   },
   {
@@ -105,11 +105,11 @@ const FAQS = [
   },
   {
     question: '¿Cuál es el mínimo de pedido para artículos promocionales?',
-    answer: 'El mínimo varía según el producto: bolígrafos desde 50 unidades, mugs desde 24 unidades, gorras desde 12 unidades, memorias USB desde 25 unidades. Contáctanos por WhatsApp para confirmar el mínimo exacto de cada referencia.',
+    answer: minimumOrderAnswer,
   },
   {
     question: '¿Cuánto tiempo tarda la producción de artículos promocionales?',
-    answer: 'El tiempo estándar de producción es de 10 a 15 días hábiles desde la aprobación del arte. Para pedidos urgentes contamos con opciones express. Hacemos envíos a todo Ecuador.',
+    answer: `${leadTimeAnswer} Hacemos envíos a todo Ecuador.`,
   },
   {
     question: '¿Qué técnicas de personalización utilizan?',
@@ -160,7 +160,7 @@ export default function ArticulosPromocionalesPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
-      <main>
+      <div>
         {/* Hero */}
         <section
           style={{ background: 'linear-gradient(135deg, #000D3D 0%, #001259 50%, #0F2178 100%)', paddingTop: '7rem', paddingBottom: '4rem' }}
@@ -320,7 +320,7 @@ export default function ArticulosPromocionalesPage() {
             </a>
           </div>
         </section>
-      </main>
+      </div>
     </>
   );
 }

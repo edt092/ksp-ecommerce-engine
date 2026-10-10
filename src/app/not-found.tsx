@@ -1,11 +1,19 @@
 import Link from 'next/link';
 
+// Next 14 ya inyecta <meta name="robots" content="noindex"> en la 404; esta
+// directiva debe ser coherente con ella (antes: "noindex, nofollow" junto a
+// la automática). alternates/openGraph/twitter vacíos o propios para no
+// heredar del layout la canonical, el hreflang y la URL del home.
 export const metadata = {
   title: 'Página no encontrada | KS Promocionales',
+  description: 'La página que buscas no existe o fue movida.',
   robots: {
     index: false,
-    follow: false,
+    follow: true,
   },
+  alternates: {},
+  openGraph: { title: 'Página no encontrada | KS Promocionales', siteName: 'KS Promocionales' },
+  twitter: { card: 'summary', title: 'Página no encontrada | KS Promocionales' },
 };
 
 export default function NotFound() {

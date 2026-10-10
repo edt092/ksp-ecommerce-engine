@@ -7,6 +7,7 @@ import { blogAdditions } from '@/data/blog/content/additions';
 import { blogFase3 } from '@/data/blog/content/fase3';
 import { blogContentPipeline } from '@/data/blog/content/pipeline';
 import TableOfContents from '@/components/TableOfContents';
+import { authorJsonLd } from '@/lib/authors';
 
 export async function generateStaticParams() {
   return postsData.map((post) => ({
@@ -30,6 +31,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: post.seo.metaTitle,
       description: post.seo.metaDescription,
+      url: `https://www.kronosolopromocionales.com/blog/${params.slug}/`,
       type: 'article',
       publishedTime: post.date,
       authors: [post.author],
@@ -98,29 +100,12 @@ export default function BlogPostPage({ params }) {
     keywords: post.seo.keywords,
     datePublished: post.date,
     dateModified: post.dateModified || post.date,
-    author: {
-      '@type': 'Person',
-      '@id': `${BASE_URL}/nosotros/#${post.author.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`,
-      name: post.author,
-      jobTitle: post.authorRole,
-      url: `${BASE_URL}/nosotros/`,
-      image: {
-        '@type': 'ImageObject',
-        url: `${BASE_URL}${post.authorImage}`,
-      },
-      ...(post.authorLinkedIn && { sameAs: [post.authorLinkedIn] }),
-    },
-    publisher: {
-      '@type': 'Organization',
-      '@id': `${BASE_URL}/#localbusiness`,
-      name: 'KS Promocionales',
-      logo: {
-        '@type': 'ImageObject',
-        url: `${BASE_URL}/images/logo.png`,
-        width: 400,
-        height: 100,
-      },
-    },
+    // Misma Person que /nosotros/ (src/lib/authors.ts) y publisher por
+    // referencia al LocalBusiness global del layout: antes se redeclaraba
+    // aqu\u00ed como Organization con el mismo @id (tipos en conflicto) y la
+    // Person llevaba otro nombre y cargo bajo el mismo @id.
+    author: authorJsonLd(post),
+    publisher: { '@id': `${BASE_URL}/#localbusiness` },
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': `${BASE_URL}/blog/${post.slug}/`,

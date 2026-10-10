@@ -107,4 +107,27 @@ export const CATEGORY_BLOG_LINKS: Record<string, CategoryBlogLink[]> = {
     { slug: 'listos-para-carnaval-2026-impulsa-tu-marca-con-productos-promocionales', title: "¿Listos para Carnaval 2026? ¡Impulsa tu Marca con Productos Promocionales!" },
     { slug: 'merchandising-eventos-corporativos-ecuador', title: "Merchandising para Eventos Corporativos: Qué Funciona en Ecuador" },
   ],
+
+  // Ampliación 2026-10-09 (docs/seo-improvement-2026-10-09, N06): categorías
+  // con exactamente 1 post que YA las enlaza (misma fuente,
+  // reports/content-cluster-map.csv). Se omitieron en julio por el mínimo de
+  // 2; con 1 guía real la relación sigue siendo verificada y bidireccional.
+  'precio-bomba': [
+    { slug: 'productos-promocionales-baratos-guia-completa', title: "Guía Completa: Productos Promocionales Baratos [2025]" },
+  ],
+  'antiestres': [
+    { slug: 'solucion-antiestres-bolas-neon-promocionales-para-empresas-en-ecuador', title: "¡Solución antiestrés! Bolas Neón promocionales para empresas en Ecuador" },
+  ],
+  'bar-y-vino': [
+    { slug: 'abre-caminos-al-exito-destapador-con-iman-personalizado-el-iman-de-clientes-para-tu-marca-en-ecuador', title: "¡Abre Caminos al Éxito! Destapador con Imán Personalizado: El Imán de Clientes para t..." },
+  ],
+  'deportes': [
+    { slug: 'cuellos-multifuncionales-personalizados-la-estrategia-publicitaria-imbatible-para-tu-negocio-en-ecuador', title: "Cuellos Multifuncionales Personalizados: La Estrategia Publicitaria Imbatible para tu..." },
+  ],
+  'herramientas': [
+    { slug: 'herramientas-mustang-promocionales-impulsa-tu-marca-con-soluciones-practicas-ecuador', title: "Herramientas Mustang Promocionales: Impulsa tu Marca con Soluciones Prácticas (Ecuador)" },
+  ],
+  'relojes': [
+    { slug: 'regalos-corporativos-elegantes', title: "Regalos Corporativos Elegantes: Cómo Impresionar a Clientes VIP en Ecuador" },
+  ],
 };

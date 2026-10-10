@@ -16,7 +16,7 @@ const WHATSAPP = '+593 999 814 838';
 
 export default function PoliticaDePrivacidad() {
   return (
-    <main className="pt-32 pb-20 bg-white">
+    <div className="pt-32 pb-20 bg-white">
       <div className="container mx-auto px-4 max-w-3xl">
 
         {/* Breadcrumb */}
@@ -220,6 +220,6 @@ export default function PoliticaDePrivacidad() {
           </Link>
         </div>
       </div>
-    </main>
+    </div>
   );
 }

@@ -14,44 +14,26 @@ export const metadata = {
   },
 };
 
-// Mismo @id que el LocalBusiness de src/app/layout.tsx (#localbusiness):
-// permite que Google fusione ambos bloques en una sola entidad del grafo en
-// vez de interpretar la tienda online como un negocio distinto (Fase 7,
-// plan-seo.md).
-const onlineStoreJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'OnlineStore',
-  '@id': 'https://www.kronosolopromocionales.com/#localbusiness',
-  name: 'KS Promocionales',
-  url: 'https://www.kronosolopromocionales.com',
-  description: 'Tienda de artículos promocionales y material publicitario personalizado con logo en Ecuador.',
-  areaServed: [
-    { '@type': 'Country', name: 'Ecuador' },
-  ],
-  currenciesAccepted: 'USD',
-  priceRange: '$-$$$',
-  contactPoint: {
-    '@type': 'ContactPoint',
-    contactType: 'customer service',
-    availableLanguage: 'Spanish',
-  },
-};
+// El bloque OnlineStore que vivía aquí se eliminó (docs/seo-improvement-
+// 2026-10-09, T03): reutilizaba el @id #localbusiness del layout con url sin
+// barra, otro priceRange y un ContactPoint sin teléfono, es decir, el mismo
+// nodo con hechos contradictorios. La entidad única es el LocalBusiness de
+// src/app/layout.tsx; el negocio cotiza por WhatsApp, no vende online.
 
 export default function HomePage() {
-  // Filter server-side — only 24 products reach the client bundle (3 tabs × 8)
-  const latest = productsData.slice(0, 8);
-  const featured = productsData.filter(p => p.featured).slice(0, 8);
-  const bestsellers = productsData.filter(p => p.bestseller).slice(0, 8);
+  // Filter server-side — only 24 products reach the client bundle (3 tabs × 8).
+  // Solo productos publicados: el home no debe enlazar fichas noindex.
+  const published = productsData.filter(p => p.is_ai_optimized);
+  const latest = published.slice(0, 8);
+  const featured = published.filter(p => p.featured).slice(0, 8);
+  const bestsellers = published.filter(p => p.bestseller).slice(0, 8);
 
   return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(onlineStoreJsonLd) }} />
-      <HomePageClient
-        latestProducts={latest}
-        featuredProducts={featured}
-        bestsellerProducts={bestsellers}
-        categories={categoriesData}
-      />
-    </>
+    <HomePageClient
+      latestProducts={latest}
+      featuredProducts={featured}
+      bestsellerProducts={bestsellers}
+      categories={categoriesData}
+    />
   );
 }

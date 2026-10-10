@@ -1,13 +1,14 @@
 import Link from 'next/link';
+import { leadTimeAnswer, minimumOrderAnswer } from '@/lib/business-facts';
 
 const FAQ_CONTACTO = [
   {
     q: '¿Cuál es el pedido mínimo para artículos personalizados?',
-    a: 'El mínimo varía según el artículo: desde 50 unidades para bolígrafos y artículos de escritura, 100 unidades para mugs y artículos plásticos, y 50 piezas para textiles. Consulta por WhatsApp el mínimo para el artículo específico que necesitas.',
+    a: minimumOrderAnswer,
   },
   {
     q: '¿En cuánto tiempo recibo mi pedido?',
-    a: 'El plazo de producción es de 5 a 15 días hábiles según la técnica de personalización. Serigrafía estándar: 5-8 días. Bordado en textiles: 8-12 días. Grabado láser: 7-10 días. El tiempo incluye la revisión y aprobación del arte.',
+    a: leadTimeAnswer,
   },
   {
     q: '¿Hacen entregas fuera de Quito?',

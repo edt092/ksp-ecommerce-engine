@@ -56,9 +56,9 @@
 /productos/paraguas-colombia-27-5913-3858                      /productos/paraguas-27-5913-3858/                      301
 /productos/paraguas-colombia-27-5913-3858/                      /productos/paraguas-27-5913-3858/                      301
 
-/blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-mexico    /blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-ecuador    301
+/blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-mexico    /blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-ecuador/   301
 /blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-mexico/   /blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-ecuador/   301
-/blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-ecuador-y-colombia    /blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-ecuador    301
+/blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-ecuador-y-colombia    /blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-ecuador/   301
 /blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-ecuador-y-colombia/   /blog/promocionales-antimicrobianos-la-defensa-invisible-que-impulsa-tu-marca-en-ecuador/   301
 
 # 301 Redirects - URLs antiguas de WordPress/WooCommerce
@@ -615,6 +615,12 @@
 /productos/llavero-ml-402-10407-3946    /productos/llavero-ml-402-10407/    301
 /productos/llavero-ml-402-10407-3946/   /productos/llavero-ml-402-10407/    301
 # Total pares generados: 256
+
+# 301 Redirects — Padre /categorias/ sin índice propio (2026-10-09, docs/seo-improvement-2026-10-09)
+# /regalos-corporativos/ ya es el directorio de las 37 categorías y el destino de "Categorías" en todas las migas.
+# Reglas exactas (sin splat): no afectan a /categorias/<slug>/.
+/categorias                                        /regalos-corporativos/                                   301
+/categorias/                                       /regalos-corporativos/                                   301
 
 # 301 Redirects — Slugs de categoría optimizados con keywords SEO (Mayo 2026)
 /categorias/escritura                              /categorias/boligrafos-publicitarios/                    301

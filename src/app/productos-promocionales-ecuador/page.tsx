@@ -29,19 +29,22 @@ export const metadata = {
     canonical: 'https://www.kronosolopromocionales.com/productos-promocionales-ecuador/',
     languages: {
       'es-EC': 'https://www.kronosolopromocionales.com/productos-promocionales-ecuador/',
-      'x-default': 'https://www.kronosolopromocionales.com/',
+      'x-default': 'https://www.kronosolopromocionales.com/productos-promocionales-ecuador/',
     },
   },
 };
 
+// Slugs públicos reales de data/categories.json. Antes 5 de estos eran ids
+// internos (tecnologia, mugs, oficina, escritura, llaveros) y enlazaban a
+// URLs legacy que responden 301.
 const CATEGORIAS = [
-  { nombre: 'Tecnología', slug: 'tecnologia' },
-  { nombre: 'Mugs y Termos', slug: 'mugs' },
-  { nombre: 'Oficina', slug: 'oficina' },
-  { nombre: 'Escritura', slug: 'escritura' },
+  { nombre: 'Tecnología', slug: 'tecnologia-promocional' },
+  { nombre: 'Mugs y Termos', slug: 'mugs-y-termos-personalizados' },
+  { nombre: 'Oficina', slug: 'articulos-de-oficina-personalizados' },
+  { nombre: 'Escritura', slug: 'boligrafos-publicitarios' },
   { nombre: 'Deportes', slug: 'deportes' },
   { nombre: 'Ecología', slug: 'ecologia' },
-  { nombre: 'Llaveros', slug: 'llaveros' },
+  { nombre: 'Llaveros', slug: 'llaveros-personalizados' },
   { nombre: 'Novedades', slug: 'novedades' },
 ];
 

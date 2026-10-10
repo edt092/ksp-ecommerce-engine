@@ -166,12 +166,8 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link
-          rel="preload"
-          as="image"
-          href="/images/hero/9781.jpg"
-          fetchPriority="high"
-        />
+        {/* Se retiró el preload de /images/hero/9781.jpg (2026-10-09): ninguna
+            página lo usa y competía con la imagen LCP real en cada carga. */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
@@ -209,8 +205,12 @@ export default function RootLayout({ children }) {
           (function() {
             // Upgrade 11 — Section reveal on scroll
             var hero = document.querySelector('section.relative.min-h-screen');
+            var fold = window.innerHeight;
             document.querySelectorAll('section, footer').forEach(function(el, i) {
               if (el === hero || el.classList.contains('no-reveal')) return;
+              // Lo que ya está en la primera pantalla (H1, CTA) no se oculta:
+              // ponerlo a opacity 0 tras cargar lo hacía parpadear y retrasaba el LCP.
+              if (el.getBoundingClientRect().top < fold) return;
               el.classList.add('reveal');
               el.style.transitionDelay = Math.min(i * 0.04, 0.2) + 's';
             });

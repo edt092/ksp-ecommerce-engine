@@ -36,20 +36,20 @@ function dateOnly(iso: string): string {
 export default function sitemap() {
   // --- Static routes (fecha real por página, ver nota arriba) --------------
   const staticRoutes = [
-    { url: `${BASE_URL}/`,                                  lastModified: '2026-07-20', priority: 1.0, changeFrequency: 'weekly' },
-    { url: `${BASE_URL}/contacto/`,                         lastModified: '2026-06-20', priority: 0.8, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/`,                                  lastModified: '2026-10-09', priority: 1.0, changeFrequency: 'weekly' },
+    { url: `${BASE_URL}/contacto/`,                         lastModified: '2026-10-09', priority: 0.8, changeFrequency: 'monthly' },
     { url: `${BASE_URL}/nosotros/`,                         lastModified: '2026-07-19', priority: 0.6, changeFrequency: 'yearly' },
     { url: `${BASE_URL}/blog/`,                             lastModified: '2026-07-16', priority: 0.8, changeFrequency: 'weekly' },
     { url: `${BASE_URL}/catalogos-digitales/`,              lastModified: '2026-06-20', priority: 0.6, changeFrequency: 'monthly' },
     { url: `${BASE_URL}/politica-de-privacidad/`,           lastModified: '2026-06-20', priority: 0.3, changeFrequency: 'yearly' },
     { url: `${BASE_URL}/productos-promocionales-ecuador/`,  lastModified: '2026-07-20', priority: 0.9, changeFrequency: 'monthly' },
-    { url: `${BASE_URL}/regalos-corporativos/`,             lastModified: '2026-07-19', priority: 0.9, changeFrequency: 'monthly' },
-    { url: `${BASE_URL}/articulos-promocionales/`,          lastModified: '2026-07-19', priority: 0.9, changeFrequency: 'monthly' },
-    { url: `${BASE_URL}/material-publicitario/`,            lastModified: '2026-07-19', priority: 0.9, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/regalos-corporativos/`,             lastModified: '2026-10-09', priority: 0.9, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/articulos-promocionales/`,          lastModified: '2026-10-09', priority: 0.9, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/material-publicitario/`,            lastModified: '2026-10-09', priority: 0.9, changeFrequency: 'monthly' },
     { url: `${BASE_URL}/merchandising-corporativo/`,        lastModified: '2026-07-19', priority: 0.9, changeFrequency: 'monthly' },
-    { url: `${BASE_URL}/parlantes-bluetooth/`,              lastModified: '2026-07-16', priority: 0.8, changeFrequency: 'monthly' },
-    { url: `${BASE_URL}/audifonos-promocionales/`,          lastModified: '2026-07-16', priority: 0.8, changeFrequency: 'monthly' },
-    { url: `${BASE_URL}/soportes-para-celular/`,            lastModified: '2026-07-16', priority: 0.8, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/parlantes-bluetooth/`,              lastModified: '2026-10-09', priority: 0.8, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/audifonos-promocionales/`,          lastModified: '2026-10-09', priority: 0.8, changeFrequency: 'monthly' },
+    { url: `${BASE_URL}/soportes-para-celular/`,            lastModified: '2026-10-09', priority: 0.8, changeFrequency: 'monthly' },
   ];
 
   // --- Product routes ------------------------------------------------------

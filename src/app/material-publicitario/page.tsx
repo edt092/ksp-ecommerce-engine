@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { catalogCountLabelReferences } from '@/lib/business-facts';
+import { catalogCountLabelReferences, leadTimeAnswer } from '@/lib/business-facts';
 import { buildNeutralItemList } from '@/lib/structured-data';
 
 export const dynamic = 'force-static';
@@ -31,10 +31,10 @@ const USES = [
 ];
 
 const CATEGORIES = [
-  { name: 'Bolígrafos Publicitarios', slug: 'boligrafos-publicitarios', desc: 'El artículo publicitario más distribuido. Desde 50 unidades con tu logo.' },
+  { name: 'Bolígrafos Publicitarios', slug: 'boligrafos-publicitarios', desc: 'El artículo publicitario más distribuido, con tu logo.' },
   { name: 'Gorras con Logo', slug: 'gorras-personalizadas', desc: 'Alta visibilidad en cada uso. Bordado computarizado.' },
   { name: 'Bolsas Promocionales', slug: 'mochilas-y-maletines-personalizados', desc: 'Bolsas y morrales con tu logo para distribución masiva.' },
-  { name: 'Llaveros Personalizados', slug: 'llaveros-personalizados', desc: 'El artículo de mayor vida útil. Desde 50 unidades.' },
+  { name: 'Llaveros Personalizados', slug: 'llaveros-personalizados', desc: 'El artículo de mayor vida útil.' },
   { name: 'Mugs Publicitarios', slug: 'mugs-y-termos-personalizados', desc: 'Mugs y termos para ferias y eventos corporativos.' },
   { name: 'Tecnología Publicitaria', slug: 'tecnologia-promocional', desc: 'USB, cargadores y gadgets que impactan en ejecutivos.' },
 ];
@@ -50,7 +50,7 @@ const FAQS = [
   },
   {
     question: '¿Cuál es el tiempo de producción del material publicitario?',
-    answer: 'El tiempo estándar es de 10 a 15 días hábiles desde la aprobación del arte. Para ferias y eventos urgentes tenemos opciones express. Cotiza con anticipación para asegurar disponibilidad.',
+    answer: `${leadTimeAnswer} Para ferias y eventos, cotiza con anticipación para asegurar disponibilidad.`,
   },
   {
     question: '¿Puedo pedir muestras antes de producir?',
@@ -97,7 +97,7 @@ export default function MaterialPublicitarioPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
-      <main>
+      <div>
         {/* Hero */}
         <section
           style={{ background: 'linear-gradient(135deg, #000D3D 0%, #001259 50%, #0F2178 100%)', paddingTop: '7rem', paddingBottom: '4rem' }}
@@ -114,7 +114,7 @@ export default function MaterialPublicitarioPage() {
             </h1>
             <p className="text-white/70 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">
               Material publicitario personalizado con el logo de tu empresa para ferias, eventos y campañas en Ecuador.
-              Alta calidad, entrega garantizada y cotización en 48 horas.
+              Personalización con tu logo y respuesta a tu cotización en 48 horas.
             </p>
             <div className="flex flex-wrap gap-4">
               <a
@@ -248,7 +248,7 @@ export default function MaterialPublicitarioPage() {
             </a>
           </div>
         </section>
-      </main>
+      </div>
     </>
   );
 }

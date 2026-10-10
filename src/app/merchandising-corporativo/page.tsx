@@ -130,7 +130,7 @@ export default function MerchandisingCorporativoPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
-      <main>
+      <div>
         {/* Hero */}
         <section
           style={{ background: 'linear-gradient(135deg, #000D3D 0%, #001259 50%, #0F2178 100%)', paddingTop: '7rem', paddingBottom: '4rem' }}
@@ -270,7 +270,7 @@ export default function MerchandisingCorporativoPage() {
             </a>
           </div>
         </section>
-      </main>
+      </div>
     </>
   );
 }

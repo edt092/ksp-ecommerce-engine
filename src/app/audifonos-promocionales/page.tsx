@@ -1,4 +1,7 @@
 import Link from 'next/link';
+import LandingProductShortlist from '@/components/LandingProductShortlist';
+import { selectLandingProducts, HEADPHONES_PATTERN } from '@/lib/landing-products';
+import { leadTimeAnswer, minimumOrderAnswer } from '@/lib/business-facts';
 
 export const dynamic = 'force-static';
 
@@ -35,7 +38,7 @@ const FAQS = [
   },
   {
     question: '¿Cuál es el mínimo de pedido para audífonos personalizados?',
-    answer: 'El mínimo varía por modelo: desde 10 unidades para modelos estándar y 25+ para modelos personalizados en colores corporativos. Consulta disponibilidad por WhatsApp.',
+    answer: minimumOrderAnswer,
   },
   {
     question: '¿Qué tipo de audífonos son mejores para regalar en una empresa?',
@@ -43,7 +46,7 @@ const FAQS = [
   },
   {
     question: '¿Cuánto tiempo tarda la producción?',
-    answer: 'Entre 10 y 20 días hábiles desde la aprobación del arte. Para pedidos de temporada alta (noviembre-diciembre) se recomienda anticipar con 30 días.',
+    answer: `${leadTimeAnswer} En temporada alta (noviembre-diciembre) conviene cotizar con más anticipación.`,
   },
 ];
 
@@ -76,7 +79,7 @@ export default function AudiofonosPromocionalesPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
-      <main>
+      <div>
         {/* Hero */}
         <section style={{ background: 'linear-gradient(135deg, #000D3D 0%, #001259 50%, #0F2178 100%)', paddingTop: '7rem', paddingBottom: '4rem' }}>
           <div className="container mx-auto px-4 max-w-5xl">
@@ -115,6 +118,14 @@ export default function AudiofonosPromocionalesPage() {
             </div>
           </div>
         </section>
+
+        <LandingProductShortlist
+          title="Audífonos disponibles para personalizar"
+          intro="Modelos reales del catálogo. Abre cada ficha para ver fotos y características, o cotiza directamente por WhatsApp."
+          products={selectLandingProducts(HEADPHONES_PATTERN, 12)}
+          viewAllHref="/categorias/tecnologia-promocional/"
+          viewAllLabel="Ver toda la tecnología promocional"
+        />
 
         {/* Types */}
         <section className="py-16 md:py-24 bg-white">
@@ -217,7 +228,7 @@ export default function AudiofonosPromocionalesPage() {
             </a>
           </div>
         </section>
-      </main>
+      </div>
     </>
   );
 }

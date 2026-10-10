@@ -1,4 +1,7 @@
 import Link from 'next/link';
+import LandingProductShortlist from '@/components/LandingProductShortlist';
+import { selectLandingProducts, PHONE_STANDS_PATTERN } from '@/lib/landing-products';
+import { minimumOrderAnswer } from '@/lib/business-facts';
 
 export const dynamic = 'force-static';
 
@@ -35,7 +38,7 @@ const FAQS = [
   },
   {
     question: '¿Cuál es el mínimo de pedido?',
-    answer: 'El mínimo varía por modelo. Los pop sockets y anillos tienen mínimos de 50 unidades. Los soportes de escritorio desde 25 unidades. Consúltanos por WhatsApp para confirmar disponibilidad.',
+    answer: minimumOrderAnswer,
   },
   {
     question: '¿Para qué sectores son mejores los soportes para celular como regalo?',
@@ -76,7 +79,7 @@ export default function SoportesCelularPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
-      <main>
+      <div>
         {/* Hero */}
         <section style={{ background: 'linear-gradient(135deg, #000D3D 0%, #001259 50%, #0F2178 100%)', paddingTop: '7rem', paddingBottom: '4rem' }}>
           <div className="container mx-auto px-4 max-w-5xl">
@@ -115,6 +118,14 @@ export default function SoportesCelularPage() {
             </div>
           </div>
         </section>
+
+        <LandingProductShortlist
+          title="Soportes para celular disponibles para personalizar"
+          intro="Modelos reales del catálogo. Abre cada ficha para ver fotos y características, o cotiza directamente por WhatsApp."
+          products={selectLandingProducts(PHONE_STANDS_PATTERN, 12)}
+          viewAllHref="/categorias/tecnologia-promocional/"
+          viewAllLabel="Ver toda la tecnología promocional"
+        />
 
         {/* Types */}
         <section className="py-16 md:py-24 bg-white">
@@ -209,7 +220,7 @@ export default function SoportesCelularPage() {
             </a>
           </div>
         </section>
-      </main>
+      </div>
     </>
   );
 }
