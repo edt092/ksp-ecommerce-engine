@@ -502,5 +502,157 @@ for (const rel of structuredDataSamples) {
   });
 }
 
+console.log('\n[5] Mejora SEO 2026-10-09 (docs/seo-improvement-2026-10-09)');
+
+// Reglas que afectan a miles de páginas a la vez; recorren TODO out/.
+const relOf = (file) => file.slice(OUT.length + 1).replace(/\\/g, '/');
+const urlOf = (file) => {
+  const rel = relOf(file);
+  if (rel === 'index.html') return `${SITE}/`;
+  if (rel === '404.html' || rel === '404/index.html') return null;
+  return `${SITE}/${rel.replace(/index\.html$/, '')}`;
+};
+const htmlCache = new Map();
+const readHtml = (file) => {
+  if (!htmlCache.has(file)) htmlCache.set(file, readFileSync(file, 'utf-8'));
+  return htmlCache.get(file);
+};
+const canonicalOf = (html) => (html.match(/<link rel="canonical" href="([^"]+)"/) || [])[1] || null;
+const robotsOf = (html) => [...html.matchAll(/<meta name="robots" content="([^"]+)"/g)].map((m) => m[1]);
+
+check('sin palabras corrompidas "Cali" → "Cuenca" (Cuencadad, Cuencaficación…)', () => {
+  const offenders = allHtmlFiles.filter((f) => /Cuenca(?:dad|ficaci|ente|dez)/.test(readHtml(f)));
+  assert(offenders.length === 0, `${offenders.length} página(s), ej: ${offenders[0] && relOf(offenders[0])}`);
+  return `${allHtmlFiles.length} páginas`;
+});
+
+check('cada artículo del blog tiene exactamente un <h1>', () => {
+  const articles = allHtmlFiles.filter((f) => /^blog\/[^/]+\/index\.html$/.test(relOf(f)));
+  const offenders = articles.filter((f) => (readHtml(f).match(/<h1[\s>]/g) || []).length !== 1);
+  assert(offenders.length === 0, `${offenders.length} artículo(s) con 0 o >1 H1, ej: ${offenders[0] && relOf(offenders[0])}`);
+  return `${articles.length} artículos`;
+});
+
+check('páginas noindex: canonical propia (nunca el home) y sin nofollow en productos', () => {
+  const offenders = [];
+  for (const f of allHtmlFiles) {
+    const url = urlOf(f);
+    if (!url) continue;
+    const html = readHtml(f);
+    const robots = robotsOf(html);
+    if (!robots.some((r) => /noindex/.test(r))) continue;
+    const canonical = canonicalOf(html);
+    if (canonical && canonical !== url) offenders.push(`${relOf(f)}: canonical ${canonical}`);
+    if (relOf(f).startsWith('productos/') && robots.some((r) => /nofollow/.test(r))) offenders.push(`${relOf(f)}: nofollow`);
+  }
+  assert(offenders.length === 0, `${offenders.length} problema(s), ej: ${offenders[0]}`);
+});
+
+check('ninguna página indexable salvo el home declara canonical al home', () => {
+  const offenders = allHtmlFiles.filter((f) => {
+    const url = urlOf(f);
+    if (!url || url === `${SITE}/`) return false;
+    const html = readHtml(f);
+    if (robotsOf(html).some((r) => /noindex/.test(r))) return false;
+    return canonicalOf(html) === `${SITE}/`;
+  });
+  assert(offenders.length === 0, `${offenders.length} página(s), ej: ${offenders[0] && relOf(offenders[0])}`);
+});
+
+check('404: sin canonical y robots coherentes (todas las directivas noindex)', () => {
+  const file = existsSync(join(OUT, '404.html')) ? join(OUT, '404.html') : join(OUT, '404', 'index.html');
+  const html = readHtml(file);
+  assert(!canonicalOf(html), `la 404 declara canonical ${canonicalOf(html)}`);
+  const robots = robotsOf(html);
+  assert(robots.length > 0 && robots.every((r) => /noindex/.test(r)), `robots incoherentes: ${robots.join(' | ')}`);
+  return robots.join(' | ');
+});
+
+check('sitemap sin URLs noindex', () => {
+  const locs = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+  const offenders = [];
+  for (const loc of locs) {
+    const path = loc.replace(SITE, '').replace(/^\//, '');
+    const file = join(OUT, path, 'index.html');
+    if (!existsSync(file)) continue;
+    if (robotsOf(readHtml(file)).some((r) => /noindex/.test(r))) offenders.push(loc);
+  }
+  assert(offenders.length === 0, `${offenders.length} URL(s) noindex en el sitemap, ej: ${offenders[0]}`);
+  return `${locs.length} URLs`;
+});
+
+check('ItemList de categorías = productos enlazados en la página, posiciones continuas entre páginas', () => {
+  const offenders = [];
+  const categoryFiles = allHtmlFiles.filter((f) => /^categorias\/[^/]+\/(pagina\/\d+\/)?index\.html$/.test(relOf(f)));
+  for (const f of categoryFiles) {
+    const html = readHtml(f);
+    const page = Number((relOf(f).match(/pagina\/(\d+)\//) || [])[1] || 1);
+    const linked = new Set([...html.matchAll(/href="(\/productos\/[^"]+\/)"/g)].map((m) => `${SITE}${m[1]}`));
+    for (const [, json] of html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)) {
+      let parsed;
+      try { parsed = JSON.parse(json); } catch { continue; }
+      for (const il of collectTypedNodes(parsed, 'ItemList')) {
+        const items = il.itemListElement || [];
+        const productItems = items.filter((li) => (li.url || '').includes('/productos/'));
+        if (productItems.length === 0) continue;
+        const first = productItems[0].position;
+        const expectedFirst = (page - 1) * 24 + 1;
+        if (first !== expectedFirst) offenders.push(`${relOf(f)}: primera posición ${first}, esperada ${expectedFirst}`);
+        productItems.forEach((li, i) => {
+          if (li.position !== first + i) offenders.push(`${relOf(f)}: posición no continua en ${li.url}`);
+          if (!linked.has(li.url)) offenders.push(`${relOf(f)}: ${li.url} en ItemList pero sin <a href> en la página`);
+        });
+        const productLinksInGrid = [...linked].length;
+        if (productItems.length !== productLinksInGrid) offenders.push(`${relOf(f)}: ${productItems.length} en ItemList vs ${productLinksInGrid} enlazados`);
+      }
+    }
+  }
+  assert(offenders.length === 0, `${offenders.length} desajuste(s), ej: ${offenders[0]}`);
+  return `${categoryFiles.length} páginas de categoría`;
+});
+
+check('mismo @id nunca declarado con @type o name distintos en una página', () => {
+  // Un nodo parcial (mismo @type, sin name) que solo añade propiedades —p. ej.
+  // areaServed en /productos-promocionales-ecuador/— es compatible; un
+  // @type distinto o un name distinto no lo es.
+  const offenders = [];
+  for (const f of allHtmlFiles) {
+    const seen = new Map();
+    const visit = (node) => {
+      if (node == null || typeof node !== 'object') return;
+      if (Array.isArray(node)) { node.forEach(visit); return; }
+      if (node['@id'] && node['@type']) {
+        const type = [].concat(node['@type']).sort().join('+');
+        const prev = seen.get(node['@id']);
+        if (prev && (prev.type !== type || (prev.name && node.name && prev.name !== node.name))) {
+          offenders.push(`${relOf(f)}: ${node['@id']} (${prev.type}|${prev.name || ''} vs ${type}|${node.name || ''})`);
+        } else if (!prev || (!prev.name && node.name)) {
+          seen.set(node['@id'], { type, name: node.name || prev?.name });
+        }
+      }
+      for (const k of Object.keys(node)) if (k !== '@type') visit(node[k]);
+    };
+    for (const [, json] of readHtml(f).matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)) {
+      try { visit(JSON.parse(json)); } catch { /* cubierto en [3] */ }
+    }
+  }
+  assert(offenders.length === 0, `${offenders.length} conflicto(s), ej: ${offenders[0]}`);
+});
+
+check('H1 de producto sin tokens promocionales ("Oferta", "Nuevo", "[más]")', () => {
+  const offenders = allHtmlFiles
+    .filter((f) => /^productos\/[^/]+\/index\.html$/.test(relOf(f)))
+    .filter((f) => {
+      const h1 = (readHtml(f).match(/<h1[^>]*>([\s\S]*?)<\/h1>/) || [])[1] || '';
+      return /(?:\s|-)(?:Oferta|Nuevo|oferta|nuevo)\s*$|\[más\]/.test(h1.replace(/<[^>]+>/g, '').trim());
+    });
+  assert(offenders.length === 0, `${offenders.length} ficha(s), ej: ${offenders[0] && relOf(offenders[0])}`);
+});
+
+check('sin preload de /images/hero/9781.jpg (retirado, no se usa)', () => {
+  const offenders = allHtmlFiles.filter((f) => readHtml(f).includes('/images/hero/9781.jpg'));
+  assert(offenders.length === 0, `${offenders.length} página(s), ej: ${offenders[0] && relOf(offenders[0])}`);
+});
+
 console.log(`\n${failures === 0 ? 'TODAS LAS PRUEBAS PASARON' : `${failures} PRUEBA(S) FALLARON`}\n`);
 process.exit(failures === 0 ? 0 : 1);

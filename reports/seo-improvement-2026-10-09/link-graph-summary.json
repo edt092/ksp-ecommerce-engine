@@ -1,0 +1,46 @@
+{
+  "despues": {
+    "productos_indexables": 2036,
+    "profundidad": {
+      "1": 2,
+      "2": 763,
+      "3": 1111,
+      "4": 156,
+      "5": 4
+    },
+    "a_4_o_mas_clics": 160,
+    "inalcanzables_desde_home": 0,
+    "sin_enlaces_entrantes": 0,
+    "enlaces_entrantes": {
+      "min": 1,
+      "p25": 6,
+      "mediana": 9,
+      "p75": 12,
+      "p95": 17,
+      "max": 30
+    },
+    "con_1_enlace": 29
+  },
+  "antes_export_2026_08_03": {
+    "productos_indexables": 2036,
+    "profundidad": {
+      "1": 2,
+      "2": 749,
+      "3": 853,
+      "4": 408,
+      "5": 24
+    },
+    "a_4_o_mas_clics": 432,
+    "inalcanzables_desde_home": 0,
+    "sin_enlaces_entrantes": 0,
+    "enlaces_entrantes": {
+      "min": 1,
+      "p25": 1,
+      "mediana": 1,
+      "p75": 1,
+      "p95": 25,
+      "max": 222
+    },
+    "con_1_enlace": 1853
+  }
+}

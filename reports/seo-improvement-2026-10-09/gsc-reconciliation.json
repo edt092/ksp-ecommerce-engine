@@ -1,0 +1,501 @@
+{
+  "generado": "2026-10-10T01:36:41.039Z",
+  "fuente": "C:/Users/Dagon/Desktop/MIS PROYECTOS PERSONALES/SITIOS_WEB/SEO-ANALISI-GENERAL/SEO-KRONOSOLOPROMOCIONALES.COM/ANALISI-09-10-2026",
+  "inventario": [
+    {
+      "archivo": "auditoria-competitiva-seo-codex/AUDIT.md",
+      "bytes": 44955,
+      "sha256": "6899e5452648bedbb5fb48567158b717dbfc79ed07c1056e9803cdf9b759cd54"
+    },
+    {
+      "archivo": "auditoria-seo-claude-agentes-seo/seo-audit-2026-10-09.md",
+      "bytes": 56358,
+      "sha256": "09f4de305a643d72af40a5770f1330fa632263077243e9b2f2f975d63a4197aa"
+    },
+    {
+      "archivo": "Paginas-no-index/Gráfico.csv",
+      "bytes": 1924,
+      "sha256": "7bd901885f104e4f464ef356414654d759ec8fbac06b4468ffd69d88e970df83"
+    },
+    {
+      "archivo": "Paginas-no-index/Metadatos.csv",
+      "bytes": 52,
+      "sha256": "ff78a5ecbfca38e1b1ada5bbfe3ddc87a06d4335ef72c5b8ff42123af03f40e6"
+    },
+    {
+      "archivo": "Paginas-no-index/Problemas críticos.csv",
+      "bytes": 398,
+      "sha256": "a2c327b476e4b6b185443d6e45cc505a3d8287dc686872a11da4d5325ced82ec"
+    },
+    {
+      "archivo": "Paginas-no-index/Problemas no críticos.csv",
+      "bytes": 34,
+      "sha256": "72473bc4aca8022088e2c2640f05800156bee0def96d6c79b235a3d3cca67f01"
+    },
+    {
+      "archivo": "plan-de-accion-seo-claude/ANALISIS-Y-PLAN.md",
+      "bytes": 24965,
+      "sha256": "05ead9b2c1490a1c85b49c07656ed5358aba158b1f87915b9b37e8b3587699f7"
+    },
+    {
+      "archivo": "plan-de-accion-seo-claude/ANEXO-DATOS-COMPLETOS.md",
+      "bytes": 122274,
+      "sha256": "eb32c06ea0e5440d8096185ff1288030c9276b6e51b287d41cd3eb390db103f5"
+    },
+    {
+      "archivo": "plan-de-accion-seo-claude/PROMPT-MAESTRO-CLAUDE-CODE.md",
+      "bytes": 45604,
+      "sha256": "35623c9533e1e266d0eef0b2c91da06d90a09994437119f9086bad869d4145ed"
+    },
+    {
+      "archivo": "rendimiento-3-meses-ecuador/Aparición en búsquedas.csv",
+      "bytes": 89,
+      "sha256": "73316efde319d2ff3b0a0fc028b88303ba0c876b2490798c110ba5dcbdbdda40"
+    },
+    {
+      "archivo": "rendimiento-3-meses-ecuador/Consultas.csv",
+      "bytes": 6405,
+      "sha256": "f87173a9ec88a8ae1f423a7b7d5c12d4e7902cf94415d9f0ff379d7ba9cea1f0"
+    },
+    {
+      "archivo": "rendimiento-3-meses-ecuador/Dispositivos.csv",
+      "bytes": 120,
+      "sha256": "d02c672e347e0553fa3e859a23b94523664e41dcb5811a01a992ef616e38961c"
+    },
+    {
+      "archivo": "rendimiento-3-meses-ecuador/Filtros.csv",
+      "bytes": 73,
+      "sha256": "0b9a9c736e6ff506671a4228c4a78fd778313f717f522df53a22213c9263b256"
+    },
+    {
+      "archivo": "rendimiento-3-meses-ecuador/Gráfico.csv",
+      "bytes": 2407,
+      "sha256": "af04346520d097f0f4ba7ea52f46d3847522f43eacc78d10e812fb6e5c775de7"
+    },
+    {
+      "archivo": "rendimiento-3-meses-ecuador/Países.csv",
+      "bytes": 63,
+      "sha256": "264de500d9ff12d653eb11089a15526b2fa8ee81f199197fccc4edcc09470c51"
+    },
+    {
+      "archivo": "rendimiento-3-meses-ecuador/Páginas.csv",
+      "bytes": 5984,
+      "sha256": "40f535ad34a1d49ac740ffc560b62941791216d92a2004959e0c7225f522561c"
+    },
+    {
+      "archivo": "rendimiento-3-meses-todos-los-paises/Aparición en búsquedas.csv",
+      "bytes": 89,
+      "sha256": "73316efde319d2ff3b0a0fc028b88303ba0c876b2490798c110ba5dcbdbdda40"
+    },
+    {
+      "archivo": "rendimiento-3-meses-todos-los-paises/Consultas.csv",
+      "bytes": 8293,
+      "sha256": "346deade8c22b2e17c29f2e73c2175d66f01c7a636631104b58ec608e40cdf18"
+    },
+    {
+      "archivo": "rendimiento-3-meses-todos-los-paises/Dispositivos.csv",
+      "bytes": 121,
+      "sha256": "502952888ed590e542076002a02e550cdde99f91e84e060aa568040222ad9cfa"
+    },
+    {
+      "archivo": "rendimiento-3-meses-todos-los-paises/Filtros.csv",
+      "bytes": 59,
+      "sha256": "d88ac02ecc2ec15ad0dd9c5896076b40a9cade70987c51193d995fdea5139aad"
+    },
+    {
+      "archivo": "rendimiento-3-meses-todos-los-paises/Gráfico.csv",
+      "bytes": 2419,
+      "sha256": "d9c5f4e5f421643fb914aec753ee9102fbefdb770f501d26f1efbf84a0f26f78"
+    },
+    {
+      "archivo": "rendimiento-3-meses-todos-los-paises/Países.csv",
+      "bytes": 1178,
+      "sha256": "cfe8f66a8754a1dfc17d43d5da59d23a7ca0d4c718cee2ced29126907395c11f"
+    },
+    {
+      "archivo": "rendimiento-3-meses-todos-los-paises/Páginas.csv",
+      "bytes": 67778,
+      "sha256": "ca39c38138c33393df38414b4fc0bb8a03eff0eed925528c2fc3130a8497a9cf"
+    }
+  ],
+  "ecuador": {
+    "filtros": [
+      {
+        "Filtrar": "Tipo de búsqueda",
+        "Valor": "Web"
+      },
+      {
+        "Filtrar": "Fecha",
+        "Valor": "Últimos 3 meses"
+      },
+      {
+        "Filtrar": "País",
+        "Valor": "Ecuador"
+      }
+    ],
+    "rango_grafico": {
+      "desde": "2026-07-07",
+      "hasta": "2026-10-06",
+      "dias": 92
+    },
+    "grafico": {
+      "filas": 92,
+      "clics": 193,
+      "impresiones": 3217,
+      "ctr_pct": 6,
+      "posicion_ponderada": 16.03
+    },
+    "tabla_paginas": {
+      "filas": 66,
+      "clics": 18,
+      "impresiones": 1301,
+      "ctr_pct": 1.38,
+      "posicion_ponderada": 38.42
+    },
+    "tabla_consultas_visibles": {
+      "filas": 190,
+      "clics": 18,
+      "impresiones": 1083,
+      "ctr_pct": 1.66,
+      "posicion_ponderada": 32.99
+    },
+    "paises": {
+      "filas": 1,
+      "clics": 193,
+      "impresiones": 3217,
+      "ctr_pct": 6,
+      "posicion_ponderada": 16.03
+    },
+    "dispositivos": {
+      "Ordenador": {
+        "filas": 1,
+        "clics": 134,
+        "impresiones": 2159,
+        "ctr_pct": 6.21,
+        "posicion_ponderada": 20.1
+      },
+      "Móviles": {
+        "filas": 1,
+        "clics": 59,
+        "impresiones": 1051,
+        "ctr_pct": 5.61,
+        "posicion_ponderada": 7.74
+      },
+      "Tablet": {
+        "filas": 1,
+        "clics": 0,
+        "impresiones": 7,
+        "ctr_pct": 0,
+        "posicion_ponderada": 6.43
+      }
+    },
+    "aparicion": [
+      {
+        "Aparición en búsquedas": "Fragmentos de productos",
+        "Clics": "0",
+        "Impresiones": "1",
+        "CTR": "0%",
+        "Posición": "6"
+      }
+    ],
+    "agosto": {
+      "filas": 31,
+      "clics": 68,
+      "impresiones": 1076,
+      "ctr_pct": 6.32,
+      "posicion_ponderada": 17.7
+    },
+    "septiembre": {
+      "filas": 30,
+      "clics": 72,
+      "impresiones": 1179,
+      "ctr_pct": 6.11,
+      "posicion_ponderada": 16.05
+    },
+    "ventana_28_anterior": {
+      "desde": "2026-08-12",
+      "hasta": "2026-09-08",
+      "filas": 28,
+      "clics": 66,
+      "impresiones": 1064,
+      "ctr_pct": 6.2,
+      "posicion_ponderada": 18.65
+    },
+    "ventana_28_ultima": {
+      "desde": "2026-09-09",
+      "hasta": "2026-10-06",
+      "filas": 28,
+      "clics": 74,
+      "impresiones": 1161,
+      "ctr_pct": 6.37,
+      "posicion_ponderada": 14.97
+    },
+    "hashes": {
+      "Gráfico": "af04346520d097f0f4ba7ea52f46d3847522f43eacc78d10e812fb6e5c775de7",
+      "Páginas": "40f535ad34a1d49ac740ffc560b62941791216d92a2004959e0c7225f522561c",
+      "Consultas": "f87173a9ec88a8ae1f423a7b7d5c12d4e7902cf94415d9f0ff379d7ba9cea1f0",
+      "Países": "264de500d9ff12d653eb11089a15526b2fa8ee81f199197fccc4edcc09470c51",
+      "Dispositivos": "d02c672e347e0553fa3e859a23b94523664e41dcb5811a01a992ef616e38961c",
+      "Filtros": "0b9a9c736e6ff506671a4228c4a78fd778313f717f522df53a22213c9263b256",
+      "Aparición": "73316efde319d2ff3b0a0fc028b88303ba0c876b2490798c110ba5dcbdbdda40"
+    }
+  },
+  "global": {
+    "filtros": [
+      {
+        "Filtrar": "Tipo de búsqueda",
+        "Valor": "Web"
+      },
+      {
+        "Filtrar": "Fecha",
+        "Valor": "Últimos 3 meses"
+      }
+    ],
+    "rango_grafico": {
+      "desde": "2026-07-07",
+      "hasta": "2026-10-06",
+      "dias": 92
+    },
+    "grafico": {
+      "filas": 92,
+      "clics": 222,
+      "impresiones": 4535,
+      "ctr_pct": 4.9,
+      "posicion_ponderada": 15.11
+    },
+    "tabla_paginas": {
+      "filas": 721,
+      "clics": 224,
+      "impresiones": 5025,
+      "ctr_pct": 4.46,
+      "posicion_ponderada": 17.04
+    },
+    "tabla_consultas_visibles": {
+      "filas": 235,
+      "clics": 20,
+      "impresiones": 1371,
+      "ctr_pct": 1.46,
+      "posicion_ponderada": 32.31
+    },
+    "paises": {
+      "filas": 53,
+      "clics": 222,
+      "impresiones": 4535,
+      "ctr_pct": 4.9,
+      "posicion_ponderada": 15.11
+    },
+    "dispositivos": {
+      "Ordenador": {
+        "filas": 1,
+        "clics": 153,
+        "impresiones": 3120,
+        "ctr_pct": 4.9,
+        "posicion_ponderada": 18.03
+      },
+      "Móviles": {
+        "filas": 1,
+        "clics": 69,
+        "impresiones": 1404,
+        "ctr_pct": 4.91,
+        "posicion_ponderada": 8.69
+      },
+      "Tablet": {
+        "filas": 1,
+        "clics": 0,
+        "impresiones": 11,
+        "ctr_pct": 0,
+        "posicion_ponderada": 5.73
+      }
+    },
+    "aparicion": [
+      {
+        "Aparición en búsquedas": "Fragmentos de productos",
+        "Clics": "0",
+        "Impresiones": "1",
+        "CTR": "0%",
+        "Posición": "6"
+      }
+    ],
+    "agosto": {
+      "filas": 31,
+      "clics": 80,
+      "impresiones": 1542,
+      "ctr_pct": 5.19,
+      "posicion_ponderada": 15.15
+    },
+    "septiembre": {
+      "filas": 30,
+      "clics": 81,
+      "impresiones": 1594,
+      "ctr_pct": 5.08,
+      "posicion_ponderada": 14.73
+    },
+    "ventana_28_anterior": {
+      "desde": "2026-08-12",
+      "hasta": "2026-09-08",
+      "filas": 28,
+      "clics": 75,
+      "impresiones": 1489,
+      "ctr_pct": 5.04,
+      "posicion_ponderada": 15.94
+    },
+    "ventana_28_ultima": {
+      "desde": "2026-09-09",
+      "hasta": "2026-10-06",
+      "filas": 28,
+      "clics": 82,
+      "impresiones": 1509,
+      "ctr_pct": 5.43,
+      "posicion_ponderada": 14.61
+    },
+    "hashes": {
+      "Gráfico": "d9c5f4e5f421643fb914aec753ee9102fbefdb770f501d26f1efbf84a0f26f78",
+      "Páginas": "ca39c38138c33393df38414b4fc0bb8a03eff0eed925528c2fc3130a8497a9cf",
+      "Consultas": "346deade8c22b2e17c29f2e73c2175d66f01c7a636631104b58ec608e40cdf18",
+      "Países": "cfe8f66a8754a1dfc17d43d5da59d23a7ca0d4c718cee2ced29126907395c11f",
+      "Dispositivos": "502952888ed590e542076002a02e550cdde99f91e84e060aa568040222ad9cfa",
+      "Filtros": "d88ac02ecc2ec15ad0dd9c5896076b40a9cade70987c51193d995fdea5139aad",
+      "Aparición": "73316efde319d2ff3b0a0fc028b88303ba0c876b2490798c110ba5dcbdbdda40"
+    }
+  },
+  "cuota_ecuador_clics_pct": 86.9,
+  "cuota_ecuador_impresiones_pct": 70.9,
+  "indexacion": {
+    "metadatos": [
+      {
+        "Propiedad": "Sitemap",
+        "Valor": "Todas las páginas conocidas"
+      }
+    ],
+    "filas_sin_conteo": 12,
+    "primera_completa": {
+      "fecha": "2026-07-23",
+      "indexadas": 1863,
+      "sin_indexar": 534,
+      "conocidas": 2397
+    },
+    "ultima": {
+      "fecha": "2026-10-03",
+      "indexadas": 1293,
+      "sin_indexar": 1263,
+      "conocidas": 2556
+    },
+    "caida_neta_indexadas": -570,
+    "caida_pct": 30.6,
+    "escalones": [
+      {
+        "fecha": "2026-07-24",
+        "delta_indexadas": 13,
+        "indexadas": 1876,
+        "sin_indexar": 681
+      },
+      {
+        "fecha": "2026-08-05",
+        "delta_indexadas": -1,
+        "indexadas": 1875,
+        "sin_indexar": 682
+      },
+      {
+        "fecha": "2026-08-07",
+        "delta_indexadas": -2,
+        "indexadas": 1873,
+        "sin_indexar": 684
+      },
+      {
+        "fecha": "2026-08-10",
+        "delta_indexadas": -1,
+        "indexadas": 1872,
+        "sin_indexar": 685
+      },
+      {
+        "fecha": "2026-08-14",
+        "delta_indexadas": -1,
+        "indexadas": 1871,
+        "sin_indexar": 686
+      },
+      {
+        "fecha": "2026-08-17",
+        "delta_indexadas": -10,
+        "indexadas": 1861,
+        "sin_indexar": 695
+      },
+      {
+        "fecha": "2026-08-21",
+        "delta_indexadas": -13,
+        "indexadas": 1848,
+        "sin_indexar": 707
+      },
+      {
+        "fecha": "2026-08-28",
+        "delta_indexadas": -26,
+        "indexadas": 1822,
+        "sin_indexar": 733
+      },
+      {
+        "fecha": "2026-09-04",
+        "delta_indexadas": -6,
+        "indexadas": 1816,
+        "sin_indexar": 742
+      },
+      {
+        "fecha": "2026-09-14",
+        "delta_indexadas": -8,
+        "indexadas": 1808,
+        "sin_indexar": 752
+      },
+      {
+        "fecha": "2026-09-18",
+        "delta_indexadas": -108,
+        "indexadas": 1700,
+        "sin_indexar": 860
+      },
+      {
+        "fecha": "2026-09-21",
+        "delta_indexadas": -407,
+        "indexadas": 1293,
+        "sin_indexar": 1263
+      }
+    ],
+    "motivos": [
+      {
+        "motivo": "Excluida por una etiqueta \"noindex\"",
+        "fuente": "Sitio web",
+        "validacion": "Error",
+        "paginas": 370
+      },
+      {
+        "motivo": "Página con redirección",
+        "fuente": "Sitio web",
+        "validacion": "Error",
+        "paginas": 70
+      },
+      {
+        "motivo": "Duplicada: el usuario no ha indicado ninguna versión canónica",
+        "fuente": "Sitio web",
+        "validacion": "Error",
+        "paginas": 15
+      },
+      {
+        "motivo": "No se ha encontrado (404)",
+        "fuente": "Sitio web",
+        "validacion": "Error",
+        "paginas": 7
+      },
+      {
+        "motivo": "Rastreada: actualmente sin indexar",
+        "fuente": "Sistemas de Google",
+        "validacion": "Error",
+        "paginas": 571
+      },
+      {
+        "motivo": "Descubierta: actualmente sin indexar",
+        "fuente": "Sistemas de Google",
+        "validacion": "Correcto",
+        "paginas": 230
+      }
+    ],
+    "suma_motivos": 1263,
+    "coincide_con_sin_indexar_final": true,
+    "problemas_no_criticos_filas": 0
+  }
+}

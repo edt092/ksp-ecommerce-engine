@@ -50,7 +50,7 @@ const staticPaths = new Set([
   '/', 'contacto', 'nosotros', 'blog', 'catalogos-digitales', 'politica-de-privacidad',
   'productos-promocionales-ecuador', 'regalos-corporativos', 'articulos-promocionales',
   'material-publicitario', 'merchandising-corporativo', 'parlantes-bluetooth',
-  'audifonos-promocionales', 'soportes-para-celular',
+  'audifonos-promocionales', 'soportes-para-celular', 'buscar', 'cotizacion',
 ]);
 
 if (!existsSync(join(ROOT, 'public', '_redirects'))) {

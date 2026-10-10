@@ -1,0 +1,79 @@
+
+[1] Slugs únicos (products/categories/blog)
+  OK  slugs únicos de productos — 2100 productos
+  OK  slugs únicos de categorías — 37 categorías
+  OK  slugs únicos de blog — 40 posts
+
+[2] Sitemap (out/sitemap.xml)
+  OK  sitemap existe y no está vacío
+  OK  sin URLs duplicadas — 2197 URLs
+  OK  todas las URLs son https://www (host canónico)
+  OK  todas las URLs tienen trailing slash
+  OK  sin referencias a Colombia
+  OK  lastmod son fechas válidas y no futuras — 1842 fechas verificadas
+  OK  sitemap no incluye rutas con redirect conocido
+  OK  solo un generador de sitemap (sin next-sitemap) — src/app/sitemap.ts es la única fuente
+  OK  productos no optimizados fuera del sitemap (equivalente a "sin noindex") — 2036 productos en sitemap, todos is_ai_optimized=true
+
+[2b] Redirects (public/_redirects + netlify.toml)
+  OK  redirects sin bucles (source === target) — 792 reglas verificadas
+  OK  redirects sin cadenas conocidas (target que es source de otro redirect)
+  OK  rutas legacy críticas conservadas mediante redirect — 5 rutas legacy verificadas
+  OK  reports/redirect-map.csv: razones no heredadas de una sección no relacionada — 790 filas verificadas
+
+[2c] Enlaces internos y assets locales
+  OK  sin enlaces internos rotos conocidos (reports/broken-internal-links.csv) — reports/broken-internal-links.csv sin filas de datos
+  OK  imágenes locales referenciadas existen en out/ — 120 imágenes locales verificadas contra out/
+
+[3] Canonicals y JSON-LD en HTML generado (muestra)
+  OK  canonical correcto — index.html — https://www.kronosolopromocionales.com/
+  OK  JSON-LD parseable — index.html — 3 bloque(s)
+  OK  sin "colombia" en HTML — index.html
+  OK  canonical correcto — productos\organizador-multiusos-link-nuevo-13536\index.html — https://www.kronosolopromocionales.com/productos/organizador-multiusos-link-nuevo-13536/
+  OK  JSON-LD parseable — productos\organizador-multiusos-link-nuevo-13536\index.html — 3 bloque(s)
+  OK  sin "colombia" en HTML — productos\organizador-multiusos-link-nuevo-13536\index.html
+  OK  canonical correcto — categorias\antiestres\index.html — https://www.kronosolopromocionales.com/categorias/antiestres/
+  OK  JSON-LD parseable — categorias\antiestres\index.html — 4 bloque(s)
+  OK  sin "colombia" en HTML — categorias\antiestres\index.html
+  OK  canonical correcto — blog\regalos-corporativos-fin-ano-ecuador\index.html — https://www.kronosolopromocionales.com/blog/regalos-corporativos-fin-ano-ecuador/
+  OK  JSON-LD parseable — blog\regalos-corporativos-fin-ano-ecuador\index.html — 4 bloque(s)
+  OK  sin "colombia" en HTML — blog\regalos-corporativos-fin-ano-ecuador\index.html
+
+[4] Structured data — Product/ItemList (offers.md)
+  OK  ningún Product sin name, ni sin offers/review/aggregateRating — 2263 páginas verificadas
+  OK  ninguna categoría (ni producto) representada como Product dentro de un ItemList
+  OK  ItemList.numberOfItems coincide con la cantidad de itemListElement
+  OK  ListItem.position consecutivas y URLs absolutas en ItemList/Product
+  OK  Offer con price real (>0) y priceCurrency cuando existe
+  OK  AggregateRating con reviewCount >= 1 y ratingValue dentro de escala
+
+[4b] Páginas representativas de la corrección de offers.md
+  OK  sin Product incompleto — categorias\antiestres\index.html — 0 Product(s) en la página (0 incompletos)
+  OK  BreadcrumbList presente — categorias\antiestres\index.html
+  OK  sin Product incompleto — categorias\boligrafos-publicitarios\pagina\2\index.html — 0 Product(s) en la página (0 incompletos)
+  OK  BreadcrumbList presente — categorias\boligrafos-publicitarios\pagina\2\index.html
+  OK  sin Product incompleto — regalos-corporativos\index.html — 0 Product(s) en la página (0 incompletos)
+  OK  BreadcrumbList presente — regalos-corporativos\index.html
+  OK  sin Product incompleto — articulos-promocionales\index.html — 0 Product(s) en la página (0 incompletos)
+  OK  BreadcrumbList presente — articulos-promocionales\index.html
+  OK  sin Product incompleto — material-publicitario\index.html — 0 Product(s) en la página (0 incompletos)
+  OK  BreadcrumbList presente — material-publicitario\index.html
+  OK  sin Product incompleto — productos\boligrafo-medic-7022\index.html — 0 Product(s) en la página (0 incompletos)
+  OK  BreadcrumbList presente — productos\boligrafo-medic-7022\index.html
+  OK  sin Product incompleto — productos\set-de-vino-en-bambu-ii-9719\index.html — 0 Product(s) en la página (0 incompletos)
+  OK  BreadcrumbList presente — productos\set-de-vino-en-bambu-ii-9719\index.html
+
+[5] Mejora SEO 2026-10-09 (docs/seo-improvement-2026-10-09)
+FAIL  sin palabras corrompidas "Cali" → "Cuenca" (Cuencadad, Cuencaficación…): 16 página(s), ej: blog/articulos-promocionales-para-empresas-que-funcionan/index.html
+FAIL  cada artículo del blog tiene exactamente un <h1>: 3 artículo(s) con 0 o >1 H1, ej: blog/articulos-promocionales-ecologicos-para-empresas-ecuador/index.html
+FAIL  páginas noindex: canonical propia (nunca el home) y sin nofollow en productos: 128 problema(s), ej: productos/alcancia-cow-oferta-7595/index.html: canonical https://www.kronosolopromocionales.com/
+  OK  ninguna página indexable salvo el home declara canonical al home
+FAIL  404: sin canonical y robots coherentes (todas las directivas noindex): la 404 declara canonical https://www.kronosolopromocionales.com/
+  OK  sitemap sin URLs noindex — 2197 URLs
+FAIL  ItemList de categorías = productos enlazados en la página, posiciones continuas entre páginas: 28 desajuste(s), ej: categorias/antiestres/index.html: 20 en ItemList vs 24 enlazados
+FAIL  mismo @id nunca declarado con @type o name distintos en una página: 42 conflicto(s), ej: blog/10-mejores-productos-promocionales-ecuador-imprescindibles/index.html: https://www.kronosolopromocionales.com/#localbusiness (LocalBusiness|KS Promocionales vs Organization|KS Promocionales)
+FAIL  H1 de producto sin tokens promocionales ("Oferta", "Nuevo", "[más]"): 190 ficha(s), ej: productos/accesorio-en-silicona-para-gafas-y-audifonos-oferta-9603/index.html
+FAIL  sin preload de /images/hero/9781.jpg (retirado, no se usa): 2263 página(s), ej: 404/index.html
+
+8 PRUEBA(S) FALLARON
+

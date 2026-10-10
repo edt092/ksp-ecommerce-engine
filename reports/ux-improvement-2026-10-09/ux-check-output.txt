@@ -1,0 +1,60 @@
+OK   layout home 320 {"vw": 320, "sw": 320, "n": 0, "ex": []}
+OK   layout home 375 {"vw": 375, "sw": 375, "n": 0, "ex": []}
+OK   layout home 390 {"vw": 390, "sw": 390, "n": 0, "ex": []}
+OK   layout home 768 {"vw": 768, "sw": 768, "n": 0, "ex": []}
+OK   layout home 1366 {"vw": 1366, "sw": 1366, "n": 0, "ex": []}
+OK   layout gorras 320 {"vw": 320, "sw": 320, "n": 0, "ex": []}
+OK   layout gorras 375 {"vw": 375, "sw": 375, "n": 0, "ex": []}
+OK   layout gorras 390 {"vw": 390, "sw": 390, "n": 0, "ex": []}
+OK   layout gorras 768 {"vw": 768, "sw": 768, "n": 0, "ex": []}
+OK   layout gorras 1366 {"vw": 1366, "sw": 1366, "n": 0, "ex": []}
+OK   layout producto 320 {"vw": 320, "sw": 320, "n": 0, "ex": []}
+OK   CTA producto en primer viewport (sin banner) 320 {"ctaTop": 554, "ctaBottom": 602, "vh": 812, "banner": 145}
+OK   CTA producto sobre el banner 320 {"ctaTop": 554, "ctaBottom": 602, "vh": 812, "banner": 145}
+OK   layout producto 375 {"vw": 375, "sw": 375, "n": 0, "ex": []}
+OK   CTA producto en primer viewport (sin banner) 375 {"ctaTop": 596, "ctaBottom": 644, "vh": 812, "banner": 129}
+OK   CTA producto sobre el banner 375 {"ctaTop": 596, "ctaBottom": 644, "vh": 812, "banner": 129}
+OK   layout producto 390 {"vw": 390, "sw": 390, "n": 0, "ex": []}
+OK   CTA producto en primer viewport (sin banner) 390 {"ctaTop": 583, "ctaBottom": 631, "vh": 812, "banner": 129}
+OK   CTA producto sobre el banner 390 {"ctaTop": 583, "ctaBottom": 631, "vh": 812, "banner": 129}
+OK   layout producto 768 {"vw": 768, "sw": 768, "n": 0, "ex": []}
+OK   layout producto 1366 {"vw": 1366, "sw": 1366, "n": 0, "ex": []}
+OK   layout buscar 320 {"vw": 320, "sw": 320, "n": 0, "ex": []}
+OK   layout buscar 375 {"vw": 375, "sw": 375, "n": 0, "ex": []}
+OK   layout buscar 390 {"vw": 390, "sw": 390, "n": 0, "ex": []}
+OK   layout buscar 768 {"vw": 768, "sw": 768, "n": 0, "ex": []}
+OK   layout buscar 1366 {"vw": 1366, "sw": 1366, "n": 0, "ex": []}
+OK   layout cotizacion 320 {"vw": 320, "sw": 320, "n": 0, "ex": []}
+OK   layout cotizacion 375 {"vw": 375, "sw": 375, "n": 0, "ex": []}
+OK   layout cotizacion 390 {"vw": 390, "sw": 390, "n": 0, "ex": []}
+OK   layout cotizacion 768 {"vw": 768, "sw": 768, "n": 0, "ex": []}
+OK   layout cotizacion 1366 {"vw": 1366, "sw": 1366, "n": 0, "ex": []}
+OK   layout catalogos 320 {"vw": 320, "sw": 320, "n": 0, "ex": []}
+OK   layout catalogos 375 {"vw": 375, "sw": 375, "n": 0, "ex": []}
+OK   layout catalogos 390 {"vw": 390, "sw": 390, "n": 0, "ex": []}
+OK   layout catalogos 768 {"vw": 768, "sw": 768, "n": 0, "ex": []}
+OK   layout catalogos 1366 {"vw": 1366, "sw": 1366, "n": 0, "ex": []}
+OK   mega-menú abre con Enter 
+OK   mega-menú cierra con Escape y devuelve foco 
+OK   enlaces del mega-menú en el HTML estático 
+OK   drawer cerrado es inert 
+OK   drawer abierto: foco en Cerrar 
+OK   drawer: Escape cierra y devuelve foco a la hamburguesa 
+OK   vista rápida: role=dialog con título 
+OK   vista rápida: foco en cerrar 
+OK   vista rápida: Tab se mantiene dentro 
+OK   vista rápida: Escape cierra y devuelve foco 
+OK   búsqueda por sinónimo (esfero → bolígrafos) 176 productos para «esfero»
+OK   búsqueda por referencia 13537 
+OK   cero resultados con salida 
+OK   orden A–Z correcto en la primera página (collation es) ['Advant 2-1 Resaltador Cera', 'Advant 2-1 Resaltador de Tinta', 'ADVANT 2-1 RESALTADOR DE TINTA', 'Aria'] … 213 productos en Artículos de Escritura
+OK   Atrás restaura el orden anterior http://ksp.local/buscar/?categoria=boligrafos-publicitarios&orden=nombre_asc
+OK   añadir a cotización confirma con role=status 
+OK   header muestra contador 
+OK   localStorage solo guarda slug y cantidad {"v":1,"expiresAt":1792210637952,"items":[{"slug":"paraguas-kahlo-23-nuevo-13532","quantity":null}]}
+OK   cantidad inválida muestra error enlazado 
+OK   fecha pasada rechazada 
+OK   ciudad/fecha no se guardan en localStorage {"v":1,"expiresAt":1792210640178,"items":[{"slug":"paraguas-kahlo-23-nuevo-13532","quantity":200}]}
+OK   preferencias de cookies se reabren con estado actual 
+
+58/58 OK

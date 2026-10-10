@@ -1,0 +1,100 @@
+[
+ {
+  "file": "public/images/hero/slide-1.png",
+  "orig": [
+   1254,
+   1254
+  ],
+  "bytes": 1949576,
+  "out": "public/images/hero/slide-1.webp",
+  "new": [
+   1254,
+   1254
+  ],
+  "new_bytes": 67284
+ },
+ {
+  "file": "public/images/hero/slide-2.png",
+  "orig": [
+   1254,
+   1254
+  ],
+  "bytes": 2042329,
+  "out": "public/images/hero/slide-2.webp",
+  "new": [
+   1254,
+   1254
+  ],
+  "new_bytes": 84436
+ },
+ {
+  "file": "public/images/hero/slide-3.png",
+  "orig": [
+   1254,
+   1254
+  ],
+  "bytes": 2020622,
+  "out": "public/images/hero/slide-3.webp",
+  "new": [
+   1254,
+   1254
+  ],
+  "new_bytes": 86120
+ },
+ {
+  "file": "public/images/hero/slide-4.png",
+  "orig": [
+   1254,
+   1254
+  ],
+  "bytes": 1942581,
+  "out": "public/images/hero/slide-4.webp",
+  "new": [
+   1254,
+   1254
+  ],
+  "new_bytes": 75512
+ },
+ {
+  "file": "public/images/hero/slide-5.png",
+  "orig": [
+   1254,
+   1254
+  ],
+  "bytes": 1888808,
+  "out": "public/images/hero/slide-5.webp",
+  "new": [
+   1254,
+   1254
+  ],
+  "new_bytes": 75772
+ },
+ {
+  "file": "public/images/regalos-promocionales.png",
+  "orig": [
+   1254,
+   1254
+  ],
+  "bytes": 1840163,
+  "out": "public/images/regalos-promocionales.webp",
+  "new": [
+   1254,
+   1254
+  ],
+  "new_bytes": 49072
+ },
+ {
+  "file": "public/images/blog/articulos-promocionales-empresas-funcionan/gorras-bordadas-personalizadas.png",
+  "orig": [
+   1500,
+   1000
+  ],
+  "bytes": 1799026,
+  "out": "public/images/blog/articulos-promocionales-empresas-funcionan/gorras-bordadas-personalizadas.jpg",
+  "new": [
+   1200,
+   800
+  ],
+  "new_bytes": 188350
+ }
+]
