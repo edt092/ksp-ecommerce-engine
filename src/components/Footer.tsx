@@ -94,7 +94,7 @@ export default function Footer() {
             </span>
           </h2>
           <p className="text-white/50 text-base max-w-md mx-auto mb-8">
-            Cotiza gratis por WhatsApp. Respuesta en máximo 24 horas.
+            Cotiza gratis por WhatsApp. Respuesta en máximo 48 horas.
           </p>
           <a
             href={`https://wa.me/${WA_NUMBER}?text=${WA_TEXT}`}
@@ -258,9 +258,17 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/6">
           <div className="container mx-auto px-4 py-5 flex flex-col sm:flex-row justify-center items-center gap-3 text-center sm:text-left">
-            <p className="text-white/25 text-xs">
+            <p className="text-white/60 text-xs">
               © {year} KS Promocionales · RUC 1719403345001 · Quito, Ecuador
             </p>
+            {/* UX-11: reabrir la decisión de cookies en cualquier momento. */}
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new Event('ks-open-cookie-preferences'))}
+              className="min-h-[44px] px-2 text-xs text-white/60 underline hover:text-white"
+            >
+              Preferencias de cookies
+            </button>
           </div>
         </div>
       </div>

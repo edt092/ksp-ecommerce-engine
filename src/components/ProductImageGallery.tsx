@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { displayName } from '@/lib/product-display';
 
 export default function ProductImageGallery({ product, category }) {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
@@ -9,7 +10,9 @@ export default function ProductImageGallery({ product, category }) {
   return (
     <div className="animate-slide-up">
       <div className="lg:sticky lg:top-24">
-        {/* Badges */}
+        {/* Badges — solo si hay alguno: el contenedor vacío sumaba 16 px
+            sobre la foto en móvil. */}
+        {(product.bestseller || product.featured) && (
         <div className="flex gap-2 mb-4">
           {product.bestseller && (
             <span className="bg-primary text-white text-xs font-bold px-4 py-2 rounded-full">
@@ -22,17 +25,21 @@ export default function ProductImageGallery({ product, category }) {
             </span>
           )}
         </div>
+        )}
 
         {/* Main Image */}
         {product.images && product.images.length > 0 ? (
           <>
-            <div className="w-full aspect-square rounded-2xl shadow-2xl overflow-hidden mb-4 relative bg-gray-100 group">
+            {/* 4:3 y object-contain en móvil (U02): la foto cuadrada ocupaba
+                343 px a 375 de ancho y empujaba el CTA fuera de la primera
+                pantalla. Desde sm vuelve al formato cuadrado. */}
+            <div className="w-full aspect-[4/3] sm:aspect-square rounded-2xl shadow-2xl overflow-hidden mb-4 relative bg-white sm:bg-gray-100 group">
               <Image
                 src={product.images[selectedImageIndex]}
-                alt={`${product.name} - imagen ${selectedImageIndex + 1}`}
+                alt={selectedImageIndex === 0 ? displayName(product) : `${displayName(product)} — vista ${selectedImageIndex + 1}`}
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                className="object-contain sm:object-cover transition-transform duration-500 group-hover:scale-110"
                 priority
               />
 
@@ -43,7 +50,7 @@ export default function ProductImageGallery({ product, category }) {
                     onClick={() => setSelectedImageIndex(prev =>
                       prev === 0 ? product.images.length - 1 : prev - 1
                     )}
-                    className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg transition-all opacity-0 group-hover:opacity-100"
+                    className="absolute left-2 top-1/2 -translate-y-1/2 w-11 h-11 flex items-center justify-center bg-white/90 hover:bg-white text-gray-800 rounded-full shadow-lg transition-all opacity-100 lg:opacity-0 lg:group-hover:opacity-100 focus-visible:opacity-100"
                     aria-label="Imagen anterior"
                   >
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -54,7 +61,7 @@ export default function ProductImageGallery({ product, category }) {
                     onClick={() => setSelectedImageIndex(prev =>
                       prev === product.images.length - 1 ? 0 : prev + 1
                     )}
-                    className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg transition-all opacity-0 group-hover:opacity-100"
+                    className="absolute right-2 top-1/2 -translate-y-1/2 w-11 h-11 flex items-center justify-center bg-white/90 hover:bg-white text-gray-800 rounded-full shadow-lg transition-all opacity-100 lg:opacity-0 lg:group-hover:opacity-100 focus-visible:opacity-100"
                     aria-label="Imagen siguiente"
                   >
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -86,7 +93,7 @@ export default function ProductImageGallery({ product, category }) {
                   >
                     <Image
                       src={image}
-                      alt={`${product.name} - miniatura ${i + 1}`}
+                      alt=""
                       fill
                       sizes="100px"
                       className="object-cover"

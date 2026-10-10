@@ -4,6 +4,7 @@ import { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { catalogCountLabelLong } from '@/lib/business-facts';
+import { categoryIconSrc } from '@/lib/category-icons';
 
 export default function CategoryShowcase({ categories }) {
   const trackRef   = useRef(null);
@@ -150,7 +151,7 @@ export default function CategoryShowcase({ categories }) {
           >
             {/* Background image */}
             <Image
-              src={`/images/categorias/${cat.id}.png`}
+              src={categoryIconSrc(cat)}
               alt={cat.name}
               fill
               sizes="(max-width:640px) 70vw, (max-width:1024px) 42vw, 264px"

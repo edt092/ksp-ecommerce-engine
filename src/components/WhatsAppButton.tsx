@@ -1,6 +1,5 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { buildWhatsAppUrl, trackWhatsAppClick } from '@/lib/whatsapp';
 
@@ -30,12 +29,6 @@ export default function WhatsAppButton({
   hideOnBlog = true,
 }) {
   const pathname = usePathname();
-  const [cookieBannerVisible, setCookieBannerVisible] = useState(false);
-
-  useEffect(() => {
-    const stored = localStorage.getItem('ks_cookie_consent');
-    if (!stored) setCookieBannerVisible(true);
-  }, []);
 
   const shouldHide = hideOnBlog && position === 'fixed' && pathname?.startsWith('/blog');
   if (shouldHide) return null;
@@ -50,11 +43,16 @@ export default function WhatsAppButton({
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        onClick={() => trackWhatsAppClick(context)}
+        onClick={() => trackWhatsAppClick({ label: context, pageType: pathname?.split('/')[1] || 'home', placement: 'floating' })}
         aria-label="Contactar por WhatsApp"
-        className={`fixed right-4 sm:right-6 z-50 flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16
-                    rounded-full shadow-2xl transition-all duration-300 transform bg-[#25D366] hover:bg-[#128C7E] hover:scale-110
-                    ${cookieBannerVisible ? 'bottom-32 sm:bottom-24' : 'bottom-4 sm:bottom-6'}`}
+        // Se sitúa encima del banner de cookies usando su altura real
+        // (--cookie-banner-h, publicada por CookieConsent) y el área segura
+        // inferior; antes usaba un desplazamiento fijo de 128 px y quedaba
+        // debajo del banner de 187 px. Se oculta con el menú móvil abierto
+        // (html[data-menu-open], ver Header y globals.css).
+        style={{ bottom: 'calc(var(--cookie-banner-h, 0px) + 1rem + env(safe-area-inset-bottom, 0px))' }}
+        className={`wa-float fixed right-4 sm:right-6 z-50 flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16
+                    rounded-full shadow-2xl transition-all duration-300 transform bg-[#25D366] hover:bg-[#128C7E] hover:scale-110`}
       >
         <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-75 animate-ping" />
         <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-50 animate-pulse" />

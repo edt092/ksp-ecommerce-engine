@@ -5,9 +5,12 @@ import Image from 'next/image';
 import { useState, useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import { catalogCountLabel } from '@/lib/business-facts';
+import { useQuoteCount } from '@/lib/quote-list';
 
 const WA_NUMBER = '593999814838';
 const WA_TEXT   = 'Hola%2C%20quiero%20cotizar%20productos%20promocionales%20para%20mi%20empresa';
+const MEGA_MENU_ID = 'header-categorias-menu';
+const DRAWER_ID = 'header-mobile-drawer';
 
 const categoryGroups = [
   {
@@ -57,6 +60,17 @@ const WAIcon = ({ size = 'sm' }) => (
   </svg>
 );
 
+const SearchIcon = () => (
+  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 110-15 7.5 7.5 0 010 15z" />
+  </svg>
+);
+
+const ListIcon = () => (
+  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+  </svg>
+);
 
 export default function Header() {
   const [isScrolled,   setIsScrolled]   = useState(false);
@@ -64,6 +78,13 @@ export default function Header() {
   const [isMegaOpen,   setIsMegaOpen]   = useState(false);
   const pathname  = usePathname();
   const rafId = useRef(null);
+  const megaRef = useRef(null);
+  const megaButtonRef = useRef(null);
+  const hamburgerRef = useRef(null);
+  const drawerCloseRef = useRef(null);
+  const wasMobileOpen = useRef(false);
+  const overlayRef = useRef(null);
+  const quoteCount = useQuoteCount();
 
   useEffect(() => {
     const onScroll = () => {
@@ -75,7 +96,49 @@ export default function Header() {
     return () => { window.removeEventListener('scroll', onScroll); cancelAnimationFrame(rafId.current); };
   }, []);
 
-  useEffect(() => { setIsMobileOpen(false); }, [pathname]);
+  useEffect(() => { setIsMobileOpen(false); setIsMegaOpen(false); }, [pathname]);
+
+  // Marca el menú abierto en <html> para que el botón flotante de WhatsApp
+  // (z-50) no quede encima del drawer (z-40). Ver .wa-float en globals.css.
+  useEffect(() => {
+    document.documentElement.toggleAttribute('data-menu-open', isMobileOpen);
+    return () => document.documentElement.removeAttribute('data-menu-open');
+  }, [isMobileOpen]);
+
+  // Drawer móvil (docs/ux-improvement-2026-10-09, UX-03): foco al botón de
+  // cierre al abrir, de vuelta a la hamburguesa al cerrar, Escape cierra.
+  useEffect(() => {
+    if (isMobileOpen) {
+      drawerCloseRef.current?.focus();
+    } else if (wasMobileOpen.current) {
+      hamburgerRef.current?.focus();
+    }
+    wasMobileOpen.current = isMobileOpen;
+    if (!isMobileOpen) return undefined;
+    const onKey = (e) => { if (e.key === 'Escape') setIsMobileOpen(false); };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [isMobileOpen]);
+
+  // Mega-menú: se abre por clic/Enter/Espacio (el hover es solo un atajo),
+  // Escape cierra y devuelve el foco al botón, y se cierra al hacer clic
+  // fuera o al salir el foco del bloque. Antes solo respondía a onMouseEnter.
+  useEffect(() => {
+    if (!isMegaOpen) return undefined;
+    const onPointer = (e) => { if (megaRef.current && !megaRef.current.contains(e.target)) setIsMegaOpen(false); };
+    const onKey = (e) => {
+      if (e.key === 'Escape') { setIsMegaOpen(false); megaButtonRef.current?.focus(); }
+    };
+    document.addEventListener('pointerdown', onPointer);
+    window.addEventListener('keydown', onKey);
+    return () => { document.removeEventListener('pointerdown', onPointer); window.removeEventListener('keydown', onKey); };
+  }, [isMegaOpen]);
+
+  // inert por DOM: los tipos instalados son de React 19 (booleano) pero el
+  // runtime es React 18, que no reconoce el atributo como prop.
+  useEffect(() => {
+    overlayRef.current?.toggleAttribute('inert', !isMobileOpen);
+  }, [isMobileOpen]);
 
   return (
     <>
@@ -100,25 +163,25 @@ export default function Header() {
           <div className="announcement-bar border-b border-white/5 text-white text-xs">
             <div className="container mx-auto px-4 py-2 flex items-center justify-between gap-4">
               <div className="flex items-center gap-2.5 min-w-0 flex-1 overflow-hidden">
-                <span className="text-[#F5A520] font-bold shrink-0 announce-pulse select-none">✦</span>
+                <span className="text-[#F5A520] font-bold shrink-0 announce-pulse select-none" aria-hidden="true">✦</span>
                 <div className="overflow-hidden flex-1">
                   <div className="flex gap-10 animate-marquee whitespace-nowrap text-white/60">
                     <span>🇪🇨 Envíos a todo Ecuador</span>
-                    <span className="text-white/20">·</span>
+                    <span className="text-white/20" aria-hidden="true">·</span>
                     <span>{catalogCountLabel} personalizables</span>
-                    <span className="text-white/20">·</span>
+                    <span className="text-white/20" aria-hidden="true">·</span>
                     <span>Cotización en menos de 48 horas</span>
-                    <span className="text-white/20">·</span>
-                    <span>🎨 100% personalizable con tu logo</span>
-                    <span className="text-white/20">·</span>
-                    <span>🇪🇨 Envíos a todo Ecuador</span>
-                    <span className="text-white/20">·</span>
-                    <span>{catalogCountLabel} personalizables</span>
-                    <span className="text-white/20">·</span>
-                    <span>Cotización en menos de 48 horas</span>
-                    <span className="text-white/20">·</span>
-                    <span>🎨 100% personalizable con tu logo</span>
-                    <span className="text-white/20">·</span>
+                    <span className="text-white/20" aria-hidden="true">·</span>
+                    <span>🎨 Personalización con tu logo</span>
+                    <span className="text-white/20" aria-hidden="true">·</span>
+                    <span aria-hidden="true">🇪🇨 Envíos a todo Ecuador</span>
+                    <span className="text-white/20" aria-hidden="true">·</span>
+                    <span aria-hidden="true">{catalogCountLabel} personalizables</span>
+                    <span className="text-white/20" aria-hidden="true">·</span>
+                    <span aria-hidden="true">Cotización en menos de 48 horas</span>
+                    <span className="text-white/20" aria-hidden="true">·</span>
+                    <span aria-hidden="true">🎨 Personalización con tu logo</span>
+                    <span className="text-white/20" aria-hidden="true">·</span>
                   </div>
                 </div>
               </div>
@@ -147,66 +210,79 @@ export default function Header() {
                 width={160}
                 height={52}
                 className="h-12 md:h-14 w-auto object-contain"
-                priority
+                loading="eager"
               />
             </Link>
 
             {/* Desktop nav */}
-            <nav className="hidden lg:flex items-center gap-0.5">
+            <nav className="hidden lg:flex items-center gap-0.5" aria-label="Principal">
 
               {/* Categories mega-menu */}
               <div
+                ref={megaRef}
                 className="relative"
                 onMouseEnter={() => setIsMegaOpen(true)}
                 onMouseLeave={() => setIsMegaOpen(false)}
+                onBlur={(e) => { if (!e.currentTarget.contains(e.relatedTarget)) setIsMegaOpen(false); }}
               >
                 <button
+                  ref={megaButtonRef}
                   type="button"
-                  className={`group relative px-4 py-2 text-sm font-semibold rounded-lg transition-colors duration-150 flex items-center gap-1.5 ${
+                  onClick={() => setIsMegaOpen((v) => !v)}
+                  className={`group relative px-4 py-2 min-h-[44px] text-sm font-semibold rounded-lg transition-colors duration-150 flex items-center gap-1.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F5A520] ${
                     isMegaOpen ? 'text-white' : 'text-white/70 hover:text-white'
                   }`}
                   aria-expanded={isMegaOpen}
-                  aria-haspopup="true"
+                  aria-controls={MEGA_MENU_ID}
                 >
                   Categorías
                   <svg
                     className={`w-3.5 h-3.5 transition-transform duration-200 ${isMegaOpen ? 'rotate-180' : ''}`}
-                    fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
 
-                {isMegaOpen && (
-                  <div
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[640px] max-w-[90vw] rounded-2xl overflow-hidden shadow-2xl"
-                    style={{ background: '#0A1440', border: '1px solid rgba(255,255,255,0.08)' }}
-                  >
-                    <div className="grid grid-cols-3 gap-6 p-6">
-                      {categoryGroups.map((group) => (
-                        <div key={group.label}>
-                          <p className="text-[11px] font-bold uppercase tracking-wider text-white/40 mb-3">
-                            {group.label}
-                          </p>
-                          <ul className="space-y-1">
-                            {group.items.map((item) => (
-                              <li key={item.slug}>
-                                <Link
-                                  href={`/categorias/${item.slug}/`}
-                                  className="flex items-center gap-2 px-2 py-1.5 rounded-lg text-sm text-white/75 hover:text-white hover:bg-white/8 transition-colors"
-                                  onClick={() => setIsMegaOpen(false)}
-                                >
-                                  <span aria-hidden="true">{item.icon}</span>
-                                  {item.name}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-                    </div>
+                <div
+                  id={MEGA_MENU_ID}
+                  hidden={!isMegaOpen}
+                  className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[640px] max-w-[90vw] rounded-2xl overflow-hidden shadow-2xl"
+                  style={{ background: '#0A1440', border: '1px solid rgba(255,255,255,0.08)' }}
+                >
+                  <div className="grid grid-cols-3 gap-6 p-6">
+                    {categoryGroups.map((group) => (
+                      <div key={group.label}>
+                        <p className="text-[11px] font-bold uppercase tracking-wider text-white/40 mb-3">
+                          {group.label}
+                        </p>
+                        <ul className="space-y-1">
+                          {group.items.map((item) => (
+                            <li key={item.slug}>
+                              <Link
+                                href={`/categorias/${item.slug}/`}
+                                className="flex items-center gap-2 px-2 py-1.5 rounded-lg text-sm text-white/75 hover:text-white hover:bg-white/8 focus-visible:bg-white/8 transition-colors"
+                                onClick={() => setIsMegaOpen(false)}
+                              >
+                                <span aria-hidden="true">{item.icon}</span>
+                                {item.name}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
                   </div>
-                )}
+                  <div className="border-t border-white/8 px-6 py-3">
+                    <Link
+                      href="/regalos-corporativos/"
+                      className="text-sm font-semibold text-[#F5A520] hover:text-[#FFBA3D]"
+                      onClick={() => setIsMegaOpen(false)}
+                    >
+                      Ver las 37 categorías →
+                    </Link>
+                  </div>
+                </div>
               </div>
 
               {/* Regular nav links */}
@@ -234,11 +310,34 @@ export default function Header() {
             </nav>
 
             {/* Right CTAs */}
-            <div className="flex items-center gap-2.5">
+            <div className="flex items-center gap-1.5 md:gap-2.5">
+              {/* Buscar (UX-07) */}
+              <Link
+                href="/buscar/"
+                aria-label="Buscar productos"
+                className="flex items-center justify-center w-11 h-11 text-white/75 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200"
+              >
+                <SearchIcon />
+              </Link>
+
+              {/* Mi cotización (UX-06) */}
+              <Link
+                href="/cotizacion/"
+                aria-label={quoteCount > 0 ? `Mi cotización: ${quoteCount} producto${quoteCount === 1 ? '' : 's'}` : 'Mi cotización'}
+                className="relative flex items-center justify-center w-11 h-11 text-white/75 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200"
+              >
+                <ListIcon />
+                {quoteCount > 0 && (
+                  <span aria-hidden="true" className="absolute top-1 right-1 min-w-[18px] h-[18px] px-1 rounded-full bg-[#F5A520] text-[#0A0A23] text-[11px] font-bold leading-[18px] text-center">
+                    {quoteCount}
+                  </span>
+                )}
+              </Link>
+
               {/* Ghost CTA */}
               <Link
                 href="/catalogos-digitales"
-                className="hidden md:flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white/75 hover:text-white header-ghost-btn rounded-lg transition-all duration-200"
+                className="hidden xl:flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white/75 hover:text-white header-ghost-btn rounded-lg transition-all duration-200"
               >
                 Ver Catálogo
               </Link>
@@ -256,11 +355,15 @@ export default function Header() {
 
               {/* Hamburger */}
               <button
+                ref={hamburgerRef}
+                type="button"
                 onClick={() => setIsMobileOpen(v => !v)}
-                className="lg:hidden p-2.5 text-white/70 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200"
+                className="lg:hidden flex items-center justify-center w-11 h-11 text-white/70 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200"
                 aria-label={isMobileOpen ? 'Cerrar menú' : 'Abrir menú'}
+                aria-expanded={isMobileOpen}
+                aria-controls={DRAWER_ID}
               >
-                <div className="w-5 flex flex-col gap-[5px]">
+                <div className="w-5 flex flex-col gap-[5px]" aria-hidden="true">
                   <span className={`block h-0.5 bg-white rounded-full transition-all duration-300 origin-center ${isMobileOpen ? 'rotate-45 translate-y-[7px]' : ''}`} />
                   <span className={`block h-0.5 bg-white rounded-full transition-all duration-200 ${isMobileOpen ? 'opacity-0 scale-x-0' : ''}`} />
                   <span className={`block h-0.5 bg-white rounded-full transition-all duration-300 origin-center ${isMobileOpen ? '-rotate-45 -translate-y-[7px]' : ''}`} />
@@ -271,8 +374,11 @@ export default function Header() {
         </div>
       </header>
 
-      {/* ── Mobile overlay ── */}
+      {/* ── Mobile overlay ── cerrado = inert (fuera del orden de foco y del
+          árbol de accesibilidad) pero sigue en el HTML: sus enlaces a
+          categorías son rastreables. */}
       <div
+        ref={overlayRef}
         className={`fixed inset-0 z-40 lg:hidden transition-all duration-300 ${
           isMobileOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
@@ -281,10 +387,15 @@ export default function Header() {
         <div
           className="absolute inset-0 bg-black/65 backdrop-blur-[3px]"
           onClick={() => setIsMobileOpen(false)}
+          aria-hidden="true"
         />
 
         {/* Drawer */}
         <div
+          id={DRAWER_ID}
+          role="dialog"
+          aria-modal={isMobileOpen}
+          aria-label="Menú"
           className={`mobile-drawer absolute top-0 right-0 h-full w-[320px] max-w-[92vw] flex flex-col transition-transform duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] ${
             isMobileOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
@@ -301,18 +412,20 @@ export default function Header() {
               />
             </Link>
             <button
+              ref={drawerCloseRef}
+              type="button"
               onClick={() => setIsMobileOpen(false)}
-              className="p-2 text-white/45 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200"
+              className="flex items-center justify-center w-11 h-11 text-white/60 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200"
               aria-label="Cerrar menú"
             >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
 
           {/* Nav */}
-          <nav className="flex-1 overflow-y-auto p-4 space-y-0.5">
+          <nav className="flex-1 overflow-y-auto p-4 space-y-0.5" aria-label="Menú móvil">
             <div className="space-y-0.5">
               {navLinks.map((item) => {
                 const isActive = pathname === item.href;
@@ -352,6 +465,13 @@ export default function Header() {
                   {item.name}
                 </Link>
               ))}
+              <Link
+                href="/regalos-corporativos/"
+                className="flex items-center gap-2.5 px-4 py-2.5 text-sm font-semibold text-[#F5A520] hover:bg-white/5 rounded-xl"
+                onClick={() => setIsMobileOpen(false)}
+              >
+                Ver las 37 categorías →
+              </Link>
             </div>
           </nav>
 

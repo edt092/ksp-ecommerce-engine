@@ -1,56 +1,78 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { buildWhatsAppUrl } from '@/lib/whatsapp';
+
+// docs/ux-improvement-2026-10-09, UX-10. Antes: botón «Solicita tu Catálogo
+// Ahora» con icono de descarga que ejecutaba un mailto (no descargaba nada) y
+// las láminas se montaban con useEffect, fuera del HTML estático. Ahora el CTA
+// describe lo que hace (abrir el correo), hay correo visible y WhatsApp como
+// alternativa, y las láminas están en el HTML con un alt que dice qué son.
+// No hay PDF descargable publicado: no se ofrece «Descargar» hasta que exista.
+
+const QUOTE_EMAIL = 'claudiagonzalez@kronosolopromocionales.com';
+const MAILTO = `mailto:${QUOTE_EMAIL}?subject=${encodeURIComponent('Solicitud de catálogo digital')}&body=${encodeURIComponent('Hola, me gustaría recibir el catálogo digital vigente de KS Promocionales.')}`;
+
+const CATALOGOS = [
+  ...[1, 2, 3, 4, 5, 6, 7].map((n) => ({
+    id: n,
+    imagen: `/images/catalogos-ksp/Catalogo Temporada nav 2025_page-000${n}.jpg`,
+    alt: `Catálogo de temporada navideña 2025 de KS Promocionales — página ${n} de 7`,
+  })),
+  ...['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k'].map((letter, i) => ({
+    id: 8 + i,
+    imagen: `/images/catalogos-ksp/catalogo-${letter}.png`,
+    alt: `Catálogo general de KS Promocionales — lámina ${i + 1} de 11`,
+  })),
+];
+
+const MailIcon = () => (
+  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+  </svg>
+);
+
+function ContactOptions({ variant }) {
+  const dark = variant === 'dark';
+  return (
+    <div className="flex flex-col items-center gap-3">
+      <a
+        href={MAILTO}
+        className={`inline-flex items-center gap-3 min-h-[48px] px-6 md:px-8 py-3 font-semibold rounded-lg transition-colors ${dark ? 'bg-primary text-white hover:bg-primary-dark' : 'bg-white text-primary hover:bg-gray-100'}`}
+      >
+        <MailIcon />
+        Pedir catálogo por correo
+      </a>
+      <p className={`text-sm ${dark ? 'text-gray-300' : 'text-white/80'}`}>
+        Se abrirá tu programa de correo. Si no se abre, escríbenos a{' '}
+        <span className="font-semibold select-all">{QUOTE_EMAIL}</span> o{' '}
+        <a
+          href={buildWhatsAppUrl('Hola, me gustaría recibir el catálogo digital vigente de KS Promocionales.')}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline font-semibold"
+        >
+          pídelo por WhatsApp
+        </a>.
+      </p>
+    </div>
+  );
+}
 
 export default function CatalogosClient() {
-  const [catalogos, setCatalogos] = useState([]);
-
-  useEffect(() => {
-    const catalogosData = [
-      { id: 1, imagen: '/images/catalogos-ksp/Catalogo Temporada nav 2025_page-0001.jpg' },
-      { id: 2, imagen: '/images/catalogos-ksp/Catalogo Temporada nav 2025_page-0002.jpg' },
-      { id: 3, imagen: '/images/catalogos-ksp/Catalogo Temporada nav 2025_page-0003.jpg' },
-      { id: 4, imagen: '/images/catalogos-ksp/Catalogo Temporada nav 2025_page-0004.jpg' },
-      { id: 5, imagen: '/images/catalogos-ksp/Catalogo Temporada nav 2025_page-0005.jpg' },
-      { id: 6, imagen: '/images/catalogos-ksp/Catalogo Temporada nav 2025_page-0006.jpg' },
-      { id: 7, imagen: '/images/catalogos-ksp/Catalogo Temporada nav 2025_page-0007.jpg' },
-      { id: 8, imagen: '/images/catalogos-ksp/catalogo-a.png' },
-      { id: 9, imagen: '/images/catalogos-ksp/catalogo-b.png' },
-      { id: 10, imagen: '/images/catalogos-ksp/catalogo-c.png' },
-      { id: 11, imagen: '/images/catalogos-ksp/catalogo-d.png' },
-      { id: 12, imagen: '/images/catalogos-ksp/catalogo-e.png' },
-      { id: 13, imagen: '/images/catalogos-ksp/catalogo-f.png' },
-      { id: 14, imagen: '/images/catalogos-ksp/catalogo-g.png' },
-      { id: 15, imagen: '/images/catalogos-ksp/catalogo-h.png' },
-      { id: 16, imagen: '/images/catalogos-ksp/catalogo-i.png' },
-      { id: 17, imagen: '/images/catalogos-ksp/catalogo-j.png' },
-      { id: 18, imagen: '/images/catalogos-ksp/catalogo-k.png' },
-    ];
-    setCatalogos(catalogosData);
-  }, []);
-
-  const handleSolicitarCatalogo = () => {
-    window.location.href = 'mailto:claudiagonzalez@kronosolopromocionales.com?subject=Solicitud de Catálogo Digital&body=Hola, me gustaría recibir información sobre sus catálogos digitales.';
-  };
-
   return (
     <>
-      {/* Spacer for fixed header */}
-      <div className="h-[88px] md:h-[96px]"></div>
-
-      {/* Breadcrumb */}
+      {/* Breadcrumb (sin espaciador: el header ocupa espacio en el flujo,
+          ver docs/seo-improvement-2026-10-09/decisions.md D-07) */}
       <div className="bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 py-3">
-          <nav className="flex items-center gap-2 text-sm">
+          <nav className="flex items-center gap-2 text-sm" aria-label="Breadcrumb">
             <Link href="/" className="text-gray-500 hover:text-primary transition-colors">
               Inicio
             </Link>
-            <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-            <span className="text-secondary font-medium">Catálogos Digitales</span>
+            <span className="text-secondary font-medium" aria-current="page">Catálogos Digitales</span>
           </nav>
         </div>
       </div>
@@ -59,30 +81,13 @@ export default function CatalogosClient() {
       <section className="bg-primary">
         <div className="container mx-auto px-4 py-12 md:py-16 lg:py-20">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="flex justify-center mb-6">
-              <div className="bg-white/10 backdrop-blur-sm p-4 md:p-5">
-                <svg className="w-10 h-10 md:w-14 md:h-14 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
-              </div>
-            </div>
             <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-4 md:mb-6 leading-tight">
               Catálogos Digitales
             </h1>
-            <p className="text-white/90 text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed max-w-3xl mx-auto px-4 mb-8">
-              Explora nuestra colección completa de productos promocionales. Descubre ideas para hacer brillar tu marca.
+            <p className="text-white/90 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto px-4 mb-8">
+              Hojea nuestros catálogos aquí mismo. Si prefieres recibir el catálogo vigente, pídelo por correo o WhatsApp.
             </p>
-
-            {/* CTA Button */}
-            <button
-              onClick={handleSolicitarCatalogo}
-              className="inline-flex items-center gap-3 bg-white text-primary px-6 md:px-8 py-3 md:py-4 font-semibold hover:bg-gray-100 transition-colors"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-              </svg>
-              Solicita tu Catálogo Ahora
-            </button>
+            <ContactOptions variant="light" />
           </div>
         </div>
       </section>
@@ -91,20 +96,21 @@ export default function CatalogosClient() {
       <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto space-y-6 md:space-y-8">
-            {catalogos.map((catalogo, index) => (
-              <div
-                key={catalogo.id}
-                className="bg-white border border-gray-200 overflow-hidden hover:border-primary transition-all duration-300"
-              >
-                <div className="relative w-full aspect-[8.5/11] bg-gray-100">
-                  <Image
-                    src={catalogo.imagen}
-                    alt={`Catálogo KS Promocionales - Página ${catalogo.id}`}
-                    fill
-                    className="object-contain"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1000px"
-                    priority={index < 3}
-                  />
+            <h2 className="font-bold text-[#0A0A23] text-xl">Catálogo de temporada navideña 2025 (7 páginas)</h2>
+            {CATALOGOS.map((catalogo, index) => (
+              <div key={catalogo.id}>
+                {catalogo.id === 8 && <h2 className="font-bold text-[#0A0A23] text-xl mb-6 md:mb-8 pt-4">Catálogo general (11 láminas)</h2>}
+                <div className="bg-white border border-gray-200 overflow-hidden hover:border-primary transition-all duration-300">
+                  <div className="relative w-full aspect-[8.5/11] bg-gray-100">
+                    <Image
+                      src={catalogo.imagen}
+                      alt={catalogo.alt}
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1000px"
+                      priority={index < 1}
+                    />
+                  </div>
                 </div>
               </div>
             ))}
@@ -118,18 +124,11 @@ export default function CatalogosClient() {
           <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-white mb-4">
             ¿Te interesa algún producto?
           </h2>
-          <p className="text-gray-400 mb-6 md:mb-8 max-w-xl mx-auto text-sm md:text-base px-4">
-            Contáctanos y te enviaremos información detallada de nuestros catálogos y productos promocionales.
+          <p className="text-gray-300 mb-6 md:mb-8 max-w-xl mx-auto text-sm md:text-base px-4">
+            Te enviamos el catálogo vigente y te ayudamos a elegir. También puedes{' '}
+            <Link href="/buscar/" className="underline font-semibold">buscar en el catálogo web</Link>.
           </p>
-          <button
-            onClick={handleSolicitarCatalogo}
-            className="inline-flex items-center gap-2 bg-primary text-white px-6 md:px-8 py-3 font-semibold hover:bg-primary-dark transition-colors"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-            </svg>
-            Solicita tu Catálogo Ahora
-          </button>
+          <ContactOptions variant="dark" />
         </div>
       </section>
     </>

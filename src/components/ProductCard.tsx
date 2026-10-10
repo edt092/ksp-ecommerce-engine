@@ -3,8 +3,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-
-const WA_NUMBER = '593999814838';
+import { displayName } from '@/lib/product-display';
+import { buildProductQuoteMessage, buildWhatsAppUrl, productReference, trackWhatsAppClick } from '@/lib/whatsapp';
 
 const EyeIcon = () => (
   <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -16,9 +16,7 @@ const EyeIcon = () => (
 export default function ProductCard({ product, category, onQuickView = null }) {
   const [imgError, setImgError] = useState(false);
 
-  const waText = encodeURIComponent(
-    `Hola, me interesa cotizar: ${product.name}. ¿Podrían enviarme información sobre personalización y cantidades mínimas?`
-  );
+  const name = displayName(product);
 
   return (
     <article className="group relative bg-white flex flex-col overflow-hidden rounded-xl border border-gray-100 transition-all duration-300 hover:border-[#0F2178]/15 hover:shadow-[0_8px_32px_rgba(15,33,120,0.1)] hover:-translate-y-1">
@@ -51,7 +49,7 @@ export default function ProductCard({ product, category, onQuickView = null }) {
           {product.images && product.images.length > 0 && !imgError ? (
             <Image
               src={product.images[0]}
-              alt={product.name}
+              alt={name}
               fill
               sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
               className="object-contain p-4 transition-transform duration-500 group-hover:scale-[1.04]"
@@ -87,18 +85,20 @@ export default function ProductCard({ product, category, onQuickView = null }) {
         {/* Product name */}
         <Link href={`/productos/${product.slug}/`} className="flex-1 mb-3.5 group/link">
           <h3 className="font-bold text-[#111827] text-[0.8rem] leading-snug line-clamp-2 group-hover/link:text-[#0F2178] transition-colors duration-200">
-            {product.name}
+            {name}
           </h3>
         </Link>
 
         {/* CTA — outline navy → fills orange on hover */}
         <a
-          href={`https://wa.me/${WA_NUMBER}?text=${waText}`}
+          href={buildWhatsAppUrl(buildProductQuoteMessage(product))}
+          onClick={() => trackWhatsAppClick({ label: name, pageType: 'listing', placement: 'product_card', productRef: productReference(product), category: product.categoryId })}
           target="_blank"
+          aria-label={`Cotizar ${name} por WhatsApp`}
           rel="noopener noreferrer"
-          className="group/btn flex items-center justify-center gap-1.5 w-full py-2.5 text-[11px] font-semibold tracking-wide border border-[#0F2178]/22 text-[#0F2178] rounded-lg transition-all duration-200 hover:bg-[#F5A520] hover:border-[#F5A520] hover:text-white mt-auto"
+          className="group/btn flex items-center justify-center gap-1.5 w-full min-h-[44px] py-2.5 text-[11px] font-semibold tracking-wide border border-[#0F2178]/22 text-[#0F2178] rounded-lg transition-all duration-200 hover:bg-[#F5A520] hover:border-[#F5A520] hover:text-[#0A0A23] mt-auto"
         >
-          Solicitar Precio
+          Cotizar por WhatsApp
           <svg
             className="w-3 h-3 transition-transform duration-200 group-hover/btn:translate-x-0.5"
             fill="none" stroke="currentColor" viewBox="0 0 24 24"

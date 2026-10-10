@@ -386,6 +386,40 @@
    ANIMATIONS
    ════════════════════════════════════════════════════════ */
 
+/* Botón flotante de WhatsApp: oculto mientras el menú móvil está abierto
+   (Header marca html[data-menu-open]); el drawer es z-40 y el botón z-50. */
+html[data-menu-open] .wa-float {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Entrada del hero del home: animación solo CSS (no depende de JS ni del
+   IntersectionObserver de .reveal) y corta. Respeta prefers-reduced-motion. */
+@keyframes heroIntro {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+.hero-intro {
+  animation: heroIntro 0.5s var(--ease) both;
+  animation-delay: var(--stagger, 0ms);
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-intro { animation: none; }
+}
+
+/* UX-13 (docs/ux-improvement-2026-10-09): con «reducir movimiento» el
+   contenido no depende de animaciones: reveal visible desde el inicio,
+   marquesina, pulsos y transiciones prácticamente instantáneos. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal { opacity: 1 !important; transform: none !important; }
+}
+
 /* Scroll reveal */
 .reveal {
   opacity: 0;

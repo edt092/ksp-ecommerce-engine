@@ -1,10 +1,38 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { displayName } from '@/lib/product-display';
+import { buildProductQuoteMessage, buildWhatsAppUrl, productReference, trackWhatsAppClick } from '@/lib/whatsapp';
 
 export default function QuickViewModal({ product, category, isOpen, onClose }) {
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const closeRef = useRef<HTMLButtonElement>(null);
+
+  // Diálogo accesible (docs/ux-improvement-2026-10-09, UX-08): foco inicial
+  // en el botón de cierre, Tab contenido dentro del diálogo y retorno del foco
+  // al elemento que lo abrió. Escape y bloqueo de scroll se conservan.
+  useEffect(() => {
+    if (!isOpen) return undefined;
+    const opener = document.activeElement as HTMLElement | null;
+    closeRef.current?.focus();
+    const onKey = (e) => {
+      if (e.key !== 'Tab' || !dialogRef.current) return;
+      const focusable = dialogRef.current.querySelectorAll<HTMLElement>('a[href], button:not([disabled]), input, select, textarea, [tabindex]:not([tabindex="-1"])');
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => {
+      window.removeEventListener('keydown', onKey);
+      if (opener && typeof opener.focus === 'function') opener.focus();
+    };
+  }, [isOpen]);
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -41,16 +69,26 @@ export default function QuickViewModal({ product, category, isOpen, onClose }) {
       <div
         className="absolute inset-0 bg-black/60"
         onClick={onClose}
+        aria-hidden="true"
       />
 
       {/* Modal */}
-      <div className="relative bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto animate-scale-in">
+      <div
+        ref={dialogRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="quick-view-title"
+        className="relative bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto animate-scale-in rounded-2xl"
+      >
         {/* Close Button */}
         <button
+          ref={closeRef}
+          type="button"
           onClick={onClose}
-          className="absolute top-4 right-4 z-10 w-10 h-10 bg-white border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-gray-100 transition-colors"
+          aria-label="Cerrar vista rápida"
+          className="absolute top-4 right-4 z-10 w-11 h-11 bg-white border border-gray-200 rounded-lg flex items-center justify-center text-gray-600 hover:bg-gray-100 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F2178]"
         >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
@@ -61,7 +99,7 @@ export default function QuickViewModal({ product, category, isOpen, onClose }) {
             {product.images && product.images.length > 0 ? (
               <Image
                 src={product.images[0]}
-                alt={product.name}
+                alt={displayName(product)}
                 fill
                 className="object-contain p-8"
               />
@@ -87,8 +125,8 @@ export default function QuickViewModal({ product, category, isOpen, onClose }) {
             )}
 
             {/* Product Name */}
-            <h2 className="font-serif text-2xl md:text-3xl text-secondary mt-2 mb-4">
-              {product.name}
+            <h2 id="quick-view-title" className="font-serif text-2xl md:text-3xl text-secondary mt-2 mb-4">
+              {displayName(product)}
             </h2>
 
             {/* Badges */}
@@ -138,7 +176,8 @@ export default function QuickViewModal({ product, category, isOpen, onClose }) {
                 Ver Detalles Completos
               </Link>
               <a
-                href={`https://wa.me/593999814838?text=Hola, me interesa el producto: ${product.name}`}
+                href={buildWhatsAppUrl(buildProductQuoteMessage(product))}
+                onClick={() => trackWhatsAppClick({ label: displayName(product), pageType: 'home', placement: 'quick_view', productRef: productReference(product), category: product.categoryId })}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 flex items-center justify-center gap-2 py-3 bg-green-500 text-white font-semibold hover:bg-green-600 transition-colors"

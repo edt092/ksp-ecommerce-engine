@@ -15,11 +15,11 @@ const QuickViewModal = dynamic(() => import('@/components/QuickViewModal'), {
 const WA_NUMBER = '593999814838';
 
 const HERO_SLIDES = [
-  '/images/hero/slide-1.png',
-  '/images/hero/slide-2.png',
-  '/images/hero/slide-3.png',
-  '/images/hero/slide-4.png',
-  '/images/hero/slide-5.png',
+  '/images/hero/slide-1.webp',
+  '/images/hero/slide-2.webp',
+  '/images/hero/slide-3.webp',
+  '/images/hero/slide-4.webp',
+  '/images/hero/slide-5.webp',
 ];
 const WA_TEXT   = encodeURIComponent('Hola, quiero cotizar productos promocionales para mi empresa');
 
@@ -129,7 +129,9 @@ export default function HomePageClient({ latestProducts, featuredProducts, bests
   const [quickViewProduct, setQuickViewProduct] = useState(null);
   const [activeSlide,      setActiveSlide]      = useState(0);
 
+  // UX-13: sin autoavance si el usuario pidió reducir el movimiento.
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined;
     const id = setInterval(() => {
       setActiveSlide(prev => (prev + 1) % HERO_SLIDES.length);
     }, 30000);
@@ -223,19 +225,17 @@ export default function HomePageClient({ latestProducts, featuredProducts, bests
             <div className="max-w-[600px]">
 
               {/* Eyebrow badge */}
-              <div className="reveal inline-flex items-center gap-2.5 bg-white/8 border border-white/15 rounded-full px-4 py-2 mb-8">
+              <div className="hero-intro inline-flex items-center gap-2.5 bg-white/8 border border-white/15 rounded-full px-4 py-2 mb-8">
                 <span className="w-2 h-2 rounded-full bg-[#25D366] animate-pulse shrink-0" />
                 <span className="text-white/80 text-sm font-medium">{catalogCountLabelReferences}, personalizables disponibles</span>
               </div>
 
-              {/* H1 */}
+              {/* H1 — sin animación: visible desde el primer pintado (candidato a
+                  LCP) y sin depender de JS. En móvil el tamaño escala con el
+                  ancho: a 320 px, 38 px de Syne no cabían y se recortaba. */}
               <h1
-                className="reveal font-bold text-white leading-[1.07] mb-6"
-                style={{
-                  fontSize: 'clamp(2.4rem, 4.5vw, 4.5rem)',
-                  fontFamily: 'var(--font-syne)',
-                  '--stagger': '80ms',
-                }}
+                className="font-bold text-white leading-[1.07] mb-6 break-words text-[clamp(1.9rem,9vw,2.6rem)] sm:text-[clamp(2.4rem,4.5vw,4.5rem)]"
+                style={{ fontFamily: 'var(--font-syne)' }}
               >
                 Artículos Promocionales{' '}
                 <br className="hidden sm:block" />
@@ -246,15 +246,15 @@ export default function HomePageClient({ latestProducts, featuredProducts, bests
 
               {/* Subtext */}
               <p
-                className="reveal text-white/65 leading-relaxed mb-10"
-                style={{ fontSize: 'clamp(1rem, 1.6vw, 1.15rem)', '--stagger': '160ms' }}
+                className="text-white/65 leading-relaxed mb-10"
+                style={{ fontSize: 'clamp(1rem, 1.6vw, 1.15rem)' }}
               >
                 Artículos corporativos personalizados para empresas en Ecuador.
-                Calidad premium, cotización en 24 horas.
+                Personalización con tu logo y respuesta en 48 horas.
               </p>
 
               {/* CTAs */}
-              <div className="reveal flex flex-wrap items-center gap-4 mb-10" style={{ '--stagger': '240ms' }}>
+              <div className="hero-intro flex flex-wrap items-center gap-4 mb-10" style={{ '--stagger': '120ms' }}>
                 <a
                   href={`https://wa.me/${WA_NUMBER}?text=${WA_TEXT}`}
                   target="_blank"
@@ -271,7 +271,7 @@ export default function HomePageClient({ latestProducts, featuredProducts, bests
               </div>
 
               {/* Slide indicator dots */}
-              <div className="reveal flex items-center gap-2" style={{ '--stagger': '320ms' }}>
+              <div className="hero-intro flex items-center gap-2" style={{ '--stagger': '200ms' }}>
                 {HERO_SLIDES.map((_, i) => (
                   <button
                     key={i}
@@ -327,8 +327,8 @@ export default function HomePageClient({ latestProducts, featuredProducts, bests
                       d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 ),
-                title: 'Cotización 24h',
-                sub: 'Respuesta garantizada',
+                title: 'Cotización 48h',
+                sub: 'Respuesta por WhatsApp',
                 href: `https://wa.me/${WA_NUMBER}?text=${WA_TEXT}`,
               },
             ].map(({ icon, title, sub, href }) => {
@@ -382,7 +382,9 @@ export default function HomePageClient({ latestProducts, featuredProducts, bests
 
           {/* Tabs — pill style like reference */}
           <div className="reveal flex justify-center mb-10">
-            <div className="inline-flex items-center gap-1 p-1.5 bg-[#F0F3FA] rounded-xl border border-gray-100">
+            {/* flex-wrap + max-w-full: a 320 px las tres pestañas medían 347 px y
+                ensanchaban toda la página (viewport de 333 px). */}
+            <div className="inline-flex flex-wrap justify-center max-w-full items-center gap-1 p-1.5 bg-[#F0F3FA] rounded-xl border border-gray-100">
               {[
                 { key: 'featured',    label: 'Destacados'  },
                 { key: 'bestsellers', label: 'Más Vendidos' },
@@ -391,7 +393,7 @@ export default function HomePageClient({ latestProducts, featuredProducts, bests
                 <button
                   key={tab.key}
                   onClick={() => setActiveTab(tab.key)}
-                  className={`px-5 py-2.5 text-sm font-semibold rounded-lg transition-all duration-200 ${
+                  className={`px-3 sm:px-5 min-h-[44px] py-2.5 text-sm font-semibold rounded-lg transition-all duration-200 ${
                     activeTab === tab.key
                       ? 'bg-[#0F2178] text-white shadow-md'
                       : 'text-gray-500 hover:text-[#0F2178] hover:bg-white/60'
