@@ -17,8 +17,9 @@ const BASE_URL = 'https://www.kronosolopromocionales.com';
 // indexables (updatedAt/createdAt no existen en products.json; el campo
 // real es last_ai_update, que sitemap.ts nunca leía), las 37 categorías y
 // las 5 ciudades. Ahora:
-//   - Productos: last_ai_update si existe (87.8% de los indexables);
-//     si no, se omite lastmod para ese producto.
+//   - Productos: la más reciente entre last_ai_update y
+//     PRODUCT_TEMPLATE_UPDATED (último cambio significativo de la plantilla
+//     de ficha, ver abajo).
 //   - Blog: dateModified o date (100% de cobertura real, sin cambios).
 //   - Categorías y ciudades: SIN lastmod — no existe un campo de fecha
 //     real por categoría/ciudad en los datos (categories.json y
@@ -31,6 +32,20 @@ const BASE_URL = 'https://www.kronosolopromocionales.com';
 //     Si esas páginas cambian de forma significativa, actualizar aquí.
 function dateOnly(iso: string): string {
   return iso.slice(0, 10);
+}
+
+// Último cambio significativo de la plantilla de ficha (commit caaebc3,
+// desplegado 2026-10-09): contenido principal (CTA, "Cómo cotizar", fuera
+// claims sin fuente), datos estructurados y 8 enlaces a alternativas en
+// TODAS las fichas indexables. Es un hecho verificable en git, no new Date().
+// GSC (2026-10-12) mostraba 590 fichas "rastreadas, sin indexar" con último
+// rastreo en mayo y lastmod abril–julio: el sitemap no anunciaba el cambio.
+// Si la plantilla vuelve a cambiar de forma significativa, actualizar aquí.
+const PRODUCT_TEMPLATE_UPDATED = '2026-10-09';
+
+function productLastModified(p: { last_ai_update?: string }): string {
+  const content = p.last_ai_update ? dateOnly(p.last_ai_update) : '';
+  return content > PRODUCT_TEMPLATE_UPDATED ? content : PRODUCT_TEMPLATE_UPDATED;
 }
 
 export default function sitemap() {
@@ -60,7 +75,7 @@ export default function sitemap() {
     .filter((p) => p.is_ai_optimized === true)
     .map((p) => ({
       url: `${BASE_URL}/productos/${p.slug}/`,
-      ...(p.last_ai_update ? { lastModified: dateOnly(p.last_ai_update) } : {}),
+      lastModified: productLastModified(p),
       priority: 0.6,
       changeFrequency: 'monthly',
     }));
